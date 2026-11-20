@@ -7,6 +7,7 @@ const assert = require('assert');
 const { repairTitle, splitWordScore } = require('../scripts/lib/normalize');
 const tm = require('../js/text-match');
 const sort = require('../js/sort');
+const { validateRows } = require('../scripts/validate-entities');
 
 let n = 0;
 const check = (name, fn) => { fn(); n++; console.log('✓ ' + name); };
@@ -89,6 +90,44 @@ check('сортировка: по структуре группирует зап
 
 check('режим сортировки «по достоверности» убран', () => {
   assert.deepStrictEqual(sort.MODES, ['path', 'name', 'region']);
+});
+
+const validRow = () => ({
+  id: 'X-TEST', parent: '', kind: 'company', name: 'Тест', full: 'ООО «Тест»',
+  type: 'компания', activity: 'Генерация', region: 'Москва', address: 'Москва',
+  phone: '+7 (495) 123-45-67', email: 'test@example.ru', site: 'https://example.ru',
+  procUrl: 'https://etpgpb.ru', inn: '7700000000', kpp: '770000000', ogrn: '1027700000000',
+  ceo: 'Иванов Иван Иванович', contact: 'Иванов Иван Иванович', method: '223-ФЗ',
+  etp: 'GPB', capacity: '', status: 'действует', conf: 'high', sources: 'S1', notes: ''
+});
+const codes = (row) => validateRows([row]).issues.map(i => i.code);
+
+check('валидатор: корректная строка без замечаний', () => {
+  assert.deepStrictEqual(codes(validRow()), []);
+});
+
+check('валидатор: закупки в ФИО руководителя', () => {
+  const row = validRow(); row.ceo = 'Закупки: портал Росатома';
+  assert.ok(codes(row).includes('ceo-not-person'));
+});
+
+check('валидатор: закупки в поле контакта', () => {
+  const row = validRow(); row.contact = 'Закупки: ТЭК-Торг, ЭТП Интер РАО';
+  assert.ok(codes(row).includes('contact-is-procurement'));
+});
+
+check('валидатор: некорректные сайты, телефон, e-mail, ИНН', () => {
+  const row = validRow();
+  row.site = 'example.ru'; row.procUrl = 'не подтверждены';
+  row.phone = '800'; row.email = 'abc'; row.inn = '123';
+  const found = codes(row);
+  ['site-format', 'site-unconfirmed', 'phone-format', 'email-format', 'inn-format'].forEach(c => assert.ok(found.includes(c), c));
+});
+
+check('валидатор: незаполненный сайт у организации', () => {
+  const row = validRow(); row.site = ''; row.procUrl = '';
+  const found = codes(row);
+  assert.ok(found.includes('site-missing') && found.filter(c => c === 'site-missing').length === 2);
 });
 
 console.log(`Пройдено тестов: ${n}`);

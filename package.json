@@ -9,6 +9,7 @@
     "collect:probe": "node scripts/collect-tenders.js --probe-only",
     "keywords": "node scripts/keywords.js",
     "test": "node prototype/test-regressions.js",
+    "validate": "node scripts/validate-entities.js",
     "serve": "python -m http.server 8765 --bind 127.0.0.1",
     "start": "node build.js && python -m http.server 8765 --bind 127.0.0.1"
   }
