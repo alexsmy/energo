@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T20:52:44.680Z",
+  "updated": "2026-11-20T20:53:05.687Z",
   "count": 133,
   "records": [
     {
@@ -84,7 +84,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -139,7 +139,7 @@
         "C-TOMGEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -243,7 +243,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -290,7 +290,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -337,7 +337,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:40:01.377Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -384,7 +384,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -439,7 +439,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -496,7 +496,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -600,7 +600,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -671,7 +671,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -728,7 +728,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -830,7 +830,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -877,7 +877,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -924,7 +924,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -971,7 +971,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1018,7 +1018,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1065,7 +1065,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1112,7 +1112,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1159,7 +1159,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1206,7 +1206,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1261,7 +1261,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1316,7 +1316,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1371,7 +1371,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -1467,7 +1467,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1514,7 +1514,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1561,7 +1561,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1608,7 +1608,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1655,7 +1655,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1702,7 +1702,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -1749,7 +1749,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1796,7 +1796,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1845,7 +1845,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -1947,7 +1947,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2002,7 +2002,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2104,7 +2104,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -2208,7 +2208,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2263,7 +2263,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2320,7 +2320,7 @@
         "C-SAKHAENERGO"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2377,7 +2377,7 @@
         "C-SAKHAENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "ЕИС / HTML",
@@ -2434,7 +2434,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2536,7 +2536,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2591,7 +2591,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -2638,7 +2638,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2693,7 +2693,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2750,7 +2750,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2805,7 +2805,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2860,7 +2860,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -2907,7 +2907,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2962,7 +2962,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3397,7 +3397,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -3460,7 +3460,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3556,7 +3556,7 @@
         "C-MOSENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3605,7 +3605,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3796,7 +3796,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3843,7 +3843,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3892,7 +3892,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -3939,7 +3939,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -4041,7 +4041,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4088,7 +4088,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4135,7 +4135,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -4198,7 +4198,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4300,7 +4300,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4347,7 +4347,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4394,7 +4394,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4449,7 +4449,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4598,7 +4598,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4647,7 +4647,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4741,7 +4741,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4788,7 +4788,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4890,7 +4890,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -4939,7 +4939,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5035,7 +5035,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5129,7 +5129,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5223,7 +5223,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5270,7 +5270,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5319,7 +5319,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5366,7 +5366,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5423,7 +5423,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5472,7 +5472,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5519,7 +5519,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5568,7 +5568,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5664,7 +5664,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5711,7 +5711,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5766,7 +5766,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5813,7 +5813,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5861,7 +5861,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -5910,7 +5910,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5959,7 +5959,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6006,7 +6006,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6100,7 +6100,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6147,7 +6147,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6194,7 +6194,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6290,7 +6290,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6337,7 +6337,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6384,7 +6384,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6431,7 +6431,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:55:28.227Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6480,7 +6480,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6582,7 +6582,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
@@ -6629,7 +6629,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T20:36:17.130Z",
+      "lastSeen": "2026-11-20T20:57:35.779Z",
       "sources": [
         {
           "source": "gentender",
