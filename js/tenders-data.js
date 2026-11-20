@@ -4182,7 +4182,7 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-20T20:27:49.041Z",
+  "updated": "2026-11-20T20:52:44.680Z",
   "count": 133,
   "records": [
    {
@@ -10827,114 +10827,42 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-20T20:27:49.041Z",
-  "mode": "live",
+  "lastRun": "2026-11-20T20:52:44.680Z",
+  "mode": "refilter",
   "total": 133,
-  "unique": 2151,
-  "matchedOrg": 133,
   "active": 66,
   "archive": 67,
-  "bySource": {
-   "EIS": 49,
-   "TEK": 25,
-   "ROS": 13,
-   "GPB": 8,
-   "ZAKAZ": 5,
-   "RAD": 15,
-   "SBER": 2,
-   "B2B": 14,
-   "FAB": 1,
-   "RTS": 1
-  },
-  "sources": [
-   {
-    "name": "gosplan",
-    "available": true,
-    "requests": 15,
-    "okRequests": 14,
-    "records": 39,
-    "errors": 1
-   },
-   {
-    "name": "gentender",
-    "available": true,
-    "requests": 74,
-    "okRequests": 74,
-    "records": 2112,
-    "errors": 0
-   },
-   {
-    "name": "tektorg",
-    "available": false,
-    "requests": 3,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 3
-   },
-   {
-    "name": "etpgpb",
-    "available": false,
-    "requests": 3,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 3
-   },
-   {
-    "name": "roseltorg",
-    "available": false,
-    "requests": 5,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 5
-   },
-   {
-    "name": "eis-html",
-    "available": false,
-    "requests": 4,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 4
-   }
-  ],
-  "errors": 5,
-  "probeOk": 2,
-  "droppedNoKeyword": 1369,
+  "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "budget": {
-   "gosplan": {
-    "limit": 60,
-    "used": 15,
-    "exhausted": false
-   },
-   "gentender": {
-    "limit": 400,
-    "used": 74,
-    "exhausted": false
-   },
-   "tektorg": {
-    "limit": 40,
-    "used": 3,
-    "exhausted": false
-   },
-   "etpgpb": {
-    "limit": 40,
-    "used": 3,
-    "exhausted": false
-   },
-   "roseltorg": {
-    "limit": 40,
-    "used": 5,
-    "exhausted": false
-   },
-   "eis-html": {
-    "limit": 40,
-    "used": 4,
-    "exhausted": false
-   }
-  },
-  "partial": true
+  "sources": [
+   "refilter"
+  ]
  },
  "log": [
+  {
+   "started": "2026-11-20T20:52:44.678Z",
+   "mode": "scheduled",
+   "entries": [
+    {
+     "ts": "2026-11-20T20:52:44.929Z",
+     "source": "refilter",
+     "query": "registry match",
+     "ok": true,
+     "records": 133,
+     "kept": 133,
+     "droppedNoKeyword": 0,
+     "budget": ""
+    }
+   ],
+   "summary": {
+    "total": 133,
+    "unique": 133,
+    "matchedOrg": 133,
+    "droppedNoKeyword": 0,
+    "errors": 0
+   },
+   "finished": "2026-11-20T20:52:44.929Z"
+  },
   {
    "started": "2026-11-20T20:27:49.041Z",
    "mode": "scheduled",

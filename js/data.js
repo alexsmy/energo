@@ -3,22 +3,22 @@ window.REGISTRY = {
  "meta": {
   "title": "Энергогенерирующие и энергоремонтные предприятия РФ",
   "subtitle": "Проверенный реестр для работы с закупками и подрядчиками",
-  "version": "2.7.202611202042",
+  "version": "2.8.202611210400",
   "date": "2026-11-21",
   "disclaimer": ""
  },
  "stats": {
-  "total": 339,
+  "total": 340,
   "holdings": 19,
   "companies": 61,
-  "plants": 259,
+  "plants": 260,
   "repair": 17,
   "oem": 14,
-  "high": 339,
+  "high": 340,
   "medium": 0,
   "low": 0,
   "regions": 71,
-  "geo": 339
+  "geo": 340
  },
  "etps": [
   {
@@ -4028,7 +4028,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "605",
+   "capacity": "580",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4087,7 +4087,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "274.8",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4146,7 +4146,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "330",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4205,7 +4205,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "611.6",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4264,7 +4264,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "651",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4323,7 +4323,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "985",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4382,7 +4382,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "1800",
+   "capacity": "1765",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4441,7 +4441,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "1580",
+   "capacity": "1375",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4500,7 +4500,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "1420",
+   "capacity": "1430",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4618,7 +4618,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "1420",
+   "capacity": "1840.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4795,7 +4795,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "3268",
+   "capacity": "3333",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4854,7 +4854,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "1321",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4913,7 +4913,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "2258",
+   "capacity": "2229",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -4972,7 +4972,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "3130",
+   "capacity": "3024",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5031,7 +5031,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "450",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5090,7 +5090,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "2600",
+   "capacity": "2570",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5267,7 +5267,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "2400",
+   "capacity": "2419",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5444,7 +5444,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "135",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5503,7 +5503,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "250.5",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5621,7 +5621,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "100",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5680,7 +5680,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "360",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -5739,7 +5739,7 @@ window.REGISTRY = {
     "EIS",
     "RTS"
    ],
-   "capacity": "",
+   "capacity": "280",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -6978,7 +6978,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "3600",
+   "capacity": "3750",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7037,7 +7037,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "3363",
+   "capacity": "3393",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7096,7 +7096,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "2430",
+   "capacity": "2482.5",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7155,7 +7155,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "665",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7214,7 +7214,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "1244",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7273,7 +7273,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "1060",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -7981,7 +7981,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "454",
+   "capacity": "463.06",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8099,7 +8099,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "160",
+   "capacity": "156",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8158,7 +8158,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "23",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8217,7 +8217,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "519",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8276,7 +8276,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "95",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8335,7 +8335,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "270",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8394,7 +8394,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "440",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -8453,7 +8453,7 @@ window.REGISTRY = {
     "ETP_IRAO",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "1856.2",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -9103,7 +9103,7 @@ window.REGISTRY = {
     "ROS",
     "SBER"
    ],
-   "capacity": "",
+   "capacity": "0",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -9163,7 +9163,7 @@ window.REGISTRY = {
     "ROS",
     "SBER"
    ],
-   "capacity": "",
+   "capacity": "440",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -9403,7 +9403,7 @@ window.REGISTRY = {
     "ROS",
     "SBER"
    ],
-   "capacity": "",
+   "capacity": "23",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10362,7 +10362,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1260",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10421,7 +10421,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1345.4",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10480,7 +10480,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "485",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10539,7 +10539,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "580",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10598,7 +10598,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "108",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10775,7 +10775,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1274",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10834,7 +10834,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1373",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10893,7 +10893,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "408.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -10952,7 +10952,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "469.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11011,7 +11011,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "393",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11070,7 +11070,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "415.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11188,7 +11188,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "345",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11247,7 +11247,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "496.5",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11306,7 +11306,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "384",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11365,7 +11365,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1200",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11424,7 +11424,7 @@ window.REGISTRY = {
     "B2B",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "101",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11719,7 +11719,7 @@ window.REGISTRY = {
     "TEK",
     "FAB"
    ],
-   "capacity": "5657",
+   "capacity": "5722.243",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11778,7 +11778,7 @@ window.REGISTRY = {
     "TEK",
     "FAB"
    ],
-   "capacity": "1600",
+   "capacity": "2420",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -11955,7 +11955,7 @@ window.REGISTRY = {
     "TEK",
     "FAB"
    ],
-   "capacity": "",
+   "capacity": "1048",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12015,7 +12015,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "681.7",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12075,7 +12075,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "755",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12135,7 +12135,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "1361",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12195,7 +12195,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "110.7",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12255,7 +12255,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "320",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12315,7 +12315,7 @@ window.REGISTRY = {
     "GPB",
     "TEK"
    ],
-   "capacity": "",
+   "capacity": "593",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12552,7 +12552,7 @@ window.REGISTRY = {
     "RTS",
     "GPB"
    ],
-   "capacity": "2200",
+   "capacity": "2204.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12612,7 +12612,7 @@ window.REGISTRY = {
     "RTS",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "453",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12672,7 +12672,7 @@ window.REGISTRY = {
     "RTS",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "385",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12732,7 +12732,7 @@ window.REGISTRY = {
     "RTS",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "1180",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -12792,7 +12792,7 @@ window.REGISTRY = {
     "RTS",
     "GPB"
    ],
-   "capacity": "",
+   "capacity": "1205",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13373,7 +13373,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "452.8",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13432,7 +13432,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "12",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13491,7 +13491,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "148.8",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13550,7 +13550,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "0",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13609,7 +13609,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "12",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13668,7 +13668,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "24",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -13727,7 +13727,7 @@ window.REGISTRY = {
     "SBER",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "12",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14383,7 +14383,7 @@ window.REGISTRY = {
     "B2B",
     "EIS"
    ],
-   "capacity": "",
+   "capacity": "315",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14441,7 +14441,7 @@ window.REGISTRY = {
     "B2B",
     "EIS"
    ],
-   "capacity": "",
+   "capacity": "458.74",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14499,7 +14499,7 @@ window.REGISTRY = {
     "B2B",
     "EIS"
    ],
-   "capacity": "",
+   "capacity": "380",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14557,7 +14557,7 @@ window.REGISTRY = {
     "B2B",
     "EIS"
    ],
-   "capacity": "511",
+   "capacity": "501.9",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14911,7 +14911,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "435",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -14971,7 +14971,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "720",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15091,7 +15091,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "197.5",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15151,7 +15151,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "360",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15211,7 +15211,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "285",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15271,7 +15271,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "404",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15391,7 +15391,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "199.7",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15451,7 +15451,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "400",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15511,7 +15511,7 @@ window.REGISTRY = {
     "RAD",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "559",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15747,7 +15747,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "170.1",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15806,7 +15806,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "164",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15865,7 +15865,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "12",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15924,7 +15924,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "204",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -15983,7 +15983,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "163.15",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -16101,7 +16101,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "12",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -16160,7 +16160,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "2",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -16219,7 +16219,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "24.8",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -16278,7 +16278,7 @@ window.REGISTRY = {
     "ROS",
     "B2B"
    ],
-   "capacity": "",
+   "capacity": "18.4",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -16924,7 +16924,7 @@ window.REGISTRY = {
     "B2B",
     "AST"
    ],
-   "capacity": "2671",
+   "capacity": "2734",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -17046,7 +17046,7 @@ window.REGISTRY = {
     "B2B",
     "AST"
    ],
-   "capacity": "1403",
+   "capacity": "1463",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -17107,7 +17107,7 @@ window.REGISTRY = {
     "B2B",
     "AST"
    ],
-   "capacity": "",
+   "capacity": "1370",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -17168,7 +17168,7 @@ window.REGISTRY = {
     "B2B",
     "AST"
    ],
-   "capacity": "",
+   "capacity": "552",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -17229,7 +17229,7 @@ window.REGISTRY = {
     "B2B",
     "AST"
    ],
-   "capacity": "",
+   "capacity": "1150",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18266,7 +18266,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "1480",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18327,7 +18327,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "48",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18388,7 +18388,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "4000",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18449,7 +18449,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "1760",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18510,7 +18510,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "2000",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18632,7 +18632,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "4052",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18754,7 +18754,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "3778",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18815,7 +18815,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "4071.919",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18876,7 +18876,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "3000",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -18937,7 +18937,7 @@ window.REGISTRY = {
     "AST",
     "KIM"
    ],
-   "capacity": "",
+   "capacity": "70",
    "status": "действует",
    "conf": "high",
    "sources": [
@@ -19387,6 +19387,65 @@ window.REGISTRY = {
    "lat": 45.0631,
    "lon": 41.9402,
    "city": "Ставрополь"
+  },
+  {
+   "id": "P-KAMCHAT-260",
+   "parent": "C-KAMCHAT",
+   "kind": "plant",
+   "name": "Верхне-Мутновская ГеоЭС",
+   "full": "",
+   "type": "ГеоЭС",
+   "activity": "Производство электроэнергии и тепла",
+   "region": "Камчатский край",
+   "address": "683000, г. Петропавловск-Камчатский, ул. Набережная, д. 10",
+   "phone": "+7 (4152) 42-10-06",
+   "email": "sekr1@kamenergo.ru",
+   "site": "https://www.kamenergo.ru",
+   "procUrl": "https://zakupki.rushydro.ru",
+   "inn": "4100000668",
+   "kpp": "775050001",
+   "ogrn": "1024101024078",
+   "ceo": "Новиков Алексей Николаевич",
+   "contact": "не подтверждены",
+   "method": "Наследует группу РусГидро",
+   "etp": [
+    "ETP_RUSH",
+    "ROS",
+    "B2B"
+   ],
+   "capacity": "12",
+   "status": "действует",
+   "conf": "high",
+   "sources": [
+    "S4"
+   ],
+   "notes": "",
+   "chiefEngineer": "",
+   "chiefDesigner": "",
+   "procContact": "",
+   "procPhone": "",
+   "procEmail": "",
+   "path": "РусГидро → Камчатскэнерго → Верхне-Мутновская ГеоЭС",
+   "holdingId": "H-RUSHYDRO",
+   "holdingName": "РусГидро",
+   "depth": 2,
+   "inherited": {
+    "address": "C-KAMCHAT",
+    "phone": "C-KAMCHAT",
+    "email": "C-KAMCHAT",
+    "site": "C-KAMCHAT",
+    "procUrl": "C-KAMCHAT",
+    "inn": "C-KAMCHAT",
+    "kpp": "C-KAMCHAT",
+    "ogrn": "C-KAMCHAT",
+    "ceo": "C-KAMCHAT",
+    "contact": "C-KAMCHAT",
+    "method": "C-KAMCHAT",
+    "etp": "C-KAMCHAT"
+   },
+   "lat": 53.066,
+   "lon": 158.6442,
+   "city": "Петропавловск-Камчатский"
   }
  ]
 };

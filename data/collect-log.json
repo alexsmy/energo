@@ -1,5 +1,29 @@
 [
   {
+    "started": "2026-11-20T20:52:44.678Z",
+    "mode": "scheduled",
+    "entries": [
+      {
+        "ts": "2026-11-20T20:52:44.929Z",
+        "source": "refilter",
+        "query": "registry match",
+        "ok": true,
+        "records": 133,
+        "kept": 133,
+        "droppedNoKeyword": 0,
+        "budget": ""
+      }
+    ],
+    "summary": {
+      "total": 133,
+      "unique": 133,
+      "matchedOrg": 133,
+      "droppedNoKeyword": 0,
+      "errors": 0
+    },
+    "finished": "2026-11-20T20:52:44.929Z"
+  },
+  {
     "started": "2026-11-20T20:27:49.041Z",
     "mode": "scheduled",
     "entries": [
