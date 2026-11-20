@@ -27,7 +27,6 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
   const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
-  const confRank = { high: 0, medium: 1 };
   const confLabel = { high: 'высокая', medium: 'средняя' };
   const isRepair = (i) => i.type === 'ремонт';
   const isOem = (i) => i.type === 'ОЕМ' || i.type === 'инжиниринг';
@@ -55,7 +54,7 @@
       type: saved.type || '', method: saved.method || '', etp: saved.etp || '',
       conf: saved.conf || '', onlyOrg: !!saved.onlyOrg,
       view: saved.view === 'table' ? 'table' : 'cards',
-      sort: saved.sort || 'path'
+      sort: ['path', 'name', 'region'].includes(saved.sort) ? saved.sort : 'path'
     });
     const fields = { q: 'q', fHolding: 'holding', fRegion: 'region', fType: 'type', fMethod: 'method', fEtp: 'etp', fConf: 'conf', sort: 'sort' };
     Object.entries(fields).forEach(([id, key]) => {
@@ -139,12 +138,9 @@
   }
 
   function sortItems(list) {
-    const arr = list.slice();
-    if (state.sort === 'name') arr.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
-    else if (state.sort === 'region') arr.sort((a, b) => (a.region || 'я').localeCompare(b.region || 'я', 'ru') || a.name.localeCompare(b.name, 'ru'));
-    else if (state.sort === 'conf') arr.sort((a, b) => (confRank[a.conf] ?? 9) - (confRank[b.conf] ?? 9) || a.name.localeCompare(b.name, 'ru'));
-    else arr.sort((a, b) => (a.path || a.name).localeCompare(b.path || b.name, 'ru'));
-    return arr;
+    const api = window.EnergoSort;
+    const mode = api && api.MODES.includes(state.sort) ? state.sort : 'path';
+    return api ? api.sortItems(list, mode) : list.slice();
   }
 
   /* ---------- rendering ---------- */
@@ -343,22 +339,21 @@
     const wrap = $('cards');
     if (!list.length) { wrap.innerHTML = ''; return; }
 
-    if (state.tab === 'rep' || state.tab === 'oem') {
+    if (state.tab === 'rep' || state.tab === 'oem' || state.sort !== 'path') {
       wrap.innerHTML = '<div class="grid">' + list.map(card).join('') + '</div>';
       return;
     }
 
-    const gen = state.tab === 'all' ? list.filter(isGen) : list;
-    const other = state.tab === 'all' ? list.filter(i => !isGen(i)) : [];
-
+    // «По структуре»: группы холдингов в порядке появления записей,
+    // без выноса ремонта/ОЕМ вниз — порядок совпадает с таблицей.
     const groups = new Map();
-    gen.forEach(it => {
+    list.forEach(it => {
       const key = it.holdingName || it.name;
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(it);
     });
 
-    let html = [...groups.entries()].map(([name, arr]) => {
+    wrap.innerHTML = [...groups.entries()].map(([name, arr]) => {
       const holdings = arr.filter(x => x.kind === 'holding');
       const h = holdings[0] || arr[0];
       const meta = [h.region, h.inn ? 'ИНН ' + h.inn : ''].filter(Boolean).join(' · ');
@@ -371,18 +366,6 @@
         '<div class="grid">' + arr.map(card).join('') + '</div>' +
       '</section>';
     }).join('');
-
-    if (other.length) {
-      html += '<section class="group">' +
-        '<div class="group__head">' +
-          '<div class="group__title">Ремонт, сервис и оборудование</div>' +
-          '<span class="group__count">' + other.length + '</span>' +
-          '<div class="group__meta">подрядчики и производители</div>' +
-        '</div>' +
-        '<div class="grid">' + other.map(card).join('') + '</div>' +
-      '</section>';
-    }
-    wrap.innerHTML = html;
   }
 
   function renderTable(list) {
