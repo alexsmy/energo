@@ -1,0 +1,669 @@
+[
+  {
+    "started": "2026-11-20T14:00:30.279Z",
+    "mode": "scheduled",
+    "entries": [
+      {
+        "ts": "2026-11-20T14:00:30.418Z",
+        "source": "refilter",
+        "query": "registry match",
+        "ok": true,
+        "records": 84,
+        "kept": 76
+      }
+    ],
+    "summary": {
+      "total": 76,
+      "unique": 76,
+      "matchedOrg": 76,
+      "errors": 0
+    },
+    "finished": "2026-11-20T14:00:30.418Z"
+  },
+  {
+    "started": "2026-11-20T13:55:53.090Z",
+    "mode": "scheduled",
+    "entries": [
+      {
+        "ts": "2026-11-20T13:55:54.306Z",
+        "source": "gosplan",
+        "query": "ИНН 7721632827 (223)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz223/purchases?customer=7721632827&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:55:59.921Z",
+        "source": "gosplan",
+        "query": "ИНН 7721632827 (44)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz44/purchases?customer=7721632827&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:07.178Z",
+        "source": "gosplan",
+        "query": "ИНН 6829012680 (223)",
+        "ok": true,
+        "http": 200,
+        "records": 40,
+        "kept": 40,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz223/purchases?customer=6829012680&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:12.967Z",
+        "source": "gosplan",
+        "query": "ИНН 6829012680 (44)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz44/purchases?customer=6829012680&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:19.559Z",
+        "source": "gosplan",
+        "query": "турбины (223, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 36,
+        "kept": 19,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D1%8B&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:26.044Z",
+        "source": "gosplan",
+        "query": "турбины (44, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 5,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D1%8B&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:32.553Z",
+        "source": "gosplan",
+        "query": "турбины (223, завершённые 30д)",
+        "ok": true,
+        "http": 200,
+        "records": 22,
+        "kept": 14,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D1%8B&stage=3&published_forpast=30d&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:56:39.063Z",
+        "source": "gosplan",
+        "query": "турбины (223, архив стр.2)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D1%8B&stage=3&published_forpast=30d&limit=100&skip=100"
+      },
+      {
+        "ts": "2026-11-20T13:57:20.722Z",
+        "source": "gosplan",
+        "query": "уплотнений (223, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 12,
+        "kept": 1,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:57:28.447Z",
+        "source": "gosplan",
+        "query": "уплотнений (44, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 2,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:57:33.745Z",
+        "source": "gosplan",
+        "query": "уплотнений (223, завершённые 30д)",
+        "ok": true,
+        "http": 200,
+        "records": 11,
+        "kept": 0,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9&stage=3&published_forpast=30d&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:57:40.190Z",
+        "source": "gosplan",
+        "query": "уплотнений (223, архив стр.2)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9&stage=3&published_forpast=30d&limit=100&skip=100"
+      },
+      {
+        "ts": "2026-11-20T13:59:32.206Z",
+        "source": "gosplan",
+        "query": "лопаток (223, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 1,
+        "kept": 1,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:59:41.963Z",
+        "source": "gosplan",
+        "query": "лопаток (44, действующие)",
+        "ok": true,
+        "http": 200,
+        "records": 1,
+        "kept": 0,
+        "phase": "active",
+        "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA&stage=1&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:59:45.188Z",
+        "source": "gosplan",
+        "query": "лопаток (223, завершённые 30д)",
+        "ok": true,
+        "http": 200,
+        "records": 1,
+        "kept": 0,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA&stage=3&published_forpast=30d&limit=100"
+      },
+      {
+        "ts": "2026-11-20T13:59:51.700Z",
+        "source": "gosplan",
+        "query": "лопаток (223, архив стр.2)",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "kept": 0,
+        "phase": "archive",
+        "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA&stage=3&published_forpast=30d&limit=100&skip=100"
+      }
+    ],
+    "summary": {
+      "total": 84,
+      "unique": 75,
+      "matchedOrg": 84,
+      "active": 70,
+      "archive": 14,
+      "source": "gosplan",
+      "sources": [
+        {
+          "name": "gosplan",
+          "available": true,
+          "requests": 16,
+          "okRequests": 16,
+          "records": 75,
+          "errors": 0
+        }
+      ],
+      "errors": 0,
+      "probeOk": 0,
+      "partial": false
+    },
+    "finished": "2026-11-20T13:59:51.920Z"
+  },
+  {
+    "started": "2026-11-20T13:55:36.470Z",
+    "mode": "fixture",
+    "entries": [
+      {
+        "ts": "2026-11-20T13:55:36.589Z",
+        "source": "eis-html",
+        "query": "турбины [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.590Z",
+        "source": "eis-html",
+        "query": "уплотнений [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.590Z",
+        "source": "eis-html",
+        "query": "лопаток [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.591Z",
+        "source": "eis-html",
+        "query": "Башкирская генерирующая компания [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.591Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 11 [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.591Z",
+        "source": "eis-html",
+        "query": "Томская генерация [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.591Z",
+        "source": "eis-html",
+        "query": "Калининградская генерация [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.591Z",
+        "source": "eis-html",
+        "query": "Мосэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.592Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 1 [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Мурманская ТЭЦ [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Сибирская генерирующая компания [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Татэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 2 [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 14 [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Иркутскэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Байкальская энергетическая компания [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Якутскэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Чукотэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Камчатскэнерго [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "Крымтеплоэлектроцентраль [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "ЭнергоремонТ Плюс [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "КЭР-Холдинг [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.593Z",
+        "source": "eis-html",
+        "query": "ЛЭР-Турбо [active]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "active"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "турбины [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "уплотнений [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "лопаток [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "Башкирская генерирующая компания [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 11 [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.597Z",
+        "source": "eis-html",
+        "query": "Томская генерация [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.598Z",
+        "source": "eis-html",
+        "query": "Калининградская генерация [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Мосэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 1 [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Мурманская ТЭЦ [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Сибирская генерирующая компания [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Татэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 2 [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Территориальная генерирующая компания № 14 [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Иркутскэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Байкальская энергетическая компания [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Якутскэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Чукотэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Камчатскэнерго [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "Крымтеплоэлектроцентраль [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "ЭнергоремонТ Плюс [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "КЭР-Холдинг [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      },
+      {
+        "ts": "2026-11-20T13:55:36.599Z",
+        "source": "eis-html",
+        "query": "ЛЭР-Турбо [archive]",
+        "ok": true,
+        "http": 200,
+        "records": 0,
+        "phase": "archive"
+      }
+    ],
+    "summary": {
+      "total": 21,
+      "unique": 0,
+      "matchedOrg": 21,
+      "active": 21,
+      "archive": 0,
+      "source": "",
+      "sources": [
+        {
+          "name": "eis-html",
+          "available": true,
+          "requests": 46,
+          "okRequests": 46,
+          "records": 0,
+          "errors": 0
+        }
+      ],
+      "errors": 0,
+      "probeOk": 0,
+      "partial": true
+    },
+    "finished": "2026-11-20T13:55:36.737Z"
+  }
+]

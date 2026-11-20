@@ -414,6 +414,15 @@
   }
 
   function render() {
+    const isTenders = state.tab === 'tenders';
+    const layout = document.querySelector('.layout');
+    if (layout) layout.hidden = isTenders;
+    if ($('tendersView')) $('tendersView').hidden = !isTenders;
+    if (isTenders) {
+      document.body.classList.remove('is-map', 'filters-open');
+      if (window.EnergoTenders) window.EnergoTenders.onTab('tenders');
+      return [];
+    }
     const list = sortItems(items.filter(matches));
     const isMap = state.tab === 'map';
     $('count').textContent = list.length;
@@ -590,6 +599,7 @@
       document.querySelectorAll('.tab').forEach(x => { x.classList.remove('is-active'); x.setAttribute('aria-selected', 'false'); });
       t.classList.add('is-active'); t.setAttribute('aria-selected', 'true');
       state.tab = t.dataset.tab;
+      if (window.EnergoTenders) window.EnergoTenders.onTab(state.tab);
       if (state.tab === 'all') history.replaceState(null, '', location.pathname + location.search);
       else history.replaceState(null, '', '#tab=' + state.tab);
       render();
@@ -752,7 +762,7 @@
   restoreState();
   initAutoUpdate();
   const hash = (location.hash || '').replace('#tab=', '');
-  if (['gen', 'rep', 'oem', 'map'].includes(hash)) {
+  if (['gen', 'rep', 'oem', 'tenders', 'map'].includes(hash)) {
     const b = document.querySelector('[data-tab="' + hash + '"]');
     if (b) { b.click(); return; }
   }

@@ -1,0 +1,72 @@
+name: Обновление закупок и аудит ЭТП
+
+# Аналогия с cam-ufa: периодический прогон скрипта, результаты фиксируются
+# в репозитории и автоматически публикуются через GitHub Pages (branch main).
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Раз в сутки в 06:00 по Москве = 03:00 UTC.
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: tenders-update
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Сбор закупок и проверка ЭТП
+        run: node scripts/collect-tenders.js --limit=2000
+
+      - name: Пересборка данных сайта
+        run: node build.js
+
+      - name: Обновление манифеста версии
+        run: |
+          node -e "
+            const fs=require('fs');
+            const p=JSON.parse(fs.readFileSync('version.json','utf8'));
+            p.version='2.0.'+new Date().toISOString().replace(/[-:T]/g,'').slice(0,12);
+            p.date=new Date().toISOString().slice(0,10);
+            p.title='Энергореестр РФ — обновление закупок';
+            p.message='Данные закупок обновлены. Страница перезагрузится автоматически.';
+            fs.writeFileSync('version.json',JSON.stringify(p,null,2)+'\n');
+          "
+
+      - name: Публикация изменений
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Изменений нет — пропускаем коммит"
+          else
+            git commit -m "tenders: automate collection $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push origin HEAD:main
+          fi
+
+      - name: Поддерживаем расписание активным
+        run: |
+          if [ ! -f last-run.txt ] || [ $(( ($(date +%s) - $(date -r last-run.txt +%s)) / 86400 )) -ge 7 ]; then
+            date -u +%F > last-run.txt
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add last-run.txt
+            git commit -m "keepalive $(date -u +%F)" || true
+            git push origin HEAD:main
+          fi
+

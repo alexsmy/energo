@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Журнал сбора закупок — Энергореестр РФ</title>
+<link rel="stylesheet" href="css/styles.css?v=2.0">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <div class="brand"><div class="brand__mark" aria-hidden="true">⚡</div>
+      <div><div class="brand__title">Энергореестр&nbsp;РФ</div><div class="brand__sub">Журнал сбора закупок</div></div>
+    </div>
+    <div class="topbar__actions"><a class="btn btn--ghost" href="index.html#tab=tenders">← К закупкам</a></div>
+  </div>
+</header>
+<main class="wrap" style="padding-top:18px;padding-bottom:32px">
+  <h1 style="font-size:25px">Журнал сбора закупок</h1>
+  <p style="color:var(--muted);font-size:13px;max-width:900px">
+    Каждый запрос к источнику: успех/ошибка, HTTP-код, время, число найденных и отобранных записей.
+    Сырой файл: <a href="data/collect-log.json" target="_blank" rel="noopener">data/collect-log.json</a>
+  </p>
+  <div class="t-toolbar" style="margin-top:14px">
+    <div class="toolbar__count"><strong id="runCount">0</strong> <span>запусков</span></div>
+    <div class="t-toolbar__right">
+      <select id="runFilter" class="select select--sm" aria-label="Фильтр по запуску"><option value="">Все запуски</option></select>
+      <select id="sourceFilter" class="select select--sm" aria-label="Фильтр по источнику"><option value="">Все источники</option></select>
+      <button class="btn btn--ghost btn--sm" id="refreshLog" type="button">Обновить</button>
+    </div>
+  </div>
+  <div id="runs"></div>
+  <p class="foot__meta" style="margin-top:18px">Обновление данных запланировано на 06:00 по московскому времени.</p>
+</main>
+<script src="js/log.js?v=2.0"></script>
+</body>
+</html>

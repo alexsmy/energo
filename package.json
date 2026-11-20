@@ -5,6 +5,9 @@
   "description": "Реестр энергогенерирующих и энергоремонтных предприятий РФ: веб-приложение, карта, печатная версия",
   "scripts": {
     "build": "node build.js",
+    "collect": "node scripts/collect-tenders.js",
+    "collect:probe": "node scripts/collect-tenders.js --probe-only",
+    "keywords": "node scripts/keywords.js",
     "serve": "python -m http.server 8765 --bind 127.0.0.1",
     "start": "node build.js && python -m http.server 8765 --bind 127.0.0.1"
   }

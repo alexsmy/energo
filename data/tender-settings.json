@@ -1,0 +1,15 @@
+{
+  "note": "Режимы и источники сбора. active — действующие закупки, archive — завершённые за archiveDepthDays дней. sourcePriority задаёт порядок: ГосПлан API по умолчанию, HTML ЕИС — резерв (не удаляется).",
+  "defaultMode": "active",
+  "activeDepthDays": 0,
+  "archiveDepthDays": 30,
+  "sourcePriority": ["gosplan", "eis-html"],
+  "gosplanInterval": 6500,
+  "gosplanLimit": 100,
+  "gosplanMaxPages": 3,
+  "htmlInterval": 1500,
+  "htmlMaxPages": 5,
+  "recordsPerPage": 10,
+  "maxPages": 20,
+  "sortBy": "UPDATE_DATE"
+}

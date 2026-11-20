@@ -1,0 +1,10 @@
+2026-11-20T13:49:32.440Z Реестр: 339 записей, ИНН 70, слов 3
+2026-11-20T13:49:33.630Z root: OK, записей 1, url https://v2test.gosplan.info?
+2026-11-20T13:49:39.639Z по ИНН C-BGK 429, попытка 1, ждём 35 с
+2026-11-20T13:50:15.272Z по ИНН C-BGK: OK, записей 3, url https://v2test.gosplan.info/fz223/purchases?customer=0277077282&limit=3
+2026-11-20T13:50:21.449Z ключ + действующие 429, попытка 1, ждём 35 с
+2026-11-20T13:50:56.791Z ключ + действующие 429, попытка 2, ждём 35 с
+2026-11-20T13:51:32.090Z ключ + действующие: OK, записей 5, url https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D1%8B&stage=1&limit=5
+2026-11-20T13:51:41.165Z ключ + завершённые за 30 дней: OK, записей 1, url https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA&stage=3&published_forpast=30d&limit=5
+2026-11-20T13:51:44.971Z 44-ФЗ уплотнения: OK, записей 2, url https://v2test.gosplan.info/fz44/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=1&limit=5
+2026-11-20T13:51:45.321Z ИТОГО: уникальных записей 11, совпало с реестром 6

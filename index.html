@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=1.8">
+<link rel="stylesheet" href="css/styles.css?v=2.0">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -29,6 +29,7 @@
       <button class="tab" role="tab" aria-selected="false" data-tab="gen">Генерация</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="rep">Ремонт<span class="tab__more"> и сервис</span></button>
       <button class="tab" role="tab" aria-selected="false" data-tab="oem">ОЕМ<span class="tab__more"> и инжиниринг</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="tenders">Закупки</button>
       <button class="tab" role="tab" aria-selected="false" data-tab="map">Карта</button>
     </nav>
     <div class="topbar__actions">
@@ -176,6 +177,93 @@
   </section>
 </main>
 
+<section id="tendersView" class="wrap tenders-view" hidden>
+  <div class="t-head">
+    <h1>Аудит и поиск закупок на электронных площадках</h1>
+    <p>Публичные тендеры по предприятиям реестра и ключевым словам. Данные обновляются автоматически: скрипт в GitHub Actions проверяет площадки и собирает выдачу ЕИС; список слов хранится в репозитории.</p>
+  </div>
+
+  <div class="t-tabs" role="group" aria-label="Разделы закупок">
+    <button class="t-tab is-active" data-tview="tenders" type="button">Найденные закупки</button>
+    <button class="t-tab" data-tview="etps" type="button">Аудит ЭТП</button>
+    <span class="t-updated" id="tUpdated"></span>
+  </div>
+
+  <div id="tTendersPane">
+    <div class="t-filters">
+      <label class="field"><span>Поиск по названию / заказчику</span><input type="search" id="tQ" placeholder="Например, уплотнения или Затонская ТЭЦ" autocomplete="off"></label>
+      <label class="field"><span>Предприятие (все 339)</span>
+        <div class="t-auto">
+          <input type="text" id="tEnterprise" placeholder="Начните вводить: Затон…, ГРЭС…" autocomplete="off">
+          <div class="t-suggest" id="tEnterpriseSuggest" hidden></div>
+        </div>
+      </label>
+      <label class="field"><span>Дата с</span><input type="date" id="tDateFrom"></label>
+      <label class="field"><span>Дата по</span><input type="date" id="tDateTo"></label>
+      <label class="field"><span>Источник</span><select id="tSource"><option value="">Все источники</option></select></label>
+      <div class="field field--wide">
+        <span>Ключевые слова (общий список)</span>
+        <div class="t-chips" id="tKeywords"></div>
+        <div class="t-word-add">
+          <input type="text" id="tNewWord" placeholder="Добавить слово в список" autocomplete="off">
+          <button class="btn btn--ghost btn--sm" id="tAddWord" type="button">Добавить</button>
+          <button class="btn btn--ghost btn--sm" id="tRemoveWord" type="button">Удалить</button>
+          <a class="link" id="tEditWords" href="https://github.com/alexsmy/energo/edit/main/data/tender-keywords.json" target="_blank" rel="noopener">Править на GitHub</a>
+        </div>
+        <p class="t-hint" id="tWordHint">Список общий для всех и хранится в data/tender-keywords.json. Изменения применяются после публикации.</p>
+      </div>
+    </div>
+
+    <div class="t-toolbar">
+      <div class="toolbar__count"><strong id="tCount">0</strong> <span id="tCountWord">записей</span> <span class="t-mode-hint" id="tModeHint"></span></div>
+      <div class="t-toolbar__right">
+        <div class="seg" role="group" aria-label="Статус закупок">
+          <button class="seg__btn is-active" data-tmode="active" type="button">Действующие</button>
+          <button class="seg__btn" data-tmode="archive" type="button">Завершённые</button>
+        </div>
+        <button class="btn btn--primary btn--sm" id="tSearch" type="button">Найти</button>
+        <button class="btn btn--ghost btn--sm" id="tReset" type="button">Сбросить</button>
+        <div class="seg" role="group" aria-label="Вид закупок">
+          <button class="seg__btn is-active" data-tcards="cards" type="button">Карточки</button>
+          <button class="seg__btn" data-tcards="table" type="button">Таблица</button>
+        </div>
+        <select id="tSort" class="select select--sm" aria-label="Сортировка закупок">
+          <option value="date">По дате</option>
+          <option value="name">По названию</option>
+          <option value="company">По предприятию</option>
+          <option value="price">По цене</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="tCards" class="t-cards"></div>
+    <div id="tTableWrap" class="t-table-wrap" hidden>
+      <table class="table t-table">
+        <thead><tr><th>Дата</th><th>Название</th><th>Заказчик</th><th>Предприятие</th><th>Цена</th><th>Источник</th></tr></thead>
+        <tbody id="tTbody"></tbody>
+      </table>
+    </div>
+    <div id="tEmpty" class="empty" hidden><div class="empty__icon">⌕</div><p>Ничего не найдено. Измените параметры фильтра или дождитесь первого сбора данных.</p></div>
+
+    <div class="t-deep">
+      <h2>Прямой поиск на площадке</h2>
+      <p>Открывает поиск на самой ЭТП с уже подставленным запросом — регистрация для просмотра выдачи не требуется на большинстве площадок.</p>
+      <div class="t-deep__row">
+        <select id="tLinkEtp" class="select" aria-label="Площадка"></select>
+        <input type="text" id="tLinkQuery" class="input" placeholder="Слово или название предприятия">
+        <button class="btn btn--primary" id="tOpenSearch" type="button">Открыть поиск</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tEtpsPane" hidden><div class="t-etps" id="tEtps"></div></div>
+
+  <footer class="foot">
+    <p>Данные собраны из открытых источников и обновляются периодически. Выдача ЕИС и площадок может измениться — проверяйте объявление на сайте заказчика перед принятием решения.</p>
+    <p class="foot__meta">Поиск закупок · версия <span id="tVer"></span> · <a href="log.html" target="_blank" rel="noopener">Журнал сбора (что, откуда и с каким результатом)</a> · не является официальным документом</p>
+  </footer>
+</section>
+
 <div class="modal" id="modal" hidden>
   <div class="modal__backdrop" data-close></div>
   <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="mTitle">
@@ -197,7 +285,9 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=1.8"></script>
-<script src="js/app.js?v=1.8"></script>
+<script src="js/data.js?v=2.0"></script>
+<script src="js/tenders-data.js?v=2.0"></script>
+<script src="js/tenders.js?v=2.0"></script>
+<script src="js/app.js?v=2.0"></script>
 </body>
 </html>
