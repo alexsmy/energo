@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
+<meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
+<link rel="stylesheet" href="css/styles.css?v=1.2">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <div class="brand">
+      <div class="brand__mark" aria-hidden="true">⚡</div>
+      <div>
+        <div class="brand__title">Энергореестр&nbsp;РФ</div>
+        <div class="brand__sub">Генерация · Ремонт · Оборудование</div>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Разделы реестра">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="all">Все</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="gen">Генерация</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="rep">Ремонт<span class="tab__more"> и сервис</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="oem">ОЕМ<span class="tab__more"> и инжиниринг</span></button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="map">Карта</button>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--ghost" href="print.html" target="_blank" rel="noopener">Печать / PDF</a>
+      <button class="btn btn--primary" id="exportBtn">Экспорт CSV</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <h1>Реестр предприятий энергетики России</h1>
+        <div class="stats" id="stats"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main" class="wrap layout">
+  <aside class="filters" id="filtersPanel" aria-label="Фильтры">
+    <div class="filters__head">
+      <h2>Фильтры</h2>
+      <button class="link" id="resetBtn" type="button">Сбросить</button>
+    </div>
+
+    <label class="field">
+      <span>Поиск</span>
+      <input type="search" id="q" placeholder="Название, ИНН, регион, станция…" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span>Холдинг / группа</span>
+      <select id="fHolding"><option value="">Все</option></select>
+    </label>
+
+    <label class="field">
+      <span>Регион</span>
+      <select id="fRegion"><option value="">Все</option></select>
+    </label>
+
+    <label class="field">
+      <span>Тип объекта</span>
+      <select id="fType"><option value="">Все</option></select>
+    </label>
+
+    <label class="field">
+      <span>Способ закупки</span>
+      <select id="fMethod">
+        <option value="">Любой</option>
+        <option value="223">223-ФЗ</option>
+        <option value="44">44-ФЗ</option>
+        <option value="comp">Конкурентные процедуры</option>
+        <option value="direct">Прямые договоры / ед. поставщик</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>ЭТП</span>
+      <select id="fEtp"><option value="">Все</option></select>
+    </label>
+
+    <label class="field">
+      <span>Достоверность</span>
+      <select id="fConf">
+        <option value="">Любая</option>
+        <option value="high">Высокая</option>
+        <option value="medium">Средняя</option>
+      </select>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" id="fOnlyOrg">
+      <span>Только организации (без станций)</span>
+    </label>
+
+    <div class="legend">
+      <div><i class="dot dot--high"></i> высокая</div>
+      <div><i class="dot dot--medium"></i> средняя</div>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="toolbar">
+      <div class="toolbar__count"><strong id="count">0</strong> <span id="countWord">записей</span></div>
+      <div class="toolbar__right">
+        <button class="btn btn--ghost btn--filters" id="filterToggle" type="button" aria-expanded="false" aria-controls="filtersPanel">Фильтры</button>
+        <div class="seg" role="group" aria-label="Вид">
+          <button class="seg__btn is-active" data-view="cards" type="button">Карточки</button>
+          <button class="seg__btn" data-view="table" type="button">Таблица</button>
+        </div>
+        <select id="sort" class="select select--sm" aria-label="Сортировка">
+          <option value="path">По структуре</option>
+          <option value="name">По названию</option>
+          <option value="region">По региону</option>
+          <option value="conf">По достоверности</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="cards" class="cards"></div>
+    <div id="tableWrap" class="table-wrap" hidden>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Название</th><th>Тип</th><th>Регион</th>
+            <th>Телефон</th><th>E-mail</th><th>ЭТП</th><th>Дост.</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="empty" class="empty" hidden>
+      <div class="empty__icon">⌕</div>
+      <p>Ничего не найдено. Ослабьте фильтры или измените запрос.</p>
+    </div>
+
+    <section id="mapView" class="map-view" hidden>
+      <div class="map-toolbar">
+        <div class="layers" id="layers" role="group" aria-label="Слои карты"></div>
+        <div class="basemap" id="basemap" role="group" aria-label="Подложка карты">
+          <button class="basemap__btn is-active" data-base="osm" type="button" title="Карта">Карта</button>
+          <button class="basemap__btn" data-base="sat" type="button" title="Спутник">Спутник</button>
+          <button class="basemap__btn" data-base="hybrid" type="button" title="Гибрид">Гибрид</button>
+        </div>
+        <button class="btn btn--ghost btn--sm" id="mapFit" type="button">Показать всё</button>
+      </div>
+      <div class="map-shell">
+        <div id="map" class="map" role="application" aria-label="Карта предприятий энергетики"></div>
+        <div class="map-legend" id="mapLegend"></div>
+        <div class="map-fallback" id="mapFallback" hidden>
+          <strong>Карта недоступна</strong>
+          <p>Для загрузки подложки OpenStreetMap нужен интернет. Реестр, фильтры и карточки работают без сети.</p>
+        </div>
+      </div>
+      <p class="map-hint">Координаты: города — центр населённого пункта; крупные станции — фактические координаты. Нажмите на иконку, чтобы открыть краткую карточку.</p>
+    </section>
+
+    <footer class="foot">
+      <p id="disclaimer"></p>
+      <p class="foot__meta">Реестр: <span id="ver"></span> · Собрано из открытых источников · Не является официальным документом</p>
+    </footer>
+  </section>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal__head">
+      <div>
+        <div class="modal__kicker" id="mKicker"></div>
+        <h2 id="mTitle"></h2>
+        <div class="modal__path" id="mPath"></div>
+      </div>
+      <button class="icon-btn" id="mClose" aria-label="Закрыть" data-close>✕</button>
+    </div>
+    <div class="modal__body" id="mBody"></div>
+    <div class="modal__foot">
+      <button class="btn btn--ghost" id="copyBtn" type="button">Скопировать карточку</button>
+      <a class="btn btn--primary" id="mSite" href="#" target="_blank" rel="noopener">Сайт организации</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
+<script src="js/data.js?v=1.2"></script>
+<script src="js/app.js?v=1.2"></script>
+</body>
+</html>

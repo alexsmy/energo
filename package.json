@@ -1,0 +1,11 @@
+{
+  "name": "energo-registry-rf",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Реестр энергогенерирующих и энергоремонтных предприятий РФ: веб-приложение, карта, печатная версия",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "python -m http.server 8765 --bind 127.0.0.1",
+    "start": "node build.js && python -m http.server 8765 --bind 127.0.0.1"
+  }
+}
