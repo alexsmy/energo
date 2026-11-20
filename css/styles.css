@@ -318,7 +318,27 @@ body.is-map .btn--filters{display:inline-flex}
   .modal__head h2{font-size:19px}
 }
 
+/* Auto-update notice */
+.update-bar{
+  position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:80;
+  display:flex;align-items:center;gap:12px;max-width:calc(100% - 28px);
+  background:#0c3449;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;
+  padding:10px 12px 10px 16px;box-shadow:0 12px 40px rgba(7,24,35,.35);font-size:13px
+}
+.update-bar[hidden]{display:none}
+.update-bar__text{display:flex;flex-direction:column;gap:1px;line-height:1.3}
+.update-bar__text strong{font-size:13px}
+.update-bar__text small{color:#b9d3e2;font-size:11.5px}
+.update-bar button{border:0;border-radius:8px;padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.update-bar__now{background:var(--accent);color:#fff}
+.update-bar__later{background:rgba(255,255,255,.12);color:#eaf4f9}
+@media(max-width:720px){
+  .update-bar{left:8px;right:8px;bottom:8px;transform:none;flex-wrap:wrap;gap:8px;padding:10px 12px}
+  .update-bar__text{flex:1 1 100%}
+  .update-bar button{flex:1}
+}
+
 @media print{
-  .topbar,.hero,.filters,.toolbar,.modal,.foot,.map-view{display:none!important}
+  .topbar,.hero,.filters,.toolbar,.modal,.foot,.map-view,.update-bar{display:none!important}
   body{background:#fff}
 }

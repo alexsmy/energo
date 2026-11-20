@@ -8,7 +8,7 @@ const DATA = path.join(ROOT, 'data');
 const META = {
   title: 'Энергогенерирующие и энергоремонтные предприятия РФ',
   subtitle: 'Проверенный реестр для работы с закупками и подрядчиками',
-  version: '1.1',
+  version: '1.2',
   date: '2026-11-20',
   disclaimer: 'Данные собраны из открытых источников и проверены по состоянию на 20.11.2026. Поля с флагом «средняя» достоверность требуют подтверждения перед заключением договора. Контакты и кадровые назначения могут меняться.'
 };
@@ -209,6 +209,14 @@ fs.writeFileSync(path.join(ROOT, 'registry.csv'), csv, 'utf8');
 
 // JSON для внешних интеграций
 fs.writeFileSync(path.join(ROOT, 'registry.json'), JSON.stringify(out, null, 2), 'utf8');
+
+// Манифест версии для автообновления страницы (один маленький запрос раз в 15 минут)
+fs.writeFileSync(path.join(ROOT, 'version.json'), JSON.stringify({
+  version: META.version,
+  date: META.date,
+  title: 'Энергореестр РФ — обновление данных',
+  message: 'Данные реестра обновлены. Страница перезагрузится автоматически.'
+}, null, 2) + '\n', 'utf8');
 
 if (warnings.length) {
   console.warn('ПРЕДУПРЕЖДЕНИЯ (' + warnings.length + '):');

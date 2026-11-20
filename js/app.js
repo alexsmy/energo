@@ -40,6 +40,32 @@
     return many;
   }
 
+  const STATE_KEY = 'energo-registry-state';
+  const SKIP_KEY = 'energo-registry-skip-version';
+
+  function saveState() {
+    try { sessionStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) { /* приватный режим */ }
+  }
+
+  function restoreState() {
+    let saved = null;
+    try { saved = JSON.parse(sessionStorage.getItem(STATE_KEY) || 'null'); sessionStorage.removeItem(STATE_KEY); } catch (e) { /* noop */ }
+    if (!saved) return;
+    Object.assign(state, {
+      q: saved.q || '', holding: saved.holding || '', region: saved.region || '',
+      type: saved.type || '', method: saved.method || '', etp: saved.etp || '',
+      conf: saved.conf || '', onlyOrg: !!saved.onlyOrg,
+      view: saved.view === 'table' ? 'table' : 'cards',
+      sort: saved.sort || 'path'
+    });
+    const fields = { q: 'q', fHolding: 'holding', fRegion: 'region', fType: 'type', fMethod: 'method', fEtp: 'etp', fConf: 'conf', sort: 'sort' };
+    Object.entries(fields).forEach(([id, key]) => {
+      if ($(id)) $(id).value = state[key] || '';
+    });
+    $('fOnlyOrg').checked = state.onlyOrg;
+    document.querySelectorAll('.seg__btn').forEach(b => b.classList.toggle('is-active', b.dataset.view === state.view));
+  }
+
   function typeBadge(it) {
     if (it.kind === 'holding') return '<span class="badge badge--holding">холдинг</span>';
     if (isRepair(it)) return '<span class="badge badge--repair">ремонт</span>';
@@ -663,9 +689,74 @@
     });
   }
 
+  /* ---------- автообновление ---------- */
+  function initAutoUpdate() {
+    const current = (R.meta && R.meta.version) || '1.0';
+    let lastCheck = 0;
+    let timer = 0;
+    let reloadTimer = 0;
+    let bar = null;
+
+    function hideBar() {
+      clearTimeout(reloadTimer);
+      if (bar) bar.hidden = true;
+    }
+
+    function reload() {
+      saveState();
+      location.reload();
+    }
+
+    function showBar(info) {
+      if (bar) return;
+      bar = document.createElement('div');
+      bar.className = 'update-bar';
+      bar.setAttribute('role', 'status');
+      bar.innerHTML = '<span class="update-bar__text"><strong>' + esc(info.title || 'Доступна новая версия') + '</strong>' +
+        '<small>' + esc(info.message || 'Данные реестра обновлены.') + '</small></span>' +
+        '<button class="update-bar__now" type="button">Обновить (<span>15</span>)</button>' +
+        '<button class="update-bar__later" type="button">Позже</button>';
+      document.body.appendChild(bar);
+      let seconds = 15;
+      reloadTimer = setInterval(() => {
+        seconds -= 1;
+        const n = bar.querySelector('.update-bar__now span');
+        if (n) n.textContent = String(Math.max(0, seconds));
+        if (seconds <= 0) reload();
+      }, 1000);
+      bar.querySelector('.update-bar__now').addEventListener('click', reload);
+      bar.querySelector('.update-bar__later').addEventListener('click', () => {
+        try { sessionStorage.setItem(SKIP_KEY, info.version || ''); } catch (e) { /* noop */ }
+        hideBar();
+      });
+    }
+
+    async function check(force) {
+      if (document.hidden && !force) return;
+      const now = Date.now();
+      if (!force && now - lastCheck < 5 * 60 * 1000) return;
+      lastCheck = now;
+      try {
+        let skipped = '';
+        try { skipped = sessionStorage.getItem(SKIP_KEY) || ''; } catch (e) { /* noop */ }
+        const res = await fetch('version.json?ts=' + now, { cache: 'no-store' });
+        if (!res.ok) return;
+        const info = await res.json();
+        if (!info.version || info.version === current || info.version === skipped) return;
+        showBar(info);
+      } catch (e) { /* офлайн — работает локальная версия */ }
+    }
+
+    check(false);
+    setInterval(() => check(false), 15 * 60 * 1000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) check(true); });
+  }
+
   initStats();
   initFilters();
   bind();
+  restoreState();
+  initAutoUpdate();
   const hash = (location.hash || '').replace('#tab=', '');
   if (['gen', 'rep', 'oem', 'map'].includes(hash)) {
     const b = document.querySelector('[data-tab="' + hash + '"]');
