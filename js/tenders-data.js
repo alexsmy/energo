@@ -3676,7 +3676,7 @@ window.TENDER_DATA = {
   ]
  },
  "etps": {
-  "checked": "2026-11-20T18:06:41.288Z",
+  "checked": "2026-11-20T19:30:54.148Z",
   "note": "Результат аудита публичного доступа к ЭТП. Поля http/ms/ok обновляются скриптом scripts/collect-tenders.js при каждой проверке; остальное — ручное исследование. Проверка выполнялась из локального окружения: 403/503 могут отличаться в обычном браузере.",
   "platforms": [
    {
@@ -3691,9 +3691,9 @@ window.TENDER_DATA = {
     "reliability": "high",
     "notes": "Официальный реестр 44-ФЗ/223-ФЗ. Расширенный поиск доступен без регистрации, параметр searchString; карточка процедуры и документы — тоже публично. Основной источник для сбора.",
     "http": 0,
-    "ms": 10539,
+    "ms": 10555,
     "ok": false,
-    "checked": "2026-11-20T18:04:34.480Z"
+    "checked": "2026-11-20T19:28:44.117Z"
    },
    {
     "code": "GPB",
@@ -3707,9 +3707,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Главная и реестр процедур открыты без входа. Поиск по названию/.KEYWORD и фильтр по заказчикам (procedure[customers][id]) работают на странице /procedures/. Часть документов требует аккредитации.",
     "http": 0,
-    "ms": 10494,
+    "ms": 10493,
     "ok": false,
-    "checked": "2026-11-20T18:04:44.974Z"
+    "checked": "2026-11-20T19:28:54.610Z"
    },
    {
     "code": "TEK",
@@ -3723,9 +3723,9 @@ window.TENDER_DATA = {
     "reliability": "high",
     "notes": "Публичный реестр процедур /procedures с полями name, datePublished, dateEndRegistration, sumPrice_start/end. Есть отдельные секции Rosneft, Inter RAO, 223-FZ, 44-FZ — удобно для закупок энергетики.",
     "http": 0,
-    "ms": 8046,
+    "ms": 11120,
     "ok": false,
-    "checked": "2026-11-20T18:04:53.020Z"
+    "checked": "2026-11-20T19:29:05.730Z"
    },
    {
     "code": "ROS",
@@ -3739,9 +3739,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Форма поиска /procedures/search отправляет GET с query_field на /procedures/search_ajax; есть фильтры source[], status[], даты. Секции РусГидро, Росатома, СГК, Т Плюс.",
     "http": 0,
-    "ms": 10279,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-20T18:05:03.299Z"
+    "checked": "2026-11-20T19:29:16.221Z"
    },
    {
     "code": "FAB",
@@ -3755,9 +3755,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Публичный каталог /procedure/search с полем query; отдельные разделы 44-ФЗ, закупки и продажи. Часть процедур видна только после регистрации.",
     "http": 0,
-    "ms": 12001,
+    "ms": 12000,
     "ok": false,
-    "checked": "2026-11-20T18:05:15.300Z"
+    "checked": "2026-11-20T19:29:28.221Z"
    },
    {
     "code": "ZAKAZ",
@@ -3771,9 +3771,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Форма /NotificationEx? с полем FastFilter (ключевое слово, номер или ИНН) и фильтрами Filter.Customer/Filter.Placer. Основная площадка Татарстана.",
     "http": 0,
-    "ms": 10487,
+    "ms": 10482,
     "ok": false,
-    "checked": "2026-11-20T18:05:25.787Z"
+    "checked": "2026-11-20T19:29:38.703Z"
    },
    {
     "code": "RAD",
@@ -3787,9 +3787,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Публичный поиск на tender.lot-online.ru; реестр процедур gz.lot-online.ru/etp_front/procedure/list с параметрами status/direction. Параметр поиска требует уточнения в браузере.",
     "http": 0,
-    "ms": 10495,
+    "ms": 10493,
     "ok": false,
-    "checked": "2026-11-20T18:05:36.282Z"
+    "checked": "2026-11-20T19:29:49.196Z"
    },
    {
     "code": "B2B",
@@ -3803,9 +3803,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Доступ зависит от клиента: curl получил 403 (Antibot/TLS), а fetch — 200. Из обычного браузера реестр открывается, но детальные карточки — после регистрации. Проверить вручную.",
     "http": 403,
-    "ms": 1127,
+    "ms": 1311,
     "ok": false,
-    "checked": "2026-11-20T18:05:37.409Z"
+    "checked": "2026-11-20T19:29:50.507Z"
    },
    {
     "code": "AST",
@@ -3819,9 +3819,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Сайт открывается, но раздел закрытых процедур КИИ/ГОЗ требует авторизации и допусков. Для публичного аудита пригоден только факт наличия секции.",
     "http": 0,
-    "ms": 15872,
+    "ms": 15685,
     "ok": false,
-    "checked": "2026-11-20T18:05:53.281Z"
+    "checked": "2026-11-20T19:30:06.192Z"
    },
    {
     "code": "SBER",
@@ -3835,9 +3835,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Большинство закупок по 223-ФЗ дублируются в ЕИС, поэтому надёжнее искать их через ЕИС. Прямой публичный поиск на площадке требует уточнения.",
     "http": 0,
-    "ms": 10494,
+    "ms": 10493,
     "ok": false,
-    "checked": "2026-11-20T18:06:03.775Z"
+    "checked": "2026-11-20T19:30:16.685Z"
    },
    {
     "code": "RTS",
@@ -3851,9 +3851,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "При проверке получен 503 (регламентные работы/защита от ботов). Закупки по 223-ФЗ дублируются в ЕИС — использовать ЕИС как основной канал.",
     "http": 0,
-    "ms": 5002,
+    "ms": 4748,
     "ok": false,
-    "checked": "2026-11-20T18:06:08.777Z"
+    "checked": "2026-11-20T19:30:21.433Z"
    },
    {
     "code": "KIM",
@@ -3867,9 +3867,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Локальный запрос не завершился (TLS/доступ). Корпоративный интернет-магазин малых закупок — публичный поиск маловероятен.",
     "http": 0,
-    "ms": 1779,
+    "ms": 2472,
     "ok": false,
-    "checked": "2026-11-20T18:06:10.556Z"
+    "checked": "2026-11-20T19:30:23.905Z"
    },
    {
     "code": "PORTAL_ROS",
@@ -3883,9 +3883,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Отраслевой портал открыт; интегрирован с ЕИС и ЭТП. Для поиска закупок Росатома использовать ЕИС и секцию Росэлторга.",
     "http": 200,
-    "ms": 7294,
+    "ms": 6712,
     "ok": true,
-    "checked": "2026-11-20T18:06:17.850Z"
+    "checked": "2026-11-20T19:30:30.617Z"
    },
    {
     "code": "ETP_IRAO",
@@ -3899,9 +3899,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Локальный запрос не завершился. Дубли subscribitions Интер РАО есть на ТЭК-Торг (секция /inter_rao/procedures) — использовать её.",
     "http": 0,
-    "ms": 6031,
+    "ms": 6090,
     "ok": false,
-    "checked": "2026-11-20T18:06:23.881Z"
+    "checked": "2026-11-20T19:30:36.707Z"
    },
    {
     "code": "ETP_RUSH",
@@ -3915,9 +3915,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Доступ зависит от клиента: curl получил 403, fetch — 200. Закупки дублируются на ЕИС и Росэлторге — искать там.",
     "http": 0,
-    "ms": 16393,
+    "ms": 16472,
     "ok": false,
-    "checked": "2026-11-20T18:06:40.274Z"
+    "checked": "2026-11-20T19:30:53.179Z"
    },
    {
     "code": "BIDZAAR",
@@ -3931,9 +3931,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Сайт открывается, публичный каталог процедур доступен частично; коммерческие закупки Эн+ и других групп часто требуют входа. Уточнить параметры поиска в браузере.",
     "http": 200,
-    "ms": 1014,
+    "ms": 969,
     "ok": true,
-    "checked": "2026-11-20T18:06:41.288Z"
+    "checked": "2026-11-20T19:30:54.148Z"
    }
   ]
  },
@@ -4181,7 +4181,7 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-20T18:04:23.941Z",
+  "updated": "2026-11-20T19:28:33.562Z",
   "count": 127,
   "records": [
    {
@@ -4266,7 +4266,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -4321,7 +4321,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4425,7 +4425,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4472,7 +4472,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4521,7 +4521,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T16:40:01.377Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4568,7 +4568,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -4623,7 +4623,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -4680,7 +4680,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -4784,7 +4784,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -4855,7 +4855,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4912,7 +4912,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -4967,7 +4967,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:50:44.443Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5014,7 +5014,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5063,7 +5063,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5112,7 +5112,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5161,7 +5161,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5210,7 +5210,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5259,7 +5259,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5306,7 +5306,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5353,7 +5353,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5400,7 +5400,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -5455,7 +5455,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -5510,7 +5510,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -5565,7 +5565,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:50:44.443Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5614,7 +5614,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5663,7 +5663,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5710,7 +5710,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5757,7 +5757,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:50:44.443Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5806,7 +5806,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5853,7 +5853,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5900,7 +5900,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -5949,7 +5949,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -6051,7 +6051,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6108,7 +6108,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6163,7 +6163,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -6210,7 +6210,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -6314,7 +6314,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6369,7 +6369,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6426,7 +6426,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6483,7 +6483,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "ЕИС / HTML",
@@ -6540,7 +6540,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6642,7 +6642,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6697,7 +6697,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6752,7 +6752,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6809,7 +6809,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6864,7 +6864,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6919,7 +6919,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -6974,7 +6974,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7411,7 +7411,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -7476,7 +7476,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7574,7 +7574,7 @@ window.TENDER_DATA = {
      "C-MOSENERGO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7623,7 +7623,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7739,8 +7739,8 @@ window.TENDER_DATA = {
     "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СИЛОВЫЕ МАШИНЫ - ЗТЛ, ЛМЗ, ЭЛЕКТРОСИЛА, ЭНЕРГОМАШЭКСПОРТ\"",
     "customerInn": "7702080289",
     "customerCode": "",
-    "matchedOrgId": "O-SILMASH",
-    "matchedOrgName": "Силовые машины",
+    "matchedOrgId": "O-ZTL",
+    "matchedOrgName": "Завод турбинных лопаток",
     "platformCode": "TEK",
     "platformName": "ТЭК-Торг",
     "platformUrl": "https://www.tektorg.ru",
@@ -7763,7 +7763,8 @@ window.TENDER_DATA = {
      "Турбина"
     ],
     "enterpriseIds": [
-     "O-SILMASH"
+     "O-SILMASH",
+     "O-ZTL"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
     "lastSeen": "2026-11-20T16:34:03.109Z",
@@ -7813,7 +7814,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7860,7 +7861,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7909,7 +7910,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -7956,7 +7957,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -8058,7 +8059,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8105,7 +8106,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8152,7 +8153,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -8217,7 +8218,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8321,7 +8322,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8370,7 +8371,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8427,7 +8428,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8578,7 +8579,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8627,7 +8628,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8723,7 +8724,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8780,7 +8781,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T16:40:01.377Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8827,7 +8828,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:50:44.443Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -8876,7 +8877,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -8974,7 +8975,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9068,7 +9069,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9162,7 +9163,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9209,7 +9210,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9258,7 +9259,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9305,7 +9306,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9362,7 +9363,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9411,7 +9412,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9458,7 +9459,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9507,7 +9508,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9603,7 +9604,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9650,7 +9651,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9705,7 +9706,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9752,7 +9753,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9800,7 +9801,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9849,7 +9850,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9898,7 +9899,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -9945,7 +9946,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9994,7 +9995,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T16:47:04.985Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10041,7 +10042,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10088,7 +10089,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10135,7 +10136,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10231,7 +10232,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10278,7 +10279,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10327,7 +10328,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10374,7 +10375,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-20T18:06:41.296Z",
+    "lastSeen": "2026-11-20T19:30:54.158Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10423,7 +10424,7 @@ window.TENDER_DATA = {
      "C-IRAO-GEN"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10525,7 +10526,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10572,7 +10573,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-20T18:17:30.758Z",
+    "lastSeen": "2026-11-20T19:37:36.866Z",
     "sources": [
      {
       "source": "gentender",
@@ -10587,7 +10588,7 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-20T18:04:23.941Z",
+  "lastRun": "2026-11-20T19:28:33.562Z",
   "mode": "live",
   "total": 127,
   "unique": 2235,
@@ -10695,6 +10696,2108 @@ window.TENDER_DATA = {
   "partial": true
  },
  "log": [
+  {
+   "started": "2026-11-20T19:28:33.562Z",
+   "mode": "scheduled",
+   "entries": [
+    {
+     "ts": "2026-11-20T19:28:44.117Z",
+     "source": "etp-probe",
+     "query": "https://zakupki.gov.ru/epz/main/public/home.html",
+     "ok": false,
+     "http": 0,
+     "ms": 10555,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:28:54.610Z",
+     "source": "etp-probe",
+     "query": "https://etpgpb.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 10493,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:05.730Z",
+     "source": "etp-probe",
+     "query": "https://www.tektorg.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 11120,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:16.221Z",
+     "source": "etp-probe",
+     "query": "https://www.roseltorg.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 10491,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:28.221Z",
+     "source": "etp-probe",
+     "query": "https://www.fabrikant.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 12000,
+     "error": "The operation was aborted due to timeout",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:38.703Z",
+     "source": "etp-probe",
+     "query": "https://etp.zakazrf.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 10482,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:49.196Z",
+     "source": "etp-probe",
+     "query": "https://www.lot-online.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 10493,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:29:50.507Z",
+     "source": "etp-probe",
+     "query": "https://www.b2b-center.ru",
+     "ok": false,
+     "http": 403,
+     "ms": 1311,
+     "error": "HTTP 403",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:06.192Z",
+     "source": "etp-probe",
+     "query": "https://www.astgoz.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 15685,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:16.685Z",
+     "source": "etp-probe",
+     "query": "https://www.sberbank-ast.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 10493,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:21.433Z",
+     "source": "etp-probe",
+     "query": "https://www.rts-tender.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 4748,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:23.905Z",
+     "source": "etp-probe",
+     "query": "https://kim.rosatom.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 2472,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:30.617Z",
+     "source": "etp-probe",
+     "query": "https://zakupki.rosatom.ru",
+     "ok": true,
+     "http": 200,
+     "ms": 6712,
+     "error": "",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:36.707Z",
+     "source": "etp-probe",
+     "query": "https://etp.interrao.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 6090,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:53.179Z",
+     "source": "etp-probe",
+     "query": "https://zakupki.rushydro.ru",
+     "ok": false,
+     "http": 0,
+     "ms": 16472,
+     "error": "fetch failed",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:30:54.148Z",
+     "source": "etp-probe",
+     "query": "https://bidzaar.com",
+     "ok": true,
+     "http": 200,
+     "ms": 969,
+     "error": "",
+     "budget": ""
+    },
+    {
+     "ts": "2026-11-20T19:33:51.722Z",
+     "source": "gosplan",
+     "query": "гидроуплотнения (223, действующие)",
+     "ok": false,
+     "http": 429,
+     "ms": 177564,
+     "bytes": 0,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=1&limit=100",
+     "error": "HTTP 429",
+     "records": 0,
+     "phase": "active",
+     "budget": "1/60"
+    },
+    {
+     "ts": "2026-11-20T19:34:28.252Z",
+     "source": "gosplan",
+     "query": "гидроуплотнения (44, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 36530,
+     "bytes": 2,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=1&limit=100",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "budget": "2/60"
+    },
+    {
+     "ts": "2026-11-20T19:35:10.450Z",
+     "source": "gosplan",
+     "query": "гидроуплотнения (223, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 42198,
+     "bytes": 1005,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 1,
+     "kept": 1,
+     "phase": "archive",
+     "budget": "3/60"
+    },
+    {
+     "ts": "2026-11-20T19:35:16.962Z",
+     "source": "gosplan",
+     "query": "гидроуплотнения (44, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6512,
+     "bytes": 1028,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 1,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "4/60"
+    },
+    {
+     "ts": "2026-11-20T19:35:59.211Z",
+     "source": "gosplan",
+     "query": "гидроуплотнения (223, архив стр.2)",
+     "ok": true,
+     "http": 200,
+     "ms": 42249,
+     "bytes": 2,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&stage=3&published_forpast=30d&limit=100&skip=100",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "5/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:05.540Z",
+     "source": "gosplan",
+     "query": "уплотнение (223, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6329,
+     "bytes": 9162,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&stage=1&limit=100",
+     "error": "",
+     "records": 12,
+     "kept": 1,
+     "phase": "active",
+     "budget": "6/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:12.011Z",
+     "source": "gosplan",
+     "query": "уплотнение (44, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6471,
+     "bytes": 3238,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&stage=1&limit=100",
+     "error": "",
+     "records": 3,
+     "kept": 0,
+     "phase": "active",
+     "budget": "7/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:18.741Z",
+     "source": "gosplan",
+     "query": "уплотнение (223, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6730,
+     "bytes": 8627,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 10,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "8/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:25.013Z",
+     "source": "gosplan",
+     "query": "уплотнение (44, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6272,
+     "bytes": 3836,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 3,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "9/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:31.516Z",
+     "source": "gosplan",
+     "query": "уплотнение (223, архив стр.2)",
+     "ok": true,
+     "http": 200,
+     "ms": 6503,
+     "bytes": 2,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&stage=3&published_forpast=30d&limit=100&skip=100",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "10/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:38.014Z",
+     "source": "gosplan",
+     "query": "лопатка (223, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6497,
+     "bytes": 1402,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&stage=1&limit=100",
+     "error": "",
+     "records": 2,
+     "kept": 0,
+     "phase": "active",
+     "budget": "11/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:44.701Z",
+     "source": "gosplan",
+     "query": "лопатка (44, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6687,
+     "bytes": 1005,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&stage=1&limit=100",
+     "error": "",
+     "records": 1,
+     "kept": 0,
+     "phase": "active",
+     "budget": "12/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:51.203Z",
+     "source": "gosplan",
+     "query": "лопатка (223, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6502,
+     "bytes": 1502,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 2,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "13/60"
+    },
+    {
+     "ts": "2026-11-20T19:36:57.711Z",
+     "source": "gosplan",
+     "query": "лопатка (44, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6508,
+     "bytes": 1244,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 1,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "14/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:04.210Z",
+     "source": "gosplan",
+     "query": "лопатка (223, архив стр.2)",
+     "ok": true,
+     "http": 200,
+     "ms": 6499,
+     "bytes": 2,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&stage=3&published_forpast=30d&limit=100&skip=100",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "15/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:10.759Z",
+     "source": "gosplan",
+     "query": "турбина (223, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6549,
+     "bytes": 30170,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&stage=1&limit=100",
+     "error": "",
+     "records": 36,
+     "kept": 19,
+     "phase": "active",
+     "budget": "16/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:17.021Z",
+     "source": "gosplan",
+     "query": "турбина (44, действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 6262,
+     "bytes": 5308,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&stage=1&limit=100",
+     "error": "",
+     "records": 5,
+     "kept": 0,
+     "phase": "active",
+     "budget": "17/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:23.711Z",
+     "source": "gosplan",
+     "query": "турбина (223, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6690,
+     "bytes": 20396,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 21,
+     "kept": 13,
+     "phase": "archive",
+     "budget": "18/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:30.019Z",
+     "source": "gosplan",
+     "query": "турбина (44, завершённые 30д)",
+     "ok": true,
+     "http": 200,
+     "ms": 6308,
+     "bytes": 3767,
+     "url": "https://v2test.gosplan.info/fz44/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&stage=3&published_forpast=30d&limit=100",
+     "error": "",
+     "records": 3,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "19/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:36.858Z",
+     "source": "gosplan",
+     "query": "турбина (223, архив стр.2)",
+     "ok": true,
+     "http": 200,
+     "ms": 6839,
+     "bytes": 2,
+     "url": "https://v2test.gosplan.info/fz223/purchases?object_info=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&stage=3&published_forpast=30d&limit=100&skip=100",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "budget": "20/60"
+    },
+    {
+     "ts": "2026-11-20T19:37:37.817Z",
+     "source": "gentender",
+     "query": "ИНН 7721632827 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 951,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7721632827&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "1/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:38.201Z",
+     "source": "gentender",
+     "query": "ИНН 7721632827 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 384,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7721632827&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "2/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:39.582Z",
+     "source": "gentender",
+     "query": "ИНН 6829012680 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1381,
+     "bytes": 37656,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6829012680&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 32,
+     "kept": 32,
+     "phase": "active",
+     "total": 32,
+     "budget": "3/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:40.709Z",
+     "source": "gentender",
+     "query": "ИНН 6829012680 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1127,
+     "bytes": 106803,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6829012680&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 170,
+     "budget": "4/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:41.682Z",
+     "source": "gentender",
+     "query": "ИНН 9701087623 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 973,
+     "bytes": 5856,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=9701087623&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 5,
+     "kept": 5,
+     "phase": "active",
+     "total": 5,
+     "budget": "5/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:43.004Z",
+     "source": "gentender",
+     "query": "ИНН 9701087623 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1322,
+     "bytes": 56505,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=9701087623&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 51,
+     "kept": 51,
+     "phase": "archive",
+     "total": 51,
+     "budget": "6/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:43.958Z",
+     "source": "gentender",
+     "query": "ИНН 2460066195 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 954,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2460066195&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "7/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:45.114Z",
+     "source": "gentender",
+     "query": "ИНН 2460066195 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1156,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2460066195&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "8/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:46.482Z",
+     "source": "gentender",
+     "query": "ИНН 1434031363 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1368,
+     "bytes": 62076,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1434031363&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 45,
+     "kept": 45,
+     "phase": "active",
+     "total": 45,
+     "budget": "9/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:47.619Z",
+     "source": "gentender",
+     "query": "ИНН 1434031363 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1137,
+     "bytes": 138701,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1434031363&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 117,
+     "budget": "10/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:48.783Z",
+     "source": "gentender",
+     "query": "ИНН 1435028701 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1164,
+     "bytes": 50276,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1435028701&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 37,
+     "kept": 37,
+     "phase": "active",
+     "total": 37,
+     "budget": "11/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:49.911Z",
+     "source": "gentender",
+     "query": "ИНН 1435028701 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1128,
+     "bytes": 138389,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1435028701&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 106,
+     "budget": "12/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:50.874Z",
+     "source": "gentender",
+     "query": "ИНН 4909047148 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 963,
+     "bytes": 25459,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4909047148&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 19,
+     "kept": 19,
+     "phase": "active",
+     "total": 19,
+     "budget": "13/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:52.190Z",
+     "source": "gentender",
+     "query": "ИНН 4909047148 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1316,
+     "bytes": 55279,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4909047148&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 41,
+     "kept": 41,
+     "phase": "archive",
+     "total": 41,
+     "budget": "14/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:53.196Z",
+     "source": "gentender",
+     "query": "ИНН 4100000668 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1006,
+     "bytes": 20809,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4100000668&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 15,
+     "kept": 15,
+     "phase": "active",
+     "total": 15,
+     "budget": "15/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:54.510Z",
+     "source": "gentender",
+     "query": "ИНН 4100000668 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1314,
+     "bytes": 57807,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4100000668&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 41,
+     "kept": 41,
+     "phase": "archive",
+     "total": 41,
+     "budget": "16/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:55.670Z",
+     "source": "gentender",
+     "query": "ИНН 6500000024 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1160,
+     "bytes": 77132,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6500000024&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 57,
+     "kept": 57,
+     "phase": "active",
+     "total": 57,
+     "budget": "17/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:56.810Z",
+     "source": "gentender",
+     "query": "ИНН 6500000024 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1140,
+     "bytes": 121179,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6500000024&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 89,
+     "kept": 89,
+     "phase": "archive",
+     "total": 89,
+     "budget": "18/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:57.771Z",
+     "source": "gentender",
+     "query": "ИНН 8700000339 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 961,
+     "bytes": 1559,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=8700000339&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 1,
+     "kept": 1,
+     "phase": "active",
+     "total": 1,
+     "budget": "19/400"
+    },
+    {
+     "ts": "2026-11-20T19:37:58.915Z",
+     "source": "gentender",
+     "query": "ИНН 8700000339 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1144,
+     "bytes": 10434,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=8700000339&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 8,
+     "kept": 8,
+     "phase": "archive",
+     "total": 8,
+     "budget": "20/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:00.077Z",
+     "source": "gentender",
+     "query": "ИНН 1435117944 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1162,
+     "bytes": 29888,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1435117944&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 25,
+     "kept": 25,
+     "phase": "active",
+     "total": 25,
+     "budget": "21/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:01.420Z",
+     "source": "gentender",
+     "query": "ИНН 1435117944 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1343,
+     "bytes": 70646,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1435117944&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 58,
+     "kept": 58,
+     "phase": "archive",
+     "total": 58,
+     "budget": "22/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:02.359Z",
+     "source": "gentender",
+     "query": "ИНН 4908000718 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 939,
+     "bytes": 4700,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4908000718&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 3,
+     "kept": 3,
+     "phase": "active",
+     "total": 3,
+     "budget": "23/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:03.506Z",
+     "source": "gentender",
+     "query": "ИНН 4908000718 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1147,
+     "bytes": 8844,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4908000718&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 6,
+     "kept": 6,
+     "phase": "archive",
+     "total": 6,
+     "budget": "24/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:04.665Z",
+     "source": "gentender",
+     "query": "ИНН 2420002597 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1159,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2420002597&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "25/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:05.811Z",
+     "source": "gentender",
+     "query": "ИНН 2420002597 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1146,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2420002597&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "26/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:06.962Z",
+     "source": "gentender",
+     "query": "ИНН 7719019846 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1151,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7719019846&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "27/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:08.110Z",
+     "source": "gentender",
+     "query": "ИНН 7719019846 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1148,
+     "bytes": 2520,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7719019846&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 2,
+     "kept": 2,
+     "phase": "archive",
+     "total": 2,
+     "budget": "28/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:09.269Z",
+     "source": "gentender",
+     "query": "ИНН 2801133630 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1159,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2801133630&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "29/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:10.411Z",
+     "source": "gentender",
+     "query": "ИНН 2801133630 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1142,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2801133630&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "30/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:11.570Z",
+     "source": "gentender",
+     "query": "ИНН 7703323030 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1159,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7703323030&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "31/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:12.709Z",
+     "source": "gentender",
+     "query": "ИНН 7703323030 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1139,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7703323030&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "32/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:13.861Z",
+     "source": "gentender",
+     "query": "ИНН 7705035012 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1152,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7705035012&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "33/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:15.013Z",
+     "source": "gentender",
+     "query": "ИНН 7705035012 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1152,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7705035012&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "34/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:16.164Z",
+     "source": "gentender",
+     "query": "ИНН 2607018122 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1151,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2607018122&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "35/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:17.315Z",
+     "source": "gentender",
+     "query": "ИНН 2607018122 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1151,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2607018122&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "36/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:18.501Z",
+     "source": "gentender",
+     "query": "ИНН 7841312071 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1186,
+     "bytes": 22303,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7841312071&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 19,
+     "kept": 19,
+     "phase": "active",
+     "total": 19,
+     "budget": "37/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:19.810Z",
+     "source": "gentender",
+     "query": "ИНН 7841312071 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1309,
+     "bytes": 118008,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7841312071&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 130,
+     "budget": "38/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:20.821Z",
+     "source": "gentender",
+     "query": "ИНН 7720518494 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1011,
+     "bytes": 2692,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7720518494&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 2,
+     "kept": 2,
+     "phase": "active",
+     "total": 2,
+     "budget": "39/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:22.106Z",
+     "source": "gentender",
+     "query": "ИНН 7720518494 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1285,
+     "bytes": 108228,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7720518494&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 71,
+     "kept": 71,
+     "phase": "archive",
+     "total": 71,
+     "budget": "40/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:23.062Z",
+     "source": "gentender",
+     "query": "ИНН 5003046281 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 956,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5003046281&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "41/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:24.213Z",
+     "source": "gentender",
+     "query": "ИНН 5003046281 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1151,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5003046281&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "42/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:25.362Z",
+     "source": "gentender",
+     "query": "ИНН 5190141373 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1149,
+     "bytes": 3229,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5190141373&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 3,
+     "kept": 3,
+     "phase": "active",
+     "total": 3,
+     "budget": "43/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:26.518Z",
+     "source": "gentender",
+     "query": "ИНН 5190141373 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1156,
+     "bytes": 16248,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5190141373&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 15,
+     "kept": 15,
+     "phase": "archive",
+     "total": 15,
+     "budget": "44/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:27.661Z",
+     "source": "gentender",
+     "query": "ИНН 2320109650 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1143,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2320109650&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "45/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:28.818Z",
+     "source": "gentender",
+     "query": "ИНН 2320109650 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1157,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=2320109650&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "46/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:29.965Z",
+     "source": "gentender",
+     "query": "ИНН 7705031659 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1147,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7705031659&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "47/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:31.110Z",
+     "source": "gentender",
+     "query": "ИНН 7705031659 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1145,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7705031659&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "48/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:32.500Z",
+     "source": "gentender",
+     "query": "ИНН 0277077282 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1390,
+     "bytes": 53257,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=0277077282&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 45,
+     "kept": 45,
+     "phase": "active",
+     "total": 45,
+     "budget": "49/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:33.607Z",
+     "source": "gentender",
+     "query": "ИНН 0277077282 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1107,
+     "bytes": 118871,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=0277077282&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 107,
+     "budget": "50/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:34.785Z",
+     "source": "gentender",
+     "query": "ИНН 5406323202 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1178,
+     "bytes": 50438,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5406323202&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 49,
+     "kept": 49,
+     "phase": "active",
+     "total": 49,
+     "budget": "51/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:35.916Z",
+     "source": "gentender",
+     "query": "ИНН 5406323202 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1131,
+     "bytes": 97214,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5406323202&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 95,
+     "kept": 95,
+     "phase": "archive",
+     "total": 95,
+     "budget": "52/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:37.071Z",
+     "source": "gentender",
+     "query": "ИНН 7017373959 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1155,
+     "bytes": 39950,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7017373959&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 39,
+     "kept": 39,
+     "phase": "active",
+     "total": 39,
+     "budget": "53/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:38.219Z",
+     "source": "gentender",
+     "query": "ИНН 7017373959 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1147,
+     "bytes": 102522,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7017373959&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 102,
+     "budget": "54/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:39.591Z",
+     "source": "gentender",
+     "query": "ИНН 6315376946 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1372,
+     "bytes": 150570,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6315376946&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "active",
+     "total": 165,
+     "budget": "55/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:41.869Z",
+     "source": "gentender",
+     "query": "ИНН 6315376946 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 2278,
+     "bytes": 149571,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6315376946&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 1091,
+     "budget": "56/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:42.082Z",
+     "source": "gentender",
+     "query": "ИНН 7709832989 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 213,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7709832989&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "57/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:43.212Z",
+     "source": "gentender",
+     "query": "ИНН 7709832989 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1130,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7709832989&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "58/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:44.360Z",
+     "source": "gentender",
+     "query": "ИНН 4200000333 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1148,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4200000333&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "59/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:45.514Z",
+     "source": "gentender",
+     "query": "ИНН 4200000333 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1154,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=4200000333&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "60/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:46.669Z",
+     "source": "gentender",
+     "query": "ИНН 1901067718 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1155,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1901067718&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "61/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:47.813Z",
+     "source": "gentender",
+     "query": "ИНН 1901067718 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1144,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1901067718&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "62/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:48.970Z",
+     "source": "gentender",
+     "query": "ИНН 5405270340 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1157,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5405270340&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "63/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:50.105Z",
+     "source": "gentender",
+     "query": "ИНН 5405270340 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1135,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=5405270340&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "64/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:51.265Z",
+     "source": "gentender",
+     "query": "ИНН 8602067092 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1160,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=8602067092&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "65/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:52.430Z",
+     "source": "gentender",
+     "query": "ИНН 8602067092 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1165,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=8602067092&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "archive",
+     "total": 0,
+     "budget": "66/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:53.784Z",
+     "source": "gentender",
+     "query": "ИНН 7203162698 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1354,
+     "bytes": 63152,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7203162698&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 53,
+     "kept": 53,
+     "phase": "active",
+     "total": 53,
+     "budget": "67/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:54.920Z",
+     "source": "gentender",
+     "query": "ИНН 7203162698 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1136,
+     "bytes": 118106,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7203162698&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 104,
+     "budget": "68/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:55.861Z",
+     "source": "gentender",
+     "query": "ИНН 6671156423 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 941,
+     "bytes": 44,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6671156423&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 0,
+     "kept": 0,
+     "phase": "active",
+     "total": 0,
+     "budget": "69/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:57.016Z",
+     "source": "gentender",
+     "query": "ИНН 6671156423 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1155,
+     "bytes": 1180,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=6671156423&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 1,
+     "kept": 1,
+     "phase": "archive",
+     "total": 1,
+     "budget": "70/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:58.400Z",
+     "source": "gentender",
+     "query": "ИНН 1657036630 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1384,
+     "bytes": 63852,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1657036630&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 45,
+     "kept": 45,
+     "phase": "active",
+     "total": 45,
+     "budget": "71/400"
+    },
+    {
+     "ts": "2026-11-20T19:38:59.528Z",
+     "source": "gentender",
+     "query": "ИНН 1657036630 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1128,
+     "bytes": 138944,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=1657036630&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 132,
+     "budget": "72/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:00.687Z",
+     "source": "gentender",
+     "query": "ИНН 7606053324 (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1159,
+     "bytes": 46292,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7606053324&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 40,
+     "kept": 40,
+     "phase": "active",
+     "total": 40,
+     "budget": "73/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:01.826Z",
+     "source": "gentender",
+     "query": "ИНН 7606053324 (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1139,
+     "bytes": 117676,
+     "url": "https://gentender.ru/api/tenders/search?customer_inn=7606053324&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 100,
+     "phase": "archive",
+     "total": 102,
+     "budget": "74/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:03.058Z",
+     "source": "gentender",
+     "query": "гидроуплотнения (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1232,
+     "bytes": 1121,
+     "url": "https://gentender.ru/api/tenders/search?q=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 1,
+     "kept": 1,
+     "phase": "active",
+     "total": 1,
+     "budget": "75/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:03.960Z",
+     "source": "gentender",
+     "query": "гидроуплотнения (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 902,
+     "bytes": 3513,
+     "url": "https://gentender.ru/api/tenders/search?q=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 3,
+     "kept": 2,
+     "phase": "archive",
+     "total": 3,
+     "budget": "76/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:05.579Z",
+     "source": "gentender",
+     "query": "уплотнение (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1619,
+     "bytes": 119889,
+     "url": "https://gentender.ru/api/tenders/search?q=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 12,
+     "phase": "active",
+     "total": 110,
+     "budget": "77/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:06.813Z",
+     "source": "gentender",
+     "query": "уплотнение (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1233,
+     "bytes": 105649,
+     "url": "https://gentender.ru/api/tenders/search?q=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 15,
+     "phase": "archive",
+     "total": 448,
+     "budget": "78/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:07.530Z",
+     "source": "gentender",
+     "query": "лопатка (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 717,
+     "bytes": 36455,
+     "url": "https://gentender.ru/api/tenders/search?q=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 29,
+     "kept": 1,
+     "phase": "active",
+     "total": 29,
+     "budget": "79/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:08.894Z",
+     "source": "gentender",
+     "query": "лопатка (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1364,
+     "bytes": 116014,
+     "url": "https://gentender.ru/api/tenders/search?q=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 2,
+     "phase": "archive",
+     "total": 157,
+     "budget": "80/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:09.998Z",
+     "source": "gentender",
+     "query": "турбина (действующие)",
+     "ok": true,
+     "http": 200,
+     "ms": 1104,
+     "bytes": 63581,
+     "url": "https://gentender.ru/api/tenders/search?q=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&only_active=1&limit=100&offset=0",
+     "error": "",
+     "records": 52,
+     "kept": 14,
+     "phase": "active",
+     "total": 52,
+     "budget": "81/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:11.170Z",
+     "source": "gentender",
+     "query": "турбина (архив)",
+     "ok": true,
+     "http": 200,
+     "ms": 1172,
+     "bytes": 120724,
+     "url": "https://gentender.ru/api/tenders/search?q=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&only_active=0&publish_from=2026-10-21&limit=100&offset=0",
+     "error": "",
+     "records": 100,
+     "kept": 42,
+     "phase": "archive",
+     "total": 176,
+     "budget": "82/400"
+    },
+    {
+     "ts": "2026-11-20T19:39:19.512Z",
+     "source": "tektorg",
+     "query": "гидроуплотнения стр.1",
+     "ok": false,
+     "http": 403,
+     "ms": 8335,
+     "bytes": 0,
+     "url": "https://www.tektorg.ru/procedures?name=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&page=1",
+     "error": "HTTP 403",
+     "records": 0,
+     "budget": "1/40"
+    },
+    {
+     "ts": "2026-11-20T19:39:19.659Z",
+     "source": "tektorg",
+     "query": "уплотнение стр.1",
+     "ok": false,
+     "http": 403,
+     "ms": 147,
+     "bytes": 0,
+     "url": "https://www.tektorg.ru/procedures?name=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&page=1",
+     "error": "HTTP 403",
+     "records": 0,
+     "budget": "2/40"
+    },
+    {
+     "ts": "2026-11-20T19:39:23.366Z",
+     "source": "tektorg",
+     "query": "лопатка стр.1",
+     "ok": false,
+     "http": 403,
+     "ms": 3706,
+     "bytes": 0,
+     "url": "https://www.tektorg.ru/procedures?name=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&page=1",
+     "error": "HTTP 403",
+     "records": 0,
+     "budget": "3/40"
+    },
+    {
+     "ts": "2026-11-20T19:39:24.310Z",
+     "source": "tektorg",
+     "query": "турбина стр.1",
+     "ok": false,
+     "http": 403,
+     "ms": 944,
+     "bytes": 0,
+     "url": "https://www.tektorg.ru/procedures?name=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&page=1",
+     "error": "HTTP 403",
+     "records": 0,
+     "budget": "4/40"
+    },
+    {
+     "ts": "2026-11-20T19:39:46.986Z",
+     "source": "etpgpb",
+     "query": "гидроуплотнения стр.1",
+     "ok": false,
+     "http": 0,
+     "ms": 22668,
+     "bytes": 0,
+     "url": "https://etpgpb.ru/procedures/?search=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&page=1",
+     "error": "fetch failed",
+     "records": 0,
+     "budget": "1/40"
+    },
+    {
+     "ts": "2026-11-20T19:40:09.969Z",
+     "source": "etpgpb",
+     "query": "уплотнение стр.1",
+     "ok": false,
+     "http": 0,
+     "ms": 22983,
+     "bytes": 0,
+     "url": "https://etpgpb.ru/procedures/?search=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&page=1",
+     "error": "fetch failed",
+     "records": 0,
+     "budget": "2/40"
+    },
+    {
+     "ts": "2026-11-20T19:40:32.955Z",
+     "source": "etpgpb",
+     "query": "лопатка стр.1",
+     "ok": false,
+     "http": 0,
+     "ms": 22986,
+     "bytes": 0,
+     "url": "https://etpgpb.ru/procedures/?search=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&page=1",
+     "error": "fetch failed",
+     "records": 0,
+     "budget": "3/40"
+    },
+    {
+     "ts": "2026-11-20T19:40:55.941Z",
+     "source": "etpgpb",
+     "query": "турбина стр.1",
+     "ok": false,
+     "http": 0,
+     "ms": 22986,
+     "bytes": 0,
+     "url": "https://etpgpb.ru/procedures/?search=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&page=1",
+     "error": "fetch failed",
+     "records": 0,
+     "budget": "4/40"
+    },
+    {
+     "ts": "2026-11-20T19:41:18.937Z",
+     "source": "roseltorg",
+     "query": "гидроуплотнения [active]",
+     "ok": false,
+     "http": 0,
+     "ms": 22988,
+     "bytes": 0,
+     "url": "https://www.roseltorg.ru/procedures/search_ajax?query_field=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&sale=1&status%5B%5D=5&status%5B%5D=0&status%5B%5D=1",
+     "error": "fetch failed",
+     "records": 0,
+     "phase": "active",
+     "budget": "1/40"
+    },
+    {
+     "ts": "2026-11-20T19:41:41.922Z",
+     "source": "roseltorg",
+     "query": "уплотнение [active]",
+     "ok": false,
+     "http": 0,
+     "ms": 22985,
+     "bytes": 0,
+     "url": "https://www.roseltorg.ru/procedures/search_ajax?query_field=%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5&sale=1&status%5B%5D=5&status%5B%5D=0&status%5B%5D=1",
+     "error": "fetch failed",
+     "records": 0,
+     "phase": "active",
+     "budget": "2/40"
+    },
+    {
+     "ts": "2026-11-20T19:42:04.908Z",
+     "source": "roseltorg",
+     "query": "лопатка [active]",
+     "ok": false,
+     "http": 0,
+     "ms": 22986,
+     "bytes": 0,
+     "url": "https://www.roseltorg.ru/procedures/search_ajax?query_field=%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BA%D0%B0&sale=1&status%5B%5D=5&status%5B%5D=0&status%5B%5D=1",
+     "error": "fetch failed",
+     "records": 0,
+     "phase": "active",
+     "budget": "3/40"
+    },
+    {
+     "ts": "2026-11-20T19:42:27.892Z",
+     "source": "roseltorg",
+     "query": "турбина [active]",
+     "ok": false,
+     "http": 0,
+     "ms": 22984,
+     "bytes": 0,
+     "url": "https://www.roseltorg.ru/procedures/search_ajax?query_field=%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%B0&sale=1&status%5B%5D=5&status%5B%5D=0&status%5B%5D=1",
+     "error": "fetch failed",
+     "records": 0,
+     "phase": "active",
+     "budget": "4/40"
+    },
+    {
+     "ts": "2026-11-20T19:42:50.879Z",
+     "source": "roseltorg",
+     "query": "гидроуплотнения [archive]",
+     "ok": false,
+     "http": 0,
+     "ms": 22987,
+     "bytes": 0,
+     "url": "https://www.roseltorg.ru/procedures/search_ajax?query_field=%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D1%83%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F&sale=1&status%5B%5D=2&status%5B%5D=3&status%5B%5D=4",
+     "error": "fetch failed",
+     "records": 0,
+     "phase": "archive",
+     "budget": "5/40"
+    },
+    {
+     "ts": "2026-11-20T19:43:13.874Z",
+     "source": "eis-html",
+     "query": "гидроуплотнения [active]",
+     "ok": false,
+     "http": 0,
+     "records": 0,
+     "error": "fetch failed",
+     "phase": "active",
+     "budget": "1/40"
+    },
+    {
+     "ts": "2026-11-20T19:43:36.858Z",
+     "source": "eis-html",
+     "query": "уплотнение [active]",
+     "ok": false,
+     "http": 0,
+     "records": 0,
+     "error": "fetch failed",
+     "phase": "active",
+     "budget": "2/40"
+    },
+    {
+     "ts": "2026-11-20T19:43:59.845Z",
+     "source": "eis-html",
+     "query": "лопатка [active]",
+     "ok": false,
+     "http": 0,
+     "records": 0,
+     "error": "fetch failed",
+     "phase": "active",
+     "budget": "3/40"
+    },
+    {
+     "ts": "2026-11-20T19:44:22.830Z",
+     "source": "eis-html",
+     "query": "турбина [active]",
+     "ok": false,
+     "http": 0,
+     "records": 0,
+     "error": "fetch failed",
+     "phase": "active",
+     "budget": "4/40"
+    }
+   ],
+   "summary": {
+    "total": 127,
+    "unique": 2235,
+    "matchedOrg": 127,
+    "active": 62,
+    "archive": 65,
+    "bySource": {
+     "EIS": 43,
+     "TEK": 25,
+     "ROS": 13,
+     "GPB": 8,
+     "ZAKAZ": 5,
+     "RAD": 15,
+     "SBER": 2,
+     "B2B": 14,
+     "FAB": 1,
+     "RTS": 1
+    },
+    "sources": [
+     {
+      "name": "gosplan",
+      "available": true,
+      "requests": 20,
+      "okRequests": 19,
+      "records": 34,
+      "errors": 1
+     },
+     {
+      "name": "gentender",
+      "available": true,
+      "requests": 82,
+      "okRequests": 82,
+      "records": 2201,
+      "errors": 0
+     },
+     {
+      "name": "tektorg",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4
+     },
+     {
+      "name": "etpgpb",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4
+     },
+     {
+      "name": "roseltorg",
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5
+     },
+     {
+      "name": "eis-html",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4
+     }
+    ],
+    "errors": 5,
+    "probeOk": 2,
+    "droppedNoKeyword": 1458,
+    "titlesSuspicious": 0,
+    "budget": {
+     "gosplan": {
+      "limit": 60,
+      "used": 20,
+      "exhausted": false
+     },
+     "gentender": {
+      "limit": 400,
+      "used": 82,
+      "exhausted": false
+     },
+     "tektorg": {
+      "limit": 40,
+      "used": 4,
+      "exhausted": false
+     },
+     "etpgpb": {
+      "limit": 40,
+      "used": 4,
+      "exhausted": false
+     },
+     "roseltorg": {
+      "limit": 40,
+      "used": 5,
+      "exhausted": false
+     },
+     "eis-html": {
+      "limit": 40,
+      "used": 4,
+      "exhausted": false
+     }
+    },
+    "partial": true
+   },
+   "finished": "2026-11-20T19:44:23.814Z"
+  },
   {
    "started": "2026-11-20T18:04:23.941Z",
    "mode": "scheduled",
