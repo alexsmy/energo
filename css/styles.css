@@ -318,27 +318,32 @@ body.is-map .btn--filters{display:inline-flex}
   .modal__head h2{font-size:19px}
 }
 
-/* Auto-update notice */
-.update-bar{
-  position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:80;
-  display:flex;align-items:center;gap:12px;max-width:calc(100% - 28px);
-  background:#0c3449;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;
-  padding:10px 12px 10px 16px;box-shadow:0 12px 40px rgba(7,24,35,.35);font-size:13px
+/* Уведомления (переиспользуемые) */
+.notice{
+  position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:9px;
+  max-width:min(360px,calc(100% - 28px));background:#fff;color:var(--ink);
+  border:1px solid var(--line);border-radius:11px;padding:8px 9px 8px 11px;
+  box-shadow:0 8px 26px rgba(9,31,44,.14);
+  animation:notice-in .28s cubic-bezier(.22,.8,.3,1)
 }
-.update-bar[hidden]{display:none}
-.update-bar__text{display:flex;flex-direction:column;gap:1px;line-height:1.3}
-.update-bar__text strong{font-size:13px}
-.update-bar__text small{color:#b9d3e2;font-size:11.5px}
-.update-bar button{border:0;border-radius:8px;padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
-.update-bar__now{background:var(--accent);color:#fff}
-.update-bar__later{background:rgba(255,255,255,.12);color:#eaf4f9}
+@keyframes notice-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.notice__icon{
+  width:24px;height:24px;border-radius:50%;background:#eef4f7;border:1px solid #d4e3ec;
+  color:var(--navy-2);display:grid;place-items:center;flex:0 0 auto;
+  font:italic 700 13px/1 Georgia,"Times New Roman",serif
+}
+.notice__body{font-size:11.5px;line-height:1.35;color:var(--muted);min-width:0;flex:1}
+.notice__body b{font-size:11px;font-variant-numeric:tabular-nums;color:var(--navy-2);font-weight:600}
+.notice__close{
+  border:0;background:transparent;color:#8aa0ad;font-size:12px;line-height:1;
+  padding:3px 4px;border-radius:5px;cursor:pointer;flex:0 0 auto
+}
+.notice__close:hover{background:#f0f5f8;color:var(--ink)}
 @media(max-width:720px){
-  .update-bar{left:8px;right:8px;bottom:8px;transform:none;flex-wrap:wrap;gap:8px;padding:10px 12px}
-  .update-bar__text{flex:1 1 100%}
-  .update-bar button{flex:1}
+  .notice{right:12px;bottom:12px;max-width:calc(100% - 24px)}
 }
 
 @media print{
-  .topbar,.hero,.filters,.toolbar,.modal,.foot,.map-view,.update-bar{display:none!important}
+  .topbar,.hero,.filters,.toolbar,.modal,.foot,.map-view,.notice{display:none!important}
   body{background:#fff}
 }

@@ -41,7 +41,6 @@
   }
 
   const STATE_KEY = 'energo-registry-state';
-  const SKIP_KEY = 'energo-registry-skip-version';
 
   function saveState() {
     try { sessionStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) { /* приватный режим */ }
@@ -689,46 +688,43 @@
     });
   }
 
+  /* ---------- уведомления ---------- */
+  function createNotice(kind, icon) {
+    const el = document.createElement('div');
+    el.className = 'notice notice--' + kind;
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.innerHTML = '<span class="notice__icon" aria-hidden="true">' + esc(icon) + '</span>' +
+      '<span class="notice__body"></span>' +
+      '<button class="notice__close" type="button" aria-label="Закрыть уведомление">✕</button>';
+    el.querySelector('.notice__close').addEventListener('click', () => el.remove());
+    document.body.appendChild(el);
+    return el;
+  }
+
   /* ---------- автообновление ---------- */
   function initAutoUpdate() {
     const current = (R.meta && R.meta.version) || '1.0';
     let lastCheck = 0;
-    let timer = 0;
-    let reloadTimer = 0;
-    let bar = null;
-
-    function hideBar() {
-      clearTimeout(reloadTimer);
-      if (bar) bar.hidden = true;
-    }
+    let notice = null;
 
     function reload() {
       saveState();
       location.reload();
     }
 
-    function showBar(info) {
-      if (bar) return;
-      bar = document.createElement('div');
-      bar.className = 'update-bar';
-      bar.setAttribute('role', 'status');
-      bar.innerHTML = '<span class="update-bar__text"><strong>' + esc(info.title || 'Доступна новая версия') + '</strong>' +
-        '<small>' + esc(info.message || 'Данные реестра обновлены.') + '</small></span>' +
-        '<button class="update-bar__now" type="button">Обновить (<span>15</span>)</button>' +
-        '<button class="update-bar__later" type="button">Позже</button>';
-      document.body.appendChild(bar);
-      let seconds = 15;
-      reloadTimer = setInterval(() => {
+    function showNotice() {
+      if (notice && notice.isConnected) return;
+      notice = createNotice('update', 'i');
+      const body = notice.querySelector('.notice__body');
+      body.innerHTML = 'Обновление данных, страница будет перезагружена · <b>10</b> с';
+      let seconds = 10;
+      const counter = body.querySelector('b');
+      const timer = setInterval(() => {
         seconds -= 1;
-        const n = bar.querySelector('.update-bar__now span');
-        if (n) n.textContent = String(Math.max(0, seconds));
-        if (seconds <= 0) reload();
+        if (counter) counter.textContent = String(Math.max(0, seconds));
+        if (seconds <= 0) { clearInterval(timer); reload(); }
       }, 1000);
-      bar.querySelector('.update-bar__now').addEventListener('click', reload);
-      bar.querySelector('.update-bar__later').addEventListener('click', () => {
-        try { sessionStorage.setItem(SKIP_KEY, info.version || ''); } catch (e) { /* noop */ }
-        hideBar();
-      });
     }
 
     async function check(force) {
@@ -737,13 +733,11 @@
       if (!force && now - lastCheck < 5 * 60 * 1000) return;
       lastCheck = now;
       try {
-        let skipped = '';
-        try { skipped = sessionStorage.getItem(SKIP_KEY) || ''; } catch (e) { /* noop */ }
         const res = await fetch('version.json?ts=' + now, { cache: 'no-store' });
         if (!res.ok) return;
         const info = await res.json();
-        if (!info.version || info.version === current || info.version === skipped) return;
-        showBar(info);
+        if (!info.version || info.version === current) return;
+        showNotice();
       } catch (e) { /* офлайн — работает локальная версия */ }
     }
 
