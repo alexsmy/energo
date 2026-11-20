@@ -261,9 +261,21 @@
     });
     // Базовый слой на данных OSM, но через устойчивый CDN CARTO:
     //tile.openstreetmap.org у части провайдеров отдаёт 403, Esri-слои работают.
-    mapState.base.osm = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-      maxZoom: 19, subdomains: 'abcd',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; CARTO'
+    // Basic-слой: обычные OSM-тайлы без ключа. CARTO показывал водяной знак «API KEY».
+    mapState.base.osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, subdomains: 'abc',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    });
+    mapState.base.osmAlt = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
+    });
+    let osmFallbackDone = false;
+    mapState.base.osm.on('tileerror', () => {
+      if (osmFallbackDone || mapState.baseId !== 'osm') return;
+      osmFallbackDone = true;
+      mapState.map.removeLayer(mapState.base.osm);
+      mapState.base.osmAlt.addTo(mapState.map);
+      mapState.base.osm = mapState.base.osmAlt;
     });
     mapState.base.sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 18, attribution: 'Imagery &copy; Esri'
