@@ -3394,17 +3394,8 @@ window.TENDER_DATA = {
  ],
  "keywords": {
   "updated": "2026-11-20",
-  "note": "Общий список ключевых слов для поиска закупок. Хранится в репозитории (на сервере), а не в браузере. Формат элемента: строка «турбина» или объект { label, search, must }. search — опорное слово, которое уходит в API площадки; must — обязательные группы слов в названии закупки (И между группами, ИЛИ внутри группы). Словоформы (турбина/турбины/турбине/турбин) учитываются автоматически, аббревиатуры (ТВД, ЦВД, ЦНД, ПЧ, ГТУ, ПТ) нужно указывать явно. Правка: node scripts/keywords.js add|remove «слово» или вручную.",
+  "note": "Общий список ключевых слов для поиска закупок. Формат элемента: строка «турбина» или объект { label, search, must }. search — опорное слово, которое уходит в API площадки; must — обязательные группы слов в названии закупки (И между группами, ИЛИ внутри группы). Словоформы учитываются автоматически, аббревиатуры (ТВД, ЦВД, ЦНД, ПЧ, ГТУ, ПТ) нужно указывать явно.",
   "keywords": [
-   {
-    "label": "Гидроуплотнения",
-    "search": "гидроуплотнения",
-    "must": [
-     [
-      "гидроуплотнен"
-     ]
-    ]
-   },
    {
     "label": "Замена уплотнений ТВД",
     "search": "уплотнение",
@@ -4181,7 +4172,7 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-20T19:28:33.562Z",
+  "updated": "2026-11-20T19:51:00.551Z",
   "count": 127,
   "records": [
    {
@@ -4510,11 +4501,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616604656",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5052,11 +5041,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5101,11 +5088,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5150,11 +5135,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5199,11 +5182,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5248,11 +5229,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5652,11 +5631,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -5795,11 +5772,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q3q6bu1fs42cpkg",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -6097,11 +6072,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616573115",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -7304,11 +7277,9 @@ window.TENDER_DATA = {
     "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/ATOM03092600035/1",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -7465,11 +7436,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573115",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -7563,11 +7532,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616567504",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8207,11 +8174,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/market/procedures/20200493",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8311,11 +8276,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q3bqv851tovqngo",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8360,11 +8323,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/market/procedures/20199368",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8417,11 +8378,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/interrao/procedures/20197286",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8521,11 +8480,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20199297",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8713,11 +8670,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/interrao/procedures/20192900",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8770,11 +8725,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616509121",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -8915,11 +8868,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20185994",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -9984,11 +9935,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616509121",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -10317,11 +10266,9 @@ window.TENDER_DATA = {
     "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616447344",
     "keywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "matchedKeywords": [
-     "Гидроуплотнения",
      "Уплотнения"
     ],
     "enterpriseIds": [
@@ -10588,114 +10535,42 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-20T19:28:33.562Z",
-  "mode": "live",
+  "lastRun": "2026-11-20T19:51:00.551Z",
+  "mode": "refilter",
   "total": 127,
-  "unique": 2235,
-  "matchedOrg": 127,
   "active": 62,
   "archive": 65,
-  "bySource": {
-   "EIS": 43,
-   "TEK": 25,
-   "ROS": 13,
-   "GPB": 8,
-   "ZAKAZ": 5,
-   "RAD": 15,
-   "SBER": 2,
-   "B2B": 14,
-   "FAB": 1,
-   "RTS": 1
-  },
-  "sources": [
-   {
-    "name": "gosplan",
-    "available": true,
-    "requests": 20,
-    "okRequests": 19,
-    "records": 34,
-    "errors": 1
-   },
-   {
-    "name": "gentender",
-    "available": true,
-    "requests": 82,
-    "okRequests": 82,
-    "records": 2201,
-    "errors": 0
-   },
-   {
-    "name": "tektorg",
-    "available": false,
-    "requests": 4,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 4
-   },
-   {
-    "name": "etpgpb",
-    "available": false,
-    "requests": 4,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 4
-   },
-   {
-    "name": "roseltorg",
-    "available": false,
-    "requests": 5,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 5
-   },
-   {
-    "name": "eis-html",
-    "available": false,
-    "requests": 4,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 4
-   }
-  ],
-  "errors": 5,
-  "probeOk": 2,
-  "droppedNoKeyword": 1458,
+  "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "budget": {
-   "gosplan": {
-    "limit": 60,
-    "used": 20,
-    "exhausted": false
-   },
-   "gentender": {
-    "limit": 400,
-    "used": 82,
-    "exhausted": false
-   },
-   "tektorg": {
-    "limit": 40,
-    "used": 4,
-    "exhausted": false
-   },
-   "etpgpb": {
-    "limit": 40,
-    "used": 4,
-    "exhausted": false
-   },
-   "roseltorg": {
-    "limit": 40,
-    "used": 5,
-    "exhausted": false
-   },
-   "eis-html": {
-    "limit": 40,
-    "used": 4,
-    "exhausted": false
-   }
-  },
-  "partial": true
+  "sources": [
+   "refilter"
+  ]
  },
  "log": [
+  {
+   "started": "2026-11-20T19:51:00.549Z",
+   "mode": "scheduled",
+   "entries": [
+    {
+     "ts": "2026-11-20T19:51:00.932Z",
+     "source": "refilter",
+     "query": "registry match",
+     "ok": true,
+     "records": 127,
+     "kept": 127,
+     "droppedNoKeyword": 0,
+     "budget": ""
+    }
+   ],
+   "summary": {
+    "total": 127,
+    "unique": 127,
+    "matchedOrg": 127,
+    "droppedNoKeyword": 0,
+    "errors": 0
+   },
+   "finished": "2026-11-20T19:51:00.933Z"
+  },
   {
    "started": "2026-11-20T19:28:33.562Z",
    "mode": "scheduled",

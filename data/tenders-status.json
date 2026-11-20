@@ -1,108 +1,12 @@
 {
-  "lastRun": "2026-11-20T19:28:33.562Z",
-  "mode": "live",
+  "lastRun": "2026-11-20T19:51:00.551Z",
+  "mode": "refilter",
   "total": 127,
-  "unique": 2235,
-  "matchedOrg": 127,
   "active": 62,
   "archive": 65,
-  "bySource": {
-    "EIS": 43,
-    "TEK": 25,
-    "ROS": 13,
-    "GPB": 8,
-    "ZAKAZ": 5,
-    "RAD": 15,
-    "SBER": 2,
-    "B2B": 14,
-    "FAB": 1,
-    "RTS": 1
-  },
-  "sources": [
-    {
-      "name": "gosplan",
-      "available": true,
-      "requests": 20,
-      "okRequests": 19,
-      "records": 34,
-      "errors": 1
-    },
-    {
-      "name": "gentender",
-      "available": true,
-      "requests": 82,
-      "okRequests": 82,
-      "records": 2201,
-      "errors": 0
-    },
-    {
-      "name": "tektorg",
-      "available": false,
-      "requests": 4,
-      "okRequests": 0,
-      "records": 0,
-      "errors": 4
-    },
-    {
-      "name": "etpgpb",
-      "available": false,
-      "requests": 4,
-      "okRequests": 0,
-      "records": 0,
-      "errors": 4
-    },
-    {
-      "name": "roseltorg",
-      "available": false,
-      "requests": 5,
-      "okRequests": 0,
-      "records": 0,
-      "errors": 5
-    },
-    {
-      "name": "eis-html",
-      "available": false,
-      "requests": 4,
-      "okRequests": 0,
-      "records": 0,
-      "errors": 4
-    }
-  ],
-  "errors": 5,
-  "probeOk": 2,
-  "droppedNoKeyword": 1458,
+  "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "budget": {
-    "gosplan": {
-      "limit": 60,
-      "used": 20,
-      "exhausted": false
-    },
-    "gentender": {
-      "limit": 400,
-      "used": 82,
-      "exhausted": false
-    },
-    "tektorg": {
-      "limit": 40,
-      "used": 4,
-      "exhausted": false
-    },
-    "etpgpb": {
-      "limit": 40,
-      "used": 4,
-      "exhausted": false
-    },
-    "roseltorg": {
-      "limit": 40,
-      "used": 5,
-      "exhausted": false
-    },
-    "eis-html": {
-      "limit": 40,
-      "used": 4,
-      "exhausted": false
-    }
-  },
-  "partial": true
+  "sources": [
+    "refilter"
+  ]
 }
