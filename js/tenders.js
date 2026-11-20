@@ -497,27 +497,14 @@
         const platforms = status.bySource ? Object.keys(status.bySource).length : null;
         $('tUpdated').textContent = 'Обновлено: ' + upd + (status.total != null ? ' · закупок: ' + status.total : '') +
           (platforms ? ' · площадок: ' + platforms : '');
-        $('tWordHint').textContent = 'Выдача обновлена с сервера. Новые слова подхватятся после публикации файла и сбора.';
         render();
       } catch (e) {
-        $('tWordHint').textContent = 'Не удалось обновить выдачу: ' + (e.message || e);
+        $('tUpdated').textContent = 'Не удалось обновить выдачу: ' + (e.message || e);
       } finally {
         btn.textContent = prevText;
         btn.disabled = false;
       }
     });
-
-    const changeWord = (remove) => {
-      const w = $('tNewWord').value.trim();
-      if (!w) return;
-      const cmd = 'node scripts/keywords.js ' + (remove ? 'remove' : 'add') + ' "' + w + '"';
-      const phrase = 'node scripts/keywords.js add "Ремонт проточной части турбины" --search=турбина --must=ремонт,проточн,част,турбин';
-      $('tWordHint').innerHTML = 'Список хранится в репозитории. Слово: <code>' + esc(cmd) +
-        '</code>. Фраза: <code>' + esc(phrase) + '</code> — после публикации появится у всех.';
-      try { navigator.clipboard.writeText(cmd); } catch (e) { /* noop */ }
-    };
-    $('tAddWord').addEventListener('click', () => changeWord(false));
-    $('tRemoveWord').addEventListener('click', () => changeWord(true));
 
     $('tOpenSearch').addEventListener('click', () => {
       const code = $('tLinkEtp').value;

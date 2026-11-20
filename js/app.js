@@ -26,6 +26,61 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
   const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
+
+  const SEARCH_FIELDS = [
+    ['name', 'Название'], ['full', 'Полное наименование'], ['type', 'Тип'],
+    ['activity', 'Деятельность'], ['region', 'Регион'], ['address', 'Адрес'],
+    ['phone', 'Телефон'], ['email', 'E-mail'], ['site', 'Сайт'], ['procUrl', 'Раздел закупок'],
+    ['inn', 'ИНН'], ['kpp', 'КПП'], ['ogrn', 'ОГРН'], ['ceo', 'Руководитель'],
+    ['contact', 'Контакт'], ['method', 'Способ закупки'], ['capacity', 'Мощность'],
+    ['status', 'Статус'], ['notes', 'Примечание'],
+    ['chiefEngineer', 'Главный инженер'], ['chiefDesigner', 'Главный конструктор'],
+    ['procContact', 'Ответственный по закупкам'], ['procPhone', 'Телефон закупок'],
+    ['procEmail', 'E-mail закупок']
+  ];
+  let searchIndex = null;
+  function getSearchIndex() {
+    if (searchIndex) return searchIndex;
+    searchIndex = items.map(it => {
+      const parts = [];
+      const add = (value, label) => {
+        const v = String(value == null ? '' : value).trim();
+        if (v) parts.push({ value: v, label });
+      };
+      SEARCH_FIELDS.forEach(([field, label]) => {
+        const v = it[field];
+        if (Array.isArray(v)) v.forEach(x => add(x, label)); else add(v, label);
+      });
+      (it.etp || []).forEach(c => add(etpMap[c] ? etpMap[c].name : c, 'ЭТП'));
+      (it.sources || []).forEach(s => add(srcMap[s] ? srcMap[s].title : s, 'Источник'));
+      add(it.path, 'Структура');
+      add(it.holdingName, 'Холдинг');
+      return { it, parts, hay: norm(parts.map(p => p.value).join(' ')) };
+    });
+    return searchIndex;
+  }
+
+  function suggestFor(query) {
+    const nq = norm(query);
+    if (!nq) return [];
+    const seen = new Set();
+    const out = [];
+    for (const rec of getSearchIndex()) {
+      for (const p of rec.parts) {
+        const key = p.label + '\u0000' + p.value;
+        if (seen.has(key)) continue;
+        if (!norm(p.value).includes(nq)) continue;
+        seen.add(key);
+        out.push({ value: p.value, label: p.label });
+        if (out.length >= 40) return out;
+      }
+    }
+    return out.sort((a, b) => {
+      const ap = norm(a.value).startsWith(nq) ? 0 : 1;
+      const bp = norm(b.value).startsWith(nq) ? 0 : 1;
+      return ap - bp || a.value.length - b.value.length;
+    });
+  }
   const isRepair = (i) => i.type === 'ремонт';
   const isOem = (i) => i.type === 'ОЕМ' || i.type === 'инжиниринг';
   const isGen = (i) => !isRepair(i) && !isOem(i);
@@ -124,10 +179,8 @@
       if (!target || !(it.etp || []).includes(target.code)) return false;
     }
     if (state.q) {
-      const hay = norm([
-        it.name, it.full, it.path, it.holdingName, it.region, it.address,
-        it.inn, it.kpp, it.ogrn, it.phone, it.email, it.site, it.contact, it.notes, it.activity
-      ].join(' '));
+      const rec = getSearchIndex().find(r => r.it === it);
+      const hay = rec ? rec.hay : norm(it.name || '');
       const words = norm(state.q).split(/\s+/).filter(Boolean);
       if (!words.every(w => hay.includes(w))) return false;
     }
@@ -206,8 +259,11 @@
       center: [61.5, 95], zoom: 3, minZoom: 2, maxZoom: 13,
       zoomControl: true, worldCopyJump: true, attributionControl: true
     });
-    mapState.base.osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19, attribution: '&copy; OpenStreetMap'
+    // Базовый слой на данных OSM, но через устойчивый CDN CARTO:
+    //tile.openstreetmap.org у части провайдеров отдаёт 403, Esri-слои работают.
+    mapState.base.osm = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      maxZoom: 19, subdomains: 'abcd',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; CARTO'
     });
     mapState.base.sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 18, attribution: 'Imagery &copy; Esri'
@@ -597,6 +653,50 @@
       });
     };
     bindInput('q', 'q', 'input');
+
+    const qEl = $('q');
+    const sBox = $('qSuggest');
+    let sIdx = -1, sItems = [];
+    const hideSuggest = () => { sBox.hidden = true; sBox.innerHTML = ''; sIdx = -1; sItems = []; };
+    const drawSuggest = () => {
+      sItems = suggestFor(qEl.value.trim());
+      if (!sItems.length) { hideSuggest(); return; }
+      sBox.innerHTML = '<div class="t-suggest__head">Совпадения в карточках</div>' + sItems.map((s, i) =>
+        '<button type="button" data-i="' + i + '"><b>' + esc(s.value) + '</b><small>' + esc(s.label) + '</small></button>').join('');
+      sBox.hidden = false;
+      sIdx = -1;
+    };
+    let suggestTimer = 0;
+    qEl.addEventListener('input', () => {
+      clearTimeout(suggestTimer);
+      suggestTimer = setTimeout(drawSuggest, 100);
+    });
+    const pickSuggest = (i) => {
+      const s = sItems[i];
+      if (!s) return;
+      qEl.value = s.value;
+      state.q = s.value;
+      hideSuggest();
+      render();
+    };
+    sBox.addEventListener('click', e => {
+      const b = e.target.closest('button[data-i]');
+      if (b) pickSuggest(Number(b.dataset.i));
+    });
+    qEl.addEventListener('keydown', e => {
+      if (sBox.hidden || !sItems.length) return;
+      if (e.key === 'Escape') { hideSuggest(); return; }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        sIdx = e.key === 'ArrowDown' ? (sIdx + 1) % sItems.length : (sIdx - 1 + sItems.length) % sItems.length;
+        Array.from(sBox.querySelectorAll('button[data-i]')).forEach((b, i) => b.classList.toggle('is-active', i === sIdx));
+        return;
+      }
+      if (e.key === 'Enter') { e.preventDefault(); pickSuggest(sIdx >= 0 ? sIdx : 0); }
+    });
+    document.addEventListener('click', e => {
+      if (!sBox.hidden && !e.target.closest('.t-auto')) hideSuggest();
+    });
     bindInput('fHolding', 'holding');
     bindInput('fRegion', 'region');
     bindInput('fType', 'type');
@@ -611,6 +711,7 @@
       ['q', 'fHolding', 'fRegion', 'fType', 'fMethod', 'fEtp', 'sort'].forEach(id => { $(id).value = ''; });
       $('sort').value = 'path';
       $('fOnlyOrg').checked = false;
+      hideSuggest();
       render();
     });
 

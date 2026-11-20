@@ -68,6 +68,16 @@
     return false;
   }
 
+  /* Для подсветки требуется совпадение в начале самого слова:
+   * «Уплотнения» не должна подсвечивать «Гидроуплотнения». */
+  function highlightStem(token, target) {
+    if (!token || !target) return false;
+    if (token === target) return true;
+    if (token.length < 4 || target.length < 4) return false;
+    if (token.startsWith(target) || target.startsWith(token)) return Math.abs(token.length - target.length) <= 2;
+    return false;
+  }
+
   function keywordStems(keyword) {
     return stems(keyword);
   }
@@ -147,7 +157,7 @@
     return parts.map((part) => {
       if (!part || /^\s+$/.test(part) || !/[a-zа-яё0-9]/i.test(part)) return escape(part);
       const st = stemRu(part);
-      const hit = targets.some((t) => sameStem(st, t));
+      const hit = targets.some((t) => highlightStem(st, t));
       return hit ? '<mark>' + escape(part) + '</mark>' : escape(part);
     }).join('');
   }
@@ -158,7 +168,7 @@
   }
 
   return {
-    norm, stemRu, stems, sameStem, keywordStems, matchesKeyword,
+    norm, stemRu, stems, sameStem, highlightStem, keywordStems, matchesKeyword,
     matchKeywords, tokenizeQuery, queryMatches, highlightHtml, escapeHtml,
     entryOf, matchesEntry, matchEntries, highlightEntryHtml
   };

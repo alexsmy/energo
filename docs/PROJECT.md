@@ -66,9 +66,11 @@
 │   ├── tenders-status.json    статус последнего сбора
 │   ├── collect-log.json    журнал запросов (последние 30 запусков)
 │   └── entities-validation.json отчёт валидатора данных
+│   └── inn-verification.json отчёт проверки ИНН через API
 ├── scripts/
 │   ├── collect-tenders.js  оркестратор: источники → нормализация → сводка → лог
 │   ├── validate-entities.js валидатор полей entities.tsv (npm run validate)
+│   ├── verify-contacts.js  проверка ИНН через API (npm run verify:inn)
 │   ├── keywords.js         управление общим списком слов (add/remove)
 │   ├── sources/gosplan.js  основной адаптер (бесплатный JSON API ЕИС)
 │   ├── sources/eis-html.js резервный HTML-парсер ЕИС (не удалён)
@@ -85,7 +87,7 @@
 └── Энергореестр-РФ-2026.pdf
 ```
 
-Версия 2.3: 339 записей (19 холдингов, 61 юрлицо, 259 станций), достоверность
+Версия 2.4: 339 записей (19 холдингов, 61 юрлицо, 259 станций), достоверность
 339 high / 0 medium / 0 low. Все записи выверены 21.11.2026.
 
 ## Сборка и запуск

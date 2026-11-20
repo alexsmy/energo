@@ -1,0 +1,747 @@
+{
+  "generated": "2026-11-20T19:42:07.502Z",
+  "source": "GenTender /api/tenders/search (customer_key = ИНН)",
+  "checked": 75,
+  "confirmed": [
+    {
+      "inn": "6829012680",
+      "ids": [
+        "H-RIR"
+      ],
+      "name": "РИР Энерго",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РИР ЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=6829012680&limit=3&offset=0"
+    },
+    {
+      "inn": "9701087623",
+      "ids": [
+        "H-ROSATOM-VIE"
+      ],
+      "name": "Росатом Возобновляемая энергия",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РОСАТОМ ВОЗОБНОВЛЯЕМАЯ ЭНЕРГИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=9701087623&limit=3&offset=0"
+    },
+    {
+      "inn": "1434031363",
+      "ids": [
+        "C-DGK"
+      ],
+      "name": "ДГК",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ДАЛЬНЕВОСТОЧНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=1434031363&limit=3&offset=0"
+    },
+    {
+      "inn": "1435028701",
+      "ids": [
+        "C-YAKUT"
+      ],
+      "name": "Якутскэнерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЯКУТСКЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=1435028701&limit=3&offset=0"
+    },
+    {
+      "inn": "4909047148",
+      "ids": [
+        "C-MAGADAN"
+      ],
+      "name": "Магаданэнерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ЭНЕРГЕТИКИ И ЭЛЕКТРИФИКАЦИИ \"МАГАДАНЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=4909047148&limit=3&offset=0"
+    },
+    {
+      "inn": "4100000668",
+      "ids": [
+        "C-KAMCHAT"
+      ],
+      "name": "Камчатскэнерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ЭНЕРГЕТИКИ И ЭЛЕКТРИФИКАЦИИ \"КАМЧАТСКЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=4100000668&limit=3&offset=0"
+    },
+    {
+      "inn": "6500000024",
+      "ids": [
+        "C-SAKHALIN"
+      ],
+      "name": "Сахалинэнерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ЭНЕРГЕТИКИ И ЭЛЕКТРИФИКАЦИИ \"САХАЛИНЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=6500000024&limit=3&offset=0"
+    },
+    {
+      "inn": "8700000339",
+      "ids": [
+        "C-CHUKOT"
+      ],
+      "name": "Чукотэнерго",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЧУКОТЭНЕРГО\""
+      ],
+      "records": 1,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=8700000339&limit=3&offset=0"
+    },
+    {
+      "inn": "1435117944",
+      "ids": [
+        "C-SAKHAENERGO"
+      ],
+      "name": "Сахаэнерго",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"САХАЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=1435117944&limit=3&offset=0"
+    },
+    {
+      "inn": "4908000718",
+      "ids": [
+        "C-KOLYMA"
+      ],
+      "name": "Колымаэнерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"КОЛЫМАЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=4908000718&limit=3&offset=0"
+    },
+    {
+      "inn": "7720518494",
+      "ids": [
+        "C-MOEK"
+      ],
+      "name": "МОЭК",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"МОСКОВСКАЯ ОБЪЕДИНЕННАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\""
+      ],
+      "records": 2,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7720518494&limit=3&offset=0"
+    },
+    {
+      "inn": "5190141373",
+      "ids": [
+        "C-MURMANSK"
+      ],
+      "name": "Мурманская ТЭЦ",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"МУРМАНСКАЯ ТЭЦ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=5190141373&limit=3&offset=0"
+    },
+    {
+      "inn": "0277077282",
+      "ids": [
+        "C-BGK"
+      ],
+      "name": "Башкирская генерирующая компания",
+      "apiNames": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=0277077282&limit=3&offset=0"
+    },
+    {
+      "inn": "5406323202",
+      "ids": [
+        "C-TGK11"
+      ],
+      "name": "ТГК-11",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ  КОМПАНИЯ №11\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=5406323202&limit=3&offset=0"
+    },
+    {
+      "inn": "7017373959",
+      "ids": [
+        "C-TOMGEN"
+      ],
+      "name": "Томская генерация",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТОМСКАЯ ГЕНЕРАЦИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7017373959&limit=3&offset=0"
+    },
+    {
+      "inn": "6315376946",
+      "ids": [
+        "H-TPLUS"
+      ],
+      "name": "Т Плюс",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=6315376946&limit=3&offset=0"
+    },
+    {
+      "inn": "7203162698",
+      "ids": [
+        "H-FORWARD"
+      ],
+      "name": "Форвард Энерго",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ФОРВАРД ЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7203162698&limit=3&offset=0"
+    },
+    {
+      "inn": "1657036630",
+      "ids": [
+        "H-TAT"
+      ],
+      "name": "Татэнерго",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТАТЭНЕРГО\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=1657036630&limit=3&offset=0"
+    },
+    {
+      "inn": "7606053324",
+      "ids": [
+        "H-TGK2"
+      ],
+      "name": "ТГК-2",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №2\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7606053324&limit=3&offset=0"
+    },
+    {
+      "inn": "7534018889",
+      "ids": [
+        "H-TGK14"
+      ],
+      "name": "ТГК-14",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ № 14\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7534018889&limit=3&offset=0"
+    },
+    {
+      "inn": "3808229774",
+      "ids": [
+        "C-BEK"
+      ],
+      "name": "Байкальская энергетическая компания",
+      "apiNames": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=3808229774&limit=3&offset=0"
+    },
+    {
+      "inn": "2457058356",
+      "ids": [
+        "H-NTEK"
+      ],
+      "name": "НТЭК",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"НОРИЛЬСКО-ТАЙМЫРСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=2457058356&limit=3&offset=0"
+    },
+    {
+      "inn": "9102070194",
+      "ids": [
+        "H-KRYM"
+      ],
+      "name": "КрымТЭЦ",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"КРЫМТЕПЛОЭЛЕКТРОЦЕНТРАЛЬ\""
+      ],
+      "records": 1,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=9102070194&limit=3&offset=0"
+    },
+    {
+      "inn": "6345012488",
+      "ids": [
+        "R-GIDROREMONT"
+      ],
+      "name": "Гидроремонт-ВКК",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГИДРОРЕМОНТ-ВКК\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=6345012488&limit=3&offset=0"
+    },
+    {
+      "inn": "7702721214",
+      "ids": [
+        "R-ERPLUS"
+      ],
+      "name": "ЭнергоремонТ Плюс",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭНЕРГОРЕМОНТ ПЛЮС\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7702721214&limit=3&offset=0"
+    },
+    {
+      "inn": "7707625521",
+      "ids": [
+        "R-GEHER"
+      ],
+      "name": "Газпром энергоремонт",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГАЗПРОМ ЭНЕРГОРЕМОНТ\""
+      ],
+      "records": 2,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7707625521&limit=3&offset=0"
+    },
+    {
+      "inn": "7606118807",
+      "ids": [
+        "R-TGK2ER"
+      ],
+      "name": "ТГК-2 Энергоремонт",
+      "apiNames": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТГК-2 ЭНЕРГОРЕМОНТ\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": true,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7606118807&limit=3&offset=0"
+    }
+  ],
+  "nameUnclear": [
+    {
+      "inn": "7841312071",
+      "ids": [
+        "C-TGK1"
+      ],
+      "name": "ТГК-1",
+      "apiNames": [
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ  ОБЩЕСТВО  \"ТЕРРИТОРИАЛЬНАЯ  ГЕНЕРИРУЮЩАЯ  КОМПАНИЯ   №1\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": false,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7841312071&limit=3&offset=0"
+    },
+    {
+      "inn": "7838129301",
+      "ids": [
+        "H-TEKSPB"
+      ],
+      "name": "ТЭК СПб",
+      "apiNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТОПЛИВНО-ЭНЕРГЕТИЧЕСКИЙ КОМПЛЕКС САНКТ-ПЕТЕРБУРГА\""
+      ],
+      "records": 3,
+      "okInn": true,
+      "okName": false,
+      "url": "https://gentender.ru/api/tenders/search?customer_key=7838129301&limit=3&offset=0"
+    }
+  ],
+  "mismatch": [],
+  "noData": [
+    {
+      "inn": "7721632827",
+      "ids": [
+        "H-ROSATOM"
+      ],
+      "name": "Концерн «Росэнергоатом»"
+    },
+    {
+      "inn": "2460066195",
+      "ids": [
+        "H-RUSHYDRO"
+      ],
+      "name": "РусГидро"
+    },
+    {
+      "inn": "2420002597",
+      "ids": [
+        "C-BOGUCHAN"
+      ],
+      "name": "Богучанская ГЭС"
+    },
+    {
+      "inn": "7719019846",
+      "ids": [
+        "C-PEREDVIZH"
+      ],
+      "name": "Передвижная энергетика"
+    },
+    {
+      "inn": "2801133630",
+      "ids": [
+        "C-RAOES"
+      ],
+      "name": "РАО ЭС Востока"
+    },
+    {
+      "inn": "7703323030",
+      "ids": [
+        "H-GEH"
+      ],
+      "name": "Газпром энергохолдинг"
+    },
+    {
+      "inn": "7705035012",
+      "ids": [
+        "C-MOSENERGO"
+      ],
+      "name": "Мосэнерго"
+    },
+    {
+      "inn": "2607018122",
+      "ids": [
+        "C-OGK2"
+      ],
+      "name": "ОГК-2"
+    },
+    {
+      "inn": "5003046281",
+      "ids": [
+        "C-GPTE"
+      ],
+      "name": "Газпром теплоэнерго"
+    },
+    {
+      "inn": "2320109650",
+      "ids": [
+        "H-IRAO"
+      ],
+      "name": "Интер РАО"
+    },
+    {
+      "inn": "7705031659",
+      "ids": [
+        "C-IRAO-GEN"
+      ],
+      "name": "Интер РАО — Электрогенерация"
+    },
+    {
+      "inn": "7709832989",
+      "ids": [
+        "H-SGK",
+        "C-ALTAI"
+      ],
+      "name": "СГК"
+    },
+    {
+      "inn": "4200000333",
+      "ids": [
+        "C-KUZBASS"
+      ],
+      "name": "Кузбассэнерго"
+    },
+    {
+      "inn": "1901067718",
+      "ids": [
+        "C-TGK13"
+      ],
+      "name": "Енисейская ТГК (ТГК-13)"
+    },
+    {
+      "inn": "5405270340",
+      "ids": [
+        "C-SGKNOVOSIB"
+      ],
+      "name": "СГК-Новосибирск"
+    },
+    {
+      "inn": "8602067092",
+      "ids": [
+        "H-UNIPRO"
+      ],
+      "name": "Юнипро"
+    },
+    {
+      "inn": "6671156423",
+      "ids": [
+        "H-EL5"
+      ],
+      "name": "ЭЛ5-Энерго"
+    },
+    {
+      "inn": "3800000220",
+      "ids": [
+        "H-ENPLUS",
+        "C-IRKUTSK",
+        "C-KRASGES"
+      ],
+      "name": "Эн+ Груп"
+    },
+    {
+      "inn": "7704863782",
+      "ids": [
+        "C-TEKHPROM"
+      ],
+      "name": "Технопромэкспорт"
+    },
+    {
+      "inn": "5029112443",
+      "ids": [
+        "R-AER"
+      ],
+      "name": "Атомэнергоремонт"
+    },
+    {
+      "inn": "7728549952",
+      "ids": [
+        "R-KVARC"
+      ],
+      "name": "Кварц Групп"
+    },
+    {
+      "inn": "7733667768",
+      "ids": [
+        "R-TER"
+      ],
+      "name": "ГЭХ ТЭР"
+    },
+    {
+      "inn": "2462028886",
+      "ids": [
+        "R-SIBER"
+      ],
+      "name": "СибЭР"
+    },
+    {
+      "inn": "7705915881",
+      "ids": [
+        "R-ROTEK"
+      ],
+      "name": "РОТЕК"
+    },
+    {
+      "inn": "6660001308",
+      "ids": [
+        "R-UER"
+      ],
+      "name": "Уралэнергоремонт"
+    },
+    {
+      "inn": "1657048240",
+      "ids": [
+        "R-KER"
+      ],
+      "name": "КЭР-Холдинг"
+    },
+    {
+      "inn": "7730014175",
+      "ids": [
+        "R-ECM"
+      ],
+      "name": "Электроцентромонтаж"
+    },
+    {
+      "inn": "7802588950",
+      "ids": [
+        "R-RUSSTURBO"
+      ],
+      "name": "Русь-Турбо"
+    },
+    {
+      "inn": "7801128069",
+      "ids": [
+        "R-LERTURBO"
+      ],
+      "name": "ЛЭР-Турбо"
+    },
+    {
+      "inn": "7805370007",
+      "ids": [
+        "R-TERM"
+      ],
+      "name": "Турбоэнергоремонт"
+    },
+    {
+      "inn": "7724245329",
+      "ids": [
+        "R-TEM"
+      ],
+      "name": "Теплоэнергомонтаж"
+    },
+    {
+      "inn": "4632014950",
+      "ids": [
+        "R-PROMER"
+      ],
+      "name": "Промэнергоремонт"
+    },
+    {
+      "inn": "6673100680",
+      "ids": [
+        "R-URALTURBO",
+        "O-UTZ"
+      ],
+      "name": "Уралтурбо"
+    },
+    {
+      "inn": "7701299247",
+      "ids": [
+        "R-ESE"
+      ],
+      "name": "ЕвроСибЭнерго-инжиниринг"
+    },
+    {
+      "inn": "7702080289",
+      "ids": [
+        "O-SILMASH",
+        "O-ZTL"
+      ],
+      "name": "Силовые машины"
+    },
+    {
+      "inn": "7804677772",
+      "ids": [
+        "O-LMZ"
+      ],
+      "name": "Ленинградский металлический завод"
+    },
+    {
+      "inn": "4026007424",
+      "ids": [
+        "O-KTZ"
+      ],
+      "name": "Калужский турбинный завод"
+    },
+    {
+      "inn": "7725415380",
+      "ids": [
+        "O-ORGRES"
+      ],
+      "name": "Фирма ОРГРЭС"
+    },
+    {
+      "inn": "7725054856",
+      "ids": [
+        "O-VTI"
+      ],
+      "name": "ВТИ"
+    },
+    {
+      "inn": "7825660956",
+      "ids": [
+        "O-CKTI"
+      ],
+      "name": "НПО ЦКТИ"
+    },
+    {
+      "inn": "6154023009",
+      "ids": [
+        "O-TKZ"
+      ],
+      "name": "ТКЗ «Красный котельщик»"
+    },
+    {
+      "inn": "5036040729",
+      "ids": [
+        "O-ZIO"
+      ],
+      "name": "ЗиО-Подольск"
+    },
+    {
+      "inn": "9706047504",
+      "ids": [
+        "O-AEM"
+      ],
+      "name": "Росатом Машиностроение"
+    },
+    {
+      "inn": "5403102702",
+      "ids": [
+        "O-ELSIB"
+      ],
+      "name": "Элсиб"
+    },
+    {
+      "inn": "7704312545",
+      "ids": [
+        "C-KALININGRAD"
+      ],
+      "name": "Калининградская генерация"
+    },
+    {
+      "inn": "7706720370",
+      "ids": [
+        "R-IRAO-SERVICE"
+      ],
+      "name": "Интер РАО Сервис"
+    }
+  ],
+  "errors": [],
+  "contactsFound": []
+}

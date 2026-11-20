@@ -75,8 +75,8 @@ async function collect(opts) {
 
   const innPageCount = Math.max(1, parseInt(settings.gentenderInnPages, 10) || 1);
   for (const inn of selectedInns) {
-    await fetchPage({ customer_inn: inn, only_active: '1' }, 'ИНН ' + inn + ' (действующие)', 'active', 'ИНН ' + inn, innPageCount);
-    await fetchPage({ customer_inn: inn, only_active: '0', publish_from: publishFrom }, 'ИНН ' + inn + ' (архив)', 'archive', 'ИНН ' + inn, innPageCount);
+    await fetchPage({ customer_key: inn, only_active: '1' }, 'ИНН ' + inn + ' (действующие)', 'active', 'ИНН ' + inn, innPageCount);
+    await fetchPage({ customer_key: inn, only_active: '0', publish_from: publishFrom }, 'ИНН ' + inn + ' (архив)', 'archive', 'ИНН ' + inn, innPageCount);
     if (found.length >= limitRecords) break;
   }
 

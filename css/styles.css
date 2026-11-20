@@ -377,7 +377,7 @@ body.is-map .btn--filters{display:inline-flex}
 .t-auto{position:relative}
 .t-suggest{position:absolute;left:0;right:0;top:100%;z-index:20;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 10px 26px rgba(9,31,44,.16);max-height:280px;overflow:auto;padding:4px}
 .t-suggest button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:7px 9px;border-radius:7px;cursor:pointer}
-.t-suggest button:hover,.t-suggest button:focus{background:#eef4f7}
+.t-suggest button:hover,.t-suggest button:focus,.t-suggest button.is-active{background:#eef4f7}
 .t-suggest b{display:block;font-size:13px;color:var(--navy)}
 .t-suggest small{display:block;font-size:11px;color:var(--muted)}
 .t-card mark{background:#ffe3b8;color:#7a3d00;padding:0 2px;border-radius:3px;font-weight:700}

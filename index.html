@@ -8,7 +8,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.3">
+<link rel="stylesheet" href="css/styles.css?v=2.4">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -60,7 +60,10 @@
 
     <label class="field">
       <span>Поиск</span>
-      <input type="search" id="q" placeholder="Название, ИНН, регион, станция…" autocomplete="off">
+      <div class="t-auto">
+        <input type="search" id="q" placeholder="Название, ФИО, телефон, ИНН, регион…" autocomplete="off">
+        <div class="t-suggest" id="qSuggest" hidden></div>
+      </div>
     </label>
 
     <label class="field">
@@ -158,7 +161,7 @@
 
     <footer class="foot">
       <p id="disclaimer"></p>
-      <p class="foot__meta">Реестр: <span id="ver"></span> · Собрано из открытых источников · Не является официальным документом</p>
+      <p class="foot__meta">Реестр: <span id="ver"></span></p>
     </footer>
   </section>
 </main>
@@ -166,7 +169,6 @@
 <section id="tendersView" class="wrap tenders-view" hidden>
   <div class="t-head">
     <h1>Аудит и поиск закупок на электронных площадках</h1>
-    <p>Публичные тендеры по предприятиям реестра и ключевым словам. Данные обновляются автоматически: скрипт в GitHub Actions проверяет площадки и собирает выдачу ЕИС; список слов хранится в репозитории.</p>
   </div>
 
   <div class="t-tabs" role="group" aria-label="Разделы закупок">
@@ -189,15 +191,9 @@
       <label class="field"><span>Дата по</span><input type="date" id="tDateTo"></label>
       <label class="field"><span>Площадка / источник</span><select id="tSource"><option value="">Все площадки</option></select></label>
       <div class="field field--wide">
-        <span>Ключевые слова (общий список)</span>
+        <span>Ключевые слова</span>
         <div class="t-chips" id="tKeywords"></div>
-        <div class="t-word-add">
-          <input type="text" id="tNewWord" placeholder="Добавить слово в список" autocomplete="off">
-          <button class="btn btn--ghost btn--sm" id="tAddWord" type="button">Добавить</button>
-          <button class="btn btn--ghost btn--sm" id="tRemoveWord" type="button">Удалить</button>
-          <a class="link" id="tEditWords" href="https://github.com/alexsmy/energo/edit/main/data/tender-keywords.json" target="_blank" rel="noopener">Править на GitHub</a>
-        </div>
-        <p class="t-hint" id="tWordHint">Список общий для всех и хранится в data/tender-keywords.json. Изменения применяются после публикации.</p>
+        <p class="t-hint">Нажмите на слово, чтобы показать только подходящие закупки.</p>
       </div>
     </div>
 
@@ -246,8 +242,7 @@
   <div id="tEtpsPane" hidden><div class="t-etps" id="tEtps"></div></div>
 
   <footer class="foot">
-    <p>Данные собраны из открытых источников и обновляются периодически. Выдача ЕИС и площадок может измениться — проверяйте объявление на сайте заказчика перед принятием решения.</p>
-    <p class="foot__meta">Поиск закупок · версия <span id="tVer"></span> · <a href="log.html" target="_blank" rel="noopener">Журнал сбора (что, откуда и с каким результатом)</a> · не является официальным документом</p>
+    <p class="foot__meta">Поиск закупок · версия <span id="tVer"></span> · <a href="log.html" target="_blank" rel="noopener">Журнал сбора</a></p>
   </footer>
 </section>
 
@@ -272,11 +267,11 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.3"></script>
-<script src="js/tenders-data.js?v=2.3"></script>
-<script src="js/text-match.js?v=2.3"></script>
-<script src="js/sort.js?v=2.3"></script>
-<script src="js/tenders.js?v=2.3"></script>
-<script src="js/app.js?v=2.3"></script>
+<script src="js/data.js?v=2.4"></script>
+<script src="js/tenders-data.js?v=2.4"></script>
+<script src="js/text-match.js?v=2.4"></script>
+<script src="js/sort.js?v=2.4"></script>
+<script src="js/tenders.js?v=2.4"></script>
+<script src="js/app.js?v=2.4"></script>
 </body>
 </html>

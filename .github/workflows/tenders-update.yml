@@ -37,7 +37,7 @@ jobs:
           node -e "
             const fs=require('fs');
             const p=JSON.parse(fs.readFileSync('version.json','utf8'));
-            p.version='2.3.'+new Date().toISOString().replace(/[-:T]/g,'').slice(0,12);
+            p.version='2.4.'+new Date().toISOString().replace(/[-:T]/g,'').slice(0,12);
             p.date=new Date().toISOString().slice(0,10);
             p.title='Энергореестр РФ — обновление закупок';
             p.message='Данные закупок обновлены. Страница перезагрузится автоматически.';
