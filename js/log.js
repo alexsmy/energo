@@ -33,26 +33,34 @@
       const entries = (r.entries || []).filter(e => !srcSel.value || e.source === srcSel.value);
       const s = r.summary || {};
       const bad = (r.entries || []).filter(e => e.ok === false).length;
-      const rows = entries.map(e =>
-        '<tr><td class="t-mut">' + fmt(e.ts) + '</td>' +
-        '<td>' + esc(e.source) + '</td>' +
-        '<td>' + esc(e.query) + '</td>' +
-        '<td>' + (e.ok ? '<span class="t-badge t-badge--ok">успех</span>' : '<span class="t-badge t-badge--bad">ошибка</span>') + '</td>' +
-        '<td>' + esc(e.http || '—') + '</td>' +
-        '<td>' + esc(e.ms != null ? e.ms + ' мс' : '—') + '</td>' +
-        '<td>' + esc(e.records != null ? e.records : '—') + '</td>' +
-        '<td>' + esc(e.kept != null ? e.kept : '—') + '</td>' +
-        '<td>' + esc(e.phase || '—') + '</td>' +
-        '<td>' + esc(e.error || '') + '</td></tr>').join('');
+      const rows = entries.map(e => {
+        const url = e.url && /^https?:\/\//i.test(e.url)
+          ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener" title="' + esc(e.url) + '">открыть</a>'
+          : '—';
+        return '<tr><td class="t-mut">' + fmt(e.ts) + '</td>' +
+          '<td>' + esc(e.source) + '</td>' +
+          '<td>' + esc(e.query) + '</td>' +
+          '<td>' + (e.ok ? '<span class="t-badge t-badge--ok">успех</span>' : '<span class="t-badge t-badge--bad">ошибка</span>') + '</td>' +
+          '<td>' + esc(e.http || '—') + '</td>' +
+          '<td>' + esc(e.ms != null ? e.ms + ' мс' : '—') + '</td>' +
+          '<td>' + esc(e.bytes != null ? e.bytes : '—') + '</td>' +
+          '<td>' + esc(e.records != null ? e.records : '—') + '</td>' +
+          '<td>' + esc(e.kept != null ? e.kept : '—') + '</td>' +
+          '<td>' + esc(e.phase || '—') + '</td>' +
+          '<td>' + esc(e.budget || '—') + '</td>' +
+          '<td>' + esc(e.error || '') + '</td>' +
+          '<td>' + url + '</td></tr>';
+      }).join('');
       return '<section style="margin:16px 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px">' +
         '<h2 style="font-size:15px">' + fmt(r.started) + ' · ' + esc(r.mode || '') + '</h2>' +
         '<p style="font-size:12px;color:var(--muted);margin:5px 0 10px">' +
           'Источник: <b>' + esc(s.source || '—') + '</b> · всего <b>' + esc(s.total || 0) + '</b> · ' +
           'действующих <b>' + esc(s.active || 0) + '</b> · завершённых <b>' + esc(s.archive || 0) + '</b> · ' +
           'совпало с реестром <b>' + esc(s.matchedOrg || 0) + '</b> · ошибок <b>' + esc(s.errors || bad) + '</b>' +
+          (s.budget ? ' · бюджет запросов: <b>' + esc(Object.entries(s.budget).map(([k, v]) => k + ' ' + v.used + '/' + v.limit).join(', ')) + '</b>' : '') +
         '</p>' +
-        '<div class="t-table-wrap"><table class="table t-table" style="min-width:1100px">' +
-        '<thead><tr><th>Время</th><th>Источник</th><th>Запрос</th><th>Статус</th><th>HTTP</th><th>ms</th><th>Найдено</th><th>Взято</th><th>Режим</th><th>Ошибка</th></tr></thead>' +
+        '<div class="t-table-wrap"><table class="table t-table" style="min-width:1500px">' +
+        '<thead><tr><th>Время</th><th>Источник</th><th>Запрос</th><th>Статус</th><th>HTTP</th><th>ms</th><th>Байт</th><th>Найдено</th><th>Взято</th><th>Режим</th><th>Лимит</th><th>Ошибка</th><th>URL</th></tr></thead>' +
         '<tbody>' + rows + '</tbody></table></div></section>';
     }).join('') || '<p style="color:var(--muted)">Нет записей журнала.</p>';
   }

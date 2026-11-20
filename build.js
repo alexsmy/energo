@@ -8,7 +8,7 @@ const DATA = path.join(ROOT, 'data');
 const META = {
   title: 'Энергогенерирующие и энергоремонтные предприятия РФ',
   subtitle: 'Проверенный реестр для работы с закупками и подрядчиками',
-  version: '2.0',
+  version: '2.1',
   date: '2026-11-20',
   disclaimer: 'Данные собраны из открытых источников и проверены по состоянию на 20.11.2026. Поля с флагом «средняя» достоверность требуют подтверждения перед заключением договора. Контакты и кадровые назначения могут меняться.'
 };
@@ -223,6 +223,7 @@ const tenderData = {
   keywords: tenderFile('tender-keywords.json', { keywords: [] }),
   enterprises: tenderFile('tender-enterprises.json', { items: [] }),
   etps: tenderFile('etp-audit.json', { platforms: [] }),
+  platforms: tenderFile('platforms.json', { items: [] }).items || [],
   tenders: tenderFile('tenders.json', { records: [] }),
   status: tenderFile('tenders-status.json', {}),
   log: tenderFile('collect-log.json', []),

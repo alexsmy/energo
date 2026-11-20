@@ -13,9 +13,12 @@ class CollectLogger {
   }
 
   entry(source, query, info) {
-    this.run.entries.push(Object.assign({
+    const e = Object.assign({
       ts: new Date().toISOString(), source, query
-    }, info || {}));
+    }, info || {});
+    // Счётчик запросов источника на текущий прогон (использовано/лимит).
+    if (this.budgetState && !e.budget) e.budget = this.budgetState(source) || '';
+    this.run.entries.push(e);
   }
 
   finish(summary) {
@@ -29,4 +32,20 @@ class CollectLogger {
   }
 }
 
-module.exports = { CollectLogger, FILE };
+/* Сведения об одном сетевом запросе для журнала. */
+function requestInfo(res, url, startedAt, extra) {
+  const body = res && res.body;
+  const bytes = body
+    ? Buffer.byteLength(typeof body === 'string' ? body : JSON.stringify(body), 'utf8')
+    : 0;
+  return Object.assign({
+    ok: !!(res && res.ok),
+    http: (res && res.status) || 0,
+    ms: startedAt ? Date.now() - startedAt : undefined,
+    bytes,
+    url: url || '',
+    error: (res && res.error) || ''
+  }, extra || {});
+}
+
+module.exports = { CollectLogger, FILE, requestInfo };

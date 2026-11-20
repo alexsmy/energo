@@ -1,0 +1,25 @@
+{
+  "note": "Канонические площадки и правила распознавания названий из API/HTML. code совпадает с data/etp-audit.json там, где площадка уже была.",
+  "items": [
+    { "code": "EIS", "name": "ЕИС", "kind": "eis", "hosts": ["zakupki.gov.ru"], "patterns": ["еис", "единая информационная система", "zakupki.gov.ru"] },
+    { "code": "TEK", "name": "ТЭК-Торг", "kind": "etp", "hosts": ["tektorg.ru", "tek-torg.ru"], "patterns": ["тэк-торг", "тэк торг", "tek-torg"] },
+    { "code": "ROS", "name": "Росэлторг (ЕЭТП)", "kind": "etp", "hosts": ["roseltorg.ru"], "patterns": ["росэлторг", "еэтп", "единая электронная торговая площадка"] },
+    { "code": "GPB", "name": "ЭТП ГПБ", "kind": "etp", "hosts": ["etpgpb.ru", "etp.gpb.ru"], "patterns": ["этп гпб", "газпромбанк", "гпб"] },
+    { "code": "B2B", "name": "B2B-Center", "kind": "etp", "hosts": ["b2b-center.ru"], "patterns": ["b2b-center", "b2b center", "b2b"] },
+    { "code": "FAB", "name": "Фабрикант", "kind": "etp", "hosts": ["fabrikant.ru"], "patterns": ["фабрикант"] },
+    { "code": "RTS", "name": "РТС-тендер", "kind": "etp", "hosts": ["rts-tender.ru"], "patterns": ["ртс-тендер", "ртс тендер"] },
+    { "code": "SBER", "name": "Сбербанк-АСТ", "kind": "etp", "hosts": ["sberbank-ast.ru"], "patterns": ["сбербанк-аст", "сбербанк аст", "сбербанк-автоматизированная"] },
+    { "code": "RAD", "name": "РАД / Lot-online", "kind": "etp", "hosts": ["lot-online.ru", "gz.lot-online.ru"], "patterns": ["lot-online", "рад", "российский аукционный дом"] },
+    { "code": "ZAKAZ", "name": "ЗаказРФ", "kind": "etp", "hosts": ["zakazrf.ru"], "patterns": ["заказрф", "агентство по государственному заказу", "агз рт"] },
+    { "code": "BIDZAAR", "name": "Bidzaar", "kind": "commercial", "hosts": ["bidzaar.com"], "patterns": ["bidzaar"] },
+    { "code": "SBER_B2B", "name": "Сбер Б2Б", "kind": "commercial", "hosts": ["sberb2b.ru"], "patterns": ["сбер б2б", "sber b2b"] },
+    { "code": "PORTAL_POST", "name": "Портал поставщиков", "kind": "commercial", "hosts": ["zakupki.mos.ru"], "patterns": ["портал поставщиков"] },
+    { "code": "ETP_RUSSIA", "name": "Электронные торги России", "kind": "etp", "hosts": ["etprf.ru"], "patterns": ["электронные торги россии", "этр"] },
+    { "code": "AST", "name": "АСТ ГОЗ", "kind": "etp", "hosts": ["astgoz.ru"], "patterns": ["аст гоз"] },
+    { "code": "KIM", "name": "КИМ Росатома", "kind": "etp", "hosts": ["kim.rosatom.ru"], "patterns": ["ким росатома"] },
+    { "code": "PORTAL_ROS", "name": "Портал закупок Росатома", "kind": "etp", "hosts": ["zakupki.rosatom.ru"], "patterns": ["портал закупок росатома", "росатом"] },
+    { "code": "ETP_IRAO", "name": "ЭТП Интер РАО", "kind": "etp", "hosts": ["etp.interrao.ru"], "patterns": ["этп интер рао", "интер рао"] },
+    { "code": "ETP_RUSH", "name": "Портал закупок РусГидро", "kind": "etp", "hosts": ["zakupki.rushydro.ru"], "patterns": ["портал закупок русгидро", "русгидро"] },
+    { "code": "OTHER", "name": "Другая площадка", "kind": "other", "hosts": [], "patterns": [] }
+  ]
+}

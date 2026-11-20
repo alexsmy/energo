@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-/* Оркестратор сбора закупок: ГосПлан API (по умолчанию) → HTML ЕИС (резерв).
+/* Оркестратор сбора закупок: несколько независимых источников → нормализация → дедуп → лог.
  *
  *   node scripts/collect-tenders.js                  полный прогон
+ *   node scripts/collect-tenders.js --source=gentender
  *   node scripts/collect-tenders.js --probe-only     только аудит ЭТП
  *   node scripts/collect-tenders.js --no-probe       без проверки площадок
- *   node scripts/collect-tenders.js --fixture=f.html тест парсера без сети
- *   node scripts/collect-tenders.js --refilter       пересопоставление старых записей с реестром
+ *   node scripts/collect-tenders.js --fixture=f.html тест HTML-парсера без сети
+ *   node scripts/collect-tenders.js --refilter       пересопоставление старых записей
  *   node scripts/collect-tenders.js --verbose
  *
  * Локально под TLS-прокси Termux: NODE_TLS_REJECT_UNAUTHORIZED=0 ...
@@ -13,22 +14,27 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { ThrottledClient, sleep } = require('./lib/throttle');
-const { buildCustomerIndex, matchCustomer, norm } = require('./lib/match-org');
-const { dedup, isActive } = require('./lib/normalize');
+const { ThrottledClient } = require('./lib/throttle');
+const { buildCustomerIndex, matchCustomer, customerDisplay } = require('./lib/match-org');
+const { dedup, makeRecord, sourceEntry, splitWordScore } = require('./lib/normalize');
+const { platformName, canonicalPlatform, sourceRank } = require('./lib/platforms');
 const { CollectLogger } = require('./lib/logger');
+const tm = require('../js/text-match');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
-const UA = 'EnergoRegistry/1.9 (+https://github.com/alexsmy/energo)';
-const MAX_RECORDS = 2000;
+const MAX_RECORDS = 3000;
+const DEFAULT_SOURCES = ['gosplan', 'gentender', 'tektorg', 'etpgpb', 'roseltorg', 'eis-html'];
 
 const argv = process.argv.slice(2);
 const arg = (name, def) => { const h = argv.find(a => a.startsWith('--' + name + '=')); return h ? h.slice(name.length + 3) : def; };
 const has = (n) => argv.includes('--' + n);
 const opts = {
-  fixture: arg('fixture', ''), limit: Math.max(10, parseInt(arg('limit', String(MAX_RECORDS)), 10) || MAX_RECORDS),
-  noProbe: has('no-probe'), probeOnly: has('probe-only'), refilter: has('refilter'), verbose: has('verbose')
+  fixture: arg('fixture', ''),
+  limit: Math.max(10, parseInt(arg('limit', String(MAX_RECORDS)), 10) || MAX_RECORDS),
+  source: arg('source', '') || process.env.ENERGO_SOURCE || '',
+  noProbe: has('no-probe'), probeOnly: has('probe-only'),
+  refilter: has('refilter'), verbose: has('verbose')
 };
 const log = (...a) => { if (opts.verbose || !opts.fixture) console.log(...a); };
 
@@ -37,22 +43,55 @@ function readJson(name, fallback) {
 }
 function writeJson(name, obj) { fs.writeFileSync(path.join(DATA, name), JSON.stringify(obj, null, 2) + '\n', 'utf8'); }
 
+/* Ключевые слова ищем только в названии закупки. Заказчик подсвечиваться
+ * не должен: он нужен для поиска, но не является совпадением по слову.
+ * Для составных запросов проверяются все группы must (И между группами). */
 function tagRecords(records, keywords, enterprises) {
-  const kwSet = new Set(keywords.map(norm));
+  const entries = (keywords || []).filter(Boolean);
   records.forEach(r => {
-    const text = norm(r.title + ' ' + r.customer);
-    const query = (r.keywords || [])[0] || '';
-    const terms = new Set([...(r.keywords || []), ...(kwSet.has(norm(query)) ? [query] : [])]);
-    keywords.forEach(k => { if (text.includes(norm(k))) terms.add(k); });
-    r.keywords = [...terms].filter(Boolean);
+    const matched = tm.matchEntries(r.title || '', entries).map((e) => e.label);
+    r.keywords = [...new Set(matched)];
+    r.matchedKeywords = [...new Set(matched)];
     const ids = new Set(r.enterpriseIds || []);
     if (r.matchedOrgId) ids.add(r.matchedOrgId);
-    enterprises.forEach(e => {
-      if ([e.query, ...(e.aliases || [])].some(n => text.includes(norm(n)))) ids.add(e.id);
+    const text = tm.norm(r.customer + ' ' + (r.matchedOrgName || ''));
+    (enterprises || []).forEach(e => {
+      if (!e || !e.id) return;
+      const words = [e.query, ...(e.aliases || [])].filter(Boolean);
+      if (words.some(n => text.includes(tm.norm(n)))) ids.add(e.id);
     });
     r.enterpriseIds = [...ids];
   });
   return records;
+}
+
+/* Приводим старые записи к новой схеме без потери данных. */
+function normalizeLegacy(r, index, enterprises) {
+  if (!r || !r.id) return null;
+  const org = matchCustomer(r, index);
+  const rawPlatform = r.platformCode || r.etp || 'OTHER';
+  const p = canonicalPlatform(r.platformName || platformName(rawPlatform), r.platformUrl || r.url);
+  const sourceName = r.sourceName || (/(госplan|гос ?план)/i.test(r.source || '') ? 'ГосПлан API'
+    : /gen/i.test(r.source || '') ? 'GenTender'
+      : /тэк/i.test(r.source || '') ? 'ТЭК-Торг'
+        : /гпб/i.test(r.source || '') ? 'ЭТП ГПБ'
+          : /росэлторг/i.test(r.source || '') ? 'Росэлторг'
+            : /еис|zakupki|eis/i.test(r.source || '') ? 'ЕИС'
+              : (r.source || 'Источник'));
+  const rec = makeRecord({
+    ...r,
+    org,
+    platformCode: p.code || rawPlatform,
+    platformName: p.name || r.platformName || platformName(rawPlatform),
+    platformUrl: r.platformUrl || '',
+    source: r.source || '',
+    sourceName,
+    keywords: r.keywords || [],
+    matchedKeywords: r.matchedKeywords || [],
+    enterpriseIds: r.enterpriseIds || []
+  });
+  rec.sources = (r.sources && r.sources.length) ? r.sources : [sourceEntry(rec)];
+  return rec;
 }
 
 async function probeEtps(audit, logger) {
@@ -77,6 +116,49 @@ async function probeEtps(audit, logger) {
   return ok;
 }
 
+/* В выдачу попадают только закупки, совпавшие хотя бы с одной ключевой фразой.
+ * Иначе обход по ИНН Enterprises добавляет всё подряд («Поставка щебня»). */
+function applyRequireKeyword(records, settings) {
+  if (settings.requireKeyword === false) return { kept: records, dropped: 0 };
+  const kept = records.filter(r => (r.matchedKeywords || r.keywords || []).length > 0);
+  return { kept, dropped: records.length - kept.length };
+}
+
+/* Бюджет сетевых запросов на прогон: не даём площадкам исчерпать квоты
+ * и не упираемся в 429. Расход считается по каждому источнику отдельно. */
+function createBudget(map) {
+  const usage = {};
+  Object.keys(map || {}).forEach((name) => {
+    usage[name] = { limit: Number(map[name]) || 0, used: 0, exhausted: false };
+  });
+  const take = (name) => {
+    const u = usage[name];
+    if (!u) return true;
+    if (u.used >= u.limit) { u.exhausted = true; return false; }
+    u.used += 1;
+    return true;
+  };
+  return { take, usage };
+}
+
+/* В API уходит только опорное слово фразы: «ремонт проточной части турбины»
+ * и «замена лопаток турбины» дают один запрос по слову «турбина». */
+function queryTerms(keywords) {
+  return [...new Set((keywords || []).map((k) => tm.entryOf(k).search).filter(Boolean))];
+}
+
+function adapterFor(name) {
+  switch (name) {
+    case 'gosplan': return require('./sources/gosplan');
+    case 'gentender': return require('./sources/gentender');
+    case 'tektorg': return require('./sources/tektorg');
+    case 'etpgpb': return require('./sources/etpgpb');
+    case 'roseltorg': return require('./sources/roseltorg');
+    case 'eis-html': return require('./sources/eis-html');
+    default: return null;
+  }
+}
+
 async function main() {
   const keywordsData = readJson('tender-keywords.json', { keywords: [] });
   const enterprisesData = readJson('tender-enterprises.json', { items: [] });
@@ -84,22 +166,35 @@ async function main() {
   const audit = readJson('etp-audit.json', { platforms: [] });
   const prev = readJson('tenders.json', { records: [] }).records || [];
   const keywords = keywordsData.keywords || [];
+  const terms = queryTerms(keywords);
+  const budget = createBudget(settings.requestBudget || {});
   const enterprises = enterprisesData.items || [];
+  const index = buildCustomerIndex(enterprises);
   const logger = new CollectLogger(opts.fixture ? 'fixture' : opts.probeOnly ? 'probe' : 'scheduled');
+  logger.budgetState = (name) => {
+    const u = budget.usage[name];
+    return u ? `${u.used}/${u.limit}` : '';
+  };
   const foundAt = new Date().toISOString();
 
   // Пересопоставление уже собранных записей без сети.
   if (opts.refilter) {
-    const index = buildCustomerIndex();
-    const kept = prev.map(r => {
-      const org = matchCustomer(r, index);
-      return org ? { ...r, matchedOrgId: org.id, matchedOrgName: org.name, enterpriseIds: [org.id] } : null;
-    }).filter(Boolean);
-    const records = tagRecords(kept, keywords, enterprises);
+    const normalized = prev.map(r => normalizeLegacy(r, index, enterprises)).filter(Boolean);
+    const tagged = tagRecords(normalized, keywords, enterprises);
+    const filtered = applyRequireKeyword(tagged, settings);
+    const records = dedup([], filtered.kept, opts.limit);
+    const splitAfter = records.filter(r => splitWordScore(r.title)).length;
     writeJson('tenders.json', { updated: foundAt, count: records.length, records });
-    writeJson('tenders-status.json', { lastRun: foundAt, mode: 'refilter', total: records.length, sources: ['refilter'] });
-    logger.entry('refilter', 'registry match', { ok: true, records: prev.length, kept: records.length });
-    logger.finish({ total: records.length, unique: records.length, matchedOrg: records.length, errors: 0 });
+    writeJson('tenders-status.json', {
+      lastRun: foundAt, mode: 'refilter', total: records.length,
+      active: records.filter(r => r.phase === 'active').length,
+      archive: records.filter(r => r.phase === 'archive').length,
+      droppedNoKeyword: filtered.dropped,
+      titlesSuspicious: splitAfter,
+      sources: ['refilter']
+    });
+    logger.entry('refilter', 'registry match', { ok: true, records: prev.length, kept: records.length, droppedNoKeyword: filtered.dropped });
+    logger.finish({ total: records.length, unique: records.length, matchedOrg: records.filter(r => r.matchedOrgId).length, droppedNoKeyword: filtered.dropped, errors: 0 });
     log(`Пересопоставлено: ${prev.length} → ${records.length}`);
     return;
   }
@@ -112,28 +207,29 @@ async function main() {
     return;
   }
 
-  const priority = (settings.sourcePriority || ['gosplan', 'eis-html']).filter(Boolean);
-  const envSource = process.env.ENERGO_SOURCE;
-  const sources = opts.fixture ? ['eis-html'] : (envSource ? [envSource] : priority);
+  const priority = opts.source
+    ? opts.source.split(',').map(s => s.trim()).filter(Boolean)
+    : ((settings.sourcePriority || DEFAULT_SOURCES).filter(Boolean));
+  const sources = opts.fixture ? ['eis-html'] : priority;
   const results = [];
   let records = [];
-  let usedSource = '';
 
   for (const name of sources) {
+    const adapter = adapterFor(name);
+    if (!adapter) { log(`Неизвестный источник: ${name}`); continue; }
     try {
-      const adapter = name === 'gosplan' ? require('./sources/gosplan') : require('./sources/eis-html');
       const result = await adapter.collect({
-        keywords, enterprises, settings, audit, logger,
+        keywords: terms, enterprises, settings, audit, logger,
+        take: budget.take,
         fixture: opts.fixture ? path.resolve(opts.fixture) : '',
         maxRecords: opts.limit
       });
-      results.push({ name: result.name, available: result.available, requests: result.requests, okRequests: result.okRequests, records: result.records.length, errors: result.errors.length });
+      results.push({
+        name: result.name, available: result.available, requests: result.requests,
+        okRequests: result.okRequests, records: result.records.length, errors: result.errors.length
+      });
       log(`Источник ${result.name}: доступен=${result.available}, запросов=${result.requests}, записей=${result.records.length}`);
-      if (result.records.length) {
-        records = result.records;
-        usedSource = result.name;
-        break; // основной источник сработал — резерв не дёргаем
-      }
+      records.push(...result.records);
     } catch (e) {
       const err = String((e && e.stack) || e || 'unknown');
       logger.entry(name, 'adapter', { ok: false, error: err });
@@ -143,25 +239,43 @@ async function main() {
   }
 
   const tagged = tagRecords(records, keywords, enterprises);
-  const merged = dedup(prev, tagged, opts.limit);
+  // Старые записи тоже приводим к новой схеме, иначе в файле остаются
+  // «безымянные» площадки и потерянные источники.
+  const prevNormalized = prev.map(r => normalizeLegacy(r, index, enterprises)).filter(Boolean);
+  const mergedAll = dedup(prevNormalized, tagged, opts.limit);
+  // Глубина архива: завершённые закупки старше archiveDepthDays не держим.
+  const archiveDays = Math.max(1, parseInt(settings.archiveDepthDays, 10) || 30);
+  const cutoff = new Date(Date.now() - archiveDays * 86400000).toISOString().slice(0, 10);
+  const taggedAll = tagRecords(mergedAll.filter(r => r.phase !== 'archive' || String(r.published || r.deadline || '') >= cutoff), keywords, enterprises);
+  const filtered = applyRequireKeyword(taggedAll, settings);
+  const merged = filtered.kept;
+  const titlesSuspicious = merged.filter(r => splitWordScore(r.title)).length;
   writeJson('tenders.json', { updated: foundAt, count: merged.length, records: merged });
   const errors = results.flatMap(r => r.errors || []);
+  const bySource = {};
+  merged.forEach(r => {
+    const key = r.platformCode || r.etp || 'OTHER';
+    bySource[key] = (bySource[key] || 0) + 1;
+  });
   const summary = {
     total: merged.length,
     unique: tagged.length,
     matchedOrg: merged.filter(r => r.matchedOrgId).length,
     active: merged.filter(r => r.phase === 'active').length,
     archive: merged.filter(r => r.phase === 'archive').length,
-    source: usedSource,
+    bySource,
     sources: results,
     errors: errors.length,
     probeOk,
-    partial: !usedSource
+    droppedNoKeyword: filtered.dropped,
+    titlesSuspicious,
+    budget: budget.usage,
+    partial: results.some(r => !r.available)
   };
   writeJson('tenders-status.json', Object.assign({ lastRun: foundAt, mode: opts.fixture ? 'fixture' : 'live' }, summary));
   logger.finish(summary);
-  log(`ИТОГО: ${tagged.length} найдено, ${merged.length} в файле, источник ${usedSource || 'нет'}, ошибок ${errors.length}`);
-  if (!usedSource) log('ВНИМАНИЕ: новые совпадения не найдены (источники недоступны или выдача пуста) — сохранены предыдущие данные.');
+  log(`ИТОГО: ${tagged.length} найдено, ${merged.length} в файле (отброшено без ключевых слов: ${filtered.dropped}), площадок ${Object.keys(bySource).length}, ошибок ${errors.length}`);
+  if (!records.length) log('ВНИМАНИЕ: новые совпадения не найдены (источники недоступны или выдача пуста) — сохранены предыдущие данные.');
 }
 
 main().catch(e => { console.error('Критическая ошибка:', e); process.exitCode = 1; });

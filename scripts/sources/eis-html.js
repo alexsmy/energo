@@ -19,7 +19,13 @@ function decode(s) {
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)))
     .replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&').replace(/&quot;/gi, '"')
     .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&apos;/gi, "'")
-    .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    // Сначала блочные теги → пробел, потом остальные (в т.ч. подсветку
+    // совпадений внутри слова) → пустая строка: «турбин<span>ного» должно
+    // стать «турбинного», а не «турбин ного».
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<\/(?:div|p|li|tr|td|h[1-6]|section)>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ').trim();
 }
 function isoDate(s) {
   const m = decode(s).match(/(\d{2})\.(\d{2})\.(\d{4})/);
@@ -72,6 +78,10 @@ async function collect(opts) {
   async function runQuery(q, mode) {
     if (consecutiveFails >= 4) return;
     for (let page = 1; page <= maxPages; page++) {
+      if (opts.take && !opts.take('eis-html')) {
+        logger.entry('eis-html', q, { ok: false, records: 0, error: 'budget-exhausted', phase: mode.phase });
+        break;
+      }
       let url = template.replace('{q}', encodeURIComponent(q)).replace('{company}', encodeURIComponent(q));
       url = url.replace(/pageNumber=1/, 'pageNumber=' + page);
       if (mode.depth) {

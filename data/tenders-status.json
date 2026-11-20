@@ -1,8 +1,68 @@
 {
-  "lastRun": "2026-11-20T14:00:30.293Z",
-  "mode": "refilter",
-  "total": 76,
+  "lastRun": "2026-11-20T16:40:01.321Z",
+  "mode": "live",
+  "total": 119,
+  "unique": 100,
+  "matchedOrg": 119,
+  "active": 58,
+  "archive": 61,
+  "bySource": {
+    "EIS": 42,
+    "TEK": 24,
+    "GPB": 7,
+    "ROS": 10,
+    "ZAKAZ": 4,
+    "RAD": 14,
+    "SBER": 2,
+    "B2B": 14,
+    "FAB": 1,
+    "RTS": 1
+  },
   "sources": [
-    "refilter"
-  ]
+    {
+      "name": "gentender",
+      "available": true,
+      "requests": 14,
+      "okRequests": 14,
+      "records": 100,
+      "errors": 0
+    }
+  ],
+  "errors": 0,
+  "probeOk": 0,
+  "droppedNoKeyword": 19,
+  "titlesSuspicious": 0,
+  "budget": {
+    "gosplan": {
+      "limit": 60,
+      "used": 0,
+      "exhausted": false
+    },
+    "gentender": {
+      "limit": 400,
+      "used": 14,
+      "exhausted": false
+    },
+    "tektorg": {
+      "limit": 40,
+      "used": 0,
+      "exhausted": false
+    },
+    "etpgpb": {
+      "limit": 40,
+      "used": 0,
+      "exhausted": false
+    },
+    "roseltorg": {
+      "limit": 40,
+      "used": 0,
+      "exhausted": false
+    },
+    "eis-html": {
+      "limit": 40,
+      "used": 0,
+      "exhausted": false
+    }
+  },
+  "partial": false
 }
