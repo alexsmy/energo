@@ -32,9 +32,6 @@ jobs:
       - name: Сбор закупок и проверка ЭТП
         run: node scripts/collect-tenders.js --limit=2000
 
-      - name: Пересборка данных сайта
-        run: node build.js
-
       - name: Обновление манифеста версии
         run: |
           node -e "
@@ -46,6 +43,11 @@ jobs:
             p.message='Данные закупок обновлены. Страница перезагрузится автоматически.';
             fs.writeFileSync('version.json',JSON.stringify(p,null,2)+'\n');
           "
+
+      - name: Пересборка данных сайта
+        # build.js подхватывает version из version.json, поэтому она совпадает
+        # с meta.version в js/data.js — иначе автообновление циклит страницу.
+        run: node build.js
 
       - name: Публикация изменений
         run: |

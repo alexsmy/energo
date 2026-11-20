@@ -715,6 +715,7 @@
   /* ---------- автообновление ---------- */
   function initAutoUpdate() {
     const current = (R.meta && R.meta.version) || '1.0';
+    const SEEN_KEY = 'energo-reloaded-version';
     let lastCheck = 0;
     let notice = null;
 
@@ -723,8 +724,12 @@
       location.reload();
     }
 
-    function showNotice() {
+    function showNotice(version) {
       if (notice && notice.isConnected) return;
+      // Защита от бесконечного цикла: на одной и той же версии перезагружаемся один раз.
+      let seen = '';
+      try { seen = sessionStorage.getItem(SEEN_KEY) || ''; } catch (e) { /* приватный режим */ }
+      if (seen === version) return;
       notice = createNotice('update', 'i');
       const body = notice.querySelector('.notice__body');
       body.innerHTML = 'Обновление данных, страница будет перезагружена · <b>10</b> с';
@@ -733,7 +738,11 @@
       const timer = setInterval(() => {
         seconds -= 1;
         if (counter) counter.textContent = String(Math.max(0, seconds));
-        if (seconds <= 0) { clearInterval(timer); reload(); }
+        if (seconds <= 0) {
+          clearInterval(timer);
+          try { sessionStorage.setItem(SEEN_KEY, version); } catch (e) { /* приватный режим */ }
+          reload();
+        }
       }, 1000);
     }
 
@@ -747,7 +756,7 @@
         if (!res.ok) return;
         const info = await res.json();
         if (!info.version || info.version === current) return;
-        showNotice();
+        showNotice(info.version);
       } catch (e) { /* офлайн — работает локальная версия */ }
     }
 
