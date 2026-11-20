@@ -1,0 +1,1186 @@
+{
+ "P-MOSENERGO-001": {
+  "name": "ТЭЦ-8",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-8/",
+  "wikiTitle": "ТЭЦ-8",
+  "address": [
+   "Адрес: 109316, г. Москва, Остаповский пр-д, д. 1, Юго-Восточный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "турбин Р-50-130 с применением высокоэффективных пла"
+  ],
+  "boilers": [],
+  "repairs": [
+   "В 1982 году введен энергоблок мощностью 50 МВт.",
+   "В 1986 году на ТЭЦ-8 введен блок 110 МВт и два водогрейных котла по 180 Гкал/ч."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 1 мая 1930 года Установленная электрическая мощность — 58"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-002": {
+  "name": "ТЭЦ-9",
+  "url": "http://www.mosenergo.ru/",
+  "wikiTitle": "Московская ТЭЦ-9",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-MOSENERGO-005": {
+  "name": "ТЭЦ-16",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-16/",
+  "wikiTitle": "Московская ТЭЦ-16",
+  "address": [
+   "Адрес: 123298, г. Москва, ул. 3-я Хорошевская, д.14, Северо-Западный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "В декабре 2014 года на ТЭЦ-16 введен в эксплуатацию парогазовый энергоблок ПГУ-420, благодаря чему ее установленная мощность увеличилась более чем в два раза.",
+   "года выведены из работы турбоагрегаты № 3 и 4 выпуска 1956 года, а также котлоагрегат № 5 1958 года выпуска."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 28 июня 1955 года Установленная электрическая мощность —",
+   "Ввод в эксплуатацию первого энергоблока мощностью 25 МВт состоялся в 1955 году,"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-006": {
+  "name": "ТЭЦ-20",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-20/",
+  "wikiTitle": "ТЭЦ-20",
+  "address": [
+   "Адрес: 117312, г. Москва, ул. Вавилова, д. 13, Юго-Западный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "теплофикационной турбины Т-100-130 Уральского турбомоторного завода",
+   "турбин Т-100-130 с шестью котлами (по одному котлу Т"
+  ],
+  "boilers": [],
+  "repairs": [
+   "2 апреля 1952 года ТЭЦ-20 начала отпуск потребителям тепловой энергии, а в октябре того же года — электрической.",
+   "В целях обеспечения потребности ближайших к ТЭЦ-20 районов теплом и электричеством в 1965–1972 годах на электростанции введены в эксплуатацию пять турбин Т-100-130 с шестью котлами (по одному котлу ТП-80 и ТГМ-84Б, а также четыре котла ТП-87).",
+   "В 2012–2015 годах проведена реконструкция схемы выдачи мощности электростанции с переводом присоединений на вновь построенное КРУЭ 220 кВ и расширением АСУ ЭТО."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 2 апреля 1952 года Установленная электрическая мощность —"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-007": {
+  "name": "ТЭЦ-21",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-21/",
+  "wikiTitle": "ТЭЦ-21",
+  "address": [
+   "Адрес: 125412, г. Москва, ул. Ижорская, д. 9, Северный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "теплофикационной турбиной типа Т-100-130"
+  ],
+  "boilers": [],
+  "repairs": [
+   "С 1973 по 1983 год на ТЭЦ-21 введены в эксплуатацию четыре энергоблока, ее установленная электрическая мощность достигла 1290 МВт.",
+   "В соответствии с планом замены отработавшего парковый ресурс оборудования в 2006 году выполнена реконструкция турбогенератора № 5 типа Т-100 на Т-110/120-130-5.",
+   "В 2008 году на ТЭЦ-21 введен в эксплуатацию современный парогазовый энергоблок установленной электрической мощностью 425 МВт и тепловой мощностью 300 Гкал/ч."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 22 октября 1963 года Установленная электрическая мощность"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-008": {
+  "name": "ТЭЦ-22",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-22/",
+  "wikiTitle": "Московская ТЭЦ-22",
+  "address": [
+   "Адрес: 140091, Московская область, г. Дзержинский, ул. Энергетиков, д. 5"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "турбин ПТ-60 общей мощностью 360 МВт",
+   "турбины типа Т-250/300-240",
+   "турбины Т-250/300-240"
+  ],
+  "boilers": [],
+  "repairs": [
+   "Т-60-130 первой очереди была произведена их замена на новые турбогенераторы ПТ-65/75, а в 2000 году введена в эксплуатацию модернизированная турбина № 7.",
+   "В декабре 2003 года в ходе реконструкции на станции устаревшие турбина и генератор № 8 заменены на современное высокотехнологичное оборудование.",
+   "В августе 2015 года на ТЭЦ-22 завершена реконструкция первой и второй очереди химводоочистки.",
+   "В июне 2022 года на ТЭЦ-22 завершена реконструкция энергоблока № 9.",
+   "Вместо турбины Т-250/300-240, находившейся в эксплуатации с 1972 года, введена в эксплуатацию турбина нового образца — Т-295/335-23,5 производства Уральского турбинного завода."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 28 декабря 1960 года Установленная электрическая мощность"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-009": {
+  "name": "ТЭЦ-23",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-23/",
+  "wikiTitle": "ТЭЦ-23",
+  "address": [
+   "Адрес: 107497, г. Москва, ул. Монтажная, д.1/4, Восточный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "турбиной Т-100-130",
+   "турбинами Т-250/300-240 и энергетическими котлами ТГМП-",
+   "турбины Т-100-130 на новую",
+   "турбины Т-100-130 на турбину модификации Т-110/120-13"
+  ],
+  "boilers": [],
+  "repairs": [
+   "совета принял решение о строительстве Измайловской теплоэлектроцентрали, и уже 17 декабря 1966 года был введен первый блок с турбиной Т-100-130, котлом ТГМ-96, генератором ТВФ-100-2 электрической мощностью 100 МВт и тепловой мощностью 160 Гкал/ч.",
+   "В 1968 году введены третья и четвертая турбины и третий и четвертый энергетические котлы.",
+   "В 2008 году проведена замена второй турбины Т-100-130 на турбину модификации Т-110/120-130-5 с генератором воздушного охлаждения."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 17 декабря 1966 года Установленная электрическая мощность"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-010": {
+  "name": "ТЭЦ-25",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-25/",
+  "wikiTitle": "ТЭЦ-25",
+  "address": [
+   "Адрес: 119530, г. Москва, ул. Генерала Дорохова, д. 16, Западный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "турбина Т-250/300-240)"
+  ],
+  "boilers": [],
+  "repairs": [],
+  "year": [
+   "Дата ввода в эксплуатацию — 10 января 1975 года Установленная электрическая мощность"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-011": {
+  "name": "ТЭЦ-26",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-26/",
+  "wikiTitle": "ТЭЦ-26",
+  "address": [
+   "Адрес: 117403, г. Москва, Востряковский пр-д, домовладение 10, Южный административный округ"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [
+   "турбины ПТ-80/100-130/13"
+  ],
+  "boilers": [],
+  "repairs": [],
+  "year": [
+   "Дата ввода в эксплуатацию — 30 марта 1979 года Установленная электрическая мощность —"
+  ],
+  "ok": true
+ },
+ "P-MOSENERGO-012": {
+  "name": "ТЭЦ-27",
+  "url": "http://www.mosenergo.ru/about/present/branch/hpp-27/",
+  "wikiTitle": "ТЭЦ-27",
+  "address": [
+   "Адрес: 141031, Московская область, городской округ Мытищи, п/о Челобитьево"
+  ],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "Строительство электростанции началось в 1987 году, 25 декабря 1992 года на Северной ТЭЦ были введены в эксплуатацию первые водогрейные котлы.",
+   "В конце ноября 2007 года энергоблок № 3 ПГУ-450 был введен в эксплуатацию."
+  ],
+  "year": [
+   "Дата ввода в эксплуатацию — 25 декабря 1992 года Установленная электрическая мощность"
+  ],
+  "ok": true
+ },
+ "P-OGK2-014": {
+  "name": "Сургутская ГРЭС-1",
+  "url": "http://www.ogk2.ru/rus/about/branch/surgutskaya/",
+  "wikiTitle": "Сургутская ГРЭС-1",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-015": {
+  "name": "Троицкая ГРЭС",
+  "url": "https://ogk2.ru/elektrostantsii/troitskaya-gres/",
+  "wikiTitle": "Троицкая ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@ogk2.ru",
+   "office@ogk2.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-OGK2-016": {
+  "name": "Новочеркасская ГРЭС",
+  "url": "https://ogk2.ru/elektrostantsii/novocherkasskaya-gres/",
+  "wikiTitle": "Новочеркасская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@ogk2.ru",
+   "office@ogk2.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "Ключевые параметры 1965 Год введения в эксплуатацию Основное топливо: уголь У станции отсутствуют ограничения по мощности сезонного характера."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-OGK2-017": {
+  "name": "Рязанская ГРЭС",
+  "url": "https://www.ogk2.ru/rus/branch/ryazangres/",
+  "wikiTitle": "Рязанская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-018": {
+  "name": "Череповецкая ГРЭС",
+  "url": "https://www.ogk2.ru/elektrostantsii/cherepovetskaya-gres/",
+  "wikiTitle": "Череповецкая ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@ogk2.ru",
+   "office@ogk2.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-OGK2-019": {
+  "name": "Киришская ГРЭС",
+  "url": "https://www.ogk2.ru/kigres/",
+  "wikiTitle": "Киришская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@ogk2.ru",
+   "office@ogk2.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-OGK2-020": {
+  "name": "Псковская ГРЭС",
+  "url": "https://www.ogk2.ru/rus/branch/pskovskaya/",
+  "wikiTitle": "Псковская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-021": {
+  "name": "Серовская ГРЭС",
+  "url": "https://www.ogk2.ru/rus/branch/serovskaya/",
+  "wikiTitle": "Серовская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-022": {
+  "name": "Ставропольская ГРЭС",
+  "url": "https://www.ogk2.ru/rus/branch/stavropolskaya/",
+  "wikiTitle": "Ставропольская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-023": {
+  "name": "Адлерская ТЭС",
+  "url": "https://www.ogk2.ru/rus/branch/adlerskaya/",
+  "wikiTitle": "Адлерская ТЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-OGK2-024": {
+  "name": "Грозненская ТЭС",
+  "url": "https://www.ogk2.ru/",
+  "wikiTitle": "Грозненская ТЭС",
+  "address": [],
+  "phones": [
+   "8-800-30-20-10"
+  ],
+  "emails": [
+   "office@ogk2.ru",
+   "office@ogk2.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-IRAO-GEN-051": {
+  "name": "Костромская ГРЭС",
+  "url": "http://irao-generation.ru/stations/kostromag/",
+  "error": "This operation was aborted"
+ },
+ "P-IRAO-GEN-053": {
+  "name": "Ириклинская ГРЭС",
+  "url": "http://irao-generation.ru/stations/iryklg/",
+  "error": "This operation was aborted"
+ },
+ "P-IRAO-GEN-060": {
+  "name": "Ивановские ПГУ",
+  "url": "https://irao-generation.ru/stations/ivanovopg/",
+  "error": "This operation was aborted"
+ },
+ "P-IRAO-GEN-062": {
+  "name": "Нижневартовская ГРЭС",
+  "url": "http://irao-generation.ru/stations/nvartg/",
+  "error": "This operation was aborted"
+ },
+ "P-IRAO-GEN-063": {
+  "name": "Верхнетагильская ГРЭС",
+  "url": "http://www.irao-generation.ru/stations/tagilg/",
+  "wikiTitle": "Верхнетагильская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-IRAO-GEN-064": {
+  "name": "Каширская ГРЭС",
+  "url": "http://irao-generation.ru/stations/kashirg/",
+  "error": "This operation was aborted"
+ },
+ "P-IRAO-GEN-065": {
+  "name": "Черепетская ГРЭС",
+  "url": "http://irao-generation.ru/stations/cherepetzg/",
+  "error": "This operation was aborted"
+ },
+ "P-BGK-072": {
+  "name": "Уфимская ТЭЦ-2",
+  "url": "http://www.bgkrb.ru/activities/business/141.pl",
+  "wikiTitle": "Уфимская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-BGK-073": {
+  "name": "Уфимская ТЭЦ-3",
+  "url": "http://www.bgkrb.ru/activities/business/142.pl",
+  "wikiTitle": "Уфимская ТЭЦ-3",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-BGK-074": {
+  "name": "Уфимская ТЭЦ-4",
+  "url": "https://www.bgkrb.ru/activities/business/143.pl",
+  "error": "fetch failed"
+ },
+ "P-BGK-076": {
+  "name": "Кармановская ГРЭС",
+  "url": "https://www.bgkrb.ru/activities/business/138.pl",
+  "error": "fetch failed"
+ },
+ "P-BGK-079": {
+  "name": "Салаватская ТЭЦ",
+  "url": "https://www.bgkrb.ru/activities/business/144.pl",
+  "error": "fetch failed"
+ },
+ "P-BGK-081": {
+  "name": "Ново-Салаватская ТЭЦ",
+  "url": "http://www.nslvtec.ru/",
+  "wikiTitle": "Ново-Салаватская ТЭЦ",
+  "address": [
+   "адрес: 453252, РЕСПУБЛИКА БАШКОРТОСТАН, ГОРОД САЛАВАТ, УЛИЦА МОЛОДОГВАРДЕЙЦЕВ, ЗДАНИЕ 54, СТРОЕНИЕ 1 Почтовый адрес: 453252, РОССИЙСКАЯ ФЕДЕРАЦИЯ, РЕСПУБЛИКА БАШКОРТОСТАН, Г. САЛАВАТ, УЛ. МОЛОД"
+  ],
+  "phones": [],
+  "emails": [
+   "office@nslvtec.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TPLUS-087": {
+  "name": "Безымянская ТЭЦ",
+  "url": "http://www.tplusgroup.ru/org/samara/organization/bezymjanskaja-tehc/",
+  "wikiTitle": "Безымянская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-088": {
+  "name": "Самарская ТЭЦ",
+  "url": "http://www.tplusgroup.ru/org/samara/organization/samarskaja-tehc/",
+  "wikiTitle": "Самарская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-089": {
+  "name": "Новокуйбышевская ТЭЦ-1",
+  "url": "http://www.tplusgroup.ru/org/samara/organization/novokuibyshevskaja-tehc-1/",
+  "wikiTitle": "Новокуйбышевская ТЭЦ-1",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-091": {
+  "name": "Сызранская ТЭЦ",
+  "url": "http://www.tplusgroup.ru/org/samara/organization/syzranskaja-tehc/",
+  "wikiTitle": "Сызранская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-094": {
+  "name": "Кировская ТЭЦ-4",
+  "url": "https://www.tplusgroup.ru/org/kirov/organization/kirovskaja-chp4/",
+  "wikiTitle": "Кировская ТЭЦ-4",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-103": {
+  "name": "Саранская ТЭЦ-2",
+  "url": "http://www.tplusgroup.ru/org/mordova/organization/saranskaja-tec2/",
+  "wikiTitle": "Саранская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-105": {
+  "name": "Новочебоксарская ТЭЦ-3",
+  "url": "http://www.tplusgroup.ru/org/mari-el/organization/novocheboksarskaja-tehc-3/",
+  "wikiTitle": "Новочебоксарская ТЭЦ-3",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-TPLUS-107": {
+  "name": "Владимирская ТЭЦ-2",
+  "url": "http://www.tplusgroup.ru/org/vladimir/organization/vladimirskaja-chp2/",
+  "wikiTitle": "Владимирская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "info@tplusgroup.ru",
+   "hotline@tplusgroup.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-KUZBASS-108": {
+  "name": "Беловская ГРЭС",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Беловская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-KUZBASS-109": {
+  "name": "Томь-Усинская ГРЭС",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Томь-Усинская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-KUZBASS-111": {
+  "name": "Ново-Кемеровская ТЭЦ",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Ново-Кемеровская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-KUZBASS-112": {
+  "name": "Кузнецкая ТЭЦ",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Кузнецкая ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-KUZBASS-114": {
+  "name": "Кемеровская ТЭЦ",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Кемеровская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-115": {
+  "name": "Красноярская ГРЭС-2",
+  "url": "https://sibgenco.ru/about/company/generation/krasnoyarskaya-gres-2/",
+  "wikiTitle": "Красноярская ГРЭС-2",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-116": {
+  "name": "Назаровская ГРЭС",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Назаровская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-117": {
+  "name": "Красноярская ТЭЦ-1",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Красноярская ТЭЦ-1",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-118": {
+  "name": "Красноярская ТЭЦ-2",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Красноярская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-119": {
+  "name": "Красноярская ТЭЦ-3",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Красноярская ТЭЦ-3",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-120": {
+  "name": "Абаканская ТЭЦ",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Абаканская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-TGK13-121": {
+  "name": "Минусинская ТЭЦ",
+  "url": "https://www.sibgenco.ru/",
+  "wikiTitle": "Минусинская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ALTAI-127": {
+  "name": "Барнаульская ТЭЦ-2",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Барнаульская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ALTAI-128": {
+  "name": "Барнаульская ТЭЦ-3",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Барнаульская ТЭЦ-3",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ALTAI-130": {
+  "name": "Кызылская ТЭЦ",
+  "url": "http://www.sibgenco.ru/",
+  "wikiTitle": "Кызылская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@sibgenco.ru",
+   "services@sibgenco.ru",
+   "call-centerstk@sibgenco.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-UNIPRO-132": {
+  "name": "Берёзовская ГРЭС",
+  "url": "http://www.eon-russia.ru/?obj=id2300&id=1685",
+  "error": "fetch failed"
+ },
+ "P-UNIPRO-133": {
+  "name": "Шатурская ГРЭС",
+  "url": "http://www.unipro.energy/about/structure/affiliate/shaturskaya/indicators/",
+  "wikiTitle": "Шатурская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-UNIPRO-134": {
+  "name": "Смоленская ГРЭС",
+  "url": "http://www.unipro.energy/about/structure/affiliate/smolenskaya/",
+  "wikiTitle": "Смоленская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-UNIPRO-135": {
+  "name": "Яйвинская ГРЭС",
+  "url": "http://www.unipro.energy/about/structure/affiliate/yayvinskaya/",
+  "wikiTitle": "Яйвинская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-FORWARD-138": {
+  "name": "Няганская ГРЭС",
+  "url": "http://frwd.energy",
+  "wikiTitle": "Няганская ГРЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-FORWARD-139": {
+  "name": "Челябинская ТЭЦ-1",
+  "url": "https://frwd.energy",
+  "wikiTitle": "Челябинская ТЭЦ-1",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-FORWARD-140": {
+  "name": "Челябинская ТЭЦ-2",
+  "url": "https://frwd.energy",
+  "wikiTitle": "Челябинская ТЭЦ-2",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-IRKUTSK-168": {
+  "name": "Усть-Илимская ГЭС",
+  "url": "http://www.ust-ilimsk.ru/",
+  "wikiTitle": "Усть-Илимск",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@ust-ilimsk.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-IRKUTSK-169": {
+  "name": "Ново-Иркутская ТЭЦ",
+  "url": "http://www.irkutskenergo.ru",
+  "wikiTitle": "Ново-Иркутская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-IRKUTSK-171": {
+  "name": "ТЭЦ-9",
+  "url": "http://www.mosenergo.ru/",
+  "wikiTitle": "Московская ТЭЦ-9",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-KRYM-181": {
+  "name": "Симферопольская ТЭЦ",
+  "url": "https://krimtec.ru/strukture/simferopolskaya-tets/",
+  "wikiTitle": "Симферопольская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@krimtec.ru",
+   "office@krimtec.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "Ленина, поскольку уже с 1978 года, после масштабной реконструкции оборудования, станция начала работать в режиме ТЭЦ, значительно увеличив отпуск тепловой энергии.",
+   "роительства: 1956 год — решение о строительстве ГРЭС 1957 год — начало строительства ГРЭС 1958 год — пуск первого турбогенератора ВК-50-3 1961 год — ввод в эксплуатацию первой очереди ГРЭС 1984 год — пуск ГТУ-100-750-3М ст.",
+   "№1 1986 год — пуск ГТУ-100-750-3М ст."
+  ],
+  "year": [
+   "ввод в эксплуатацию первой очереди ГРЭС 1984 год — пуск ГТУ-100-750-3М ст"
+  ],
+  "ok": true
+ },
+ "P-KRYM-182": {
+  "name": "Камыш-Бурунская ТЭЦ",
+  "url": "https://krimtec.ru/strukture/kamysh-burunskaya-tets/",
+  "wikiTitle": "Камыш-Бурунская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "office@krimtec.ru",
+   "office@krimtec.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "овленной тепловой мощности паровых котлов – 103 Гкал/ч) Все турбины Камыш-Бурунской ТЭЦ в 1980-84 годах заменены на новые."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-241": {
+  "name": "Белоярская АЭС",
+  "url": "https://www.rosenergoatom.ru/stations_projects/sayt-beloyarskoy-aes/",
+  "wikiTitle": "Белоярская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-242": {
+  "name": "Билибинская АЭС",
+  "url": "http://rosenergoatom.ru/stations_projects/sayt-bilibinskoy-aes/",
+  "wikiTitle": "Билибинская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-243": {
+  "name": "Калининская АЭС",
+  "url": "https://www.rosenergoatom.ru/stations_projects/sayt-kalininskoy-aes/",
+  "wikiTitle": "Калининская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "году был включен в сеть энергоблок №2; II очередь: энергоблок №3 введен в эксплуатацию в 2004 году; в 2011 году состоялся пуск энергоблока №4."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-244": {
+  "name": "Кольская АЭС",
+  "url": "http://kolanpp.rosenergoatom.ru/",
+  "error": "fetch failed"
+ },
+ "P-ROSATOM-245": {
+  "name": "Курская АЭС",
+  "url": "http://www.rosenergoatom.ru/stations_projects/sayt-kurskoy-aes/",
+  "wikiTitle": "Курская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "А уже к концу апреля 2026 года был введён в промышленную эксплуатацию."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-246": {
+  "name": "Курская АЭС-2",
+  "url": "http://www.rosenergoatom.ru/stations_projects/sayt-kurskoy-aes/kurskaya-aes-2/",
+  "wikiTitle": "Курская АЭС-2",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-247": {
+  "name": "Ленинградская АЭС",
+  "url": "http://lennpp.rosenergoatom.ru/",
+  "error": "fetch failed"
+ },
+ "P-ROSATOM-249": {
+  "name": "Нововоронежская АЭС",
+  "url": "http://rosenergoatom.ru/stations_projects/sayt-novovoronezhskoy-aes/",
+  "wikiTitle": "Нововоронежская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "В июне 2025 года была введена в опытную эксплуатацию система информационной поддержки оператора (СИПО) на базе отечественного ПО."
+  ],
+  "year": [
+   "ввод в эксплуатацию планируется до 2036 года"
+  ],
+  "ok": true
+ },
+ "P-ROSATOM-250": {
+  "name": "Ростовская АЭС",
+  "url": "http://www.rosenergoatom.ru/stations_projects/sayt-rostovskoy-aes/",
+  "wikiTitle": "Ростовская АЭС",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "28 сентября 2018 года энергоблок №4 был введен в промышленную эксплуатацию."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-ROSATOM-252": {
+  "name": "ПАТЭС «Академик Ломоносов»",
+  "url": "http://www.rosenergoatom.ru/development/innovatsionnye-razrabotki/razrabotka-proektov-aes-s-reaktorami-novogo-pokoleniya/plavuchie-atomnye-teploelektrostantsii-pates/",
+  "wikiTitle": "Академик Ломоносов",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": false
+ },
+ "P-RIR-253": {
+  "name": "Курская ТЭЦ-1",
+  "url": "http://kursk-tsk.ru",
+  "wikiTitle": "Курская ТЭЦ-1",
+  "address": [],
+  "phones": [],
+  "emails": [],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [
+   "Все новости&gt;&gt; СОБЫТИЕ 19 Октября 2017 «Квадра» подвела итоги ремонтной кампании в Курске Подробно&gt;&gt; Актуальная тема 30 Ноября 2016 Не заплатили – ПЕНЯйте на себя! (Аргументы и Факты."
+  ],
+  "year": [],
+  "ok": true
+ },
+ "P-RIR-255": {
+  "name": "Тамбовская ТЭЦ",
+  "url": "https://tambov.quadra.ru/",
+  "wikiTitle": "Тамбовская ТЭЦ",
+  "address": [],
+  "phones": [],
+  "emails": [
+   "ofl@tambov.rirenergy.ru",
+   "parfenova_nv@ryazan.rirenergy.ru"
+  ],
+  "turbines": [],
+  "boilers": [],
+  "repairs": [],
+  "year": [],
+  "ok": true
+ },
+ "P-RIR-256": {
+  "name": "Тверская ТЭЦ-3",
+  "url": "https://tvgen.ru/unit/view/2",
+  "error": "fetch failed"
+ }
+}

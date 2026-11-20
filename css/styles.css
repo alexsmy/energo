@@ -160,6 +160,7 @@ button,input,select{font:inherit;color:inherit}
 .chip{background:#f1f5f7;border:1px solid var(--line);border-radius:7px;padding:3px 8px;font-size:12px;color:#335060}
 .chip--etp{background:#e8f1f7;border-color:#d2e2ec}
 .note{background:#fff9f3;border:1px solid #f0ddc8;border-radius:8px;padding:8px 10px;font-size:12.5px;color:#754619}
+.hint{margin-top:8px;font-size:12px;color:var(--muted);border-left:2px solid var(--line);padding-left:8px;line-height:1.45}
 .note--warn{background:#fdf3f3;border-color:#f0d5d5;color:#873636}
 .meth{font-size:13.5px;line-height:1.5;white-space:pre-line}
 .srcs{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px}

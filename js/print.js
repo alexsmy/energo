@@ -46,10 +46,15 @@
 
   function plantsTable(list) {
     if (!list.length) return '';
-    const rows = list.map(p =>
-      '<tr><td>' + esc(p.name) + '</td><td class="c">' + esc(p.type) + '</td><td class="c">' + esc(p.region) + '</td>' +
-      '<td class="c">' + (p.capacity ? esc(p.capacity) : '—') + '</td></tr>').join('');
-    return '<table class="plants"><thead><tr><th>Станция / объект</th><th>Тип</th><th>Регион</th><th>МВт</th></tr></thead><tbody>' + rows + '</tbody></table>';
+    const rows = list.map(p => {
+      const turb = [p.turbines, p.units].filter(Boolean).join(' · ');
+      const extra = [p.year ? 'ввод ' + p.year : '', p.repairs].filter(Boolean).join(' · ');
+      return '<tr><td>' + esc(p.name) + (extra ? '<div class="plants-detail">' + esc(extra.slice(0, 260)) + '</div>' : '') +
+        '</td><td class="c">' + esc(p.type) + '</td><td class="c">' + esc(p.region) + '</td>' +
+        '<td class="c">' + (p.capacity ? esc(p.capacity) : '—') + '</td>' +
+        '<td>' + esc(turb || '—') + '</td></tr>';
+    }).join('');
+    return '<table class="plants"><thead><tr><th>Станция / объект</th><th>Тип</th><th>Регион</th><th>МВт</th><th>Турбины / состав мощности</th></tr></thead><tbody>' + rows + '</tbody></table>';
   }
 
   function holdingSection(h, list, first) {

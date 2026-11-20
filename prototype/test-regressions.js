@@ -147,4 +147,27 @@ check('подсветка не захватывает составное сло�
   assert.ok(h('Замена уплотнений ТВД').indexOf('<mark>') !== -1, h('Замена уплотнений ТВД'));
 });
 
+check('станции не наследуют ФИО руководителя организации', () => {
+  const fs = require('fs');
+  const path = require('path');
+  const raw = fs.readFileSync(path.join(__dirname, '..', 'js', 'data.js'), 'utf8');
+  const json = JSON.parse(raw.slice(raw.indexOf('window.REGISTRY = ') + 18, raw.lastIndexOf(';')));
+  const byId = new Map(json.items.map(i => [i.id, i]));
+  const plants = json.items.filter(i => i.kind === 'plant');
+  assert.ok(plants.length > 250);
+  const shared = plants.filter(p => p.ceo && byId.get(p.parent) && p.ceo === byId.get(p.parent).ceo);
+  assert.deepStrictEqual(shared.map(p => p.id), []);
+});
+
+check('обогащение станций: турбины и ремонты присутствуют в данных', () => {
+  const fs = require('fs');
+  const path = require('path');
+  const raw = fs.readFileSync(path.join(__dirname, '..', 'js', 'data.js'), 'utf8');
+  const json = JSON.parse(raw.slice(raw.indexOf('window.REGISTRY = ') + 18, raw.lastIndexOf(';')));
+  const plants = json.items.filter(i => i.kind === 'plant');
+  assert.ok(plants.filter(p => p.turbines).length > 100, 'мало станций с типами турбин');
+  assert.ok(plants.filter(p => p.repairs).length > 100, 'мало станций с данными о ремонтах');
+  assert.ok(plants.some(p => p.wiki), 'нет ссылок на Википедию');
+});
+
 console.log(`Пройдено тестов: ${n}`);

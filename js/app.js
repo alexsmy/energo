@@ -34,6 +34,8 @@
     ['inn', 'ИНН'], ['kpp', 'КПП'], ['ogrn', 'ОГРН'], ['ceo', 'Руководитель'],
     ['contact', 'Контакт'], ['method', 'Способ закупки'], ['capacity', 'Мощность'],
     ['status', 'Статус'], ['notes', 'Примечание'],
+    ['turbines', 'Типы турбин'], ['units', 'Состав мощности'], ['equipment', 'Оборудование'],
+    ['repairs', 'Ремонты'], ['year', 'Год ввода'],
     ['chiefEngineer', 'Главный инженер'], ['chiefDesigner', 'Главный конструктор'],
     ['procContact', 'Ответственный по закупкам'], ['procPhone', 'Телефон закупок'],
     ['procEmail', 'E-mail закупок']
@@ -529,6 +531,9 @@
       kvRow('Деятельность', esc(it.activity)) +
       kvRow('Регион', esc(it.region)) +
       kvRow('Мощность', it.capacity ? esc(it.capacity) + ' МВт' : '') +
+      kvRow('Год ввода', esc(it.year)) +
+      kvRow('Типы турбин', esc(it.turbines)) +
+      kvRow('Состав мощности', esc(it.units)) +
       kvRow('Статус', esc(it.status)) +
     '</dl></div>');
 
@@ -538,7 +543,9 @@
       kvRow('E-mail', it.email ? '<a href="mailto:' + esc(it.email) + '">' + esc(it.email) + '</a>' : '') +
       kvRow('Сайт', link(it.site)) +
       kvRow('Раздел закупок', link(it.procUrl)) +
-    '</dl></div>');
+    '</dl>' + (it.kind === 'plant' && it.inherited && (it.inherited.phone || it.inherited.email || it.inherited.address)
+      ? '<div class="hint">Указаны контакты головной организации: у станции могут быть собственные телефон и e-mail. Уточняйте по официальному сайту или ЕГРЮЛ.</div>' : '') +
+    '</div>');
 
     body.push('<div class="sec"><h3>Реквизиты и руководство</h3><dl class="kv">' +
       kvRow('ИНН', esc(it.inn)) +
@@ -557,6 +564,14 @@
       '<div class="meth">' + esc(it.method || '—') + '</div>' +
       '<div class="chips" style="margin-top:10px">' + (etps || '<span class="chip">не указаны</span>') + '</div>' +
     '</div>');
+
+    if (it.equipment || it.repairs || it.wiki) {
+      body.push('<div class="sec"><h3>Эксплуатация и оборудование</h3><dl class="kv">' +
+        kvRow('Основное оборудование', esc(it.equipment)) +
+        kvRow('Ремонты и реконструкция', esc(it.repairs)) +
+        (it.wiki ? kvRow('Страница в Википедии', link(it.wiki)) : '') +
+      '</dl></div>');
+    }
 
     if (it.notes) {
       body.push('<div class="sec"><h3>Примечание</h3><div class="note">' + esc(it.notes) + '</div></div>');
@@ -610,8 +625,8 @@
   /* ---------- export ---------- */
   function exportCSV() {
     const list = sortItems(items.filter(matches));
-    const cols = ['name', 'full', 'type', 'holdingName', 'path', 'region', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'status', 'sources', 'notes', 'chiefEngineer', 'chiefDesigner', 'procContact', 'procPhone', 'procEmail'];
-    const head = ['Название', 'Полное наименование', 'Тип', 'Холдинг', 'Структура', 'Регион', 'Адрес', 'Телефон', 'E-mail', 'Сайт', 'Закупки', 'ИНН', 'КПП', 'ОГРН', 'Руководитель', 'Контакт по закупкам', 'Способ закупки', 'ЭТП', 'Мощность, МВт', 'Статус', 'Источники', 'Примечание', 'Главный инженер', 'Главный конструктор', 'Ответственный по закупкам', 'Телефон закупок', 'E-mail закупок'];
+    const cols = ['name', 'full', 'type', 'holdingName', 'path', 'region', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'year', 'turbines', 'units', 'equipment', 'repairs', 'status', 'sources', 'notes', 'chiefEngineer', 'chiefDesigner', 'procContact', 'procPhone', 'procEmail', 'wiki'];
+    const head = ['Название', 'Полное наименование', 'Тип', 'Холдинг', 'Структура', 'Регион', 'Адрес', 'Телефон', 'E-mail', 'Сайт', 'Закупки', 'ИНН', 'КПП', 'ОГРН', 'Руководитель', 'Контакт по закупкам', 'Способ закупки', 'ЭТП', 'Мощность, МВт', 'Год ввода', 'Типы турбин', 'Состав мощности', 'Оборудование', 'Ремонты', 'Статус', 'Источники', 'Примечание', 'Главный инженер', 'Главный конструктор', 'Ответственный по закупкам', 'Телефон закупок', 'E-mail закупок', 'Википедия'];
     const escCSV = (v) => {
       const s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
       return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;

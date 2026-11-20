@@ -1,0 +1,2442 @@
+{
+ "Череповецкая ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1976",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/elektrostantsii/cherepovetskaya-gres/ www.ogk2.ru]",
+  "power": "450 МВт",
+  "heat": "39 Гкал/ч"
+ },
+ "Сургутская ГРЭС-1": {
+  "turbines": "13хК-210-130 (ЛМЗ)2хТ-180/210-130 (ЛМЗ)1хТ-178/210-130 (ЛМЗ)1хПТ-12-35 (КТЗ)",
+  "boilers": "2хТГМ-10414хТГ-1042хБКЗ-75-39 ГМ",
+  "generators": "16хТВВ-200-2А (ЭС)1хТ-2-12-2 (ЛТЗ)",
+  "year": "1972",
+  "owner": "ОГК-2",
+  "site": "[http://www.ogk2.ru/rus/about/branch/surgutskaya/ ogk2.ru]",
+  "power": "3 333 МВт",
+  "heat": "903 Гкал/ч"
+ },
+ "Троицкая ГРЭС": {
+  "turbines": "3хТ-85-90-2,51хCLN660",
+  "boilers": "6хПК-14-21хП-571хHG-2100",
+  "generators": "3хТВ2-100-21хТГВ-500-21хQFSN-660-2",
+  "year": "141960",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://ogk2.ru/elektrostantsii/troitskaya-gres/ www.ogk2.ru]",
+  "power": "836 МВт",
+  "heat": "210 Гкал/ч"
+ },
+ "Новочеркасская ГРЭС": {
+  "turbines": "5×К-264(300)-240-2,1×К-310-23,5-3,1×К-325-23,51×К-330-23,5",
+  "boilers": "",
+  "generators": "",
+  "year": "1965",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://ogk2.ru/elektrostantsii/novocherkasskaya-gres/ www.ogk2.ru]",
+  "power": "2258 МВт",
+  "heat": "60 Гкал/ч"
+ },
+ "Рязанская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1973",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/rus/branch/ryazangres/ www.ogk2.ru]",
+  "power": "3 020 МВт",
+  "heat": "212,5 Гкал/ч"
+ },
+ "Киришская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1965",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/kigres/ www.ogk2.ru]",
+  "power": "2 595",
+  "heat": "1234 Гкал/ч"
+ },
+ "Псковская ГРЭС": {
+  "turbines": "К-220-130",
+  "boilers": "ТПЕ-208",
+  "generators": "ТГВ-200-2-МУ3",
+  "year": "1993",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/rus/branch/pskovskaya/ www.ogk2.ru]",
+  "power": "440 МВт",
+  "heat": "91 Гкал/ч"
+ },
+ "Ставропольская ГРЭС": {
+  "turbines": "8 х К-300-240-2 (ХТЗ)",
+  "boilers": "8 х ТГМП-314А (ТКЗ)",
+  "generators": "8 х ТГВ-300 (ЭТМ)",
+  "year": "1975",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/rus/branch/stavropolskaya/ www.ogk2.ru]",
+  "power": "2 423 МВт",
+  "heat": "145 Гкал/ч"
+ },
+ "Серовская ГРЭС": {
+  "turbines": "1×SGT5-4000F1×SST5-3000",
+  "boilers": "",
+  "generators": "1×SGen 5 -2000H",
+  "year": "1954",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/rus/branch/serovskaya/ www.ogk2.ru]",
+  "power": "451 МВт",
+  "heat": "85 Гкал/ч"
+ },
+ "Адлерская ТЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "2013",
+  "owner": "ПАО «ОГК-2»",
+  "site": "[https://www.ogk2.ru/rus/branch/adlerskaya/ www.ogk2.ru]",
+  "power": "367 МВт",
+  "heat": "70,4 Гкал/ч"
+ },
+ "Уфимская ТЭЦ-2": {
+  "turbines": "ТГ-3 — Р-12-25/1,2ТГ-4,5 — ПТ-60-130/13ТГ-6 — Т-100-130ТГ-7,8 — Т-110/120-130-4ГТУ-1 — SGT-800",
+  "boilers": "ПК-6,7,8,9,10,11,12 — Е-320-140ГМВК-1,2 — ПТВМ-120ВК-3,4 — ПТВМ-180",
+  "generators": "",
+  "year": "1940",
+  "owner": "",
+  "site": "http://www.bgkrb.ru/activities/business/141.pl",
+  "power": "519 МВт",
+  "heat": "1 528 Гкал/ч"
+ },
+ "Уфимская ТЭЦ-3": {
+  "turbines": "Р-10-16/1,7Р-25-90/18Р-20-90/20Р-28/3,3-8,8/2,1ПТ-30-90/10",
+  "boilers": "7 × Е-230-100ГМ",
+  "generators": "",
+  "year": "1951",
+  "owner": "",
+  "site": "http://www.bgkrb.ru/activities/business/142.pl",
+  "power": "95 МВт",
+  "heat": "992,8 Гкал/ч"
+ },
+ "Уфимская ТЭЦ-4": {
+  "turbines": "№ 1,2 — ПТ-30-90/10№ 6-8 — ПТ-60-130/13№ 9 — Р-45-130/13№ 10 — К-45-1,6",
+  "boilers": "№ 1,3,4 — Е-230-100ГМ№ 8 — Е-210-140ГМ№ 11-16 — Е-420-140ГМ",
+  "generators": "",
+  "year": "1956",
+  "owner": "",
+  "site": "https://www.bgkrb.ru/activities/business/143.pl",
+  "power": "270 МВт (2024)",
+  "heat": "792 Гкал/ч (2024)"
+ },
+ "Затонская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "2018",
+  "owner": "Башкирская генерирующая компания",
+  "site": "",
+  "power": "440 МВт (2024)",
+  "heat": "300,2 Гкал/ч (2024)"
+ },
+ "Кармановская ГРЭС": {
+  "turbines": "6 × К-300-240 ЛМЗ (трех типов модернизации)",
+  "boilers": "6 × Пп-950-255ГМ",
+  "generators": "4 × ТВВ-320-2УЗ, 2 × ТВВ-350-2УЗ",
+  "year": "1968",
+  "owner": "ООО «Башкирская генерирующая компания»",
+  "site": "https://www.bgkrb.ru/activities/business/138.pl",
+  "power": "1 856,2 МВт",
+  "heat": "204 Гкал/ч"
+ },
+ "Павловская ГЭС": {
+  "turbines": "4×ПЛ 577-ВБ-550",
+  "boilers": "",
+  "generators": "4×СВ 1030/120-68",
+  "year": "",
+  "owner": "ООО «Башкирская генерирующая компания»",
+  "site": "",
+  "power": "166,4",
+  "heat": ""
+ },
+ "Стерлитамакская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1957",
+  "owner": "Башкирская генерирующая компания",
+  "site": "",
+  "power": "320 МВт (2024)",
+  "heat": "1539 Гкал/ч (2024)"
+ },
+ "Кумертауская ТЭЦ": {
+  "turbines": "2хПТ-60-90/13",
+  "boilers": "",
+  "generators": "",
+  "year": "1954",
+  "owner": "АО «Свердловская энергогазовая компания»",
+  "site": "",
+  "power": "120",
+  "heat": "328 Гкал/час"
+ },
+ "Салаватская ТЭЦ": {
+  "turbines": "2 × ПТ-30-90/103 × ПТ-60-90/13Р-6-90/31",
+  "boilers": "4 × Е-230-100ГМ3 × Е-220-100ГМПТВМ-180",
+  "generators": "",
+  "year": "1953",
+  "owner": "",
+  "site": "https://www.bgkrb.ru/activities/business/144.pl",
+  "power": "180 МВт (2024)",
+  "heat": "706 Гкал/ч (2024)"
+ },
+ "Ново-Салаватская ТЭЦ": {
+  "turbines": "№ 1 — ПТ-50-130/7№ 2 — Т-50-130/1№ 3 — Р-40-130/13№ 4 — Р-40-130/13№ 5 — Р-80-130/15№ 6 — ПТ-135/165-130/15№ 7 — ПТ-135/165-130/15",
+  "boilers": "* паровые котлы № 1-10 типа Е-420/140ГМ производительностью 420 т/ч",
+  "generators": "",
+  "year": "1966",
+  "owner": "",
+  "site": "http://www.nslvtec.ru/",
+  "power": "882 МВт",
+  "heat": "2352,3 Гкал/ч"
+ },
+ "Барнаульская ТЭЦ-3": {
+  "turbines": "1 ПТ-80 и 2 Т-175/210 УТЗ (Т-175/210-130 УТЗ зав. № 22103 1982 г.в.)",
+  "boilers": "7 паровых и 7 водогрейных",
+  "generators": "",
+  "year": "1976",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "445 МВт",
+  "heat": "1450 Гкал/час"
+ },
+ "Барабинская ТЭЦ": {
+  "turbines": "5",
+  "boilers": "5",
+  "generators": "",
+  "year": "1954",
+  "owner": "",
+  "site": "",
+  "power": "101 МВт",
+  "heat": "293"
+ },
+ "Кызылская ТЭЦ": {
+  "turbines": "2x2,5МВт АК-2,5-35 и 2х6МВт АК-6-35",
+  "boilers": "БКЗ-75-3ФБ",
+  "generators": "",
+  "year": "281958",
+  "owner": "Сибирская генерирующая компания",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "17 МВт",
+  "heat": "310 Гкал/ч"
+ },
+ "Шатурская ГРЭС": {
+  "turbines": "3×К-200-130, 2×К-210-130, 1×ПТ-80/100-130-13, 1×GE",
+  "boilers": "6×ТП-108, 2×ТМ-104А, 2×БКЗ-320-140ГМ, 1×котёл-утилизатор CMI",
+  "generators": "5×ТГВ-200, 1×ТВФ-120-2",
+  "year": "1920",
+  "owner": "ПАО \"Юнипро\"",
+  "site": "http://www.unipro.energy/about/structure/affiliate/shaturskaya/indicators/",
+  "power": "",
+  "heat": "344,3 Гкал/ч"
+ },
+ "Берёзовская ГРЭС (Россия)": {
+  "turbines": "К-800-240-5",
+  "boilers": "П-67",
+  "generators": "",
+  "year": "1987",
+  "owner": "ПАО «Юнипро»",
+  "site": "[http://www.eon-russia.ru/?obj=id2300&id=1685 Страница на&nbsp;официальном сайте Э.ОН Россия]",
+  "power": "2 420 МВт",
+  "heat": "893 ГКал/ч"
+ },
+ "Тюменская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1960",
+  "owner": "ПАО «Форвард Энерго»",
+  "site": "",
+  "power": "681,7",
+  "heat": "1 561 Гкал/ч"
+ },
+ "Тюменская ТЭЦ-2": {
+  "turbines": "3 турбоагрегата Т-180/210-130, 1 — К-215-130",
+  "boilers": "4 котла ТГМЕ-206, 3 котла КВГМ-180-150-2",
+  "generators": "ТГВ-200-2МУЗ",
+  "year": "1986",
+  "owner": "",
+  "site": "",
+  "power": "755 МВт, 845 МВт при конденсационном режиме",
+  "heat": "1 410 Гкал/час"
+ },
+ "Няганская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "2013",
+  "owner": "Форвард Энерго",
+  "site": "http://frwd.energy",
+  "power": "1 361",
+  "heat": "59,7 Гкал/ч"
+ },
+ "Конаковская ГРЭС": {
+  "turbines": "4 x К-325-240-7МР,4 x К-305-240",
+  "boilers": "ПК-41",
+  "generators": "2 x ТВВ-350-2-УЗ,6 x ТВВ-320-2-УЗ",
+  "year": "1965",
+  "owner": "ЭЛ5-Энерго",
+  "site": "",
+  "power": "2520",
+  "heat": "120 Гкал/ч"
+ },
+ "Челябинская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "181942",
+  "owner": "ПАО «Форвард Энерго»",
+  "site": "[https://frwd.energy]",
+  "power": "133,8",
+  "heat": "711,2 Гкал/час"
+ },
+ "Приморская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": "237 Гкал/ч"
+ },
+ "Партизанская ГРЭС": {
+  "turbines": "1×Т-80/97-90, 1×К-82/100-90",
+  "boilers": "5×ТП-170-1",
+  "generators": "1×ТВФ-120-2УЗ, 1×ТВФ-110-2М",
+  "year": "1954",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "199,744 МВт",
+  "heat": "160 Гкал/ч"
+ },
+ "Владивостокская ТЭЦ-2": {
+  "turbines": "2×Т-120/130-12,8-NG,1×Т-105-115,1×Т-109-115,1×ПР-50(60)-115/13/1,2,1×ПТ-55-115/13",
+  "boilers": "2×E-540-13/8 ГМ, 10×БКЗ-210-140",
+  "generators": "2×ТФ-130-2УХ4,3×ТВФ-120-2,1×ТВФ-120-2УЗ",
+  "year": "1970",
+  "owner": "ПАО «РусГидро»",
+  "site": "",
+  "power": "559 МВт",
+  "heat": "1093 Гкал/час"
+ },
+ "Артёмовская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "ГЭС-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Якутская ТЭЦ": {
+  "turbines": "1×П-6-35/5,1×Т-6-35",
+  "boilers": "1×ГМ-50-1,1×ГМ-60-1,1×ТС-35/39-1,1×ПТВМ-50,2×ПТВМ-100,2×КВГМ-100",
+  "generators": "1×Т-6-2У3,1×Т-6-2У3Т",
+  "year": "1937",
+  "owner": "ПАО «Якутскэнерго»",
+  "site": "",
+  "power": "12 МВт",
+  "heat": "497 Гкал/ч"
+ },
+ "Камчатская ТЭЦ-1": {
+  "turbines": "1×Р-44-9,0/1,2, 2×К-50-90-4, 1×Т-50-90",
+  "boilers": "8×БКЗ-135-100ГМ, 3×БКЗ-120-100ГМ",
+  "generators": "1×ТВФ-60, 2×ТВФ-63-2, 1×ТВФ-63-2УЗ",
+  "year": "1965",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "204",
+  "heat": "289 Гкал/ч"
+ },
+ "Камчатская ТЭЦ-2": {
+  "turbines": "2×ПТ-80/100-130/13",
+  "boilers": "3×БКЗ-320-140ГМ",
+  "generators": "2×ТВФ-110-2Е",
+  "year": "1985",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "160",
+  "heat": "410 Гкал/ч"
+ },
+ "Мутновская ГеоЭС": {
+  "turbines": "2×К-25-0,6 Гео",
+  "boilers": "",
+  "generators": "2×Т-25-2УЗ",
+  "year": "2002",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "50",
+  "heat": ""
+ },
+ "Паужетская ГеоЭС": {
+  "turbines": "1×МК-6-0,2, 1×ГТЗА-631.01",
+  "boilers": "",
+  "generators": "1×Т2-6-2, 1×Т-6-2У3",
+  "year": "1966",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "12",
+  "heat": ""
+ },
+ "Курская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "191976",
+  "owner": "",
+  "site": "[http://www.rosenergoatom.ru/stations_projects/sayt-kurskoy-aes/]",
+  "power": "2000 МВт",
+  "heat": ""
+ },
+ "Нововоронежская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1964",
+  "owner": "",
+  "site": "[http://rosenergoatom.ru/stations_projects/sayt-novovoronezhskoy-aes/ Нововоронежская АЭС]",
+  "power": "3778,283 МВт.",
+  "heat": ""
+ },
+ "Ростовская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "2001",
+  "owner": "",
+  "site": "[http://www.rosenergoatom.ru/stations_projects/sayt-rostovskoy-aes/ Ростовская АЭС]",
+  "power": "4071 МВт",
+  "heat": ""
+ },
+ "Смоленская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1982",
+  "owner": "",
+  "site": "",
+  "power": "3000",
+  "heat": ""
+ },
+ "Академик Ломоносов": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "22052020",
+  "owner": "",
+  "site": "[http://www.rosenergoatom.ru/development/innovatsionnye-razrabotki/razrabotka-proektov-aes-s-reaktorami-novogo-pokoleniya/plavuchie-atomnye-teploelektrostantsii-pates/ Плавучие атомные теплоэлектростанции (ПАТЭС)]",
+  "power": "70",
+  "heat": ""
+ },
+ "Тверская ТЭЦ-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1973",
+  "owner": "ООО «Тверская генерация»",
+  "site": "[https://tvgen.ru/unit/view/2 tvgen.ru]",
+  "power": "170 МВт",
+  "heat": "694 Гкал/час"
+ },
+ "Курская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1955",
+  "owner": "АО «РИР Энерго»",
+  "site": "[http://kursk-tsk.ru kursk-tsk.ru]",
+  "power": "125 МВт",
+  "heat": "904 Гкал/ч"
+ },
+ "Кочубеевская ВЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "АО «НоваВинд»",
+  "site": "",
+  "power": "210 МВт",
+  "heat": ""
+ },
+ "Орловская ТЭЦ": {
+  "turbines": "ТГ-5: Т-100/120-130-3,",
+  "boilers": "паровые котлы ТГМЕ 454 - 3 шт,",
+  "generators": "2 х ТВФ-120-2УЗ,",
+  "year": "1946",
+  "owner": "АО «РИР Энерго»",
+  "site": "",
+  "power": "330 МВт",
+  "heat": "725 Гкал/час"
+ },
+ "Тамбовская ТЭЦ": {
+  "turbines": "ПТ-40/50-8,8,",
+  "boilers": "БКЗ-160-100 гм4",
+  "generators": "ТФП-50-2 У3",
+  "year": "1954",
+  "owner": "АО «РИР Энерго»",
+  "site": "https://tambov.quadra.ru/",
+  "power": "235",
+  "heat": "947 Гкал/ч"
+ },
+ "ТЭЦ-8": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "11930",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-8/ www.mosenergo.ru]",
+  "power": "580 МВт",
+  "heat": "1892 Гкал/час"
+ },
+ "Московская ТЭЦ-9": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "221933",
+  "owner": "",
+  "site": "http://www.mosenergo.ru/",
+  "power": "275 МВт",
+  "heat": "575 Гкал/ч"
+ },
+ "Московская ТЭЦ-11": {
+  "turbines": "T-60/65-130; T-116/125-130",
+  "boilers": "4 энергетических:",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "330 МВт",
+  "heat": ""
+ },
+ "Московская ТЭЦ-12": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "171941",
+  "owner": "",
+  "site": "",
+  "power": "611,6 МВт",
+  "heat": "1914 Гкал/ч"
+ },
+ "Московская ТЭЦ-16": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "281955",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-16/ www.mosenergo.ru]",
+  "power": "651 МВт",
+  "heat": "1408 Гкал/час"
+ },
+ "ТЭЦ-20": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "21952",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-20/ www.mosenergo.ru]",
+  "power": "985 МВт",
+  "heat": "2557 Гкал/ч"
+ },
+ "Московская ТЭЦ-22": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1960",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-22/ www.mosenergo.ru]",
+  "power": "1070 МВт",
+  "heat": "3276 Гкал/час"
+ },
+ "ТЭЦ-21": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1963",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-21/ www.mosenergo.ru]",
+  "power": "1765 МВт",
+  "heat": "4918 Гкал/ч"
+ },
+ "ТЭЦ-25": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1975",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-25/ www.mosenergo.ru]",
+  "power": "1370 МВт",
+  "heat": "4088 Гкал/ч"
+ },
+ "ТЭЦ-23": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "171966",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-23/ www.mosenergo.ru]",
+  "power": "1420 МВт",
+  "heat": "4530 Гкал/час"
+ },
+ "ТЭЦ-26": {
+  "turbines": "2хПТ-80/100-130/13; 5хТ-250/300-240; 1xGT26 (Alstom)",
+  "boilers": "Энергетические: 2хТГМ-96Б, 3хТГМП-314П, 2хТГМП-344А; Водогрейные: 5хПТВМ-180, 6хКВГМ-180",
+  "generators": "2хТВФ-120-2, 5хТВВ-320-2 ЛЭО “Электросила” 2xTopair (Alstom)",
+  "year": "1979",
+  "owner": "",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-26/ www.mosenergo.ru]",
+  "power": "1840,9 МВт",
+  "heat": "4214 Гкал/час"
+ },
+ "ТЭЦ-27": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "251992",
+  "owner": "ПАО «Мосэнерго»",
+  "site": "[http://www.mosenergo.ru/about/present/branch/hpp-27/ www.mosenergo.ru]",
+  "power": "1060 МВт",
+  "heat": "1876 Гкал/ч"
+ },
+ "Грозненская ТЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "192018",
+  "owner": "",
+  "site": "https://www.ogk2.ru/",
+  "power": "360",
+  "heat": ""
+ },
+ "Василеостровская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "11932",
+  "owner": "",
+  "site": "",
+  "power": "135 МВт",
+  "heat": "1113 Гкал/ч"
+ },
+ "Выборгская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "301954",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "250,5 МВт",
+  "heat": "1056 Гкал/ч"
+ },
+ "Правобережная ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "202006",
+  "owner": "",
+  "site": "",
+  "power": "643",
+  "heat": "1303"
+ },
+ "Центральная ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Первомайская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Петрозаводская ТЭЦ": {
+  "turbines": "1×ПТ-60-130/132×Т-110/120-130",
+  "boilers": "КВГМ-100БКЗ-420",
+  "generators": "",
+  "year": "1976",
+  "owner": "",
+  "site": "",
+  "power": "280",
+  "heat": "689 Гкал/час"
+ },
+ "Апатитская ТЭЦ": {
+  "turbines": "2xПР-28-90/10/2,0Р-21-90/8,0Т-85-90/2,5Р-68-90/2,5",
+  "boilers": "8xПК-10п-2",
+  "generators": "",
+  "year": "1959",
+  "owner": "ПАО «ТГК-1»",
+  "site": "",
+  "power": "230",
+  "heat": "535 Гкал/ч"
+ },
+ "Волховская ГЭС": {
+  "turbines": "4 × РО 15-В-450, 4 × РО 15/883-В-455",
+  "boilers": "",
+  "generators": "1 × ВВ-87-50-75, 3 × CS 3208, 4 × СВ 840/95-80УХЛ4",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "84",
+  "heat": ""
+ },
+ "Нижне-Свирская ГЭС": {
+  "turbines": "2×ПЛ 20/811-В-742, 2×ПЛ 90-ВБ-740",
+  "boilers": "",
+  "generators": "4×СВ 902/160-80",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "99",
+  "heat": ""
+ },
+ "Кондопожская ГЭС": {
+  "turbines": "1 × NOHAB; 2 × Tampella",
+  "boilers": "",
+  "generators": "1 × G-227, 2 × GS 2808",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "24,9",
+  "heat": ""
+ },
+ "Верхне-Свирская ГЭС": {
+  "turbines": "4×ПЛ 91-ВБ-800",
+  "boilers": "",
+  "generators": "4×СВ 1100/145-88",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "160",
+  "heat": ""
+ },
+ "Маткожненская ГЭС": {
+  "turbines": "KMW. Tampella",
+  "boilers": "",
+  "generators": "3хСВ 566/125-40",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "63",
+  "heat": ""
+ },
+ "Пальеозёрская ГЭС": {
+  "turbines": "2 × РО-45/123",
+  "boilers": "",
+  "generators": "2 × ВГС-525/84-40",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "24,9",
+  "heat": ""
+ },
+ "Беломорская ГЭС": {
+  "turbines": "3×ПЛ 661-ВБ-550",
+  "boilers": "",
+  "generators": "3×ВГС 850/70-88",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "27",
+  "heat": ""
+ },
+ "Выгостровская ГЭС": {
+  "turbines": "2×ПЛ 661-ВБ-550",
+  "boilers": "",
+  "generators": "2×ВГС 850/115-64",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "40",
+  "heat": ""
+ },
+ "Путкинская ГЭС": {
+  "turbines": "3хПЛ 661-ВБ-500",
+  "boilers": "",
+  "generators": "3хВГС 800/110-88",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "84",
+  "heat": ""
+ },
+ "Подужемская ГЭС": {
+  "turbines": "2×ПЛ 15-В-650",
+  "boilers": "",
+  "generators": "2×ВГС 1040/80-80",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "48",
+  "heat": ""
+ },
+ "Юшкозерская ГЭС": {
+  "turbines": "2×ПЛ 20/811-В-500",
+  "boilers": "",
+  "generators": "2×ВГС 700/69-64 У4",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "18",
+  "heat": ""
+ },
+ "Кривопорожская ГЭС": {
+  "turbines": "4хПЛ 30/800-В-500",
+  "boilers": "",
+  "generators": "4ХСВ 911/106-44 УХЛ 4",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "180",
+  "heat": ""
+ },
+ "Кумская ГЭС": {
+  "turbines": "2хПЛ 577-ВМ-450",
+  "boilers": "",
+  "generators": "2хСВI 840/135-44",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "80",
+  "heat": ""
+ },
+ "Нива ГЭС-1": {
+  "turbines": "2×ПЛ",
+  "boilers": "",
+  "generators": "2×ВГС 700/80-56",
+  "year": "",
+  "owner": "ПАО «ТГК-1»",
+  "site": "",
+  "power": "24,9",
+  "heat": ""
+ },
+ "Нива ГЭС-2": {
+  "turbines": "4×РО 45/123М-В-250",
+  "boilers": "",
+  "generators": "3×ВВ-844-187, 1×СВ 546/90-32",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "60",
+  "heat": ""
+ },
+ "Нива ГЭС-3": {
+  "turbines": "4 × РО 82-ВМ-295",
+  "boilers": "",
+  "generators": "4 × СВ 655/110-32",
+  "year": "",
+  "owner": "ПАО «ТГК-1»",
+  "site": "",
+  "power": "155,5",
+  "heat": ""
+ },
+ "Княжегубская ГЭС": {
+  "turbines": "4 × РО 211-ВМ-410",
+  "boilers": "",
+  "generators": "4 × СВ 850/120-60",
+  "year": "",
+  "owner": "ТГК-1",
+  "site": "",
+  "power": "152",
+  "heat": ""
+ },
+ "Иовская ГЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "2хСВ 850/135-44",
+  "year": "",
+  "owner": "ПАО «ТГК-1»",
+  "site": "",
+  "power": "96",
+  "heat": ""
+ },
+ "Костромская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "ТВВ-320-2, ТВВ-1200-2У3",
+  "year": "1969",
+  "owner": "Интер РАО",
+  "site": "[http://irao-generation.ru/stations/kostromag/ irao-generation.ru]",
+  "power": "3720",
+  "heat": "450 Гкал/ч"
+ },
+ "Пермская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1986",
+  "owner": "Интер РАО",
+  "site": "irao-generation.ru/stations/permg",
+  "power": "3393 МВт",
+  "heat": "620 Гкал/ч"
+ },
+ "Ириклинская ГРЭС": {
+  "turbines": "К-300-240",
+  "boilers": "ПК-41 (№&nbsp;1,&nbsp;2);",
+  "generators": "",
+  "year": "1970",
+  "owner": "Интер РАО",
+  "site": "http://irao-generation.ru/stations/iryklg/",
+  "power": "2&nbsp;460 МВт",
+  "heat": ""
+ },
+ "Харанорская ГРЭС": {
+  "turbines": "2xК-215-130,К-225-12,8-3Р",
+  "boilers": "ТПЕ-216, ТПЕ-216 М",
+  "generators": "",
+  "year": "1995",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "665",
+  "heat": "329,3 Гкал/ч"
+ },
+ "Гусиноозёрская ГРЭС": {
+  "turbines": "1xK-200-130-33xK-210-130-32xK-215-130-1",
+  "boilers": "4xБКЗ-640-140-ПТ12xТПЕ-215",
+  "generators": "",
+  "year": "1976",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "1244 МВт",
+  "heat": "224,5 Гкал/ч"
+ },
+ "Печорская ГРЭС": {
+  "turbines": "3хК-210-130-3,2хК-215-130-1",
+  "boilers": "5хТГМЕ — 206ХЛ",
+  "generators": "3хТГВ-200М,2хТГВ-200-2М",
+  "year": "1979",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "1 060 МВт",
+  "heat": "327 Гкал/ч"
+ },
+ "Сочинская ТЭС": {
+  "turbines": "Газовые:2×GT10C 28 МВт («Siemens»)2×SGT-700 29 МВт («Siemens»),Паровые:2×Т-10/11-5,2 («КТЗ»)1×SST-600 25 МВт («Siemens»)",
+  "boilers": "4×П-103 (ЗиО)",
+  "generators": "2×ТАП-12-2-КУЗ («СМ»)",
+  "year": "202004",
+  "owner": "",
+  "site": "",
+  "power": "160,5 МВт",
+  "heat": "50 Гкал/ч"
+ },
+ "Северо-Западная ТЭЦ": {
+  "turbines": "3",
+  "boilers": "2 (2 1 котёл-утилизатор + 2 газовых турбины)",
+  "generators": "3",
+  "year": "222000",
+  "owner": "",
+  "site": "",
+  "power": "900 МВт",
+  "heat": "700 Гкал/ч"
+ },
+ "Джубгинская ТЭС": {
+  "turbines": "2×LMS100 PB",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "198",
+  "heat": "0"
+ },
+ "Ивановские ПГУ": {
+  "turbines": "4 × ГТЭ-110,2 × К-110-6,5",
+  "boilers": "1 × Е-148/35-6,7/0,6-493/2291 × Е-155/35-7,2/0,7-501/231",
+  "generators": "2 × ТЗФГ-110-2МУЗ,2 × ТЗФП-110-2МУЗ (производитель — ОАО «Силовые машины», завод «Электросила»)",
+  "year": "1930",
+  "owner": "АО «Интер РАО — Электрогенерация»",
+  "site": "[https://irao-generation.ru/stations/ivanovopg/ irao-generation.ru]",
+  "power": "325 МВт {{Cite web |url=http://irao-generation.com/stations/ivanovopg/ |title=Ивановские ПГУ  АО «Интер РАО — Электрогенерация» |access-date=2015-08-04 |archive-url=https://web.archive.org/web/20150707173112/http://irao-generation.com/stations/ivanovopg/ |archive-date=2015-07-07 |url-status=dead }}",
+  "heat": "79,1 Гкал/ч"
+ },
+ "Уренгойская ГРЭС": {
+  "turbines": "2хГТ-12/15-35/10М,ПГУ-450",
+  "boilers": "",
+  "generators": "2хSGen5-100A,ТЗФП-160-2МУЗ",
+  "year": "1987",
+  "owner": "Интер РАО",
+  "site": "irao-generation.ru",
+  "power": "529,7",
+  "heat": "310 Гкал/час"
+ },
+ "Нижневартовская ГРЭС": {
+  "turbines": "К-800-240-5",
+  "boilers": "ТГМП-204 ХЛ",
+  "generators": "ТВВ-800-2ЕУЗ",
+  "year": "",
+  "owner": "АО «Нижневартовская ГРЭС» (совместное предприятие Интер РАО и Роснефть)",
+  "site": "http://irao-generation.ru/stations/nvartg/",
+  "power": "2031 МВт",
+  "heat": "758 Гкал/ч"
+ },
+ "Верхнетагильская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1956",
+  "owner": "АО «Интер РАО — Электрогенерация»",
+  "site": "[http://www.irao-generation.ru/stations/tagilg/ www.irao-generation.ru]",
+  "power": "1062,15 МВт",
+  "heat": "240 Гкал/ч"
+ },
+ "Каширская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1922",
+  "owner": "ПАО ИНТЕР РАО",
+  "site": "[http://irao-generation.ru/stations/kashirg/ irao-generation.ru]",
+  "power": "0",
+  "heat": "271 Гкал/час"
+ },
+ "Черепетская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1953",
+  "owner": "Интер РАО",
+  "site": "[http://irao-generation.ru/stations/cherepetzg/ irao-generation.ru]",
+  "power": "450 МВт",
+  "heat": "172 Гкал/ч"
+ },
+ "Южноуральская ГРЭС": {
+  "turbines": "2хК-50-90-2, П-35/50-90/10,ПТ-83/100-90/9, К-100-90-5,2хТ-82-90/2,5, 2хК-200-130",
+  "boilers": "",
+  "generators": "",
+  "year": "1952",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "747 МВт(с учётом ГРЭС-2: 1591,5 Мвт)",
+  "heat": "320 Гкал/ч"
+ },
+ "Калининградская ТЭЦ-2": {
+  "turbines": "Т-150-7,72xГТЭ-160",
+  "boilers": "П-96",
+  "generators": "Т3ФГ-160-2МУ3",
+  "year": "2005",
+  "owner": "Интер РАО",
+  "site": "",
+  "power": "900",
+  "heat": "680 Гкал/ч"
+ },
+ "Прегольская ТЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "2019",
+  "owner": "«Калининградская генерация»",
+  "site": "",
+  "power": "463,063",
+  "heat": ""
+ },
+ "Маяковская ТЭС": {
+  "turbines": "2x6FA РГТ",
+  "boilers": "",
+  "generators": "2xТФ-90 Элсиб",
+  "year": "01012018",
+  "owner": "",
+  "site": "",
+  "power": "160,26",
+  "heat": ""
+ },
+ "Талаховская ТЭС": {
+  "turbines": "2×PG6111 (FA)",
+  "boilers": "нет",
+  "generators": "2×ТФ-90Г-2У3",
+  "year": "2017",
+  "owner": "ООО «Калининградская генерация»",
+  "site": "",
+  "power": "161,1 МВт",
+  "heat": ""
+ },
+ "Уфимская ТЭЦ-1": {
+  "turbines": "ПР-24-8,8/1,0/0,12",
+  "boilers": "ПК-6,7 — Е-115-32ГМПК-11,12,13,14 — Е-160-100ГМВК-1,2,3,4 — ПТВМ-50",
+  "generators": "",
+  "year": "10061938",
+  "owner": "",
+  "site": "",
+  "power": "23 МВт",
+  "heat": "504 Гкал/ч"
+ },
+ "ТЭЦ-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "ТЭЦ-5": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Томская ГРЭС-2": {
+  "turbines": "5",
+  "boilers": "10",
+  "generators": "",
+  "year": "1945",
+  "owner": "АО \"Томская генерация\"",
+  "site": "",
+  "power": "288 МВт",
+  "heat": "815 Гкал/ч"
+ },
+ "Томская ТЭЦ-3": {
+  "turbines": "1",
+  "boilers": "2",
+  "generators": "",
+  "year": "1988",
+  "owner": "АО «Томская генерация»",
+  "site": "",
+  "power": "140 МВт",
+  "heat": "780 Гкал/ч"
+ },
+ "Безымянская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1941",
+  "owner": "ПАО «Т Плюс»",
+  "site": "[http://www.tplusgroup.ru/org/samara/organization/bezymjanskaja-tehc/ www.tplusgroup.ru]",
+  "power": "48,7 МВт",
+  "heat": "1103,7 Гкал/ч"
+ },
+ "Самарская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1972",
+  "owner": "Т Плюс",
+  "site": "[http://www.tplusgroup.ru/org/samara/organization/samarskaja-tehc/ www.tplusgroup.ru]",
+  "power": "440 МВт",
+  "heat": "1954 Гкал/ч"
+ },
+ "Новокуйбышевская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "211951",
+  "owner": "ПАО «Т Плюс»",
+  "site": "[http://www.tplusgroup.ru/org/samara/organization/novokuibyshevskaja-tehc-1/ www.tplusgroup.ru]",
+  "power": "314,5 МВт",
+  "heat": "204 Гкал/ч"
+ },
+ "Новокуйбышевская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1962",
+  "owner": "",
+  "site": "",
+  "power": "340 МВт",
+  "heat": "867 Гкал/ч"
+ },
+ "Сызранская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1947",
+  "owner": "ПАО «Т Плюс»",
+  "site": "[http://www.tplusgroup.ru/org/samara/organization/syzranskaja-tehc/ www.tplusgroup.ru]",
+  "power": "372,4 МВт",
+  "heat": "765 Гкал/ч"
+ },
+ "Саратовская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1930",
+  "owner": "ПАО «Т Плюс»",
+  "site": "",
+  "power": "54 МВт",
+  "heat": "478 Гкал/час"
+ },
+ "Кировская ТЭЦ-3": {
+  "turbines": "1 «ГТЭ-160»,  1 «Т-63-76-8,8»",
+  "boilers": "1 «ТП-170»,2 «ПК-14»,4 «КВГМ-100»,  1 Е-236/41",
+  "generators": "1 «Т2-25-2»",
+  "year": "1942",
+  "owner": "",
+  "site": "",
+  "power": "236 МВт",
+  "heat": "772,3 Гкал /ч +  136 Гкал /ч"
+ },
+ "Кировская ТЭЦ-4": {
+  "turbines": "1«ПТ-65/75-130/13»,1 «ПТ-60-130/13»,4 «Т-50-130 УТМЗ»",
+  "boilers": "4 «ПТВМ-180»",
+  "generators": "1 «ТВ-60-2»,5 «ТВФ-60-2»",
+  "year": "1963",
+  "owner": "",
+  "site": "https://www.tplusgroup.ru/org/kirov/organization/kirovskaja-chp4/",
+  "power": "353 МВт{{Cite web |url=http://www.tplusgroup.ru/org/kirov/organization/kirovskaja-chp4/ |title=Кировская ТЭЦ-4  ПАО «Т Плюс» |access-date=2015-07-07 |archive-date=2016-03-05 |archive-url=https://web.archive.org/web/20160305090646/http://www.tplusgroup.ru/org/kirov/organization/kirovskaja-chp4/ |url-status=live }}",
+  "heat": "1376 Гкал/ч"
+ },
+ "Кировская ТЭЦ-5": {
+  "turbines": "2 «Т-185/220 УТМЗ»,1 «ПТ-80»",
+  "boilers": "4 «ТПЕ-429»,1 «ТПЕ-430»",
+  "generators": "",
+  "year": "1981",
+  "owner": "",
+  "site": "",
+  "power": "450 МВт",
+  "heat": "1090 Гкал/ч"
+ },
+ "Пермская ТЭЦ-9": {
+  "turbines": "2×ПТ-25-90-3м,1×Т-100/120-130-2,1×Т-100/120-130-3,1×ГТЭ-160",
+  "boilers": "2×ТП-230-2,1×ТГМ-96/А,2×ТГМ-96/Б,1×ЭМА-019,1×ПТВМ-100,2×ПТВМ-180",
+  "generators": "",
+  "year": "311957",
+  "owner": "ПАО «Т Плюс»",
+  "site": "",
+  "power": "435",
+  "heat": "1049,8"
+ },
+ "ТЭЦ-14": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Ижевская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1934",
+  "owner": "Т Плюс",
+  "site": "",
+  "power": "233,9",
+  "heat": "385,8 Гкал/час"
+ },
+ "Ижевская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1977",
+  "owner": "Т Плюс",
+  "site": "",
+  "power": "390",
+  "heat": "1474 Гкал/час"
+ },
+ "Сакмарская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1969",
+  "owner": "ОАО «Волжская ТГК»",
+  "site": "",
+  "power": "460 МВт",
+  "heat": "1576 Гкал/ч"
+ },
+ "Орская ТЭЦ-1": {
+  "turbines": "ПТ 65/75-130/13,ВПТ-50-130",
+  "boilers": "БКЗ-210,ТГМ-84",
+  "generators": "",
+  "year": "191938",
+  "owner": "ПАО «Т Плюс»",
+  "site": "",
+  "power": "195 МВт",
+  "heat": "801 Гкал/ч"
+ },
+ "Йошкар-Олинская ТЭЦ-2": {
+  "turbines": "Тп-115/125-130-1",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": "660 Гкал/ч"
+ },
+ "Саранская ТЭЦ-2": {
+  "turbines": "ПТ-65/75-90/13,2 x Т-100/120-130-3",
+  "boilers": "4 x ПК-19, 2 x ТП-47,2 x ТГМЕ 464, ПТВМ-100",
+  "generators": "ТФП-60-26, 2 x ТВФ-120-2",
+  "year": "1958",
+  "owner": "ПАО «Т Плюс»",
+  "site": "[http://www.tplusgroup.ru/org/mordova/organization/saranskaja-tec2/ www.tplusgroup.ru]",
+  "power": "280 МВт",
+  "heat": "744 Гкал/час"
+ },
+ "Новочебоксарская ТЭЦ-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1965",
+  "owner": "Т Плюс",
+  "site": "[http://www.tplusgroup.ru/org/mari-el/organization/novocheboksarskaja-tehc-3/ www.tplusgroup.ru]",
+  "power": "351",
+  "heat": "769 Гкал/ч"
+ },
+ "Чебоксарская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1979",
+  "owner": "Т Плюс",
+  "site": "",
+  "power": "460",
+  "heat": "1329 Гкал/ч"
+ },
+ "Владимирская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1962",
+  "owner": "ПАО «Т Плюс»",
+  "site": "[http://www.tplusgroup.ru/org/vladimir/organization/vladimirskaja-chp2/ www.tplusgroup.ru]",
+  "power": "596 МВт{{Cite web |url=http://www.tplusgroup.ru/org/vladimir/organization/vladimirskaja-chp2/ |title=Владимирская ТЭЦ-2  ПАО «Т Плюс» |access-date=2015-07-07 |archive-date=2016-04-20 |archive-url=https://web.archive.org/web/20160420145225/http://www.tplusgroup.ru/org/vladimir/organization/vladimirskaja-chp2/ |url-status=live }}",
+  "heat": "1176,1 Гкал/час"
+ },
+ "Беловская ГРЭС": {
+  "turbines": ", 8-3М, 4хК-215-130",
+  "boilers": "6хПК-40-1",
+  "generators": "4хТВВ-200-2АУЗ, 2хТВВ-220-2ЕУЗ",
+  "year": "1964",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "1260 МВт",
+  "heat": "229 Гкал/ч"
+ },
+ "Томь-Усинская ГРЭС": {
+  "turbines": "3хВК-100-90/5, 1хКТ-120-8,8-2М  1хКТ-120-8,8-2М  4хК-215-130 (ТГ-8 К-215-130 ЛМЗ зав. № 2147)",
+  "boilers": "6хТП-42, 4хТП-10, 2хПК-40, 2хПК-40-2",
+  "generators": "2хТВ2-100-2, 1хТВФ-100-2Е, 1хТВФ-125-2У3, 1хТВВ-200-2А, 3хТВВ-200-2АУЗ",
+  "year": "61958",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "1345,4 МВт",
+  "heat": "194 Гкал/ч"
+ },
+ "Кемеровская ГРЭС": {
+  "turbines": ",",
+  "boilers": ", ТП-200-1, ТП-87-1 (5 ед.), ТП-11, ТП-87М, ТКП-1",
+  "generators": "Т-12-2УЗ, Т-12-2УЗ,  ТВФ-110-2ЕУЗ, ТВФ-63-2УЗ,",
+  "year": "1934",
+  "owner": "",
+  "site": "",
+  "power": "485",
+  "heat": "1540 Гкал/ч"
+ },
+ "Ново-Кемеровская ТЭЦ": {
+  "turbines": "ПТР-80-130/13/1.2, ПТ-50-130/7, Р-50-130/7, Р-50-130/13, Р-50-130/18, ПТ-135-130/18, Т-120-12.8, ТГ-12 ПТ-50/60-130/7 УТЗ зав. № 23524",
+  "boilers": "ТП-87",
+  "generators": "ТВФ-63-2ЕУЗ, ТВФ-60-2, ТВФ-60-2, ТВФ-63-2, ТВФ-110-2ЕУЗ, ТВФ-63-2, ТВФ-63-2, ТВВ-160-2УЗ",
+  "year": "1955",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "580 МВт",
+  "heat": "1449 Гкал/ч"
+ },
+ "Кузнецкая ТЭЦ": {
+  "turbines": "7",
+  "boilers": "10",
+  "generators": "7",
+  "year": "171944",
+  "owner": "ООО «Стройтехпроект»",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "108",
+  "heat": "890 Гкал/ч"
+ },
+ "Западно-Сибирская ТЭЦ": {
+  "turbines": "теплофикационные турбоагрегаты ПТ-60-130, Т-50-130, Т-60/65-130,Т-110/120-130|",
+  "boilers": "котлоагрегаты БКЗ-210-140 (240 т/ч) и ТП-87 (420 т/ч)",
+  "generators": "ТВФ-63-2Е, ТВФ-120-2УЗ",
+  "year": "221963",
+  "owner": "",
+  "site": "",
+  "power": "600 МВт.",
+  "heat": "1307,5 Гкал/ч"
+ },
+ "Кемеровская ТЭЦ": {
+  "turbines": "Р-10-30/6 - 2ед.; ПТР-30-2,9/0,6 - 2 шт.",
+  "boilers": "Е-85-3,5-420 КГТ - 1 ед; Е-120-3,5-420 КГТ - 1 ед; Е-150-3,5-420 КГТ - 1 ед; Е-170-3,5-420 КГТ - 3 ед; Е-220-3,5-420 КГТ - 2 ед",
+  "generators": "Т-12-2; ТФП-36-2; Т-32-2В.",
+  "year": "41939",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "80",
+  "heat": "749 Гкал/час"
+ },
+ "Красноярская ГРЭС-2": {
+  "turbines": "К-160-130ПТ-60-90/13ПТ-135/165-130/15",
+  "boilers": "ПК-38ПК-14БКЗ-420-140",
+  "generators": "ТВ2-150-2 — 3 шт. ТВФ-60-2 — 1 шт. ТВВ-165-2У3 — 2 шт. ТВВ-160-2У3 — 3 шт.",
+  "year": "1961",
+  "owner": "ООО «СГК»",
+  "site": "[https://sibgenco.ru/about/company/generation/krasnoyarskaya-gres-2/]",
+  "power": "1274 МВт[https://sibgenco.online/news/element/krasnoyarskaya-gres-2-podrosla-na-14-mvt/ Красноярская ГРЭС-2 подросла на 14 МВт — «СГК Онлайн»]",
+  "heat": "976 Гкал/ч"
+ },
+ "Назаровская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1961",
+  "owner": "СГК",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "1 373 МВт",
+  "heat": "775 ГКал/ч"
+ },
+ "Красноярская ТЭЦ-1": {
+  "turbines": "Р-85-8,8, Р-57-130",
+  "boilers": "ПК-10Ш, БКЗ-320-140",
+  "generators": "",
+  "year": "1943",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "481 МВт",
+  "heat": "1677,0 Гкал/ч"
+ },
+ "Красноярская ТЭЦ-2": {
+  "turbines": "Т-110/120-130,",
+  "boilers": "БКЗ-500-140",
+  "generators": "",
+  "year": "1979",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "465,0 МВт",
+  "heat": "1575,0 Гкал/ч"
+ },
+ "Красноярская ТЭЦ-3": {
+  "turbines": "Т-204/220-12,8-2",
+  "boilers": "КВТК-100-150-6, ДЕ-25-14-225ГМ, Еп-670-13,8-545БТ (ТПЕ-216)",
+  "generators": "ТВФ-220-2У3",
+  "year": "1992",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "393 МВт",
+  "heat": "852,0 Гкал/час"
+ },
+ "Абаканская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1982",
+  "owner": "",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "406 МВт",
+  "heat": "625 Гкал/ч"
+ },
+ "Минусинская ТЭЦ": {
+  "turbines": "1xПТ-85/105-130/13-1М",
+  "boilers": "1xБКЗ-420-140ПТ24xБКЗ-75-39ФБ",
+  "generators": "",
+  "year": "251997",
+  "owner": "Енисейская ТГК (ТГК-13)",
+  "site": "[https://www.sibgenco.ru/ www.sibgenco.ru] [https://sibgenco.online/ sibgenco.online]",
+  "power": "85",
+  "heat": "330,4 Гкал/час"
+ },
+ "Новосибирская ТЭЦ-2": {
+  "turbines": "3 Т-20-90, ПТ-60-130/13, ПТ-65-130/13, 2 ПТ-80-130/13",
+  "boilers": "тип ТП-170 (3 очередь), ТП-80 (4 очередь)",
+  "generators": "",
+  "year": "1935",
+  "owner": "",
+  "site": "",
+  "power": "345 МВт",
+  "heat": "920 Гкал/ч"
+ },
+ "Новосибирская ТЭЦ-3": {
+  "turbines": "Т-110-130, Т-16,5-29, Р-15-90/31, Р-4-29/10М Р-4-29/10М, Р-25-130/31, Р-25-130/8, Т-100-130",
+  "boilers": "БКЗ-320-13,8, ПК-10П, БКЗ-320-140ПП-2, БКЗ-320-140Г1П-2, БКЗ-320-14011П-2",
+  "generators": "",
+  "year": "1942",
+  "owner": "",
+  "site": "",
+  "power": "496,5 МВт",
+  "heat": "945 Гкал/ч|"
+ },
+ "Новосибирская ТЭЦ-4": {
+  "turbines": "2ТА - ПТ-22-90; Т-30-90, Т-110-130, 2ТА - Т-100-130 (6 турбоагрегатов)",
+  "boilers": "ТП-81 (4 котла)",
+  "generators": "3ТГ – ТВ2-30-2; ТВФ-125-2УЗ; 2ТГ - ТВФ-100-2 (6 генераторов)",
+  "year": "1952",
+  "owner": "",
+  "site": "",
+  "power": "378,5 МВт",
+  "heat": "1120 Гкал/ч|"
+ },
+ "Новосибирская ТЭЦ-5": {
+  "turbines": "6 Т-200/210-130 ЛМЗ[http://ksonline.ru/nomer/ks/-/jid/250/cat_id/3/id/11520/function.file-put-contents/function.file-put-contents/ Новосибирску брошен энергетический вызов — Газета \"Континент Сибирь\"][http://www.nske.ru/news/archive/?id=264 Состоялся пуск третьей градирни на ТЭЦ-5 — ОАО \"Новосибирскэнерго\", 17.05.2004]",
+  "boilers": "6 ТПЕ-214/А",
+  "generators": "6 ТГВ-200-2М",
+  "year": "1—19852—1987",
+  "owner": "",
+  "site": "",
+  "power": "1200 МВт",
+  "heat": "2730 Гкал/ч|"
+ },
+ "Барнаульская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "18 котлов",
+  "generators": "",
+  "year": "1955",
+  "owner": "АО «Барнаульская генерация»",
+  "site": "[http://www.sibgenco.ru/ www.sibgenco.ru] [http://sibgenco.online/ sibgenco.online]",
+  "power": "275",
+  "heat": "1087 Гкал/ч"
+ },
+ "Сургутская ГРЭС-2": {
+  "turbines": "6×К-800-240-52хПГУ-400 (ГТ PG9351FA + ПТ D10)",
+  "boilers": "6хТГМП-204ХЛ2 котла-утилизатора CMI",
+  "generators": "6хТВВ-800-ЕУЗ2х390Н",
+  "year": "1985",
+  "owner": "ПАО «Юнипро»",
+  "site": "[www.unipro.energy]",
+  "power": "5 687,143 МВт",
+  "heat": "948 Гкал/ч  (2021)"
+ },
+ "Смоленская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1978",
+  "owner": "ПАО «Юнипро»",
+  "site": "[http://www.unipro.energy/about/structure/affiliate/smolenskaya/ www.unipro.energy]",
+  "power": "630 МВт",
+  "heat": "98 Гкал/ч"
+ },
+ "Яйвинская ГРЭС": {
+  "turbines": "4×К-150-130",
+  "boilers": "4×ТП-92",
+  "generators": "ТВВ-165-2, ТВВ-160-2Е",
+  "year": "1963",
+  "owner": "ПАО «Юнипро»",
+  "site": "[http://www.unipro.energy/about/structure/affiliate/yayvinskaya/ Филиал «Яйвинская ГРЭС»]",
+  "power": "1048 МВт",
+  "heat": "69 Гкал/ч"
+ },
+ "Челябинская ТЭЦ-2": {
+  "turbines": "2 × ПТ-60-130/132 × Т-100-130",
+  "boilers": "",
+  "generators": "",
+  "year": "1962",
+  "owner": "",
+  "site": "[https://frwd.energy]",
+  "power": "320 МВт",
+  "heat": "956 Гкал/ч"
+ },
+ "Челябинская ТЭЦ-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1996",
+  "owner": "",
+  "site": "",
+  "power": "593",
+  "heat": "1123,8 Гкал/час"
+ },
+ "Невинномысская ГРЭС": {
+  "turbines": "13",
+  "boilers": "14",
+  "generators": "",
+  "year": "1960",
+  "owner": "ЭЛ5-Энерго",
+  "site": "",
+  "power": "1551,4 МВт",
+  "heat": "585 Гкал/ч"
+ },
+ "Среднеуральская ГРЭС": {
+  "turbines": "9",
+  "boilers": "9",
+  "generators": "",
+  "year": "1936",
+  "owner": "ЭЛ5-Энерго",
+  "site": "",
+  "power": "1578,5 МВт (в том числе мощность ГТРС-11,5 МВт)",
+  "heat": "1222 Гкал/ч."
+ },
+ "Заинская ГРЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "131976",
+  "owner": "АО «Татэнерго»",
+  "site": "",
+  "power": "2204,9 МВт",
+  "heat": "145 Гкал/ч"
+ },
+ "Казанская ТЭЦ-1": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "11933",
+  "owner": "АО «Татэнерго»",
+  "site": "",
+  "power": "426 МВт",
+  "heat": "542 Гкал/ч (ТЭЦ)560 Гкал/ч (котельные)"
+ },
+ "Казанская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1938",
+  "owner": "",
+  "site": "",
+  "power": "410 МВт",
+  "heat": "877 Гкал/ч (ТЭЦ)540 Гкал/ч (котельные)"
+ },
+ "Набережночелнинская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1971",
+  "owner": "",
+  "site": "",
+  "power": "1180 МВт",
+  "heat": "4092 Гкал/час"
+ },
+ "Нижнекамская ГЭС": {
+  "turbines": "16×ПЛ 20/811-ВБ-1000",
+  "boilers": "",
+  "generators": "16×СВ-1477/142-104",
+  "year": "",
+  "owner": "АО «Татэнерго»",
+  "site": "",
+  "power": "1 205 (566)В скобках — фактическая располагаемая мощность",
+  "heat": ""
+ },
+ "Ярославская ТЭЦ-1": {
+  "turbines": "2",
+  "boilers": "7",
+  "generators": "",
+  "year": "41934",
+  "owner": "ПАО «ТГК-2»",
+  "site": "",
+  "power": "25 МВт",
+  "heat": "474 Гкал/час"
+ },
+ "Ярославская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "ТВФ-125-2 и др.",
+  "year": "1955",
+  "owner": "",
+  "site": "",
+  "power": "245 МВт",
+  "heat": "900 Гкал/час"
+ },
+ "Ярославская ТЭЦ-3": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1961",
+  "owner": "",
+  "site": "",
+  "power": "260 МВт",
+  "heat": "1308 Гкал/час"
+ },
+ "Костромская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1974",
+  "owner": "ТГК-2",
+  "site": "",
+  "power": "170",
+  "heat": "611 Гкал/час"
+ },
+ "Архангельская ТЭЦ": {
+  "turbines": "2 ПТ-60-130/13  2 Т-50/60-130  1 Т-100/120-130  1 Т-110/130",
+  "boilers": "6 x ТМ-84 «Б»  3 x КВГМ-180-150-2",
+  "generators": "",
+  "year": "1970",
+  "owner": "ОАО «ТГК-2»",
+  "site": "",
+  "power": "450",
+  "heat": "1 368 Гкал/час"
+ },
+ "Северодвинская ТЭЦ-1": {
+  "turbines": "ПТ-30-90/10 ст. №3; Р-12-90/31 ст. №4;",
+  "boilers": "ПК-10П-2 ст. №№4-9; ПТВМ-180 ст. №2",
+  "generators": "",
+  "year": "1941",
+  "owner": "",
+  "site": "",
+  "power": "188,5 МВт",
+  "heat": "679 Гкал/час"
+ },
+ "Вологодская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1956",
+  "owner": "",
+  "site": "",
+  "power": "132,1 МВт",
+  "heat": "652 Гкал/час"
+ },
+ "Северодвинская ТЭЦ-2": {
+  "turbines": "ПТ−80/100-130/13 (ст. №1),  Т−100-130-3 (ст. №2),  Т-110/120-130-4 (ст. №3),  Т-110/120-130-5 (ст. №4)",
+  "boilers": "ТГМЕ-464 (ст. №№1, 2, 3, 4)",
+  "generators": "ТВФ-120-2 (ст. № 1,2)  ТВФ-110-2ЕУ3 (ст. № 3, 4)",
+  "year": "1976",
+  "owner": "",
+  "site": "",
+  "power": "410 МВт",
+  "heat": "1105 Гкал/час"
+ },
+ "Новгородская ТЭЦ": {
+  "turbines": "ПТ-50-9,0/1,28,Т-60-130-13,ПТ-80/100-130-13,ГТЭ-160",
+  "boilers": "ТП-87",
+  "generators": "ТВФ-120-2",
+  "year": "1968",
+  "owner": "",
+  "site": "",
+  "power": "361 МВт",
+  "heat": "488 Гкал/час"
+ },
+ "Читинская ТЭЦ-1": {
+  "turbines": "две ПТ 60-90/13 ст.№1 и №2  одна Т 80-90 ст.№3  две Т 87-90 ст.№4 и №5  одна Р 78,8-8,7/0,23 ст.№6",
+  "boilers": "12 котельных агрегатов БКЗ-220-100Ф и 1 реконструированный котельный агрегат БКЗ-240-100Ф (13 котлов)",
+  "generators": "ст.№1 и №2 ТВФ-60-2; ст.№3 и №4 ТВФ-100-2,ст.№5 и №6 ТВФ-120-2",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "452,8 МВт",
+  "heat": "1072 Гкал/ч|"
+ },
+ "ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Улан-Удэнская ТЭЦ-1": {
+  "turbines": "Р-8.4-29/10Р-12-3.4/0.1ПТ-30-90/10Тп-100/110-8,8",
+  "boilers": "3xБКЗ-75-39ФБ,4xБКЗ-220-100Ф",
+  "generators": "",
+  "year": "1936",
+  "owner": "ОАО «ТГК-14»",
+  "site": "",
+  "power": "148,77",
+  "heat": "688 Гкал/ч"
+ },
+ "Улан-Удэнская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "4xЕ-160-14",
+  "generators": "",
+  "year": "1992",
+  "owner": "ПАО «ТГК-14»",
+  "site": "",
+  "power": "",
+  "heat": "380 Гкал/час"
+ },
+ "Приаргунская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1961",
+  "owner": "ПАО «ТГК-14»",
+  "site": "",
+  "power": "24 МВт",
+  "heat": "110 Гкал/ч"
+ },
+ "Иркутская ГЭС": {
+  "turbines": "4×ПР 32-В-720, 4×ПЛ-577-ВБ-720",
+  "boilers": "",
+  "generators": "4×СВ-1160/162-68 УХЛ4, 4×СВИ 1160/180-72",
+  "year": "",
+  "owner": "АО «Эн+ Генерация»",
+  "site": "",
+  "power": "761,2",
+  "heat": ""
+ },
+ "Братская ГЭС": {
+  "turbines": "12×РО-115-В-558, 6×РО-115/662-ВМ-550",
+  "boilers": "",
+  "generators": "18хСВ-1190/250-48",
+  "year": "",
+  "owner": "ООО «ЭН+ ГИДРО»",
+  "site": "",
+  "power": "4500",
+  "heat": ""
+ },
+ "Усть-Илимск": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "http://www.ust-ilimsk.ru/",
+  "power": "",
+  "heat": ""
+ },
+ "Ново-Иркутская ТЭЦ": {
+  "turbines": "6",
+  "boilers": "8",
+  "generators": "",
+  "year": "1975",
+  "owner": "",
+  "site": "http://www.irkutskenergo.ru",
+  "power": "708 МВт",
+  "heat": "1612,5 Гкал/ч"
+ },
+ "Киевская ТЭЦ-6": {
+  "turbines": "Т-250/300-2 (2 шт.)",
+  "boilers": "ТГМП-344А (2 шт.),КВГМ-180 (5 шт.),«Alstom» (1 шт.)",
+  "generators": "ТГВ-320-2ПУЗ",
+  "year": "1981",
+  "owner": "КП «Киевтеплоэнерго»",
+  "site": "",
+  "power": "500",
+  "heat": "1740 Гкал/ч"
+ },
+ "ТЭЦ-10": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Норильская ТЭЦ-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "141969",
+  "owner": "",
+  "site": "",
+  "power": "425 МВт",
+  "heat": "1076 Гкал/ч"
+ },
+ "Красноярская ГЭС": {
+  "turbines": "12×РО-115/697а-ВМ-750",
+  "boilers": "",
+  "generators": "12×СВФ-1690/185-64",
+  "year": "",
+  "owner": "Эн+ Генерация",
+  "site": "",
+  "power": "6000",
+  "heat": ""
+ },
+ "Норильская ТЭЦ-3": {
+  "turbines": "Т-100-130 х 3, ПТ-60-90/13 х 2, ПТ-80-130/13",
+  "boilers": "ТГМЕ-464 х 4",
+  "generators": "ТВФ-63-2",
+  "year": "301980",
+  "owner": "",
+  "site": "",
+  "power": "440 МВт",
+  "heat": "1049 Гкал/ч"
+ },
+ "Усть-Хантайская ГЭС": {
+  "turbines": "7×РО 75-В-401",
+  "boilers": "",
+  "generators": "7×СВ 845/135-40",
+  "year": "",
+  "owner": "Норильский Никель",
+  "site": "",
+  "power": "511 (после модернизации)",
+  "heat": ""
+ },
+ "Курейская ГЭС": {
+  "turbines": "5хРО 75/728б-ВМ-510Невский Е. В. Справочник: Гидроэлектростанции России. М.,1998",
+  "boilers": "",
+  "generators": "5хСВ 1130/140-48УХЛ4",
+  "year": "",
+  "owner": "Норильский Никель",
+  "site": "",
+  "power": "600",
+  "heat": ""
+ },
+ "Симферопольская ТЭЦ": {
+  "turbines": "2×Т-34/55-90",
+  "boilers": "3×БКЗ-160-100ФБводогрейные: 2×КВГМ-100",
+  "generators": "",
+  "year": "301958",
+  "owner": "КрымТЭЦ",
+  "site": "[https://krimtec.ru/strukture/simferopolskaya-tets/ krimtec.ru]",
+  "power": "100",
+  "heat": "490,1 Гкал/ч"
+ },
+ "Камыш-Бурунская ТЭЦ": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "281938",
+  "owner": "КрымТЭЦ",
+  "site": "[https://krimtec.ru/strukture/kamysh-burunskaya-tets/ krimtec.ru]",
+  "power": "30",
+  "heat": "174,9 Гкал/ч"
+ },
+ "Таврическая ТЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "2 блока по 235 МВт",
+  "year": "2018",
+  "owner": "",
+  "site": "",
+  "power": "470",
+  "heat": ""
+ },
+ "Балаклавская ТЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "2 блока, 245,4 МВт и 251,4 МВт",
+  "year": "2018",
+  "owner": "",
+  "site": "",
+  "power": "496,8",
+  "heat": ""
+ },
+ "Хабаровская ТЭЦ-1": {
+  "turbines": "2×ПР-25/30-90/10/0,9,1×ПТ-25/30-90,1×ПТ-50-90/13,2×Т-100-130,1×Т-100/120-130",
+  "boilers": "3×ТП-170-100,2×БКЗ-160-100,2×БКЗ-220-100,8×БКЗ-210-140,3×ПТВМ-100",
+  "generators": "3×ТВ-2-30-2,1×ТВ-60-2,2×ТВФ-100-2,1×ТВФ-120-2",
+  "year": "1954",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "435 МВт",
+  "heat": "1200,2 Гкал/час"
+ },
+ "Хабаровская ТЭЦ-3": {
+  "turbines": "4×Т-180/210-130",
+  "boilers": "4×ТПЕ-215,3×ПТВМ-180,2×ГМ-50/14",
+  "generators": "4×ТГВ-200-2М",
+  "year": "1985",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "720 МВт",
+  "heat": "1640 Гкал/ч"
+ },
+ "ТЭЦ-4": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "",
+  "power": "",
+  "heat": ""
+ },
+ "Комсомольская ТЭЦ-2": {
+  "turbines": "1×Т-27,5-90,1×ПТ-60-90/13,2×Т-55-130",
+  "boilers": "3×БКЗ-160-100Ф,4×БКЗ-210-140Ф",
+  "generators": "1×ТВС-30,3×ТВФ-60-2",
+  "year": "1935",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "197,5 МВт",
+  "heat": "545 Гкал/ч"
+ },
+ "Комсомольская ТЭЦ-3": {
+  "turbines": "2×Т-180/210-130-1",
+  "boilers": "2×ТПГЕ-215, 2×КВГМ-100, 2×ГМ-50-14/250",
+  "generators": "2×ТГВ-200-2М",
+  "year": "1988",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "360 МВт",
+  "heat": "780 Гкал/ч"
+ },
+ "Амурская ТЭЦ-1": {
+  "turbines": "1×ПР-25-90/8,5/1,2,3×ПТ-60-90/13,1×ПТ-80/100-130/13",
+  "boilers": "5×БКЗ-220-100Ф,2×БКЗ-220-100-9,2×БКЗ-210-140,4×КВГМ-100",
+  "generators": "1×ТВС-32,1×ТВФ-60-2,2×ТВФ-63-2,1×ТВФ-120-2",
+  "year": "1965",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "285 МВт",
+  "heat": "1169 Гкал/час"
+ },
+ "Благовещенская ТЭЦ": {
+  "turbines": "1×ПТ-60-130/13-1,2,2×Т-110/120-130-4,1×Т-120-140-12,8-2",
+  "boilers": "4×БКЗ-420-140-7,1×Е-420-13,8-560 БТ,2×КВГМ-100",
+  "generators": "1×ТВФ-63-2УЗ,2×ТВФ–120-2УЗ,1×ТЗФП-130-2У3",
+  "year": "1976",
+  "owner": "АО «ДГК»",
+  "site": "",
+  "power": "404",
+  "heat": "1005,6 Гкал/час"
+ },
+ "Якутская ГРЭС-2": {
+  "turbines": "4×LM6000-PF/DF",
+  "boilers": "4×КУВ 38,1-185, 3×КВ-ГМ-116,3-185",
+  "generators": "4×BDAX7-290ERJT",
+  "year": "2017",
+  "owner": "ПАО «Якутскэнерго» (в аренде), РусГидро",
+  "site": "",
+  "power": "164,032",
+  "heat": "469 Гкал/час"
+ },
+ "Толмачёвская ГЭС-1": {
+  "turbines": "2×Пр 18/811а-ВБ-120",
+  "boilers": "",
+  "generators": "2×СВ-215/26-14УХЛ4",
+  "year": "",
+  "owner": "долевая собственность, в доверительном управлении ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "2,2",
+  "heat": ""
+ },
+ "Толмачёвская ГЭС-2": {
+  "turbines": "2×РО 170/662-ВМ95",
+  "boilers": "",
+  "generators": "2×СВ2-215/119-6 УХЛ4",
+  "year": "",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "24,8",
+  "heat": ""
+ },
+ "Толмачёвская ГЭС-3": {
+  "turbines": "2×РО 180/874а-ВМ-102",
+  "boilers": "",
+  "generators": "2×СВ-215/106-8УХЛ4",
+  "year": "",
+  "owner": "долевая собственность, в доверительном управлении ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "18,4",
+  "heat": ""
+ },
+ "Южно-Сахалинская ТЭЦ-1": {
+  "turbines": "1×ПТ-60-130/13,1×Т-50/60-130,1×Т-110/120-130-4,2×LM 6000 PD Sprint,3×LM 6000 PF Sprint,1×ЭГЭС-25ПА",
+  "boilers": "1×БКЗ-320-140-3,3×БКЗ-320-140-5,1×БКЗ-320-140-6с,3×КУВ-50-150",
+  "generators": "2×ТВФ-63-2У3,1×ТВФ-120-2УЗ,5×B DAX 7-290 ERJT",
+  "year": "1976",
+  "owner": "ПАО «Сахалинэнерго»",
+  "site": "",
+  "power": "480,24 МВт",
+  "heat": "783,5 Гкал/ч"
+ },
+ "Сахалинская ГРЭС-2": {
+  "turbines": "2×К-60-12,8",
+  "boilers": "2×Е-230-13,8-560 КБТ",
+  "generators": "2×ТФ-63-2У3",
+  "year": "2019",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "120",
+  "heat": ""
+ },
+ "Ногликская ГЭС": {
+  "turbines": "4 турбоагрегата мощностью по 12 МВт.",
+  "boilers": "",
+  "generators": "4 турбоагрегата мощностью по 12 МВт.",
+  "year": "",
+  "owner": "АО «Ногликская газовая электрическая станция»",
+  "site": "",
+  "power": "48",
+  "heat": ""
+ },
+ "Охинская ТЭЦ": {
+  "turbines": "3×25, 2×2,5 и 1×19 МВт",
+  "boilers": "4",
+  "generators": "",
+  "year": "1961",
+  "owner": "АО «Охинская ТЭЦ»",
+  "site": "",
+  "power": "99 МВт",
+  "heat": "216 Гкал/ч"
+ },
+ "Анадырская ТЭЦ": {
+  "turbines": "2×ПТ-25/30-90-10М",
+  "boilers": "2×БКЗ-160-100",
+  "generators": "2×ТВС-32УЗ",
+  "year": "1986",
+  "owner": "АО «Чукотэнерго»",
+  "site": "",
+  "power": "50",
+  "heat": "140 Гкал/час"
+ },
+ "Чаунская ТЭЦ": {
+  "turbines": "1×П-5(6)-35/5, 1×К-10(12)-35, 1×ПТ-12-35/10М, 2×АК-1,5",
+  "boilers": "1×ТС-30, 2×Е-50-40,  1×ПК-50-40",
+  "generators": "1×Т2-6-2, 2×Т2-12-2, 2×Т2-4-2",
+  "year": "1944",
+  "owner": "АО «Чукотэнерго»",
+  "site": "",
+  "power": "30 МВт",
+  "heat": "99 Гкал/час"
+ },
+ "Эгвекинотская ГРЭС": {
+  "turbines": "1×П-6-35/5М, 1×ПТ-12/15-35/10М, 1×К-12-35У",
+  "boilers": "2×ЧКД-Дукла, 2×К-50-40",
+  "generators": "2×Т-6-2У3, 1×Т-12-2У3, 1×Т-2-12-2",
+  "year": "1952",
+  "owner": "АО «Чукотэнерго»",
+  "site": "",
+  "power": "30",
+  "heat": "92 Гкал/час"
+ },
+ "Колымская ГЭС": {
+  "turbines": "4×ПЛД-45-2256В-420,1×РО-868М-В-410",
+  "boilers": "",
+  "generators": "5×СВ 812/240-28УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "900 МВт",
+  "heat": ""
+ },
+ "Усть-Среднеканская ГЭС": {
+  "turbines": "4×РО 115/0910-В-580",
+  "boilers": "",
+  "generators": "4×СВ 1260/153-60УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "570",
+  "heat": ""
+ },
+ "Богучанская ГЭС": {
+  "turbines": "9 × РО75-В-750",
+  "boilers": "",
+  "generators": "9 × СВ 1548/203-66УХЛ4",
+  "year": "",
+  "owner": "ПАО «Богучанская ГЭС»",
+  "site": "",
+  "power": "2997",
+  "heat": ""
+ },
+ "Волжская ГЭС": {
+  "turbines": "5×ПЛ-30/587-В-930,17×ПЛ-30/877-В-930,1×ПЛ-587-ВБ-330",
+  "boilers": "",
+  "generators": "21×СВ2–1488/200–88УХЛ4,1×СВ2–1500/200–88,1×ВГС-525/84-32",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "2734",
+  "heat": ""
+ },
+ "Жигулёвская ГЭС": {
+  "turbines": "4 × ПЛ 30/587-В-930,16 × ПЛ 30/877-В-930",
+  "boilers": "",
+  "generators": "20 × СВ 1500/200-88",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "2488",
+  "heat": ""
+ },
+ "Саратовская ГЭС": {
+  "turbines": "1 × ПЛ-20/661-ВБ-1030, 1 × ПЛ-15/661-ВБ-1030, 19 × TKV00, 2 × ПЛ-15/989-ГК-750",
+  "boilers": "",
+  "generators": "21 × ВГСМ-1525/135-120, 1 × 1DH 7337-3WE 33-Z, 2 × СГК 820/178-80",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "1493",
+  "heat": ""
+ },
+ "Чебоксарская ГЭС": {
+  "turbines": "18 × ПЛ20/811-В-1000",
+  "boilers": "",
+  "generators": "18 × СВ1470/149-104",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "1370 (820Фактические показатели при существующей отметке водохранилища)",
+  "heat": ""
+ },
+ "Камская ГЭС": {
+  "turbines": "23×ПЛ-20-В-500",
+  "boilers": "",
+  "generators": "23×ВГС-700/100-48",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "552",
+  "heat": ""
+ },
+ "Воткинская ГЭС": {
+  "turbines": "10×ПЛ 30/5059-В-930",
+  "boilers": "",
+  "generators": "10×СВ 1488/175-88 УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "1150",
+  "heat": ""
+ },
+ "Нижегородская ГЭС": {
+  "turbines": "3 × ПЛ 20-В-900, 5 × ПЛ 510-ВБ-900",
+  "boilers": "",
+  "generators": "5 × СВ 1345/145-96, 5 × СВ 1340/150-96",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "545,5",
+  "heat": ""
+ },
+ "Рыбинская ГЭС": {
+  "turbines": "2 × ПЛ 20/811-В-900, 4 × ПЛ 20-В-900",
+  "boilers": "",
+  "generators": "6 × СВ 1243/165-96",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "386,4",
+  "heat": ""
+ },
+ "Угличская ГЭС": {
+  "turbines": "1 × ПЛ 91-ВБ-900, 1 × ПЛ Voith Hydro",
+  "boilers": "",
+  "generators": "2 × СВ 1343/150-100",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "130",
+  "heat": ""
+ },
+ "Иваньковская ГЭС": {
+  "turbines": "2×ПЛ 90-ВБ-500",
+  "boilers": "",
+  "generators": "2×СВ-800/76-60",
+  "year": "",
+  "owner": "ФГБУ «Канал имени Москвы»",
+  "site": "",
+  "power": "28,8",
+  "heat": ""
+ },
+ "Саяно-Шушенская ГЭС": {
+  "turbines": "10×РО-230/833-В-677",
+  "boilers": "",
+  "generators": "10×СВФ1-1285/275-42 УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "6400",
+  "heat": ""
+ },
+ "Майнская ГЭС": {
+  "turbines": "3×ПЛ 20-В-1000",
+  "boilers": "",
+  "generators": "3×СВ 1500/152-104 УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "321",
+  "heat": ""
+ },
+ "Новосибирская ГЭС": {
+  "turbines": "7 × ПЛ 30-В-800",
+  "boilers": "",
+  "generators": "7 × СВ 1343/140-96",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "490",
+  "heat": ""
+ },
+ "Бурейская ГЭС": {
+  "turbines": "6 × РО140/0942-В-625",
+  "boilers": "",
+  "generators": "6 × СВ 1313/265-48УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "2010",
+  "heat": ""
+ },
+ "Зейская ГЭС": {
+  "turbines": "6×Д45-2556-В-600",
+  "boilers": "",
+  "generators": "6×СВ-1130/220-44ХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "1330",
+  "heat": ""
+ },
+ "Нижне-Бурейская ГЭС": {
+  "turbines": "4×ПЛ30-ВБ-630",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "320",
+  "heat": ""
+ },
+ "Чиркейская ГЭС": {
+  "turbines": "4×РО 230/9896-В-450",
+  "boilers": "",
+  "generators": "2×СВ 935/243-30 УХЛ4, 2×ВГСФ 930/233-30",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "1050",
+  "heat": ""
+ },
+ "Эзминская ГЭС": {
+  "turbines": "3×РО 310-В-160",
+  "boilers": "",
+  "generators": "3×СВ 320/110-12 УХЛ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "60",
+  "heat": ""
+ },
+ "Зеленчукская ГЭС-ГАЭС": {
+  "turbines": "2×РО 230-В-224, 2×ОРО 230-В-221",
+  "boilers": "",
+  "generators": "2×СВ-475/210-14УХЛ1, 2×СВО 407/215-10УХ4",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "300/156,18В турбинном и насосном режиме, соответственно",
+  "heat": ""
+ },
+ "Гизельдонская ГЭС": {
+  "turbines": "3×П-461-ГИ",
+  "boilers": "",
+  "generators": "3×ЗГ-9500/500",
+  "year": "",
+  "owner": "РусГидро",
+  "site": "",
+  "power": "22,8",
+  "heat": ""
+ },
+ "Балаковская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "281985",
+  "owner": "",
+  "site": "",
+  "power": "4000 МВт",
+  "heat": ""
+ },
+ "Белоярская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "https://www.rosenergoatom.ru/stations_projects/sayt-beloyarskoy-aes/",
+  "power": "1485 МВт",
+  "heat": ""
+ },
+ "Билибинская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1974",
+  "owner": "",
+  "site": "[http://rosenergoatom.ru/stations_projects/sayt-bilibinskoy-aes/ Билибинская АЭС]",
+  "power": "24 МВт",
+  "heat": ""
+ },
+ "Калининская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "1984",
+  "owner": "",
+  "site": "[https://www.rosenergoatom.ru/stations_projects/sayt-kalininskoy-aes/ Калининская АЭС]",
+  "power": "4000 МВт",
+  "heat": ""
+ },
+ "Кольская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "291973",
+  "owner": "",
+  "site": "http://kolanpp.rosenergoatom.ru/",
+  "power": "1760 МВт",
+  "heat": ""
+ },
+ "Курская АЭС-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "272026",
+  "owner": "",
+  "site": "[http://www.rosenergoatom.ru/stations_projects/sayt-kurskoy-aes/kurskaya-aes-2/]",
+  "power": "1200 МВт",
+  "heat": ""
+ },
+ "Ленинградская АЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "",
+  "owner": "",
+  "site": "[http://lennpp.rosenergoatom.ru/ Ленинградская АЭС]",
+  "power": "4386 МВт",
+  "heat": ""
+ },
+ "Ленинградская АЭС-2": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "",
+  "year": "292018",
+  "owner": "",
+  "site": "",
+  "power": "2361 МВт",
+  "heat": ""
+ },
+ "Кармалиновская ВЭС": {
+  "turbines": "",
+  "boilers": "",
+  "generators": "L100",
+  "year": "",
+  "owner": "АО «НоваВинд»",
+  "site": "",
+  "power": "60",
+  "heat": ""
+ },
+ "Верхне-Мутновская ГеоЭС": {
+  "turbines": "3×Туман 4К",
+  "boilers": "",
+  "generators": "3×ТК-4-2ЗУЗ",
+  "year": "1999",
+  "owner": "ПАО «Камчатскэнерго»",
+  "site": "",
+  "power": "12",
+  "heat": ""
+ }
+}
