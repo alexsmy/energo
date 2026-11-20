@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-20T20:27:24.644Z",
-  "count": 127,
+  "updated": "2026-11-20T20:27:49.041Z",
+  "count": 133,
   "records": [
     {
       "id": "32616602654",
@@ -84,7 +84,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -139,7 +139,7 @@
         "C-TOMGEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -243,7 +243,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -290,7 +290,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -337,7 +337,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:40:01.377Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -384,7 +384,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -439,7 +439,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -496,7 +496,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -600,7 +600,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -671,7 +671,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -728,7 +728,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -830,7 +830,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -877,7 +877,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -924,7 +924,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -971,7 +971,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1018,7 +1018,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1065,7 +1065,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1112,7 +1112,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1159,7 +1159,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1206,7 +1206,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1261,7 +1261,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1316,7 +1316,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1333,6 +1333,53 @@
           "platformName": "ЕИС",
           "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592885",
           "foundAt": "2026-11-20T15:45:40.545Z"
+        }
+      ]
+    },
+    {
+      "id": "32616593352",
+      "regNumber": "32616593352",
+      "externalId": "32616593352",
+      "title": "227216/ОК Сухое газодинамическое уплотнение газодожимных компрессоров для Талаховской ТЭС",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "5 226 371,58 ₽",
+      "priceNum": 5226371.58,
+      "published": "2026-11-18",
+      "deadline": "2026-11-26",
+      "updated": "2026-11-18",
+      "status": "Подача заявок",
+      "stage": 1,
+      "phase": "active",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
+      "keywords": [
+        "Уплотнения"
+      ],
+      "matchedKeywords": [
+        "Уплотнения"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
+          "foundAt": "2026-11-20T20:30:08.015Z"
         }
       ]
     },
@@ -1420,7 +1467,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1467,7 +1514,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1514,7 +1561,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1561,7 +1608,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1608,7 +1655,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1617,6 +1664,53 @@
           "platformName": "РАД / Lot-online",
           "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q3q6bu1fs42cpkg",
           "foundAt": "2026-11-20T15:12:44.741Z"
+        }
+      ]
+    },
+    {
+      "id": "32616583256",
+      "regNumber": "32616583256",
+      "externalId": "32616583256",
+      "title": "227191_Масло турбинное для Ивановских ПГУ",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "33 058 382,72 ₽",
+      "priceNum": 33058382.72,
+      "published": "2026-11-16",
+      "deadline": "2026-11-26",
+      "updated": "2026-11-16",
+      "status": "Подача заявок",
+      "stage": 1,
+      "phase": "active",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
+      "keywords": [
+        "Турбина"
+      ],
+      "matchedKeywords": [
+        "Турбина"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
+          "foundAt": "2026-11-20T20:30:08.015Z"
         }
       ]
     },
@@ -1655,7 +1749,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1702,7 +1796,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1751,7 +1845,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -1853,7 +1947,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1908,7 +2002,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2010,7 +2104,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -2114,7 +2208,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2169,7 +2263,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2226,7 +2320,7 @@
         "C-SAKHAENERGO"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2283,7 +2377,7 @@
         "C-SAKHAENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "ЕИС / HTML",
@@ -2340,7 +2434,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2442,7 +2536,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2459,6 +2553,53 @@
           "platformName": "ЕИС",
           "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616540771",
           "foundAt": "2026-11-20T15:16:44.880Z"
+        }
+      ]
+    },
+    {
+      "id": "32616538368",
+      "regNumber": "32616538368",
+      "externalId": "32616538368",
+      "title": "226907 Замена маслопроводов системы смазки турбины ЭБ № 2 для Пермской ГРЭС",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "11 093 521,59 ₽",
+      "priceNum": 11093521.59,
+      "published": "2026-11-02",
+      "deadline": "2026-11-23",
+      "updated": "2026-11-16",
+      "status": "Подача заявок",
+      "stage": 1,
+      "phase": "active",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
+      "keywords": [
+        "Турбина"
+      ],
+      "matchedKeywords": [
+        "Турбина"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
+          "foundAt": "2026-11-20T20:30:08.015Z"
         }
       ]
     },
@@ -2497,7 +2638,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2552,7 +2693,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2609,7 +2750,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2664,7 +2805,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2681,6 +2822,53 @@
           "platformName": "ЕИС",
           "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616521931",
           "foundAt": "2026-11-20T15:45:40.545Z"
+        }
+      ]
+    },
+    {
+      "id": "32616522756",
+      "regNumber": "32616522756",
+      "externalId": "32616522756",
+      "title": "Выполнение работ по демонтажу фундаментов паровой турбины, генератора и возбудителя и заливке фундаментных рам паровой турбины, генератора и возбудителя энергоблока №6 для Костромской ГРЭС",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "2 284 468,6 ₽",
+      "priceNum": 2284468.6,
+      "published": "2026-10-28",
+      "deadline": "2026-11-17",
+      "updated": "2026-11-10",
+      "status": "Подача заявок",
+      "stage": 1,
+      "phase": "active",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616522756",
+      "keywords": [
+        "Турбина"
+      ],
+      "matchedKeywords": [
+        "Турбина"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616522756",
+          "foundAt": "2026-11-20T20:30:08.015Z"
         }
       ]
     },
@@ -2719,7 +2907,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2774,7 +2962,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3209,7 +3397,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -3272,7 +3460,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3368,7 +3556,7 @@
         "C-MOSENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3417,7 +3605,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3608,7 +3796,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3655,7 +3843,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3704,7 +3892,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3751,7 +3939,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -3853,7 +4041,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3900,7 +4088,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -3947,7 +4135,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -4010,7 +4198,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4112,7 +4300,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4121,6 +4309,53 @@
           "platformName": "РАД / Lot-online",
           "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q3bqv851tovqngo",
           "foundAt": "2026-11-20T15:12:44.741Z"
+        }
+      ]
+    },
+    {
+      "id": "32616546282",
+      "regNumber": "32616546282",
+      "externalId": "32616546282",
+      "title": "226964 635.26.00408 Торцевое уплотнение для Приморской ТЭС",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "974 524,52 ₽",
+      "priceNum": 974524.52,
+      "published": "2026-11-05",
+      "deadline": "2026-11-16",
+      "updated": "2026-11-17",
+      "status": "Завершена",
+      "stage": 3,
+      "phase": "archive",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616546282",
+      "keywords": [
+        "Уплотнения"
+      ],
+      "matchedKeywords": [
+        "Уплотнения"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616546282",
+          "foundAt": "2026-11-20T20:30:08.015Z"
         }
       ]
     },
@@ -4159,7 +4394,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4214,7 +4449,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4363,7 +4598,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4412,7 +4647,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4472,6 +4707,53 @@
       ]
     },
     {
+      "id": "32616544009",
+      "regNumber": "32616544009",
+      "externalId": "32616544009",
+      "title": "Набор уплотнений для Прегольской ТЭС",
+      "customer": "АО «Интер РАО — Электрогенерация»",
+      "customerInn": "7704784450",
+      "customerCode": "7704784450",
+      "matchedOrgId": "C-IRAO-GEN",
+      "matchedOrgName": "Интер РАО — Электрогенерация",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "platformUrl": "https://zakupki.gov.ru",
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "law": "223",
+      "price": "1 509 200 ₽",
+      "priceNum": 1509200,
+      "published": "2026-11-03",
+      "deadline": "2026-11-18",
+      "updated": "2026-11-19",
+      "status": "Завершена",
+      "stage": 3,
+      "phase": "archive",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616544009",
+      "keywords": [
+        "Уплотнения"
+      ],
+      "matchedKeywords": [
+        "Уплотнения"
+      ],
+      "enterpriseIds": [
+        "C-IRAO-GEN"
+      ],
+      "foundAt": "2026-11-20T20:30:08.015Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
+      "sources": [
+        {
+          "source": "gosplan",
+          "sourceName": "ГосПлан API",
+          "platformCode": "EIS",
+          "platformName": "ЕИС",
+          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616544009",
+          "foundAt": "2026-11-20T20:30:08.015Z"
+        }
+      ]
+    },
+    {
       "id": "TEK:20192900",
       "regNumber": "",
       "externalId": "20192900",
@@ -4506,7 +4788,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4608,7 +4890,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4657,7 +4939,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4753,7 +5035,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4847,7 +5129,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4941,7 +5223,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -4988,7 +5270,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5037,7 +5319,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5084,7 +5366,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5141,7 +5423,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5190,7 +5472,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5237,7 +5519,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5286,7 +5568,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5382,7 +5664,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5429,7 +5711,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5484,7 +5766,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5531,7 +5813,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5579,7 +5861,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5628,7 +5910,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5677,7 +5959,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5724,7 +6006,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5818,7 +6100,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -5865,7 +6147,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5912,7 +6194,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6008,7 +6290,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -6055,7 +6337,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -6102,7 +6384,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -6149,7 +6431,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T19:55:08.445Z",
+      "lastSeen": "2026-11-20T20:30:08.015Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6198,7 +6480,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -6300,7 +6582,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
@@ -6347,7 +6629,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T19:56:39.949Z",
+      "lastSeen": "2026-11-20T20:36:17.130Z",
       "sources": [
         {
           "source": "gentender",
