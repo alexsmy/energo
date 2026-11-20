@@ -16,7 +16,6 @@
     type: '',
     method: '',
     etp: '',
-    conf: '',
     onlyOrg: false,
     view: 'cards',
     sort: 'path'
@@ -27,7 +26,6 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
   const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
-  const confLabel = { high: 'высокая', medium: 'средняя' };
   const isRepair = (i) => i.type === 'ремонт';
   const isOem = (i) => i.type === 'ОЕМ' || i.type === 'инжиниринг';
   const isGen = (i) => !isRepair(i) && !isOem(i);
@@ -52,11 +50,11 @@
     Object.assign(state, {
       q: saved.q || '', holding: saved.holding || '', region: saved.region || '',
       type: saved.type || '', method: saved.method || '', etp: saved.etp || '',
-      conf: saved.conf || '', onlyOrg: !!saved.onlyOrg,
+      onlyOrg: !!saved.onlyOrg,
       view: saved.view === 'table' ? 'table' : 'cards',
       sort: ['path', 'name', 'region'].includes(saved.sort) ? saved.sort : 'path'
     });
-    const fields = { q: 'q', fHolding: 'holding', fRegion: 'region', fType: 'type', fMethod: 'method', fEtp: 'etp', fConf: 'conf', sort: 'sort' };
+    const fields = { q: 'q', fHolding: 'holding', fRegion: 'region', fType: 'type', fMethod: 'method', fEtp: 'etp', sort: 'sort' };
     Object.entries(fields).forEach(([id, key]) => {
       if ($(id)) $(id).value = state[key] || '';
     });
@@ -120,7 +118,6 @@
     if (state.holding && it.holdingName !== state.holding) return false;
     if (state.region && it.region !== state.region) return false;
     if (state.type && it.type !== state.type) return false;
-    if (state.conf && it.conf !== state.conf) return false;
     if (state.method && !methodMatch(it)) return false;
     if (state.etp) {
       const target = (R.etps || []).find(e => e.name === state.etp);
@@ -330,7 +327,6 @@
         '<div class="card__row"><span class="card__ico">✉</span><span>' + esc(email) + '</span></div>' +
         '<div class="card__foot">' +
           '<div class="etp-mini">' + etps + more + '</div>' +
-          '<span class="conf"><i class="dot dot--' + esc(it.conf) + '"></i>' + esc(confLabel[it.conf] || it.conf) + '</span>' +
         '</div>' +
       '</article>';
   }
@@ -378,7 +374,7 @@
       const key = it.holdingName || 'Прочее';
       if (grouped && key !== last) {
         last = key;
-        html += '<tr class="group-row"><td colspan="7">' + esc(key) + '<small>' + (counts[key] || 0) + '</small></td></tr>';
+        html += '<tr class="group-row"><td colspan="6">' + esc(key) + '<small>' + (counts[key] || 0) + '</small></td></tr>';
       }
       const etps = (it.etp || []).slice(0, 2).map(c => etpMap[c] ? etpMap[c].name : c).join(', ');
       const td = (label, cls, content, title) =>
@@ -390,7 +386,6 @@
         td('Телефон', 't-mut', esc(it.phone || '—'), it.phone) +
         td('E-mail', 't-mut', esc(it.email || '—'), it.email) +
         td('ЭТП', 't-mut', esc(etps || '—'), etps) +
-        td('Дост.', 't-conf', '<i class="dot dot--' + esc(it.conf) + '"></i>', confLabel[it.conf] || '') +
       '</tr>';
     });
     $('tbody').innerHTML = html;
@@ -483,6 +478,11 @@
       kvRow('ОГРН', esc(it.ogrn)) +
       kvRow('Руководитель', esc(it.ceo)) +
       kvRow('Контакт по закупкам', esc(it.contact)) +
+      kvRow('Главный инженер', esc(it.chiefEngineer)) +
+      kvRow('Главный конструктор', esc(it.chiefDesigner)) +
+      kvRow('Ответственный по закупкам', esc(it.procContact)) +
+      kvRow('Телефон закупок', esc(it.procPhone)) +
+      kvRow('E-mail закупок', esc(it.procEmail)) +
     '</dl></div>');
 
     body.push('<div class="sec"><h3>Закупки</h3>' +
@@ -498,10 +498,8 @@
       const o = srcMap[s];
       return '<span class="tag">' + esc(o ? o.title : s) + '</span>';
     }).join('');
-    body.push('<div class="sec"><h3>Достоверность и источники</h3>' +
-      '<p class="conf" style="font-size:13px"><i class="dot dot--' + esc(it.conf) + '"></i> ' + esc(confLabel[it.conf] || it.conf) + ' достоверность</p>' +
+    body.push('<div class="sec"><h3>Источники</h3>' +
       '<div class="srcs" style="margin-top:8px">' + srcs + '</div>' +
-      (it.conf !== 'high' ? '<div class="note note--warn" style="margin-top:10px">Данные требуют подтверждения перед заключением договора: проверьте реквизиты в ЕГРЮЛ и контакты на официальном сайте.</div>' : '') +
     '</div>');
 
     $('mBody').innerHTML = body.join('');
@@ -537,16 +535,15 @@
       'Руководитель: ' + (it.ceo || '—'),
       'Контакт по закупкам: ' + (it.contact || '—'),
       'Способ закупки: ' + (it.method || '—'),
-      'ЭТП: ' + (etps || '—'),
-      'Достоверность: ' + (confLabel[it.conf] || it.conf)
+      'ЭТП: ' + (etps || '—')
     ].filter(Boolean).join('\n');
   }
 
   /* ---------- export ---------- */
   function exportCSV() {
     const list = sortItems(items.filter(matches));
-    const cols = ['name', 'full', 'type', 'holdingName', 'path', 'region', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'status', 'conf', 'sources', 'notes'];
-    const head = ['Название', 'Полное наименование', 'Тип', 'Холдинг', 'Структура', 'Регион', 'Адрес', 'Телефон', 'E-mail', 'Сайт', 'Закупки', 'ИНН', 'КПП', 'ОГРН', 'Руководитель', 'Контакт по закупкам', 'Способ закупки', 'ЭТП', 'Мощность, МВт', 'Статус', 'Достоверность', 'Источники', 'Примечание'];
+    const cols = ['name', 'full', 'type', 'holdingName', 'path', 'region', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'status', 'sources', 'notes', 'chiefEngineer', 'chiefDesigner', 'procContact', 'procPhone', 'procEmail'];
+    const head = ['Название', 'Полное наименование', 'Тип', 'Холдинг', 'Структура', 'Регион', 'Адрес', 'Телефон', 'E-mail', 'Сайт', 'Закупки', 'ИНН', 'КПП', 'ОГРН', 'Руководитель', 'Контакт по закупкам', 'Способ закупки', 'ЭТП', 'Мощность, МВт', 'Статус', 'Источники', 'Примечание', 'Главный инженер', 'Главный конструктор', 'Ответственный по закупкам', 'Телефон закупок', 'E-mail закупок'];
     const escCSV = (v) => {
       const s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
       return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
@@ -605,14 +602,13 @@
     bindInput('fType', 'type');
     bindInput('fMethod', 'method');
     bindInput('fEtp', 'etp');
-    bindInput('fConf', 'conf');
     bindInput('sort', 'sort');
 
     $('fOnlyOrg').addEventListener('change', e => { state.onlyOrg = e.target.checked; render(); });
 
     $('resetBtn').addEventListener('click', () => {
-      Object.assign(state, { q: '', holding: '', region: '', type: '', method: '', etp: '', conf: '', onlyOrg: false, sort: 'path' });
-      ['q', 'fHolding', 'fRegion', 'fType', 'fMethod', 'fEtp', 'fConf', 'sort'].forEach(id => { $(id).value = ''; });
+      Object.assign(state, { q: '', holding: '', region: '', type: '', method: '', etp: '', onlyOrg: false, sort: 'path' });
+      ['q', 'fHolding', 'fRegion', 'fType', 'fMethod', 'fEtp', 'sort'].forEach(id => { $(id).value = ''; });
       $('sort').value = 'path';
       $('fOnlyOrg').checked = false;
       render();

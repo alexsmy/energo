@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const HEADER = 'id|parent|kind|name|full|type|activity|region|address|phone|email|site|procUrl|inn|kpp|ogrn|ceo|contact|method|etp|capacity|status|conf|sources|notes';
+const HEADER = 'id|parent|kind|name|full|type|activity|region|address|phone|email|site|procUrl|inn|kpp|ogrn|ceo|contact|method|etp|capacity|status|conf|sources|notes|chiefEngineer|chiefDesigner|procContact|procPhone|procEmail';
 const FIELDS = HEADER.split('|');
 const ETP_CODES = new Set('GPB TEK ROS RAD B2B FAB AST SBER RTS ZAKAZ KIM PORTAL_ROS ETP_IRAO ETP_RUSH BIDZAAR EIS'.split(' '));
 const SOURCE_CODES = new Set(['S1', 'S2', 'S3', 'S4', 'S5', 'S6']);
@@ -33,6 +33,7 @@ function validateRows(rows) {
   const add = (row, field, code, severity, note) => issues.push({
     id: row.id, line: row.__line, field, value: row[field] || '', code, severity, note
   });
+  const isUnconfirmed = (v) => /^(не подтверждены|данные отсутствуют|нет данных)$/i.test(String(v || '').trim());
 
   for (const r of rows) {
     if (!r.id) add(r, 'id', 'id-missing', 'error', 'Пустой id');
@@ -53,17 +54,22 @@ function validateRows(rows) {
     if (/https?:\/\/|www\./i.test(contact)) add(r, 'contact', 'contact-has-url', 'warning', 'URL в поле контакта');
     if (!contact) add(r, 'contact', 'contact-empty', 'info', 'Контакт не заполнен');
 
-    if (r.phone && !/^\+?[\d\s()\-]{6,}$/.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
-    if (r.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.email)) add(r, 'email', 'email-format', 'error', 'Некорректный формат e-mail');
+    if (r.phone && !isUnconfirmed(r.phone) && !/^\+?[\d\s()\-]{6,}$/.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
+    if (r.email && !isUnconfirmed(r.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.email)) add(r, 'email', 'email-format', 'error', 'Некорректный формат e-mail');
 
     for (const field of ['site', 'procUrl']) {
       const v = r[field] || '';
-      if (/не подтвер|отсутств|нет данных|н\/а/i.test(v)) add(r, field, 'site-unconfirmed', 'warning', 'Пометка вместо адреса');
-      if (v && !/^https?:\/\/[^\s]+$/i.test(v)) add(r, field, 'site-format', 'error', 'Некорректный URL');
+      if (!isUnconfirmed(v) && /не подтвер|отсутств|нет данных|н\/а/i.test(v)) add(r, field, 'site-unconfirmed', 'warning', 'Пометка вместо адреса');
+      if (v && !isUnconfirmed(v) && !/^https?:\/\/[^\s]+$/i.test(v)) add(r, field, 'site-format', 'error', 'Некорректный URL');
       if (!v && ORG_KINDS.has(r.kind)) add(r, field, 'site-missing', 'warning', 'Адрес не заполнен у организации');
     }
 
-    if (r.inn && !/^\d{10}(\d{2})?$/.test(r.inn)) add(r, 'inn', 'inn-format', 'error', 'ИНН должен содержать 10 или 12 цифр');
+    for (const field of ['chiefEngineer', 'chiefDesigner', 'procContact']) {
+      const v = r[field] || '';
+      if (/закупки\s*:|https?:\/\/|@/i.test(v)) add(r, field, 'extra-field-artifact', 'error', 'В поле ФИО/должности попал текст о закупках или URL');
+    }
+
+    if (r.inn && !isUnconfirmed(r.inn) && !/^\d{10}(\d{2})?$/.test(r.inn)) add(r, 'inn', 'inn-format', 'error', 'ИНН должен содержать 10 или 12 цифр');
     if (!r.inn && ORG_KINDS.has(r.kind) && r.kind !== 'филиал') add(r, 'inn', 'inn-missing', 'warning', 'ИНН не заполнен');
     if (r.kpp && !/^\d{9}$/.test(r.kpp)) add(r, 'kpp', 'kpp-format', 'error', 'КПП должен содержать 9 цифр');
     if (r.ogrn && !/^\d{13}(\d{2})?$/.test(r.ogrn)) add(r, 'ogrn', 'ogrn-format', 'error', 'ОГРН должен содержать 13 или 15 цифр');

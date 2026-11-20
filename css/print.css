@@ -31,8 +31,6 @@ h3{font-size:11.5pt;margin:14px 0 4px;color:#152630;break-after:avoid}
 .kv dt{color:#6d8290}
 .kv dd{margin:0;overflow-wrap:anywhere}
 .tag{display:inline-block;border:1px solid #dde5ea;border-radius:4px;padding:0 4px;font-size:7.5pt;color:#45606f;margin:0 3px 2px 0;background:#f6f9fa}
-.conf{font-size:7.5pt;text-transform:uppercase;letter-spacing:.04em}
-.conf--high{color:#1f8a4c}.conf--medium{color:#b58105}.conf--low{color:#b23c3c}
 .note{font-size:8.3pt;color:#7a4a1c;background:#fff9f3;border:1px solid #f3dfcb;border-radius:5px;padding:4px 7px;margin-top:5px}
 
 table.plants{width:100%;border-collapse:collapse;font-size:8.5pt;margin:4px 0 10px}

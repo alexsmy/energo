@@ -70,11 +70,6 @@ button,input,select{font:inherit;color:inherit}
 .field input:focus,.field select:focus{border-color:var(--navy-2);box-shadow:0 0 0 3px rgba(21,88,122,.12);background:#fff}
 .check{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted);margin:10px 0 4px;cursor:pointer}
 .check input{margin-top:2px;accent-color:var(--accent)}
-.legend{display:flex;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:10px;padding-top:9px;font-size:11.5px;color:var(--muted)}
-.legend div{display:flex;align-items:center;gap:5px}
-.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:0 0 auto}
-.dot--high{background:var(--high)}
-.dot--medium{background:var(--medium)}
 
 /* Toolbar */
 .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}

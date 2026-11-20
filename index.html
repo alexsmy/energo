@@ -8,7 +8,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.2">
+<link rel="stylesheet" href="css/styles.css?v=2.3">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -94,24 +94,10 @@
       <select id="fEtp"><option value="">Все</option></select>
     </label>
 
-    <label class="field">
-      <span>Достоверность</span>
-      <select id="fConf">
-        <option value="">Любая</option>
-        <option value="high">Высокая</option>
-        <option value="medium">Средняя</option>
-      </select>
-    </label>
-
     <label class="check">
       <input type="checkbox" id="fOnlyOrg">
       <span>Только организации (без станций)</span>
     </label>
-
-    <div class="legend">
-      <div><i class="dot dot--high"></i> высокая</div>
-      <div><i class="dot dot--medium"></i> средняя</div>
-    </div>
   </aside>
 
   <section class="content">
@@ -137,7 +123,7 @@
         <thead>
           <tr>
             <th>Название</th><th>Тип</th><th>Регион</th>
-            <th>Телефон</th><th>E-mail</th><th>ЭТП</th><th>Дост.</th>
+            <th>Телефон</th><th>E-mail</th><th>ЭТП</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -286,11 +272,11 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.2"></script>
-<script src="js/tenders-data.js?v=2.2"></script>
-<script src="js/text-match.js?v=2.2"></script>
-<script src="js/sort.js?v=2.2"></script>
-<script src="js/tenders.js?v=2.2"></script>
-<script src="js/app.js?v=2.2"></script>
+<script src="js/data.js?v=2.3"></script>
+<script src="js/tenders-data.js?v=2.3"></script>
+<script src="js/text-match.js?v=2.3"></script>
+<script src="js/sort.js?v=2.3"></script>
+<script src="js/tenders.js?v=2.3"></script>
+<script src="js/app.js?v=2.3"></script>
 </body>
 </html>

@@ -118,7 +118,7 @@ check('валидатор: закупки в поле контакта', () => {
 
 check('валидатор: некорректные сайты, телефон, e-mail, ИНН', () => {
   const row = validRow();
-  row.site = 'example.ru'; row.procUrl = 'не подтверждены';
+  row.site = 'example.ru'; row.procUrl = 'отсутствует';
   row.phone = '800'; row.email = 'abc'; row.inn = '123';
   const found = codes(row);
   ['site-format', 'site-unconfirmed', 'phone-format', 'email-format', 'inn-format'].forEach(c => assert.ok(found.includes(c), c));
@@ -128,6 +128,16 @@ check('валидатор: незаполненный сайт у организ
   const row = validRow(); row.site = ''; row.procUrl = '';
   const found = codes(row);
   assert.ok(found.includes('site-missing') && found.filter(c => c === 'site-missing').length === 2);
+});
+
+check('валидатор: артефакт в новом поле должности', () => {
+  const row = validRow(); row.chiefEngineer = 'Закупки: ТЭК-Торг';
+  assert.ok(codes(row).includes('extra-field-artifact'));
+});
+
+check('валидатор: пометка «не подтверждены» не считается ошибкой', () => {
+  const row = validRow(); row.email = 'не подтверждены'; row.procPhone = 'не подтверждены';
+  assert.deepStrictEqual(codes(row), []);
 });
 
 console.log(`Пройдено тестов: ${n}`);

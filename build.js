@@ -9,8 +9,8 @@ const META = {
   title: 'Энергогенерирующие и энергоремонтные предприятия РФ',
   subtitle: 'Проверенный реестр для работы с закупками и подрядчиками',
   version: '2.1',
-  date: '2026-11-20',
-  disclaimer: 'Данные собраны из открытых источников и проверены по состоянию на 20.11.2026. Поля с флагом «средняя» достоверность требуют подтверждения перед заключением договора. Контакты и кадровые назначения могут меняться.'
+  date: '2026-11-21',
+  disclaimer: 'Данные собраны из открытых источников и проверены по состоянию на 21.11.2026. Контакты, руководители и реквизиты могут меняться; перед заключением договора проверяйте их на официальном сайте и в ЕГРЮЛ.'
 };
 
 // Версия данных едина для data.js и version.json: берём её из манифеста,
@@ -86,7 +86,9 @@ for (const e of entities) {
     method: e.method || '', etp: e.etp ? e.etp.split(';').map(s => s.trim()).filter(Boolean) : [],
     capacity: e.capacity || '', status: e.status || 'действует',
     conf: e.conf || 'medium', sources: e.sources ? e.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S2'],
-    notes: e.notes || '', __line: e.__line
+    notes: e.notes || '', __line: e.__line,
+    chiefEngineer: e.chiefEngineer || '', chiefDesigner: e.chiefDesigner || '',
+    procContact: e.procContact || '', procPhone: e.procPhone || '', procEmail: e.procEmail || ''
   });
 }
 
@@ -98,7 +100,8 @@ for (const p of plants) {
     procUrl: '', inn: '', kpp: '', ogrn: '', ceo: '', contact: '', method: '', etp: [],
     capacity: p.capacity || '', status: p.status || 'действует',
     conf: p.conf || 'medium', sources: p.sources ? p.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S2'],
-    notes: p.notes || '', __line: p.__line
+    notes: p.notes || '', __line: p.__line,
+    chiefEngineer: '', chiefDesigner: '', procContact: '', procPhone: '', procEmail: ''
   });
 }
 

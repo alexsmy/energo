@@ -6,7 +6,6 @@
   const etpMap = Object.fromEntries((R.etps || []).map(e => [e.code, e]));
   const srcMap = Object.fromEntries((R.sources || []).map(s => [s.id, s]));
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const confLabel = { high: 'высокая', medium: 'средняя' };
   const isRepair = i => i.type === 'ремонт';
   const isOem = i => i.type === 'ОЕМ' || i.type === 'инжиниринг';
 
@@ -28,13 +27,17 @@
       kv('ОГРН', esc(it.ogrn)),
       kv('Руководитель', esc(it.ceo)),
       kv('Контакт по закупкам', esc(it.contact)),
+      kv('Главный инженер', esc(it.chiefEngineer)),
+      kv('Главный конструктор', esc(it.chiefDesigner)),
+      kv('Ответственный по закупкам', esc(it.procContact)),
+      kv('Телефон закупок', esc(it.procPhone)),
+      kv('E-mail закупок', esc(it.procEmail)),
       kv('Способ закупки', esc(it.method)),
       kv('ЭТП', tags(it))
     ].filter(Boolean).join('');
     return '<div class="org">' +
       '<div class="org__head"><div class="org__name">' + esc(it.name) + '</div>' +
-        '<div><span class="org__type">' + esc(it.type || it.kind) + '</span> ' +
-        '<span class="conf conf--' + esc(it.conf) + '">' + esc(confLabel[it.conf] || it.conf) + '</span></div></div>' +
+        '<div><span class="org__type">' + esc(it.type || it.kind) + '</span></div></div>' +
       (it.full && it.full !== it.name ? '<div class="org__full">' + esc(it.full) + '</div>' : '') +
       '<dl class="kv">' + rows + '</dl>' +
       (it.notes ? '<div class="note">' + esc(it.notes) + '</div>' : '') +
@@ -45,9 +48,8 @@
     if (!list.length) return '';
     const rows = list.map(p =>
       '<tr><td>' + esc(p.name) + '</td><td class="c">' + esc(p.type) + '</td><td class="c">' + esc(p.region) + '</td>' +
-      '<td class="c">' + (p.capacity ? esc(p.capacity) : '—') + '</td>' +
-      '<td class="c">' + esc(confLabel[p.conf] || p.conf) + '</td></tr>').join('');
-    return '<table class="plants"><thead><tr><th>Станция / объект</th><th>Тип</th><th>Регион</th><th>МВт</th><th>Дост.</th></tr></thead><tbody>' + rows + '</tbody></table>';
+      '<td class="c">' + (p.capacity ? esc(p.capacity) : '—') + '</td></tr>').join('');
+    return '<table class="plants"><thead><tr><th>Станция / объект</th><th>Тип</th><th>Регион</th><th>МВт</th></tr></thead><tbody>' + rows + '</tbody></table>';
   }
 
   function holdingSection(h, list, first) {
