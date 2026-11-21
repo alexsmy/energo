@@ -402,10 +402,11 @@ body.is-map .btn--filters{display:inline-flex}
 .t-badge--warn{background:#fdf0e6;color:var(--accent)}
 .t-badge--bad{background:#fbe9e9;color:#a13333}
 /* Новые закупки — появились по сравнению со вчерашним снимком архива. */
-.t-badge--new{background:#e6f6ee;color:var(--high);border:1px solid #b9e3cc;letter-spacing:.01em}
-.t-card--new{background:#fcfffd;box-shadow:inset 3px 0 0 #35a56c,var(--shadow)}
-.t-row--new{background:#f6fcf8}
-.t-row--new td{border-color:#d7ecdf}
+.t-badge--new{background:#1f9c60;color:#fff;border:0;font-size:10.5px;white-space:nowrap}
+.t-badge--new::before{content:"●";font-size:7px;margin-right:5px;vertical-align:middle}
+.t-card--new{background:#f4fcf7;box-shadow:inset 4px 0 0 #1f9c60,var(--shadow)}
+.t-row--new{background:#effaf3}
+.t-row--new td{border-color:#cfe8d7}
 .t-table-wrap{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:auto;box-shadow:var(--shadow)}
 .t-table{min-width:900px;table-layout:fixed}
 .t-table th:nth-child(1){width:9%}

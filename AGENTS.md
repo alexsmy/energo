@@ -48,6 +48,7 @@
 - **Состояние:** `data/tender-inn-state.json` (по ИНН: последний успех, total, emptyStreak) и `data/tender-coverage.json` (сводка покрытия, 8-дневное окно с учётом выходных).
 - **Архив снимков по образцу `cam-ufa`:** `data/archive/` не лежит в git (см. `.gitignore`). Перед деплоем `node scripts/archive.js restore` забирает прошлую публикацию Pages, после сбора `snapshot` добавляет снимок за день, `prune` удаляет старше 30 дней. Просмотр — `archive.html`.
 - **Публикация артефактом:** Pages должен быть переключён на Source = GitHub Actions (сейчас у `cam-ufa` именно так). Workflow `tenders-update.yml` (cron + ручной) и `site-deploy.yml` (push) собирают `_site` и деплоят через `upload-pages-artifact`/`deploy-pages`. Триггера `push` у сбора больше нет.
+- **«Новое»:** сравниваем активные записи с последним снимком архива; новые get `isNew: true` и `firstSeen`. В UI (вариант 3, выбран 21.11.2026): зелёный бейдж с точкой `#1f9c60`, фон `#f4fcf7` у карточки / `#effaf3` у строки и полоска 4 px слева. Демо — `demo-new.html`.
 - **Тесты:** `node scripts/test-collect.js` (5 тестов, без сети).
 
 ## Карта файлов
