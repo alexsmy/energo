@@ -211,6 +211,20 @@
   }
 
   /* ---------- вывод ---------- */
+  /* Понятная свежесть данных: если ни одно окно сбора не сработало,
+   * пользователь сразу видит, что данные не сегодняшние. */
+  function updatedText(status) {
+    if (!status || !status.lastRun) return 'Обновлено: нет данных';
+    const d = new Date(status.lastRun);
+    if (isNaN(d.getTime())) return 'Обновлено: ' + status.lastRun;
+    const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+    const age = days <= 0 ? 'сегодня' : days === 1 ? 'вчера' : days + ' дн. назад';
+    const warn = days >= 2 ? ' · ВНИМАНИЕ: данные устарели, запустите сбор вручную' : '';
+    return 'Обновлено: ' + d.toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }) + ' (' + age + ')' + warn +
+      (status.total != null ? ' · закупок: ' + status.total : '') +
+      (status.bySource ? ' · площадок: ' + Object.keys(status.bySource).length : '');
+  }
+
   function newBadge(r) {
     return r.isNew
       ? '<span class="t-badge t-badge--new" title="Появилось по сравнению со вчерашним днём">Новое</span>'
@@ -499,10 +513,7 @@
           rebuildSources();
         }
         if (sRes.ok) status = await sRes.json();
-        const upd = status.lastRun ? new Date(status.lastRun).toLocaleString('ru-RU') : 'нет данных';
-        const platforms = status.bySource ? Object.keys(status.bySource).length : null;
-        $('tUpdated').textContent = 'Обновлено: ' + upd + (status.total != null ? ' · закупок: ' + status.total : '') +
-          (platforms ? ' · площадок: ' + platforms : '');
+        $('tUpdated').textContent = updatedText(status);
         render();
       } catch (e) {
         $('tUpdated').textContent = 'Не удалось обновить выдачу: ' + (e.message || e);
@@ -530,10 +541,7 @@
     rebuildSources();
     fillSelect($('tLinkEtp'), auditPlatforms.filter(p => p.urlTemplate && p.urlTemplate.includes('{')).map(p => [p.code, p.name]), 'Выберите площадку');
     $('tLinkEtp').value = (auditPlatforms.find(p => p.code === 'EIS') || {}).code || '';
-    const upd = status.lastRun ? new Date(status.lastRun).toLocaleString('ru-RU') : 'нет данных';
-    const platforms = status.bySource ? Object.keys(status.bySource).length : null;
-    $('tUpdated').textContent = 'Обновлено: ' + upd + (status.total != null ? ' · закупок: ' + status.total : '') +
-      (platforms ? ' · площадок: ' + platforms : '');
+    $('tUpdated').textContent = updatedText(status);
     $('tVer').textContent = '2.1';
     document.querySelectorAll('[data-tmode]').forEach(b => b.classList.toggle('is-active', b.dataset.tmode === state.mode));
     renderSelected();
