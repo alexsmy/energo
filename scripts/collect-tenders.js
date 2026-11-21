@@ -188,6 +188,16 @@ async function main() {
   const gate = nonWorking(new Date());
   if (gate.reason && !opts.force) {
     log(`Пропуск ${gate.day}: ${gate.reason}. Для ручного прогона: --force.`);
+    writeJson('last-collect-result.json', { ran: false, date: gate.day, reason: gate.reason });
+    return;
+  }
+  // Идемпотентность для нескольких окон запуска (как резерв у cam-ufa):
+  // первый сработавший собирает данные, остальные выходят без запросов.
+  const todayNow = mskDate(new Date());
+  const earlyStatus = readJson('tenders-status.json', {});
+  if (!opts.force && earlyStatus.lastRun && mskDate(new Date(earlyStatus.lastRun)) === todayNow && !earlyStatus.partial) {
+    log(`Уже собран ${todayNow} — пропуск без единого сетевого запроса. Для повтора: --force.`);
+    writeJson('last-collect-result.json', { ran: false, date: todayNow, reason: 'already-collected' });
     return;
   }
   const keywordsData = readJson('tender-keywords.json', { keywords: [] });
@@ -365,6 +375,7 @@ async function main() {
   });
   writeJson('tender-coverage.json', coverage);
   innStateLib.save(innState);
+  writeJson('last-collect-result.json', { ran: true, date: today, foundAt, partial: !!summary.partial });
   logger.finish(summary);
   log(`ИТОГО: ${tagged.length} найдено, ${merged.length} в файле (отброшено без ключевых слов: ${filtered.dropped}), площадок ${Object.keys(bySource).length}, ошибок ${errors.length}`);
   if (!records.length) log('ВНИМАНИЕ: новые совпадения не найдены (источники недоступны или выдача пуста) — сохранены предыдущие данные.');

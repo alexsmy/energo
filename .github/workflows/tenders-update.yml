@@ -1,14 +1,14 @@
 name: Обновление закупок и аудит ЭТП
 
-# Сбор — ТОЛЬКО по расписанию и вручную. Триггера push нет: раньше каждый
-# коммит запускал полный сбор и сжигал квоты. Публикация артефактом (как в
-# cam-ufa): архив снимков восстанавливается из прошлой публикации Pages,
-# добавляется сегодняшний снимок, старые удаляются. Всё живёт на GitHub.
+# Надёжность по образцу cam-ufa: не один cron, а несколько окон запуска.
+# Первый сработавший собирает данные, остальные выходят без запросов
+# (идемпотентность в collect-tenders.js). Резервные окна страхуют задержку
+# GitHub cron, которая однажды уже составила 7 часов.
 on:
   schedule:
-    # 06:00 по Москве = 03:00 UTC. GitHub часто задерживает cron — внутри
-    # скрипта есть гейт нерабочих дней и инкрементальное окно.
-    - cron: '0 3 * * *'
+    - cron: '0 2 * * *'   # 05:00 МСК — основное окно
+    - cron: '0 5 * * *'   # 08:00 МСК — резерв
+    - cron: '0 9 * * *'   # 12:00 МСК — резерв
   workflow_dispatch:
 
 permissions:
@@ -24,6 +24,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    outputs:
+      ran: ${{ steps.collected.outputs.ran }}
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +34,7 @@ jobs:
           node-version: '20'
 
       # Архив НЕ лежит в git. Берём последнюю публикацию main и переносим
-      # data/archive/ в текущую сборку — иначе архив каждый раз начинался бы с нуля.
+      # data/archive/ в текущую сборку — иначе архив начинался бы с нуля.
       - name: Восстанавливаем архив снимков
         env:
           GH_TOKEN: ${{ github.token }}
@@ -41,7 +43,13 @@ jobs:
       - name: Сбор закупок и проверка ЭТП
         run: node scripts/collect-tenders.js --limit=2000
 
+      - name: Проверяем, был ли сбор
+        id: collected
+        run: |
+          echo "ran=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/last-collect-result.json','utf8')).ran)")" >> "$GITHUB_OUTPUT"
+
       - name: Обновление манифеста версии и метки запуска
+        if: steps.collected.outputs.ran == 'true'
         run: |
           node -e "
             const fs=require('fs');
@@ -55,9 +63,11 @@ jobs:
           date -u +%F > last-run.txt
 
       - name: Пересборка данных сайта
+        if: steps.collected.outputs.ran == 'true'
         run: node build.js
 
       - name: Добавляем снимок в архив и чистим старое
+        if: steps.collected.outputs.ran == 'true'
         run: |
           node scripts/archive.js snapshot
           node scripts/archive.js prune
@@ -65,6 +75,7 @@ jobs:
           echo "Снимков в архиве: $(node -e "console.log(JSON.parse(require('fs').readFileSync('data/archive/index.json','utf8')).snapshots.length)")"
 
       - name: Сохраняем состояние в репозиторий
+        if: steps.collected.outputs.ran == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -77,18 +88,22 @@ jobs:
           fi
 
       - name: Готовим сайт к публикации
+        if: steps.collected.outputs.ran == 'true'
         run: |
           mkdir -p _site
           cp index.html log.html archive.html demo-new.html print.html robots.txt version.json _site/
           cp -r css js data _site/
 
       - uses: actions/configure-pages@v5
+        if: steps.collected.outputs.ran == 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: steps.collected.outputs.ran == 'true'
         with:
           path: _site
 
   deploy:
     needs: build
+    if: needs.build.outputs.ran == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

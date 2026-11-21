@@ -54,5 +54,6 @@ const TARGETS = {
     bytes, cookies, error: res.error || '', browser: t.browser,
     sample: typeof res.body === 'string' ? res.body.slice(0, 100).replace(/\s+/g, ' ') : ''
   }, null, 2));
-  if (!res.ok) process.exitCode = 2;
+  // Недоступность площадки — это результат проверки, а не сбой workflow.
+  // Иначе GitHub шлёт «Run failed» письма за ожидаемые fetch failed.
 })().catch(e => { console.error('Критическая ошибка:', e); process.exitCode = 1; });
