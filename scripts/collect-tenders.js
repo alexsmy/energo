@@ -151,6 +151,22 @@ function queryTerms(keywords) {
   return [...new Set((keywords || []).map((k) => tm.entryOf(k).search).filter(Boolean))];
 }
 
+/* Ключи активных закупок из последнего снимка архива (обычно вчерашнего).
+ * Если архива ещё нет — сравниваем с текущим содержимым tenders.json. */
+function previousActiveKeys(today, fallbackRecords) {
+  const dir = path.join(DATA, 'archive');
+  try {
+    const files = fs.readdirSync(dir)
+      .filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f) && f.slice(0, 10) < today)
+      .sort();
+    if (files.length) {
+      const snap = JSON.parse(fs.readFileSync(path.join(dir, files[files.length - 1]), 'utf8'));
+      return new Set((snap.records || []).filter(r => r.phase === 'active').flatMap(r => identityKeys(r)));
+    }
+  } catch (e) { /* архив может отсутствовать — используем фолбэк */ }
+  return new Set(fallbackRecords.filter(r => r.phase === 'active').flatMap(r => identityKeys(r)));
+}
+
 function adapterFor(name) {
   switch (name) {
     case 'gosplan': return require('./sources/gosplan');
@@ -190,6 +206,7 @@ async function main() {
     return u ? `${u.used}/${u.limit}` : '';
   };
   const foundAt = new Date().toISOString();
+  const today = mskDate(new Date());
 
   // Накопленное состояние обхода по ИНН + инкрементальное окно архива.
   const innState = innStateLib.load();
@@ -279,13 +296,16 @@ async function main() {
 
   // Локальный переход active → archive без лишнего запроса к API:
   // deadline прошёл или запись была в prev.active, но сегодня не найдена.
-  const today = mskDate(new Date());
   const foundKeys = new Set(tagged.flatMap(r => identityKeys(r)));
   const prevActiveKeys = new Set(prev.filter(p => p.phase === 'active').flatMap(p => identityKeys(p)));
-  let localArchived = 0;
+  const yesterdayKeys = previousActiveKeys(today, prev);
+  let localArchived = 0, newCount = 0;
   merged.forEach(r => {
     if (r.phase !== 'active') return;
     const keys = identityKeys(r);
+    // «Новое» — появилось по сравнению со вчерашним снимком архива.
+    r.isNew = yesterdayKeys.size > 0 && !keys.some(k => yesterdayKeys.has(k));
+    if (r.isNew) { r.firstSeen = r.firstSeen || foundAt; newCount++; }
     const expired = !!r.deadline && String(r.deadline) < today;
     const vanished = keys.some(k => prevActiveKeys.has(k)) && !keys.some(k => foundKeys.has(k));
     if (expired || vanished) {
@@ -318,6 +338,7 @@ async function main() {
     droppedNoKeyword: filtered.dropped,
     titlesSuspicious,
     localArchived,
+    newCount,
     corroborated,
     corroboratedPct: merged.length ? Math.round(corroborated / merged.length * 100) : 0,
     relevantPerRequest: results.reduce((a, r) => a + (r.requests || 0), 0)

@@ -58,7 +58,12 @@
   }
   async function init() {
     try { render(await load()); }
-    catch (e) { $('snapshots').innerHTML = '<tr><td colspan="6" style="color:#a13333">Не удалось загрузить архив: ' + esc(e.message || e) + '</td></tr>'; }
+    catch (e) {
+      const msg = /404/.test(String(e.message || e))
+        ? 'Снимков пока нет — первый появится после ближайшего рабочего дня.'
+        : 'Не удалось загрузить архив: ' + esc(e.message || e);
+      $('snapshots').innerHTML = '<tr><td colspan="6" style="color:var(--muted)">' + msg + '</td></tr>';
+    }
   }
   $('refreshArchive').addEventListener('click', init);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

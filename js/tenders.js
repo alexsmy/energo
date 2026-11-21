@@ -211,14 +211,20 @@
   }
 
   /* ---------- вывод ---------- */
+  function newBadge(r) {
+    return r.isNew
+      ? '<span class="t-badge t-badge--new" title="Появилось по сравнению со вчерашним днём">Новое</span>'
+      : '';
+  }
+
   function cardHtml(r) {
     const kws = (r.matchedKeywords || r.keywords || []).slice(0, 6)
       .map(k => '<span class="t-chip t-chip--mini t-chip--hit">' + esc(k) + '</span>').join('');
     const ent = entNames(r);
-    return '<article class="t-card">' +
+    return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '">' +
       '<div class="t-card__head"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
         tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' +
-        sourceHtml(r) +
+        newBadge(r) + sourceHtml(r) +
       '</div>' +
       '<div class="t-card__body">' +
         matchHtml(r) +
@@ -236,10 +242,10 @@
   }
 
   function rowHtml(r) {
-    return '<tr>' +
+    return '<tr' + (r.isNew ? ' class="t-row--new"' : '') + '>' +
       '<td class="t-mut">' + fmtDate(r.published) + '</td>' +
       '<td><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
-        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a></td>' +
+        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' + newBadge(r) + '</td>' +
       '<td>' + esc(r.customer || '—') + '</td>' +
       '<td>' + esc(entNames(r) || '—') + '</td>' +
       '<td>' + esc(r.price || '—') + '</td>' +

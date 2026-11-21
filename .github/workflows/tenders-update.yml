@@ -79,7 +79,7 @@ jobs:
       - name: Готовим сайт к публикации
         run: |
           mkdir -p _site
-          cp index.html log.html archive.html print.html robots.txt version.json _site/
+          cp index.html log.html archive.html demo-new.html print.html robots.txt version.json _site/
           cp -r css js data _site/
 
       - uses: actions/configure-pages@v5

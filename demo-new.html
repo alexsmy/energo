@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Демо: как выглядит «новое» — Энергореестр РФ</title>
+<link rel="stylesheet" href="css/styles.css?v=2.2">
+<style>
+  .demo-wrap{max-width:1080px;margin:0 auto;padding:18px 22px 60px}
+  .demo-note{background:#fff8ec;border:1px solid #f0dcbb;color:#7a4a10;border-radius:10px;padding:10px 14px;font-size:13px;margin:14px 0 22px}
+  .demo-sec{margin:0 0 30px}
+  .demo-sec h2{font-size:18px;margin:0 0 4px}
+  .demo-sec p{color:var(--muted);font-size:13px;margin:0 0 12px;max-width:760px}
+  .demo-tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:#eef3f6;color:#476273;margin-left:8px}
+  .demo-tag--rec{background:#e6f6ee;color:var(--high)}
+  .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  @media(max-width:800px){.demo-grid{grid-template-columns:1fr}}
+  .demo-card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 13px;box-shadow:0 1px 2px rgba(9,31,44,.04);min-width:0}
+  .demo-card__head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+  .demo-card__head a{font-weight:700;font-size:14px;line-height:1.32;color:var(--navy);overflow-wrap:anywhere}
+  .demo-card__body{margin-top:8px;font-size:12.5px;color:var(--muted)}
+  .demo-label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 4px}
+  .demo-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .demo-table th,.demo-table td{text-align:left;padding:7px 9px;border-bottom:1px solid #e6edf1}
+  .demo-table th{background:#f5f8fa;color:var(--muted);font-size:11px}
+
+  /* Вариант 2 — только тонкая подсветка, без бейджа */
+  .v2{background:#fbfefc;box-shadow:inset 2px 0 0 #7cc79e}
+  .v2 tr{background:#fbfefc}
+  .v2 .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#35a56c;margin-right:6px;vertical-align:middle}
+
+  /* Вариант 3 — заметный, но аккуратный */
+  .v3{background:#f4fcf7;box-shadow:inset 4px 0 0 #1f9c60}
+  .v3 tr{background:#effaf3}
+  .v3 .badge3{display:inline-block;border-radius:6px;padding:2px 8px;font-size:10.5px;font-weight:700;white-space:nowrap;background:#1f9c60;color:#fff}
+  .v3 .badge3::before{content:"●";font-size:7px;margin-right:5px;vertical-align:middle}
+
+  /* Вариант 4 — минимализм: маленькая подпись у даты */
+  .v4 tr{background:transparent}
+  .v4 .note4{font-size:10.5px;color:#147445;font-weight:700;margin-left:6px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <div class="brand"><div class="brand__mark" aria-hidden="true">⚡</div>
+      <div><div class="brand__title">Энергореестр&nbsp;РФ</div><div class="brand__sub">Демо-выбор оформления «новое»</div></div>
+    </div>
+    <div class="topbar__actions"><a class="btn btn--ghost" href="index.html#tab=tenders">← К закупкам</a></div>
+  </div>
+</header>
+
+<main class="demo-wrap">
+  <h1 style="font-size:25px">Как отмечать новые закупки</h1>
+  <div class="demo-note">
+    Сегодня суббота, новых записей нет — это демонстрация на вымышленном примере.
+    Слева карточка, справа та же закупка в таблице. Скажите, какой вариант нравится — оставлю его.
+  </div>
+
+  <!-- Вариант 1 -->
+  <section class="demo-sec">
+    <h2>Вариант 1 — тихий <span class="demo-tag demo-tag--rec">сейчас реализован</span></h2>
+    <p>Небольшой зелёный бейдж «Новое», очень светлый фон карточки и тонкая полоска слева. Не отвлекает, но заметно.</p>
+    <div class="demo-grid">
+      <div>
+        <div class="demo-label">Карточка</div>
+        <article class="t-card t-card--new">
+          <div class="t-card__head"><a href="#" onclick="return false">Ремонт проточной части турбины ТГК-1</a>
+            <span class="t-badge t-badge--new" title="Появилось по сравнению со вчерашним днём">Новое</span>
+            <span class="t-badge t-badge--src">GenTender</span></div>
+          <div class="t-card__body">
+            <div><span class="t-label">Заказчик:</span> ПАО «Территориальная генерирующая компания № 1»</div>
+            <div><span class="t-label">Опубликовано:</span> 21.11.2026 · <span class="t-label">Заявки до:</span> 05.12.2026</div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <div class="demo-label">Таблица</div>
+        <table class="demo-table"><thead><tr><th>Опубликовано</th><th>Закупка</th><th>Заказчик</th></tr></thead>
+          <tbody><tr class="t-row--new"><td>21.11.2026</td>
+            <td><a href="#" onclick="return false">Ремонт проточной части турбины</a> <span class="t-badge t-badge--new">Новое</span></td>
+            <td>ПАО «ТГК-1»</td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вариант 2 -->
+  <section class="demo-sec">
+    <h2>Вариант 2 — только подсветка <span class="demo-tag">минимализм</span></h2>
+    <p>Никакого бейджа: еле заметный зелёный фон и маленькая точка перед названием. Самый ненавязчивый.</p>
+    <div class="demo-grid">
+      <div>
+        <div class="demo-label">Карточка</div>
+        <article class="demo-card v2">
+          <div class="demo-card__head"><a href="#" onclick="return false"><span class="dot"></span>Ремонт проточной части турбины ТГК-1</a>
+            <span class="t-badge t-badge--src">GenTender</span></div>
+          <div class="demo-card__body">
+            <div><span class="t-label">Заказчик:</span> ПАО «Территориальная генерирующая компания № 1»</div>
+            <div><span class="t-label">Опубликовано:</span> 21.11.2026</div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <div class="demo-label">Таблица</div>
+        <table class="demo-table v2"><thead><tr><th>Опубликовано</th><th>Закупка</th><th>Заказчик</th></tr></thead>
+          <tbody><tr><td>21.11.2026</td><td><a href="#" onclick="return false"><span class="dot"></span>Ремонт проточной части турбины</a></td><td>ПАО «ТГК-1»</td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вариант 3 -->
+  <section class="demo-sec">
+    <h2>Вариант 3 — заметный <span class="demo-tag">акцент</span></h2>
+    <p>Яркий бейдж с точкой и более выраженная полоска. Хорошо, если нужно, чтобы новые бросались в глаза с первого взгляда.</p>
+    <div class="demo-grid">
+      <div>
+        <div class="demo-label">Карточка</div>
+        <article class="demo-card v3">
+          <div class="demo-card__head"><a href="#" onclick="return false">Ремонт проточной части турбины ТГК-1</a>
+            <span class="badge3">Новое</span><span class="t-badge t-badge--src">GenTender</span></div>
+          <div class="demo-card__body">
+            <div><span class="t-label">Заказчик:</span> ПАО «Территориальная генерирующая компания № 1»</div>
+            <div><span class="t-label">Опубликовано:</span> 21.11.2026</div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <div class="demo-label">Таблица</div>
+        <table class="demo-table v3"><thead><tr><th>Опубликовано</th><th>Закупка</th><th>Заказчик</th></tr></thead>
+          <tbody><tr><td>21.11.2026</td><td><a href="#" onclick="return false">Ремонт проточной части турбины</a> <span class="badge3">Новое</span></td><td>ПАО «ТГК-1»</td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вариант 4 -->
+  <section class="demo-sec">
+    <h2>Вариант 4 — подпись у даты <span class="demo-tag">совсем тихо</span></h2>
+    <p>Без фона и полосок: маленькая зелёная надпись «новое» рядом с датой публикации в таблице и в карточке.</p>
+    <div class="demo-grid">
+      <div>
+        <div class="demo-label">Карточка</div>
+        <article class="demo-card">
+          <div class="demo-card__head"><a href="#" onclick="return false">Ремонт проточной части турбины ТГК-1</a>
+            <span class="t-badge t-badge--src">GenTender</span></div>
+          <div class="demo-card__body">
+            <div><span class="t-label">Опубликовано:</span> 21.11.2026 <span class="note4">новое</span></div>
+            <div><span class="t-label">Заказчик:</span> ПАО «ТГК-1»</div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <div class="demo-label">Таблица</div>
+        <table class="demo-table v4"><thead><tr><th>Опубликовано</th><th>Закупка</th><th>Заказчик</th></tr></thead>
+          <tbody><tr><td>21.11.2026 <span class="note4">новое</span></td><td><a href="#" onclick="return false">Ремонт проточной части турбины</a></td><td>ПАО «ТГК-1»</td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
