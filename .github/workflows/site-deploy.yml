@@ -1,0 +1,69 @@
+name: Пересборка и публикация сайта
+
+# Push НЕ запускает сбор закупок (он только в tenders-update.yml по расписанию).
+# Здесь детерминированная пересборка артефактов из уже собранных данных.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Восстанавливаем архив снимков
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/archive.js restore
+
+      - name: Пересборка данных сайта
+        run: node build.js
+
+      - name: Сохраняем пересобранные файлы
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Изменений нет — пропускаем коммит"
+          else
+            git commit -m "build: пересборка данных сайта"
+            git push origin HEAD:main
+          fi
+
+      - name: Готовим сайт к публикации
+        run: |
+          mkdir -p _site
+          cp index.html log.html archive.html print.html robots.txt version.json _site/
+          cp -r css js data _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

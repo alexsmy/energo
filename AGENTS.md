@@ -39,6 +39,17 @@
 - Экспорт: `registry.csv` (Excel, `;`, BOM), `registry.json`, кнопка «Экспорт CSV» в UI.
 - GitHub: https://github.com/alexsmy/energo · GitHub Pages: https://alexsmy.github.io/energo/index.html
 
+## Сбор закупок: архитектура v2 (21.11.2026)
+
+- **План вместо «стрельбы»:** `node scripts/collect-tenders.js --dry-run` печатает точный план запросов без сети. По фактам: 193 запроса/день, +78 по понедельникам (полная архивная сверка), все в лимитах.
+- **Охват:** 78 уникальных ИНН организаций реестра (а не 20 из ручного списка). 68 ИНН-запросов в старом прогоне давали 2013 записей и ~8 полезных; 6 keyword-запросов — 84 полезных. Поэтому приоритет отдан keyword-поиску с пагинацией до `total` (`gentenderMaxPages: 6`).
+- **Инкремент:** `publish_from` считается от последнего успешного прогона минус `archiveOverlapDays: 2`, а не 30 дней. При `partial: true` — откат к полному окну (`--full-window`).
+- **Архив без лишних запросов:** переход `active → archive` делается локально (прошёл deadline или запись исчезла из выдачи), отдельный архивный опрос по ИНН — только по понедельникам (`--deep-archive`).
+- **Состояние:** `data/tender-inn-state.json` (по ИНН: последний успех, total, emptyStreak) и `data/tender-coverage.json` (сводка покрытия, 8-дневное окно с учётом выходных).
+- **Архив снимков по образцу `cam-ufa`:** `data/archive/` не лежит в git (см. `.gitignore`). Перед деплоем `node scripts/archive.js restore` забирает прошлую публикацию Pages, после сбора `snapshot` добавляет снимок за день, `prune` удаляет старше 30 дней. Просмотр — `archive.html`.
+- **Публикация артефактом:** Pages должен быть переключён на Source = GitHub Actions (сейчас у `cam-ufa` именно так). Workflow `tenders-update.yml` (cron + ручной) и `site-deploy.yml` (push) собирают `_site` и деплоят через `upload-pages-artifact`/`deploy-pages`. Триггера `push` у сбора больше нет.
+- **Тесты:** `node scripts/test-collect.js` (5 тестов, без сети).
+
 ## Карта файлов
 
 ```

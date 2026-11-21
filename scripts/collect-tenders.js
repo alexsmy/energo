@@ -16,9 +16,11 @@ const fs = require('fs');
 const path = require('path');
 const { ThrottledClient } = require('./lib/throttle');
 const { buildCustomerIndex, matchCustomer, customerDisplay } = require('./lib/match-org');
-const { dedup, makeRecord, sourceEntry, splitWordScore } = require('./lib/normalize');
+const { dedup, makeRecord, sourceEntry, splitWordScore, identityKeys } = require('./lib/normalize');
 const { platformName, canonicalPlatform, sourceRank } = require('./lib/platforms');
 const { CollectLogger } = require('./lib/logger');
+const { nonWorking, mskDate } = require('./lib/schedule');
+const innStateLib = require('./lib/inn-state');
 const tm = require('../js/text-match');
 
 const ROOT = path.join(__dirname, '..');
@@ -34,7 +36,9 @@ const opts = {
   limit: Math.max(10, parseInt(arg('limit', String(MAX_RECORDS)), 10) || MAX_RECORDS),
   source: arg('source', '') || process.env.ENERGO_SOURCE || '',
   noProbe: has('no-probe'), probeOnly: has('probe-only'),
-  refilter: has('refilter'), verbose: has('verbose')
+  refilter: has('refilter'), verbose: has('verbose'),
+  dryRun: has('dry-run'), force: has('force'),
+  allInns: has('all-inns'), deepArchive: has('deep-archive'), fullWindow: has('full-window')
 };
 const log = (...a) => { if (opts.verbose || !opts.fixture) console.log(...a); };
 
@@ -160,6 +164,16 @@ function adapterFor(name) {
 }
 
 async function main() {
+  if (opts.dryRun) {
+    const plan = require('./lib/plan');
+    console.log(plan.formatPlan(plan.makePlan()));
+    return;
+  }
+  const gate = nonWorking(new Date());
+  if (gate.reason && !opts.force) {
+    log(`Пропуск ${gate.day}: ${gate.reason}. Для ручного прогона: --force.`);
+    return;
+  }
   const keywordsData = readJson('tender-keywords.json', { keywords: [] });
   const enterprisesData = readJson('tender-enterprises.json', { items: [] });
   const settings = readJson('tender-settings.json', {});
@@ -176,6 +190,17 @@ async function main() {
     return u ? `${u.used}/${u.limit}` : '';
   };
   const foundAt = new Date().toISOString();
+
+  // Накопленное состояние обхода по ИНН + инкрементальное окно архива.
+  const innState = innStateLib.load();
+  const lastStatus = readJson('tenders-status.json', {});
+  const overlapDays = Math.max(1, parseInt(settings.archiveOverlapDays, 10) || 2);
+  const incrementalFrom = (!opts.fullWindow && !lastStatus.partial && !opts.force)
+    ? innStateLib.incrementalFrom(lastStatus.lastRun, overlapDays) : '';
+  const weekday = new Date(mskDate(new Date()) + 'T12:00:00Z').getUTCDay();
+  // Архив по каждому ИНН — раз в неделю (понедельник) или по требованию.
+  // В остальные дни релевантный архив приходит из keyword-запросов.
+  const deepArchive = opts.deepArchive || opts.force || weekday === 1;
 
   // Пересопоставление уже собранных записей без сети.
   if (opts.refilter) {
@@ -222,18 +247,20 @@ async function main() {
         keywords: terms, enterprises, settings, audit, logger,
         take: budget.take,
         fixture: opts.fixture ? path.resolve(opts.fixture) : '',
-        maxRecords: opts.limit
+        maxRecords: opts.limit,
+        innState, incrementalFrom, deepArchive, allInns: opts.allInns
       });
       results.push({
         name: result.name, available: result.available, requests: result.requests,
-        okRequests: result.okRequests, records: result.records.length, errors: result.errors.length
+        okRequests: result.okRequests, records: result.records.length,
+        errors: result.errors.length, errorItems: result.errors || []
       });
       log(`Источник ${result.name}: доступен=${result.available}, запросов=${result.requests}, записей=${result.records.length}`);
       records.push(...result.records);
     } catch (e) {
       const err = String((e && e.stack) || e || 'unknown');
       logger.entry(name, 'adapter', { ok: false, error: err });
-      results.push({ name, available: false, error: err });
+      results.push({ name, available: false, error: err, errors: 1, errorItems: [{ source: name, query: 'adapter', error: err }] });
       log(`Источник ${name}: ошибка ${err}`);
     }
   }
@@ -249,9 +276,29 @@ async function main() {
   const taggedAll = tagRecords(mergedAll.filter(r => r.phase !== 'archive' || String(r.published || r.deadline || '') >= cutoff), keywords, enterprises);
   const filtered = applyRequireKeyword(taggedAll, settings);
   const merged = filtered.kept;
+
+  // Локальный переход active → archive без лишнего запроса к API:
+  // deadline прошёл или запись была в prev.active, но сегодня не найдена.
+  const today = mskDate(new Date());
+  const foundKeys = new Set(tagged.flatMap(r => identityKeys(r)));
+  const prevActiveKeys = new Set(prev.filter(p => p.phase === 'active').flatMap(p => identityKeys(p)));
+  let localArchived = 0;
+  merged.forEach(r => {
+    if (r.phase !== 'active') return;
+    const keys = identityKeys(r);
+    const expired = !!r.deadline && String(r.deadline) < today;
+    const vanished = keys.some(k => prevActiveKeys.has(k)) && !keys.some(k => foundKeys.has(k));
+    if (expired || vanished) {
+      r.phase = 'archive';
+      r.phaseSource = expired ? 'deadline' : 'local';
+      localArchived++;
+    }
+  });
+  const corroborated = merged.filter(r => (r.sources || []).length >= 2).length;
   const titlesSuspicious = merged.filter(r => splitWordScore(r.title)).length;
   writeJson('tenders.json', { updated: foundAt, count: merged.length, records: merged });
-  const errors = results.flatMap(r => r.errors || []);
+  const errors = results.flatMap(r => r.errorItems || []);
+  const probeErrors = (logger.run.entries || []).filter(e => e.source === 'etp-probe' && e.ok === false);
   const bySource = {};
   merged.forEach(r => {
     const key = r.platformCode || r.etp || 'OTHER';
@@ -266,13 +313,37 @@ async function main() {
     bySource,
     sources: results,
     errors: errors.length,
+    probeErrors: probeErrors.length,
     probeOk,
     droppedNoKeyword: filtered.dropped,
     titlesSuspicious,
+    localArchived,
+    corroborated,
+    corroboratedPct: merged.length ? Math.round(corroborated / merged.length * 100) : 0,
+    relevantPerRequest: results.reduce((a, r) => a + (r.requests || 0), 0)
+      ? +(tagged.length / results.reduce((a, r) => a + (r.requests || 0), 0)).toFixed(2) : 0,
+    deepArchive, incrementalFrom,
     budget: budget.usage,
     partial: results.some(r => !r.available)
   };
   writeJson('tenders-status.json', Object.assign({ lastRun: foundAt, mode: opts.fixture ? 'fixture' : 'live' }, summary));
+
+  // Сводная информация по каждому ИНН — «сначала сводка, потом добивание».
+  const coverage = { updated: foundAt, inns: {} };
+  [...new Set(index.filter(x => x.inn && x.kind !== 'plant').map(x => x.inn.slice(0, 10)))].forEach(inn => {
+    const st = innState.items[inn] || {};
+    const org = index.find(x => x.inn && x.inn.slice(0, 10) === inn && x.kind !== 'plant');
+    coverage.inns[inn] = {
+      name: org ? org.name : '',
+      lastOk: st.lastOk || '',
+      lastArchive: st.lastArchive || '',
+      total: st.total != null ? st.total : null,
+      emptyStreak: st.emptyStreak || 0,
+      covered: !!st.lastOk && (Date.now() - new Date(st.lastOk).getTime()) <= 8 * 86400000
+    };
+  });
+  writeJson('tender-coverage.json', coverage);
+  innStateLib.save(innState);
   logger.finish(summary);
   log(`ИТОГО: ${tagged.length} найдено, ${merged.length} в файле (отброшено без ключевых слов: ${filtered.dropped}), площадок ${Object.keys(bySource).length}, ошибок ${errors.length}`);
   if (!records.length) log('ВНИМАНИЕ: новые совпадения не найдены (источники недоступны или выдача пуста) — сохранены предыдущие данные.');

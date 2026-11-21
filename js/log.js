@@ -56,7 +56,8 @@
         '<p style="font-size:12px;color:var(--muted);margin:5px 0 10px">' +
           'Источник: <b>' + esc(s.source || '—') + '</b> · всего <b>' + esc(s.total || 0) + '</b> · ' +
           'действующих <b>' + esc(s.active || 0) + '</b> · завершённых <b>' + esc(s.archive || 0) + '</b> · ' +
-          'совпало с реестром <b>' + esc(s.matchedOrg || 0) + '</b> · ошибок <b>' + esc(s.errors || bad) + '</b>' +
+          'совпало с реестром <b>' + esc(s.matchedOrg || 0) + '</b> · ошибок сбора <b>' + esc(s.errors != null ? s.errors : bad) + '</b>' +
+          (s.probeErrors ? ' · ошибок аудита ЭТП <b>' + esc(s.probeErrors) + '</b>' : '') +
           (s.budget ? ' · бюджет запросов: <b>' + esc(Object.entries(s.budget).map(([k, v]) => k + ' ' + v.used + '/' + v.limit).join(', ')) + '</b>' : '') +
         '</p>' +
         '<div class="t-table-wrap"><table class="table t-table" style="min-width:1500px">' +

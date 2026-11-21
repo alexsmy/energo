@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Архив закупок — Энергореестр РФ</title>
+<link rel="stylesheet" href="css/styles.css?v=2.2">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <div class="brand"><div class="brand__mark" aria-hidden="true">⚡</div>
+      <div><div class="brand__title">Энергореестр&nbsp;РФ</div><div class="brand__sub">Архив ежедневных снимков</div></div>
+    </div>
+    <div class="topbar__actions"><a class="btn btn--ghost" href="index.html#tab=tenders">← К закупкам</a></div>
+  </div>
+</header>
+<main class="wrap" style="padding-top:18px;padding-bottom:32px">
+  <h1 style="font-size:25px">Архив закупок</h1>
+  <p style="color:var(--muted);font-size:13px;max-width:900px">
+    Ежедневные снимки реестра закупок живут на GitHub и не зависят от локального устройства.
+    Каждый рабочий день добавляется новый снимок, старые удаляются по истечении срока хранения.
+    Индекс: <a href="data/archive/index.json" target="_blank" rel="noopener">data/archive/index.json</a>
+  </p>
+  <div class="t-toolbar" style="margin-top:14px">
+    <div class="toolbar__count"><strong id="snapCount">0</strong> <span>снимков</span></div>
+    <div class="t-toolbar__right"><button class="btn btn--ghost btn--sm" id="refreshArchive" type="button">Обновить</button></div>
+  </div>
+  <div class="t-table-wrap" style="margin-top:12px">
+    <table class="table t-table" style="min-width:640px">
+      <thead><tr><th>Дата (МСК)</th><th>Записей</th><th>Действующих</th><th>Завершённых</th><th>Подтверждено sources</th><th>Снимок</th></tr></thead>
+      <tbody id="snapshots"></tbody>
+    </table>
+  </div>
+  <p class="foot__meta" style="margin-top:18px">Снимки хранятся 30 дней. Полный журнал запросов — на странице <a href="log.html">лога</a>.</p>
+</main>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  async function load() {
+    const res = await fetch('data/archive/index.json?ts=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.json();
+  }
+  function render(data) {
+    const list = data.snapshots || [];
+    $('snapCount').textContent = list.length;
+    $('snapshots').innerHTML = list.slice().reverse().map(s =>
+      '<tr><td>' + esc(s.date) + (s.partial ? ' <span class="t-badge t-badge--bad">partial</span>' : '') + '</td>' +
+      '<td>' + esc(s.count) + '</td><td>' + esc(s.active) + '</td><td>' + esc(s.archive) + '</td>' +
+      '<td>' + esc(s.corroboratedPct != null ? s.corroboratedPct + '%' : '—') + '</td>' +
+      '<td><a href="data/archive/' + esc(s.file) + '" target="_blank" rel="noopener">открыть</a></td></tr>'
+    ).join('') || '<tr><td colspan="6" style="color:var(--muted)">Снимков пока нет.</td></tr>';
+  }
+  async function init() {
+    try { render(await load()); }
+    catch (e) { $('snapshots').innerHTML = '<tr><td colspan="6" style="color:#a13333">Не удалось загрузить архив: ' + esc(e.message || e) + '</td></tr>'; }
+  }
+  $('refreshArchive').addEventListener('click', init);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+</body>
+</html>

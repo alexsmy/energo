@@ -1,25 +1,27 @@
 name: Обновление закупок и аудит ЭТП
 
-# Аналогия с cam-ufa: периодический прогон скрипта, результаты фиксируются
-# в репозитории и автоматически публикуются через GitHub Pages (branch main).
+# Сбор — ТОЛЬКО по расписанию и вручную. Триггера push нет: раньше каждый
+# коммит запускал полный сбор и сжигал квоты. Публикация артефактом (как в
+# cam-ufa): архив снимков восстанавливается из прошлой публикации Pages,
+# добавляется сегодняшний снимок, старые удаляются. Всё живёт на GitHub.
 on:
-  push:
-    branches: [main]
   schedule:
-    # Раз в сутки в 06:00 по Москве = 03:00 UTC.
+    # 06:00 по Москве = 03:00 UTC. GitHub часто задерживает cron — внутри
+    # скрипта есть гейт нерабочих дней и инкрементальное окно.
     - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  actions: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: tenders-update
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  collect:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -29,10 +31,17 @@ jobs:
         with:
           node-version: '20'
 
+      # Архив НЕ лежит в git. Берём последнюю публикацию main и переносим
+      # data/archive/ в текущую сборку — иначе архив каждый раз начинался бы с нуля.
+      - name: Восстанавливаем архив снимков
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/archive.js restore
+
       - name: Сбор закупок и проверка ЭТП
         run: node scripts/collect-tenders.js --limit=2000
 
-      - name: Обновление манифеста версии
+      - name: Обновление манифеста версии и метки запуска
         run: |
           node -e "
             const fs=require('fs');
@@ -43,13 +52,19 @@ jobs:
             p.message='Данные закупок обновлены. Страница перезагрузится автоматически.';
             fs.writeFileSync('version.json',JSON.stringify(p,null,2)+'\n');
           "
+          date -u +%F > last-run.txt
 
       - name: Пересборка данных сайта
-        # build.js подхватывает version из version.json, поэтому она совпадает
-        # с meta.version в js/data.js — иначе автообновление циклит страницу.
         run: node build.js
 
-      - name: Публикация изменений
+      - name: Добавляем снимок в архив и чистим старое
+        run: |
+          node scripts/archive.js snapshot
+          node scripts/archive.js prune
+          node scripts/archive.js reindex
+          echo "Снимков в архиве: $(node -e "console.log(JSON.parse(require('fs').readFileSync('data/archive/index.json','utf8')).snapshots.length)")"
+
+      - name: Сохраняем состояние в репозиторий
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -61,14 +76,23 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Поддерживаем расписание активным
+      - name: Готовим сайт к публикации
         run: |
-          if [ ! -f last-run.txt ] || [ $(( ($(date +%s) - $(date -r last-run.txt +%s)) / 86400 )) -ge 7 ]; then
-            date -u +%F > last-run.txt
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add last-run.txt
-            git commit -m "keepalive $(date -u +%F)" || true
-            git push origin HEAD:main
-          fi
+          mkdir -p _site
+          cp index.html log.html archive.html print.html robots.txt version.json _site/
+          cp -r css js data _site/
 
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
