@@ -1,0 +1,252 @@
+{
+  "batch": "contacts-existing",
+  "queries": [
+    "FALLBACK: браузер этого субагента отключён ([browser.disconnected]), Google AI-режим (udm=50) недоступен; использованы DuckDuckGo HTML, официальные сайты и ЕГРЮЛ/тендерные агрегаторы. Ниже — фактически выполненные поисковые запросы.",
+    "Промэнергоремонт главный конструктор Долженков",
+    "Промэнергоремонт Курск contacts@mail.ru закупки b2b",
+    "\"Промэнергоремонт\" \"ИНН 4632014950\"",
+    "\"ЕвроСибЭнерго-инжиниринг\" главный инженер главный конструктор e-mail",
+    "\"ЕвроСибЭнерго-инжиниринг\" закупки контакт office@enplus-td.ru",
+    "Русь-Турбо закупки ЭТП b2b-center",
+    "\"Русь-Турбо\" ООО ИНН 7802588950 тендеры площадка",
+    "ТГК-2 Энергоремонт закупки площадка",
+    "site:zakupki.gov.ru \"ТГК-2 Энергоремонт\" 32616136294",
+    "\"tender@orgres-f.ru\" ОРГРЭС закупки",
+    "\"Русь-Турбо\" Закупки тендеры",
+    "site:b2b-center.ru/firms \"Русь-Турбо\"",
+    "\"Интер РАО Сервис\" закупки контакт"
+  ],
+  "companies": [
+    {
+      "id": "R-PROMER",
+      "fields": {
+        "email": "",
+        "etp": "B2B;RTS",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://promenergoremont.ru/",
+        "https://www.b2b-center.ru/firms/ooo-promenergoremont/74030/ (профиль ООО «Промэнергоремонт», ИНН 4632014950)",
+        "https://www.rosatom.rts-tender.ru/firms/ooo-promenergoremont/74030/ (профиль в секции «Росатом» ЭП «РТС-тендер»)",
+        "data/research-2026/repair-a.json (предыдущий аудит)"
+      ],
+      "status": "ok: подтверждены профили участника с совпадающим ИНН на B2B-Center и РТС-тендер (секция Росатом); это регистрация/участие, а не оформление закупок как заказчика. Главный конструктор и выделенный закупочный контакт не найдены; телефон +7 (4712) 37-74-97 и e-mail promenergoremont_pr@mail.ru / promenergoremont@list.ru на сайте обозначены как отдел продаж, поэтому в proc* не занесены."
+    },
+    {
+      "id": "R-ESE",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": "office@enplus-td.ru"
+      },
+      "sources": [
+        "https://td.enplus.ru/ (официальный сайт ООО «ЭН+ Торговый дом»: контакты и разделы «Закупки товаров/работ и услуг»)",
+        "https://enplusgroup.com/",
+        "https://checko.ru/company/evrosibenergo-inzhiniring-1027739107582 (ЕГРЮЛ: только генеральный директор, почта secretarese-i@hq.basel.ru не отнесена к компании)",
+        "data/research-2026/oem.json (аудит 21.11.2026: закупки централизованы через ТД Эн+)"
+      ],
+      "status": "partial: найден только общий закупочный e-mail централизованного закупщика группы Эн+ (ТД Эн+); собственного e-mail, главного инженера, главного конструктора и именного закупочного контакта у ООО «ЕвроСибЭнерго-инжиниринг» не найдено."
+    },
+    {
+      "id": "R-RUSSTURBO",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://russturbo.ru/ (официальный сайт: раздел «Подбор, закупка оборудования» как услуга, собственной страницы закупок нет)",
+        "https://moy-zakupki.ru/company/7802588950/ (по ИНН 7802588950 данных о закупках/контрактах нет)"
+      ],
+      "status": "no-data: ни одна конкретная ЭТП для ИНН 7802588950 не подтверждена; присутствие на B2B-Center остаётся неподтверждённым, как и в предыдущем аудите."
+    },
+    {
+      "id": "R-TGK2ER",
+      "fields": {
+        "email": "",
+        "etp": "ROS;RTS;EIS",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://moy-zakupki.ru/company/7606118807/ (49 извещений по 223-ФЗ: ЭТП АО ЕЭТП/Росэлторг, ООО «РТС-тендер», ЭТП «Торги 223»; публикация в ЕИС)",
+        "https://zakupki.gov.ru/epz/order/notice/notice223/common-info.html?regNumber=32616136294",
+        "https://www.b2b-center.ru/search/number/l32616582038-1/ (зеркало извещения, код B2B в etp не внесён: это агрегатор)"
+      ],
+      "status": "ok: реально размещает закупки на ЭТП АО «ЕЭТП» (Росэлторг → ROS) и РТС-тендер (RTS), извещения 223-ФЗ публикуются в ЕИС (EIS). Коды GPB и SBER из текущей карточки подтверждения не получили; B2B-Center — только зеркало извещений."
+    },
+    {
+      "id": "O-SILMASH",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://power-m.ru/contacts/ (структурные подразделения и дирекция по закупкам — главный инженер не указан)",
+        "https://power-m.ru/suppliers/ (ЭТП «Фабрикант» и «ТЭК-Торг» подтверждены)",
+        "data/research-2026/oem.json (главный инженер — «не подтверждено»; генеральный конструктор Ивановский А.А.)"
+      ],
+      "status": "no-data: единая должность главного инженера в открытых источниках не публикуется; confirmed только генеральный конструктор (уже заполнено в карточке)."
+    },
+    {
+      "id": "O-LMZ",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "data/research-2026/oem.json (АО «ЛМЗ» ликвидировано 24.06.2024; площадка в составе АО «Силовые машины»)",
+        "https://power-m.ru/contacts/ (контакты закупок ЛМЗ отнесены к головному обществу, должности главного инженера/конструктора нет)"
+      ],
+      "status": "no-data: юрлицо ликвидировано, действующих штатных единиц главного инженера и главного конструктора нет; не выдумывались."
+    },
+    {
+      "id": "O-KTZ",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "+7 (4842) 767-303",
+        "procEmail": "Trifonova_YA@paoktz.ru"
+      },
+      "sources": [
+        "https://paoktz.ru/suppliers/contacts (Дирекция по закупкам и логистике: +7 (4842) 767-303; e-mail помощника руководителя Trifonova_YA@paoktz.ru; отдел логистики +7 (4842) 55-41-84)",
+        "https://paoktz.ru/company/top-management/ (руководство: только генеральный директор Сербин И.С.)",
+        "https://paoktz.ru/ (Извещения о закупках → ТЭК-Торг; ЭТП «Фабрикант»)"
+      ],
+      "status": "partial: главный инженер не опубликован (сведения о топ-менеджменте закрыты по ПП РФ №1102). Заполнены телефон дирекции по закупкам и рабочий e-mail помощника руководителя; ФИО контактного сотрудника полностью на сайте не приведено."
+    },
+    {
+      "id": "O-ORGRES",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://orgres-f.ru/",
+        "https://orgres-f.ru/contacts/ (только +7 (495) 811-00-99 и info@orgres-f.ru)",
+        "data/research-2026/oem.json (tender@orgres-f.ru указывался в предыдущем аудите, но на текущем сайте не подтверждён; свои закупки как заказчика не ведутся)"
+      ],
+      "status": "no-data: компания — поставщик по 44-ФЗ/223-ФЗ, собственных закупок как заказчика и привязки к ЭТП по ИНН 7725415380 не подтверждено; главный инженер/конструктор и выделенный закупочный контакт не публикуются."
+    },
+    {
+      "id": "O-CKTI",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://ckti.ru/ (контакты: +7 (812) 717-23-79, general@ckti.ru; страница в cp1251, ФИО не приведены)",
+        "data/research-2026/oem.json (Кузнецов А.Н. в актуальных источниках не подтверждён; единой штатной должности главного конструктора нет; tender@ckti.ru не подтверждён)"
+      ],
+      "status": "no-data: главный инженер и главный конструктор по-прежнему не подтверждены; е-mail general@ckti.ru уже заполнен в карточке."
+    },
+    {
+      "id": "O-AEM",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://rosatommd.ru/contacts/ (общие телефон/факс и RosatomMD@rosatom.ru)",
+        "https://rosatommd.ru/suppliers/ (закупки по ЕОСЗ на zakupki.rosatom.ru; выделенных контактов нет)",
+        "data/research-2026/oem.json (главный инженер/конструктор — функции профильных КБ; zakupki-info@rosatom.ru не подтверждён)"
+      ],
+      "status": "no-data: штатные должности главного инженера и главного конструктора в дивизионе не подтверждены (функции за ОКБ «Гидропресс», ОКБМ Африкантов); выделенный закупочный контакт, телефон и e-mail на страницах «Поставщикам» отсутствуют."
+    },
+    {
+      "id": "O-ZTL",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://power-m.ru/contacts/ (дирекция по закупкам: контакты указаны для ЛМЗ и ЭЛС, для площадки ЗТЛ — нет)",
+        "https://power-m.ru/suppliers/ (общие ЭТП Фабрикант и ТЭК-Торг головного общества)",
+        "data/research-2026/oem.json (ЗТЛ — подразделение АО «Силовые машины», отдельного сайта и закупок нет)"
+      ],
+      "status": "no-data: отдельный главный инженер и закупочный контакт площадки ЗТЛ в открытых источниках не найдены; общий mail@power-m.ru уже есть в карточке."
+    },
+    {
+      "id": "O-ELSIB",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://elsib.ru/ru/ (контакты: техническая дирекция +7 (383) 227-81-58; должность «главный конструктор» не указана)",
+        "data/research-2026/oem.json (технический директор Чириков А.В. уже заполнен в chiefEngineer; закупки — Манакова Ю.В.)"
+      ],
+      "status": "no-data: штатный главный конструктор не публикуется; техническая дирекция отнесена к уже заполненному chiefEngineer."
+    },
+    {
+      "id": "R-IRAO-SERVICE",
+      "fields": {
+        "email": "",
+        "etp": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "+7 (495) 664-88-40",
+        "procEmail": "pcentre@interrao.ru"
+      },
+      "sources": [
+        "https://interrao-zakupki.ru/ (ООО «Интер РАО — Центр управления закупками»: +7 (495) 664-88-40, pcentre@interrao.ru; площадки etpgpb.ru, irao.tektorg.ru, etp.roseltorg.ru)",
+        "https://interrao-zakupki.ru/purchase/edinoe-okno-po-vzaimodeystviyu-s-postavschikami/ (контакты дирекции по работе с поставщиками группы)"
+      ],
+      "status": "partial: закупки ООО «Интер РАО Сервис» централизованы в Центре управления закупками группы — найдены общий телефон и e-mail центра. Имени контактного сотрудника именно по этой компании нет; должности главного инженера и главного конструктора для сервисной компании не применимы, поэтому поля пустые."
+    }
+  ]
+}
