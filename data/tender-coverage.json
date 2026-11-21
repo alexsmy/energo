@@ -1,0 +1,629 @@
+{
+  "updated": "2026-11-21T10:24:07.112Z",
+  "inns": {
+    "1434031363": {
+      "name": "ДГК",
+      "lastOk": "2026-11-21T10:28:51.011Z",
+      "lastArchive": "2026-11-21T10:28:51.011Z",
+      "total": 114,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "1435028701": {
+      "name": "Якутскэнерго",
+      "lastOk": "2026-11-21T10:28:53.302Z",
+      "lastArchive": "2026-11-21T10:28:53.302Z",
+      "total": 104,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "1435117944": {
+      "name": "Сахаэнерго",
+      "lastOk": "2026-11-21T10:29:04.778Z",
+      "lastArchive": "2026-11-21T10:29:04.778Z",
+      "total": 58,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "1657036630": {
+      "name": "Татэнерго",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "1657048240": {
+      "name": "КЭР-Холдинг",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "1901067718": {
+      "name": "Енисейская ТГК (ТГК-13)",
+      "lastOk": "2026-11-21T10:29:50.691Z",
+      "lastArchive": "2026-11-21T10:29:50.691Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "2320109650": {
+      "name": "Интер РАО",
+      "lastOk": "2026-11-21T10:29:32.179Z",
+      "lastArchive": "2026-11-21T10:29:32.179Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "2420002597": {
+      "name": "Богучанская ГЭС",
+      "lastOk": "2026-11-21T10:29:09.181Z",
+      "lastArchive": "2026-11-21T10:29:09.181Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "2457058356": {
+      "name": "НТЭК",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "2460066195": {
+      "name": "РусГидро",
+      "lastOk": "2026-11-21T10:28:48.477Z",
+      "lastArchive": "2026-11-21T10:28:48.477Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "2462028886": {
+      "name": "СибЭР",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "2607018122": {
+      "name": "ОГК-2",
+      "lastOk": "2026-11-21T10:29:20.684Z",
+      "lastArchive": "2026-11-21T10:29:20.684Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "2801133630": {
+      "name": "РАО ЭС Востока",
+      "lastOk": "2026-11-21T10:29:13.783Z",
+      "lastArchive": "2026-11-21T10:29:13.783Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "3800000220": {
+      "name": "Иркутскэнерго",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "3808229774": {
+      "name": "Байкальская энергетическая компания",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "3906385641": {
+      "name": "Эн+ Груп",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4026007424": {
+      "name": "Калужский турбинный завод",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4100000668": {
+      "name": "Камчатскэнерго",
+      "lastOk": "2026-11-21T10:28:57.878Z",
+      "lastArchive": "2026-11-21T10:28:57.878Z",
+      "total": 40,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "4200000333": {
+      "name": "Кузбассэнерго",
+      "lastOk": "2026-11-21T10:29:48.388Z",
+      "lastArchive": "2026-11-21T10:29:48.388Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "7721632827": {
+      "name": "Концерн «Росэнергоатом»",
+      "lastOk": "2026-11-21T10:28:41.577Z",
+      "lastArchive": "2026-11-21T10:28:41.577Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "6829012680": {
+      "name": "РИР Энерго",
+      "lastOk": "2026-11-21T10:28:44.104Z",
+      "lastArchive": "2026-11-21T10:28:44.104Z",
+      "total": 165,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "9701087623": {
+      "name": "Росатом Возобновляемая энергия",
+      "lastOk": "2026-11-21T10:28:46.377Z",
+      "lastArchive": "2026-11-21T10:28:46.377Z",
+      "total": 50,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "4909047148": {
+      "name": "Магаданэнерго",
+      "lastOk": "2026-11-21T10:28:55.577Z",
+      "lastArchive": "2026-11-21T10:28:55.577Z",
+      "total": 41,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "6500000024": {
+      "name": "Сахалинэнерго",
+      "lastOk": "2026-11-21T10:29:00.190Z",
+      "lastArchive": "2026-11-21T10:29:00.190Z",
+      "total": 85,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "8700000339": {
+      "name": "Чукотэнерго",
+      "lastOk": "2026-11-21T10:29:02.279Z",
+      "lastArchive": "2026-11-21T10:29:02.279Z",
+      "total": 7,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "4908000718": {
+      "name": "Колымаэнерго",
+      "lastOk": "2026-11-21T10:29:06.882Z",
+      "lastArchive": "2026-11-21T10:29:06.882Z",
+      "total": 6,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7719019846": {
+      "name": "Передвижная энергетика",
+      "lastOk": "2026-11-21T10:29:11.482Z",
+      "lastArchive": "2026-11-21T10:29:11.482Z",
+      "total": 2,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7703323030": {
+      "name": "Газпром энергохолдинг",
+      "lastOk": "2026-11-21T10:29:16.078Z",
+      "lastArchive": "2026-11-21T10:29:16.078Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "7705035012": {
+      "name": "Мосэнерго",
+      "lastOk": "2026-11-21T10:29:18.386Z",
+      "lastArchive": "2026-11-21T10:29:18.386Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "7841312071": {
+      "name": "ТГК-1",
+      "lastOk": "2026-11-21T10:29:23.206Z",
+      "lastArchive": "2026-11-21T10:29:23.206Z",
+      "total": 128,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7720518494": {
+      "name": "МОЭК",
+      "lastOk": "2026-11-21T10:29:25.497Z",
+      "lastArchive": "2026-11-21T10:29:25.497Z",
+      "total": 66,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "5003046281": {
+      "name": "Газпром теплоэнерго",
+      "lastOk": "2026-11-21T10:29:27.581Z",
+      "lastArchive": "2026-11-21T10:29:27.581Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "5190141373": {
+      "name": "Мурманская ТЭЦ",
+      "lastOk": "2026-11-21T10:29:29.886Z",
+      "lastArchive": "2026-11-21T10:29:29.886Z",
+      "total": 15,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7704784450": {
+      "name": "Интер РАО — Электрогенерация",
+      "lastOk": "2026-11-21T10:29:34.797Z",
+      "lastArchive": "2026-11-21T10:29:34.797Z",
+      "total": 584,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "0277077282": {
+      "name": "Башкирская генерирующая компания",
+      "lastOk": "2026-11-21T10:29:37.108Z",
+      "lastArchive": "2026-11-21T10:29:37.108Z",
+      "total": 106,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "5406323202": {
+      "name": "ТГК-11",
+      "lastOk": "2026-11-21T10:29:39.400Z",
+      "lastArchive": "2026-11-21T10:29:39.400Z",
+      "total": 92,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7017373959": {
+      "name": "Томская генерация",
+      "lastOk": "2026-11-21T10:29:41.697Z",
+      "lastArchive": "2026-11-21T10:29:41.697Z",
+      "total": 97,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "6315376946": {
+      "name": "Т Плюс",
+      "lastOk": "2026-11-21T10:29:44.000Z",
+      "lastArchive": "2026-11-21T10:29:44.000Z",
+      "total": 1020,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "7709832989": {
+      "name": "Алтайский филиал СГК",
+      "lastOk": "2026-11-21T10:29:46.086Z",
+      "lastArchive": "2026-11-21T10:29:46.086Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "5405270340": {
+      "name": "СГК-Новосибирск",
+      "lastOk": "2026-11-21T10:29:52.995Z",
+      "lastArchive": "2026-11-21T10:29:52.995Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "8602067092": {
+      "name": "Юнипро",
+      "lastOk": "2026-11-21T10:29:55.289Z",
+      "lastArchive": "2026-11-21T10:29:55.289Z",
+      "total": 0,
+      "emptyStreak": 2,
+      "covered": true
+    },
+    "7203162698": {
+      "name": "Форвард Энерго",
+      "lastOk": "2026-11-21T10:29:57.795Z",
+      "lastArchive": "2026-11-21T10:29:57.795Z",
+      "total": 103,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "6671156423": {
+      "name": "ЭЛ5-Энерго",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7606053324": {
+      "name": "ТГК-2",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7534018889": {
+      "name": "ТГК-14",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7706697347": {
+      "name": "Красноярская ГЭС",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7838129301": {
+      "name": "ТЭК СПб",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "9102070194": {
+      "name": "КрымТЭЦ",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7704863782": {
+      "name": "Технопромэкспорт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5029112443": {
+      "name": "Атомэнергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6345012488": {
+      "name": "Гидроремонт-ВКК",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7728549952": {
+      "name": "Кварц Групп",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7733667768": {
+      "name": "ГЭХ ТЭР",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7702721214": {
+      "name": "ЭнергоремонТ Плюс",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7707625521": {
+      "name": "Газпром энергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7705915881": {
+      "name": "РОТЕК",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6660001308": {
+      "name": "Уралэнергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7730014175": {
+      "name": "Электроцентромонтаж",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7802588950": {
+      "name": "Русь-Турбо",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7801128069": {
+      "name": "ЛЭР-Турбо",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7805370007": {
+      "name": "Турбоэнергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7724245329": {
+      "name": "Теплоэнергомонтаж",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4632014950": {
+      "name": "Промэнергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6659003244": {
+      "name": "Уралтурбо",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7701299247": {
+      "name": "ЕвроСибЭнерго-инжиниринг",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7606118807": {
+      "name": "ТГК-2 Энергоремонт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7702080289": {
+      "name": "Завод турбинных лопаток",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6673100680": {
+      "name": "Уральский турбинный завод",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7804677772": {
+      "name": "Ленинградский металлический завод",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7725415380": {
+      "name": "Фирма ОРГРЭС",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7725054856": {
+      "name": "ВТИ",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7825660956": {
+      "name": "НПО ЦКТИ",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6154023009": {
+      "name": "ТКЗ «Красный котельщик»",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5036040729": {
+      "name": "ЗиО-Подольск",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "9706047504": {
+      "name": "Росатом Машиностроение",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5403102702": {
+      "name": "Элсиб",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7704312545": {
+      "name": "Калининградская генерация",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7706720370": {
+      "name": "Интер РАО Сервис",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    }
+  }
+}

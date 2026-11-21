@@ -1,0 +1,243 @@
+{
+  "updated": "2026-11-21T10:24:07.112Z",
+  "items": {
+    "1434031363": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:51.011Z",
+      "lastArchive": "2026-11-21T10:28:51.011Z",
+      "total": 114,
+      "emptyStreak": 0
+    },
+    "1435028701": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:53.302Z",
+      "lastArchive": "2026-11-21T10:28:53.302Z",
+      "total": 104,
+      "emptyStreak": 0
+    },
+    "1435117944": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:04.778Z",
+      "lastArchive": "2026-11-21T10:29:04.778Z",
+      "total": 58,
+      "emptyStreak": 0
+    },
+    "1901067718": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:50.691Z",
+      "lastArchive": "2026-11-21T10:29:50.691Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "2320109650": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:32.179Z",
+      "lastArchive": "2026-11-21T10:29:32.179Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "2420002597": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:09.181Z",
+      "lastArchive": "2026-11-21T10:29:09.181Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "2460066195": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:48.477Z",
+      "lastArchive": "2026-11-21T10:28:48.477Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "2607018122": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:20.684Z",
+      "lastArchive": "2026-11-21T10:29:20.684Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "2801133630": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:13.783Z",
+      "lastArchive": "2026-11-21T10:29:13.783Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "4100000668": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:57.878Z",
+      "lastArchive": "2026-11-21T10:28:57.878Z",
+      "total": 40,
+      "emptyStreak": 0
+    },
+    "4200000333": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:48.388Z",
+      "lastArchive": "2026-11-21T10:29:48.388Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "7721632827": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:41.577Z",
+      "lastArchive": "2026-11-21T10:28:41.577Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "6829012680": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:44.104Z",
+      "lastArchive": "2026-11-21T10:28:44.104Z",
+      "total": 165,
+      "emptyStreak": 0
+    },
+    "9701087623": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:46.377Z",
+      "lastArchive": "2026-11-21T10:28:46.377Z",
+      "total": 50,
+      "emptyStreak": 0
+    },
+    "4909047148": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:28:55.577Z",
+      "lastArchive": "2026-11-21T10:28:55.577Z",
+      "total": 41,
+      "emptyStreak": 0
+    },
+    "6500000024": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:00.190Z",
+      "lastArchive": "2026-11-21T10:29:00.190Z",
+      "total": 85,
+      "emptyStreak": 0
+    },
+    "8700000339": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:02.279Z",
+      "lastArchive": "2026-11-21T10:29:02.279Z",
+      "total": 7,
+      "emptyStreak": 0
+    },
+    "4908000718": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:06.882Z",
+      "lastArchive": "2026-11-21T10:29:06.882Z",
+      "total": 6,
+      "emptyStreak": 0
+    },
+    "7719019846": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:11.482Z",
+      "lastArchive": "2026-11-21T10:29:11.482Z",
+      "total": 2,
+      "emptyStreak": 0
+    },
+    "7703323030": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:16.078Z",
+      "lastArchive": "2026-11-21T10:29:16.078Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "7705035012": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:18.386Z",
+      "lastArchive": "2026-11-21T10:29:18.386Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "7841312071": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:23.206Z",
+      "lastArchive": "2026-11-21T10:29:23.206Z",
+      "total": 128,
+      "emptyStreak": 0
+    },
+    "7720518494": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:25.497Z",
+      "lastArchive": "2026-11-21T10:29:25.497Z",
+      "total": 66,
+      "emptyStreak": 0
+    },
+    "5003046281": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:27.581Z",
+      "lastArchive": "2026-11-21T10:29:27.581Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "5190141373": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:29.886Z",
+      "lastArchive": "2026-11-21T10:29:29.886Z",
+      "total": 15,
+      "emptyStreak": 0
+    },
+    "7704784450": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:34.797Z",
+      "lastArchive": "2026-11-21T10:29:34.797Z",
+      "total": 584,
+      "emptyStreak": 0
+    },
+    "0277077282": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:37.108Z",
+      "lastArchive": "2026-11-21T10:29:37.108Z",
+      "total": 106,
+      "emptyStreak": 0
+    },
+    "5406323202": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:39.400Z",
+      "lastArchive": "2026-11-21T10:29:39.400Z",
+      "total": 92,
+      "emptyStreak": 0
+    },
+    "7017373959": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:41.697Z",
+      "lastArchive": "2026-11-21T10:29:41.697Z",
+      "total": 97,
+      "emptyStreak": 0
+    },
+    "6315376946": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:44.000Z",
+      "lastArchive": "2026-11-21T10:29:44.000Z",
+      "total": 1020,
+      "emptyStreak": 0
+    },
+    "7709832989": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:46.086Z",
+      "lastArchive": "2026-11-21T10:29:46.086Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "5405270340": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:52.995Z",
+      "lastArchive": "2026-11-21T10:29:52.995Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "8602067092": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:55.289Z",
+      "lastArchive": "2026-11-21T10:29:55.289Z",
+      "total": 0,
+      "emptyStreak": 2
+    },
+    "7203162698": {
+      "queries": 2,
+      "lastOk": "2026-11-21T10:29:57.795Z",
+      "lastArchive": "2026-11-21T10:29:57.795Z",
+      "total": 103,
+      "emptyStreak": 0
+    }
+  }
+}
