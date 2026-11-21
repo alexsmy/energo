@@ -8,8 +8,10 @@
   const srcMap = Object.fromEntries((R.sources || []).map(s => [s.id, s]));
 
   const $ = (id) => document.getElementById(id);
+  const KINDS = ['', 'holding', 'company', 'plant', 'repair', 'oem'];
   const state = {
     tab: 'all',
+    kind: '',
     q: '',
     holding: '',
     region: '',
@@ -105,6 +107,7 @@
     try { saved = JSON.parse(sessionStorage.getItem(STATE_KEY) || 'null'); sessionStorage.removeItem(STATE_KEY); } catch (e) { /* noop */ }
     if (!saved) return;
     Object.assign(state, {
+      kind: KINDS.includes(saved.kind) ? saved.kind : '',
       q: saved.q || '', holding: saved.holding || '', region: saved.region || '',
       type: saved.type || '', method: saved.method || '', etp: saved.etp || '',
       onlyOrg: !!saved.onlyOrg,
@@ -151,11 +154,12 @@
   }
 
   /* ---------- filtering ---------- */
-  function inTab(it) {
-    if (state.tab === 'map') return true;
-    if (state.tab === 'gen') return isGen(it);
-    if (state.tab === 'rep') return isRepair(it);
-    if (state.tab === 'oem') return isOem(it);
+  function inKind(it) {
+    if (state.kind === 'holding') return it.kind === 'holding';
+    if (state.kind === 'company') return it.kind === 'company';
+    if (state.kind === 'plant') return it.kind === 'plant';
+    if (state.kind === 'repair') return isRepair(it);
+    if (state.kind === 'oem') return isOem(it);
     return true;
   }
 
@@ -170,7 +174,7 @@
   }
 
   function matches(it) {
-    if (!inTab(it)) return false;
+    if (!inKind(it)) return false;
     if (state.onlyOrg && it.kind === 'plant') return false;
     if (state.holding && it.holdingName !== state.holding) return false;
     if (state.region && it.region !== state.region) return false;
@@ -201,13 +205,12 @@
   /* ---------- map ---------- */
   const LAYERS = [
     { id: 'holding', label: 'Холдинги', color: '#0e3a52', test: i => i.kind === 'holding' },
-    { id: 'gen', label: 'Генерация', color: '#1f6f9c', test: i => i.kind !== 'plant' && isGen(i) },
-    { id: 'plant', label: 'Станции', color: '#e2701f', test: i => i.kind === 'plant' },
     { id: 'repair', label: 'Ремонт', color: '#7a4a1c', test: i => isRepair(i) },
-    { id: 'oem', label: 'ОЕМ / производство', color: '#5b3d91', test: i => isOem(i) }
+    { id: 'oem', label: 'ОЕМ / производство', color: '#5b3d91', test: i => isOem(i) },
+    { id: 'plant', label: 'Станции', color: '#e2701f', test: i => i.kind === 'plant' },
+    { id: 'gen', label: 'Генерация', color: '#1f6f9c', test: i => i.kind !== 'plant' && isGen(i) }
   ];
-  const layerOn = Object.fromEntries(LAYERS.map(l => [l.id, true]));
-  const mapState = { map: null, groups: {}, base: {}, baseId: 'osm', ready: false, fitKey: '', pending: null, lastListKey: '', raf: 0 };
+  const mapState = { map: null, groups: {}, base: {}, osmChain: [], osmIdx: 0, baseId: 'osm', ready: false, fitKey: '', pending: null, lastListKey: '', raf: 0 };
 
   function pinType(it) {
     if (it.kind === 'holding') return ['holding', '★'];
@@ -261,24 +264,33 @@
       center: [61.5, 95], zoom: 3, minZoom: 2, maxZoom: 13,
       zoomControl: true, worldCopyJump: true, attributionControl: true
     });
-    // Базовый слой на данных OSM, но через устойчивый CDN CARTO:
-    //tile.openstreetmap.org у части провайдеров отдаёт 403, Esri-слои работают.
-    // Basic-слой: обычные OSM-тайлы без ключа. CARTO показывал водяной знак «API KEY».
-    mapState.base.osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19, subdomains: 'abc',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    // Основная подложка — канонический OSM без ключа. Резерв: OSM.de,
+    // затем Esri World_Street_Map (не зависит от OSM). CARTO не использовать:
+    // он отдаёт «API KEY REQUIRED» вместо тайлов.
+    const osmSources = [
+      { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', max: 19,
+        attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>' },
+      { url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png', max: 19,
+        attr: '&copy; OpenStreetMap contributors' },
+      { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', max: 18,
+        attr: 'Tiles &copy; Esri' }
+    ];
+    mapState.osmChain = osmSources.map(s => L.tileLayer(s.url, { maxZoom: s.max, attribution: s.attr }));
+    mapState.osmIdx = 0;
+    let switching = false;
+    mapState.osmChain.forEach((layer, idx) => {
+      let errors = 0;
+      layer.on('tileerror', () => {
+        if (switching || mapState.baseId !== 'osm' || idx !== mapState.osmIdx) return;
+        if (++errors < 3 || idx >= mapState.osmChain.length - 1) return;
+        switching = true;
+        mapState.map.removeLayer(layer);
+        mapState.osmIdx = idx + 1;
+        mapState.osmChain[mapState.osmIdx].addTo(mapState.map);
+        switching = false;
+      });
     });
-    mapState.base.osmAlt = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
-      maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
-    });
-    let osmFallbackDone = false;
-    mapState.base.osm.on('tileerror', () => {
-      if (osmFallbackDone || mapState.baseId !== 'osm') return;
-      osmFallbackDone = true;
-      mapState.map.removeLayer(mapState.base.osm);
-      mapState.base.osmAlt.addTo(mapState.map);
-      mapState.base.osm = mapState.base.osmAlt;
-    });
+    mapState.base.osm = mapState.osmChain[0];
     mapState.base.sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 18, attribution: 'Imagery &copy; Esri'
     });
@@ -314,7 +326,6 @@
       new ResizeObserver(() => { if (!$('mapView').hidden) map.invalidateSize({ pan: false }); })
         .observe($('map'));
     }
-    buildLayers();
     buildBasemap();
   }
 
@@ -324,27 +335,11 @@
       b.addEventListener('click', () => {
         const id = b.dataset.base;
         if (id === mapState.baseId) return;
-        Object.values(mapState.base).forEach(l => mapState.map.removeLayer(l));
-        mapState.base[id].addTo(mapState.map);
+        [].concat(...Object.values(mapState.base)).forEach(l => mapState.map.removeLayer(l));
+        const target = id === 'osm' ? mapState.osmChain[mapState.osmIdx] : mapState.base[id];
+        target.addTo(mapState.map);
         mapState.baseId = id;
         wrap.querySelectorAll('[data-base]').forEach(x => x.classList.toggle('is-active', x === b));
-      });
-    });
-  }
-
-  function buildLayers() {
-    const wrap = $('layers');
-    wrap.innerHTML = LAYERS.map(l =>
-      '<label class="layer' + (layerOn[l.id] ? ' is-on' : '') + '" style="--c:' + l.color + '">' +
-        '<input type="checkbox" data-layer="' + l.id + '"' + (layerOn[l.id] ? ' checked' : '') + '>' +
-        '<i></i>' + esc(l.label) +
-      '</label>'
-    ).join('');
-    wrap.querySelectorAll('input[data-layer]').forEach(inp => {
-      inp.addEventListener('change', () => {
-        layerOn[inp.dataset.layer] = inp.checked;
-        inp.closest('.layer').classList.toggle('is-on', inp.checked);
-        render();
       });
     });
   }
@@ -352,7 +347,7 @@
   function renderMap(list) {
     const map = mapState.map;
     if (!map) return;
-    const visible = list.filter(it => it.lat != null && it.lon != null && LAYERS.some(l => l.test(it) && layerOn[l.id]));
+    const visible = list.filter(it => it.lat != null && it.lon != null);
     const listKey = visible.length + ':' + visible.map(it => it.id).join(',');
     if (listKey === mapState.lastListKey) return;
     mapState.lastListKey = listKey;
@@ -360,7 +355,7 @@
     LAYERS.forEach(l => { if (mapState.groups[l.id]) mapState.groups[l.id].clearLayers(); });
     const bounds = [];
     visible.forEach(it => {
-      const layer = LAYERS.find(l => l.test(it) && layerOn[l.id]);
+      const layer = LAYERS.find(l => l.test(it)) || LAYERS[LAYERS.length - 1];
       const m = L.marker([it.lat, it.lon], { icon: pinIcon(it), title: it.name, riseOnHover: true, keyboard: false });
       m.bindPopup(popupHTML(it), { maxWidth: 280, minWidth: 250, closeButton: true, autoPan: true, autoPanPadding: [24, 24] });
       mapState.groups[layer.id].addLayer(m);
@@ -405,7 +400,7 @@
     const wrap = $('cards');
     if (!list.length) { wrap.innerHTML = ''; return; }
 
-    if (state.tab === 'rep' || state.tab === 'oem' || state.sort !== 'path') {
+    if (state.kind === 'repair' || state.kind === 'oem' || state.sort !== 'path') {
       wrap.innerHTML = '<div class="grid">' + list.map(card).join('') + '</div>';
       return;
     }
@@ -463,11 +458,17 @@
 
   function render() {
     const isTenders = state.tab === 'tenders';
+    document.body.classList.toggle('is-tenders', isTenders);
     const layout = document.querySelector('.layout');
     if (layout) layout.hidden = isTenders;
     if ($('tendersView')) $('tendersView').hidden = !isTenders;
+    if (isTenders || state.tab === 'map') {
+      document.body.classList.remove('filters-open');
+      $('filtersPanel').classList.remove('is-open');
+      $('filterToggle').setAttribute('aria-expanded', 'false');
+    }
     if (isTenders) {
-      document.body.classList.remove('is-map', 'filters-open');
+      document.body.classList.remove('is-map');
       if (window.EnergoTenders) window.EnergoTenders.onTab('tenders');
       return [];
     }
@@ -646,15 +647,34 @@
   function initStats() {
     const s = R.stats || {};
     const data = [
-      [s.holdings || 0, 'холдингов'],
-      [s.companies || 0, 'юрлиц'],
-      [s.plants || 0, 'станций'],
-      [s.repair || 0, 'ремонтных'],
-      [s.high || 0, 'проверено']
+      ['', s.total || items.length, 'всего'],
+      ['holding', s.holdings || 0, 'холдингов'],
+      ['company', s.companies || 0, 'юрлиц'],
+      ['plant', s.plants || 0, 'станций'],
+      ['repair', s.repair || 0, 'ремонтных'],
+      ['oem', s.oem || 0, 'ОЕМ']
     ];
-    $('stats').innerHTML = data.map(([n, l]) => '<div class="stat"><b>' + n + '</b><span>' + l + '</span></div>').join('');
+    $('stats').innerHTML = data.map(([k, n, l]) => {
+      const on = state.kind === k;
+      return '<button class="stat' + (on ? ' is-active' : '') + '" type="button" data-kind="' + k + '" aria-pressed="' + on + '">' +
+        '<b>' + n + '</b><span>' + l + '</span></button>';
+    }).join('');
     $('disclaimer').textContent = (R.meta && R.meta.disclaimer) || '';
     $('ver').textContent = 'v' + ((R.meta && R.meta.version) || '1.0') + ' от ' + ((R.meta && R.meta.date) || '');
+  }
+
+  function setKind(kind, updateHash) {
+    state.kind = KINDS.includes(kind) ? kind : '';
+    document.querySelectorAll('.stat').forEach(b => {
+      const on = b.dataset.kind === state.kind;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    if (updateHash !== false) {
+      const h = state.tab !== 'all' ? '#tab=' + state.tab : (state.kind ? '#kind=' + state.kind : '');
+      history.replaceState(null, '', location.pathname + location.search + h);
+    }
+    render();
   }
 
   function bind() {
@@ -663,10 +683,31 @@
       t.classList.add('is-active'); t.setAttribute('aria-selected', 'true');
       state.tab = t.dataset.tab;
       if (window.EnergoTenders) window.EnergoTenders.onTab(state.tab);
-      if (state.tab === 'all') history.replaceState(null, '', location.pathname + location.search);
-      else history.replaceState(null, '', '#tab=' + state.tab);
+      const h = state.tab === 'all' ? (state.kind ? '#kind=' + state.kind : '') : '#tab=' + state.tab;
+      history.replaceState(null, '', location.pathname + location.search + h);
       render();
     }));
+
+    $('stats').addEventListener('click', e => {
+      const b = e.target.closest('.stat');
+      if (b) setKind(b.dataset.kind);
+    });
+
+    const tabsEl = $('tabs'), tabsWrap = $('tabsWrap');
+    const updateTabsNav = () => {
+      const max = Math.max(0, tabsEl.scrollWidth - tabsEl.clientWidth - 1);
+      const hasPrev = tabsEl.scrollLeft > 2;
+      const hasNext = max > 2 && tabsEl.scrollLeft < max - 2;
+      tabsWrap.classList.toggle('has-prev', hasPrev);
+      tabsWrap.classList.toggle('has-next', hasNext);
+      $('tabsPrev').tabIndex = hasPrev ? 0 : -1;
+      $('tabsNext').tabIndex = hasNext ? 0 : -1;
+    };
+    $('tabsPrev').addEventListener('click', () => tabsEl.scrollBy({ left: -120, behavior: 'smooth' }));
+    $('tabsNext').addEventListener('click', () => tabsEl.scrollBy({ left: 120, behavior: 'smooth' }));
+    tabsEl.addEventListener('scroll', updateTabsNav, { passive: true });
+    window.addEventListener('resize', updateTabsNav);
+    updateTabsNav();
 
     let searchTimer = 0;
     const bindInput = (id, key, evt) => {
@@ -734,10 +775,15 @@
     $('fOnlyOrg').addEventListener('change', e => { state.onlyOrg = e.target.checked; render(); });
 
     $('resetBtn').addEventListener('click', () => {
-      Object.assign(state, { q: '', holding: '', region: '', type: '', method: '', etp: '', onlyOrg: false, sort: 'path' });
+      Object.assign(state, { kind: '', q: '', holding: '', region: '', type: '', method: '', etp: '', onlyOrg: false, sort: 'path' });
       ['q', 'fHolding', 'fRegion', 'fType', 'fMethod', 'fEtp', 'sort'].forEach(id => { $(id).value = ''; });
       $('sort').value = 'path';
       $('fOnlyOrg').checked = false;
+      document.querySelectorAll('.stat').forEach(b => {
+        const on = b.dataset.kind === '';
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
       hideSuggest();
       render();
     });
@@ -778,10 +824,17 @@
     $('exportBtn').addEventListener('click', exportCSV);
 
     $('filterToggle').addEventListener('click', () => {
+      if (state.tab === 'map') return;
       const panel = $('filtersPanel');
       const open = panel.classList.toggle('is-open');
       document.body.classList.toggle('filters-open', open);
       $('filterToggle').setAttribute('aria-expanded', String(open));
+    });
+
+    $('filtersClose').addEventListener('click', () => {
+      $('filtersPanel').classList.remove('is-open');
+      document.body.classList.remove('filters-open');
+      $('filterToggle').setAttribute('aria-expanded', 'false');
     });
 
     $('mapFit').addEventListener('click', () => {
@@ -876,11 +929,22 @@
   initFilters();
   bind();
   restoreState();
+  setKind(state.kind, false);
   initAutoUpdate();
-  const hash = (location.hash || '').replace('#tab=', '');
-  if (['gen', 'rep', 'oem', 'tenders', 'map'].includes(hash)) {
-    const b = document.querySelector('[data-tab="' + hash + '"]');
-    if (b) { b.click(); return; }
+
+  // Якоря: #tab=tenders|map, #kind=... и старые #tab=gen|rep|oem.
+  const rawHash = location.hash || '';
+  const legacyKind = { gen: 'plant', rep: 'repair', oem: 'oem' };
+  let initialTab = '', initialKind = '';
+  if (rawHash.startsWith('#kind=')) initialKind = rawHash.slice(6);
+  else if (rawHash.startsWith('#tab=')) {
+    const v = rawHash.slice(5);
+    if (v === 'tenders' || v === 'map') initialTab = v;
+    else if (legacyKind[v]) initialKind = legacyKind[v];
   }
-  render();
+  if (initialKind && KINDS.includes(initialKind)) setKind(initialKind, false);
+  if (initialTab) {
+    const b = document.querySelector('[data-tab="' + initialTab + '"]');
+    if (b) b.click();
+  } else render();
 })();

@@ -89,7 +89,7 @@ for (const e of entities) {
     type: e.type || '', activity: e.activity || '', region: e.region || '', address: e.address || '',
     phone: e.phone || '', email: e.email || '', site: e.site || '', procUrl: e.procUrl || '',
     inn: e.inn || '', kpp: e.kpp || '', ogrn: e.ogrn || '', ceo: e.ceo || '', contact: e.contact || '',
-    method: e.method || '', etp: e.etp ? e.etp.split(';').map(s => s.trim()).filter(Boolean) : [],
+    method: e.method || '', etp: e.etp && e.etp !== 'не подтверждены' ? e.etp.split(';').map(s => s.trim()).filter(Boolean) : [],
     capacity: e.capacity || '', status: e.status || 'действует',
     conf: e.conf || 'medium', sources: e.sources ? e.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S2'],
     notes: e.notes || '', __line: e.__line,
@@ -189,10 +189,14 @@ const GEO = require('./data/geo.js');
   }
 })();
 
-// Валидация обязательных полей для юрлиц
+// Валидация обязательных полей для юрлиц. Явная пометка «не подтверждены»
+// допустима: данные не выдумываются, а отсутствующие контакты не считаются ошибкой.
+const rawById = new Map(entities.map(e => [e.id, e]));
 for (const it of items) {
   if (it.kind === 'plant') continue;
+  const raw = rawById.get(it.id) || {};
   for (const f of ['name', 'activity', 'phone', 'email', 'site', 'method', 'etp']) {
+    if (raw[f] === 'не подтверждены') continue;
     if (!it[f] || (Array.isArray(it[f]) && !it[f].length)) errors.push(`У ${it.id} не заполнено поле ${f}`);
   }
   if (it.kind === 'holding' && !it.inn) errors.push(`У ${it.id} нет ИНН`);

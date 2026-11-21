@@ -54,7 +54,7 @@ function validateRows(rows) {
     if (/https?:\/\/|www\./i.test(contact)) add(r, 'contact', 'contact-has-url', 'warning', 'URL в поле контакта');
     if (!contact) add(r, 'contact', 'contact-empty', 'info', 'Контакт не заполнен');
 
-    if (r.phone && !isUnconfirmed(r.phone) && !/^\+?[\d\s()\-]{6,}$/.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
+    if (r.phone && !isUnconfirmed(r.phone) && !/^\+?[\d\s()\-]{6,}(,\s*(доб|доп)\.?\s*\d+)?$/i.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
     if (r.email && !isUnconfirmed(r.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.email)) add(r, 'email', 'email-format', 'error', 'Некорректный формат e-mail');
 
     for (const field of ['site', 'procUrl']) {
@@ -75,7 +75,7 @@ function validateRows(rows) {
     if (r.ogrn && !/^\d{13}(\d{2})?$/.test(r.ogrn)) add(r, 'ogrn', 'ogrn-format', 'error', 'ОГРН должен содержать 13 или 15 цифр');
     if (!['high', 'medium'].includes(r.conf)) add(r, 'conf', 'conf-unknown', 'error', 'Недопустимая достоверность');
     if ((r.sources || '').split(';').filter(Boolean).some(c => !SOURCE_CODES.has(c))) add(r, 'sources', 'sources-unknown', 'error', 'Неизвестный код источника');
-    if ((r.etp || '').split(';').filter(Boolean).some(c => !ETP_CODES.has(c))) add(r, 'etp', 'etp-unknown', 'error', 'Неизвестный код ЭТП');
+    if ((r.etp || '').split(';').map(s => s.trim()).filter(Boolean).some(c => !isUnconfirmed(c) && !ETP_CODES.has(c))) add(r, 'etp', 'etp-unknown', 'error', 'Неизвестный код ЭТП');
     if (!r.method && r.kind !== 'plant') add(r, 'method', 'method-missing', 'warning', 'Способ закупки не заполнен');
   }
 

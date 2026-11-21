@@ -8,7 +8,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.9">
+<link rel="stylesheet" href="css/styles.css?v=2.12">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -25,17 +25,22 @@
         <div class="brand__sub">Генерация · Ремонт · Оборудование</div>
       </div>
     </div>
-    <nav class="tabs" role="tablist" aria-label="Разделы реестра">
-      <button class="tab is-active" role="tab" aria-selected="true" data-tab="all">Все</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="gen">Генерация</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="rep">Ремонт<span class="tab__more"> и сервис</span></button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="oem">ОЕМ<span class="tab__more"> и инжиниринг</span></button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="tenders">Закупки</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="map">Карта</button>
-    </nav>
+    <div class="tabs-wrap" id="tabsWrap">
+      <button class="tabs__nav tabs__nav--prev" id="tabsPrev" type="button" aria-label="Прокрутить вкладки влево" tabindex="-1">‹</button>
+      <nav class="tabs" id="tabs" role="tablist" aria-label="Разделы реестра">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="all">Реестр</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="tenders">Закупки</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="map">Карта</button>
+      </nav>
+      <button class="tabs__nav tabs__nav--next" id="tabsNext" type="button" aria-label="Прокрутить вкладки вправо" tabindex="-1">›</button>
+    </div>
     <div class="topbar__actions">
-      <a class="btn btn--ghost" href="print.html" target="_blank" rel="noopener">Печать / PDF</a>
-      <button class="btn btn--primary" id="exportBtn">Экспорт CSV</button>
+      <a class="icon-btn" href="print.html" target="_blank" rel="noopener" aria-label="Печать / PDF" data-tip="Печать / PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 15h12v6H6z"/><circle cx="18" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <button class="icon-btn icon-btn--primary" id="exportBtn" type="button" aria-label="Экспорт CSV" data-tip="Экспорт CSV">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg>
+      </button>
     </div>
   </div>
 </header>
@@ -56,6 +61,7 @@
     <div class="filters__head">
       <h2>Фильтры</h2>
       <button class="link" id="resetBtn" type="button">Сбросить</button>
+      <button class="filters__close" id="filtersClose" type="button" aria-label="Закрыть фильтры">✕</button>
     </div>
 
     <label class="field">
@@ -140,7 +146,6 @@
 
     <section id="mapView" class="map-view" hidden>
       <div class="map-toolbar">
-        <div class="layers" id="layers" role="group" aria-label="Слои карты"></div>
         <div class="basemap" id="basemap" role="group" aria-label="Подложка карты">
           <button class="basemap__btn is-active" data-base="osm" type="button" title="Карта">Карта</button>
           <button class="basemap__btn" data-base="sat" type="button" title="Спутник">Спутник</button>
@@ -267,11 +272,11 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.9"></script>
-<script src="js/tenders-data.js?v=2.9"></script>
-<script src="js/text-match.js?v=2.9"></script>
-<script src="js/sort.js?v=2.9"></script>
-<script src="js/tenders.js?v=2.9"></script>
-<script src="js/app.js?v=2.9"></script>
+<script src="js/data.js?v=2.12"></script>
+<script src="js/tenders-data.js?v=2.12"></script>
+<script src="js/text-match.js?v=2.12"></script>
+<script src="js/sort.js?v=2.12"></script>
+<script src="js/tenders.js?v=2.12"></script>
+<script src="js/app.js?v=2.12"></script>
 </body>
 </html>
