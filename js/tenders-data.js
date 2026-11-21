@@ -36036,6 +36036,7 @@ window.TENDER_DATA = {
   "requireKeyword": true,
   "activeDepthDays": 0,
   "archiveDepthDays": 30,
+  "archiveOverlapDays": 2,
   "sourcePriority": [
    "gosplan",
    "gentender",
@@ -36058,8 +36059,9 @@ window.TENDER_DATA = {
   "gosplanMaxInn": 0,
   "gentenderInterval": 1150,
   "gentenderLimit": 100,
-  "gentenderMaxPages": 2,
+  "gentenderMaxPages": 6,
   "gentenderInnPages": 1,
+  "gentenderMaxRows": 100,
   "tektorgInterval": 900,
   "tektorgMaxPages": 2,
   "gpbInterval": 900,
