@@ -55,4 +55,13 @@ test('дедупликация объединяет источники без п
   assert.ok(merged[0].sources.length >= 2);
 });
 
+test('cookie jar запоминает куки только для своего домена', () => {
+  const { ThrottledClient } = require('./lib/throttle');
+  const c = new ThrottledClient({ browser: true, minInterval: 0 });
+  const res = { headers: { getSetCookie: () => ['ipp_uid=abc; Path=/; HttpOnly', 'ipp_key=xyz; Path=/'] } };
+  c._storeCookies('https://www.tektorg.ru/procedures', res);
+  assert.equal(c._cookieHeader('https://www.tektorg.ru/procedures?page=2'), 'ipp_uid=abc; ipp_key=xyz');
+  assert.equal(c._cookieHeader('https://etpgpb.ru/procedures/'), '');
+});
+
 if (!process.exitCode) console.log('\nВсе тесты пройдены: ' + passed);

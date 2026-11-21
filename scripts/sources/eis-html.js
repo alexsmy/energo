@@ -60,7 +60,7 @@ function parseEis(html, query) {
 async function collect(opts) {
   const { keywords = [], enterprises = [], settings = {}, audit, logger, fixture = '', maxRecords = 2000 } = opts;
   const index = buildCustomerIndex();
-  const client = new ThrottledClient({ minInterval: Math.max(100, parseInt(settings.htmlInterval, 10) || 1500), timeout: 25000, retries: 2, backoff: [6000, 12000] });
+  const client = new ThrottledClient({ minInterval: Math.max(100, parseInt(settings.htmlInterval, 10) || 1500), timeout: 25000, retries: 2, backoff: [6000, 12000], browser: true });
   const eUrl = (audit.platforms || []).find(p => p.code === 'EIS');
   const template = (eUrl && eUrl.urlTemplate) || 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={q}&morphology=on&fz44=on&fz223=on&pageNumber=1&sortBy=UPDATE_DATE&recordsPerPage=_10';
   const perPage = 10, maxPages = Math.max(1, parseInt(settings.htmlMaxPages, 10) || 5);

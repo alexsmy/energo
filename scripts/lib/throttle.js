@@ -1,8 +1,14 @@
 #!/usr/bin/env node
-/* Общий HTTP-клиент с ограничением частоты, ретраями и таймаутом. */
+/* Общий HTTP-клиент: ограничение частоты, ретраи, таймаут, куки и заголовки.
+ *
+ * browser:true — браузерные заголовки + cookie jar. Включается точечно для
+ * площадок с анти-бот защитой (ТЭК-Торг/Variti и др.). Основные API
+ * (ГосПлан, GenTender) продолжают работать с 기존 подписью.
+ */
 'use strict';
 
 const UA = 'EnergoRegistry/1.9 (+https://github.com/alexsmy/energo)';
+const BROWSER_UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -13,16 +19,77 @@ class ThrottledClient {
     this.retries = opts.retries || 3;
     this.backoff = opts.backoff || [35000, 70000];
     this.ua = opts.ua || UA;
+    this.browser = !!opts.browser;
+    this.cookies = new Map(); // hostname -> Map(name -> value)
     this.last = 0;
   }
 
-  async getJson(url) {
-    return this._get(url, true);
+  _host(url) { try { return new URL(url).hostname; } catch (e) { return ''; } }
+
+  _cookieHeader(url) {
+    const jar = this.cookies.get(this._host(url));
+    return jar && jar.size ? [...jar].map(([k, v]) => k + '=' + v).join('; ') : '';
   }
 
-  async getText(url) {
-    return this._get(url, false);
+  _storeCookies(url, res) {
+    const host = this._host(url);
+    if (!host) return;
+    let values = [];
+    try {
+      values = res.headers.getSetCookie
+        ? res.headers.getSetCookie()
+        : (res.headers.get('set-cookie') ? [res.headers.get('set-cookie')] : []);
+    } catch (e) { /* noop */ }
+    if (!values.length) return;
+    const jar = this.cookies.get(host) || new Map();
+    for (const raw of values) {
+      const pair = String(raw).split(';')[0];
+      const i = pair.indexOf('=');
+      if (i <= 0) continue;
+      const name = pair.slice(0, i).trim();
+      const value = pair.slice(i + 1).trim();
+      if (!value || /^(deleted|""|null)$/i.test(value)) jar.delete(name);
+      else jar.set(name, value);
+    }
+    this.cookies.set(host, jar);
   }
+
+  async _fetchOnce(url, asJson) {
+    let current = url;
+    for (let hop = 0; hop < 6; hop++) {
+      const headers = {
+        'User-Agent': this.browser ? BROWSER_UA : this.ua,
+        'Accept': asJson
+          ? 'application/json,text/plain,*/*'
+          : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+      };
+      if (this.browser) headers['Accept-Language'] = 'ru-RU,ru;q=0.9,en;q=0.6';
+      const cookie = this._cookieHeader(current);
+      if (cookie) headers.Cookie = cookie;
+
+      const res = await fetch(current, { redirect: 'manual', headers, signal: AbortSignal.timeout(this.timeout) });
+      this._storeCookies(current, res);
+      const loc = res.headers.get('location');
+      if (res.status >= 300 && res.status < 400 && loc) {
+        await res.arrayBuffer(); // освобождаем сокет перед следующим hop
+        current = new URL(loc, current).toString();
+        continue;
+      }
+      if (!res.ok) {
+        const err = new Error('HTTP ' + res.status);
+        err.status = res.status;
+        throw err;
+      }
+      const body = asJson ? await res.json() : await res.text();
+      return { ok: true, status: res.status, body, hop };
+    }
+    const err = new Error('too many redirects');
+    err.status = 0;
+    throw err;
+  }
+
+  async getJson(url) { return this._get(url, true); }
+  async getText(url) { return this._get(url, false); }
 
   async _get(url, asJson) {
     let lastErr = null;
@@ -31,29 +98,14 @@ class ThrottledClient {
       if (wait > 0) await sleep(wait);
       this.last = Date.now();
       try {
-        const res = await fetch(url, {
-          redirect: 'follow',
-          headers: { 'User-Agent': this.ua, 'Accept': asJson ? 'application/json' : 'text/html,application/xhtml+xml' },
-          signal: AbortSignal.timeout(this.timeout)
-        });
-        if (res.status === 429) {
+        return await this._fetchOnce(url, asJson);
+      } catch (e) {
+        lastErr = e;
+        if (e.status === 429) {
           const pause = this.backoff[Math.min(attempt, this.backoff.length - 1)];
-          const err = new Error('HTTP 429');
-          err.status = 429;
-          err.retryAfter = pause;
-          lastErr = err;
           await sleep(pause);
           continue;
         }
-        if (!res.ok) {
-          const err = new Error('HTTP ' + res.status);
-          err.status = res.status;
-          throw err;
-        }
-        const body = asJson ? await res.json() : await res.text();
-        return { ok: true, status: res.status, body, attempt };
-      } catch (e) {
-        lastErr = e;
         if (e.status && e.status !== 429) break;
         if (e.name === 'TimeoutError' || e.name === 'AbortError') break;
         if (attempt < this.retries - 1) await sleep(2000 * (attempt + 1));
@@ -63,4 +115,4 @@ class ThrottledClient {
   }
 }
 
-module.exports = { ThrottledClient, sleep, UA };
+module.exports = { ThrottledClient, sleep, UA, BROWSER_UA };

@@ -32,7 +32,8 @@ async function collect(opts) {
     minInterval: Math.max(700, parseInt(settings.gpbInterval, 10) || 900),
     timeout: 25000,
     retries: 2,
-    backoff: [5000, 15000]
+    backoff: [5000, 15000],
+    browser: true
   });
   const found = [];
   const errors = [];

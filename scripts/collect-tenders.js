@@ -99,7 +99,7 @@ function normalizeLegacy(r, index, enterprises) {
 }
 
 async function probeEtps(audit, logger) {
-  const client = new ThrottledClient({ minInterval: 0, timeout: 12000, retries: 1, backoff: [1000] });
+  const client = new ThrottledClient({ minInterval: 0, timeout: 12000, retries: 1, backoff: [1000], browser: true });
   const platforms = audit.platforms || [];
   let ok = 0;
   for (const p of platforms) {

@@ -37,7 +37,8 @@ async function collect(opts) {
     minInterval: Math.max(700, parseInt(settings.tektorgInterval, 10) || 900),
     timeout: 25000,
     retries: 2,
-    backoff: [5000, 15000]
+    backoff: [5000, 15000],
+    browser: true // Variti: нужен браузерный UA и cookie challenge
   });
   const found = [];
   const errors = [];
