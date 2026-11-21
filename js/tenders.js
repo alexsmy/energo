@@ -219,7 +219,7 @@
     if (isNaN(d.getTime())) return 'Обновлено: ' + status.lastRun;
     const days = Math.floor((Date.now() - d.getTime()) / 86400000);
     const age = days <= 0 ? 'сегодня' : days === 1 ? 'вчера' : days + ' дн. назад';
-    const warn = days >= 2 ? ' · ВНИМАНИЕ: данные устарели, запустите сбор вручную' : '';
+    const warn = days >= 2 ? ' · данных несколько дней нет — ближайшее окно сбора обновит выдачу' : '';
     return 'Обновлено: ' + d.toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' }) + ' (' + age + ')' + warn +
       (status.total != null ? ' · закупок: ' + status.total : '') +
       (status.bySource ? ' · площадок: ' + Object.keys(status.bySource).length : '');

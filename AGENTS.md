@@ -30,7 +30,7 @@
   **ЭТП ГПБ**, **Росэлторг**; HTML-парсер ЕИС **не удалён**, работает как резерв.
   Число запросов ограничено `requestBudget`. Журнал каждого
   запроса — `data/collect-log.json`, просмотр через `log.html` (ссылка внизу вкладки).
-  Сбор по рабочим дням в окна **05:00 / 08:00 / 12:00 МСК** через `.github/workflows/tenders-update.yml` (первое сработавшее собирает, остальные пропускают без запросов)
+  Сбор по рабочим дням в окна **06:00 / 08:00 / 10:00 МСК** через `.github/workflows/tenders-update.yml` (первое сработавшее собирает, остальные пропускают без запросов)
   (cron `0 2 * * *` + `workflow_dispatch`). План: `PLAN_zakupki.md`.
 - Виды: карточки (с группировкой по холдингам) и таблица (липкие шапки групп, адаптив в мобильные карточки).
 - Карта: Leaflet + OSM / Esri satellite / hybrid, кластеры, 5 слоёв, эмодзи-иконки по типам,
@@ -96,7 +96,7 @@ app/                       # корень репозитория (GitHub Pages s
 │   └── lib/               # throttle, match-org, normalize, platforms, nuxt-data, logger
 ├── prototype/             # изолированные тесты API (не участвуют в проде)
 ├── .github/workflows/
-│   └── tenders-update.yml # cron 0 2/0 5/0 9 UTC (05/08/12 МСК) + workflow_dispatch
+│   └── tenders-update.yml # cron 0 3/0 5/0 7 UTC (06/08/10 МСК) + workflow_dispatch
 ├── build.js               # сборка data.js + tenders-data.js + CSV + JSON + version.json, валидация
 ├── registry.csv           # выгрузка для Excel
 ├── registry.json          # машиночитаемый реестр
@@ -319,7 +319,7 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
 - Push выполнять **только по явной просьбе**, одной командой `git push`.
 - GitHub Pages включается через API или в настройках репозитория: Source = Deploy from a branch,
   Branch = `main`, folder = `/ (root)`.
-- Workflow `.github/workflows/tenders-update.yml` (три окна 05/08/12 МСК, `workflow_dispatch`; идемпотентность через `last-collect-result.json`)
+- Workflow `.github/workflows/tenders-update.yml` (три окна 06/08/10 МСК, `workflow_dispatch`; идемпотентность через `last-collect-result.json`)
   запускает `scripts/collect-tenders.js`, `build.js`, обновляет `version.json` до
   `2.3.< timestamp >` и коммитит изменения от `github-actions[bot]`. Цепочку `ticker.yml`
   с 24-минутным sleep не используем: достаточно одного запуска в сутки (и публичный репозиторий
