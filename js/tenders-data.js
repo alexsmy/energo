@@ -36053,7 +36053,7 @@ window.TENDER_DATA = {
    "roseltorg": 40,
    "eis-html": 40
   },
-  "gosplanInterval": 6500,
+  "gosplanInterval": 10000,
   "gosplanLimit": 100,
   "gosplanMaxPages": 2,
   "gosplanMaxInn": 0,
