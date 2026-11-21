@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-20T22:23:26.000Z",
-  "count": 133,
+  "updated": "2026-11-21T10:24:07.112Z",
+  "count": 130,
   "records": [
     {
       "id": "32616602654",
@@ -84,7 +84,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -139,7 +139,7 @@
         "C-TOMGEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -243,7 +243,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -290,7 +290,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -337,7 +337,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:40:01.377Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -384,7 +384,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -439,7 +439,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -496,7 +496,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -600,7 +600,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -671,7 +671,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -728,7 +728,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -830,7 +830,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -877,7 +877,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -924,7 +924,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -971,7 +971,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1018,7 +1018,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1065,7 +1065,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1112,7 +1112,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1159,7 +1159,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1206,7 +1206,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1261,7 +1261,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1316,7 +1316,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -1371,7 +1371,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -1467,7 +1467,7 @@
         "C-YAKUT"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1514,7 +1514,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1561,7 +1561,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1608,7 +1608,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1655,7 +1655,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1702,7 +1702,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -1749,7 +1749,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1796,7 +1796,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1845,7 +1845,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -1947,7 +1947,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2002,7 +2002,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2104,7 +2104,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -2208,7 +2208,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2263,7 +2263,7 @@
         "C-DGK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2377,7 +2377,7 @@
         "C-SAKHAENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "ЕИС / HTML",
@@ -2434,7 +2434,7 @@
         "C-BEK"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2536,7 +2536,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2591,7 +2591,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -2638,7 +2638,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2693,7 +2693,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2750,7 +2750,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2805,7 +2805,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2860,7 +2860,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -2907,7 +2907,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -2962,7 +2962,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3397,7 +3397,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -3460,7 +3460,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3556,7 +3556,7 @@
         "C-MOSENERGO"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3605,7 +3605,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3796,7 +3796,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3843,7 +3843,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3892,7 +3892,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -3939,7 +3939,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -4041,7 +4041,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4088,7 +4088,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4135,7 +4135,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T13:55:53.115Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "ЕИС / ГосПлан API",
@@ -4198,7 +4198,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4300,7 +4300,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4347,7 +4347,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:55:28.227Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4394,7 +4394,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4449,7 +4449,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4598,7 +4598,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4647,7 +4647,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4741,7 +4741,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T20:30:08.015Z",
-      "lastSeen": "2026-11-20T20:55:28.227Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -4788,7 +4788,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4890,7 +4890,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:50:44.443Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -4939,7 +4939,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5035,7 +5035,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5129,7 +5129,7 @@
         "H-TGK2"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5223,7 +5223,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5270,7 +5270,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5319,7 +5319,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5366,7 +5366,7 @@
         "H-FORWARD"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5423,7 +5423,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5472,7 +5472,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5519,7 +5519,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T16:53:47.655Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5568,7 +5568,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5664,7 +5664,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5711,7 +5711,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:12:44.741Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5766,7 +5766,7 @@
         "C-SAKHALIN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5813,7 +5813,7 @@
         "H-RIR"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5861,7 +5861,7 @@
         "C-TGK1"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -5910,7 +5910,7 @@
         "C-BGK"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -5959,7 +5959,7 @@
         "H-RUSHYDRO"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6006,7 +6006,7 @@
         "H-TAT"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6100,7 +6100,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6147,7 +6147,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6194,7 +6194,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6290,7 +6290,7 @@
         "R-GIDROREMONT"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6337,7 +6337,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6384,7 +6384,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6431,7 +6431,7 @@
         "H-TPLUS"
       ],
       "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T22:25:42.998Z",
+      "lastSeen": "2026-11-21T10:26:32.304Z",
       "sources": [
         {
           "source": "gosplan",
@@ -6480,7 +6480,7 @@
         "C-IRAO-GEN"
       ],
       "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
+      "lastSeen": "2026-11-21T10:28:40.236Z",
       "sources": [
         {
           "source": "gentender",
@@ -6497,147 +6497,6 @@
           "platformName": "ТЭК-Торг",
           "url": "https://www.tektorg.ru/market/procedures/20079879",
           "foundAt": "2026-11-20T15:36:45.567Z"
-        }
-      ]
-    },
-    {
-      "id": "32616493867",
-      "regNumber": "32616493867",
-      "externalId": "32616493867",
-      "title": "на поставку запасных частей к турбинам производства Ленинградского Металлического Завода для нужд ПАО \"ТГК-2\"",
-      "customer": "ПАО «Территориальная генерирующая компания № 2»",
-      "customerInn": "7606053324",
-      "customerCode": "7606053324",
-      "matchedOrgId": "H-TGK2",
-      "matchedOrgName": "ТГК-2",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "platformUrl": "https://zakupki.gov.ru",
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "law": "223",
-      "price": "16 610 847,51 ₽",
-      "priceNum": 16610847.51,
-      "published": "2026-10-21",
-      "deadline": "2026-11-02",
-      "updated": "2026-11-02",
-      "status": "Завершена",
-      "stage": 3,
-      "phase": "archive",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616493867",
-      "keywords": [
-        "Турбина"
-      ],
-      "matchedKeywords": [
-        "Турбина"
-      ],
-      "enterpriseIds": [
-        "H-TGK2"
-      ],
-      "foundAt": "2026-11-20T15:16:44.880Z",
-      "lastSeen": "2026-11-20T15:45:40.545Z",
-      "sources": [
-        {
-          "source": "gosplan",
-          "sourceName": "ГосПлан API",
-          "platformCode": "EIS",
-          "platformName": "ЕИС",
-          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616493867",
-          "foundAt": "2026-11-20T15:16:44.880Z"
-        }
-      ]
-    },
-    {
-      "id": "RTS:32616448209",
-      "regNumber": "",
-      "externalId": "32616448209",
-      "title": "Поставка запасных частей для турбины для нужд Курганской ТЭЦ ПАО \"КГК\"",
-      "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"КУРГАНСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
-      "customerInn": "4501122913",
-      "customerCode": "4501122913",
-      "matchedOrgId": "C-BGK",
-      "matchedOrgName": "Башкирская генерирующая компания",
-      "platformCode": "RTS",
-      "platformName": "РТС-тендер",
-      "platformUrl": "www.rts-tender.ru",
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "law": "223",
-      "price": "23 212 666 ₽",
-      "priceNum": 23212666,
-      "published": "2026-10-21",
-      "deadline": "2026-10-28",
-      "updated": "2026-10-21",
-      "status": "Работа комиссии",
-      "stage": "evaluation",
-      "phase": "archive",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616448209",
-      "keywords": [
-        "Турбина"
-      ],
-      "matchedKeywords": [
-        "Турбина"
-      ],
-      "enterpriseIds": [
-        "C-BGK"
-      ],
-      "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
-      "sources": [
-        {
-          "source": "gentender",
-          "sourceName": "GenTender",
-          "platformCode": "RTS",
-          "platformName": "РТС-тендер",
-          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616448209",
-          "foundAt": "2026-11-20T15:36:20.857Z"
-        }
-      ]
-    },
-    {
-      "id": "GPB:32616493867",
-      "regNumber": "",
-      "externalId": "32616493867",
-      "title": "на поставку запасных частей к турбинам производства Ленинградского Металлического Завода для нужд ПАО \"ТГК-2\"",
-      "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №2\"",
-      "customerInn": "7606053324",
-      "customerCode": "7606053324",
-      "matchedOrgId": "H-TGK2",
-      "matchedOrgName": "ТГК-2",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "platformUrl": "http://etp.gpb.ru",
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "law": "223",
-      "price": "16 610 847,51 ₽",
-      "priceNum": 16610847.51,
-      "published": "2026-10-21",
-      "deadline": "2026-11-02",
-      "updated": "2026-10-21",
-      "status": "Работа комиссии",
-      "stage": "evaluation",
-      "phase": "archive",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616493867",
-      "keywords": [
-        "Турбина"
-      ],
-      "matchedKeywords": [
-        "Турбина"
-      ],
-      "enterpriseIds": [
-        "H-TGK2"
-      ],
-      "foundAt": "2026-11-20T15:36:20.857Z",
-      "lastSeen": "2026-11-20T22:35:17.714Z",
-      "sources": [
-        {
-          "source": "gentender",
-          "sourceName": "GenTender",
-          "platformCode": "GPB",
-          "platformName": "ЭТП ГПБ",
-          "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616493867",
-          "foundAt": "2026-11-20T15:36:20.857Z"
         }
       ]
     }
