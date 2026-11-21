@@ -66,8 +66,8 @@
 scripts/collect-tenders.js     orchestrator:QUEUES → ADAPTERS → NORMALIZE → DEDUP → MATCH → WRITE → LOG
 ├── scripts/sources/gosplan.js      (primary, REST JSON, 44/223/615)
 ├── scripts/sources/eis-html.js     (fallback, текущий HTML-парсер)
-├── scripts/sources/ftp-xml.js      (archival, XML-архивы ЕИС)
-├── scripts/sources/krasoft.js      (опционально, коммерческие)
+├── scripts/sources/ftp-xml.js      (ЗАПЛАНИРОВАНО, не реализовано)
+├── scripts/sources/krasoft.js      (ЗАПЛАНИРОВАНО, не реализовано)
 ├── scripts/lib/normalize.js       единая схема записи
 ├── scripts/lib/match-org.js       сопоставление с 339 организациями
 ├── scripts/lib/throttle.js        rate-limit + retry + circuit breaker
@@ -155,7 +155,7 @@ js/tenders-data.js               АВТО: window.TENDER_DATA (добавить 
 - [x] `keepalive` (раз в неделю) уже был в workflow по образцу `cam-ufa`.
 - [x] Локальные прогоны: `--fixture` (резервный парсер), живой ГосПлан API, `--refilter`.
 - [x] Старые вкладки (реестр/карта) проверены в имитированном DOM; `file` не тронут.
-- [x] README.md и AGENTS.md обновлены.
+- [x] AGENTS.md и docs/PROJECT.md обновлены. Корневой README.md намеренно не создаётся.
 - **Критерий:** тесты зелёные, данные реестра не повреждены. ✅
 
 ### Фаза 5. Публикация
