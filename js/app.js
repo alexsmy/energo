@@ -537,7 +537,18 @@
   function link(url, text) {
     if (!url) return '';
     const safe = esc(url);
-    return '<a href="' + safe + '" target="_blank" rel="noopener">' + esc(text || url) + '</a>';
+    let label = text;
+    if (!label) {
+      try {
+        const u = new URL(url);
+        let seg = decodeURIComponent(u.pathname.split('/').filter(Boolean).pop() || '');
+        seg = seg.replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
+        if (/wikipedia/.test(u.hostname)) label = seg ? seg + ' — Википедия' : 'Википедия';
+        else label = u.hostname.replace(/^www\./, '') + (seg ? ' · ' + seg.slice(0, 40) : '');
+      } catch (e) { label = url; }
+    }
+    if (label.length > 90) label = label.slice(0, 87) + '…';
+    return '<a href="' + safe + '" target="_blank" rel="noopener" title="' + safe + '">' + esc(label) + '</a>';
   }
 
   function openModal(id) {
@@ -611,6 +622,7 @@
 
     const srcs = (it.sources || []).map(s => {
       const o = srcMap[s];
+      if (o && o.url) return '<a class="tag tag--link" href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(o.title) + '</a>';
       return '<span class="tag">' + esc(o ? o.title : s) + '</span>';
     }).join('');
     body.push('<div class="sec"><h3>Источники</h3>' +

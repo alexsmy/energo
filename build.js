@@ -43,7 +43,6 @@ const ETPS = [
 
 const SOURCES = [
   { id: 'S1', title: 'Официальные сайты компаний (контакты, реквизиты, закупки)', url: '', date: '2026-11-20', type: 'official' },
-  { id: 'S2', title: 'Google AI-режим: сводные ответы по структуре и контактам', url: 'https://www.google.com/search?udm=50', date: '2026-11-20', type: 'ai' },
   { id: 'S3', title: 'Исходные документы заказчика: концепции списков 2025–2026', url: '', date: '2026-11-20', type: 'internal' },
   { id: 'S4', title: 'Wikipedia / отраслевые справочники (EnergyBase, e-disclosure)', url: '', date: '2026-11-20', type: 'reference' },
   { id: 'S5', title: 'ЕГРЮЛ, Руспрофиль, Контур.Фокус (реквизиты)', url: 'https://www.rusprofile.ru', date: '2026-11-20', type: 'registry' },
@@ -93,7 +92,7 @@ for (const e of entities) {
     method: e.method || '', etp: e.etp && e.etp !== 'не подтверждены' ? e.etp.split(';').map(s => s.trim()).filter(Boolean) : [],
     tech: e.tech || '',
     capacity: e.capacity || '', status: e.status || 'действует',
-    conf: e.conf || 'medium', sources: e.sources ? e.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S2'],
+    conf: e.conf || 'medium', sources: e.sources ? e.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S4'],
     notes: e.notes || '', __line: e.__line,
     chiefEngineer: e.chiefEngineer || '', chiefDesigner: e.chiefDesigner || '',
     procContact: e.procContact || '', procPhone: e.procPhone || '', procEmail: e.procEmail || ''
@@ -108,7 +107,7 @@ for (const p of plants) {
     address: d.address || p.address || '', phone: d.phone || '', email: d.email || '', site: d.site || '',
     procUrl: '', inn: '', kpp: '', ogrn: '', ceo: d.head || '', contact: '', method: '', etp: [],
     capacity: d.capacity || p.capacity || '', status: p.status || 'действует',
-    conf: p.conf || 'medium', sources: p.sources ? p.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S2'],
+    conf: p.conf || 'medium', sources: p.sources ? p.sources.split(';').map(s => s.trim()).filter(Boolean) : ['S4'],
     tech: p.tech || '',
     notes: [p.notes, d.notes].filter(Boolean).join(' '), __line: p.__line,
     chiefEngineer: d.chief || '', chiefDesigner: '', procContact: '', procPhone: '', procEmail: '',
@@ -148,7 +147,7 @@ function resolve(it) {
       if (chain[i].etp && chain[i].etp.length) { it.etp = chain[i].etp.slice(); it.inherited.etp = chain[i].id; break; }
     }
   }
-  if (!it.sources || !it.sources.length) it.sources = ['S2'];
+  if (!it.sources || !it.sources.length) it.sources = ['S4'];
   delete it.__line;
 }
 items.forEach(resolve);
