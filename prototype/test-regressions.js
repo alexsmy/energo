@@ -172,7 +172,7 @@ check('обогащение станций: турбины и ремонты п�
 });
 
 check('типизация: коды, подписи и primary', () => {
-  assert.strictEqual(tech.TYPES.length, 10);
+  assert.strictEqual(tech.TYPES.length, 11);
   assert.deepStrictEqual(tech.parse('steam;gas'), ['steam', 'gas']);
   assert.deepStrictEqual(tech.labels('steam;gas'), ['паровые', 'газовые']);
   assert.strictEqual(tech.primary('steam;gas'), 'steam');

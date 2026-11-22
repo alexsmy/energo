@@ -11,6 +11,7 @@
   const TYPES = [
     { code: 'steam',     label: 'паровые',           family: 'thermal',   order: 10 },
     { code: 'gas',       label: 'газовые',           family: 'thermal',   order: 20 },
+    { code: 'gpu',       label: 'ГПУ/ГПА',           family: 'thermal',   order: 25 },
     { code: 'nuclear',   label: 'атомные',           family: 'thermal',   order: 30 },
     { code: 'hydro',     label: 'гидравлические',    family: 'renewable', order: 40 },
     { code: 'wind',      label: 'ветро',             family: 'renewable', order: 50 },

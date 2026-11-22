@@ -260,6 +260,25 @@
     '</div>';
   }
 
+  // Русские подписи элементов управления и атрибуции карты.
+  function localizeMapUI() {
+    if (mapState.map && mapState.map.attributionControl) {
+      mapState.map.attributionControl.setPrefix('Реестр предприятий');
+    }
+    const zin = document.querySelector('.leaflet-control-zoom-in');
+    const zout = document.querySelector('.leaflet-control-zoom-out');
+    if (zin) zin.title = 'Приблизить';
+    if (zout) zout.title = 'Отдалить';
+    const attr = document.querySelector('.leaflet-control-attribution');
+    if (attr) {
+      attr.innerHTML = attr.innerHTML
+        .replace(/Tiles (?:&copy;|©) Esri/g, 'Картографические данные © Esri')
+        .replace(/Imagery (?:&copy;|©) Esri/g, 'Спутниковые снимки © Esri')
+        .replace(/Labels (?:&copy;|©) Esri/g, 'Подписи © Esri')
+        .replace(/OpenStreetMap contributors/g, 'Участники OpenStreetMap');
+    }
+  }
+
   function ensureMap() {
     if (mapState.ready) return;
     if (typeof L === 'undefined') {
@@ -330,6 +349,7 @@
       g.addTo(map);
     });
     mapState.map = map;
+    localizeMapUI();
     if (typeof ResizeObserver !== 'undefined') {
       new ResizeObserver(() => { if (!$('mapView').hidden) map.invalidateSize({ pan: false }); })
         .observe($('map'));
@@ -347,6 +367,7 @@
         const target = id === 'osm' ? mapState.osmChain[mapState.osmIdx] : mapState.base[id];
         target.addTo(mapState.map);
         mapState.baseId = id;
+        localizeMapUI();
         wrap.querySelectorAll('[data-base]').forEach(x => x.classList.toggle('is-active', x === b));
       });
     });
@@ -375,6 +396,7 @@
   function applyMapFrame() {
     const map = mapState.map;
     if (!map || $('mapView').hidden) return;
+    localizeMapUI();
     map.invalidateSize({ pan: false });
     if (mapState.pending) {
       map.fitBounds(mapState.pending, { maxZoom: 7, animate: false });

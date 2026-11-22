@@ -124,6 +124,7 @@ button,input,select{font:inherit;color:inherit}
 .tech{display:inline-flex;align-items:center;border:1px solid var(--tc-b);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;letter-spacing:.01em;line-height:1.35;white-space:nowrap;background:var(--tc-bg);color:var(--tc-fg)}
 .tech--steam{--tc-b:#fcd34d;--tc-bg:linear-gradient(135deg,#fffbeb,#fef3c7);--tc-fg:#92400e}
 .tech--gas{--tc-b:#93c5fd;--tc-bg:linear-gradient(135deg,#eff6ff,#dbeafe);--tc-fg:#1e40af}
+.tech--gpu{--tc-b:#fbcfe8;--tc-bg:linear-gradient(135deg,#fdf2f8,#fce7f3);--tc-fg:#9d174d}
 .tech--nuclear{--tc-b:#6ee7b7;--tc-bg:linear-gradient(135deg,#ecfdf5,#d1fae5);--tc-fg:#065f46}
 .tech--hydro{--tc-b:#67e8f9;--tc-bg:linear-gradient(135deg,#ecfeff,#cffafe);--tc-fg:#155e75}
 .tech--wind{--tc-b:#a3e635;--tc-bg:linear-gradient(135deg,#f7fee7,#ecfccb);--tc-fg:#3f6212}
