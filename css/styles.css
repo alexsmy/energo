@@ -73,7 +73,7 @@ body.is-tenders .stats-bar{display:none}
 .stats-bar__in{display:flex;align-items:center;padding-top:4px;padding-bottom:4px}
 .stats-bar .stats{margin-top:0;gap:6px;flex-wrap:nowrap;min-width:0;overflow-x:auto;scrollbar-width:none}
 .stats-bar .stats::-webkit-scrollbar{display:none}
-.stats-bar .stat{padding:2px 8px;min-width:0;line-height:8px}
+.stats-bar .stat{padding:2px 8px;min-width:0;line-height:8px;flex:0 0 var(--chip-w,auto);text-align:center}
 .stats-bar .stat b{font-size:14px;line-height:1.1}
 .stats-bar .stat span{font-size:8px;line-height:1.1;letter-spacing:.03em}
 .hero h1{font-size:29px;font-weight:750;max-width:900px}
@@ -302,6 +302,8 @@ body.is-tenders .hero{display:none}
   .hero h1{font-size:23px}
   .hero{padding:18px 0 20px}
   .hero .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .stats-bar .stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));width:100%;gap:4px}
+  .stats-bar .stat{flex:none;width:auto;padding:2px 3px}
   .stat{width:auto;min-width:0;padding:6px 5px;text-align:center}
   .stat b{font-size:17px}
   .stat span{font-size:9px;letter-spacing:.02em;line-height:1.15}

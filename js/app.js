@@ -696,6 +696,16 @@
   }
 
   /* ---------- init ---------- */
+  // Компактные плашки должны быть одинаковой ширины — по самому длинному слову.
+  function sizeCompactStats() {
+    const chips = [...$('statsCompact').querySelectorAll('.stat')];
+    if (!chips.length) return;
+    const style = document.documentElement.style;
+    style.setProperty('--chip-w', 'auto');
+    const max = Math.ceil(Math.max(...chips.map(c => c.getBoundingClientRect().width)));
+    style.setProperty('--chip-w', max + 'px');
+  }
+
   function initStats() {
     const s = R.stats || {};
     const data = [
@@ -713,6 +723,7 @@
     }).join('');
     $('stats').innerHTML = html;
     $('statsCompact').innerHTML = html;
+    sizeCompactStats();
     $('disclaimer').textContent = (R.meta && R.meta.disclaimer) || '';
     $('ver').textContent = 'v' + ((R.meta && R.meta.version) || '1.0') + ' от ' + ((R.meta && R.meta.date) || '');
   }
@@ -763,7 +774,7 @@
     window.addEventListener('scroll', () => {
       if (!stickyQueued) { stickyQueued = true; requestAnimationFrame(updateSticky); }
     }, { passive: true });
-    window.addEventListener('resize', updateSticky);
+    window.addEventListener('resize', () => { updateSticky(); sizeCompactStats(); });
     updateSticky();
 
     const tabsEl = $('tabs'), tabsWrap = $('tabsWrap');
