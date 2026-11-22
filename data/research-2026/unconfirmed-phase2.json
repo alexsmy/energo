@@ -1,0 +1,677 @@
+{
+  "batch": "unconfirmed-phase2",
+  "processed": 30,
+  "items": [
+    {
+      "id": "R-SPARK",
+      "name": "СПАРК",
+      "fields": {
+        "phone": "+7 (812) 704-16-06, +7 (812) 704-16-01",
+        "email": "info@sparc.spb.ru",
+        "site": "https://sparc.spb.ru",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://sparc.spb.ru — официальный сайт/контакты АО «СПАРК»",
+        "https://www.google.com/search?udm=50&q=%D0%90%D0%9E%20%D0%A1%D0%9F%D0%90%D0%A0%D0%9A%207810209170%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-TPBUDUSHCHEGO",
+      "name": "Транспорт будущего",
+      "fields": {
+        "phone": "8 (800) 250-04-00",
+        "email": "info@tb-drone.ru, hr@tb-drone.ru",
+        "site": "https://tb-drone.ru",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://tb-drone.ru — официальный сайт: контакты, раздел «Партнёрам»",
+        "https://www.google.com/search?udm=50&q=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%20%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B3%D0%BE%203111006980%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-ICGTT",
+      "name": "ИЦ «Газотурбинные технологии» (7725787250)",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.google.com/search?udm=50&q=%D0%98%D0%A6%20%D0%93%D0%B0%D0%B7%D0%BE%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8%20%D0%98%D0%9D%D0%9D%207725787250%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8 — Google ИИ: телефон, e-mail, сайт, страница закупок и способ закупок не найдены (домен gtt.ru принадлежит издательскому дому в Рыбинске)"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-RNPD",
+      "name": "РН-Проектирование Добыча",
+      "fields": {
+        "phone": "+7 (3822) 61-61-00, +7 (3452) 52-90-90",
+        "email": "",
+        "site": "",
+        "procUrl": "https://zakupki.rosneft.ru",
+        "method": "Закупки по Положению о закупке ПАО «НК «Роснефть» (223-ФЗ, конкурентные процедуры и малые закупки на ЭТП «ТЭК-Торг»)",
+        "ceo": "Сухинин Глеб Викторович",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://zakupki.rosneft.ru — портал закупок Роснефти, положение о закупках",
+        "https://tektorg.ru — карточка организатора на ЭТП «ТЭК-Торг»",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%9D-%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%94%D0%BE%D0%B1%D1%8B%D1%87%D0%B0%207000028520%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-PROMER",
+      "name": "Промэнергоремонт",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://promenergoremont.ru — официальный сайт: отдел закупок не выделен; контакты отдела продаж к закупочным полям не отнесены",
+        "https://www.google.com/search?udm=50&q=%D0%9F%D1%80%D0%BE%D0%BC%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%204632014950%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "R-ESE",
+      "name": "ЕвроСибЭнерго-инжиниринг",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://td.enplus.ru — закупки группы «Эн+» централизованы в ООО «ЭН+ Торговый дом»; собственный e-mail и главный инженер не подтверждены",
+        "https://www.google.com/search?udm=50&q=%D0%95%D0%B2%D1%80%D0%BE%D0%A1%D0%B8%D0%B1%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%BE-%D0%B8%D0%BD%D0%B6%D0%B8%D0%BD%D0%B8%D1%80%D0%B8%D0%BD%D0%B3%207701299247%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "H-OSK",
+      "name": "ОСК",
+      "fields": {
+        "phone": "+7 (812) 494-17-42, +7 (495) 617-33-00",
+        "email": "",
+        "site": "",
+        "procUrl": "https://aoosk.ru/purchases",
+        "method": "223-ФЗ, ГОЗ и Единое положение о закупке АО «ОСК»; закрытая часть ЕИС, АС торгов ГОЗ, ЭТП ГПБ, SberB2B",
+        "ceo": "Пучков Андрей Сергеевич",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://aoosk.ru — официальный сайт АО «ОСК»: контакты, закупки, руководство",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%A1%D0%9A%207838395215%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-UAPGIDR",
+      "name": "УАП «Гидравлика»",
+      "fields": {
+        "phone": "+7 (347) 223-29-00, +7 (347) 223-31-33, +7 (347) 246-70-01, +7 (347) 246-70-28",
+        "email": "info@gidravlika-ufa.ru, gidravlika@tdhc.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ и коммерческие закупки (конкурсы, запросы предложений) через электронные торговые площадки, в частности ЭТП РФ",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gidravlika-ufa.ru — официальный домен предприятия",
+        "https://www.google.com/search?udm=50&q=%D0%A3%D0%90%D0%9F%20%D0%93%D0%B8%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B8%D0%BA%D0%B0%200278179819%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-SEVERNAYA-VERF",
+      "name": "Северная верфь",
+      "fields": {
+        "phone": "+7 (812) 600-52-60",
+        "email": "info@nordsy.spb.ru",
+        "site": "",
+        "procUrl": "https://nordsy.spb.ru (раздел «Торги и закупка»)",
+        "method": "223-ФЗ и ГОЗ (275-ФЗ), конкурентные электронные закупки на АСТ ГОЗ и Fabrikant.ru",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://nordsy.spb.ru — официальный сайт: контакты, раздел «Торги и закупка»",
+        "https://www.google.com/search?udm=50&q=%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%84%D1%8C%207805034277%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "H-TECHNODINAMIKA",
+      "name": "Технодинамика",
+      "fields": {
+        "phone": "+7 (495) 627-10-99, +7 (495) 627-10-69, +7 (495) 989-29-39",
+        "email": "info@tdhc.ru, info@technodinamika.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ, присоединение к Единому положению о закупке ГК «Ростех»",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://technodinamika.ru — официальный сайт холдинга (на обновлении)",
+        "https://www.google.com/search?udm=50&q=%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0%207719265496%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-ODKAVIADVIGATEL",
+      "name": "ОДК-Авиадвигатель",
+      "fields": {
+        "phone": "+7 (342) 240-97-86, +7 (342) 281-54-77, +7 (342) 240-84-49",
+        "email": "office@avid.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» / АО «ОДК»",
+        "ceo": "Иноземцев Александр Александрович (управляющий директор — генеральный конструктор; ЕИО передано АО «ОДК»)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com — портал ОДК — контакты и раздел «Поставщикам»",
+        "https://avid.ru — официальный сайт завода",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%94%D0%9A-%D0%90%D0%B2%D0%B8%D0%B0%D0%B4%D0%B2%D0%B8%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%205904000620%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ZALAAERO",
+      "name": "Зала Аэро",
+      "fields": {
+        "phone": "+7 (800) 550-42-14, +7 (495) 665-51-20, +7 (499) 673-05-05, +7 (3412) 43-05-05",
+        "email": "",
+        "site": "https://zala-aero.com",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://zala-aero.com — официальный сайт группы компаний ZALA",
+        "https://www.google.com/search?udm=50&q=%D0%97%D0%B0%D0%BB%D0%B0%20%D0%90%D1%8D%D1%80%D0%BE%209715478507%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "C-GPCOMPLECT",
+      "name": "Газпром комплектация",
+      "fields": {
+        "phone": "+7 (812) 613-00-67",
+        "email": "komplekt@komplekt.gazprom.ru",
+        "site": "https://komplektatsiya.gazprom.ru",
+        "procUrl": "https://komplektatsiya.gazprom.ru/tenders",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://komplektatsiya.gazprom.ru/tenders — официальный сайт: контакты и закупки",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0%D1%86%D0%B8%D1%8F%207740000044%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "C-GPPHG",
+      "name": "Газпром ПХГ",
+      "fields": {
+        "phone": "+7 (812) 613-17-17",
+        "email": "phg@phg.gazprom.ru",
+        "site": "https://ugs.gazprom.ru",
+        "procUrl": "https://ugs.gazprom.ru/tenders",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://ugs.gazprom.ru/tenders — официальный сайт: контакты и закупки",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%20%D0%9F%D0%A5%D0%93%205003065767%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "C-GES",
+      "name": "Газэнергосервис",
+      "fields": {
+        "phone": "+7 (495) 259-06-10",
+        "email": "adm@gesturbo.ru",
+        "site": "https://gesturbo.ru",
+        "procUrl": "https://gesturbo.ru/tenders",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gesturbo.ru/tenders — официальный сайт: контакты и закупки",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D1%8D%D0%BD%D0%B5%D1%80%D0%B3%D0%BE%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%207709105630%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-GSPINZH",
+      "name": "ГСП Инжиниринг",
+      "fields": {
+        "phone": "+7 (473) 226-34-45",
+        "email": "ruk@gasp.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "Конкурентные и коммерческие процедуры в электронной форме (открытые аукционы, запросы предложений, малые закупки на ЭТП ГПБ)",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gasp.ru — официальный сайт АО «ГСП Инжиниринг»",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%A1%D0%9F%20%D0%98%D0%BD%D0%B6%D0%B8%D0%BD%D0%B8%D1%80%D0%B8%D0%BD%D0%B3%203661001457%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-GAZSTROYPROM",
+      "name": "Газстройпром",
+      "fields": {
+        "phone": "+7 (812) 665-08-08, +7 (800) 222-22-10",
+        "email": "info@gsprom.ru",
+        "site": "https://gsprom.ru",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Ткаченко Николай Витальевич",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gsprom.ru — официальный сайт: контакты и руководство",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BF%D1%80%D0%BE%D0%BC%207842155505%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-TEPLOPROEKT",
+      "name": "Теплопроект",
+      "fields": {
+        "phone": "+7 (495) 471-13-36, +7 (495) 961-25-17",
+        "email": "info@teploproekt.com",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://teploproekt.com — официальный сайт: контакты",
+        "https://www.google.com/search?udm=50&q=%D0%A2%D0%B5%D0%BF%D0%BB%D0%BE%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%207716012049%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-RNGIR",
+      "name": "РН-ГИР",
+      "fields": {
+        "phone": "+7 (3452) 55-00-55",
+        "email": "rn-gir@rosneft.ru, tnnc@rosneft.ru",
+        "site": "",
+        "procUrl": "https://zakupki.rosneft.ru",
+        "method": "223-ФЗ и корпоративное положение о закупках ПАО «НК «Роснефть» на ЭТП «ТЭК-Торг» и в ЕИС",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://zakupki.rosneft.ru — портал закупок Роснефти",
+        "https://fedresurs.ru — Федресурс: контакты ООО «РН-ГИР»",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%9D-%D0%93%D0%98%D0%A0%207202157173%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-VNIINP",
+      "name": "ВНИИ НП",
+      "fields": {
+        "phone": "+7 (495) 787-48-87",
+        "email": "info@vniinp.rosneft.ru, info@vniinp.ru",
+        "site": "",
+        "procUrl": "https://zakupki.rosneft.ru",
+        "method": "223-ФЗ и корпоративные закупки по единому положению ПАО «НК «Роснефть» на ЭТП «ТЭК-Торг»",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://vniinp.ru — официальный сайт АО «ВНИИ НП»",
+        "https://zakupki.rosneft.ru — закупки Роснефти",
+        "https://www.google.com/search?udm=50&q=%D0%92%D0%9D%D0%98%D0%98%20%D0%9D%D0%9F%207722001535%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-GSPI",
+      "name": "ГСПИ",
+      "fields": {
+        "phone": "+7 (495) 988-80-50",
+        "email": "info@aogspi.ru, info-fmc@aogspi.ru",
+        "site": "",
+        "procUrl": "https://zakupki.rosatom.ru",
+        "method": "223-ФЗ и Единый отраслевой стандарт закупок ГК «Росатом» через ЕОС-Закупки 2.0 / РТС-тендер",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://aogspi.ru — официальный сайт АО «ГСПИ»",
+        "https://zakupki.rosatom.ru — отраслевой портал закупок Росатома",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%A1%D0%9F%D0%98%207708697977%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-CIAM",
+      "name": "ЦИАМ им. П.И. Баранова",
+      "fields": {
+        "phone": "+7 (499) 763-61-67, +7 (499) 763-61-10",
+        "email": "info@ciam.ru",
+        "site": "",
+        "procUrl": "https://ciam.ru/about/zakupki/",
+        "method": "44-ФЗ и 223-ФЗ по утверждённому Положению о закупках на ЕИС, Росэлторг и B2B-Center",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://ciam.ru/about/zakupki/ — официальный сайт: контакты, администрация, закупки",
+        "https://www.google.com/search?udm=50&q=%D0%A6%D0%98%D0%90%D0%9C%207722497881%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-VIAM",
+      "name": "ВИАМ",
+      "fields": {
+        "phone": "+7 (499) 261-86-77, +7 (499) 267-21-09",
+        "email": "admin@viam.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ и 44-ФЗ (в т.ч. закрытые процедуры/ГОЗ) через ЕИС, Росэлторг и АСТ ГОЗ",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://viam.ru — официальный сайт НИЦ «Курчатовский институт» — ВИАМ",
+        "https://www.google.com/search?udm=50&q=%D0%92%D0%98%D0%90%D0%9C%207701024933%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-IRAOENG",
+      "name": "Интер РАО — Инжиниринг",
+      "fields": {
+        "phone": "+7 (495) 664-88-40",
+        "email": "irao-e@interrao.ru",
+        "site": "",
+        "procUrl": "https://irao-engineering.ru/ru/zakupki/",
+        "method": "223-ФЗ и корпоративные закупки, централизованы через ООО «Интер РАО — Центр управления закупками», ЭТП «ТЭК-Торг» и ЭТП ГПБ",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://irao-engineering.ru/ru/zakupki/ — официальный сайт: закупки и контакты",
+        "https://interrao-zakupki.ru — единый закупочный портал группы Интер РАО",
+        "https://www.google.com/search?udm=50&q=%D0%98%D0%BD%D1%82%D0%B5%D1%80%20%D0%A0%D0%90%D0%9E%20%D0%98%D0%BD%D0%B6%D0%B8%D0%BD%D0%B8%D1%80%D0%B8%D0%BD%D0%B3%205036101347%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ROSSETINTTS",
+      "name": "Россети НТЦ",
+      "fields": {
+        "phone": "+7 (495) 727-19-09",
+        "email": "info@ntc-power.ru",
+        "site": "",
+        "procUrl": "https://ntc-power.ru/ (раздел «Закупки»)",
+        "method": "223-ФЗ и Положение о закупке на аккредитованных ЭТП (ЕИС, ЭТП группы «Россети»)",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://ntc-power.ru/ — официальный сайт: контакты и управление закупочной деятельностью",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%BE%D1%81%D1%81%D0%B5%D1%82%D0%B8%20%D0%9D%D0%A2%D0%A6%207728589190%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ROSATOMNAUKA",
+      "name": "Росатом Наука",
+      "fields": {
+        "phone": "+7 (499) 558-10-25",
+        "email": "aonii@rosatom.ru",
+        "site": "",
+        "procUrl": "https://niirosatom.ru/ (раздел «Поставщикам»)",
+        "method": "223-ФЗ и ЕОСЗ ГК «Росатом» с публикацией в ЕИС, на zakupki.rosatom.ru и аккредитованных ЭТП",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://niirosatom.ru/ — официальный сайт: контакты и раздел «Поставщикам»",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%BE%D1%81%D0%B0%D1%82%D0%BE%D0%BC%20%D0%9D%D0%B0%D1%83%D0%BA%D0%B0%207706760091%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ZTL",
+      "name": "Завод турбинных лопаток",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://power-m.ru/ — сайт АО «Силовые машины»: кураторы по ЗТЛ не выделены, главный инженер не опубликован",
+        "https://www.google.com/search?udm=50&q=%D0%97%D0%B0%D0%B2%D0%BE%D0%B4%20%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA%207702080289%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "R-IRAO-SERVICE",
+      "name": "Интер РАО Сервис",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "Скороход Юлия Игоревна (ответственный секретарь Центральной закупочной комиссии Группы «Интер РАО»; закупки централизованы в ООО «Интер РАО — ЦУЗ»)",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://interrao-zakupki.ru — единый закупочный портал Группы «Интер РАО»",
+        "https://www.google.com/search?udm=50&q=%D0%98%D0%BD%D1%82%D0%B5%D1%80%20%D0%A0%D0%90%D0%9E%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%207706720370%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-ZRETO",
+      "name": "Завод РЭТО",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "https://zreto.ru",
+        "method": "223-ФЗ, конкурентные и неконкурентные процедуры через ЕИС и коммерческие ЭТП (B2B-Center)",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://zreto.ru — сайт завода и корпоративная секция закупок на rossetimr.ru",
+        "https://www.google.com/search?udm=50&q=%D0%97%D0%B0%D0%B2%D0%BE%D0%B4%20%D0%A0%D0%AD%D0%A2%D0%9E%207724646338%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-ODKKLIMOV",
+      "name": "ОДК-Климов",
+      "fields": {
+        "phone": "+7 (812) 647-00-38, +7 (812) 454-71-00",
+        "email": "klimov@klimov.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех»; закрытые закупки и ГОЗ на АСТ ГОЗ",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com/about/structure/ao-odk-klimov — портал ОДК: контакты и раздел «Поставщикам»",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%94%D0%9A-%D0%9A%D0%BB%D0%B8%D0%BC%D0%BE%D0%B2%207802375335%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    }
+  ],
+  "summary": {
+    "found": 15,
+    "partial": 11,
+    "not_found": 4
+  },
+  "googleAiStatus": "ok"
+}

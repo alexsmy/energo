@@ -1,0 +1,1542 @@
+{
+  "batch": "unconfirmed-phase1",
+  "inventory": {
+    "cards": 111,
+    "fields": 295,
+    "items": [
+      {
+        "id": "C-SGKNOVOSIB",
+        "name": "СГК-Новосибирск",
+        "inn": "5405270340",
+        "region": "Новосибирская область",
+        "site": "https://sibgenco.ru",
+        "unconfirmedFields": [
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-PROMER",
+        "name": "Промэнергоремонт",
+        "inn": "4632014950",
+        "region": "Курская область",
+        "site": "https://promenergoremont.ru",
+        "unconfirmedFields": [
+          "chiefDesigner",
+          "procContact",
+          "procPhone",
+          "procEmail"
+        ]
+      },
+      {
+        "id": "R-ESE",
+        "name": "ЕвроСибЭнерго-инжиниринг",
+        "inn": "7701299247",
+        "region": "Иркутская область",
+        "site": "https://enplusgroup.com",
+        "unconfirmedFields": [
+          "email",
+          "chiefEngineer",
+          "chiefDesigner",
+          "procContact"
+        ]
+      },
+      {
+        "id": "O-SILMASH",
+        "name": "Силовые машины",
+        "inn": "7702080289",
+        "region": "Санкт-Петербург",
+        "site": "https://power-m.ru",
+        "unconfirmedFields": [
+          "chiefEngineer"
+        ]
+      },
+      {
+        "id": "O-LMZ",
+        "name": "Ленинградский металлический завод",
+        "inn": "7804677772",
+        "region": "Санкт-Петербург",
+        "site": "https://power-m.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "chiefDesigner"
+        ]
+      },
+      {
+        "id": "O-KTZ",
+        "name": "Калужский турбинный завод",
+        "inn": "4026007424",
+        "region": "Калужская область",
+        "site": "https://paoktz.ru",
+        "unconfirmedFields": [
+          "chiefEngineer"
+        ]
+      },
+      {
+        "id": "O-ORGRES",
+        "name": "Фирма ОРГРЭС",
+        "inn": "7725415380",
+        "region": "Москва",
+        "site": "https://orgres-f.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "chiefDesigner",
+          "procContact",
+          "procPhone",
+          "procEmail"
+        ]
+      },
+      {
+        "id": "O-CKTI",
+        "name": "НПО ЦКТИ",
+        "inn": "7825660956",
+        "region": "Санкт-Петербург",
+        "site": "https://ckti.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "chiefDesigner"
+        ]
+      },
+      {
+        "id": "O-TKZ",
+        "name": "ТКЗ «Красный котельщик»",
+        "inn": "6154023009",
+        "region": "Ростовская область",
+        "site": "https://tkz.su",
+        "unconfirmedFields": [
+          "chiefDesigner",
+          "procEmail"
+        ]
+      },
+      {
+        "id": "O-ZIO",
+        "name": "ЗиО-Подольск",
+        "inn": "5036040729",
+        "region": "Московская область",
+        "site": "https://aozio.ru",
+        "unconfirmedFields": [
+          "procContact"
+        ]
+      },
+      {
+        "id": "O-AEM",
+        "name": "Росатом Машиностроение",
+        "inn": "9706047504",
+        "region": "Москва",
+        "site": "https://rosatommd.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "chiefDesigner",
+          "procContact",
+          "procPhone",
+          "procEmail"
+        ]
+      },
+      {
+        "id": "O-ZTL",
+        "name": "Завод турбинных лопаток",
+        "inn": "7702080289",
+        "region": "Санкт-Петербург",
+        "site": "https://power-m.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "procContact",
+          "procPhone"
+        ]
+      },
+      {
+        "id": "O-ELSIB",
+        "name": "Элсиб",
+        "inn": "5403102702",
+        "region": "Новосибирская область",
+        "site": "https://elsib.ru/ru/",
+        "unconfirmedFields": [
+          "chiefDesigner"
+        ]
+      },
+      {
+        "id": "R-IRAO-SERVICE",
+        "name": "Интер РАО Сервис",
+        "inn": "7706720370",
+        "region": "Москва",
+        "site": "https://www.interrao.ru",
+        "unconfirmedFields": [
+          "chiefEngineer",
+          "chiefDesigner",
+          "procContact"
+        ]
+      },
+      {
+        "id": "R-TURBSERV",
+        "name": "Турбосервис Рус",
+        "inn": "7704781586",
+        "region": "Московская область",
+        "site": "https://seturbo.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-PNPC",
+        "name": "ПНПК",
+        "inn": "6316100813",
+        "region": "Пермский край",
+        "site": "https://pnpc.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-UETMM",
+        "name": "УЭТМ-Монтаж",
+        "inn": "6663062122",
+        "region": "Свердловская область",
+        "site": "https://uetm-montag.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-KERREM",
+        "name": "КамЭнергоРемонт",
+        "inn": "1639021461",
+        "region": "Республика Татарстан",
+        "site": "https://ker.com.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "R-ODKS",
+        "name": "ОДК-Сервис",
+        "inn": "4705036363",
+        "region": "Ленинградская область",
+        "site": "https://www.uecrus.com",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-ZRETO",
+        "name": "Завод РЭТО",
+        "inn": "7724646338",
+        "region": "Москва",
+        "site": "https://zreto.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-SIBBKZ",
+        "name": "Сибэнергомаш – БКЗ",
+        "inn": "2224173758",
+        "region": "Алтайский край",
+        "site": "https://sibem-bkz.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-ELZAVOD",
+        "name": "Электрозавод",
+        "inn": "7718183890",
+        "region": "Москва",
+        "site": "https://erso.group",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-NEFT",
+        "name": "Невский трансформатор",
+        "inn": "7804475617",
+        "region": "Санкт-Петербург",
+        "site": "https://nev-tr.ru/",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "H-ODK",
+        "name": "ОДК",
+        "inn": "7731644035",
+        "region": "Москва",
+        "site": "https://www.uecrus.com",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "H-OSK",
+        "name": "ОСК",
+        "inn": "7838395215",
+        "region": "Санкт-Петербург",
+        "site": "https://www.oak209.com",
+        "unconfirmedFields": [
+          "phone",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-REDUKTORPM",
+        "name": "Редуктор-ПМ",
+        "inn": "5948017501",
+        "region": "Пермский край",
+        "site": "https://upcreductor-pm.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-SMPP",
+        "name": "СМПП",
+        "inn": "5045001885",
+        "region": "Московская область",
+        "site": "https://rhc.ru/structure/stupinskoe-mashinostroitelnoe-proizvodstvennoe-predpriyatie/)",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-ODKKLIMOV",
+        "name": "ОДК-Климов",
+        "inn": "7802375335",
+        "region": "Санкт-Петербург",
+        "site": "https://www.uecrus.com/about/structure/ao-odk-klimov/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "method"
+        ]
+      },
+      {
+        "id": "O-MMPCHERNYSHEV",
+        "name": "ММП им. В.В. Чернышёва",
+        "inn": "7733018650",
+        "region": "Москва",
+        "site": "https://www.uecrus.com/about/structure/ao-mmp-imeni-v-v-chernysheva/",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-UKBP",
+        "name": "УКБП",
+        "inn": "7303005071",
+        "region": "Ульяновская область",
+        "site": "http://www.ukbp.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-RPKB",
+        "name": "РПКБ",
+        "inn": "5040007594",
+        "region": "Московская область",
+        "site": "https://rpkb.kret.tech/",
+        "unconfirmedFields": [
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-UAPO",
+        "name": "УАПО",
+        "inn": "0275074279",
+        "region": "Республика Башкортостан",
+        "site": "https://agregatufa.ru",
+        "unconfirmedFields": [
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-GIDROAGREGAT",
+        "name": "Гидроагрегат",
+        "inn": "5252000470",
+        "region": "Нижегородская область",
+        "site": "http://www.gidroagregat-nn.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-NARZ",
+        "name": "НАРЗ",
+        "inn": "5402112867",
+        "region": "Новосибирская область",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-SPARK",
+        "name": "СПАРК",
+        "inn": "7810209170",
+        "region": "Санкт-Петербург",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-UAPGIDR",
+        "name": "УАП «Гидравлика» (уточнение по локации)",
+        "inn": "0278179819",
+        "region": "Республика Башкортостан",
+        "site": "https://gidravlika-ufa.ru",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "H-ROSTECH",
+        "name": "Госкорпорация «Ростех»",
+        "inn": "7704274402",
+        "region": "Москва",
+        "site": "https://rostec.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "H-VERTOLETY",
+        "name": "АО «Вертолёты России»",
+        "inn": "7731559044",
+        "region": "Москва",
+        "site": "https://www.rhc.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "O-NCV",
+        "name": "НЦВ им. М.Л. Миля и Н.И. Камова",
+        "inn": "7718016666",
+        "region": "Московская область",
+        "site": "https://www.russianhelicopters.aero",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-KVZ",
+        "name": "Казанский вертолётный завод",
+        "inn": "1656002652",
+        "region": "Республика Татарстан",
+        "site": "https://www.kazanhelicopters.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "O-UUAZ",
+        "name": "Улан-Удэнский авиационный завод",
+        "inn": "0323018510",
+        "region": "Республика Бурятия",
+        "site": "https://www.rhc.ru/structure/ulan-udenskiy-aviacionnyy-zavod",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-ROSTVERTOL",
+        "name": "АО «Роствертол»",
+        "inn": "6161021690",
+        "region": "Ростовская область",
+        "site": "https://www.rhc.ru/structure/rostvertol",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-PROGRESS",
+        "name": "ААК «Прогресс» им. Н.И. Сазыкина",
+        "inn": "2501002394",
+        "region": "Приморский край",
+        "site": "https://rhc.aero/structure/arsenevskaya-aviacionnaya-kompaniya-progress-im-n-i-sazykina",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-KUMAPP",
+        "name": "КумАПП",
+        "inn": "0262016287",
+        "region": "Республика Башкортостан",
+        "site": "https://rhc.aero/structure/kumertauskoe-aviacionnoe-proizvodstvennoe-predpriyatie",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-KMZ",
+        "name": "Кронштадтский морской завод",
+        "inn": "7843003128",
+        "region": "Санкт-Петербург",
+        "site": "https://kmolz.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-ZVEZDA-SPB",
+        "name": "Звезда (Санкт-Петербург)",
+        "inn": "7811038760",
+        "region": "Санкт-Петербург",
+        "site": "https://zvezda.spb.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-NEVSSZ",
+        "name": "Невский ССЗ",
+        "inn": "4706020609",
+        "region": "Ленинградская область",
+        "site": "https://www.nssz.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-ZVEZDOCHKA",
+        "name": "ЦС «Звездочка»",
+        "inn": "2902060361",
+        "region": "Архангельская область",
+        "site": "https://www.star.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-SEVMASH",
+        "name": "Севмаш",
+        "inn": "2902059091",
+        "region": "Архангельская область",
+        "site": "https://sevmash.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-YANTAR",
+        "name": "ПСЗ «Янтарь»",
+        "inn": "3900000111",
+        "region": "Калининградская область",
+        "site": "https://shipyard-yantar.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-CSD",
+        "name": "ЦСД (Дальзавод)",
+        "inn": "2536210349",
+        "region": "Приморский край",
+        "site": "https://csdalzavod.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-KRYLOV-NIRC",
+        "name": "НИЦ имени академика А.Н. Крылова",
+        "inn": "9810011977",
+        "region": "Санкт-Петербург",
+        "site": "https://krylov-centre.ru",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "R-KOLOMNA",
+        "name": "Коломенский завод",
+        "inn": "5022013517",
+        "region": "Московская область",
+        "site": "https://www.kolomnadiesel.com",
+        "unconfirmedFields": [
+          "phone",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "R-SEVERNAYA-VERF",
+        "name": "Северная верфь",
+        "inn": "7805034277",
+        "region": "Санкт-Петербург",
+        "site": "https://nordsy.spb.ru",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "H-NASK",
+        "name": "НАСК",
+        "inn": "6230116089",
+        "region": "Москва",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "H-OAK",
+        "name": "ОАК",
+        "inn": "7708619320",
+        "region": "Москва",
+        "site": "https://www.uacrussia.ru",
+        "unconfirmedFields": [
+          "phone"
+        ]
+      },
+      {
+        "id": "H-YAKOVLEV",
+        "name": "Яковлев",
+        "inn": "3807002509",
+        "region": "Москва",
+        "site": "https://yakovlev.ru",
+        "unconfirmedFields": [
+          "ceo"
+        ]
+      },
+      {
+        "id": "H-KRET",
+        "name": "КРЭТ",
+        "inn": "7703695246",
+        "region": "Москва",
+        "site": "https://www.kret.com",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "H-TECHNODINAMIKA",
+        "name": "Технодинамика",
+        "inn": "7719265496",
+        "region": "Москва",
+        "site": "https://www.technodinamika.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "H-VSK",
+        "name": "ВСК (Вертолётная сервисная компания)",
+        "inn": "7704252960",
+        "region": "Москва",
+        "site": "https://www.hsc-copter.com",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "H-AVIAREMONT",
+        "name": "Авиаремонт",
+        "inn": "7704726240",
+        "region": "Москва",
+        "site": "https://www.aviaremont.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-TANTK-BERIEV",
+        "name": "ТАНТК им. Г.М. Бериева",
+        "inn": "6154028021",
+        "region": "Ростовская область",
+        "site": "https://www.beriev.com",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-ODKPM",
+        "name": "ОДК-Пермские моторы (ОДК-ПМ)",
+        "inn": "5904007312",
+        "region": "Пермский край",
+        "site": "https://www.perm-motors.ru",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-ODKAVIADVIGATEL",
+        "name": "ОДК-Авиадвигатель",
+        "inn": "5904000620",
+        "region": "Пермский край",
+        "site": "https://www.uecrus.com/about/structure/ao-odk-aviadvigatel/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-ODKKUZNETSOV",
+        "name": "ОДК-Кузнецов",
+        "inn": "6319033379",
+        "region": "Самарская область",
+        "site": "https://www.uecrus.com/about/structure/pao-odk-kuznetsov/",
+        "unconfirmedFields": [
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-ARZ810",
+        "name": "810 АРЗ (Чита)",
+        "inn": "7536080716",
+        "region": "Забайкальский край",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-ARZ356",
+        "name": "356 АРЗ (Энгельс)",
+        "inn": "6449042335",
+        "region": "Саратовская область",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-ARZ419",
+        "name": "419 АРЗ (Санкт-Петербург)",
+        "inn": "7807343496",
+        "region": "Санкт-Петербург",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "R-ARZ150",
+        "name": "150 АРЗ (Светлый)",
+        "inn": "3913501370",
+        "region": "Калининградская область",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-UZGA",
+        "name": "УЗГА",
+        "inn": "6664013640",
+        "region": "Свердловская область",
+        "site": "https://uwca.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-MVEN",
+        "name": "Фирма «МВЕН»",
+        "inn": "1661000749",
+        "region": "Республика Татарстан",
+        "site": "https://mven.ru",
+        "unconfirmedFields": [
+          "phone",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-KRONSTADT",
+        "name": "Кронштадт",
+        "inn": "7808035536",
+        "region": "Москва",
+        "site": "http://kronshtadt.ru",
+        "unconfirmedFields": [
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-ZALAAERO",
+        "name": "Зала Аэро",
+        "inn": "9715478507",
+        "region": "Москва",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "site",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-CST",
+        "name": "ЦСТ (ZALA Aero Group)",
+        "inn": "1841015504",
+        "region": "Москва",
+        "site": "https://zala.aero",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-TPBUDUSHCHEGO",
+        "name": "Транспорт будущего",
+        "inn": "3111006980",
+        "region": "Белгородская область",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-GEOSCAN",
+        "name": "Геоскан",
+        "inn": "7801450808",
+        "region": "Санкт-Петербург",
+        "site": "https://www.geoscan.aero/",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-AEROKON",
+        "name": "Аэрокон",
+        "inn": "5013026848",
+        "region": "Московская область",
+        "site": "http://www.aerocon.ru",
+        "unconfirmedFields": [
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "C-GPZAKUPKI",
+        "name": "Газпром закупки",
+        "inn": "2460040655",
+        "region": "Санкт-Петербург",
+        "site": "https://gazpromzakupki.gazprom.ru",
+        "unconfirmedFields": [
+          "phone",
+          "email"
+        ]
+      },
+      {
+        "id": "C-GPVNIIGAZ",
+        "name": "Газпром ВНИИГАЗ",
+        "inn": "5003028155",
+        "region": "Санкт-Петербург",
+        "site": "https://vniigaz.gazprom.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "C-GPCOMPLECT",
+        "name": "Газпром комплектация",
+        "inn": "7740000044",
+        "region": "Санкт-Петербург",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl"
+        ]
+      },
+      {
+        "id": "C-GPPHG",
+        "name": "Газпром ПХГ",
+        "inn": "5003065767",
+        "region": "Санкт-Петербург",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl"
+        ]
+      },
+      {
+        "id": "C-GES",
+        "name": "Газэнергосервис",
+        "inn": "7709105630",
+        "region": "Москва",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-GSPINZH",
+        "name": "ГСП Инжиниринг (бывш. Газпроектинжиниринг)",
+        "inn": "3661001457",
+        "region": "Воронежская область",
+        "site": "https://www.gasp.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-NIIPGAZA",
+        "name": "НИИПГАЗА",
+        "inn": "7813411480",
+        "region": "Санкт-Петербург",
+        "site": "https://niipgaza.com/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-NPOGTT",
+        "name": "НПО «Газотурбинные технологии» (НПО «ГТТ»)",
+        "inn": "6449108868",
+        "region": "Саратовская область",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-ICGTT",
+        "name": "ИЦ «Газотурбинные технологии» (7725787250)",
+        "inn": "7725787250",
+        "region": "Москва",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-GAZSTROYPROM",
+        "name": "Газстройпром",
+        "inn": "7842155505",
+        "region": "Санкт-Петербург",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "site",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-RTECKM",
+        "name": "Ротек Компоненты и Материалы (Ротек КМ)",
+        "inn": "9709113836",
+        "region": "Москва",
+        "site": "https://rtecm.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-ARMS",
+        "name": "НПП АРМС",
+        "inn": "7703049362",
+        "region": "Москва",
+        "site": "https://armstech.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-ODKTBM",
+        "name": "ОДК-Турбины большой мощности (ОДК-ТБМ)",
+        "inn": "9719001539",
+        "region": "Москва",
+        "site": "https://www.uecrus.com/about/structure",
+        "unconfirmedFields": [
+          "phone",
+          "email"
+        ]
+      },
+      {
+        "id": "O-TURBOHOLOD",
+        "name": "Турбохолод",
+        "inn": "7718016810",
+        "region": "Москва",
+        "site": "https://turbokholod.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-KAZKOMPRESSORMASH",
+        "name": "Казанькомпрессормаш",
+        "inn": "1660004878",
+        "region": "Республика Татарстан",
+        "site": "https://compressormash.ru",
+        "unconfirmedFields": [
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-TREMKZN",
+        "name": "ТРЭМ-Казань",
+        "inn": "1660301260",
+        "region": "Республика Татарстан",
+        "site": "https://tremkazan.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-TREMENG",
+        "name": "ТРЭМ Инжиниринг",
+        "inn": "7709344220",
+        "region": "Москва",
+        "site": "https://trem.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-ANOD",
+        "name": "НПЦ АНОД",
+        "inn": "5259006834",
+        "region": "Нижегородская область",
+        "site": "https://anod.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-RTG",
+        "name": "РТГ (РОСТУРБО)",
+        "inn": "3123209784",
+        "region": "Белгородская область",
+        "site": "https://rosturbo.ru",
+        "unconfirmedFields": [
+          "procUrl"
+        ]
+      },
+      {
+        "id": "O-VNIINEFT",
+        "name": "ВНИИнефть",
+        "inn": "7713080756",
+        "region": "Москва",
+        "site": "https://vniineft.ru/",
+        "unconfirmedFields": [
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-GIDROPROEKT",
+        "name": "Институт Гидропроект",
+        "inn": "7743714777",
+        "region": "Москва",
+        "site": "https://mhp.rushydro.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "method"
+        ]
+      },
+      {
+        "id": "O-LENGIDROPROEKT",
+        "name": "Ленгидропроект",
+        "inn": "7814159353",
+        "region": "Санкт-Петербург",
+        "site": "https://lhp.rushydro.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "method"
+        ]
+      },
+      {
+        "id": "O-TEPLOPROEKT",
+        "name": "Теплопроект",
+        "inn": "7716012049",
+        "region": "Москва",
+        "site": "https://teploproekt.com/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-MEP",
+        "name": "Мосэнергопроект (МЭП)",
+        "inn": "9701038827",
+        "region": "Москва",
+        "site": "https://www.mep.ru/",
+        "unconfirmedFields": [
+          "method"
+        ]
+      },
+      {
+        "id": "O-RNGIR",
+        "name": "РН-ГИР",
+        "inn": "7202157173",
+        "region": "",
+        "site": "https://tnnc.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-RNPD",
+        "name": "РН-Проектирование Добыча",
+        "inn": "7000028520",
+        "region": "",
+        "site": "не подтверждены",
+        "unconfirmedFields": [
+          "phone",
+          "site",
+          "procUrl",
+          "method",
+          "ceo"
+        ]
+      },
+      {
+        "id": "O-VNIINP",
+        "name": "ВНИИ НП",
+        "inn": "7722001535",
+        "region": "Москва",
+        "site": "https://vniinp.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-VNIIG",
+        "name": "ВНИИГ им. Б.Е. Веденеева",
+        "inn": "7804004400",
+        "region": "Санкт-Петербург",
+        "site": "https://vniig.rushydro.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "method"
+        ]
+      },
+      {
+        "id": "O-GSPI",
+        "name": "ГСПИ",
+        "inn": "7708697977",
+        "region": "Москва",
+        "site": "https://aogspi.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-CIAM",
+        "name": "ЦИАМ им. П.И. Баранова",
+        "inn": "7722497881",
+        "region": "Москва",
+        "site": "https://ciam.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-VIAM",
+        "name": "ВИАМ (НИЦ «Курчатовский институт» — ВИАМ)",
+        "inn": "7701024933",
+        "region": "Москва",
+        "site": "https://www.viam.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-IRAOENG",
+        "name": "Интер РАО — Инжиниринг",
+        "inn": "5036101347",
+        "region": "Москва",
+        "site": "https://irao-engineering.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-ROSSETINTTS",
+        "name": "Россети НТЦ",
+        "inn": "7728589190",
+        "region": "Москва",
+        "site": "https://ntc-power.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      },
+      {
+        "id": "O-ROSATOMNAUKA",
+        "name": "Росатом Наука",
+        "inn": "7706760091",
+        "region": "Москва",
+        "site": "https://niirosatom.ru/",
+        "unconfirmedFields": [
+          "phone",
+          "email",
+          "procUrl",
+          "method"
+        ]
+      }
+    ]
+  },
+  "methodPriority": [
+    "Официальный сайт компании (контакты, руководство, раздел «Поставщикам/Закупки»)",
+    "ЕГРЮЛ / Rusprofile / Контур / Чекко / Audit-it / Zachestnyibiznes",
+    "Википедия и отраслевые справочники (Aviaport, Tadviser, Заводы.рф)",
+    "Страница закупок на сайте компании и ЕИС / ЭТП (zakupki.gov.ru, zakupki.rosatom.ru, РТС, Росэлторг и др.)",
+    "DDG / Bing",
+    "Google ИИ-режим через встроенный браузер (udm=50)"
+  ],
+  "pilot": [
+    {
+      "id": "R-NARZ",
+      "name": "НАРЗ",
+      "fields": {
+        "phone": "+7 (383) 228-96-50, +7 (383) 228-96-70 (факс +7 (383) 200-30-19)",
+        "email": "info@narp.ru",
+        "site": "https://rhc.aero/structure/novosibirskiy-aviaremontnyy-zavod",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/novosibirskiy-aviaremontnyy-zavod/contacts — e-mail info@narp.ru; телефон +7 (383) 200-30-19 в каталоге является факсом",
+        "https://rhc.aero/structure/novosibirskiy-aviaremontnyy-zavod — актуальный домен холдинга «Вертолёты России» (rhc.ru устарел); основные телефоны +7 (383) 228-96-50 и +7 (383) 228-96-70",
+        "Правки пользователя (проверка 22.11.2026): факс/основные телефоны и домен rhc.aero"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "H-NASK",
+      "name": "НАСК",
+      "fields": {
+        "phone": "+7 (495) 540-01-09",
+        "email": "info@nascompany.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ (закупка у единственного поставщика, иные способы размещения, в т.ч. через ЕАТ «Берёзка»)",
+        "ceo": "Алёшин Алексей Владиславович",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.google.com/search?udm=50&q=%D0%90%D0%9E%20%D0%9D%D0%90%D0%A1%D0%9A%206230116089%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026",
+        "Подтверждено пользователем отдельно (22.11.2026): генеральный директор, телефон, e-mail и способ закупок"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-ARZ810",
+      "name": "810 АРЗ (Чита)",
+      "fields": {
+        "phone": "8 (302) 228-34-11",
+        "email": "info@810.rhc.aero",
+        "site": "https://rhc.ru/structure/ao-810-aviacionnyy-remontnyy-zavod",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/810-arz — JSON-LD Organization: taxID 7536080716, telephone 8(302)228-34-11 (и ещё 9 номеров), email info@810.rhc.aero",
+        "https://заводы.рф/factory/810-arz/contacts — страница закупок/сайт: rhc.ru/structure/ao-810-aviacionnyy-remontnyy-zavod"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-ARZ356",
+      "name": "356 АРЗ (Энгельс)",
+      "fields": {
+        "phone": "8 (845) 374-96-02",
+        "email": "engels@arz356.com",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Марков Игорь Сергеевич (управляющий директор)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/356-arz — JSON-LD Organization: taxID 6449042335, telephone 8(845) 374-96-02 / 8(495) 660-55-60, email engels@arz356.com",
+        "https://www.aviaport.ru/aviafirms/2621/ — «Контактные лица: Управляющий директор — Марков Игорь Сергеевич», телефон +7 (845) 374-9602 (анкета обновлена 15.12.2025)",
+        "https://zachestnyibiznes.ru/company/ul/1076449000870 — подтверждён телефон +7 845 374-96-02",
+        "Правка пользователя: Марков Игорь Сергеевич — именно управляющий директор; полномочия ЕОЛ переданы АО «ВСК»"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-ARZ419",
+      "name": "419 АРЗ (Санкт-Петербург)",
+      "fields": {
+        "phone": "8 (812) 746-13-77",
+        "email": "inform@419arz.ru, v.moskalenok@419arz.ru",
+        "site": "https://aviaremont.ru/company/plants/419arz",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Москаленко Михаил Викторович (управляющий директор)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/419-arz/contacts — телефон 8(812) 746-13-77; e-mail aviaremont@aviaremont.ru относится к головной «Авиаремонт», не к заводу",
+        "https://aviaremont.ru/company/plants/419arz — страница завода на сайте управляющей компании",
+        "Отраслевые справочники и правка пользователя: актуальные e-mail inform@419arz.ru / v.moskalenok@419arz.ru; управляющий директор Москаленко Михаил Викторович; полномочия генерального директора по ЕГРЮЛ у АО «ВСК» (бывший «Хабаров М.Б.» не подтверждён)"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "R-ARZ150",
+      "name": "150 АРЗ (Светлый)",
+      "fields": {
+        "phone": "8 (401) 522-41-72",
+        "email": "inform@150-arz.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/150-arz/contacts — JSON-LD: taxID 3913501370, telephone 8(401)522 41 72 / 7(401)522 43 02, email inform@150-arz.ru",
+        "https://150-arp.ru — указанный каталогом домен не прилинкован к директории, поэтому в site не записан"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-NPOGTT",
+      "name": "НПО «Газотурбинные технологии» (НПО «ГТТ»)",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Гуренко Григорий Александрович",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.google.com/search?udm=50&q=%D0%9D%D0%9F%D0%9E%20%D0%93%D0%B0%D0%B7%D0%BE%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8%206449108868%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026",
+        "Подтверждено пользователем (22.11.2026): генеральный директор; прочие поля не найдены"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-ORGRES",
+      "name": "Фирма ОРГРЭС",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.orgres-f.ru/contacts/ — официальный сайт: только общий телефон +7 (495) 811-00-99 и info@orgres-f.ru; главный инженер, главный конструктор и закупочные контакты не указаны",
+        "https://www.orgres-f.ru/about/ — структура компании без ФИО главного инженера/конструктора"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-AEM",
+      "name": "Росатом Машиностроение",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "Титов Евгений Геннадьевич",
+        "procPhone": "+7 (495) 668-20-93",
+        "procEmail": "aem@aem-group.ru"
+      },
+      "sources": [
+        "https://rosatommd.ru/suppliers/ — закупки по Единому отраслевому стандарту ГК «Росатом», площадка zakupki.rosatom.ru; конкретных закупочных контактов нет",
+        "https://rosatommd.ru/contacts/ — общий телефон +7 (495) 668-20-93, RosatomMD@rosatom.ru; главный инженер/конструктор и закупочные контакты не указаны",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%BE%D1%81%D0%B0%D1%82%D0%BE%D0%BC%20%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%209706047504%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%BE%D1%81%D0%B0%D1%82%D0%BE%D0%BC%20%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%209706047504%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%20e-mail%20%D1%81%D0%B0%D0%B9%D1%82%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026",
+        "Подтверждено пользователем (22.11.2026): контактное лицо отдела закупок, общий телефон и общий e-mail aem@aem-group.ru; персональные адреса в открытых источниках не подтверждены и не используются"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-SMPP",
+      "name": "СМПП",
+      "fields": {
+        "phone": "+7 (496) 644-8021",
+        "email": "smpp@smpp.rhc.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://заводы.рф/factory/stupinskoe-mashinostroitelnoe-proizvodstvennoe-predpriyatie — JSON-LD Organization: taxID 5045001885, telephone +7 (496) 644-8021, email smpp@smpp.rhc.ru",
+        "https://заводы.рф/factory/stupinskoe-mashinostroitelnoe-proizvodstvennoe-predpriyatie/contacts — телефон, e-mail и страница rhc.ru/structure/smpp"
+      ],
+      "status": "partial"
+    }
+  ],
+  "googleAiStatus": "ok",
+  "conclusion": "Инвентарь построен точным совпадением значения поля с «не подтверждены» (без legacy-поля contact): 111 карточек / 295 полей. Распределение по полям полностью совпадает с заданием: method 74, procUrl 64, phone 42, email 40, ceo 26, site 16, chiefEngineer 9, chiefDesigner 9, procContact 7, procPhone 4, procEmail 4.\nЧисло «~212 карточек» в задании, по-видимому, учитывает legacy-поле contact: cards с пометкой в contact — 205, объединение всех полей — 216; в целевом инвентаре их 111. В скобках в исходной пометке method у O-ORGRES и O-GAZSTROYPROM есть содержательный текст с уточнением «не подтверждены» — как неполное совпадение они в инвентарь не включены (иначе было бы 76 method / 297 полей).\nGoogle ИИ-режим: первые попытки в этой сессии дали [browser.disconnected] (webfetch Google udm=50 возвращал только заглушку); после повторной проверки браузер подключился: открытая вкладка about:blank + evaluate udm=50 и чтение innerText после «Ответ от режима ИИ готов» заработали — googleAiStatus обновлён на ok. Основные источники пилота: каталог «Заводы.рф» (JSON-LD с полными телефонами), Aviaport, официальные сайты, Rusprofile/Zachestnyibiznes и логи проекта.\nПилот: 10 карточек с максимальным числом неподтверждённых полей (7 по 6 полей + 3 по 5). Первично найдено 17 значений в 6 карточках (телефон, e-mail, сайт, управляющий директор); после дополнительной проверки H-NASK, O-NPOGTT и O-AEM получили подтверждённые значения, O-ORGRES осталась not_found. Способы закупок и страницы закупок для АРЗ/НАРЗ/СМПП в открытых источниках не найдены — оставлены пустыми. В ceo записаны «управляющие директора» по Aviaport с пометкой в источнике (не «генеральный директор»). Сайт 150 АРЗ (150-arp.ru) в каталоге указан, но домен не прилинкован — не заполнялся.\nФайл создан как выходной артефакт этапа 1; файлы проекта не редактировались, commit/push не выполнялся."
+}

@@ -1,0 +1,683 @@
+{
+  "batch": "unconfirmed-phase3",
+  "processed": 30,
+  "items": [
+    {
+      "id": "H-ODK",
+      "name": "ОДК",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» (конкурс, аукцион, запрос котировок/предложений, закупка у единственного поставщика); торги на закрытой ЭТП «АСТ ГОЗ», малые закупки на ЕАТ «Берёзка»",
+        "ceo": "Грачев Александр Владимирович",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com — портал ОДК: страница поставщикам и руководство",
+        "https://www.astgoz.ru — ЭТП «АСТ ГОЗ»",
+        "https://www.google.com/search?udm=50&q=%D0%90%D0%9E%20%D0%9E%D0%94%D0%9A%207731644035%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "H-ROSTECH",
+      "name": "Госкорпорация «Ростех»",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ и 44-ФЗ по Единому положению о закупке ГК «Ростех»: конкурентные (конкурс, аукцион, запрос котировок, запрос предложений) и неконкурентные способы (закупка у единственного поставщика, в т.ч. через ЕАТ)",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rostec.ru — официальный сайт: Единое положение о закупке",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%BE%D1%81%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%A0%D0%BE%D1%81%D1%82%D0%B5%D1%85%207704274402%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "H-VERTOLETY",
+      "name": "АО «Вертолёты России»",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ (также зафиксированы контракты по 44-ФЗ): электронный аукцион и иные конкурентные способы, закупка у единственного поставщика и закупка иного способа размещения",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rostec.ru — нормативная база закупок ГК «Ростех»",
+        "https://www.google.com/search?udm=50&q=%D0%92%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%B5%D1%82%D1%8B%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8%207731559044%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "H-OAK",
+      "name": "ОАК",
+      "fields": {
+        "phone": "+7 (495) 926-14-20",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.e-disclosure.ru — Интерфакс — сервер раскрытия информации: контакты ПАО «ОАК»",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%90%D0%9A%207708619320%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found",
+      "notes": "Переезд головного офиса ПАО «ОАК» на Волоколамское шоссе, 75А; номер +7 (495) 926-14-21 — старый факс по прежнему адресу, в phone не указан (проверка пользователя 22.11.2026)."
+    },
+    {
+      "id": "H-YAKOVLEV",
+      "name": "Яковлев",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rusprofile.ru — ЕИО ПАО «Яковлев» передано управляющей организации ПАО «ОАК» с 22.01.2025; ФИО генерального директора не найдено",
+        "https://www.google.com/search?udm=50&q=%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%203807002509%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "H-KRET",
+      "name": "КРЭТ",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» (конкурс, аукцион, запрос предложений/котировок, закупка у единственного поставщика); преимущественно закрытый контур «АСТ ГОЗ», малые закупки на ЕАТ «Берёзка»",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rostec.ru — нормативные документы по закупкам ГК «Ростех»",
+        "https://kret.com — сайт КРЭТ: прямая страница закупок не найдена",
+        "https://www.google.com/search?udm=50&q=%D0%9A%D0%A0%D0%AD%D0%A2%207703695246%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "H-VSK",
+      "name": "ВСК (Вертолётная сервисная компания)",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» (закупка у единственного поставщика, запросы цен/котировок и иные способы); ЭТП «АСТ ГОЗ» и B2B-Center",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://hsc-copter.com — официальный сайт АО «ВСК»: раздел документов",
+        "https://www.b2b-center.ru — профиль заказчика на B2B-Center",
+        "https://www.google.com/search?udm=50&q=%D0%92%D0%A1%D0%9A%20%D0%92%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%207704252960%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "H-AVIAREMONT",
+      "name": "Авиаремонт",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "https://aviaremont.ru (раздел «Закупочная деятельность»)",
+        "method": "223-ФЗ (закупка у единственного поставщика, запрос котировок, закупка иного способа размещения, малые закупки на ЕАТ «Берёзка»); с 02.2026 под управлением АО «ВСК»",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://aviaremont.ru — официальный сайт: раздел «Закупочная деятельность»",
+        "https://www.google.com/search?udm=50&q=%D0%90%D0%B2%D0%B8%D0%B0%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%207704726240%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-SILMASH",
+      "name": "Силовые машины",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://power-m.ru — корпоративный раздел руководства: должность главного инженера не раскрыта (в 2025 г. размещалась вакансия)",
+        "https://www.google.com/search?udm=50&q=%D0%A1%D0%B8%D0%BB%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D1%8B%207702080289%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-LMZ",
+      "name": "Ленинградский металлический завод",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rusprofile.ru — юридическое лицо АО «ЛМЗ» ИНН 7804677772 ликвидировано 24.06.2024; завод действует как филиал АО «Силовые машины»",
+        "https://www.google.com/search?udm=50&q=%D0%9B%D0%9C%D0%97%207804677772%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-KTZ",
+      "name": "Калужский турбинный завод",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://paoktz.ru — официальная страница руководства: указан только генеральный директор",
+        "https://www.google.com/search?udm=50&q=%D0%9A%D0%B0%D0%BB%D1%83%D0%B6%D1%81%D0%BA%D0%B8%D0%B9%20%D1%82%D1%83%D1%80%D0%B1%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%204026007424%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-CKTI",
+      "name": "НПО ЦКТИ",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "Кузнецов Андрей Николаевич",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://ckti.ru — официальный сайт НПО ЦКТИ: руководство",
+        "https://www.e-disclosure.ru — годовой отчёт общества",
+        "https://www.google.com/search?udm=50&q=%D0%9D%D0%9F%D0%9E%20%D0%A6%D0%9A%D0%A2%D0%98%207825660956%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-TKZ",
+      "name": "ТКЗ «Красный котельщик»",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "Михайлов Владимир Витальевич",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://tkz.su — официальный сайт ПАО ТКЗ «Красный котельщик»",
+        "https://www.google.com/search?udm=50&q=%D0%A2%D0%9A%D0%97%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D1%82%D0%B5%D0%BB%D1%8C%D1%89%D0%B8%D0%BA%206154023009%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-ZIO",
+      "name": "ЗиО-Подольск",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://zio.ru — разделы «Поставщикам» и «Контакты»: конкретное ФИО ответственного за закупки не указано",
+        "https://www.google.com/search?udm=50&q=%D0%97%D0%B8%D0%9E-%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%205036040729%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-ELSIB",
+      "name": "Элсиб",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://elsib.ru — публичный список руководства: главного конструктора нет, техническую дирекцию возглавляет Чириков Андрей Валентинович",
+        "https://www.google.com/search?udm=50&q=%D0%AD%D0%BB%D1%81%D0%B8%D0%B1%205403102702%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-MMPCHERNYSHEV",
+      "name": "ММП им. В.В. Чернышёва",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех»: конкурентные (конкурс, аукцион/редукцион, запрос предложений, запрос котировок/цен) и неконкурентные способы (у единственного поставщика)",
+        "ceo": "Громов Алексей Николаевич (управляющий директор; ЕИО передано АО «ОДК»)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.e-disclosure.ru — сообщение о присоединении к Единому положению о закупке ГК «Ростех»",
+        "https://www.rostec.ru — документы ГК «Ростех»",
+        "https://www.google.com/search?udm=50&q=%D0%9C%D0%9C%D0%9F%20%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D1%88%D0%B5%D0%B2%D0%B0%207733018650%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ODKPM",
+      "name": "ОДК-Пермские моторы",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» (электронный аукцион, запрос предложений/котировок, закупка у единственного поставщика); торги на ЭТП «АСТ ГОЗ»",
+        "ceo": "Харин Сергей Александрович (исполнительный директор; ЕИО — АО «ОДК»)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com — портал ОДК: «Поставщикам» и руководство",
+        "https://www.astgoz.ru — ЭТП «АСТ ГОЗ»",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%94%D0%9A%20%D0%9F%D0%B5%D1%80%D0%BC%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%BE%D1%82%D0%BE%D1%80%D1%8B%205904007312%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ODKKUZNETSOV",
+      "name": "ОДК-Кузнецов",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Выдумлев Олег Иванович (и. о. заместителя генерального директора — управляющего директора; ЕИО — АО «ОДК»)",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com — официальный сайт АО «ОДК»: руководство ПАО «ОДК-Кузнецов»",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%94%D0%9A-%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2%206319033379%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-ODKTBM",
+      "name": "ОДК-Турбины большой мощности",
+      "fields": {
+        "phone": "+7 (495) 933-97-12",
+        "email": "info@hct.ueceng.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://uecrus.com — официальный сайт АО «ОДК»: страница ОДК-ТБМ",
+        "https://www.google.com/search?udm=50&q=%D0%9E%D0%94%D0%9A-%D0%A2%D0%91%D0%9C%209719001539%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-UKBP",
+      "name": "УКБП",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ по Единому положению о закупке ГК «Ростех» (через КРЭТ) и 44-ФЗ, а также коммерческие процедуры: запрос предложений, конкурс, аукцион, запрос котировок, закупка у единственного поставщика",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.rostec.ru — Единое положение о закупке ГК «Ростех»",
+        "https://www.b2b-center.ru — тендеры АО «УКБП»",
+        "https://www.google.com/search?udm=50&q=%D0%A3%D0%9A%D0%91%D0%9F%207303005071%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-REDUKTORPM",
+      "name": "Редуктор-ПМ",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ, электронные процедуры (запрос предложений, закупка у единственного поставщика) на ЭТП и в ЕИС",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.b2b-center.ru — тендеры АО «Редуктор-ПМ»",
+        "https://reductor-pm.ru — сайт компании: раздел закупок отсутствует",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%B5%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D1%80-%D0%9F%D0%9C%205948017501%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-GIDROAGREGAT",
+      "name": "Гидроагрегат",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gidroagregat-nn.ru — официальный сайт: раздел закупок отсутствует; данные о собственных закупках не найдены",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B8%D0%B4%D1%80%D0%BE%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%205252000470%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "C-GPZAKUPKI",
+      "name": "Газпром закупки",
+      "fields": {
+        "phone": "+7 (812) 609-47-18",
+        "email": "post@tender.gazprom.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://gazpromzakupki.gazprom.ru — сайт АО «Газпром закупки»",
+        "https://www.fas.ru — база решений ФАС: телефон и e-mail",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%20%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B8%202460040655%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "C-GPVNIIGAZ",
+      "name": "Газпром ВНИИГАЗ",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://www.gazprom.ru — закупки группы Газпром; адрес страницы «Закупки» ВНИИГАЗ в открытых источниках не найден",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B0%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%20%D0%92%D0%9D%D0%98%D0%98%D0%93%D0%90%D0%97%205003028155%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "O-NIIPGAZA",
+      "name": "НИИПГАЗА",
+      "fields": {
+        "phone": "+7 (812) 209-26-97",
+        "email": "info@niipgaza.com",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://niipgaza.com — официальный сайт: контакты; отдельный раздел закупок отсутствует",
+        "https://www.google.com/search?udm=50&q=%D0%9D%D0%98%D0%98%D0%9F%D0%93%D0%90%D0%97%D0%90%207813411480%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "C-SGKNOVOSIB",
+      "name": "СГК-Новосибирск",
+      "fields": {
+        "phone": "",
+        "email": "",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "Перязев Дмитрий Геннадьевич",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://sgk-online.ru — портал «СГК Онлайн»: генеральный директор АО «СГК-Новосибирск»",
+        "https://www.google.com/search?udm=50&q=%D0%A1%D0%93%D0%9A-%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%205405270340%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-RPKB",
+      "name": "РПКБ",
+      "fields": {
+        "phone": "",
+        "email": "rpkb@rpkb.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://rpkb.ru — официальный сайт (в открытом поиске недоступен)",
+        "https://www.zachestnyibiznes.ru — карточка организации",
+        "https://www.google.com/search?udm=50&q=%D0%A0%D0%9F%D0%9A%D0%91%20%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5%205040007594%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-UAPO",
+      "name": "УАПО",
+      "fields": {
+        "phone": "",
+        "email": "uapo@tdhc.ru, rabotauapo@tdhc.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://agregatufa.ru — официальный сайт УАПО",
+        "https://www.google.com/search?udm=50&q=%D0%A3%D0%90%D0%9F%D0%9E%200275074279%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "O-GIDROPROEKT",
+      "name": "Институт Гидропроект",
+      "fields": {
+        "phone": "+7 (495) 727-36-05",
+        "email": "hydro@hydroproject.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ; приоритет — открытые конкурентные процедуры на электронной торговой площадке, также закупка у единственного поставщика и иные способы по Положению о закупке",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://mhp.rushydro.ru/zakupki — сайт закупок Гидропроекта (группа РусГидро)",
+        "https://www.google.com/search?udm=50&q=%D0%93%D0%B8%D0%B4%D1%80%D0%BE%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%207743714777%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    },
+    {
+      "id": "O-LENGIDROPROEKT",
+      "name": "Ленгидропроект",
+      "fields": {
+        "phone": "+7 (812) 395-29-01, +7 (812) 346-92-03, +7 (495) 785-09-37",
+        "email": "office@lhp.ru",
+        "site": "",
+        "procUrl": "",
+        "method": "223-ФЗ; открытые конкурентные процедуры на ЭТП (конкурсы, запросы котировок и предложений в электронной форме, закупки иного способа размещения)",
+        "ceo": "",
+        "chiefEngineer": "",
+        "chiefDesigner": "",
+        "procContact": "",
+        "procPhone": "",
+        "procEmail": ""
+      },
+      "sources": [
+        "https://lhp.rushydro.ru/zakupki — сайт закупок Ленгидропроекта (группа РусГидро)",
+        "https://www.google.com/search?udm=50&q=%D0%9B%D0%B5%D0%BD%D0%B3%D0%B8%D0%B4%D1%80%D0%BE%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%207814159353%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%202026"
+      ],
+      "status": "found"
+    }
+  ],
+  "summary": {
+    "found": 14,
+    "partial": 8,
+    "not_found": 8
+  },
+  "googleAiStatus": "ok"
+}
