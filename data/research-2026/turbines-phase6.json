@@ -1,0 +1,657 @@
+{
+  "batch": "turbines-phase6",
+  "processed": 40,
+  "items": [
+    {
+      "id": "P-KALININGRAD-068",
+      "name": "Прегольская ТЭС",
+      "turbines": "4×6F.03 (РГТ, Рыбинск), 4×паровая турбина (Силовые машины)",
+      "units": "4 парогазовых блока по 113,8 МВт (2019)",
+      "equipment": "генераторы: НПО «Элсиб»; котлы-утилизаторы: ЗиО-Подольск; градирни сухие вентиляторные",
+      "year": "2019",
+      "notes": "Марки газовых турбин и производители паровых турбин приведены в тексте статьи Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%B3%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TGK11-082",
+      "name": "Омская ТЭЦ-3",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на общую статью «ТЭЦ-3» (список значений); подходящей статьи не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TGK11-083",
+      "name": "Омская ТЭЦ-4",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; марки турбин не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TGK11-084",
+      "name": "Омская ТЭЦ-5",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на общую статью «ТЭЦ-5»; подходящей статьи не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TPLUS-089",
+      "name": "Новокуйбышевская ТЭЦ-1",
+      "turbines": "1×ПТ-25-90/10, 1×Т-25-90, 1×ТП-35/40-8,8, 3×PG6111FA",
+      "units": "паротурбинная часть + 3 ГТУ PG6111FA (2013); часть старого оборудования выведена",
+      "equipment": "котлы: 2×ТП-170, 1×ТП-230; котлы-утилизаторы: 3×КГТ-119/10.0-510-18/0.8-210; демонтированные турбоагрегаты ВР-22-18-4, ВР-22-2, ВР-4-3 выведены",
+      "year": "1951",
+      "notes": "Склеенный year «211951» → 1951 (21.09.1951). Действующий состав восстановлен по таблице Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B9%D0%B1%D1%8B%D1%88%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-1",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/chp",
+          "supports": "EnergyBase: каталог ТЭЦ"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TPLUS-090",
+      "name": "Новокуйбышевская ТЭЦ-2",
+      "turbines": "2×ПТ-50-130/13, 2×Р-35-130/21, 2×ПТ-60-130/13, 1×Т-50-130",
+      "units": "неблочная схема, 340 МВт (1962–1968)",
+      "equipment": "котлы: 11×ТГМ-84(А,Б) (1962–1972)",
+      "year": "1962",
+      "notes": "Курированное turbines было пустым; состав восстановлен по таблице Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%BA%D1%83%D0%B9%D0%B1%D1%8B%D1%88%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TPLUS-091",
+      "name": "Сызранская ТЭЦ",
+      "turbines": "2×паротурбинных агрегата (35 и 110 МВт), ПГУ-225 (модели не найдены)",
+      "units": "паротурбинная часть + ПГУ-225 (позиции 9–11), 372,4 МВт",
+      "equipment": "котлы: 3 паровых котлоагрегата (марки не приведены)",
+      "year": "1947",
+      "notes": "EnergyBase подтверждает 2 паротурбинных агрегата и ПГУ-225, но конкретные марки турбин не приводит — turbines заполнены частично.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D0%B7%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Syzranskaya_CHP",
+          "supports": "372,4 МВт, 2 ПТУ и ПГУ-225"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TPLUS-092",
+      "name": "Саратовская ГРЭС",
+      "turbines": "",
+      "units": "54 МВт, 478 Гкал/ч (с 1930); турбоагрегаты № 1, 4, 5 выведены",
+      "equipment": "котлы: 2×ФТ-40 (1941)",
+      "year": "1930",
+      "notes": "Марки действующих турбоагрегатов в Википедии не приведены.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TPLUS-097",
+      "name": "Пермская ТЭЦ-14",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на общую статью «ТЭЦ-14»; подходящей статьи не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TPLUS-102",
+      "name": "Медногорская ТЭЦ",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; марки турбин не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TPLUS-105",
+      "name": "Новочебоксарская ТЭЦ-3",
+      "turbines": "1×ПТ-50(60)-130/13, 1×Т-100/120-130-3, 1×Т-110/120-130-4, 1×ПТ-80/100-130/13",
+      "units": "4 турбоагрегата, 351 МВт (1965–2014)",
+      "equipment": "котлы: 4×ТГМ-84, 4×ТГМЕ-464",
+      "year": "1965",
+      "notes": "Курированное turbines было пустым; восстановлено по таблице Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D1%87%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-3",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TPLUS-106",
+      "name": "Чебоксарская ТЭЦ-2",
+      "turbines": "2×ПТ-135/165-130/15, 1×ПТ-80/100-130/13, 1×Т-110/120-130-5",
+      "units": "4 турбоагрегата, 460 МВт (1979–1986)",
+      "equipment": "котлы: 5×ТГМЕ-464",
+      "year": "1979",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TPLUS-107",
+      "name": "Владимирская ТЭЦ-2",
+      "turbines": "",
+      "units": "596 МВт (с 1962)",
+      "equipment": "не подтверждено",
+      "year": "1962",
+      "notes": "Инфобокс Википедии не содержит марок турбин.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TGK13-116",
+      "name": "Назаровская ГРЭС",
+      "turbines": "6×КТ-150/145-130, 1×К-500-240-1",
+      "units": "7 турбоагрегатов, 1373 МВт (1961–1980)",
+      "equipment": "котлы — по данным EnergyBase (марки не раскрыты)",
+      "year": "1961",
+      "notes": "Марки турбин приведены в EnergyBase; в Википедии инфобокс turbines пуст. Второй источник с марками не найден.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B7%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Nazarovskaya_TPP",
+          "supports": "6×КТ-150/145-130, 1×К-500-240-1"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-FORWARD-138",
+      "name": "Няганская ГРЭС",
+      "turbines": "",
+      "units": "3 энергоблока, 1361 МВт (2013)",
+      "equipment": "не подтверждено",
+      "year": "2013",
+      "notes": "Инфобокс Википедии turbines пустое; марки не найдены.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D1%8F%D0%B3%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-FORWARD-139",
+      "name": "Челябинская ТЭЦ-1",
+      "turbines": "2×Р-25-29/1,2, 2×MS6001B",
+      "units": "паротурбинная часть (1958–1959) + 2 ГТУ (2014), 133,8 МВт",
+      "equipment": "котлы: 1×КО-VI-200, 1×ТКП-3; котлы-утилизаторы: 2×ПК-79 (Пр-76/3,3/415)",
+      "year": "1942",
+      "notes": "Склеенный year «181942» → 1942 (18.01.1942).",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-FORWARD-141",
+      "name": "Челябинская ТЭЦ-3",
+      "turbines": "2×Т-180/210-130-1, 1×ГТЭ-160, 1×Т-60/70-6,8/0,12",
+      "units": "2 паровых блока (1996, 2006) + ПГУ с ГТУ (2011), 593 МВт",
+      "equipment": "котлы: 2×ТПГЕ-215, 1×ДЕ-25-14; котёл-утилизатор: 1×П-134",
+      "year": "1996",
+      "notes": "Состав восстановлен по таблице основного оборудования Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-3",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TAT-145",
+      "name": "Заинская ГРЭС",
+      "turbines": "11×К-200-130",
+      "units": "11 энергоблоков, 2204,9 МВт (1963–1976)",
+      "equipment": "котлы: 11×ПК-47 (ЗиО-Подольск)",
+      "year": "1976",
+      "notes": "Склеенный year «131976» → 1976 (13.02.1976). Марки турбин подтверждены таблицей Википедии; EnergyBase даёт только мощности и даты.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Zainskaya_TPP",
+          "supports": "2204,9 МВт, история строительства"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TAT-147",
+      "name": "Казанская ТЭЦ-2",
+      "turbines": "1×ПТ-65-130/13, 1×Р-50-130/13, 1×Т-50-130, 2×КТ-36/33-7,5/0,12",
+      "units": "неблочная схема, 410 МВт (с 1938)",
+      "equipment": "котлы: 1×Е-320-13,8-560, 4×Е-210-13,8-560",
+      "year": "1938",
+      "notes": "Курированное turbines было пустым; восстановлено по таблице Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TAT-148",
+      "name": "Набережночелнинская ТЭЦ",
+      "turbines": "2×ПТ-60-130/13, 2×Т-100-130-2, 4×Т-100-130-3, 1×Р-50-130/13, 1×Т-175-130, 1×Т-185-130",
+      "units": "неблочная схема, 11 турбоагрегатов, 1180 МВт (1973–1987)",
+      "equipment": "котлы: 10×ТГМ-84Б, 4×ТГМЕ-464",
+      "year": "1971",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D1%87%D0%B5%D0%BB%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TGK2-152",
+      "name": "Ярославская ТЭЦ-3",
+      "turbines": "",
+      "units": "260 МВт (с 1961)",
+      "equipment": "не подтверждено",
+      "year": "1961",
+      "notes": "Инфобокс Википедии turbines пустое.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-3",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NTEK-176",
+      "name": "Норильская ТЭЦ-1",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; марки турбин не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NTEK-177",
+      "name": "Норильская ТЭЦ-2",
+      "turbines": "",
+      "units": "425 МВт (с 1969)",
+      "equipment": "не подтверждено",
+      "year": "1969",
+      "notes": "Склеенный year «141969» → 1969 (14.12.1969). Марки турбин в статье не приведены.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%B8%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-TEKHPROM-183",
+      "name": "Таврическая ТЭС",
+      "turbines": "2×SGT5-2000E (Siemens)",
+      "units": "2 парогазовых блока по 235 МВт (2018)",
+      "equipment": "котлы-утилизаторы — по данным проекта; генераторы 2×235 МВт",
+      "year": "2018",
+      "notes": "Марка газовых турбин приведена в статье Википедии о станции.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-TEKHPROM-184",
+      "name": "Балаклавская ТЭС",
+      "turbines": "2×SGT5-2000E (Siemens)",
+      "units": "2 парогазовых блока: 245,4 и 251,4 МВт (2018)",
+      "equipment": "котлы-утилизаторы и паровые турбины — марки не приведены",
+      "year": "2018",
+      "notes": "Марка газовых турбин указана в тексте статьи Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D0%BA%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-ROSATOM-VIE-257",
+      "name": "Кочубеевская ВЭС",
+      "turbines": "84×ветроагрегат 2,5 МВт (модель не указана)",
+      "units": "84 агрегата, 210 МВт (2021)",
+      "equipment": "генераторы: 84×2,5 МВт",
+      "year": "2021",
+      "notes": "Модель ветроагрегатов в инфобоксе не указана; собственник — АО «НоваВинд».",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%87%D1%83%D0%B1%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%92%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-ROSATOM-VIE-258",
+      "name": "Кармалиновская ВЭС",
+      "turbines": "24×ветроагрегат L100 (2,5 МВт)",
+      "units": "24 агрегата, 60 МВт (2021)",
+      "equipment": "генераторы: L100, 24×2,5 МВт",
+      "year": "2021",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BC%D0%B0%D0%BB%D0%B8%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%92%D0%AD%D0%A1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-ROSATOM-VIE-259",
+      "name": "Берестовская ВЭС",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; данные по турбинам не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-002",
+      "name": "ТЭС «Международная»",
+      "turbines": "2×GTX-100, 2×SGT-800, 2×SST-700МР",
+      "units": "ПГУ, 236 МВт (2007)",
+      "equipment": "котлы-утилизаторы: 4×HRSG; водогрейные: 1×ПТВМ-120Э, 1×КВГМ-151,2-150",
+      "year": "2007",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%AD%D0%A1_%C2%AB%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%C2%BB",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-011",
+      "name": "ГТУ-ТЭЦ Липецк",
+      "turbines": "",
+      "units": "36 МВт",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; данные по турбинам не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-013",
+      "name": "Тверская ТЭЦ-1",
+      "turbines": "1×Р-12-35/5 М",
+      "units": "1 турбоагрегат, 11 МВт (с 1912)",
+      "equipment": "котлы: 3×ЛМЗ-50, 1×ЦЭМ-70, 2×ЦЭМ-200",
+      "year": "1912",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-1",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/chp",
+          "supports": "EnergyBase: каталог ТЭЦ"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-015",
+      "name": "Дорогобужская ТЭЦ",
+      "turbines": "1×Р-18-90/2,5, 1×ПТ-60-90/13, 2×ГТА-6 РМ",
+      "units": "паротурбинная часть + 2 ГТУ (2005), 90 МВт (с 1957)",
+      "equipment": "котлы: 2×ПК-20, 1×ПК-14-2, 1×БКЗ-220-100Ф; котлы-утилизаторы: 2×КУП-20-1,3-300",
+      "year": "1957",
+      "notes": "Полное совпадение таблицы Википедии и карточки EnergyBase — 2 независимых источника.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%D0%B1%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и таблица основного оборудования"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Dorogobuzhskaya_CHP",
+          "supports": "Р-18-90/2,5, ПТ-60-90/13, 2×ГТА-6РМ, 90 МВт"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "P-NEW-016",
+      "name": "Хуадянь-Тенинская ТЭЦ (Ярославская ТЭС)",
+      "turbines": "",
+      "units": "450 МВт",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; данные по турбинам не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-019",
+      "name": "Астраханская ТЭЦ-2",
+      "turbines": "1×Т-110/120-130/5, 1×ПТ-80/100-130/13",
+      "units": "2 турбоагрегата, 380 МВт (1985)",
+      "equipment": "котлы: ТПЕ-430, ТГМЕ-464, КВГМ-100; генераторы: ТВФ-120-2УЕ",
+      "year": "1985",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-020",
+      "name": "Астраханская ГРЭС (ПГУ-235)",
+      "turbines": "",
+      "units": "ПГУ-235, 235 МВт",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; модели газовых/паровых турбин не найдены.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-021",
+      "name": "Волгоградская ТЭЦ-2",
+      "turbines": "",
+      "units": "225 МВт (с 1956)",
+      "equipment": "не подтверждено",
+      "year": "1956",
+      "notes": "Инфобокс Википедии turbines пустое.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-022",
+      "name": "Волжская ТЭЦ-1",
+      "turbines": "",
+      "units": "497 МВт (с 1962)",
+      "equipment": "не подтверждено",
+      "year": "1962",
+      "notes": "Инфобокс Википедии turbines пустое.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-1",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-023",
+      "name": "Волжская ТЭЦ-2",
+      "turbines": "1×ПТ-100/114-130/13, 1×ПТ-140/165-130/15",
+      "units": "2 турбоагрегата, 240 МВт (1988)",
+      "equipment": "котлы: 3×БКЗ-420/140; генераторы: ТВФ-110-2ЕУЗ, ТВВ-165-2ЕУЗ",
+      "year": "1988",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-024",
+      "name": "Камышинская ТЭЦ",
+      "turbines": "",
+      "units": "61 МВт (с 1956)",
+      "equipment": "не подтверждено",
+      "year": "1956",
+      "notes": "Инфобокс Википедии turbines пустое.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D1%8B%D1%88%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и таблица основного оборудования"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-035",
+      "name": "Оренбургская гелиевая ТЭЦ",
+      "turbines": "",
+      "units": "36 МВт",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Статья в Википедии отсутствует; данные по турбинам не найдены.",
+      "sources": [],
+      "status": "not_found"
+    }
+  ],
+  "summary": {
+    "confirmed": 1,
+    "partial": 20,
+    "not_found": 19
+  },
+  "googleAiStatus": "unavailable",
+  "method": "webfetch через MediaWiki API (action=query&prop=revisions&rvslots=main: инфобоксы, таблицы основного оборудования и текст статей), EnergyBase (/power-plant/<slug>); DDG/Bing — капча/пустая выдача, Google ИИ не использовался."
+}

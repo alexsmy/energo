@@ -1,0 +1,686 @@
+{
+  "batch": "turbines-phase5",
+  "processed": 40,
+  "items": [
+    {
+      "id": "P-NEW-018",
+      "name": "Ивановская ТЭЦ-3",
+      "turbines": "1×ПТ-60-130/13, 1×Т-100/120-130-3, 2×ПТ-80/100-130/13",
+      "units": "4 турбоагрегата, 330 МВт; первая очередь завершена в 1991",
+      "equipment": "котлы: 5 паровых и водогрейных агрегатов (марки не приведены)",
+      "year": "1977",
+      "notes": "Перепроверка: статьи «Ивановская ТЭЦ-3» в русской Википедии нет (MediaWiki API — missing). Модели турбин приведены только в EnergyBase; второй независимый источник с конкретной ссылкой на модели отсутствует — status понижен до partial. source_url: https://energybase.ru/power-plant/Ivanovo_CHP-3",
+      "sources": [
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Ivanovo_CHP-3",
+          "supports": "перечень из четырёх турбоагрегатов и дата ввода 1977"
+        },
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/w/api.php?action=query&format=json&titles=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%A2%D0%AD%D0%A6-3",
+          "supports": "проверка: страница missing"
+        }
+      ],
+      "status": "partial",
+      "source_url": "https://energybase.ru/power-plant/Ivanovo_CHP-3"
+    },
+    {
+      "id": "P-NEW-034",
+      "name": "Каргалинская ТЭЦ",
+      "turbines": "",
+      "units": "320 МВт",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Отдельной статьи в Википедии и карточки EnergyBase не найдено; марки турбин не установлены.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%82%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2%D1%8B%D1%85_%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%B9_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8",
+          "supports": "список станций"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-033",
+      "name": "Пензенская ТЭЦ-1",
+      "turbines": "1×ПТ-30-8,8, 1×ПТ-65/75-90/13, 1×Т-100/120-130-3, 1×Т-110/120-130-4",
+      "units": "4 турбины, 310 МВт (с 1943)",
+      "equipment": "котлы: 2×ТП-170, 2×ТП-15, ТП-47, 2×ТГМЕ-464; водогрейные: 2×ПТВМ-100",
+      "year": "1943",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BD%D0%B7%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-046",
+      "name": "Академическая ТЭЦ",
+      "turbines": "1×GT13E2, 1×КТ-63/7,7",
+      "units": "ПГУ: 1 газовая и 1 паровая турбина, 228 МВт (2016)",
+      "equipment": "котлы-утилизаторы: 1×Е-208/50,1-7,55/1,19-467/274; водогрейные: 2×КВГМ-139,6-150; генераторы: 1×Alstom, 1×ТФ-63-2УЗ",
+      "year": "2016",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии. Официальная страница Т Плюс из ссылки статьи отдаёт 404.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-NEW-017",
+      "name": "Ивановская ТЭЦ-2",
+      "turbines": "",
+      "units": "станция в Ивановской энергосистеме",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Отдельной статьи и карточки с оборудованием не найдено.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B5%D1%80%D0%B3%D0%B5%D1%82%D0%B8%D0%BA%D0%B0_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8",
+          "supports": "региональный справочник"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-051",
+      "name": "Чайковская ТЭЦ-18",
+      "turbines": "",
+      "units": "170–200 МВт (1978, проектная мощность достигнута в 1983)",
+      "equipment": "не подтверждено",
+      "year": "1978",
+      "notes": "В инфобоксе Википедии turbines пустое; марки турбин не найдены.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-18",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-052",
+      "name": "Пермская ТЭЦ-6",
+      "turbines": "",
+      "units": "2 газовые и 1 паровая турбина, 123 МВт (с 1942)",
+      "equipment": "генераторы № 6, 7, 8 (марки не приведены)",
+      "year": "1942",
+      "notes": "Википедия указывает только количество и тип («2 газовых и одна паровая»), конкретные марки не найдены — turbines пустое.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-6",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-025",
+      "name": "Саратовская ТЭЦ-2",
+      "turbines": "",
+      "units": "169 МВт (с 1955)",
+      "equipment": "не подтверждено",
+      "year": "1955",
+      "notes": "Инфобокс Википедии не содержит марок турбин.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-053",
+      "name": "Березниковская ТЭЦ-2",
+      "turbines": "1×ПТ-30/35-3,4-1,0, 1×Р-12-3,4-0,1",
+      "units": "2 действующих турбоагрегата, 42 МВт (1947)",
+      "equipment": "котлы и генераторы — марки в доступных источниках не детализированы",
+      "year": "1947",
+      "notes": "EnergyBase даёт текущий состав из двух агрегатов (30 и 12 МВт); в инфобоксе Википедии указаны устаревшие ПТ-60-90/13 и Р-6-90/30 — взяты данные EnergyBase.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и текст статьи"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Bereznikovskaya_CHP-2",
+          "supports": "действующие турбоагрегаты ПТ-30/35 и Р-12"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "P-NEW-028",
+      "name": "Энгельсская ТЭЦ-3",
+      "turbines": "",
+      "units": "80 МВт (с 1958)",
+      "equipment": "не подтверждено",
+      "year": "1958",
+      "notes": "Инфобокс Википедии не содержит марок турбин.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-3",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-040",
+      "name": "Самарская ГРЭС",
+      "turbines": "",
+      "units": "61 МВт, 1827 Гкал/ч (теплоисточник)",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Марки турбин не приведены ни в Википедии, ни на официальной странице Т Плюс (ссылка в статье).",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "not_found"
+    },
+    {
+      "id": "P-NEW-054",
+      "name": "Закамская ТЭЦ-5",
+      "turbines": "1×ПТ-23,6-2,9/1,0",
+      "units": "1 турбоагрегат, 23,6 МВт (1936)",
+      "equipment": "не детализировано",
+      "year": "1936",
+      "notes": "Перепроверка: модель 1×ПТ-23,6-2,9/1,0 подтверждена только статьёй Википедии. Карточка EnergyBase (https://energybase.ru/power-plant/Zakamskaya_CHP-5) показывает 23,6 МВт и год ввода 1936, но марку турбины не раскрывает (раздел «Технологическое оборудование» по подписке) — второй независимый источник с моделью отсутствует, status понижен до partial. source_url: https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%B0%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-5",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%B0%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-5",
+          "supports": "инфобокс: 1×ПТ-23,6-2,9/1,0, 1936"
+        },
+        {
+          "method": "energybase",
+          "url": "https://energybase.ru/power-plant/Zakamskaya_CHP-5",
+          "supports": "23,6 МВт, 295,2 Гкал/ч, 1936 — модель не раскрыта"
+        }
+      ],
+      "status": "partial",
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%B0%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-5"
+    },
+    {
+      "id": "P-RUSHYDRO-226",
+      "name": "Рыбинская ГЭС",
+      "turbines": "2×ПЛ 20/811-В-900, 4×ПЛ 20-В-900",
+      "units": "6 гидроагрегатов, 386,4 МВт (1941–1950)",
+      "equipment": "гидрогенераторы: 6×СВ 1243/165-96 (2×63,2 и 4×65 МВт)",
+      "year": "1941–1950",
+      "notes": "Курированное turbines «В-900» уточнено до полных марок по инфобоксу.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A0%D1%8B%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-228",
+      "name": "Иваньковская ГЭС",
+      "turbines": "2×ПЛ 90-ВБ-500",
+      "units": "2 гидроагрегата по 14,4 МВт, 28,8 МВт (1937–1938)",
+      "equipment": "гидрогенераторы: 2×СВ-800/76-60",
+      "year": "1937–1938",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-230",
+      "name": "Майнская ГЭС",
+      "turbines": "3×ПЛ 20-В-1000",
+      "units": "3 гидроагрегата по 107 МВт, 321 МВт (1984–1985)",
+      "equipment": "гидрогенераторы: 3×СВ 1500/152-104 УХЛ4",
+      "year": "1984–1985",
+      "notes": "Курированное turbines «В-1000» уточнено до полной марки.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B9%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-231",
+      "name": "Новосибирская ГЭС",
+      "turbines": "7×ПЛ 30-В-800",
+      "units": "7 гидроагрегатов по 70 МВт, 490 МВт (1957–1959)",
+      "equipment": "гидрогенераторы: 7×СВ 1343/140-96",
+      "year": "1957–1959",
+      "notes": "Курированное turbines «В-800» уточнено до полной марки.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-235",
+      "name": "Чиркейская ГЭС",
+      "turbines": "4×РО 230/9896-В-450",
+      "units": "4 гидроагрегата (2×250 и 2×275 МВт), 1050 МВт (1974–1976)",
+      "equipment": "гидрогенераторы: 2×СВ 935/243-30 УХЛ4, 2×ВГСФ 930/233-30",
+      "year": "1974–1976",
+      "notes": "Курированное turbines «2×В-450» уточнено: 4 гидроагрегата РО 230/9896-В-450.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%80%D0%BA%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-237",
+      "name": "Зеленчукская ГЭС",
+      "turbines": "2×РО 230-В-224, 2×ОРО 230-В-221",
+      "units": "ГЭС-ГАЭС: 2 обычных и 2 обратимых агрегата, 300/156,18 МВт (1999, 2002, 2016)",
+      "equipment": "гидрогенераторы: 2×СВ-475/210-14УХЛ1, 2×СВО 407/215-10УХ4",
+      "year": "1999–2016",
+      "notes": "Статья называется «Зеленчукская ГЭС-ГАЭС»; turbines приведены для обоих режимов.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%87%D1%83%D0%BA%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1-%D0%93%D0%90%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-238",
+      "name": "Эзминская ГЭС",
+      "turbines": "3×РО 310-В-160",
+      "units": "3 гидроагрегата по 20 МВт, 60 МВт (1954)",
+      "equipment": "гидрогенераторы: 3×СВ 320/110-12 УХЛ4",
+      "year": "1954",
+      "notes": "Курированное turbines «В-160» уточнено до полной марки.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%B7%D0%BC%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-RUSHYDRO-239",
+      "name": "Гизельдонская ГЭС",
+      "turbines": "3×П-461-ГИ",
+      "units": "3 ковшовых горизонтальных гидроагрегата по 7,6 МВт, 22,8 МВт (1934)",
+      "equipment": "гидрогенераторы: 3×ЗГ-9500/500",
+      "year": "1934",
+      "notes": "Курированное turbines «Т-100; Г-96» не подтверждено; по инфобоксу Википедии — 3×П-461-ГИ.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D0%B7%D0%B5%D0%BB%D1%8C%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-IRKUTSK-168",
+      "name": "Усть-Илимская ГЭС",
+      "turbines": "16×РО-100/810-ВМ-550",
+      "units": "16 гидроагрегатов, 3840 МВт (1974–1979)",
+      "equipment": "гидрогенераторы: 16×ВГС-1190/215-48ХЛ4",
+      "year": "1974–1979",
+      "notes": "Ссылка в инвентаре ведёт на статью о городе; использована статья «Усть-Илимская ГЭС».",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D1%82%D1%8C-%D0%98%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-IRKUTSK-166",
+      "name": "Иркутская ГЭС",
+      "turbines": "4×ПР 32-В-720, 4×ПЛ-577-ВБ-720",
+      "units": "8 гидроагрегатов, 761,2 МВт (1956–1958)",
+      "equipment": "гидрогенераторы: 4×СВ-1160/162-68 УХЛ4, 4×СВИ 1160/180-72",
+      "year": "1956–1958",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-YAKUT-199",
+      "name": "Якутская ГРЭС-1",
+      "turbines": "3×ГТЭ-45-3, 2×ГТ-35-770-2",
+      "units": "5 газотурбинных агрегатов, 170,087 МВт (с 1970)",
+      "equipment": "котлы-утилизаторы: 5×ПСВ-2; водогрейные: 3×КВГМ-100; генераторы: 3×ТВФ-63-2ЕУ3, 2×ТВФ-63-2",
+      "year": "1970",
+      "notes": "В Википедии статья называется «Якутская ГРЭС»; принята как соответствующая ГРЭС-1.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-YAKUT-200",
+      "name": "Якутская ГРЭС-2",
+      "turbines": "4×LM6000-PF/DF",
+      "units": "4 газотурбинных агрегата, 164,032 МВт (2017)",
+      "equipment": "котлы-утилизаторы: 4×КУВ 38,1-185; водогрейные: 3×КВ-ГМ-116,3-185; генераторы: 4×BDAX7-290ERJT",
+      "year": "2017",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A0%D0%AD%D0%A1-2",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-203",
+      "name": "Камчатская ТЭЦ-2",
+      "turbines": "2×ПТ-80/100-130/13",
+      "units": "2 турбоагрегата, 160 МВт (1985)",
+      "equipment": "котлы: 3×БКЗ-320-140ГМ; генераторы: 2×ТВФ-110-2Е",
+      "year": "1985",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D1%87%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-2",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-207",
+      "name": "Толмачевская ГЭС-2",
+      "turbines": "2×РО 170/662-ВМ95",
+      "units": "2 гидроагрегата по 12,4 МВт, 24,8 МВт (2011)",
+      "equipment": "гидрогенераторы: 2×СВ2-215/119-6 УХЛ4",
+      "year": "2011",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1-2",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-208",
+      "name": "Толмачевская ГЭС-3",
+      "turbines": "2×РО 180/874а-ВМ-102",
+      "units": "2 гидроагрегата по 9,2 МВт, 18,4 МВт (2000)",
+      "equipment": "гидрогенераторы: 2×СВ-215/106-8УХЛ4",
+      "year": "2000",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1-3",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-YAKUT-201",
+      "name": "Якутская ТЭЦ",
+      "turbines": "1×П-6-35/5, 1×Т-6-35",
+      "units": "2 турбоагрегата по 6 МВт, 12 МВт (с 1937)",
+      "equipment": "котлы: 1×ГМ-50-1, 1×ГМ-60-1, 1×ТС-35/39-1; водогрейные: 1×ПТВМ-50, 2×ПТВМ-100, 2×КВГМ-100; генераторы: 1×Т-6-2У3, 1×Т-6-2У3Т",
+      "year": "1937",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-205",
+      "name": "Паужетская ГеоЭС",
+      "turbines": "1×МК-6-0,2, 1×ГТЗА-631.01",
+      "units": "2 агрегата, 12 МВт (1966)",
+      "equipment": "генераторы: 1×Т2-6-2, 1×Т-6-2У3",
+      "year": "1966",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D1%83%D0%B6%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%B5%D0%BE%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-260",
+      "name": "Верхне-Мутновская ГеоЭС",
+      "turbines": "3×Туман 4К",
+      "units": "3 агрегата, 12 МВт (1999)",
+      "equipment": "генераторы: 3×ТК-4-2ЗУЗ",
+      "year": "1999",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B5-%D0%9C%D1%83%D1%82%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%B5%D0%BE%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-KAMCHAT-206",
+      "name": "Толмачевская ГЭС-1",
+      "turbines": "2×Пр 18/811а-ВБ-120",
+      "units": "2 пропеллерных агрегата по 1,1 МВт, 2,2 МВт (1999)",
+      "equipment": "гидрогенераторы: 2×СВ-215/26-14УХЛ4",
+      "year": "1999",
+      "notes": "",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1-1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-IRKUTSK-172",
+      "name": "ТЭЦ-10 (Иркутскэнерго)",
+      "turbines": "1×ПТ-60-90/13, 7×К-150-130",
+      "units": "8 турбоагрегатов, 1110 МВт (1959–1962)",
+      "equipment": "котлы: 2×ТП-10, 14×ПК-24",
+      "year": "1959",
+      "notes": "Ссылка в инвентаре ведёт на общую статью «ТЭЦ-10»; использована статья «Иркутская ТЭЦ-10».",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-10",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-YAKUT-196",
+      "name": "Вилюйская ГЭС-1",
+      "turbines": "4×ПЛ 70/3164-ВМ410, 4×РО 75/3123-В450",
+      "units": "8 гидроагрегатов, 680 МВт (1967–1968, 1975–1976)",
+      "equipment": "гидрогенераторы: 4×СВВ 780/190-32, 4×СВ 972/150-44ХЛ4",
+      "year": "1967–1976",
+      "notes": "Использована статья «Вилюйская ГЭС»; требуется подтвердить, что она соответствует именно ГЭС-1.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BB%D1%8E%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-YAKUT-197",
+      "name": "Вилюйская ГЭС-2",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Отдельной статьи по Вилюйской ГЭС-II не найдено; статья «Светлинская ГЭС» относится к Вилюйской ГЭС-III — не использована во избежание ошибки.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-YAKUT-198",
+      "name": "Вилюйская ГЭС-3",
+      "turbines": "4×ПЛ 30-В-750",
+      "units": "4 гидроагрегата (2004, 2005, 2008, 2026)",
+      "equipment": "гидрогенераторы: 4×СВ 1280/145-68УХЛ4",
+      "year": "2004–2026",
+      "notes": "Вилюйская ГЭС-III называется также Светлинской ГЭС; собственник — АО «Вилюйская ГЭС-3» (АЛРОСА).",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-IRKUTSK-170",
+      "name": "ТЭЦ-6 (Иркутскэнерго)",
+      "turbines": "2×ПТ-60-130/13, 3×Р-50-130/13",
+      "units": "5 турбоагрегатов, 275 МВт (с 1964)",
+      "equipment": "котлы: 10×БКЗ-320-140",
+      "year": "1964",
+      "notes": "Ссылка в инвентаре ведёт на киевскую ТЭЦ-6; использована статья «Иркутская ТЭЦ-6».",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%A2%D0%AD%D0%A6-6",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "P-IRKUTSK-171",
+      "name": "ТЭЦ-9 (Иркутскэнерго)",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на московскую ТЭЦ-9; подходящей статьи по иркутской ТЭЦ-9 не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-IRKUTSK-173",
+      "name": "ТЭЦ-11 (Иркутскэнерго)",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на московскую ТЭЦ-11; подходящей статьи не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-IRKUTSK-174",
+      "name": "ТЭЦ-12 (Иркутскэнерго)",
+      "turbines": "",
+      "units": "",
+      "equipment": "не подтверждено",
+      "year": "",
+      "notes": "Ссылка в инвентаре ведёт на московскую ТЭЦ-12; подходящей статьи не найдено.",
+      "sources": [],
+      "status": "not_found"
+    },
+    {
+      "id": "P-KAMCHAT-204",
+      "name": "Мутновская ГеоЭС",
+      "turbines": "2×К-25-0,6 Гео",
+      "units": "2 агрегата, 50 МВт (2002)",
+      "equipment": "генераторы: 2×Т-25-2УЗ",
+      "year": "2002",
+      "notes": "Курированное turbines было пустым; восстановлено по инфобоксу Википедии.",
+      "sources": [
+        {
+          "method": "wikipedia-api",
+          "url": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D1%82%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%B5%D0%BE%D0%AD%D0%A1",
+          "supports": "инфобокс и текст статьи"
+        }
+      ],
+      "status": "partial"
+    }
+  ],
+  "summary": {
+    "confirmed": 1,
+    "partial": 28,
+    "not_found": 11
+  },
+  "googleAiStatus": "unavailable",
+  "method": "webfetch: MediaWiki API (action=query&prop=revisions&rvslots=main) для инфобоксов и текста статей, EnergyBase (/power-plant/<slug>), официальные страницы операторов (при доступности); DuckDuckGo HTML/lite и Bing проверены, но отдают капчу/пустую выдачу; Google ИИ не использовался — браузер глобально отключён."
+}
