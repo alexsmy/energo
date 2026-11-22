@@ -269,22 +269,31 @@
 
   function renderEtps() {
     const rows = auditPlatforms.map(p => {
-      const access = p.ok === true ? 'open' : (p.http === 403 || p.http === 503 ? 'blocked' : 'unreachable');
-      const a = p.access === 'open' || access === 'open' ? 'open' : access;
-      const cls = a === 'open' ? 'ok' : (a === 'blocked' ? 'warn' : 'bad');
-      const label = a === 'open' ? 'доступна' : (a === 'blocked' ? 'ограничен' : 'недоступна');
+      const b = p.browser || {};
+      const status = b.status || (p.ok === true ? 'open' : (p.http === 403 || p.http === 503 ? 'blocked' : 'unreachable'));
+      const view = {
+        open:        ['доступна',   'ok'],
+        partial:     ['частично',   'warn'],
+        blocked:     ['ограничен',  'warn'],
+        unreachable: ['недоступна', 'bad']
+      }[status] || ['недоступна', 'bad'];
       const link = p.urlTemplate && p.urlTemplate.includes('{')
         ? p.urlTemplate.replace('{q}', encodeURIComponent(state.kwOrQuery())).replace('{company}', encodeURIComponent(state.kwOrQuery()))
         : p.url;
+      const check = b.status
+        ? 'проверка в браузере: <b>' + (b.http ? 'HTTP ' + b.http + ' · ' : '') + esc(String(b.checked || '').slice(0, 10)) +
+          (b.source && b.source !== 'browser' ? ' · ' + esc(b.source) : '') + '</b>'
+        : 'проверка: <b>' + esc(p.ms != null ? p.ms + ' мс / HTTP ' + p.http : 'нет данных') + '</b>';
       return '<article class="t-etp">' +
-        '<div class="t-etp__head"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' + badge(label, cls) + '</div>' +
+        '<div class="t-etp__head"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' + badge(view[0], view[1]) + '</div>' +
         '<div class="t-etp__meta">' +
           '<span>поиск без входа: <b>' + (p.publicSearch === true ? 'да' : (p.publicSearch === 'partial' ? 'частично' : 'нет/неизвестно')) + '</b></span>' +
           '<span>ключевое слово: <b>' + esc(p.keywordParam || (p.publicSearch === true ? 'да' : '—')) + '</b></span>' +
           '<span>надёжность: <b>' + esc(p.reliability || '—') + '</b></span>' +
-          '<span>проверка: <b>' + esc(p.ms != null ? p.ms + ' мс / HTTP ' + p.http : 'нет данных') + '</b></span>' +
+          '<span>' + check + '</span>' +
         '</div>' +
         '<p>' + esc(p.notes || '') + '</p>' +
+        (b.note ? '<p class="t-etp__note">' + esc(b.note) + '</p>' : '') +
         '<a class="btn btn--ghost btn--sm" href="' + esc(link) + '" target="_blank" rel="noopener">Открыть поиск</a>' +
       '</article>';
     }).join('');

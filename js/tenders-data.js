@@ -7634,13 +7634,13 @@ window.TENDER_DATA = {
  },
  "etps": {
   "checked": "2026-11-21T10:26:32.296Z",
-  "note": "Результат аудита публичного доступа к ЭТП. Поля http/ms/ok обновляются скриптом scripts/collect-tenders.js при каждой проверке; остальное — ручное исследование. Проверка выполнялась из локального окружения: 403/503 могут отличаться в обычном браузере.",
+  "note": "Результат аудита публичного доступа к ЭТП. Поля http/ms/ok обновляются скриптом scripts/collect-tenders.js ПОСЛЕ проверки доступности; приоритетный статус для UI — объект browser (проверка в браузере).",
   "platforms": [
    {
     "code": "EIS",
     "name": "ЕИС Закупки",
     "url": "https://zakupki.gov.ru/epz/main/public/home.html",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "searchString",
     "urlTemplate": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={q}&morphology=on&fz44=on&fz223=on&pageNumber=1&sortBy=UPDATE_DATE&recordsPerPage=_10",
@@ -7650,13 +7650,20 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10530,
     "ok": false,
-    "checked": "2026-11-21T10:24:17.642Z"
+    "checked": "2026-11-21T10:24:17.642Z",
+    "browser": {
+     "status": "open",
+     "http": null,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "reference+ddg",
+     "note": "Официальный ЕИС: публичный расширенный поиск доступен без входа. Во встроенном браузере локальный TLS-прокси отклонён (ERR_CERT_AUTHORITY_INVALID), поэтому статус подтверждён по справочникам и обычному доступу."
+    }
    },
    {
     "code": "GPB",
     "name": "ЭТП ГПБ",
     "url": "https://etpgpb.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "procedure[name]",
     "urlTemplate": "https://etpgpb.ru/procedures/?procedure%5Bname%5D={q}&sort=by_published_desc",
@@ -7666,13 +7673,19 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10494,
     "ok": false,
-    "checked": "2026-11-21T10:24:28.136Z"
+    "checked": "2026-11-21T10:24:28.136Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "TEK",
     "name": "ТЭК-Торг",
     "url": "https://www.tektorg.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "name",
     "urlTemplate": "https://www.tektorg.ru/procedures?name={q}",
@@ -7682,13 +7695,20 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 11503,
     "ok": false,
-    "checked": "2026-11-21T10:24:39.639Z"
+    "checked": "2026-11-21T10:24:39.639Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Главная и реестр процедур загружаются; на главной оставался устаревший баннер о регламентных работах 21.11."
+    }
    },
    {
     "code": "ROS",
     "name": "Росэлторг (ЕЭТП)",
     "url": "https://www.roseltorg.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "query_field",
     "urlTemplate": "https://www.roseltorg.ru/procedures/search?query_field={q}",
@@ -7698,13 +7718,19 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10234,
     "ok": false,
-    "checked": "2026-11-21T10:24:49.873Z"
+    "checked": "2026-11-21T10:24:49.873Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "FAB",
     "name": "Фабрикант",
     "url": "https://www.fabrikant.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "query",
     "urlTemplate": "https://www.fabrikant.ru/procedure/search?query={q}",
@@ -7714,13 +7740,19 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 12000,
     "ok": false,
-    "checked": "2026-11-21T10:25:01.873Z"
+    "checked": "2026-11-21T10:25:01.873Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "ZAKAZ",
     "name": "ЗаказРФ",
     "url": "https://etp.zakazrf.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "FastFilter",
     "urlTemplate": "https://etp.zakazrf.ru/NotificationEx?FastFilter={q}",
@@ -7730,13 +7762,19 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10486,
     "ok": false,
-    "checked": "2026-11-21T10:25:12.359Z"
+    "checked": "2026-11-21T10:25:12.359Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "RAD",
     "name": "РАД / Lot-online",
     "url": "https://www.lot-online.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": true,
     "keywordParam": "search",
     "urlTemplate": "https://tender.lot-online.ru/search?q={q}",
@@ -7746,45 +7784,65 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10492,
     "ok": false,
-    "checked": "2026-11-21T10:25:22.851Z"
+    "checked": "2026-11-21T10:25:22.851Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "B2B",
     "name": "B2B-Center",
     "url": "https://www.b2b-center.ru",
-    "access": "blocked",
+    "access": "open",
     "publicSearch": "unknown",
     "keywordParam": "",
     "urlTemplate": "https://www.b2b-center.ru",
     "companySearch": "unknown",
     "reliability": "low",
-    "notes": "Доступ зависит от клиента: curl получил 403 (Antibot/TLS), а fetch — 200. Из обычного браузера реестр открывается, но детальные карточки — после регистрации. Проверить вручную.",
+    "notes": "Главная и каталог закупок открываются в браузере; простой HTTP-запрос получает 403 (Antibot/TLS). Детальные карточки и участие — после регистрации. Прямой публичный поиск как источник сбора ненадёжен.",
     "http": 403,
     "ms": 1821,
     "ok": false,
-    "checked": "2026-11-21T10:25:24.672Z"
+    "checked": "2026-11-21T10:25:24.672Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Простой HTTP-запрос получает 403 (Antibot), но в браузере главная и каталог закупок открываются полностью; часть карточек — после регистрации."
+    }
    },
    {
     "code": "AST",
     "name": "АСТ ГОЗ",
     "url": "https://www.astgoz.ru",
-    "access": "unreachable",
+    "access": "partial",
     "publicSearch": "partial",
     "keywordParam": "",
     "urlTemplate": "https://www.astgoz.ru",
     "companySearch": "partial",
     "reliability": "low",
-    "notes": "Сайт открывается, но раздел закрытых процедур КИИ/ГОЗ требует авторизации и допусков. Для публичного аудита пригоден только факт наличия секции.",
+    "notes": "Информационный сайт доступен, но раздел закрытых процедур КИИ/ГОЗ требует авторизации и допусков. Для публичного аудита пригоден только факт наличия секции.",
     "http": 0,
     "ms": 15177,
     "ok": false,
-    "checked": "2026-11-21T10:25:39.849Z"
+    "checked": "2026-11-21T10:25:39.849Z",
+    "browser": {
+     "status": "partial",
+     "http": null,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "reference",
+     "note": "Информационный сайт открывается в обычном браузере, но разделы ГОЗ/КИИ требуют авторизации и допусков. Во встроенном браузере TLS локального прокси отклонён."
+    }
    },
    {
     "code": "SBER",
     "name": "Сбербанк-АСТ",
     "url": "https://www.sberbank-ast.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": "unknown",
     "keywordParam": "",
     "urlTemplate": "https://www.sberbank-ast.ru",
@@ -7794,39 +7852,60 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 10494,
     "ok": false,
-    "checked": "2026-11-21T10:25:50.343Z"
+    "checked": "2026-11-21T10:25:50.343Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Главная и каталог открыты; большинство 223-ФЗ дублируется в ЕИС."
+    }
    },
    {
     "code": "RTS",
     "name": "РТС-тендер",
     "url": "https://www.rts-tender.ru",
-    "access": "unreachable",
+    "access": "blocked",
     "publicSearch": "unknown",
     "keywordParam": "",
     "urlTemplate": "https://www.rts-tender.ru",
     "companySearch": "unknown",
     "reliability": "low",
-    "notes": "При проверке получен 503 (регламентные работы/защита от ботов). Закупки по 223-ФЗ дублируются в ЕИС — использовать ЕИС как основной канал.",
+    "notes": "Встроенный браузер получает Anti-DDoS/503. Закупки по 223-ФЗ дублируются в ЕИС — использовать ЕИС как основной канал. Ссылка «Открыть поиск» ведёт на главную площадку.",
     "http": 0,
     "ms": 10493,
     "ok": false,
-    "checked": "2026-11-21T10:26:00.836Z"
+    "checked": "2026-11-21T10:26:00.836Z",
+    "browser": {
+     "status": "blocked",
+     "http": 503,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Встроенный браузер попал на страницу «Anti-DDoS защита» (HTTP 503); из обычного браузера проверка может проходить автоматически. Закупки 223-ФЗ дублируются в ЕИС."
+    }
    },
    {
     "code": "KIM",
     "name": "КИМ Росатома",
-    "url": "https://kim.rosatom.ru",
-    "access": "unreachable",
+    "url": "https://www.roseltorg.ru/kim/atom",
+    "access": "open",
     "publicSearch": "unknown",
     "keywordParam": "",
-    "urlTemplate": "https://kim.rosatom.ru",
+    "urlTemplate": "https://www.roseltorg.ru/kim/atom",
     "companySearch": "unknown",
     "reliability": "low",
-    "notes": "Локальный запрос не завершился (TLS/доступ). Корпоративный интернет-магазин малых закупок — публичный поиск маловероятен.",
+    "notes": "КИМ Росатома (малые закупки) переехал в раздел Roseltorg: https://www.roseltorg.ru/kim/atom. Старый домен kim.rosatom.ru не работает. Регистрация в системе требуется для участия, обзор разделов публичен.",
     "http": 0,
     "ms": 799,
     "ok": false,
-    "checked": "2026-11-21T10:26:01.635Z"
+    "checked": "2026-11-21T10:26:01.635Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Домен kim.rosatom.ru более не резолвится; КИМ Росатома работает как публичный раздел Roseltorg."
+    }
    },
    {
     "code": "PORTAL_ROS",
@@ -7838,33 +7917,47 @@ window.TENDER_DATA = {
     "urlTemplate": "https://zakupki.rosatom.ru",
     "companySearch": "partial",
     "reliability": "medium",
-    "notes": "Отраслевой портал открыт; интегрирован с ЕИС и ЭТП. Для поиска закупок Росатома использовать ЕИС и секцию Росэлторга.",
+    "notes": "Отраслевой JS-портал открывается в обычном браузере; интегрирован с ЕИС и ЭТП. Для поиска закупок Росатома использовать ЕИС и секцию Росэлторга.",
     "http": 200,
     "ms": 6928,
     "ok": true,
-    "checked": "2026-11-21T10:26:08.563Z"
+    "checked": "2026-11-21T10:26:08.563Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser+fetch",
+     "note": "Портал на JS (Atom.Form): сервер отдаёт 200, встроенный браузер отрисовал пустую страницу. В обычном браузере портал работает."
+    }
    },
    {
     "code": "ETP_IRAO",
     "name": "ЭТП Интер РАО",
-    "url": "https://etp.interrao.ru",
-    "access": "unreachable",
+    "url": "https://interrao-zakupki.ru/purchases/",
+    "access": "open",
     "publicSearch": "unknown",
     "keywordParam": "",
-    "urlTemplate": "https://etp.interrao.ru",
+    "urlTemplate": "https://interrao-zakupki.ru/purchases/",
     "companySearch": "unknown",
     "reliability": "low",
-    "notes": "Локальный запрос не завершился. Дубли subscribitions Интер РАО есть на ТЭК-Торг (секция /inter_rao/procedures) — использовать её.",
+    "notes": "Публичный реестр закупок Интер РАО: https://interrao-zakupki.ru/purchases/. ЭТП: https://etp.interrao-zakupki.ru. Старый домен etp.interrao.ru не работает; дубли procedures есть на ТЭК-Торг (/inter_rao/procedures).",
     "http": 0,
     "ms": 6046,
     "ok": false,
-    "checked": "2026-11-21T10:26:14.609Z"
+    "checked": "2026-11-21T10:26:14.609Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser",
+     "note": "Домен etp.interrao.ru более не резолвится; публичный реестр закупок — interrao-zakupki.ru/purchases/, сама ЭТП — etp.interrao-zakupki.ru."
+    }
    },
    {
     "code": "ETP_RUSH",
     "name": "Портал закупок РусГидро",
     "url": "https://zakupki.rushydro.ru",
-    "access": "unreachable",
+    "access": "open",
     "publicSearch": "unknown",
     "keywordParam": "",
     "urlTemplate": "https://zakupki.rushydro.ru",
@@ -7874,7 +7967,13 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 16226,
     "ok": false,
-    "checked": "2026-11-21T10:26:30.835Z"
+    "checked": "2026-11-21T10:26:30.835Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    },
    {
     "code": "BIDZAAR",
@@ -7890,9 +7989,21 @@ window.TENDER_DATA = {
     "http": 200,
     "ms": 1460,
     "ok": true,
-    "checked": "2026-11-21T10:26:32.295Z"
+    "checked": "2026-11-21T10:26:32.295Z",
+    "browser": {
+     "status": "open",
+     "http": 200,
+     "checked": "2026-11-22T18:12:23.232Z",
+     "source": "browser"
+    }
    }
-  ]
+  ],
+  "browserAudit": {
+   "checked": "2026-11-22T18:12:23.232Z",
+   "method": "Открытие каждой площадки во встроенном браузере 22.11.2026 + серверный HTTP-fetch и DDG для узлов с отклонённым TLS/нерезолвимым доменом.",
+   "conclusion": "Из 16 площадок: 14 доступны, 1 частично (АСТ ГОЗ), 1 ограничен Anti-DDoS (РТС-тендер). ЕИС подтверждён по справочникам: встроенный браузер отклонён TLS локального прокси.",
+   "note": "Поле browser — приоритетный статус для интерфейса. Поля http/ms/ok по-прежнему обновляются ночным скриптом сбора и не перезаписывают browser."
+  }
  },
  "platforms": [
   {
