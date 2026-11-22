@@ -2,13 +2,14 @@
  * Node (тесты) и браузер подключают один и тот же модуль.
  */
 (function (root, factory) {
-  const api = factory();
+  const api = factory(root);
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.EnergoSort = api;
-})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (root) {
   'use strict';
 
-  const MODES = ['path', 'name', 'region'];
+  const MODES = ['path', 'name', 'region', 'tech'];
+  const TECH = (typeof require === 'function') ? require('./tech-types.js') : root.EnergoTech;
 
   function groupByHolding(list) {
     const groups = new Map();
@@ -32,6 +33,9 @@
         arr.sort((a, b) =>
           String(a.region || 'я').localeCompare(String(b.region || 'я'), 'ru') ||
           String(a.name || '').localeCompare(String(b.name || ''), 'ru'));
+        break;
+      case 'tech':
+        arr.sort((a, b) => TECH ? TECH.compare(a, b) : 0);
         break;
       case 'path':
       default:

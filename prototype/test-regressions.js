@@ -7,6 +7,7 @@ const assert = require('assert');
 const { repairTitle, splitWordScore } = require('../scripts/lib/normalize');
 const tm = require('../js/text-match');
 const sort = require('../js/sort');
+const tech = require('../js/tech-types');
 const { validateRows } = require('../scripts/validate-entities');
 
 let n = 0;
@@ -89,7 +90,7 @@ check('сортировка: по структуре группирует зап
 });
 
 check('режим сортировки «по достоверности» убран', () => {
-  assert.deepStrictEqual(sort.MODES, ['path', 'name', 'region']);
+  assert.deepStrictEqual(sort.MODES, ['path', 'name', 'region', 'tech']);
 });
 
 const validRow = () => ({
@@ -168,6 +169,37 @@ check('обогащение станций: турбины и ремонты п�
   assert.ok(plants.filter(p => p.turbines).length > 100, 'мало станций с типами турбин');
   assert.ok(plants.filter(p => p.repairs).length > 100, 'мало станций с данными о ремонтах');
   assert.ok(plants.some(p => p.wiki), 'нет ссылок на Википедию');
+});
+
+check('типизация: коды, подписи и primary', () => {
+  assert.strictEqual(tech.TYPES.length, 10);
+  assert.deepStrictEqual(tech.parse('steam;gas'), ['steam', 'gas']);
+  assert.deepStrictEqual(tech.labels('steam;gas'), ['паровые', 'газовые']);
+  assert.strictEqual(tech.primary('steam;gas'), 'steam');
+  assert.deepStrictEqual(tech.parse('steam;bogus'), ['steam']);
+});
+
+check('сортировка «по типу турбин»: family → тип → название', () => {
+  assert.ok(sort.MODES.includes('tech'));
+  const list = [
+    { id: 'a', name: 'Я', tech: 'wind' },
+    { id: 'b', name: 'Б', tech: 'gas' },
+    { id: 'c', name: 'В', tech: 'steam' },
+    { id: 'd', name: 'Г', tech: 'nuclear' },
+    { id: 'e', name: 'Д', tech: 'aviation' },
+    { id: 'f', name: 'Е', tech: '' }
+  ];
+  assert.deepStrictEqual(sort.sortItems(list, 'tech').map(x => x.id), ['c', 'b', 'd', 'a', 'e', 'f']);
+});
+
+check('все записи реестра имеют корректный код типа', () => {
+  const fs = require('fs');
+  const path = require('path');
+  const raw = fs.readFileSync(path.join(__dirname, '..', 'js', 'data.js'), 'utf8');
+  const json = JSON.parse(raw.slice(raw.indexOf('window.REGISTRY = ') + 18, raw.lastIndexOf(';')));
+  const bad = json.items.filter(i => tech.parse(i.tech).some(c => !tech.BY_CODE[c]));
+  assert.deepStrictEqual(bad.map(i => i.id), []);
+  assert.ok(json.items.filter(i => tech.parse(i.tech).length).length > 300);
 });
 
 console.log(`Пройдено тестов: ${n}`);

@@ -120,6 +120,18 @@ button,input,select{font:inherit;color:inherit}
 .badge--plant{background:#fdf0e6;color:#a04a0b}
 .badge--repair{background:#e4f3ea;color:#12623a}
 .badge--oem{background:#efe9f8;color:#513486}
+.card__top{flex-wrap:wrap}
+.tech{display:inline-flex;align-items:center;border:1px solid var(--tc-b);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;letter-spacing:.01em;line-height:1.35;white-space:nowrap;background:var(--tc-bg);color:var(--tc-fg)}
+.tech--steam{--tc-b:#fcd34d;--tc-bg:linear-gradient(135deg,#fffbeb,#fef3c7);--tc-fg:#92400e}
+.tech--gas{--tc-b:#93c5fd;--tc-bg:linear-gradient(135deg,#eff6ff,#dbeafe);--tc-fg:#1e40af}
+.tech--nuclear{--tc-b:#6ee7b7;--tc-bg:linear-gradient(135deg,#ecfdf5,#d1fae5);--tc-fg:#065f46}
+.tech--hydro{--tc-b:#67e8f9;--tc-bg:linear-gradient(135deg,#ecfeff,#cffafe);--tc-fg:#155e75}
+.tech--wind{--tc-b:#a3e635;--tc-bg:linear-gradient(135deg,#f7fee7,#ecfccb);--tc-fg:#3f6212}
+.tech--aviation{--tc-b:#c4b5fd;--tc-bg:linear-gradient(135deg,#f5f3ff,#ede9fe);--tc-fg:#5b21b6}
+.tech--marine{--tc-b:#a5b4fc;--tc-bg:linear-gradient(135deg,#eef2ff,#e0e7ff);--tc-fg:#3730a3}
+.tech--gear{--tc-b:#cbd5e1;--tc-bg:linear-gradient(135deg,#f8fafc,#e2e8f0);--tc-fg:#334155}
+.tech--generator{--tc-b:#fda4af;--tc-bg:linear-gradient(135deg,#fff1f2,#ffe4e6);--tc-fg:#9f1239}
+.tech--boiler{--tc-b:#fdba74;--tc-bg:linear-gradient(135deg,#fff7ed,#ffedd5);--tc-fg:#9a3412}
 .card__row{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);min-width:0}
 .card__row span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .card__ico{width:14px;text-align:center;flex:0 0 auto;opacity:.85;font-size:12px}

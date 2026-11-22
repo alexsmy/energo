@@ -1,4 +1,4 @@
-/* Энергореестр РФ — клиентская логика */
+/* Реестр предприятий РФ — клиентская логика */
 (function () {
   'use strict';
 
@@ -6,6 +6,7 @@
   const items = R.items;
   const etpMap = Object.fromEntries((R.etps || []).map(e => [e.code, e]));
   const srcMap = Object.fromEntries((R.sources || []).map(s => [s.id, s]));
+  const TECH = window.EnergoTech || null;
 
   const $ = (id) => document.getElementById(id);
   const KINDS = ['', 'holding', 'company', 'plant', 'repair', 'oem'];
@@ -57,6 +58,7 @@
       });
       (it.etp || []).forEach(c => add(etpMap[c] ? etpMap[c].name : c, 'ЭТП'));
       (it.sources || []).forEach(s => add(srcMap[s] ? srcMap[s].title : s, 'Источник'));
+      (TECH ? TECH.labels(it.tech) : []).forEach(l => add(l, 'Тип турбины'));
       add(it.path, 'Структура');
       add(it.holdingName, 'Холдинг');
       return { it, parts, hay: norm(parts.map(p => p.value).join(' ')) };
@@ -112,7 +114,7 @@
       type: saved.type || '', method: saved.method || '', etp: saved.etp || '',
       onlyOrg: !!saved.onlyOrg,
       view: saved.view === 'table' ? 'table' : 'cards',
-      sort: ['path', 'name', 'region'].includes(saved.sort) ? saved.sort : 'path'
+      sort: ['path', 'name', 'region', 'tech'].includes(saved.sort) ? saved.sort : 'path'
     });
     const fields = { q: 'q', fHolding: 'holding', fRegion: 'region', fType: 'type', fMethod: 'method', fEtp: 'etp', sort: 'sort' };
     Object.entries(fields).forEach(([id, key]) => {
@@ -120,6 +122,12 @@
     });
     $('fOnlyOrg').checked = state.onlyOrg;
     document.querySelectorAll('.seg__btn').forEach(b => b.classList.toggle('is-active', b.dataset.view === state.view));
+  }
+
+  function techBadges(it, limit) {
+    if (!TECH || !it.tech) return '';
+    const codes = TECH.parse(it.tech).slice(0, limit || 2);
+    return codes.map(c => '<span class="tech tech--' + c + '">' + esc(TECH.BY_CODE[c].label) + '</span>').join('');
   }
 
   function typeBadge(it) {
@@ -264,16 +272,16 @@
       center: [61.5, 95], zoom: 3, minZoom: 2, maxZoom: 13,
       zoomControl: true, worldCopyJump: true, attributionControl: true
     });
-    // Основная подложка — канонический OSM без ключа. Резерв: OSM.de,
-    // затем Esri World_Street_Map (не зависит от OSM). CARTO не использовать:
-    // он отдаёт «API KEY REQUIRED» вместо тайлов.
+    // Основная подложка «Карта» — Esri World_Street_Map: домен Esri стабильно доступен
+    // и во внешних браузерах (там же работают спутник и гибрид). Резерв — OSM.de и OSM.org.
+    // CARTO не использовать: он отдаёт «API KEY REQUIRED» вместо тайлов.
     const osmSources = [
-      { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', max: 19,
-        attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>' },
+      { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', max: 18,
+        attr: 'Tiles &copy; Esri' },
       { url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png', max: 19,
         attr: '&copy; OpenStreetMap contributors' },
-      { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', max: 18,
-        attr: 'Tiles &copy; Esri' }
+      { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', max: 19,
+        attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>' }
     ];
     mapState.osmChain = osmSources.map(s => L.tileLayer(s.url, { maxZoom: s.max, attribution: s.attr }));
     mapState.osmIdx = 0;
@@ -385,7 +393,7 @@
     const where = [it.region, par && par.kind !== 'holding' ? par.name : (it.kind === 'plant' ? it.holdingName : '')].filter(Boolean).join(' · ');
     return '' +
       '<article class="card" data-id="' + esc(it.id) + '" tabindex="0" role="button" aria-label="' + esc(it.name) + '">' +
-        '<div class="card__top"><div class="card__name">' + esc(it.name) + '</div>' + typeBadge(it) + '</div>' +
+        '<div class="card__top"><div class="card__name">' + esc(it.name) + '</div>' + techBadges(it, 2) + typeBadge(it) + '</div>' +
         (it.full && it.full !== it.name ? '<div class="card__full">' + esc(it.full) + '</div>' : '') +
         '<div class="card__row"><span class="card__ico">📍</span><span>' + esc(where || '—') + '</span>' + cap + '</div>' +
         '<div class="card__row"><span class="card__ico">☎</span><span>' + esc(phone) + '</span></div>' +
@@ -446,7 +454,7 @@
         '<td data-label="' + esc(label) + '"' + (cls ? ' class="' + cls + '"' : '') + (title ? ' title="' + esc(title) + '"' : '') + '>' + content + '</td>';
       html += '<tr class="data-row" data-id="' + esc(it.id) + '">' +
         td('Название', '', '<span class="t-name">' + esc(it.name) + '</span><span class="t-sub">' + esc(it.path || '') + '</span>', it.path) +
-        td('Тип', 't-mut', esc(it.type || it.kind)) +
+        td('Тип', 't-mut', esc(it.type || it.kind) + (techBadges(it, 2) ? ' ' + techBadges(it, 2) : '')) +
         td('Регион', 't-mut', esc(it.region)) +
         td('Телефон', 't-mut', esc(it.phone || '—'), it.phone) +
         td('E-mail', 't-mut', esc(it.email || '—'), it.email) +
@@ -529,6 +537,7 @@
     body.push('<div class="sec"><h3>Деятельность</h3><dl class="kv">' +
       kvRow('Полное наименование', esc(it.full)) +
       kvRow('Вид объекта', esc([it.type, it.kind === 'plant' ? 'станция' : ''].filter(Boolean).join(' · '))) +
+      kvRow('Тип турбины / технологии', techBadges(it, 99)) +
       kvRow('Деятельность', esc(it.activity)) +
       kvRow('Регион', esc(it.region)) +
       kvRow('Мощность', it.capacity ? esc(it.capacity) + ' МВт' : '') +
@@ -835,11 +844,6 @@
       $('filtersPanel').classList.remove('is-open');
       document.body.classList.remove('filters-open');
       $('filterToggle').setAttribute('aria-expanded', 'false');
-    });
-
-    $('mapFit').addEventListener('click', () => {
-      mapState.lastListKey = '';
-      render();
     });
 
     document.addEventListener('click', (e) => {

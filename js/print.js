@@ -37,12 +37,14 @@
     ].filter(Boolean).join('');
     return '<div class="org">' +
       '<div class="org__head"><div class="org__name">' + esc(it.name) + '</div>' +
-        '<div><span class="org__type">' + esc(it.type || it.kind) + '</span></div></div>' +
+        '<div><span class="org__type">' + esc(it.type || it.kind) + (techText(it) ? ' · ' + esc(techText(it)) : '') + '</span></div></div>' +
       (it.full && it.full !== it.name ? '<div class="org__full">' + esc(it.full) + '</div>' : '') +
       '<dl class="kv">' + rows + '</dl>' +
       (it.notes ? '<div class="note">' + esc(it.notes) + '</div>' : '') +
     '</div>';
   }
+
+  const techText = (it) => window.EnergoTech ? window.EnergoTech.labels(it.tech).join(', ') : '';
 
   function plantsTable(list) {
     if (!list.length) return '';
@@ -50,7 +52,7 @@
       const turb = [p.turbines, p.units].filter(Boolean).join(' · ');
       const extra = [p.year ? 'ввод ' + p.year : '', p.repairs].filter(Boolean).join(' · ');
       return '<tr><td>' + esc(p.name) + (extra ? '<div class="plants-detail">' + esc(extra.slice(0, 260)) + '</div>' : '') +
-        '</td><td class="c">' + esc(p.type) + '</td><td class="c">' + esc(p.region) + '</td>' +
+        '</td><td class="c">' + esc(p.type) + (techText(p) ? '<div class="plants-detail">' + esc(techText(p)) + '</div>' : '') + '</td><td class="c">' + esc(p.region) + '</td>' +
         '<td class="c">' + (p.capacity ? esc(p.capacity) : '—') + '</td>' +
         '<td>' + esc(turb || '—') + '</td></tr>';
     }).join('');
@@ -89,7 +91,7 @@
       [s.high || 0, 'проверено']
     ].map(([n, l]) => '<div><b>' + n + '</b><span>' + l + '</span></div>').join('');
 
-    let html = '<section class="cover"><h1>Энергогенерирующие и энергоремонтные предприятия РФ</h1>' +
+    let html = '<section class="cover"><h1>Реестр предприятий России</h1>' +
       '<p class="sub">Проверенный реестр для работы с закупками, подрядчиками и поставщиками оборудования</p>' +
       '<div class="meta"><span>Версия ' + esc(R.meta.version) + '</span><span>Дата: ' + esc(R.meta.date) + '</span><span>Формат: печатная версия / PDF</span></div>' +
       '<div class="kpi">' + kpi + '</div>' +

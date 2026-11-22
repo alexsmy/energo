@@ -1,4 +1,4 @@
-/* Энергореестр РФ — вкладка «Закупки»: единый поиск, площадки, подсветка совпадений. */
+/* Реестр предприятий РФ — вкладка «Закупки»: единый поиск, площадки, подсветка совпадений. */
 (function () {
   'use strict';
 
@@ -495,33 +495,6 @@
 
     document.querySelectorAll('.t-tab').forEach(b => b.addEventListener('click', () => setPane(b.dataset.tview)));
     document.querySelectorAll('[data-tmode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.tmode)));
-
-    $('tSearch').addEventListener('click', async () => {
-      const btn = $('tSearch');
-      const prevText = btn.textContent;
-      btn.textContent = 'Обновляю…';
-      btn.disabled = true;
-      try {
-        const ts = Date.now();
-        const [rRes, sRes] = await Promise.all([
-          fetch('data/tenders.json?ts=' + ts, { cache: 'no-store' }),
-          fetch('data/tenders-status.json?ts=' + ts, { cache: 'no-store' })
-        ]);
-        if (rRes.ok) {
-          const data = await rRes.json();
-          records = (data.records || []).slice();
-          rebuildSources();
-        }
-        if (sRes.ok) status = await sRes.json();
-        $('tUpdated').textContent = updatedText(status);
-        render();
-      } catch (e) {
-        $('tUpdated').textContent = 'Не удалось обновить выдачу: ' + (e.message || e);
-      } finally {
-        btn.textContent = prevText;
-        btn.disabled = false;
-      }
-    });
 
     $('tOpenSearch').addEventListener('click', () => {
       const code = $('tLinkEtp').value;

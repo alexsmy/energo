@@ -5,10 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="referrer" content="no-referrer">
-<title>Энергогенерирующие и энергоремонтные предприятия РФ — реестр 2026</title>
-<meta name="description" content="Проверенный реестр холдингов, генерирующих компаний, электростанций, ремонтных и машиностроительных предприятий энергетики РФ: контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.13">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Реестр предприятий России 2026</title>
+<meta name="description" content="Проверенный реестр холдингов, станций, ремонтных и машиностроительных предприятий России: энергетика, машиностроение, авиация и судостроение. Контакты, реквизиты, закупки, ЭТП.">
+<link rel="stylesheet" href="css/styles.css?v=2.15">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -21,8 +21,8 @@
     <div class="brand">
       <div class="brand__mark" aria-hidden="true">⚡</div>
       <div>
-        <div class="brand__title">Энергореестр&nbsp;РФ</div>
-        <div class="brand__sub">Генерация · Ремонт · Оборудование</div>
+        <div class="brand__title">Реестр&nbsp;РФ</div>
+        <div class="brand__sub">Энергетика · Машиностроение · Транспорт · Ремонт</div>
       </div>
     </div>
     <div class="tabs-wrap" id="tabsWrap">
@@ -49,7 +49,7 @@
   <div class="wrap">
     <div class="hero__grid">
       <div>
-        <h1>Реестр предприятий энергетики России</h1>
+        <h1>Реестр предприятий России</h1>
         <div class="stats" id="stats"></div>
       </div>
     </div>
@@ -122,6 +122,7 @@
           <option value="path">По структуре</option>
           <option value="name">По названию</option>
           <option value="region">По региону</option>
+          <option value="tech">По типу турбин</option>
         </select>
       </div>
     </div>
@@ -151,7 +152,6 @@
           <button class="basemap__btn" data-base="sat" type="button" title="Спутник">Спутник</button>
           <button class="basemap__btn" data-base="hybrid" type="button" title="Гибрид">Гибрид</button>
         </div>
-        <button class="btn btn--ghost btn--sm" id="mapFit" type="button">Показать всё</button>
       </div>
       <div class="map-shell">
         <div id="map" class="map" role="application" aria-label="Карта предприятий энергетики"></div>
@@ -209,7 +209,6 @@
           <button class="seg__btn is-active" data-tmode="active" type="button">Действующие</button>
           <button class="seg__btn" data-tmode="archive" type="button">Завершённые</button>
         </div>
-        <button class="btn btn--primary btn--sm" id="tSearch" type="button">Найти</button>
         <button class="btn btn--ghost btn--sm" id="tReset" type="button">Сбросить</button>
         <div class="seg" role="group" aria-label="Вид закупок">
           <button class="seg__btn is-active" data-tcards="cards" type="button">Карточки</button>
@@ -272,11 +271,12 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.13"></script>
-<script src="js/tenders-data.js?v=2.13"></script>
-<script src="js/text-match.js?v=2.13"></script>
-<script src="js/sort.js?v=2.13"></script>
-<script src="js/tenders.js?v=2.13"></script>
-<script src="js/app.js?v=2.13"></script>
+<script src="js/data.js?v=2.15"></script>
+<script src="js/tenders-data.js?v=2.15"></script>
+<script src="js/text-match.js?v=2.15"></script>
+<script src="js/tech-types.js?v=2.15"></script>
+<script src="js/sort.js?v=2.15"></script>
+<script src="js/tenders.js?v=2.15"></script>
+<script src="js/app.js?v=2.15"></script>
 </body>
 </html>

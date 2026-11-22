@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const HEADER = 'id|parent|kind|name|full|type|activity|region|address|phone|email|site|procUrl|inn|kpp|ogrn|ceo|contact|method|etp|capacity|status|conf|sources|notes|chiefEngineer|chiefDesigner|procContact|procPhone|procEmail';
+const HEADER = 'id|parent|kind|name|full|type|activity|region|address|phone|email|site|procUrl|inn|kpp|ogrn|ceo|contact|method|etp|capacity|status|conf|sources|notes|chiefEngineer|chiefDesigner|procContact|procPhone|procEmail|tech';
 const FIELDS = HEADER.split('|');
 const ETP_CODES = new Set('GPB TEK ROS RAD B2B FAB AST SBER RTS ZAKAZ KIM PORTAL_ROS ETP_IRAO ETP_RUSH BIDZAAR EIS'.split(' '));
 const SOURCE_CODES = new Set(['S1', 'S2', 'S3', 'S4', 'S5', 'S6']);
