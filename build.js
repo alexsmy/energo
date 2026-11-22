@@ -9,7 +9,7 @@ const META = {
   title: 'Реестр предприятий России',
   subtitle: 'Проверенный реестр для работы с закупками и подрядчиками',
   version: '2.1',
-  date: '2026-11-21',
+  date: '2026-11-22',
   disclaimer: '',
 };
 
@@ -20,6 +20,7 @@ const VERSION_FILE = path.join(ROOT, 'version.json');
 let manifest = null;
 try { manifest = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf8')); } catch (e) { /* первый запуск */ }
 if (manifest && manifest.version) META.version = String(manifest.version);
+if (manifest && manifest.date) META.date = String(manifest.date);
 
 const ETPS = [
   { code: 'GPB', name: 'ЭТП ГПБ', url: 'https://etpgpb.ru', operator: 'Газпромбанк', note: 'Основная площадка Газпром энергохолдинга и ряда частных компаний' },
