@@ -11,6 +11,39 @@
   const MODES = ['path', 'name', 'region', 'tech'];
   const TECH = (typeof require === 'function') ? require('./tech-types.js') : root.EnergoTech;
 
+  // Ключ mini-заголовка для любого режима сортировки.
+  // path   — холдинг, name — первая буква, region — регион, tech — основной тип.
+  function groupKey(it, mode) {
+    switch (mode) {
+      case 'name': {
+        const ch = String((it && it.name) || '').trim().charAt(0).toUpperCase();
+        if (!ch) return '#';
+        if (/[0-9]/.test(ch)) return '0-9';
+        return /[А-ЯЁA-Z]/.test(ch) ? ch : '#';
+      }
+      case 'region':
+        return String((it && it.region) || '').trim() || 'Без региона';
+      case 'tech': {
+        const code = TECH ? TECH.primary(it && it.tech) : '';
+        const type = code && TECH.BY_CODE[code];
+        return type ? type.label : 'Без типа';
+      }
+      case 'path':
+      default:
+        return (it && it.holdingName) || 'Прочее';
+    }
+  }
+
+  function groupLabel(key, mode) {
+    if (mode === 'name') {
+      if (key === '0-9') return '0–9';
+      if (key === '#') return 'Прочее';
+      return key;
+    }
+    if (mode === 'tech' && key !== 'Без типа') return key.charAt(0).toUpperCase() + key.slice(1);
+    return key;
+  }
+
   function groupByHolding(list) {
     const groups = new Map();
     for (const it of list) {
@@ -46,5 +79,5 @@
     return arr;
   }
 
-  return { sortItems, MODES };
+  return { sortItems, groupKey, groupLabel, MODES };
 });

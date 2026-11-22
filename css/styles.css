@@ -14,6 +14,8 @@
   --radius:12px;
   --shadow:0 1px 2px rgba(9,31,44,.08),0 6px 18px rgba(9,31,44,.07);
   --font:system-ui,-apple-system,"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --topbar-h:58px;
+  --sticky-filters-top:112px;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -63,8 +65,17 @@ button,input,select{font:inherit;color:inherit}
 .modal .btn--ghost,.toolbar .btn--ghost,.map-toolbar .btn--ghost{border-color:var(--line);color:var(--navy);background:#fff}
 .modal .btn--ghost:hover,.toolbar .btn--ghost:hover,.map-toolbar .btn--ghost:hover{background:#f1f6f9}
 
-/* Hero */
+/* Hero / компактная липкая плашка плашек */
 .hero{background:linear-gradient(180deg,#0c3449 0%,#124c6a 100%);color:#fff;padding:22px 0 24px}
+.stats-bar{position:fixed;left:0;right:0;top:var(--topbar-h);z-index:39;background:linear-gradient(180deg,#0c3449,#124c6a);color:#fff;box-shadow:0 6px 18px rgba(7,26,38,.26);opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s}
+body.is-condensed .stats-bar{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+body.is-tenders .stats-bar{display:none}
+.stats-bar__in{display:flex;align-items:center;padding-top:4px;padding-bottom:4px}
+.stats-bar .stats{margin-top:0;gap:6px;flex-wrap:nowrap;min-width:0;overflow-x:auto;scrollbar-width:none}
+.stats-bar .stats::-webkit-scrollbar{display:none}
+.stats-bar .stat{padding:2px 8px;min-width:0;line-height:8px}
+.stats-bar .stat b{font-size:14px;line-height:1.1}
+.stats-bar .stat span{font-size:8px;line-height:1.1;letter-spacing:.03em}
 .hero h1{font-size:29px;font-weight:750;max-width:900px}
 .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .stat{appearance:none;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);padding:6px 11px;border-radius:9px;min-width:88px;color:inherit;text-align:left;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
@@ -77,7 +88,7 @@ button,input,select{font:inherit;color:inherit}
 
 /* Layout */
 .layout{display:grid;grid-template-columns:242px minmax(0,1fr);gap:18px;align-items:start;padding-top:18px;padding-bottom:28px}
-.filters{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:sticky;top:74px;box-shadow:var(--shadow);min-width:0}
+.filters{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:sticky;top:var(--sticky-filters-top);box-shadow:var(--shadow);min-width:0}
 .filters__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .filters__head h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .filters__head .link{margin-left:auto}
@@ -202,7 +213,7 @@ button,input,select{font:inherit;color:inherit}
 
 /* Map */
 .map-view{display:flex;flex-direction:column;gap:8px;min-width:0}
-.map-toolbar{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;min-width:0}
+.map-toolbar{display:flex;gap:8px;align-items:center;min-width:0;flex:0 0 auto}
 .basemap{display:flex;background:#dde7ed;border-radius:8px;padding:3px;flex:0 0 auto}
 .basemap__btn{border:0;background:transparent;padding:5px 9px;border-radius:6px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap}
 .basemap__btn.is-active{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.1)}
@@ -250,6 +261,9 @@ button,input,select{font:inherit;color:inherit}
 .btn--filters{display:none}
 .btn--sm{padding:6px 10px;font-size:12px}
 body.is-map .seg,body.is-map #sort{display:none}
+body.is-map .toolbar{flex-wrap:nowrap;gap:8px}
+body.is-map .toolbar__count{width:auto;flex:0 0 auto}
+body.is-map .toolbar__right{width:auto;flex:0 0 auto;justify-content:flex-end;flex-wrap:nowrap}
 body.is-map .layout{grid-template-columns:minmax(0,1fr)}
 body.is-map .filters{display:none}
 body.is-map.filters-open .filters{display:block;position:fixed;left:16px;top:68px;width:280px;max-height:calc(100vh - 84px);overflow:auto;z-index:50;box-shadow:0 12px 40px rgba(7,26,38,.25)}
@@ -334,6 +348,8 @@ body.is-tenders .hero{display:none}
   .foot{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
 }
 @media(max-width:420px){
+  .stats-bar .stats{gap:4px}
+  .stats-bar .stat{padding:2px 5px}
   .brand__mark{width:28px;height:28px;font-size:16px}
   .tab{padding:5px 7px;font-size:11.5px}
   .icon-btn{width:32px;height:32px}

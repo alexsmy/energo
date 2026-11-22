@@ -430,29 +430,35 @@
     const wrap = $('cards');
     if (!list.length) { wrap.innerHTML = ''; return; }
 
-    if (state.kind === 'repair' || state.kind === 'oem' || state.sort !== 'path') {
-      wrap.innerHTML = '<div class="grid">' + list.map(card).join('') + '</div>';
-      return;
-    }
+    const api = window.EnergoSort;
+    const keyOf = it => api && api.groupKey ? api.groupKey(it, state.sort) : (it.holdingName || 'Прочее');
+    const labelOf = key => api && api.groupLabel ? api.groupLabel(key, state.sort) : key;
 
-    // «По структуре»: группы холдингов в порядке появления записей,
-    // без выноса ремонта/ОЕМ вниз — порядок совпадает с таблицей.
+    // Mini-заголовки есть во всех режимах сортировки:
+    // холдинг / буква алфавита / регион / тип турбин — счётчик всегда равен числу карточек.
     const groups = new Map();
     list.forEach(it => {
-      const key = it.holdingName || it.name;
+      const key = keyOf(it);
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(it);
     });
 
-    wrap.innerHTML = [...groups.entries()].map(([name, arr]) => {
-      const holdings = arr.filter(x => x.kind === 'holding');
-      const h = holdings[0] || arr[0];
-      const meta = [h.region, h.inn ? 'ИНН ' + h.inn : ''].filter(Boolean).join(' · ');
+    wrap.innerHTML = [...groups.entries()].map(([key, arr]) => {
+      let meta;
+      if (state.sort === 'path') {
+        const holdings = arr.filter(x => x.kind === 'holding');
+        const h = holdings[0] || arr[0];
+        meta = [h.region, h.inn ? 'ИНН ' + h.inn : ''].filter(Boolean).join(' · ');
+      } else {
+        const orgs = arr.filter(x => x.kind !== 'plant').length;
+        const stations = arr.length - orgs;
+        meta = [orgs ? orgs + ' орг.' : '', stations ? plural(stations, 'станция', 'станции', 'станций') : ''].filter(Boolean).join(' · ');
+      }
       return '<section class="group">' +
         '<div class="group__head">' +
-          '<div class="group__title">' + esc(name) + '</div>' +
+          '<div class="group__title">' + esc(labelOf(key)) + '</div>' +
           '<span class="group__count">' + arr.length + '</span>' +
-          '<div class="group__meta">' + esc(meta) + '</div>' +
+          (meta ? '<div class="group__meta">' + esc(meta) + '</div>' : '') +
         '</div>' +
         '<div class="grid">' + arr.map(card).join('') + '</div>' +
       '</section>';
@@ -460,16 +466,18 @@
   }
 
   function renderTable(list) {
-    const grouped = state.sort === 'path';
+    const api = window.EnergoSort;
+    const keyOf = it => api && api.groupKey ? api.groupKey(it, state.sort) : (it.holdingName || 'Прочее');
+    const labelOf = key => api && api.groupLabel ? api.groupLabel(key, state.sort) : key;
     const counts = {};
-    if (grouped) list.forEach(it => { const k = it.holdingName || 'Прочее'; counts[k] = (counts[k] || 0) + 1; });
-    let last = '';
+    list.forEach(it => { const k = keyOf(it); counts[k] = (counts[k] || 0) + 1; });
+    let last = null;
     let html = '';
     list.forEach(it => {
-      const key = it.holdingName || 'Прочее';
-      if (grouped && key !== last) {
+      const key = keyOf(it);
+      if (key !== last) {
         last = key;
-        html += '<tr class="group-row"><td colspan="6">' + esc(key) + '<small>' + (counts[key] || 0) + '</small></td></tr>';
+        html += '<tr class="group-row"><td colspan="6">' + esc(labelOf(key)) + '<small>' + counts[key] + '</small></td></tr>';
       }
       const etps = (it.etp || []).slice(0, 2).map(c => etpMap[c] ? etpMap[c].name : c).join(', ');
       const td = (label, cls, content, title) =>
@@ -508,6 +516,7 @@
     $('countWord').textContent = plural(list.length, 'запись', 'записи', 'записей');
     $('empty').hidden = isMap || list.length > 0;
     $('mapView').hidden = !isMap;
+    $('mapToolbar').hidden = !isMap;
     $('cards').hidden = isMap || state.view !== 'cards';
     $('tableWrap').hidden = isMap || state.view !== 'table';
     document.body.classList.toggle('is-map', isMap);
@@ -697,11 +706,13 @@
       ['repair', s.repair || 0, 'ремонтных'],
       ['oem', s.oem || 0, 'ОЕМ']
     ];
-    $('stats').innerHTML = data.map(([k, n, l]) => {
+    const html = data.map(([k, n, l]) => {
       const on = state.kind === k;
       return '<button class="stat' + (on ? ' is-active' : '') + '" type="button" data-kind="' + k + '" aria-pressed="' + on + '">' +
         '<b>' + n + '</b><span>' + l + '</span></button>';
     }).join('');
+    $('stats').innerHTML = html;
+    $('statsCompact').innerHTML = html;
     $('disclaimer').textContent = (R.meta && R.meta.disclaimer) || '';
     $('ver').textContent = 'v' + ((R.meta && R.meta.version) || '1.0') + ' от ' + ((R.meta && R.meta.date) || '');
   }
@@ -731,10 +742,29 @@
       render();
     }));
 
-    $('stats').addEventListener('click', e => {
+    [$('stats'), $('statsCompact')].forEach(el => el.addEventListener('click', e => {
       const b = e.target.closest('.stat');
       if (b) setKind(b.dataset.kind);
-    });
+    }));
+
+    // Плашка плашек: липкая компактная копия появляется, когда заголовок уходит вверх.
+    let stickyQueued = false;
+    const updateSticky = () => {
+      stickyQueued = false;
+      const topbar = document.querySelector('.topbar');
+      const h = Math.round(topbar ? topbar.getBoundingClientRect().height : 58);
+      const root = document.documentElement.style;
+      root.setProperty('--topbar-h', h + 'px');
+      root.setProperty('--sticky-filters-top', (h + 54) + 'px');
+      const compact = window.scrollY > h + 12;
+      document.body.classList.toggle('is-condensed', compact);
+      $('statsBar').setAttribute('aria-hidden', String(!compact));
+    };
+    window.addEventListener('scroll', () => {
+      if (!stickyQueued) { stickyQueued = true; requestAnimationFrame(updateSticky); }
+    }, { passive: true });
+    window.addEventListener('resize', updateSticky);
+    updateSticky();
 
     const tabsEl = $('tabs'), tabsWrap = $('tabsWrap');
     const updateTabsNav = () => {

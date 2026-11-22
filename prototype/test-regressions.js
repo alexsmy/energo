@@ -93,6 +93,20 @@ check('режим сортировки «по достоверности» уб�
   assert.deepStrictEqual(sort.MODES, ['path', 'name', 'region', 'tech']);
 });
 
+check('mini-заголовки для всех режимов сортировки', () => {
+  const it = { name: 'Атом', region: 'Москва', holdingName: 'Росатом', tech: 'nuclear' };
+  assert.strictEqual(sort.groupKey(it, 'path'), 'Росатом');
+  assert.strictEqual(sort.groupKey(it, 'name'), 'А');
+  assert.strictEqual(sort.groupKey(it, 'region'), 'Москва');
+  assert.strictEqual(sort.groupKey(it, 'tech'), 'атомные');
+  assert.strictEqual(sort.groupLabel(sort.groupKey(it, 'tech'), 'tech'), 'Атомные');
+  assert.strictEqual(sort.groupKey({ name: '123-й завод' }, 'name'), '0-9');
+  assert.strictEqual(sort.groupLabel('0-9', 'name'), '0–9');
+  assert.strictEqual(sort.groupKey({ name: 'Завод' }, 'region'), 'Без региона');
+  assert.strictEqual(sort.groupKey({ name: 'Завод' }, 'tech'), 'Без типа');
+  assert.strictEqual(sort.groupKey({ name: 'Завод' }, 'path'), 'Прочее');
+});
+
 const validRow = () => ({
   id: 'X-TEST', parent: '', kind: 'company', name: 'Тест', full: 'ООО «Тест»',
   type: 'компания', activity: 'Генерация', region: 'Москва', address: 'Москва',
