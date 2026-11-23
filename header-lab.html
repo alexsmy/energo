@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Варианты шапки — Реестр РФ</title>
+<style>
+:root{
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --ink:#0d1f2b; --navy:#0c3449; --teal:#15587a; --accent:#d96512;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#0b1620;color:#e8f1f6;font:15px/1.5 var(--font);padding:28px 20px 80px}
+.page{max-width:1240px;margin:0 auto}
+.page__title{font-size:28px;font-weight:750;letter-spacing:-.02em;margin:0 0 6px}
+.page__sub{color:#93aebd;font-size:13.5px;margin:0 0 26px;max-width:760px}
+.page__sub b{color:#ffd2a8;font-weight:600}
+.variant{background:#101f2b;border:1px solid #223b4b;border-radius:16px;margin:0 0 26px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,.22)}
+.variant__head{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid #223b4b;background:#0d1a24;flex-wrap:wrap}
+.variant__num{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:linear-gradient(145deg,#22789c,#15587a);color:#fff;font-weight:800;font-size:14px;flex:0 0 auto}
+.variant__name{font-size:16px;font-weight:700;margin:0}
+.variant__desc{color:#8fa9b8;font-size:12.5px;margin:2px 0 0;flex:1 1 320px}
+.tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 8px;border-radius:6px;background:#173040;color:#a8c8d9;border:1px solid #244759;white-space:nowrap}
+.tag--warm{background:#3a2a18;color:#ffcd9c;border-color:#5a4224}
+.stage{padding:18px;background:linear-gradient(180deg,#0e1c26,#122432)}
+.stage__label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#6f8b9b;margin:0 0 8px;font-weight:700}
+.stage__mobile{margin-top:16px;display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.stage__mobile .stage__label{margin:0}
+.mobile-wrap{width:390px;overflow:hidden;border-radius:12px;border:1px solid #2b4758;background:#fff}
+.mobile-inner{width:390px}
+
+/* shared mock */
+.mb{display:flex;align-items:center;min-height:58px}
+.mb__brand{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+.mb__mark{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:18px;color:#fff}
+.mb__title{font-weight:750;font-size:15px;line-height:1.15}
+.mb__sub{font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;opacity:.75}
+.mb__tabs{display:flex;gap:4px;align-items:center;margin-left:18px;flex:1 1 auto;min-width:0}
+.mb__tab{border:0;background:transparent;padding:7px 11px;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.18s}
+.mb__actions{margin-left:auto;display:flex;gap:6px;flex:0 0 auto}
+.mb__ico{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;cursor:pointer;font-size:14px;transition:.18s}
+.mb__ico svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mb__stats{display:flex;gap:7px;padding:0 0 14px;flex-wrap:wrap}
+.mb__stat{border-radius:9px;padding:6px 11px;min-width:76px}
+.mb__stat b{display:block;font-size:17px;line-height:1.1}
+.mb__stat span{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:5px;vertical-align:middle}
+
+/* 1 — эволюция */
+.v1{background:linear-gradient(100deg,#0c3449,#15587a);color:#f2f8fb;padding:12px 18px 0;border-radius:12px 12px 0 0;box-shadow:0 8px 22px rgba(7,26,38,.3)}
+.v1 .mb__mark{background:linear-gradient(145deg,#f2913f,#d95f12);box-shadow:0 3px 10px rgba(217,101,18,.42)}
+.v1 .mb__sub{color:#a8c5d5}
+.v1 .mb__tab{color:#c3d7e2}
+.v1 .mb__tab:hover{background:rgba(255,255,255,.09);color:#fff}
+.v1 .mb__tab.is-active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.v1 .mb__ico{border:1px solid rgba(255,255,255,.28);color:#f2f8fb;background:rgba(255,255,255,.06)}
+.v1 .mb__ico:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+.v1 .mb__ico.is-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.v1 .mb__stat{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16)}
+.v1 .mb__stat.is-active{background:#fff;color:var(--navy);border-color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.14)}
+.v1 .mb__stat.is-active span{color:#3f6478}
+
+/* 2 — инженерная панель */
+.v2{position:relative;color:#d9edf6;padding:12px 18px 0;border:1px solid #1d4a60;border-radius:12px 12px 0 0;overflow:hidden;background-color:#0a1e2b;background-image:linear-gradient(rgba(80,160,190,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(80,160,190,.07) 1px,transparent 1px);background-size:22px 22px}
+.v2:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#24a0a0,#22789c 45%,transparent)}
+.v2 .mb__mark{background:#0e2f3e;border:1px solid #2a7185;color:#57d6c4}
+.v2 .mb__title{font-size:14px;letter-spacing:.02em;font-family:ui-monospace,"SF Mono",Consolas,monospace}
+.v2 .mb__sub{color:#6fb4bd;font-family:ui-monospace,Consolas,monospace;letter-spacing:.12em}
+.v2 .mb__tabs{background:#071722;border:1px solid #1a3d4f;border-radius:10px;padding:3px;flex:0 1 auto}
+.v2 .mb__tab{color:#7fa4b4;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:6px 12px}
+.v2 .mb__tab.is-active{background:linear-gradient(180deg,#1e8a8a,#126b76);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.v2 .mb__ico{border:1px solid #21485b;background:#0a2230;color:#8fc4d3;border-radius:8px}
+.v2 .mb__ico:hover{border-color:#2f8296;color:#fff}
+.v2 .mb__ico.is-primary{background:#126b76;border-color:#1e8a8a;color:#fff}
+.v2 .mb__stat{background:rgba(9,34,47,.85);border:1px solid #1a3d4f}
+.v2 .mb__stat b{font-family:ui-monospace,Consolas,monospace;color:#8ee6d5}
+.v2 .status{font:700 10px/1 ui-monospace,Consolas,monospace;color:#62d3a3;letter-spacing:.08em;margin-left:14px}
+.v2 .status .dot{background:#4fd39a;box-shadow:0 0 8px #4fd39a}
+
+/* 3 — светлый SaaS */
+.v3{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:var(--ink);padding:12px 18px 0;border:1px solid #dce8ee;border-radius:12px 12px 0 0;box-shadow:0 6px 20px rgba(13,31,43,.06)}
+.v3 .mb__mark{background:linear-gradient(145deg,#f2913f,#d95f12)}
+.v3 .mb__sub{color:#7c8f9b}
+.v3 .mb__tab{color:#5b7180;position:relative;border-radius:0}
+.v3 .mb__tab:after{content:"";position:absolute;left:11px;right:11px;bottom:1px;height:2px;border-radius:2px;background:transparent;transition:.2s}
+.v3 .mb__tab:hover{color:var(--navy)}
+.v3 .mb__tab.is-active{color:var(--navy);font-weight:750}
+.v3 .mb__tab.is-active:after{background:var(--accent)}
+.v3 .mb__ico{border-radius:50%;background:#f1f6f9;color:#456273;border:1px solid #e0ebf1}
+.v3 .mb__ico:hover{background:#e5eff5;color:var(--navy)}
+.v3 .mb__ico.is-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.v3 .mb__stat{background:#f5f9fb;border:1px solid #e2ecf1;color:var(--ink)}
+.v3 .mb__stat span{color:#7d909c}
+.v3 .mb__stat.is-active{background:#fff;border-color:var(--accent);box-shadow:0 2px 8px rgba(217,101,18,.12)}
+
+/* интерактивность для всех вариантов */
+.mb__tab:focus-visible,.mb__ico:focus-visible,.v5__tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mb__ico.is-pressed{transform:scale(.93);background:#dceaf2;color:#0c3449;border-color:#9fb9c8}
+.mb__ico.is-primary.is-pressed{background:#b9540d;color:#fff;border-color:#a0470b}
+.mb__stat{cursor:pointer;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
+.mb__stat:hover{transform:translateY(-1px)}
+.v1 .mb__stat:hover,.v2 .mb__stat:hover,.v4 .mb__stat:hover,.v5 .mb__stat:hover{background:rgba(255,255,255,.2)}
+.v3 .mb__stat:hover{background:#fff;border-color:#b7cede;box-shadow:0 3px 10px rgba(13,31,43,.08)}
+.mb__stat.is-pressed{box-shadow:0 0 0 2px rgba(217,101,18,.35)!important}
+
+/* доведенный «Светлый SaaS»: тёмный, читаемый неактивный текст */
+.v3 .mb__tab{color:#344956;font-weight:600}
+.v3 .mb__tab:hover{background:#eef4f7;color:#0c3449}
+.v3 .mb__tab.is-active{color:#0b2f43;font-weight:750}
+.v3 .mb__tab.is-active:after{height:2px;border-radius:2px}
+.v3 .mb__ico{color:#476273;background:#f4f8fa;border-color:#d7e5ec}
+.v3 .mb__ico:hover{background:#e8f1f6;color:#0c3449;border-color:#b7cede}
+.v3 .mb__stat b{color:#142f3d}
+.v3 .mb__stat span{color:#617681;font-weight:600}
+.v3 .mb__stat.is-active{background:linear-gradient(180deg,#fff,#fff9f3)}
+
+/* 3.1 — чистый контраст */
+.v3a .mb__tab{color:#203744;font-weight:650}
+.v3a .mb__tab.is-active{color:#082b3d}
+.v3a .mb__tab.is-active:after{height:3px;box-shadow:0 -1px 7px rgba(217,101,18,.35)}
+.v3a .mb__stat.is-active{background:linear-gradient(180deg,#fff,#fff6ec);border-color:#f0c69b}
+
+/* 3.2 — тёплый акцент */
+.v3b{background:linear-gradient(180deg,#fffdf9,#f8fafc)}
+.v3b .mb__tab{color:#3c4b52}
+.v3b .mb__tab.is-active{background:#fff1e2;color:#8a3f00;border-radius:8px}
+.v3b .mb__tab.is-active:after{background:#d95f12}
+.v3b .mb__stat.is-active{border-left:3px solid var(--accent);border-radius:8px}
+.v3b .mb__ico{background:#fbf6ef;border-color:#ecdcc6;color:#6b5540}
+
+/* 3.3 — инженерный светлый */
+.v3c .mb__sub{font-family:ui-monospace,Consolas,monospace;letter-spacing:.1em;color:#5d7b8a;font-size:9px}
+.v3c .mb__tab{font:700 11.5px/1 ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.05em;color:#3d5562}
+.v3c .mb__tab.is-active{color:#0c3449}
+.v3c .mb__tab.is-active:after{background:#0f8b8b}
+.v3c .mb__stat b{font-family:ui-monospace,Consolas,monospace;color:#123445}
+.v3c .status{font:700 10px/1 ui-monospace,Consolas,monospace;letter-spacing:.08em;color:#14805f;margin-left:14px}
+.v3c .status .dot{background:#1f9c60;box-shadow:0 0 7px rgba(31,156,96,.6)}
+
+/* 3.4 — компактный */
+.v3d .mb{min-height:50px}
+.v3d .mb__tab{padding:6px 10px;font-size:12px}
+.v3d .mb__tab.is-active{background:#0c3449;color:#fff;border-radius:8px}
+.v3d .mb__tab.is-active:after{background:transparent}
+.v3d .mb__stat{padding:5px 9px;min-width:68px}
+.v3d .mb__stat b{font-size:15px}
+.v3d .mb__stat span{font-size:9px}
+.v3d .mb__ico{width:29px;height:29px;border-radius:50%}
+
+/* 4 — стекло */
+.v4{position:relative;color:#eef7fb;padding:12px 18px 0;border-radius:12px 12px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,.16);background:radial-gradient(900px 260px at 12% -20%,rgba(60,170,200,.55),transparent),radial-gradient(700px 240px at 88% 0%,rgba(217,101,18,.28),transparent),linear-gradient(100deg,#0b2b3d,#124960)}
+.v4 .mb__brand,.v4 .mb__tabs,.v4 .mb__actions{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);border-radius:12px;padding:5px 8px}
+.v4 .mb__tabs{margin-left:14px}
+.v4 .mb__mark{background:linear-gradient(145deg,#ffb066,#e56f16)}
+.v4 .mb__sub{color:#b8d7e5}
+.v4 .mb__tab{color:#c6dde8}
+.v4 .mb__tab.is-active{background:#fff;color:#0c3449;box-shadow:0 4px 14px rgba(0,0,0,.24)}
+.v4 .mb__tab.is-active:after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:6px;vertical-align:middle}
+.v4 .mb__ico{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:9px}
+.v4 .mb__ico.is-primary{background:linear-gradient(180deg,#f2913f,#d95f12);border-color:#d95f12}
+.v4 .mb__stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.v4 .mb__stat.is-active{background:#fff;color:#0c3449}
+
+/* 5 — командный центр */
+.v5{color:#e8f4f8;background:linear-gradient(180deg,#081c29,#0c2c3e);padding:0;border-radius:12px 12px 0 0;border:1px solid #1b465b;overflow:hidden}
+.v5__top{display:flex;align-items:center;gap:12px;padding:9px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.v5__top .mb__mark{background:linear-gradient(145deg,#f2913f,#d95f12)}
+.v5__top .mb__sub{color:#77a7ba;font-size:9px;letter-spacing:.12em}
+.v5__meta{margin-left:14px;display:flex;gap:14px;font:600 10px/1 ui-monospace,Consolas,monospace;letter-spacing:.06em;color:#8fc0d0}
+.v5__meta b{color:#69dfb0}
+.v5 .mb__ico{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#d9edf6}
+.v5 .mb__ico.is-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.v5__tabs{display:flex;gap:6px;padding:8px 12px;background:rgba(255,255,255,.03)}
+.v5__tab{border:1px solid transparent;background:transparent;color:#a7c4d2;padding:8px 14px;border-radius:9px;font-size:12.5px;font-weight:650;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.18s}
+.v5__tab small{font:700 9.5px/1 ui-monospace,Consolas,monospace;opacity:.7;border:1px solid currentColor;border-radius:5px;padding:2px 4px}
+.v5__tab:hover{background:rgba(255,255,255,.07);color:#fff}
+.v5__tab.is-active{background:linear-gradient(90deg,#15587a,#1c718f);color:#fff;border-color:#2b829f;box-shadow:inset 3px 0 0 #ffb066,0 2px 8px rgba(0,0,0,.24)}
+.v5 .mb__stats{padding:0 16px 12px}
+.v5 .mb__stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.v5 .mb__stat.is-active{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+.v5 .mb__stat b{color:#fff}
+.v5 .mb__stat span{color:#9fc0ce}
+
+/* mobile mock scale */
+.mobile-inner .mb{min-height:54px;padding-left:10px;padding-right:10px}
+.mobile-inner .mb__tabs{margin-left:8px;gap:2px}
+.mobile-inner .mb__tab{padding:6px 7px;font-size:11px}
+.mobile-inner .mb__actions{gap:4px}
+.mobile-inner .mb__ico{width:29px;height:29px}
+.mobile-inner .mb__sub{display:none}
+.mobile-inner.v5 .v5__meta{display:none}
+.mobile-inner.v5 .v5__tab small{display:none}
+.note{margin-top:10px;font-size:12px;color:#7f9aa9}
+.note b{color:#cfe4ee;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1 class="page__title">Пять вариантов шапки — Реестр РФ</h1>
+  <p class="page__sub">Все варианты используют реальные элементы интерфейса: бренд, вкладки «Реестр / Закупки / Карта», иконки действий и плашки-фильтры. Нижний ряд в каждом блоке — урезанный мобильный вид (390 px). <b>Выбери номер — внедрю выбранный вариант в index.html</b>.</p>
+
+  <!-- 1 -->
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">1</div>
+      <div><h2 class="variant__name">Эволюция текущей</h2><p class="variant__desc">Тот же тёмно-синий бренд, но мягкие белые активные пилюли, тонкие рамки и аккуратные тени. Самый безопасный и читаемый переход.</p></div>
+      <span class="tag">проверенный</span><span class="tag">мягкий контраст</span>
+    </div>
+    <div class="stage">
+      <p class="stage__label">десктоп</p>
+      <div class="v1">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></button><button class="mb__ico is-primary"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg></button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <div class="stage__mobile"><p class="stage__label">мобильный</p><div class="mobile-wrap"><div class="mobile-inner v1"><div class="mb"><div class="mb__brand"><div class="mb__mark">⚡</div><div class="mb__title">Реестр РФ</div></div><div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div><div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico is-primary">⇩</button></div></div></div></div></div>
+      <p class="note"><b>Ощущение:</b> «тот же сайт, но собранный и дороже». Минимальный риск, максимум привычности.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">2</div>
+      <div><h2 class="variant__name">Инженерная панель</h2><p class="variant__desc">Тёмная сетка, моноширинные подписи, сегментированные вкладки с бирюзовым градиентом и статусная строка ONLINE.</p></div>
+      <span class="tag tag--warm">технологично</span><span class="tag">datadog-style</span>
+    </div>
+    <div class="stage">
+      <p class="stage__label">десктоп</p>
+      <div class="v2">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">REGISTRY_RF / 2026</div><div class="mb__sub">DATA · INDEX · PROCUREMENT</div></div></div>
+          <span class="status"><span class="dot"></span>ONLINE · 552 RECORDS</span>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <div class="stage__mobile"><p class="stage__label">мобильный</p><div class="mobile-wrap"><div class="mobile-inner v2"><div class="mb"><div class="mb__brand"><div class="mb__mark">⚡</div><div class="mb__title">REGISTRY_RF</div></div><div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div><div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico is-primary">⇩</button></div></div></div></div></div>
+      <p class="note"><b>Ощущение:</b> «инженерный стенд / диспетчерская». Подходит под тематику реестра и закупок, но более «технический» вид.</p>
+    </div>
+  </section>
+
+  <!-- 3 — светлый SaaS и ветки улучшений -->
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">3</div>
+      <div><h2 class="variant__name">Светлый SaaS — доведенный базовый</h2><p class="variant__desc">Неактивные вкладки и иконки стали заметно темнее и плотнее, активная — с чётким оранжевым подчёркиванием. Все элементы кликабельны: вкладки переключаются, иконки и плашки реагируют нажатием.</p></div>
+      <span class="tag">выбранный</span><span class="tag">контраст исправлен</span><span class="tag tag--warm">интерактивно</span>
+    </div>
+    <div class="stage">
+      <p class="stage__label">десктоп</p>
+      <div class="v3">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></button><button class="mb__ico is-primary"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg></button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <div class="stage__mobile"><p class="stage__label">мобильный</p><div class="mobile-wrap"><div class="mobile-inner v3"><div class="mb"><div class="mb__brand"><div class="mb__mark">⚡</div><div class="mb__title">Реестр РФ</div></div><div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div><div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico is-primary">⇩</button></div></div></div></div></div>
+      <p class="note"><b>Ощущение:</b> светлый, спокойный, но уже не «мутный». Попробуй кликнуть по вкладкам и иконкам.</p>
+    </div>
+  </section>
+
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">3.1</div>
+      <div><h2 class="variant__name">Ветка: чистый контраст</h2><p class="variant__desc">Усилил неактивный текст до почти чёрного, подчёркивание стало толще с лёгким свечением. Максимум читаемости при полной нейтральности.</p></div>
+      <span class="tag">читаемость</span><span class="tag">строгий</span>
+    </div>
+    <div class="stage">
+      <div class="v3 v3a">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico">⤓</button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <p class="note"><b>Отличие:</b> почти чёрные подписи вкладок и «светящаяся» линия активной — лучший выбор, если важнаScanner-читаемость.</p>
+    </div>
+  </section>
+
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">3.2</div>
+      <div><h2 class="variant__name">Ветка: тёплый акцент</h2><p class="variant__desc">Активная вкладка получает кремовую подложку и оранжевый текст, активная плашка — оранжевую полосу слева. Больше «фирменного» тепла.</p></div>
+      <span class="tag tag--warm">бренд</span><span class="tag">мягко</span>
+    </div>
+    <div class="stage">
+      <div class="v3 v3b">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico">⤓</button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <p class="note"><b>Отличие:</b> тёплая подложка активной вкладки и кремовый фон — шапка перестаёт быть «стерильной».</p>
+    </div>
+  </section>
+
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">3.3</div>
+      <div><h2 class="variant__name">Ветка: инженерный светлый</h2><p class="variant__desc">Светлая тема, но с моноширинными микроподписями, бирюзовым подчёркиванием и зелёным статусом LIVE. Мост между SaaS и «инженерной панелью».</p></div>
+      <span class="tag">технологично</span><span class="tag">светлый</span>
+    </div>
+    <div class="stage">
+      <div class="v3 v3c">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">REGISTRY_RF</div><div class="mb__sub">DATA · INDEX · 2026</div></div></div>
+          <span class="status"><span class="dot"></span>LIVE DATA</span>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico">⤓</button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <p class="note"><b>Отличие:</b> техническая типографика и бирюзовый акцент — если хочется современности без тёмной темы.</p>
+    </div>
+  </section>
+
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">3.4</div>
+      <div><h2 class="variant__name">Ветка: компактный SaaS</h2><p class="variant__desc">Плотнее отступы, активная вкладка — тёмно-синяя «таблетка», иконки меньше. Экономия вертикали при сохранении светлой темы.</p></div>
+      <span class="tag">плотный</span><span class="tag">данные</span>
+    </div>
+    <div class="stage">
+      <div class="v3 v3d">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico">⤓</button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <p class="note"><b>Отличие:</b> самая компактная шапка; тёмная активная вкладка даёт чёткий якорь взгляда на светлом фоне.</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">4</div>
+      <div><h2 class="variant__name">Глубокое стекло</h2><p class="variant__desc">Градиент с мягкими цветовыми пятнами, стеклянные панели с blur, активная вкладка — белая «таблетка» с оранжевой точкой.</p></div>
+      <span class="tag tag--warm">премиально</span><span class="tag">glassmorphism</span>
+    </div>
+    <div class="stage">
+      <p class="stage__label">десктоп</p>
+      <div class="v4">
+        <div class="mb">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Энергетика · Машиностроение · Транспорт</div></div></div>
+          <div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div>
+          <div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></button><button class="mb__ico is-primary"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg></button></div>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <div class="stage__mobile"><p class="stage__label">мобильный</p><div class="mobile-wrap"><div class="mobile-inner v4"><div class="mb"><div class="mb__brand"><div class="mb__mark">⚡</div><div class="mb__title">Реестр РФ</div></div><div class="mb__tabs"><button class="mb__tab is-active">Реестр</button><button class="mb__tab">Закупки</button><button class="mb__tab">Карта</button></div><div class="mb__actions"><button class="mb__ico">☆</button><button class="mb__ico is-primary">⇩</button></div></div></div></div></div>
+      <p class="note"><b>Ощущение:</b> «дорогой дашборд». Красиво, но blur и градиенты заметно тяжелее и требуют аккуратной проверки на слабых устройствах.</p>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="variant">
+    <div class="variant__head">
+      <div class="variant__num">5</div>
+      <div><h2 class="variant__name">Командный центр</h2><p class="variant__desc">Два уровня: сверху бренд, статус и действия; снизу — крупные вкладки с иконками и счётчиками. Максимум функциональности.</p></div>
+      <span class="tag tag--warm">функционально</span><span class="tag">two-tier</span>
+    </div>
+    <div class="stage">
+      <p class="stage__label">десктоп</p>
+      <div class="v5">
+        <div class="v5__top">
+          <div class="mb__brand"><div class="mb__mark">⚡</div><div><div class="mb__title">Реестр РФ</div><div class="mb__sub">Реестр предприятий · 2026</div></div></div>
+          <div class="v5__meta"><span><b>●</b> ДАННЫЕ АКТУАЛЬНЫ</span><span>v2.49</span><span>MSK 10:55</span></div>
+          <div class="mb__actions" style="margin-left:auto"><button class="mb__ico">☆</button><button class="mb__ico"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></button><button class="mb__ico is-primary">⇩</button></div>
+        </div>
+        <div class="v5__tabs">
+          <button class="v5__tab is-active">◈ Реестр <small>552</small></button>
+          <button class="v5__tab">⌕ Закупки <small>91</small></button>
+          <button class="v5__tab">◎ Карта <small>552</small></button>
+          <button class="v5__tab" style="margin-left:auto">☰ Фильтры</button>
+        </div>
+        <div class="mb__stats"><div class="mb__stat is-active"><b>552</b><span>всего</span></div><div class="mb__stat"><b>28</b><span>холдингов</span></div><div class="mb__stat"><b>194</b><span>юрлиц</span></div><div class="mb__stat"><b>330</b><span>станций</span></div><div class="mb__stat"><b>40</b><span>ремонтных</span></div><div class="mb__stat"><b>112</b><span>ОЕМ</span></div></div>
+      </div>
+      <div class="stage__mobile"><p class="stage__label">мобильный</p><div class="mobile-wrap"><div class="mobile-inner v5"><div class="v5__top"><div class="mb__brand"><div class="mb__mark">⚡</div><div class="mb__title">Реестр РФ</div></div><div class="mb__actions" style="margin-left:auto"><button class="mb__ico">☆</button><button class="mb__ico is-primary">⇩</button></div></div><div class="v5__tabs"><button class="v5__tab is-active">◈ Реестр</button><button class="v5__tab">⌕ Закупки</button><button class="v5__tab">◎ Карта</button></div></div></div></div>
+      <p class="note"><b>Ощущение:</b> «рабочая станция аналитика». Очень информативно, но занимает больше вертикали и требует перестройки текущей разметки шапки.</p>
+    </div>
+  </section>
+
+  <p class="note" style="text-align:center;margin-top:24px">Напиши номер варианта (например, «3.1» или «смешать 3 и 3.3») — внедрю в <b>index.html</b> и проверю на всех экранах.</p>
+</div>
+<script>
+// Интерактив только для демонстрации: никуда не переходим, меняем только вид.
+document.querySelectorAll('.mb__tabs, .v5__tabs').forEach(group => {
+  group.addEventListener('click', (e) => {
+    const tab = e.target.closest('.mb__tab, .v5__tab');
+    if (!tab) return;
+    group.querySelectorAll('.mb__tab, .v5__tab').forEach(x => x.classList.remove('is-active'));
+    tab.classList.add('is-active');
+  });
+});
+document.querySelectorAll('.mb__ico').forEach(btn => {
+  btn.addEventListener('click', () => btn.classList.toggle('is-pressed'));
+});
+document.querySelectorAll('.mb__stat').forEach(stat => {
+  stat.addEventListener('click', () => stat.classList.toggle('is-pressed'));
+});
+</script>
+</body>
+</html>
