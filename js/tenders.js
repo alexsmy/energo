@@ -297,6 +297,34 @@
 
   /* Подробная карточка закупки — тот же компонент .modal, что и в реестре. */
   let currentTender = null;
+  function focusTerm(r) {
+    const list = [];
+    if (state.keyword) list.push(state.keyword);
+    if (state.q && tm.tokenizeQuery) list.push(...tm.tokenizeQuery(state.q));
+    list.push(...(r.matchedKeywords || r.keywords || []));
+    const title = String(r.title || '').toLowerCase();
+    return list.map(x => String(x || '')).find(x => x && title.includes(x.toLowerCase())) || '';
+  }
+  function placeKeywordHint(r) {
+    const box = $('tDetailKeyword');
+    const title = $('tDetailTitle');
+    if (!box || !title) return;
+    const marks = [...title.querySelectorAll('mark')];
+    const term = focusTerm(r) || (marks[0] ? marks[0].innerText.trim() : '');
+    if (!term) { box.hidden = true; return; }
+    let hiddenByClamp;
+    if (marks.length) {
+      const line = parseFloat(getComputedStyle(title).lineHeight) || 26;
+      const top = title.getBoundingClientRect().top;
+      hiddenByClamp = !marks.some(m => m.getBoundingClientRect().top - top < line * 4 - 2);
+    } else {
+      hiddenByClamp = String(r.title || '').toLowerCase().indexOf(term.toLowerCase()) > 220;
+    }
+    if (hiddenByClamp) {
+      box.innerHTML = '… <b>' + esc(term) + '</b> …';
+      box.hidden = false;
+    } else box.hidden = true;
+  }
   function openTenderDetail(id) {
     const r = records.find(x => x.id === id);
     if (!r) return;
@@ -304,7 +332,8 @@
     const kv = (label, value) => value ? '<dt>' + esc(label) + '</dt><dd>' + value + '</dd>' : '';
     const via = viaNames(r).join(', ');
     $('tDetailKicker').textContent = (lawLabel(r.law) || 'Закупка') + ' · ' + platformOf(r).name;
-    $('tDetailTitle').textContent = r.title || r.id;
+    $('tDetailTitle').innerHTML = tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc);
+    $('tDetailTitle').setAttribute('title', r.title || r.id);
     $('tDetailBadges').innerHTML = newBadge(r) + deadlineBadge(r) + sourceHtml(r);
 
     const body = [];
@@ -350,6 +379,7 @@
     }
     $('tenderModal').hidden = false;
     document.body.style.overflow = 'hidden';
+    setTimeout(() => placeKeywordHint(r), 60); // фоновые вкладки не всегда выполняют rAF
   }
   function closeTenderDetail() {
     $('tenderModal').hidden = true;
@@ -395,7 +425,7 @@
       .map(k => '<span class="t-chip t-chip--mini t-chip--hit">' + esc(k) + '</span>').join('');
     const ent = entNames(r);
     return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '" data-id="' + esc(r.id) + '">' +
-      '<div class="t-card__head"><button class="fav-star" type="button" data-fav-tender="' + esc(r.id) + '" aria-label="В избранное" title="В избранное">' + (TF && TF.has('tender', r.id) ? '★' : '☆') + '</button><span class="t-card__title">' +
+      '<div class="t-card__head"><button class="fav-star" type="button" data-fav-tender="' + esc(r.id) + '" aria-label="В избранное" title="В избранное">' + (TF && TF.has('tender', r.id) ? '★' : '☆') + '</button><span class="t-card__title" title="' + esc(r.title || r.id) + '">' +
         tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</span>' +
         newBadge(r) + deadlineBadge(r) + sourceHtml(r) +
       '</div>' +

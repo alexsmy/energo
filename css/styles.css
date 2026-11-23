@@ -226,6 +226,9 @@ body.is-tenders .stats-bar{display:none}
 .modal__head-actions{display:flex;gap:7px;flex:0 0 auto}
 .t-detail__hero{background:linear-gradient(120deg,#0c3449,#1b5b7b 60%,#22789c);color:#fff;border-bottom:0}
 .t-detail__hero .modal__kicker{color:#ffd2a8}
+.t-detail__hero h2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden;line-height:1.26}
+.t-detail__keyword{margin-top:6px;font-size:12px;color:#ffe2c2;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:6px;padding:3px 8px;display:inline-block}
+.t-card__title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}
 .t-detail__hero .icon-btn{color:#fff;background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
 .t-detail__hero .icon-btn:hover{background:rgba(255,255,255,.3);color:#fff}
 .t-detail__badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
