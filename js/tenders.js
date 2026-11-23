@@ -379,12 +379,14 @@
     }
     $('tenderModal').hidden = false;
     document.body.style.overflow = 'hidden';
+    if (window.EnergoUI && window.EnergoUI.positionReturnBar) window.EnergoUI.positionReturnBar();
     setTimeout(() => placeKeywordHint(r), 60); // фоновые вкладки не всегда выполняют rAF
   }
   function closeTenderDetail() {
     $('tenderModal').hidden = true;
     document.body.style.overflow = '';
     currentTender = null;
+    if (window.EnergoUI && window.EnergoUI.positionReturnBar) window.EnergoUI.positionReturnBar();
   }
 
   /* ---------- вывод ---------- */
@@ -446,14 +448,16 @@
   }
 
   function rowHtml(r) {
-    return '<tr' + (r.isNew ? ' class="t-row--new"' : '') + ' data-id="' + esc(r.id) + '">' +
-      '<td class="t-mut">' + fmtDate(r.published) + '</td>' +
-      '<td><button class="t-row__title" type="button">' +
-        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</button>' + newBadge(r) + '</td>' +
-      '<td>' + esc(r.customer || '—') + '</td>' +
-      '<td>' + esc(entNames(r) || '—') + '</td>' +
-      '<td><b class="t-price">' + fmtMoney(r.price) + '</b></td>' +
-      '<td>' + sourceHtml(r) + '</td>' +
+    const td = (label, content, cls) =>
+      '<td data-label="' + esc(label) + '"' + (cls ? ' class="' + cls + '"' : '') + '><span class="t-cell">' + content + '</span></td>';
+    return '<tr class="data-row' + (r.isNew ? ' t-row--new' : '') + '" data-id="' + esc(r.id) + '">' +
+      td('Дата', fmtDate(r.published), 't-mut') +
+      td('Название', '<button class="t-row__title" type="button">' +
+        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</button>' + newBadge(r)) +
+      td('Заказчик', esc(r.customer || '—')) +
+      td('Предприятие', esc(entNames(r) || '—')) +
+      td('Цена', '<b class="t-price">' + fmtMoney(r.price) + '</b>') +
+      td('Источник', sourceHtml(r)) +
       '</tr>';
   }
 
@@ -510,6 +514,16 @@
   }
 
   function render() {
+    document.querySelectorAll('[data-tmode]').forEach(b => {
+      const on = b.dataset.tmode === state.mode;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('[data-tcards]').forEach(b => {
+      const on = b.dataset.tcards === state.view;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
     modeHint();
     if (state.pane === 'etps') { renderEtps(); return; }
     const list = filtered();

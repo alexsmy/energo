@@ -171,10 +171,13 @@
     renderFavorites();
     $('favModal').hidden = false;
     document.body.style.overflow = 'hidden';
+    positionReturnBar();
+    observeReturnBarPanel();
   }
   function closeFavorites() {
     $('favModal').hidden = true;
     document.body.style.overflow = '';
+    positionReturnBar();
   }
   function setReturnContext(id, name, type) {
     returnContext = { id, name, type: type || 'org' };
@@ -197,10 +200,54 @@
       }
     });
     document.body.appendChild(el);
+    positionReturnBar();
+    observeReturnBarPanel();
+  }
+  let returnBarRO = null;
+  function observeReturnBarPanel() {
+    if (!window.ResizeObserver) return;
+    if (!returnBarRO) returnBarRO = new ResizeObserver(() => positionReturnBar());
+    returnBarRO.disconnect();
+    const panel = visibleModalPanel();
+    if (panel) {
+      returnBarRO.observe(panel);
+      const foot = panel.querySelector('.modal__foot');
+      if (foot) returnBarRO.observe(foot);
+    }
   }
   function clearReturnContext() {
     returnContext = null;
     $('returnBar')?.remove();
+    positionReturnBar();
+  }
+  /* Плашка возврата не должна закрывать кнопки в подвале открытой карточки:
+   * динамически поднимаем её над .modal__foot и держим в границах панели. */
+  function visibleModalPanel() {
+    for (const id of ['tenderModal', 'modal', 'favModal']) {
+      const m = $(id);
+      if (m && !m.hidden) return m.querySelector('.modal__panel');
+    }
+    return null;
+  }
+  function positionReturnBar() {
+    const bar = $('returnBar');
+    const panel = visibleModalPanel();
+    document.querySelectorAll('.modal__body').forEach(mb => { mb.style.paddingBottom = ''; });
+    if (!bar) return;
+    let left = innerWidth <= 720 ? 10 : 16, bottom = innerWidth <= 720 ? 12 : 16, max = 420;
+    if (panel) {
+      const pr = panel.getBoundingClientRect();
+      const foot = panel.querySelector('.modal__foot');
+      const fr = foot ? foot.getBoundingClientRect() : null;
+      left = Math.max(8, Math.round(pr.left + 12));
+      bottom = Math.max(10, Math.round(innerHeight - (fr ? fr.top : pr.bottom) + 10));
+      max = Math.max(180, Math.round(pr.width - 24));
+      const body = panel.querySelector('.modal__body');
+      if (body) body.style.paddingBottom = ((bar.offsetHeight || 40) + 14) + 'px';
+    }
+    bar.style.setProperty('--rb-left', left + 'px');
+    bar.style.setProperty('--rb-bottom', bottom + 'px');
+    bar.style.setProperty('--rb-max', max + 'px');
   }
   function focusOnMap(id) {
     const it = byId[id];
@@ -719,7 +766,7 @@
 
     const body = [];
 
-    body.push('<div class="sec"><h3>Деятельность</h3><dl class="kv">' +
+    body.push('<div class="sec sec--activity"><h3>Деятельность</h3><dl class="kv">' +
       kvRow('Полное наименование', esc(it.full)) +
       kvRow('Вид объекта', esc([it.type, it.kind === 'plant' ? 'станция' : ''].filter(Boolean).join(' · '))) +
       kvRow('Тип турбины / технологии', techBadges(it, 99)) +
@@ -733,7 +780,7 @@
     '</dl></div>');
 
     const notFound = '<span class="muted-value">не найдено в открытых источниках</span>';
-    body.push('<div class="sec"><h3>Контакты</h3><dl class="kv">' +
+    body.push('<div class="sec sec--contacts"><h3>Контакты</h3><dl class="kv">' +
       kvRow('Адрес', it.address ? esc(it.address) + copyBtn(it.address, 'адрес') : notFound) +
       kvRow('Телефон', it.phone
         ? '<a href="tel:' + esc(it.phone.replace(/[^\d+]/g, '')) + '">' + esc(it.phone) + '</a>' + copyBtn(it.phone, 'телефон')
@@ -747,12 +794,12 @@
       ? '<div class="hint">Указаны контакты головной организации: у станции могут быть собственные телефон и e-mail. Уточняйте по официальному сайту или ЕГРЮЛ.</div>' : '') +
     '</div>');
 
-    body.push('<div class="sec"><h3>Закупки и электронные площадки</h3>' +
+    body.push('<div class="sec sec--proc"><h3>Закупки и электронные площадки</h3>' +
       '<div class="meth">' + esc(it.method || '—') + '</div>' +
       '<div class="chips" style="margin-top:10px">' + (etps || '<span class="chip">не указаны</span>') + '</div>' +
     '</div>');
 
-    body.push('<div class="sec"><h3>Реквизиты и руководство</h3><dl class="kv">' +
+    body.push('<div class="sec sec--req"><h3>Реквизиты и руководство</h3><dl class="kv">' +
       kvRow('ИНН', it.inn ? esc(it.inn) + copyBtn(it.inn, 'ИНН') : '') +
       kvRow('КПП', esc(it.kpp)) +
       kvRow('ОГРН', esc(it.ogrn)) +
@@ -766,7 +813,7 @@
     '</dl></div>');
 
     if (it.equipment || it.repairs || it.wiki) {
-      body.push('<div class="sec"><h3>Эксплуатация и оборудование</h3><dl class="kv">' +
+      body.push('<div class="sec sec--equip"><h3>Эксплуатация и оборудование</h3><dl class="kv">' +
         kvRow('Основное оборудование', esc(it.equipment)) +
         kvRow('Ремонты и реконструкция', esc(it.repairs)) +
         (it.wiki ? kvRow('Страница в Википедии', link(it.wiki)) : '') +
@@ -774,7 +821,7 @@
     }
 
     if (it.notes) {
-      body.push('<div class="sec"><h3>Примечание</h3><div class="note">' + esc(it.notes) + '</div></div>');
+      body.push('<div class="sec sec--note"><h3>Примечание</h3><div class="note">' + esc(it.notes) + '</div></div>');
     }
 
     const srcs = (it.sources || []).map(s => {
@@ -782,7 +829,7 @@
       if (o && o.url) return '<a class="tag tag--link" href="' + esc(o.url) + '" target="_blank" rel="noopener">' + esc(o.title) + '</a>';
       return '<span class="tag">' + esc(o ? o.title : s) + '</span>';
     }).join('');
-    body.push('<div class="sec"><h3>Источники</h3>' +
+    body.push('<div class="sec sec--src"><h3>Источники</h3>' +
       '<div class="srcs" style="margin-top:8px">' + srcs + '</div>' +
     '</div>');
 
@@ -796,12 +843,15 @@
     $('modal').hidden = false;
     document.body.style.overflow = 'hidden';
     $('mClose').focus();
+    positionReturnBar();
+    observeReturnBarPanel();
   }
 
   function closeModal() {
     $('modal').hidden = true;
     document.body.style.overflow = '';
     current = null;
+    positionReturnBar();
   }
 
   function cardText(it) {
@@ -923,7 +973,7 @@
     window.addEventListener('scroll', () => {
       if (!stickyQueued) { stickyQueued = true; requestAnimationFrame(updateSticky); }
     }, { passive: true });
-    window.addEventListener('resize', () => { updateSticky(); sizeCompactStats(); });
+    window.addEventListener('resize', () => { updateSticky(); sizeCompactStats(); positionReturnBar(); });
     updateSticky();
 
     const tabsEl = $('tabs'), tabsWrap = $('tabsWrap');
@@ -1243,6 +1293,7 @@
     if (b) b.click();
   } else render();
 
+  window.EnergoUI = { positionReturnBar };
   // Переход из закупки в карточку предприятия с возвратом к этой закупке.
   window.EnergoRegistry = {
     openFromTender(orgId, tenderId, tenderTitle) {
