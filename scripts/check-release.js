@@ -27,8 +27,12 @@ if (version && !/^\d+\.\d+\./.test(String(version.version || ''))) fail('version
 const tenders = readJson('data/tenders.json') || { records: [] };
 if (!Array.isArray(tenders.records)) fail('tenders.json: нет records');
 else {
+  const today = new Date().toISOString().slice(0, 10);
   for (const r of tenders.records) {
     if (!r.id || !r.title || !r.url) fail('tenders.json: запись без id/title/url: ' + (r.id || '?'));
+    if (r.phase === 'active' && r.deadline && String(r.deadline).slice(0, 10) < today) {
+      fail('tenders.json: активная запись с прошедшим сроком ' + r.deadline + ': ' + (r.id || '?'));
+    }
   }
 }
 const audit = readJson('data/etp-audit.json') || { platforms: [] };

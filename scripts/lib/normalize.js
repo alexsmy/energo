@@ -213,7 +213,6 @@ function mapGosplan(p, org, foundAt, query, law) {
     updated: p.updated_at,
     status: p.stage === 1 || p.stage === 2 ? 'Подача заявок' : 'Завершена',
     stage: p.stage,
-    phase: (p.stage === 1 || p.stage === 2) ? 'active' : 'archive',
     url: eisUrl(reg, law),
     foundQuery: query || '',
     foundAt,
@@ -248,7 +247,6 @@ function mapGentender(row, org, foundAt, query, phase) {
     updated: row.publish_date,
     status: row.status_label || '',
     stage: row.status || '',
-    phase,
     url: row.detail_url || row.etp_url || '',
     foundQuery: query || '',
     foundAt,
@@ -326,8 +324,8 @@ function mergeTwo(a, b) {
   out.sources = mergeSources(a.sources || [sourceEntry(a)], b.sources || [sourceEntry(b)]);
   out.foundAt = [a.foundAt, b.foundAt].filter(Boolean).sort()[0] || out.foundAt;
   out.lastSeen = [a.lastSeen, b.lastSeen].filter(Boolean).sort().pop() || out.lastSeen;
-  // Фаза: если хотя бы один источник считает закупку действующей — active.
-  if (a.phase === 'active' || b.phase === 'active') out.phase = 'active';
+  // Фаза пересчитывается по статусу и дедлайну, а не наследуется от источника.
+  out.phase = phaseOf(out);
   return out;
 }
 

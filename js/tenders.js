@@ -81,6 +81,15 @@
     aliasesByOrg[e.id] = [e.query, ...(e.aliases || [])].filter(Boolean);
   });
 
+  // Фаза вычисляется из статуса и дедлайна, а не берётся из сохранённого поля:
+  // запись с прошедшим сроком или статусом «Работа комиссии» — завершённая.
+  function effectivePhase(r) {
+    const s = norm(r.status || r.stage || '');
+    if (/заверш|отмен|несостоявш|прекращ|архив|работ.*комисс|closed|cancel/.test(s)) return 'archive';
+    if (!r.deadline) return 'active';
+    return String(r.deadline).slice(0, 10) >= new Date().toISOString().slice(0, 10) ? 'active' : 'archive';
+  }
+
   function fmtDate(s) {
     if (!s) return '—';
     const m = String(s).match(/(\d{4})-(\d{2})-(\d{2})/);
@@ -96,7 +105,7 @@
     return Number.isFinite(n) ? n : 0;
   }
   function priceNum(s) { return moneyValue(s); }
-  function dateChip(s, kind) {
+  function dateChip(s, kind, published) {
     const text = fmtDate(s);
     if (text === '—') return '<span class="muted-value">—</span>';
     let cls = 't-date';
@@ -104,8 +113,12 @@
       const end = Date.parse(String(s).slice(0, 10) + 'T23:59:59');
       if (!isNaN(end)) {
         const days = Math.ceil((end - Date.now()) / 86400000);
+        const pub = Date.parse(String(published || '').slice(0, 10) + 'T00:00:00');
+        const span = !isNaN(pub) && end > pub ? (end - pub) / 86400000 : 0;
+        const part = span > 0 ? days / span : null;
         if (days < 0) cls += ' t-date--expired';
-        else if (days <= 2) cls += ' t-date--soon';
+        else if (days <= 3 || (part != null && part <= 0.25)) cls += ' t-date--soon';
+        else if (days <= 10 || (part != null && part <= 0.6)) cls += ' t-date--mid';
         else cls += ' t-date--plan';
       }
     } else cls += ' t-date--pub';
@@ -190,9 +203,15 @@
 
   function filtered() {
     const q = state.q;
+    // Старые объявления (старше 30 дней по публикации/дедлайну) не показываем ни в одном режиме.
+    const maxAgeDays = Math.max(1, parseInt(settings.archiveDepthDays, 10) || 30);
+    const cutoff = new Date(Date.now() - maxAgeDays * 86400000).toISOString().slice(0, 10);
     let list = records.filter(r => {
-      if (state.mode === 'archive' && r.phase !== 'archive') return false;
-      if (state.mode === 'active' && r.phase === 'archive') return false;
+      const when = String(r.published || r.deadline || '').slice(0, 10);
+      if (when && when < cutoff) return false;
+      const phase = effectivePhase(r);
+      if (state.mode === 'archive' && phase !== 'archive') return false;
+      if (state.mode === 'active' && phase !== 'active') return false;
       if (q && !state.keyword && !tm.queryMatches(q, r.title, r.matchedKeywords || r.keywords, r.customer, orgNamesFor(r))) return false;
       if (state.enterprise) {
         const ent = allEntMap[state.enterprise] || entMap[state.enterprise];
@@ -208,8 +227,8 @@
       date: (a, b) => {
         // Сначала действующие, внутри них — ЕИС, затем остальные площадки;
         // в пределах группы — по дате публикации.
-        const pa = a.phase === 'active' ? 0 : 1;
-        const pb = b.phase === 'active' ? 0 : 1;
+        const pa = effectivePhase(a) === 'active' ? 0 : 1;
+        const pb = effectivePhase(b) === 'active' ? 0 : 1;
         if (pa !== pb) return pa - pb;
         const ra = platformOf(a).code === 'EIS' ? 0 : sourceRank(a);
         const rb = platformOf(b).code === 'EIS' ? 0 : sourceRank(b);
@@ -219,8 +238,8 @@
         return String(platformOf(a).name).localeCompare(String(platformOf(b).name), 'ru');
       },
       deadline: (a, b) => {
-        const pa = a.phase === 'active' ? 0 : 1;
-        const pb = b.phase === 'active' ? 0 : 1;
+        const pa = effectivePhase(a) === 'active' ? 0 : 1;
+        const pb = effectivePhase(b) === 'active' ? 0 : 1;
         if (pa !== pb) return pa - pb;
         const da = a.deadline || '9999-12-31';
         const db = b.deadline || '9999-12-31';
@@ -228,8 +247,8 @@
         return d || String(b.published || '').localeCompare(String(a.published || ''));
       },
       new: (a, b) => {
-        const pa = a.phase === 'active' ? 0 : 1;
-        const pb = b.phase === 'active' ? 0 : 1;
+        const pa = effectivePhase(a) === 'active' ? 0 : 1;
+        const pb = effectivePhase(b) === 'active' ? 0 : 1;
         if (pa !== pb) return pa - pb;
         const d = String(b.published || b.deadline || '').localeCompare(String(a.published || a.deadline || ''));
         return d || String(a.title || '').localeCompare(String(b.title || ''), 'ru');
@@ -302,7 +321,7 @@
     '</dl></div>');
     body.push('<div class="sec"><h3>Сроки</h3><dl class="kv">' +
       kv('Опубликовано', dateChip(r.published, 'published')) +
-      kv('Подача заявок до', dateChip(r.deadline, 'deadline')) +
+      kv('Подача заявок до', dateChip(r.deadline, 'deadline', r.published)) +
       kv('Обновлено', esc(fmtDate(r.updated) || '—')) +
     '</dl></div>');
     const sources = (r.sources || []).map(s => {
@@ -360,7 +379,7 @@
   }
   // Логика фаз не меняем: это только подсказка по сроку в карточке.
   function deadlineBadge(r) {
-    if (r.phase === 'archive') return '';
+    if (effectivePhase(r) === 'archive') return '';
     if (!r.deadline) return badge('Срок не указан', 'warn');
     const end = Date.parse(String(r.deadline).slice(0, 10) + 'T23:59:59');
     if (isNaN(end)) return badge('Срок не указан', 'warn');
@@ -388,7 +407,7 @@
         (r.status ? '<div><span class="t-label">Статус:</span> ' + esc(r.status) + '</div>' : '') +
         '<div class="t-card__grid">' +
           '<div><span class="t-label">Опубликовано:</span> ' + dateChip(r.published, 'published') + '</div>' +
-          '<div><span class="t-label">Заявки до:</span> ' + dateChip(r.deadline, 'deadline') + '</div>' +
+          '<div><span class="t-label">Заявки до:</span> ' + dateChip(r.deadline, 'deadline', r.published) + '</div>' +
           '<div><span class="t-label">Цена:</span> <b class="t-price">' + fmtMoney(r.price) + '</b></div>' +
           '<div><span class="t-label">Номер:</span> ' + esc(r.regNumber || r.externalId || r.id) + '</div>' +
         '</div>' +

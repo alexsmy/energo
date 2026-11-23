@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const { ThrottledClient } = require('./lib/throttle');
 const { buildCustomerIndex, matchCustomer, customerDisplay } = require('./lib/match-org');
-const { dedup, makeRecord, sourceEntry, splitWordScore, identityKeys } = require('./lib/normalize');
+const { dedup, makeRecord, sourceEntry, splitWordScore, identityKeys, phaseOf } = require('./lib/normalize');
 const { platformName, canonicalPlatform, sourceRank } = require('./lib/platforms');
 const { CollectLogger } = require('./lib/logger');
 const { nonWorking, mskDate } = require('./lib/schedule');
@@ -84,6 +84,7 @@ function normalizeLegacy(r, index, enterprises) {
               : (r.source || 'Источник'));
   const rec = makeRecord({
     ...r,
+    phase: '', // фаза пересчитывается по статусу/дедлайну, старое значение не наследуем
     org,
     platformCode: p.code || rawPlatform,
     platformName: p.name || r.platformName || platformName(rawPlatform),
@@ -95,6 +96,7 @@ function normalizeLegacy(r, index, enterprises) {
     enterpriseIds: r.enterpriseIds || []
   });
   rec.sources = (r.sources && r.sources.length) ? r.sources : [sourceEntry(rec)];
+  rec.phase = phaseOf(rec);
   return rec;
 }
 

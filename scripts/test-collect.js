@@ -5,7 +5,7 @@ const assert = require('assert');
 const { makePlan, formatPlan } = require('./lib/plan');
 const { nonWorking, mskDate } = require('./lib/schedule');
 const tm = require('../js/text-match');
-const { makeRecord, dedup } = require('./lib/normalize');
+const { makeRecord, dedup, phaseOf } = require('./lib/normalize');
 
 let passed = 0;
 function test(name, fn) {
@@ -99,6 +99,13 @@ test('разные лоты одного заказчика не склеива�
   const a = makeRecord({ ...base, id: 'x:1', title: 'Ремонт турбины лот 1', platformCode: 'TEK' });
   const b = makeRecord({ ...base, id: 'x:2', title: 'Ремонт турбины лот 2', platformCode: 'TEK' });
   assert.equal(dedup([a], [b], 100).length, 2);
+});
+
+test('фаза закупки пересчитывается по статусу и дедлайну', () => {
+  assert.equal(phaseOf({ status: 'Работа комиссии', stage: 1, deadline: '2026-11-19' }), 'archive');
+  assert.equal(phaseOf({ status: 'Подача заявок', deadline: '2026-12-20' }), 'active');
+  assert.equal(phaseOf({ status: 'Подача заявок', deadline: '2026-11-19' }), 'archive');
+  assert.equal(phaseOf({ status: 'Подача заявок', deadline: '' }), 'active');
 });
 
 test('cookie jar запоминает куки только для своего домена', () => {

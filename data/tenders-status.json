@@ -1,9 +1,9 @@
 {
-  "lastRun": "2026-11-23T00:29:47.217Z",
+  "lastRun": "2026-11-23T01:53:52.959Z",
   "mode": "refilter",
   "total": 102,
-  "active": 54,
-  "archive": 48,
+  "active": 41,
+  "archive": 61,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
   "sources": [
