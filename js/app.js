@@ -114,6 +114,109 @@
     return many;
   }
 
+  /* ---------- избранное и возврат к карточке ---------- */
+  const F = window.EnergoFavorites || null;
+  let returnContext = null;
+
+  function updateFavIcon(kind, id, el) {
+    if (!el || !F) return;
+    const on = F.has(kind, id);
+    el.textContent = on ? '★' : '☆';
+    el.setAttribute('aria-label', on ? 'Убрать из избранного' : 'В избранное');
+    el.setAttribute('data-tip', on ? 'В избранном' : 'В избранное');
+    el.classList.toggle('is-fav', on);
+  }
+  function updateFavCount() {
+    const n = F ? F.count() : 0;
+    const badge = $('favCount');
+    if (badge) { badge.hidden = n === 0; badge.textContent = String(n); }
+  }
+  function favToggle(kind, id, el) {
+    if (!F || !id) return;
+    F.toggle(kind, id);
+    updateFavIcon(kind, id, el);
+    if (kind === 'org') {
+      document.querySelectorAll('[data-fav-org]').forEach((s) => {
+        if (s.dataset.favOrg === id) updateFavIcon('org', id, s);
+      });
+      if (current && current.id === id) updateFavIcon('org', id, $('mFav'));
+    }
+    updateFavCount();
+    window.dispatchEvent(new Event('energo-favorites-changed'));
+    if ($('favModal') && !$('favModal').hidden) renderFavorites();
+  }
+  function renderFavorites() {
+    if (!F) return;
+    const data = F.load();
+    const tenders = (((window.TENDER_DATA || {}).tenders || {}).records) || [];
+    const tMap = Object.fromEntries(tenders.map(r => [r.id, r]));
+    const orgs = data.orgs.map(id => {
+      const it = byId[id];
+      if (!it) return '';
+      return '<div class="fav-item"><button class="fav-item__open" type="button" data-open-org="' + esc(id) + '">' +
+        esc(it.name) + '<small>' + esc([it.region, it.type].filter(Boolean).join(' · ')) + '</small></button>' +
+        '<button class="fav-item__del" type="button" data-del-fav="org" data-id="' + esc(id) + '" aria-label="Убрать">✕</button></div>';
+    }).join('') || '<p class="muted-value">Пока нет сохранённых организаций.</p>';
+    const tnd = data.tenders.map(id => {
+      const r = tMap[id];
+      if (!r) return '';
+      return '<div class="fav-item"><button class="fav-item__open" type="button" data-open-tender="' + esc(id) + '">' +
+        esc((r.title || r.id).slice(0, 120)) + '<small>' + esc([r.customer, r.price].filter(Boolean).join(' · ')) + '</small></button>' +
+        '<button class="fav-item__del" type="button" data-del-fav="tender" data-id="' + esc(id) + '" aria-label="Убрать">✕</button></div>';
+    }).join('') || '<p class="muted-value">Пока нет сохранённых закупок.</p>';
+    $('favBody').innerHTML = '<div class="sec"><h3>Организации</h3>' + orgs + '</div>' +
+      '<div class="sec"><h3>Закупки</h3>' + tnd + '</div>';
+  }
+  function openFavorites() {
+    renderFavorites();
+    $('favModal').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeFavorites() {
+    $('favModal').hidden = true;
+    document.body.style.overflow = '';
+  }
+  function setReturnContext(id, name) {
+    returnContext = { id, name };
+    $('returnBar')?.remove();
+    const el = document.createElement('div');
+    el.id = 'returnBar';
+    el.className = 'return-bar';
+    el.innerHTML = '<button type="button" class="return-bar__back" aria-label="Вернуться к карточке">←</button>' +
+      '<span>Карточка: <b>' + esc(name) + '</b></span>';
+    el.querySelector('.return-bar__back').addEventListener('click', () => {
+      const ctx = returnContext;
+      clearReturnContext();
+      document.querySelector('[data-tab="all"]')?.click();
+      if (ctx) openModal(ctx.id);
+    });
+    document.body.appendChild(el);
+  }
+  function clearReturnContext() {
+    returnContext = null;
+    $('returnBar')?.remove();
+  }
+  function focusOnMap(id) {
+    const it = byId[id];
+    if (!it || it.lat == null || it.lon == null) {
+      createNotice('info', '!').querySelector('.notice__body').textContent = 'У этой записи нет координат';
+      return;
+    }
+    document.querySelector('[data-tab="map"]')?.click();
+    let tries = 0;
+    const tryFocus = () => {
+      const marker = mapState.markers[id];
+      if (mapState.map && marker) {
+        mapState.pending = null; // не даём общему fitBounds перебить фокус
+        mapState.map.setView([it.lat, it.lon], 15, { animate: false });
+        setTimeout(() => marker.openPopup(), 250);
+        return;
+      }
+      if (tries++ < 25) setTimeout(tryFocus, 100);
+    };
+    setTimeout(tryFocus, 120);
+  }
+
   const STATE_KEY = 'energo-registry-state';
 
   function saveState() {
@@ -239,7 +342,7 @@
     { id: 'plant', label: 'Станции', color: '#e2701f', test: i => i.kind === 'plant' },
     { id: 'gen', label: 'Генерация', color: '#1f6f9c', test: i => i.kind !== 'plant' && isGen(i) }
   ];
-  const mapState = { map: null, groups: {}, base: {}, osmChain: [], osmIdx: 0, baseId: 'osm', ready: false, fitKey: '', pending: null, lastListKey: '', raf: 0 };
+  const mapState = { map: null, groups: {}, markers: {}, base: {}, osmChain: [], osmIdx: 0, baseId: 'osm', ready: false, fitKey: '', pending: null, lastListKey: '', raf: 0 };
 
   function pinType(it) {
     if (it.kind === 'holding') return ['holding', '★'];
@@ -403,12 +506,14 @@
     mapState.lastListKey = listKey;
 
     LAYERS.forEach(l => { if (mapState.groups[l.id]) mapState.groups[l.id].clearLayers(); });
+    mapState.markers = {};
     const bounds = [];
     visible.forEach(it => {
       const layer = LAYERS.find(l => l.test(it)) || LAYERS[LAYERS.length - 1];
       const m = L.marker([it.lat, it.lon], { icon: pinIcon(it), title: it.name, riseOnHover: true, keyboard: false });
       m.bindPopup(popupHTML(it), { maxWidth: 280, minWidth: 250, closeButton: true, autoPan: true, autoPanPadding: [24, 24] });
       mapState.groups[layer.id].addLayer(m);
+      mapState.markers[it.id] = m;
       bounds.push([it.lat, it.lon]);
     });
     if (bounds.length) mapState.pending = L.latLngBounds(bounds).pad(0.015);
@@ -440,7 +545,9 @@
     const where = [it.region, par && par.kind !== 'holding' ? par.name : (it.kind === 'plant' ? it.holdingName : '')].filter(Boolean).join(' · ');
     return '' +
       '<article class="card" data-id="' + esc(it.id) + '" tabindex="0" role="button" aria-label="' + esc(it.name) + '">' +
-        '<div class="card__top"><div class="card__name">' + esc(it.name) + '</div>' + techBadges(it, 2) + typeBadge(it) + '</div>' +
+        '<div class="card__top"><div class="card__name">' + esc(it.name) + '</div>' +
+          '<button class="fav-star" type="button" data-fav-org="' + esc(it.id) + '" aria-label="В избранное" title="В избранное">' + (F && F.has('org', it.id) ? '★' : '☆') + '</button>' +
+          techBadges(it, 2) + typeBadge(it) + '</div>' +
         (it.full && it.full !== it.name ? '<div class="card__full">' + esc(it.full) + '</div>' : '') +
         '<div class="card__row"><span class="card__ico">📍</span><span>' + esc(where || '—') + '</span>' + cap + '</div>' +
         '<div class="card__row"><span class="card__ico">☎</span><span>' + phone + '</span></div>' +
@@ -572,10 +679,6 @@
     if (!value) return '';
     return '<button class="copy-btn" type="button" data-copy="' + esc(value) + '" title="Скопировать ' + esc(label) + '">⧉</button>';
   }
-  function quickAction(href, icon, label, cls) {
-    return href ? '<a class="qa' + (cls ? ' qa--' + cls : '') + '" href="' + esc(href) + '" target="_blank" rel="noopener">' +
-      '<span aria-hidden="true">' + icon + '</span>' + esc(label) + '</a>' : '';
-  }
 
   function link(url, text) {
     if (!url) return '';
@@ -609,15 +712,6 @@
     }).join('');
 
     const body = [];
-    const actions = [
-      quickAction(it.phone ? 'tel:' + it.phone.replace(/[^\d+]/g, '') : '', '☎', 'Позвонить'),
-      quickAction(it.email ? 'mailto:' + it.email : '', '✉', 'E-mail'),
-      quickAction(it.site, '↗', 'Сайт'),
-      quickAction(it.procUrl, '↗', 'Закупки'),
-      it.inn ? '<button class="qa" type="button" data-copy="' + esc(it.inn) + '"><span aria-hidden="true">⧉</span>ИНН</button>' : '',
-      '<button class="qa" type="button" data-tenders-for="' + esc(it.name) + '"><span aria-hidden="true">⌕</span>Закупки организации</button>'
-    ].filter(Boolean).join('');
-    body.push('<div class="qa-bar">' + actions + '</div>');
 
     body.push('<div class="sec"><h3>Деятельность</h3><dl class="kv">' +
       kvRow('Полное наименование', esc(it.full)) +
@@ -692,6 +786,7 @@
     const btn = $('mSite');
     btn.href = site || '#';
     btn.style.display = site ? '' : 'none';
+    updateFavIcon('org', it.id, $('mFav'));
     $('modal').hidden = false;
     document.body.style.overflow = 'hidden';
     $('mClose').focus();
@@ -958,22 +1053,62 @@
         else done();
         return;
       }
-      const search = e.target.closest('[data-tenders-for]');
-      if (search) {
-        closeModal();
+    });
+
+    $('mFav').addEventListener('click', () => { if (current) favToggle('org', current.id, $('mFav')); });
+    $('mTenders').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!current) return;
+      const it = current;
+      closeModal();
+      setReturnContext(it.id, it.name);
+      document.querySelector('[data-tab="tenders"]')?.click();
+      if (window.EnergoTenders && window.EnergoTenders.setQuery) window.EnergoTenders.setQuery(it.name);
+    });
+    $('mMap').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!current) return;
+      const it = current;
+      closeModal();
+      setReturnContext(it.id, it.name);
+      focusOnMap(it.id);
+    });
+
+    $('favBtn').addEventListener('click', openFavorites);
+    $('favModal').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeFavorites(); });
+    $('favBody').addEventListener('click', e => {
+      const del = e.target.closest('[data-del-fav]');
+      if (del && F) { F.toggle(del.dataset.delFav, del.dataset.id); updateFavCount(); renderFavorites(); return; }
+      const org = e.target.closest('[data-open-org]');
+      if (org) { closeFavorites(); openModal(org.dataset.openOrg); return; }
+      const tnd = e.target.closest('[data-open-tender]');
+      if (tnd && window.EnergoTenders && window.EnergoTenders.openDetail) {
+        closeFavorites();
         document.querySelector('[data-tab="tenders"]')?.click();
-        if (window.EnergoTenders && window.EnergoTenders.setQuery) window.EnergoTenders.setQuery(search.dataset.tendersFor || '');
+        window.EnergoTenders.openDetail(tnd.dataset.openTender);
       }
     });
-    $('copyBtn').addEventListener('click', async () => {
-      if (!current) return;
-      try {
-        await navigator.clipboard.writeText(cardText(current));
-        $('copyBtn').textContent = 'Скопировано ✓';
-        setTimeout(() => { $('copyBtn').textContent = 'Скопировать карточку'; }, 1600);
-      } catch (err) {
-        alert('Не удалось скопировать. Используйте выделение текста.');
-      }
+    $('favExportBtn').addEventListener('click', () => {
+      if (!F) return;
+      const blob = new Blob([F.exportJSON()], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'energo-favorites-' + new Date().toISOString().slice(0, 10) + '.json';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    });
+    $('favImportBtn').addEventListener('click', () => $('favFile').click());
+    $('favFile').addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file || !F) return;
+      try { F.importJSON(await file.text()); updateFavCount(); renderFavorites(); }
+      catch (err) { alert('Не удалось импортировать: ' + (err.message || err)); }
+      e.target.value = '';
+    });
+
+    $('cards').addEventListener('click', e => {
+      const star = e.target.closest('[data-fav-org]');
+      if (star) favToggle('org', star.dataset.favOrg, star);
     });
     $('exportBtn').addEventListener('click', exportCSV);
 
@@ -1000,7 +1135,10 @@
     });
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && !$('modal').hidden) closeModal();
+      if (e.key !== 'Escape') return;
+      if (!$('modal').hidden) closeModal();
+      if (!$('favModal').hidden) closeFavorites();
+      if (window.EnergoTenders && window.EnergoTenders.closeDetail) window.EnergoTenders.closeDetail();
       if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') {
         e.preventDefault(); $('q').focus();
       }
@@ -1074,6 +1212,8 @@
     document.addEventListener('visibilitychange', () => { if (!document.hidden) check(true); });
   }
 
+  updateFavCount();
+  window.addEventListener('energo-favorites-changed', updateFavCount);
   initStats();
   initFilters();
   bind();

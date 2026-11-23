@@ -10,6 +10,7 @@
   const auditPlatforms = (D.etps && D.etps.platforms) || [];
   const allEntities = D.allEntities || [];
   const settings = D.settings || {};
+  const TF = window.EnergoFavorites || null;
   let status = D.status || {};
   const $ = (id) => document.getElementById(id);
 
@@ -229,6 +230,68 @@
       '</div>';
   }
 
+  /* Подробная карточка закупки — тот же компонент .modal, что и в реестре. */
+  let currentTender = null;
+  function openTenderDetail(id) {
+    const r = records.find(x => x.id === id);
+    if (!r) return;
+    currentTender = r;
+    const kv = (label, value) => value ? '<dt>' + esc(label) + '</dt><dd>' + value + '</dd>' : '';
+    const via = viaNames(r).join(', ');
+    $('tDetailKicker').textContent = (lawLabel(r.law) || 'Закупка') + ' · ' + platformOf(r).name;
+    $('tDetailTitle').textContent = r.title || r.id;
+    $('tDetailBadges').innerHTML = newBadge(r) + deadlineBadge(r) + sourceHtml(r);
+
+    const body = [];
+    body.push('<div class="sec"><h3>Основное</h3><dl class="kv">' +
+      kv('Номер закупки', esc(r.regNumber || r.externalId || r.id)) +
+      kv('Статус', esc(r.status || '—')) +
+      kv('Закон / тип', esc(lawLabel(r.law) || '—')) +
+      kv('Цена', esc(r.price || '—')) +
+    '</dl></div>');
+    body.push('<div class="sec"><h3>Заказчик</h3><dl class="kv">' +
+      kv('Наименование', esc(r.customer || '—')) +
+      kv('ИНН', esc(r.customerInn || '—')) +
+      kv('Предприятие реестра', esc(entNames(r) || '—')) +
+    '</dl></div>');
+    body.push('<div class="sec"><h3>Сроки</h3><dl class="kv">' +
+      kv('Опубликовано', esc(fmtDate(r.published) || '—')) +
+      kv('Подача заявок до', esc(fmtDate(r.deadline) || '—')) +
+      kv('Обновлено', esc(fmtDate(r.updated) || '—')) +
+    '</dl></div>');
+    const sources = (r.sources || []).map(s => {
+      const name = s.sourceName || s.source || s.platformCode || 'Источник';
+      return s.url
+        ? '<a class="tag tag--link" href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(name) + '</a>'
+        : '<span class="tag">' + esc(name) + '</span>';
+    }).join('');
+    body.push('<div class="sec"><h3>Площадка и источники</h3>' +
+      '<div class="meth">Опубликовано на: ' + esc(platformOf(r).name) + '</div>' +
+      '<div class="meth">Получено через: ' + esc(via || '—') + '</div>' +
+      (sources ? '<div class="srcs" style="margin-top:8px">' + sources + '</div>' : '') +
+    '</div>');
+    body.push('<div class="sec"><h3>Почему в выборке</h3>' +
+      (matchHtml(r) || '<span class="muted-value">Закупка найдена по ключевым словам или заказчику из реестра.</span>') + '</div>');
+
+    $('tDetailBody').innerHTML = body.join('');
+    $('tDetailBody').scrollTop = 0;
+    $('tDetailOpen').href = r.url || '#';
+    $('tDetailCopy').dataset.copy = r.regNumber || r.externalId || r.id;
+    const fav = $('tDetailFav');
+    if (TF && fav) {
+      const on = TF.has('tender', r.id);
+      fav.textContent = on ? '★' : '☆';
+      fav.classList.toggle('is-fav', on);
+    }
+    $('tenderModal').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeTenderDetail() {
+    $('tenderModal').hidden = true;
+    document.body.style.overflow = '';
+    currentTender = null;
+  }
+
   /* ---------- вывод ---------- */
   /* Понятная свежесть данных: если ни одно окно сбора не сработало,
    * пользователь сразу видит, что данные не сегодняшние. */
@@ -266,8 +329,8 @@
     const kws = (r.matchedKeywords || r.keywords || []).slice(0, 6)
       .map(k => '<span class="t-chip t-chip--mini t-chip--hit">' + esc(k) + '</span>').join('');
     const ent = entNames(r);
-    return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '">' +
-      '<div class="t-card__head"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
+    return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '" data-id="' + esc(r.id) + '">' +
+      '<div class="t-card__head"><button class="fav-star" type="button" data-fav-tender="' + esc(r.id) + '" aria-label="В избранное" title="В избранное">' + (TF && TF.has('tender', r.id) ? '★' : '☆') + '</button><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
         tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' +
         newBadge(r) + deadlineBadge(r) + sourceHtml(r) +
       '</div>' +
@@ -288,7 +351,7 @@
   }
 
   function rowHtml(r) {
-    return '<tr' + (r.isNew ? ' class="t-row--new"' : '') + '>' +
+    return '<tr' + (r.isNew ? ' class="t-row--new"' : '') + ' data-id="' + esc(r.id) + '">' +
       '<td class="t-mut">' + fmtDate(r.published) + '</td>' +
       '<td><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
         tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' + newBadge(r) + '</td>' +
@@ -547,6 +610,43 @@
       window.open(url, '_blank', 'noopener,noreferrer');
     });
 
+    $('tCards').addEventListener('click', e => {
+      const star = e.target.closest('[data-fav-tender]');
+      if (star) {
+        if (TF) {
+          TF.toggle('tender', star.dataset.favTender);
+          star.textContent = TF.has('tender', star.dataset.favTender) ? '★' : '☆';
+          window.dispatchEvent(new Event('energo-favorites-changed'));
+        }
+        return;
+      }
+      if (e.target.closest('a')) return;
+      const card = e.target.closest('.t-card[data-id]');
+      if (card) openTenderDetail(card.dataset.id);
+    });
+    $('tTbody').addEventListener('click', e => {
+      const row = e.target.closest('tr[data-id]');
+      if (row && !e.target.closest('a')) openTenderDetail(row.dataset.id);
+    });
+    $('tenderModal').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeTenderDetail(); });
+    $('tDetailFav').addEventListener('click', () => {
+      if (!currentTender || !TF) return;
+      TF.toggle('tender', currentTender.id);
+      const on = TF.has('tender', currentTender.id);
+      $('tDetailFav').textContent = on ? '★' : '☆';
+      $('tDetailFav').classList.toggle('is-fav', on);
+      document.querySelectorAll('[data-fav-tender]').forEach((el) => {
+        if (el.dataset.favTender === currentTender.id) { el.textContent = on ? '★' : '☆'; el.classList.toggle('is-fav', on); }
+      });
+      window.dispatchEvent(new Event('energo-favorites-changed'));
+    });
+    $('tDetailCopy').addEventListener('click', () => {
+      const value = $('tDetailCopy').dataset.copy || '';
+      const done = () => { $('tDetailCopy').querySelector('span').textContent = 'Скопировано'; setTimeout(() => { $('tDetailCopy').querySelector('span').textContent = 'Копировать номер'; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(value).then(done).catch(() => {});
+      else done();
+    });
+
     $('tLinkQuery').addEventListener('input', () => { /* значение берётся при открытии */ });
   }
 
@@ -576,7 +676,9 @@
       if ($('tQ')) $('tQ').value = state.q;
       renderSelected();
       render();
-    }
+    },
+    openDetail(id) { openTenderDetail(id); },
+    closeDetail() { if (!$('tenderModal').hidden) closeTenderDetail(); }
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
