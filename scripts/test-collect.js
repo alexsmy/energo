@@ -13,22 +13,29 @@ function test(name, fn) {
   catch (e) { console.error('FAIL ' + name + ': ' + (e && e.message)); process.exitCode = 1; }
 }
 
-test('план ОХВАТЫВАЕТ все 78 ИНН реестра', () => {
+test('план ОХВАТЫВАЕТ все ИНН из списка предприятий', () => {
   const plan = makePlan();
-  assert.equal(plan.inns.length, 78);
-  assert.equal(plan.bySource.gentender.count, 192);
-  assert.equal(plan.bySource.gentender.weekly, 78);
+  const { buildCustomerIndex } = require('./lib/match-org');
+  const items = require('../data/tender-enterprises.json').items || [];
+  const expected = new Set(buildCustomerIndex(items)
+    .filter(x => x.inn && x.kind !== 'plant').map(x => x.inn.slice(0, 10))).size;
+  assert.equal(plan.inns.length, expected);
+  assert.ok(plan.inns.length >= 150, 'слишком мало ИНН после расширения реестра');
+  assert.equal(plan.bySource.gentender.weekly, expected);
 });
 
-test('плановые запросы основных источников укладываются в лимиты', () => {
+test('плановые запросы учитывают лимиты и помечают превышение', () => {
   const plan = makePlan();
+  const text = formatPlan(plan);
   for (const name of ['gosplan', 'gentender', 'tektorg', 'etpgpb', 'roseltorg']) {
     const b = plan.bySource[name];
     assert.ok(b, 'нет источника ' + name);
     assert.ok(b.limit > 0, 'нет лимита для ' + name);
-    assert.ok(b.count <= b.limit, name + ': ' + b.count + ' > ' + b.limit);
+    assert.ok(b.effective <= b.limit, name + ': effective ' + b.effective + ' > ' + b.limit);
+    assert.ok(b.count >= b.effective, name + ': effective больше плана');
+    if (b.count > b.limit) assert.ok(text.includes('ВНИМАНИЕ: ' + name), 'нет предупреждения о ' + name);
   }
-  assert.ok(formatPlan(plan).includes('ЕЖЕДНЕВНО запросов'));
+  assert.ok(text.includes('ЕЖЕДНЕВНО запросов'));
 });
 
 test('гейт пропускает выходные и праздники, но не рабочие дни', () => {
@@ -53,6 +60,45 @@ test('дедупликация объединяет источники без п
   const merged = dedup([a], [b], 100);
   assert.equal(merged.length, 1);
   assert.ok(merged[0].sources.length >= 2);
+});
+
+test('короткий номер ЕИС распознаётся по закону, а не только по длине 15+', () => {
+  const { isEisReg, digitsOnly } = require('./lib/normalize');
+  assert.equal(isEisReg('32616602654', { law: '223' }), true);
+  assert.equal(isEisReg('7700000000', { law: '' }), false); // ИНН не номер закупки
+  assert.equal(digitsOnly('+7 (495) 123-45-67'), '74951234567');
+});
+
+test('дедуп склеивает ГосПлан и GenTender при разной форме заказчика', () => {
+  const { normCustomer, eisUrl } = require('./lib/normalize');
+  assert.equal(normCustomer('АКЦИОНЕРНОЕ ОБЩЕСТВО "ГИДРОРЕМОНТ-ВКК"'), normCustomer('АО «Гидроремонт-ВКК»'));
+  const base = {
+    title: 'Поставка турбинного масла', published: '2026-11-20', deadline: '2026-12-01',
+    priceNum: 1000, law: '223', platformCode: 'EIS', platformName: 'ЕИС Закупки'
+  };
+  const a = makeRecord({
+    ...base, id: '32616602654', regNumber: '32616602654', externalId: '32616602654',
+    customer: 'АКЦИОНЕРНОЕ ОБЩЕСТВО "ГИДРОРЕМОНТ-ВКК"', customerInn: '7700000000',
+    source: 'gosplan', sourceName: 'ГосПлан API', url: 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616602654'
+  });
+  const b = makeRecord({
+    ...base, id: '32616602654', regNumber: '', externalId: '32616602654',
+    customer: 'АО «Гидроремонт-ВКК»', source: 'gentender', sourceName: 'GenTender',
+    url: 'https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616602654'
+  });
+  const merged = dedup([a], [b], 100);
+  assert.equal(merged.length, 1);
+  assert.equal(merged[0].regNumber, '32616602654');
+  assert.ok(merged[0].sources.length >= 2);
+  assert.ok(merged[0].url.includes('common-info.html'), 'должна остаться прямая ссылка на процедуру');
+  assert.equal(eisUrl('32616602654', '223').includes('common-info.html'), true);
+});
+
+test('разные лоты одного заказчика не склеиваются по похожему названию', () => {
+  const base = { customer: 'АО «Тест»', customerInn: '7700000000', published: '2026-11-20', deadline: '2026-12-01', priceNum: 1000, law: '223' };
+  const a = makeRecord({ ...base, id: 'x:1', title: 'Ремонт турбины лот 1', platformCode: 'TEK' });
+  const b = makeRecord({ ...base, id: 'x:2', title: 'Ремонт турбины лот 2', platformCode: 'TEK' });
+  assert.equal(dedup([a], [b], 100).length, 2);
 });
 
 test('cookie jar запоминает куки только для своего домена', () => {

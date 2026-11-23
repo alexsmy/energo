@@ -31,6 +31,42 @@ function hash(s) {
 function normTitle(s) {
   return norm(String(s || '').replace(/[«»"']/g, ' '));
 }
+const digitsOnly = (s) => String(s == null ? '' : s).replace(/\D/g, '');
+
+/* Номер ЕИС бывает короче 15 цифр (например, 11-значные 223-ФЗ).
+ * Опора на закон/источник надёжнее, чем жёсткая длина. */
+function isEisReg(value, r) {
+  const d = digitsOnly(value);
+  if (d.length < 10 || d.length > 30) return false;
+  if (r && (r.law === '44' || r.law === '223' || r.law === '615')) return true;
+  if (r && r.platformCode === 'EIS') return true;
+  return d.length >= 15; // старое поведение для неизвестного закона
+}
+
+/* Организационно-правовая форма не должна различать одну и ту же запись. */
+const OPF = [
+  [/публичное акционерное общество/g, 'пао'],
+  [/акционерное общество/g, 'ао'],
+  [/общество с ограниченной ответственностью/g, 'ооо'],
+  [/федеральное государственное унитарное предприятие/g, 'фгуп'],
+  [/государственное унитарное предприятие/g, 'гуп'],
+  [/муниципальное унитарное предприятие/g, 'муп'],
+  [/открытое акционерное общество/g, 'оао'],
+  [/закрытое акционерное общество/g, 'зао']
+];
+function normCustomer(s) {
+  let v = norm(String(s || '').replace(/[«»"'`.,]/g, ' '));
+  OPF.forEach(([re, to]) => { v = v.replace(re, to); });
+  return v.replace(/\s+/g, ' ').trim();
+}
+
+function eisUrl(reg, law) {
+  const d = digitsOnly(reg);
+  if (!d) return '';
+  if (law === '223') return 'https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=' + encodeURIComponent(d);
+  if (law === '44') return 'https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=' + encodeURIComponent(d);
+  return 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=' + encodeURIComponent(d);
+}
 
 /* Действующая закупка: дедлайн не прошёл, статус не завершён/отменён. */
 function isActive(r, date) {
@@ -178,11 +214,7 @@ function mapGosplan(p, org, foundAt, query, law) {
     status: p.stage === 1 || p.stage === 2 ? 'Подача заявок' : 'Завершена',
     stage: p.stage,
     phase: (p.stage === 1 || p.stage === 2) ? 'active' : 'archive',
-    url: law === '223'
-      ? 'https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=' + encodeURIComponent(reg)
-      : law === '44'
-        ? 'https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=' + encodeURIComponent(reg)
-        : 'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=' + encodeURIComponent(reg),
+    url: eisUrl(reg, law),
     foundQuery: query || '',
     foundAt,
     lastSeen: foundAt
@@ -194,10 +226,10 @@ function mapGentender(row, org, foundAt, query, phase) {
   const law = rawLaw === '44' || rawLaw === '223' || rawLaw === '615' ? rawLaw : (rawLaw === 'zmo' ? 'commercial' : (rawLaw || ''));
   const platform = require('./platforms').canonicalPlatform(row.etp_name, row.etp_url || row.detail_url);
   const reg = String(row.reg_number || '');
-  const isEisNumber = (law === '44' || law === '223' || law === '615') && /^\d{15,}$/.test(reg);
+  const isEisNumber = isEisReg(reg, { law, platformCode: platform.code });
   const rec = makeRecord({
-    id: isEisNumber ? reg : (platform.code + ':' + (reg || row.detail_url || hash(normTitle(row.title || '')))),
-    regNumber: isEisNumber ? reg : '',
+    id: isEisNumber ? digitsOnly(reg) : (platform.code + ':' + (reg || row.detail_url || hash(normTitle(row.title || '')))),
+    regNumber: isEisNumber ? digitsOnly(reg) : '',
     externalId: reg,
     title: row.title || '',
     customer: row.customer_name || '',
@@ -229,23 +261,27 @@ function mapGentender(row, org, foundAt, query, phase) {
 function textKeys(r) {
   const keys = [];
   const t = normTitle(r.title);
-  const c = norm(r.customer || r.matchedOrgName || '');
+  const c = normCustomer(r.customer || r.matchedOrgName || '');
+  // ИНН сильнее текста, но сам по себе не склеивает разные процедуры одного
+  // заказчика; поэтому он входит только в составной ключ вместе с датой/ценой.
+  const anchor = digitsOnly(r.customerInn || r.matchedOrgId || '') || c;
   const price = r.priceNum ? String(Math.round(r.priceNum)) : '';
   const when = r.deadline || r.published || '';
   if (t && c && t.length >= 8) {
     // Дата обязательна: без неё легко склеить разные закупки одного заказчика
     // с одинаковым названием и ценой (например, повторяющиеся лоты).
-    keys.push('txt:' + hash(t + '|' + c + '|' + price + '|' + when));
+    keys.push('txt:' + hash(t + '|' + anchor + '|' + c + '|' + price + '|' + when));
   }
   return keys;
 }
 
 function identityKeys(r) {
   const keys = [];
-  if (r.regNumber && /^\d{8,}$/.test(String(r.regNumber))) keys.push('reg:' + String(r.regNumber));
-  else if ((r.law === '44' || r.law === '223' || r.law === '615') && /^\d{15,}$/.test(String(r.id || ''))) keys.push('reg:' + String(r.id));
-  if (r.platformCode && r.externalId) keys.push('pid:' + r.platformCode + ':' + String(r.externalId));
-  if (r.platformCode === 'EIS' && /^\d{15,}$/.test(String(r.id || ''))) keys.push('pid:EIS:' + String(r.id));
+  const reg = digitsOnly(r.regNumber || (isEisReg(r.id, r) ? r.id : ''));
+  if (reg.length >= 10) keys.push('reg:' + reg);
+  const ext = digitsOnly(r.externalId);
+  if (r.platformCode === 'EIS' && ext.length >= 10) keys.push('reg:' + ext);
+  if (r.platformCode && r.externalId) keys.push('pid:' + r.platformCode + ':' + norm(String(r.externalId)));
   keys.push(...textKeys(r));
   return keys;
 }
@@ -280,6 +316,10 @@ function mergeTwo(a, b) {
     if (second.customer && !/^\d+$/.test(String(second.customer))) out.customer = second.customer;
   }
   if ((!out.customerInn || out.customerInn.length < 10) && second.customerInn && second.customerInn.length >= 10) out.customerInn = second.customerInn;
+  // Общий поисковый URL ЕИС заменяем прямой ссылкой на процедуру, если она есть.
+  const ua = String(out.url || ''), ub = String(second.url || '');
+  if (/extendedsearch\/results\.html|searchString=/.test(ua) && ub && !/extendedsearch\/results\.html|searchString=/.test(ub)) out.url = ub;
+  if (!out.regNumber && isEisReg(out.id, out)) out.regNumber = digitsOnly(out.id);
   out.keywords = [...new Set([...(a.keywords || []), ...(b.keywords || [])])];
   out.matchedKeywords = [...new Set([...(a.matchedKeywords || []), ...(b.matchedKeywords || [])])];
   out.enterpriseIds = [...new Set([...(a.enterpriseIds || []), ...(b.enterpriseIds || [])])];
@@ -325,5 +365,5 @@ function dedup(prev, next, limit) {
 module.exports = {
   day, norm, priceNum, fmtPrice, normTitle, hash, isActive, phaseOf, repairTitle, splitWordScore,
   makeRecord, applyOrg, mapGosplan, mapGentender, dedup, identityKeys,
-  mergeTwo, sourceEntry, lawLabel
+  mergeTwo, sourceEntry, lawLabel, digitsOnly, isEisReg, normCustomer, eisUrl
 };

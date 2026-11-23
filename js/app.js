@@ -29,6 +29,7 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
   const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
+  const digitsOnly = (s) => String(s == null ? '' : s).replace(/\D/g, '');
 
   const SEARCH_FIELDS = [
     ['name', 'Название'], ['full', 'Полное наименование'], ['type', 'Тип'],
@@ -61,31 +62,46 @@
       (TECH ? TECH.labels(it.tech) : []).forEach(l => add(l, 'Тип турбины'));
       add(it.path, 'Структура');
       add(it.holdingName, 'Холдинг');
-      return { it, parts, hay: norm(parts.map(p => p.value).join(' ')) };
+      const digits = parts
+        .filter(p => /Телефон|ИНН|КПП|ОГРН/.test(p.label))
+        .map(p => digitsOnly(p.value)).filter(Boolean).join(' ');
+      return { it, parts, hay: norm(parts.map(p => p.value).join(' ')), digits };
     });
     return searchIndex;
   }
 
+  const SUGGEST_PRIORITY = {
+    'Название': 0, 'ИНН': 1, 'Регион': 2, 'Телефон': 3,
+    'Полное наименование': 4, 'E-mail': 5
+  };
   function suggestFor(query) {
     const nq = norm(query);
+    const dq = digitsOnly(nq);
     if (!nq) return [];
     const seen = new Set();
-    const out = [];
+    const found = [];
     for (const rec of getSearchIndex()) {
       for (const p of rec.parts) {
         const key = p.label + '\u0000' + p.value;
         if (seen.has(key)) continue;
-        if (!norm(p.value).includes(nq)) continue;
+        const value = norm(p.value);
+        const dvalue = digitsOnly(p.value);
+        const digitHit = dq.length >= 7 && dvalue.includes(dq);
+        if (!value.includes(nq) && !digitHit) continue;
         seen.add(key);
-        out.push({ value: p.value, label: p.label });
-        if (out.length >= 40) return out;
+        const exact = value === nq || (dq.length >= 7 && dvalue === dq) ? -1 : 0;
+        const starts = value.startsWith(nq) ? 0 : 1;
+        found.push({
+          value: p.value, label: p.label,
+          rank: exact + starts + (SUGGEST_PRIORITY[p.label] == null ? 6 : SUGGEST_PRIORITY[p.label]) / 100,
+          len: p.value.length
+        });
       }
     }
-    return out.sort((a, b) => {
-      const ap = norm(a.value).startsWith(nq) ? 0 : 1;
-      const bp = norm(b.value).startsWith(nq) ? 0 : 1;
-      return ap - bp || a.value.length - b.value.length;
-    });
+    return found
+      .sort((a, b) => a.rank - b.rank || a.len - b.len || a.value.localeCompare(b.value, 'ru'))
+      .slice(0, 12)
+      .map(({ value, label }) => ({ value, label }));
   }
   const isRepair = (i) => i.type === 'ремонт';
   const isOem = (i) => i.type === 'ОЕМ' || i.type === 'инжиниринг';
@@ -196,7 +212,12 @@
       const rec = getSearchIndex().find(r => r.it === it);
       const hay = rec ? rec.hay : norm(it.name || '');
       const words = norm(state.q).split(/\s+/).filter(Boolean);
-      if (!words.every(w => hay.includes(w))) return false;
+      if (!words.every(w => {
+        const d = digitsOnly(w);
+        // Телефон/ИНН/КПП/ОГРН ищем по цифрам, без учёта форматирования.
+        if (d.length >= 7) return rec ? rec.digits.includes(d) : digitsOnly(JSON.stringify(it)).includes(d);
+        return hay.includes(w);
+      })) return false;
     }
     return true;
   }

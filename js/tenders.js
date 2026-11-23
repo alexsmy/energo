@@ -95,16 +95,19 @@
     if (/gentender/.test(s)) return 3;
     return 1;
   }
-  function sourceTitle(r) {
+  function viaNames(r) {
     const list = (r.sources || []).map(s => s.sourceName || s.source).filter(Boolean);
-    return list.length > 1 ? 'Источники: ' + [...new Set(list)].join(', ') : '';
+    return [...new Set(list.length ? list : (r.sourceName ? [r.sourceName] : []))];
   }
   function sourceHtml(r) {
     const p = platformOf(r);
     const law = lawLabel(r.law);
     const primary = p.name + (law ? ' · ' + law : '');
-    const via = r.sourceName && norm(r.sourceName) !== norm(p.name) ? r.sourceName : '';
-    return badge(primary, 'src') + (via ? '<span class="t-badge t-badge--via" title="' + esc(sourceTitle(r)) + '">' + esc(via) + '</span>' : '');
+    const names = viaNames(r).filter(n => norm(n) !== norm(p.name));
+    const via = names.length > 1 ? names[0] + ' +' + (names.length - 1) : (names[0] || '');
+    return badge(primary, 'src') + (via
+      ? '<span class="t-badge t-badge--via" title="Получено через: ' + esc(viaNames(r).join(', ')) + '">через: ' + esc(via) + '</span>'
+      : '');
   }
   function entName(id) {
     return (entMap[id] && entMap[id].name) || (allEntMap[id] && allEntMap[id].name) || id;

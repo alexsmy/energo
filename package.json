@@ -16,6 +16,7 @@
     "archive:snapshot": "node scripts/archive.js snapshot",
     "archive:prune": "node scripts/archive.js prune",
     "validate": "node scripts/validate-entities.js",
+    "check:release": "node scripts/check-release.js",
     "verify:inn": "node scripts/verify-contacts.js",
     "serve": "python -m http.server 8765 --bind 127.0.0.1",
     "start": "node build.js && python -m http.server 8765 --bind 127.0.0.1"
