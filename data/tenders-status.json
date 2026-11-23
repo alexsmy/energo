@@ -1,12 +1,183 @@
 {
-  "lastRun": "2026-11-22T12:00:00.000Z",
-  "mode": "refilter",
-  "total": 102,
-  "active": 41,
-  "archive": 61,
+  "lastRun": "2026-11-23T02:12:40.563Z",
+  "mode": "live",
+  "total": 91,
+  "unique": 62,
+  "matchedOrg": 91,
+  "active": 23,
+  "archive": 68,
+  "bySource": {
+    "EIS": 40,
+    "TEK": 16,
+    "ROS": 10,
+    "GPB": 5,
+    "RAD": 12,
+    "B2B": 6,
+    "FAB": 1,
+    "ZAKAZ": 1
+  },
+  "sources": [
+    {
+      "name": "gosplan",
+      "available": true,
+      "requests": 15,
+      "okRequests": 15,
+      "records": 35,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "gentender",
+      "available": true,
+      "requests": 400,
+      "okRequests": 400,
+      "records": 27,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "tektorg",
+      "available": true,
+      "requests": 3,
+      "okRequests": 3,
+      "records": 0,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "etpgpb",
+      "available": false,
+      "requests": 3,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 3,
+      "errorItems": [
+        {
+          "source": "etpgpb",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb",
+          "query": "турбина",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb",
+          "query": "уплотнение",
+          "error": "fetch failed"
+        }
+      ]
+    },
+    {
+      "name": "roseltorg",
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "roseltorg",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg",
+          "query": "турбина",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg",
+          "query": "уплотнение",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg",
+          "query": "турбина",
+          "error": "fetch failed"
+        }
+      ]
+    },
+    {
+      "name": "eis-html",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4,
+      "errorItems": [
+        {
+          "source": "eis-html",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "турбина",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "уплотнение",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "Башкирская генерирующая компания",
+          "error": "fetch failed"
+        }
+      ]
+    }
+  ],
+  "errors": 12,
+  "probeErrors": 12,
+  "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "sources": [
-    "refilter"
-  ]
+  "localArchived": 16,
+  "newCount": 0,
+  "corroborated": 41,
+  "corroboratedPct": 45,
+  "relevantPerRequest": 0.14,
+  "deepArchive": true,
+  "incrementalFrom": "2026-11-20",
+  "budget": {
+    "gosplan": {
+      "limit": 60,
+      "used": 15,
+      "exhausted": false
+    },
+    "gentender": {
+      "limit": 400,
+      "used": 400,
+      "exhausted": true
+    },
+    "tektorg": {
+      "limit": 40,
+      "used": 3,
+      "exhausted": false
+    },
+    "etpgpb": {
+      "limit": 40,
+      "used": 3,
+      "exhausted": false
+    },
+    "roseltorg": {
+      "limit": 40,
+      "used": 5,
+      "exhausted": false
+    },
+    "eis-html": {
+      "limit": 40,
+      "used": 4,
+      "exhausted": false
+    }
+  },
+  "partial": true
 }
