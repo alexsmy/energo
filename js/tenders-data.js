@@ -13658,7 +13658,7 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-22T23:59:00.000Z",
+  "lastRun": "2026-11-22T12:00:00.000Z",
   "mode": "refilter",
   "total": 102,
   "active": 41,
