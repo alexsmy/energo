@@ -37,9 +37,9 @@ const ETPS = [
   { code: 'SBER', name: 'Сбербанк-АСТ', url: 'https://www.sberbank-ast.ru', operator: 'Сбербанк-АСТ', note: 'Татэнерго, ТГК-2, ТГК-14, ТЭК СПб' },
   { code: 'RTS', name: 'РТС-тендер', url: 'https://www.rts-tender.ru', operator: 'РТС-тендер', note: 'ТГК-2, ТГК-14, Татэнерго' },
   { code: 'ZAKAZ', name: 'ЗаказРФ', url: 'https://etp.zakazrf.ru', operator: 'Агентство по госзаказу РТ', note: 'Специализированная площадка Татарстана' },
-  { code: 'KIM', name: 'КИМ Росатома', url: 'https://kim.rosatom.ru', operator: 'Росатом', note: 'Корпоративный интернет-магазин малых закупок' },
+  { code: 'KIM', name: 'КИМ Росатома', url: 'https://www.roseltorg.ru/kim/atom', operator: 'Росатом', note: 'Корпоративный интернет-магазин малых закупок' },
   { code: 'PORTAL_ROS', name: 'Портал закупок Росатома', url: 'https://zakupki.rosatom.ru', operator: 'Росатом', note: 'Отраслевой портал, интегрирован с ЕИС и ЭТП' },
-  { code: 'ETP_IRAO', name: 'ЭТП Интер РАО', url: 'https://etp.interrao.ru', operator: 'Интер РАО', note: 'Корпоративная площадка группы' },
+  { code: 'ETP_IRAO', name: 'ЭТП Интер РАО', url: 'https://etp.interrao-zakupki.ru', operator: 'Интер РАО', note: 'Корпоративная площадка группы' },
   { code: 'ETP_RUSH', name: 'Портал закупок РусГидро', url: 'https://zakupki.rushydro.ru', operator: 'РусГидро', note: 'Публикация закупок и работа с поставщиками' },
   { code: 'BIDZAAR', name: 'Bidzaar', url: 'https://bidzaar.com', operator: 'Bidzaar', note: 'Коммерческие закупки Эн+ и других групп' },
   { code: 'EIS', name: 'ЕИС Закупки', url: 'https://zakupki.gov.ru/epz/main/public/home.html', operator: 'Казначейство России', note: 'Официальный реестр 44-ФЗ/223-ФЗ, обязательная публикация' }
@@ -262,7 +262,6 @@ const tenderData = {
   platforms: tenderFile('platforms.json', { items: [] }).items || [],
   tenders: tenderFile('tenders.json', { records: [] }),
   status: tenderFile('tenders-status.json', {}),
-  log: tenderFile('collect-log.json', []),
   settings: tenderFile('tender-settings.json', {})
 };
 fs.writeFileSync(path.join(ROOT, 'js', 'tenders-data.js'),

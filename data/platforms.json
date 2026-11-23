@@ -16,9 +16,9 @@
     { "code": "PORTAL_POST", "name": "Портал поставщиков", "kind": "commercial", "hosts": ["zakupki.mos.ru"], "patterns": ["портал поставщиков"] },
     { "code": "ETP_RUSSIA", "name": "Электронные торги России", "kind": "etp", "hosts": ["etprf.ru"], "patterns": ["электронные торги россии", "этр"] },
     { "code": "AST", "name": "АСТ ГОЗ", "kind": "etp", "hosts": ["astgoz.ru"], "patterns": ["аст гоз"] },
-    { "code": "KIM", "name": "КИМ Росатома", "kind": "etp", "hosts": ["kim.rosatom.ru"], "patterns": ["ким росатома"] },
+    { "code": "KIM", "name": "КИМ Росатома", "kind": "etp", "hosts": ["roseltorg.ru"], "paths": ["/kim/atom"], "patterns": ["ким росатома", "kim atom"] },
     { "code": "PORTAL_ROS", "name": "Портал закупок Росатома", "kind": "etp", "hosts": ["zakupki.rosatom.ru"], "patterns": ["портал закупок росатома", "росатом"] },
-    { "code": "ETP_IRAO", "name": "ЭТП Интер РАО", "kind": "etp", "hosts": ["etp.interrao.ru"], "patterns": ["этп интер рао", "интер рао"] },
+    { "code": "ETP_IRAO", "name": "ЭТП Интер РАО", "kind": "etp", "hosts": ["interrao-zakupki.ru"], "paths": ["/purchases", "/etp/"], "patterns": ["этп интер рао", "интер рао"] },
     { "code": "ETP_RUSH", "name": "Портал закупок РусГидро", "kind": "etp", "hosts": ["zakupki.rushydro.ru"], "patterns": ["портал закупок русгидро", "русгидро"] },
     { "code": "OTHER", "name": "Другая площадка", "kind": "other", "hosts": [], "patterns": [] }
   ]

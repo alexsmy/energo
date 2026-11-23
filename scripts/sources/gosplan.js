@@ -9,7 +9,7 @@ const { mapGosplan } = require('../lib/normalize');
 const BASE = 'https://v2test.gosplan.info';
 
 async function collect(opts) {
-  const { keywords = [], enterprises = [], settings = {}, logger, limitRecords = 2000 } = opts;
+  const { keywords = [], enterprises = [], settings = {}, logger, maxRecords = 2000 } = opts;
   const index = buildCustomerIndex(enterprises);
   const client = new ThrottledClient({
     minInterval: Math.max(1000, parseInt(settings.gosplanInterval, 10) || 6500),
@@ -67,7 +67,7 @@ async function collect(opts) {
   for (const inn of selectedInns) {
     await fetchList('/fz223/purchases', { customer: inn, stage: 1, limit }, 'ИНН ' + inn + ' (223)', 'active', '223');
     await fetchList('/fz44/purchases', { customer: inn, stage: 1, limit }, 'ИНН ' + inn + ' (44)', 'active', '44');
-    if (found.length > limitRecords) break;
+    if (found.length > maxRecords) break;
   }
 
   // 2. По ключевым словам: действующие и завершённые с глубиной.

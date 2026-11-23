@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const { digitsOnly, isEisReg } = require('./lib/normalize');
+const { canonicalPlatform } = require('./lib/platforms');
 
 const ROOT = path.join(__dirname, '..');
 const errors = [];
@@ -38,6 +39,29 @@ else {
 const audit = readJson('data/etp-audit.json') || { platforms: [] };
 for (const p of (audit.platforms || [])) if (!p.code || !p.name || !p.url) fail('etp-audit.json: площадка без code/name/url');
 checks++;
+
+// 2b. Манифест версии и собранные данные не должны разъезжаться,
+// полный журнал сбора не должен попадать в клиентский бандл.
+const dataJs = fs.readFileSync(path.join(ROOT, 'js', 'data.js'), 'utf8');
+const bundledVersion = dataJs.match(/"version"\s*:\s*"([^"]+)"/);
+checks++;
+if (!bundledVersion) fail('js/data.js: не найден meta.version');
+else if (version && bundledVersion[1] !== String(version.version)) {
+  fail('версии разъехались: version.json=' + version.version + ', js/data.js=' + bundledVersion[1]);
+}
+const tenderJs = fs.readFileSync(path.join(ROOT, 'js', 'tenders-data.js'), 'utf8');
+checks++;
+if (/"log"\s*:\s*\[/.test(tenderJs)) fail('js/tenders-data.js: в бандл попал collect-log.json');
+const platforms = readJson('data/platforms.json') || { items: [] };
+checks++;
+for (const p of (platforms.items || [])) {
+  if ((p.hosts || []).some(h => h === 'kim.rosatom.ru' || h === 'etp.interrao.ru')) {
+    fail('data/platforms.json: устаревший хост у ' + p.code);
+  }
+}
+checks++;
+if (canonicalPlatform('', 'https://www.roseltorg.ru/kim/atom').code !== 'KIM') fail('КИМ Росатома не распознаётся по пути /kim/atom');
+if (canonicalPlatform('', 'https://roseltorg.ru/purchases').code !== 'ROS') fail('обычные закупки Росэлторга определены неверно');
 
 // 3. Канонические ID закупок не должны повторяться.
 if (Array.isArray(tenders.records)) {

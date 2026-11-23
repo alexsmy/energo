@@ -177,6 +177,7 @@
   function closeFavorites() {
     $('favModal').hidden = true;
     document.body.style.overflow = '';
+    clearReturnContext();
     positionReturnBar();
   }
   function setReturnContext(id, name, type) {
@@ -397,6 +398,13 @@
   ];
   const mapState = { map: null, groups: {}, markers: {}, base: {}, osmChain: [], osmIdx: 0, baseId: 'osm', ready: false, fitKey: '', pending: null, lastListKey: '', raf: 0 };
 
+  function renderMapLegend() {
+    const box = $('mapLegend');
+    if (!box) return;
+    box.innerHTML = LAYERS.map(l =>
+      '<span><b style="background:' + l.color + '"></b>' + esc(l.label) + '</span>').join('');
+  }
+
   function pinType(it) {
     if (it.kind === 'holding') return ['holding', '★'];
     if (isRepair(it)) return ['repair', '🔧'];
@@ -575,6 +583,7 @@
   function applyMapFrame() {
     const map = mapState.map;
     if (!map || $('mapView').hidden) return;
+    renderMapLegend();
     localizeMapUI();
     map.invalidateSize({ pan: false });
     if (mapState.pending) {
@@ -851,6 +860,7 @@
     $('modal').hidden = true;
     document.body.style.overflow = '';
     current = null;
+    clearReturnContext();
     positionReturnBar();
   }
 
@@ -1195,9 +1205,7 @@
       if (!$('modal').hidden) closeModal();
       if (!$('favModal').hidden) closeFavorites();
       if (window.EnergoTenders && window.EnergoTenders.closeDetail) window.EnergoTenders.closeDetail();
-      if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'SELECT') {
-        e.preventDefault(); $('q').focus();
-      }
+      clearReturnContext();
     });
   }
 
@@ -1293,7 +1301,7 @@
     if (b) b.click();
   } else render();
 
-  window.EnergoUI = { positionReturnBar };
+  window.EnergoUI = { positionReturnBar, clearReturnContext };
   // Переход из закупки в карточку предприятия с возвратом к этой закупке.
   window.EnergoRegistry = {
     openFromTender(orgId, tenderId, tenderTitle) {

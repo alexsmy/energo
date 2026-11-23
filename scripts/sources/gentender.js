@@ -14,7 +14,7 @@ const BASE = 'https://gentender.ru';
 
 async function collect(opts) {
   const { keywords = [], enterprises = [], settings = {}, logger,
-    innState = null, incrementalFrom = '', deepArchive = false } = opts;
+    innState = null, incrementalFrom = '', deepArchive = false, allInns = false } = opts;
   const index = buildCustomerIndex(enterprises);
   const client = new ThrottledClient({
     minInterval: Math.max(900, parseInt(settings.gentenderInterval, 10) || 1150),
@@ -87,7 +87,7 @@ async function collect(opts) {
   }
 
   const inns = [...new Set(index.filter(x => x.inn && x.kind !== 'plant').map(x => x.inn.slice(0, 10)))];
-  const maxInn = Math.max(0, parseInt(process.env.ENERGO_MAX_INN || '0', 10) || 0);
+  const maxInn = allInns ? 0 : Math.max(0, parseInt(process.env.ENERGO_MAX_INN || '0', 10) || 0);
   const selectedInns = maxInn ? inns.slice(0, maxInn) : inns;
 
   const innPageCount = Math.max(1, parseInt(settings.gentenderInnPages, 10) || 1);

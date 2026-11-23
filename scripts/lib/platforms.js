@@ -29,6 +29,14 @@ function canonicalPlatform(rawName, url) {
   const host = hostOf(url);
   const text = norm(rawName);
   const list = load();
+  let pathname = '';
+  try { pathname = new URL(url).pathname.toLowerCase(); } catch (e) { /* без URL */ }
+  // Сначала пути: КИМ Росатома живёт на roseltorg.ru/kim/atom, а не на отдельном хосте.
+  if (pathname && host) {
+    const hostMatch = (p) => (p.hosts || []).some((h) => host === h || host.endsWith('.' + h));
+    const hitPath = list.find((p) => hostMatch(p) && (p.paths || []).some((s) => pathname.includes(s.toLowerCase())));
+    if (hitPath) return { code: hitPath.code, name: hitPath.name, kind: hitPath.kind };
+  }
   if (host) {
     const hit = list.find((p) => (p.hosts || []).some((h) => host === h || host.endsWith('.' + h)));
     if (hit) return { code: hit.code, name: hit.name, kind: hit.kind };

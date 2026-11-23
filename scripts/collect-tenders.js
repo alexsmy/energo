@@ -15,9 +15,9 @@
 const fs = require('fs');
 const path = require('path');
 const { ThrottledClient } = require('./lib/throttle');
-const { buildCustomerIndex, matchCustomer, customerDisplay } = require('./lib/match-org');
+const { buildCustomerIndex, matchCustomer } = require('./lib/match-org');
 const { dedup, makeRecord, sourceEntry, splitWordScore, identityKeys, phaseOf } = require('./lib/normalize');
-const { platformName, canonicalPlatform, sourceRank } = require('./lib/platforms');
+const { platformName, canonicalPlatform } = require('./lib/platforms');
 const { CollectLogger } = require('./lib/logger');
 const { nonWorking, mskDate } = require('./lib/schedule');
 const innStateLib = require('./lib/inn-state');
@@ -196,8 +196,10 @@ async function main() {
   // Идемпотентность для нескольких окон запуска (как резерв у cam-ufa):
   // первый сработавший собирает данные, остальные выходят без запросов.
   const todayNow = mskDate(new Date());
-  const earlyStatus = readJson('tenders-status.json', {});
-  if (!opts.force && earlyStatus.lastRun && mskDate(new Date(earlyStatus.lastRun)) === todayNow && !earlyStatus.partial) {
+  // Гейт смотрит на результат реального сбора, а не на lastRun в статусе:
+  // офлайн-режимы (--refilter, --probe-only) не должны блокировать живой сбор.
+  const earlyResult = readJson('last-collect-result.json', {});
+  if (!opts.force && earlyResult.ran === true && earlyResult.date === todayNow) {
     log(`Уже собран ${todayNow} — пропуск без единого сетевого запроса. Для повтора: --force.`);
     writeJson('last-collect-result.json', { ran: false, date: todayNow, reason: 'already-collected' });
     return;
@@ -240,13 +242,14 @@ async function main() {
     const splitAfter = records.filter(r => splitWordScore(r.title)).length;
     writeJson('tenders.json', { updated: foundAt, count: records.length, records });
     writeJson('tenders-status.json', {
-      lastRun: foundAt, mode: 'refilter', total: records.length,
+      lastRun: foundAt, mode: 'refilter', partial: true, total: records.length,
       active: records.filter(r => r.phase === 'active').length,
       archive: records.filter(r => r.phase === 'archive').length,
       droppedNoKeyword: filtered.dropped,
       titlesSuspicious: splitAfter,
       sources: ['refilter']
     });
+    writeJson('last-collect-result.json', { ran: false, date: todayNow, mode: 'refilter' });
     logger.entry('refilter', 'registry match', { ok: true, records: prev.length, kept: records.length, droppedNoKeyword: filtered.dropped });
     logger.finish({ total: records.length, unique: records.length, matchedOrg: records.filter(r => r.matchedOrgId).length, droppedNoKeyword: filtered.dropped, errors: 0 });
     log(`Пересопоставлено: ${prev.length} → ${records.length}`);
@@ -256,7 +259,8 @@ async function main() {
   let probeOk = 0;
   if (!opts.noProbe && !opts.fixture) probeOk = await probeEtps(audit, logger);
   if (opts.probeOnly) {
-    writeJson('tenders-status.json', { lastRun: foundAt, mode: 'probe', probeOk });
+    writeJson('tenders-status.json', { lastRun: foundAt, mode: 'probe', partial: true, probeOk });
+    writeJson('last-collect-result.json', { ran: false, date: todayNow, mode: 'probe' });
     logger.finish({ probeOk, sources: ['etp-probe'] });
     return;
   }

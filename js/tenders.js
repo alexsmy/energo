@@ -386,6 +386,7 @@
     $('tenderModal').hidden = true;
     document.body.style.overflow = '';
     currentTender = null;
+    if (window.EnergoUI && window.EnergoUI.clearReturnContext) window.EnergoUI.clearReturnContext();
     if (window.EnergoUI && window.EnergoUI.positionReturnBar) window.EnergoUI.positionReturnBar();
   }
 
@@ -781,7 +782,8 @@
     fillSelect($('tLinkEtp'), auditPlatforms.filter(p => p.urlTemplate && p.urlTemplate.includes('{')).map(p => [p.code, p.name]), 'Выберите площадку');
     $('tLinkEtp').value = (auditPlatforms.find(p => p.code === 'EIS') || {}).code || '';
     $('tUpdated').textContent = updatedText(status);
-    $('tVer').textContent = '2.1';
+    const regVersion = ((window.REGISTRY || {}).meta || {}).version;
+    $('tVer').textContent = regVersion ? 'v' + regVersion : 'v2.46';
     document.querySelectorAll('[data-tmode]').forEach(b => b.classList.toggle('is-active', b.dataset.tmode === state.mode));
     renderSelected();
     renderKeywords(); bind(); render();

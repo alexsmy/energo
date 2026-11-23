@@ -165,7 +165,6 @@ body.is-tenders .stats-bar{display:none}
 .table th:nth-child(4){width:16%}
 .table th:nth-child(5){width:16%}
 .table th:nth-child(6){width:23%}
-.table th:nth-child(7){width:4%}
 .table td{padding:7px 10px;border-bottom:1px solid #eaf0f4;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* E-mail и ЭТП — многострочно: адрес и площадки должны читаться целиком. */
 @media(min-width:721px){
@@ -352,9 +351,6 @@ body.is-tenders .hero{display:none}
   body.filters-open .filters{display:grid}
   .filters.is-open .filters__close{display:grid}
   .map-legend{font-size:10.5px;gap:7px}
-}
-@media(max-width:720px){
-  .tab__more{display:none}
 }
 @media(max-width:860px){
   .brand__title{display:none}

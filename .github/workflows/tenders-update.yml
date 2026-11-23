@@ -54,7 +54,9 @@ jobs:
           node -e "
             const fs=require('fs');
             const p=JSON.parse(fs.readFileSync('version.json','utf8'));
-            p.version='2.9.'+new Date().toISOString().replace(/[-:T]/g,'').slice(0,12);
+            const m=String(p.version||'2.46.0').match(/^(\d+)\.(\d+)/);
+            const major=m?Number(m[1]):2, minor=m?Number(m[2]):46;
+            p.version=major+'.'+minor+'.'+new Date().toISOString().replace(/[-:T]/g,'').slice(0,12);
             p.date=new Date().toISOString().slice(0,10);
             p.title='Энергореестр РФ — обновление закупок';
             p.message='Данные закупок обновлены. Страница перезагрузится автоматически.';

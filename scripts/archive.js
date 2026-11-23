@@ -13,6 +13,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
@@ -43,7 +44,7 @@ function restore() {
   catch (e) { console.log('archive: не удалось получить артефакты — ' + e.message); return; }
   if (!id) { console.log('archive: прошлой публикации main нет — архив начнётся с этого запуска'); return; }
 
-  const tmp = path.join('/data/data/com.termux/files/usr/tmp', 'energo-pages-' + process.pid);
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'energo-pages-'));
   try {
     const zip = tmp + '.zip';
     run('curl', ['-sSL', '--fail', '--retry', '3',

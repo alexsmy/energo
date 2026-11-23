@@ -69,13 +69,15 @@
   async function init() {
     try { render(await load()); }
     catch (e) { $('runs').innerHTML = '<p style="color:#a13333">Не удалось загрузить журнал: ' + esc(e.message || e) + '</p>'; }
-    $('refreshLog').addEventListener('click', init);
-    $('runFilter').addEventListener('change', () => render(cached));
-    $('sourceFilter').addEventListener('change', () => render(cached));
   }
   let cached = [];
   const _load = load;
   load = async function () { cached = await _load(); return cached; };
+
+  // Слушатели вешаются один раз: init() вызывается и при обновлении журнала.
+  $('refreshLog').addEventListener('click', init);
+  $('runFilter').addEventListener('change', () => render(cached));
+  $('sourceFilter').addEventListener('change', () => render(cached));
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -14,7 +14,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 class ThrottledClient {
   constructor(opts = {}) {
-    this.minInterval = Math.max(0, opts.minInterval || 6500);
+    this.minInterval = opts.minInterval == null ? 6500 : Math.max(0, Number(opts.minInterval) || 0);
     this.timeout = opts.timeout || 25000;
     this.retries = opts.retries || 3;
     this.backoff = opts.backoff || [35000, 70000];

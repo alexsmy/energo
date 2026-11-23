@@ -49,7 +49,7 @@ function parse(html) {
 }
 
 async function collect(opts) {
-  const { keywords = [], enterprises = [], settings = {}, logger, limitRecords = 2000 } = opts;
+  const { keywords = [], enterprises = [], settings = {}, logger, maxRecords = 2000 } = opts;
   const index = buildCustomerIndex(enterprises);
   const client = new ThrottledClient({
     minInterval: Math.max(700, parseInt(settings.roseltorgInterval, 10) || 900),
@@ -125,7 +125,7 @@ async function collect(opts) {
         logger.entry('roseltorg', kw + ' [' + mode.phase + ', стр.' + (page + 1) + ']',
           requestInfo(res, url, t0, { records: rows.length, kept, phase: mode.phase }));
         if (!rows.length) break;
-        if (found.length >= limitRecords) return { name: 'roseltorg', records: found, requests, okRequests, errors, available: okRequests > 0 };
+        if (found.length >= maxRecords) return { name: 'roseltorg', records: found, requests, okRequests, errors, available: okRequests > 0 };
       }
     }
   }
