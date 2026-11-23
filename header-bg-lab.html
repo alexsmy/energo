@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фоны шапки — варианты отделения</title>
+<style>
+:root{
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ink:#12303f; --ink-2:#203744; --muted:#5b7180; --line:#d7e5ec;
+  --accent:#d95f12; --accent-soft:#fff1e2; --accent-ink:#8a3f00; --warm:#f0d3a8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#0b1620;color:#e8f1f6;font:15px/1.5 var(--font);padding:26px 20px 70px}
+.page{max-width:1220px;margin:0 auto}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:#93aebd;font-size:13.5px;margin:0 0 24px;max-width:820px}
+.sub b{color:#ffd2a8}
+.v{background:#101f2b;border:1px solid #223b4b;border-radius:16px;margin-bottom:22px;overflow:hidden}
+.v__head{display:flex;align-items:center;gap:12px;padding:13px 18px;background:#0d1a24;border-bottom:1px solid #223b4b;flex-wrap:wrap}
+.v__n{width:29px;height:29px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(145deg,#22789c,#15587a);font-weight:800;font-size:13px}
+.v__name{font-size:15.5px;font-weight:700}
+.v__desc{font-size:12px;color:#8fa9b8;margin:2px 0 0;flex:1 1 300px}
+.tag{font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;padding:4px 7px;border-radius:6px;background:#173040;color:#a8c8d9;border:1px solid #244759}
+.tag--warm{background:#3a2a18;color:#ffcd9c;border-color:#5a4224}
+.v__body{padding:18px;background:linear-gradient(180deg,#0e1c26,#122432)}
+.lab{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#6f8b9b;font-weight:700;margin:0 0 8px}
+.demo{background:#fff;border:1px solid var(--line);border-radius:12px 12px 0 0;overflow:hidden;color:var(--ink)}
+.demo__in{display:flex;align-items:center;gap:14px;min-height:58px;padding:9px 16px}
+.brand{display:flex;align-items:center;gap:9px}
+.brand__mark{width:32px;height:32px;border-radius:9px;background:#fff;border:1px solid var(--warm);color:var(--accent);display:grid;place-items:center;font-size:18px;box-shadow:0 2px 10px rgba(217,95,18,.18)}
+.brand__title{font-weight:800;font-size:14.5px}
+.brand__sub{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#637b89;font-weight:700}
+.tabs{display:flex;gap:5px;margin-left:16px}
+.tab{position:relative;border:1px solid transparent;background:transparent;color:var(--ink-2);font-weight:650;font-size:12.5px;padding:7px 12px;border-radius:9px}
+.tab.is-active{background:var(--accent-soft);border-color:var(--warm);color:var(--accent-ink);font-weight:750}
+.tab.is-active:after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:3px;border-radius:3px;background:var(--accent)}
+.ico{margin-left:auto;display:flex;gap:6px}
+.ico b{width:31px;height:31px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink-2);display:grid;place-items:center;font-size:13px}
+.ico b:last-child{background:linear-gradient(180deg,#ef7b25,#d95f12);border-color:var(--accent);color:#fff}
+.demo__content{padding:14px 16px;background:#f8fbfc;color:var(--muted);font-size:12px;min-height:74px}
+.demo__content strong{color:var(--ink)}
+.hero-mini{padding:14px 16px 16px;background:#f4f8fa;border-top:1px solid #e7eef3}
+.hero-mini h3{font-size:23px;color:var(--ink);margin:0 0 10px;letter-spacing:-.02em}
+.stats-mini{display:flex;gap:8px;flex-wrap:wrap}
+.stat-mini{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 11px;min-width:84px}
+.stat-mini b{display:block;font-size:17px;line-height:1.1;color:var(--ink);font-weight:800}
+.stat-mini span{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700}
+.stat-mini.is-active{border-color:var(--warm);background:linear-gradient(180deg,#fff,#fff7ee);box-shadow:0 2px 10px rgba(217,95,18,.1)}
+.modal__head{position:relative}
+.modal__close{position:absolute;right:14px;top:14px;width:30px;height:30px;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:8px;display:grid;place-items:center;font-size:13px}
+.modal{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;color:var(--ink);max-width:520px}
+.modal__head{padding:14px 16px}
+.kick{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);font-weight:800}
+.modal__head h4{margin:3px 0 0;font-size:16px}
+.modal__foot{display:flex;gap:8px;padding:11px 16px;border-top:1px solid var(--line-soft,#e7eef3);background:#fff}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink-2);font-size:11.5px;font-weight:700;padding:7px 11px;border-radius:8px}
+.btn.pri{background:linear-gradient(180deg,#ef7b25,#d95f12);border-color:var(--accent);color:#fff}
+.note{font-size:11.5px;color:#7f9aa9;margin-top:10px}
+.note b{color:#cfe4ee}
+
+/* 1 — тёплый рассвет */
+.a1 .demo__header,.a1 .modal__head{background:linear-gradient(180deg,#fffaf3,#fff6ec 60%,#f9fbfc);border-bottom:1px solid var(--warm);box-shadow:0 4px 18px rgba(217,95,18,.07)}
+/* 2 — прохладный подъём */
+.a2 .demo__header,.a2 .modal__head{background:linear-gradient(180deg,#fff,#eef5f9);border-bottom:1px solid #cbdce6;box-shadow:0 6px 20px rgba(13,31,43,.09)}
+/* 3 — стекло с подсветкой */
+.a3 .demo__header,.a3 .modal__head{background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,95,18,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 24px rgba(13,31,43,.07)}
+/* 4 — тонкая линия бренда */
+.a4 .demo__header,.a4 .modal__head{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 16px rgba(13,31,43,.05);position:relative}
+.a4 .demo__header:after,.a4 .modal__head:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--accent),#e7a85f 35%,#8ec5d8 75%,transparent)}
+/* 5 — серый лист */
+.a5 .demo__header,.a5 .modal__head{background:linear-gradient(180deg,#f8fafc,#eef4f7);border-bottom:1px solid #d7e5ec;box-shadow:0 8px 18px rgba(13,31,43,.07)}
+.a5 .tab.is-active{background:#fff}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Фон шапки: как отделить её от страницы</h1>
+  <p class="sub">Одна и та же обработка применяется к <b>основной шапке сайта</b> и к <b>шапкам всплывающих окон</b>. Смотри, где граница читается мягко, но уверенно. Все варианты остаются в светлой теме 3.1 + 3.2.</p>
+
+  <section class="v a1">
+    <div class="v__head"><div class="v__n">1</div><div><div class="v__name">Тёплый рассвет</div><p class="v__desc">Кремовый градиент сверху в нейтральный низ, тёплая граница и совсем лёгкая тень. Мягко связывает шапку с активной вкладкой.</p></div><span class="tag tag--warm">тёплый</span><span class="tag">мягкий</span></div>
+    <div class="v__body">
+      <p class="lab">основная шапка</p>
+      <div class="demo"><div class="demo__header"><div class="demo__in"><div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт</div></div></div><div class="tabs"><button class="tab is-active">Реестр</button><button class="tab">Закупки</button><button class="tab">Карта</button></div><div class="ico"><b>☆</b><b>⤓</b></div></div></div><div class="demo__content"><strong>552 записи</strong> · карточки / таблица / фильтры — контент остаётся нейтральным, шапка читается отдельным слоем.</div></div>
+      <p class="lab" style="margin-top:16px">шапка модального окна</p>
+      <div class="modal"><div class="modal__head"><div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4><div class="ico" style="position:absolute;right:14px;top:14px"><b>✕</b></div></div><div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn pri">Сайт организации</span></div></div>
+      <p class="note"><b>Эффект:</b> «утренний свет», граница почти невидимая, но фон шапки чуть теплее контента.</p>
+    </div>
+  </section>
+
+  <section class="v a2">
+    <div class="v__head"><div class="v__n">2</div><div><div class="v__name">Прохладный подъём</div><p class="v__desc">Белый верх переходит в светло-голубой низ, холодная рамка и чуть заметная тень вниз. Классический «поднятый» слой.</p></div><span class="tag">холодный</span><span class="tag">объём</span></div>
+    <div class="v__body">
+      <p class="lab">основная шапка</p>
+      <div class="demo"><div class="demo__header"><div class="demo__in"><div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт</div></div></div><div class="tabs"><button class="tab is-active">Реестр</button><button class="tab">Закупки</button><button class="tab">Карта</button></div><div class="ico"><b>☆</b><b>⤓</b></div></div></div><div class="demo__content"><strong>552 записи</strong> · граница читается за счёт холодного тона и лёгкой тени.</div></div>
+      <p class="lab" style="margin-top:16px">шапка модального окна</p>
+      <div class="modal"><div class="modal__head"><div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4></div><div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn pri">Сайт организации</span></div></div>
+      <p class="note"><b>Эффект:</b> «приподнятая панель», хорошо подходит под карточки и таблицы.</p>
+    </div>
+  </section>
+
+  <section class="v a3">
+    <div class="v__head"><div class="v__n">3</div><div><div class="v__name">Стекло с подсветкой</div><p class="v__desc">Полупрозрачный белый с blur, внутренняя светлая линия сверху и тёплая тонкая граница снизу. Самый «современный» вариант.</p></div><span class="tag tag--warm">glass</span><span class="tag">современный</span></div>
+    <div class="v__body">
+      <p class="lab">основная шапка</p>
+      <div class="demo"><div class="demo__header"><div class="demo__in"><div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт</div></div></div><div class="tabs"><button class="tab is-active">Реестр</button><button class="tab">Закупки</button><button class="tab">Карта</button></div><div class="ico"><b>☆</b><b>⤓</b></div></div></div><div class="demo__content"><strong>552 записи</strong> · фон слегка просвечивает, но текст остаётся контрастным.</div></div>
+      <p class="lab" style="margin-top:16px">шапка модального окна</p>
+      <div class="modal"><div class="modal__head"><div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4></div><div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn pri">Сайт организации</span></div></div>
+      <p class="note"><b>Эффект:</b> стильно, но требует проверки на слабых устройствах из-за <code>backdrop-filter</code>.</p>
+    </div>
+  </section>
+
+  <section class="v a4">
+    <div class="v__head"><div class="v__n">4</div><div><div class="v__name">Тонкая линия бренда</div><p class="v__desc">Белый фон, обычная рамка и 2-пиксельная градиентная линия снизу: оранжевый → песочный → голубой → прозрачный.</p></div><span class="tag tag--warm">акцент</span><span class="tag">минимализм</span></div>
+    <div class="v__body">
+      <p class="lab">основная шапка</p>
+      <div class="demo"><div class="demo__header"><div class="demo__in"><div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт</div></div></div><div class="tabs"><button class="tab is-active">Реестр</button><button class="tab">Закупки</button><button class="tab">Карта</button></div><div class="ico"><b>☆</b><b>⤓</b></div></div></div><div class="demo__content"><strong>552 записи</strong> · линия задаёт границу, фон остаётся максимально чистым.</div></div>
+      <p class="lab" style="margin-top:16px">шапка модального окна</p>
+      <div class="modal"><div class="modal__head"><div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4></div><div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn pri">Сайт организации</span></div></div>
+      <p class="note"><b>Эффект:</b> самый аккуратный — фон почти не меняется, но шапка явно отделена.</p>
+    </div>
+  </section>
+
+  <section class="v a5">
+    <div class="v__head"><div class="v__n">5</div><div><div class="v__name">Серый лист</div><p class="v__desc">Лёгкий серый градиент и более заметная тень. Активная белая вкладка «выскакивает» из шапки максимально чётко.</p></div><span class="tag">контраст</span><span class="tag">структура</span></div>
+    <div class="v__body">
+      <p class="lab">основная шапка</p>
+      <div class="demo"><div class="demo__header"><div class="demo__in"><div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт</div></div></div><div class="tabs"><button class="tab is-active">Реестр</button><button class="tab">Закупки</button><button class="tab">Карта</button></div><div class="ico"><b>☆</b><b>⤓</b></div></div></div><div class="demo__content"><strong>552 записи</strong> · серый фон шапки и белый контент читаются как два разных слоя.</div></div>
+      <p class="lab" style="margin-top:16px">шапка модального окна</p>
+      <div class="modal"><div class="modal__head"><div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4></div><div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn pri">Сайт организации</span></div></div>
+      <p class="note"><b>Эффект:</b> «документ/панель», максимальное разделение без тёмных цветов.</p>
+    </div>
+  </section>
+
+  <p class="note" style="text-align:center;margin-top:22px">Напиши номер (1–5) или скажи «смешать 1 и 4» — применю к <b>основной шапке</b> и <b>шапкам модалок</b> и проверю на всех экранах.</p>
+</div>
+<script>
+// Полная шапка с брендом, вкладками, кнопками и названием страницы.
+const headerTpl = `
+  <div class="demo__header">
+    <div class="demo__in">
+      <div class="brand"><div class="brand__mark">⚡</div><div><div class="brand__title">Реестр РФ</div><div class="brand__sub">Энергетика · Машиностроение · Транспорт · Ремонт</div></div></div>
+      <div class="tabs"><button class="tab">Реестр</button><button class="tab">Закупки</button><button class="tab is-active">Карта</button></div>
+      <div class="ico">
+        <b title="Избранное"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5-4.7-4.6 6.5-.9z"/></svg></b>
+        <b title="Печать"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9V3h12v6M6 18H4v-8h16v8h-2M6 15h12v6H6z"/></svg></b>
+        <b title="Экспорт"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg></b>
+      </div>
+    </div>
+  </div>
+  <div class="hero-mini">
+    <h3>Реестр предприятий России</h3>
+    <div class="stats-mini">
+      <div class="stat-mini is-active"><b>552</b><span>всего</span></div>
+      <div class="stat-mini"><b>28</b><span>холдингов</span></div>
+      <div class="stat-mini"><b>194</b><span>юрлиц</span></div>
+      <div class="stat-mini"><b>330</b><span>станций</span></div>
+      <div class="stat-mini"><b>40</b><span>ремонтных</span></div>
+      <div class="stat-mini"><b>112</b><span>ОЕМ</span></div>
+    </div>
+  </div>`;
+const modalTpl = `
+  <div class="modal__head">
+    <div class="kick">Компания · Ремонт</div><h4>Гидроремонт-ВКК</h4>
+    <div class="modal__close">✕</div>
+  </div>
+  <div class="modal__foot"><span class="btn">Закупки организации</span><span class="btn">На карте</span><span class="btn pri">Сайт организации</span></div>`;
+document.querySelectorAll('.v .demo').forEach(el => { el.innerHTML = headerTpl; });
+document.querySelectorAll('.v .modal').forEach(el => { el.innerHTML = modalTpl; });
+</script>
+</body>
+</html>
