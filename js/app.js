@@ -476,16 +476,17 @@
       center: [61.5, 95], zoom: 3, minZoom: 2, maxZoom: 13,
       zoomControl: true, worldCopyJump: true, attributionControl: true
     });
-    // Основная подложка «Карта» — Esri World_Street_Map: домен Esri стабильно доступен
-    // и во внешних браузерах (там же работают спутник и гибрид). Резерв — OSM.de и OSM.org.
-    // CARTO не использовать: он отдаёт «API KEY REQUIRED» вместо тайлов.
+    // Основная подложка «Карта» — OSM.org: в России подписи на русском языке.
+    // Резерв — OSM.de; Esri World_Street_Map используется только спутником/гибридом
+    // и как крайняя мера, но его подписи английские. CARTO не использовать:
+    // он отдаёт «API KEY REQUIRED» вместо тайлов.
     const osmSources = [
-      { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', max: 18,
-        attr: 'Tiles &copy; Esri' },
+      { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', max: 19,
+        attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>' },
       { url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png', max: 19,
         attr: '&copy; OpenStreetMap contributors' },
-      { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', max: 19,
-        attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>' }
+      { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', max: 18,
+        attr: 'Tiles &copy; Esri' }
     ];
     mapState.osmChain = osmSources.map(s => L.tileLayer(s.url, { maxZoom: s.max, attribution: s.attr }));
     mapState.osmIdx = 0;
