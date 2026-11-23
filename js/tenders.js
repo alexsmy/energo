@@ -68,9 +68,22 @@
     const m = String(s).match(/(\d{4})-(\d{2})-(\d{2})/);
     return m ? `${m[3]}.${m[2]}.${m[1]}` : esc(s);
   }
-  function priceNum(s) {
-    const n = Number(String(s || '').replace(/[^\d,]/g, '').replace(',', '.'));
+  function moneyValue(s) {
+    // Цена приходит в разных форматах: «25182027.08 ₽», «3 295 421,86 ₽», «965464 ₽».
+    const raw = String(s == null ? '' : s)
+      .replace(/[\u00a0\u202f\s]/g, '')
+      .replace(/,/g, '.')
+      .replace(/[^\d.]/g, '');
+    const n = Number(raw);
     return Number.isFinite(n) ? n : 0;
+  }
+  function priceNum(s) { return moneyValue(s); }
+  function fmtMoney(v) {
+    if (v == null || v === '') return '—';
+    const n = moneyValue(v);
+    if (!n) return esc(String(v));
+    const hasFraction = /[.,]\d/.test(String(v));
+    return n.toLocaleString('ru-RU', { minimumFractionDigits: hasFraction ? 2 : 0, maximumFractionDigits: 2 }) + ' ₽';
   }
   function badge(text, cls) { return '<span class="t-badge t-badge--' + esc(cls) + '">' + esc(text) + '</span>'; }
   function lawLabel(law) {
@@ -247,7 +260,7 @@
       kv('Номер закупки', esc(r.regNumber || r.externalId || r.id)) +
       kv('Статус', esc(r.status || '—')) +
       kv('Закон / тип', esc(lawLabel(r.law) || '—')) +
-      kv('Цена', esc(r.price || '—')) +
+      kv('Цена', '<b class="t-price">' + fmtMoney(r.price) + '</b>') +
     '</dl></div>');
     body.push('<div class="sec"><h3>Заказчик</h3><dl class="kv">' +
       kv('Наименование', esc(r.customer || '—')) +
@@ -330,8 +343,8 @@
       .map(k => '<span class="t-chip t-chip--mini t-chip--hit">' + esc(k) + '</span>').join('');
     const ent = entNames(r);
     return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '" data-id="' + esc(r.id) + '">' +
-      '<div class="t-card__head"><button class="fav-star" type="button" data-fav-tender="' + esc(r.id) + '" aria-label="В избранное" title="В избранное">' + (TF && TF.has('tender', r.id) ? '★' : '☆') + '</button><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
-        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' +
+      '<div class="t-card__head"><button class="fav-star" type="button" data-fav-tender="' + esc(r.id) + '" aria-label="В избранное" title="В избранное">' + (TF && TF.has('tender', r.id) ? '★' : '☆') + '</button><span class="t-card__title">' +
+        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</span>' +
         newBadge(r) + deadlineBadge(r) + sourceHtml(r) +
       '</div>' +
       '<div class="t-card__body">' +
@@ -343,7 +356,7 @@
         '<div class="t-card__grid">' +
           '<div><span class="t-label">Опубликовано:</span> ' + fmtDate(r.published) + '</div>' +
           '<div><span class="t-label">Заявки до:</span> ' + fmtDate(r.deadline) + '</div>' +
-          '<div><span class="t-label">Цена:</span> ' + esc(r.price || '—') + '</div>' +
+          '<div><span class="t-label">Цена:</span> <b class="t-price">' + fmtMoney(r.price) + '</b></div>' +
           '<div><span class="t-label">Номер:</span> ' + esc(r.regNumber || r.externalId || r.id) + '</div>' +
         '</div>' +
         (kws ? '<div class="t-chips t-chips--mini">' + kws + '</div>' : '') +
@@ -353,11 +366,11 @@
   function rowHtml(r) {
     return '<tr' + (r.isNew ? ' class="t-row--new"' : '') + ' data-id="' + esc(r.id) + '">' +
       '<td class="t-mut">' + fmtDate(r.published) + '</td>' +
-      '<td><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
-        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' + newBadge(r) + '</td>' +
+      '<td><button class="t-row__title" type="button">' +
+        tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</button>' + newBadge(r) + '</td>' +
       '<td>' + esc(r.customer || '—') + '</td>' +
       '<td>' + esc(entNames(r) || '—') + '</td>' +
-      '<td>' + esc(r.price || '—') + '</td>' +
+      '<td><b class="t-price">' + fmtMoney(r.price) + '</b></td>' +
       '<td>' + sourceHtml(r) + '</td>' +
       '</tr>';
   }
