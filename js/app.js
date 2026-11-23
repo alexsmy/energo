@@ -689,17 +689,33 @@
     $('tbody').innerHTML = html;
   }
 
+  function updateFilterButton() {
+    const btn = $('filterToggle');
+    if (!btn) return;
+    let n = 0;
+    if (state.q) n++;
+    ['kind', 'holding', 'region', 'type', 'method', 'etp'].forEach(key => { if (state[key]) n++; });
+    if (state.onlyOrg) n++;
+    const open = document.body.classList.contains('filters-open');
+    btn.classList.toggle('is-active', open || n > 0);
+    btn.setAttribute('aria-pressed', String(n > 0));
+    btn.setAttribute('aria-expanded', String(open));
+    btn.innerHTML = 'Фильтры' + (n ? ' <span class="btn__badge">' + n + '</span>' : '');
+  }
+
+  function closeFilters() {
+    document.body.classList.remove('filters-open');
+    $('filtersPanel').classList.remove('is-open');
+    updateFilterButton();
+  }
+
   function render() {
+    updateFilterButton();
     const isTenders = state.tab === 'tenders';
     document.body.classList.toggle('is-tenders', isTenders);
     const layout = document.querySelector('.layout');
     if (layout) layout.hidden = isTenders;
     if ($('tendersView')) $('tendersView').hidden = !isTenders;
-    if (isTenders || state.tab === 'map') {
-      document.body.classList.remove('filters-open');
-      $('filtersPanel').classList.remove('is-open');
-      $('filterToggle').setAttribute('aria-expanded', 'false');
-    }
     if (isTenders) {
       document.body.classList.remove('is-map');
       if (window.EnergoTenders) window.EnergoTenders.onTab('tenders');
@@ -956,6 +972,7 @@
     document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(x => { x.classList.remove('is-active'); x.setAttribute('aria-selected', 'false'); });
       t.classList.add('is-active'); t.setAttribute('aria-selected', 'true');
+      closeFilters();
       state.tab = t.dataset.tab;
       if (window.EnergoTenders) window.EnergoTenders.onTab(state.tab);
       const h = state.tab === 'all' ? (state.kind ? '#kind=' + state.kind : '') : '#tab=' + state.tab;
@@ -1180,18 +1197,13 @@
     $('exportBtn').addEventListener('click', exportCSV);
 
     $('filterToggle').addEventListener('click', () => {
-      if (state.tab === 'map') return;
       const panel = $('filtersPanel');
       const open = panel.classList.toggle('is-open');
       document.body.classList.toggle('filters-open', open);
-      $('filterToggle').setAttribute('aria-expanded', String(open));
+      updateFilterButton();
     });
 
-    $('filtersClose').addEventListener('click', () => {
-      $('filtersPanel').classList.remove('is-open');
-      document.body.classList.remove('filters-open');
-      $('filterToggle').setAttribute('aria-expanded', 'false');
-    });
+    $('filtersClose').addEventListener('click', closeFilters);
 
     document.addEventListener('click', (e) => {
       const b = e.target.closest('[data-open-id]');
