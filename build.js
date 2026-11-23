@@ -3,6 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// Проверки идут до сборки: CI запускает build.js по push, отдельный шаг в workflow
+// не нужен (и не требует прав workflow у токена). ENERGO_SKIP_CHECKS=1 — только для экстренного обхода.
+if (!process.env.ENERGO_SKIP_CHECKS) require('./scripts/ci-checks.js');
+
 const ROOT = __dirname;
 const DATA = path.join(ROOT, 'data');
 const META = {

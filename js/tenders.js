@@ -171,6 +171,22 @@
         if (d) return d;
         return String(platformOf(a).name).localeCompare(String(platformOf(b).name), 'ru');
       },
+      deadline: (a, b) => {
+        const pa = a.phase === 'active' ? 0 : 1;
+        const pb = b.phase === 'active' ? 0 : 1;
+        if (pa !== pb) return pa - pb;
+        const da = a.deadline || '9999-12-31';
+        const db = b.deadline || '9999-12-31';
+        const d = String(da).localeCompare(String(db));
+        return d || String(b.published || '').localeCompare(String(a.published || ''));
+      },
+      new: (a, b) => {
+        const pa = a.phase === 'active' ? 0 : 1;
+        const pb = b.phase === 'active' ? 0 : 1;
+        if (pa !== pb) return pa - pb;
+        const d = String(b.published || b.deadline || '').localeCompare(String(a.published || a.deadline || ''));
+        return d || String(a.title || '').localeCompare(String(b.title || ''), 'ru');
+      },
       name: (a, b) => String(a.title || '').localeCompare(String(b.title || ''), 'ru'),
       company: (a, b) => String(a.customer || '').localeCompare(String(b.customer || ''), 'ru'),
       price: (a, b) => priceNum(b.price) - priceNum(a.price)
@@ -233,6 +249,18 @@
       ? '<span class="t-badge t-badge--new" title="Появилось по сравнению со вчерашним днём">Новое</span>'
       : '';
   }
+  // Логика фаз не меняем: это только подсказка по сроку в карточке.
+  function deadlineBadge(r) {
+    if (r.phase === 'archive') return '';
+    if (!r.deadline) return badge('Срок не указан', 'warn');
+    const end = Date.parse(String(r.deadline).slice(0, 10) + 'T23:59:59');
+    if (isNaN(end)) return badge('Срок не указан', 'warn');
+    const days = Math.ceil((end - Date.now()) / 86400000);
+    if (days < 0) return badge('Срок истёк — уточнить', 'warn');
+    if (days === 0) return badge('Заканчивается сегодня', 'warn');
+    if (days <= 2) return badge('Осталось ' + days + ' дн.', 'warn');
+    return '';
+  }
 
   function cardHtml(r) {
     const kws = (r.matchedKeywords || r.keywords || []).slice(0, 6)
@@ -241,13 +269,14 @@
     return '<article class="t-card' + (r.isNew ? ' t-card--new' : '') + '">' +
       '<div class="t-card__head"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
         tm.highlightEntryHtml(r.title || r.id, entriesFor(r), esc) + '</a>' +
-        newBadge(r) + sourceHtml(r) +
+        newBadge(r) + deadlineBadge(r) + sourceHtml(r) +
       '</div>' +
       '<div class="t-card__body">' +
         matchHtml(r) +
         '<div><span class="t-label">Заказчик:</span> ' + esc(r.customer || '—') +
           (r.customerInn ? ' <span class="t-mut">ИНН ' + esc(r.customerInn) + '</span>' : '') + '</div>' +
         (ent ? '<div><span class="t-label">Предприятие:</span> ' + esc(ent) + '</div>' : '') +
+        (r.status ? '<div><span class="t-label">Статус:</span> ' + esc(r.status) + '</div>' : '') +
         '<div class="t-card__grid">' +
           '<div><span class="t-label">Опубликовано:</span> ' + fmtDate(r.published) + '</div>' +
           '<div><span class="t-label">Заявки до:</span> ' + fmtDate(r.deadline) + '</div>' +
@@ -539,6 +568,14 @@
         if ($('tendersView')) $('tendersView').hidden = false;
         render();
       }
+    },
+    setQuery(text) {
+      state.q = String(text || '');
+      state.keyword = '';
+      state.enterprise = '';
+      if ($('tQ')) $('tQ').value = state.q;
+      renderSelected();
+      render();
     }
   };
 

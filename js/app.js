@@ -429,8 +429,12 @@
   function card(it) {
     const etps = (it.etp || []).slice(0, 3).map(c => '<i title="' + esc(etpMap[c] ? etpMap[c].name : c) + '">' + esc(c) + '</i>').join('');
     const more = (it.etp || []).length > 3 ? '<i>+' + ((it.etp || []).length - 3) + '</i>' : '';
-    const phone = it.phone || '—';
-    const email = it.email || '—';
+    const phone = it.phone
+      ? '<a href="tel:' + esc(it.phone.replace(/[^\d+]/g, '')) + '" title="Позвонить">' + esc(it.phone) + '</a>'
+      : '—';
+    const email = it.email
+      ? '<a href="mailto:' + esc(it.email) + '" title="Написать e-mail">' + esc(it.email) + '</a>'
+      : '—';
     const cap = it.capacity ? '<span class="cap">' + esc(it.capacity) + ' МВт</span>' : '';
     const par = it.parent ? byId[it.parent] : null;
     const where = [it.region, par && par.kind !== 'holding' ? par.name : (it.kind === 'plant' ? it.holdingName : '')].filter(Boolean).join(' · ');
@@ -439,8 +443,8 @@
         '<div class="card__top"><div class="card__name">' + esc(it.name) + '</div>' + techBadges(it, 2) + typeBadge(it) + '</div>' +
         (it.full && it.full !== it.name ? '<div class="card__full">' + esc(it.full) + '</div>' : '') +
         '<div class="card__row"><span class="card__ico">📍</span><span>' + esc(where || '—') + '</span>' + cap + '</div>' +
-        '<div class="card__row"><span class="card__ico">☎</span><span>' + esc(phone) + '</span></div>' +
-        '<div class="card__row"><span class="card__ico">✉</span><span>' + esc(email) + '</span></div>' +
+        '<div class="card__row"><span class="card__ico">☎</span><span>' + phone + '</span></div>' +
+        '<div class="card__row"><span class="card__ico">✉</span><span>' + email + '</span></div>' +
         '<div class="card__foot">' +
           '<div class="etp-mini">' + etps + more + '</div>' +
         '</div>' +
@@ -564,6 +568,15 @@
     return '<dt>' + esc(label) + '</dt><dd>' + value + '</dd>';
   }
 
+  function copyBtn(value, label) {
+    if (!value) return '';
+    return '<button class="copy-btn" type="button" data-copy="' + esc(value) + '" title="Скопировать ' + esc(label) + '">⧉</button>';
+  }
+  function quickAction(href, icon, label, cls) {
+    return href ? '<a class="qa' + (cls ? ' qa--' + cls : '') + '" href="' + esc(href) + '" target="_blank" rel="noopener">' +
+      '<span aria-hidden="true">' + icon + '</span>' + esc(label) + '</a>' : '';
+  }
+
   function link(url, text) {
     if (!url) return '';
     const safe = esc(url);
@@ -596,6 +609,15 @@
     }).join('');
 
     const body = [];
+    const actions = [
+      quickAction(it.phone ? 'tel:' + it.phone.replace(/[^\d+]/g, '') : '', '☎', 'Позвонить'),
+      quickAction(it.email ? 'mailto:' + it.email : '', '✉', 'E-mail'),
+      quickAction(it.site, '↗', 'Сайт'),
+      quickAction(it.procUrl, '↗', 'Закупки'),
+      it.inn ? '<button class="qa" type="button" data-copy="' + esc(it.inn) + '"><span aria-hidden="true">⧉</span>ИНН</button>' : '',
+      '<button class="qa" type="button" data-tenders-for="' + esc(it.name) + '"><span aria-hidden="true">⌕</span>Закупки организации</button>'
+    ].filter(Boolean).join('');
+    body.push('<div class="qa-bar">' + actions + '</div>');
 
     body.push('<div class="sec"><h3>Деятельность</h3><dl class="kv">' +
       kvRow('Полное наименование', esc(it.full)) +
@@ -610,18 +632,28 @@
       kvRow('Статус', esc(it.status)) +
     '</dl></div>');
 
+    const notFound = '<span class="muted-value">не найдено в открытых источниках</span>';
     body.push('<div class="sec"><h3>Контакты</h3><dl class="kv">' +
-      kvRow('Адрес', esc(it.address)) +
-      kvRow('Телефон', it.phone ? '<a href="tel:' + esc(it.phone.replace(/[^\d+]/g, '')) + '">' + esc(it.phone) + '</a>' : '') +
-      kvRow('E-mail', it.email ? '<a href="mailto:' + esc(it.email) + '">' + esc(it.email) + '</a>' : '') +
+      kvRow('Адрес', it.address ? esc(it.address) + copyBtn(it.address, 'адрес') : notFound) +
+      kvRow('Телефон', it.phone
+        ? '<a href="tel:' + esc(it.phone.replace(/[^\d+]/g, '')) + '">' + esc(it.phone) + '</a>' + copyBtn(it.phone, 'телефон')
+        : notFound) +
+      kvRow('E-mail', it.email
+        ? '<a href="mailto:' + esc(it.email) + '">' + esc(it.email) + '</a>' + copyBtn(it.email, 'e-mail')
+        : notFound) +
       kvRow('Сайт', link(it.site)) +
       kvRow('Раздел закупок', link(it.procUrl)) +
     '</dl>' + (it.kind === 'plant' && it.inherited && (it.inherited.phone || it.inherited.email || it.inherited.address)
       ? '<div class="hint">Указаны контакты головной организации: у станции могут быть собственные телефон и e-mail. Уточняйте по официальному сайту или ЕГРЮЛ.</div>' : '') +
     '</div>');
 
+    body.push('<div class="sec"><h3>Закупки и электронные площадки</h3>' +
+      '<div class="meth">' + esc(it.method || '—') + '</div>' +
+      '<div class="chips" style="margin-top:10px">' + (etps || '<span class="chip">не указаны</span>') + '</div>' +
+    '</div>');
+
     body.push('<div class="sec"><h3>Реквизиты и руководство</h3><dl class="kv">' +
-      kvRow('ИНН', esc(it.inn)) +
+      kvRow('ИНН', it.inn ? esc(it.inn) + copyBtn(it.inn, 'ИНН') : '') +
       kvRow('КПП', esc(it.kpp)) +
       kvRow('ОГРН', esc(it.ogrn)) +
       kvRow('Руководитель', esc(it.ceo)) +
@@ -632,11 +664,6 @@
       kvRow('Телефон закупок', esc(it.procPhone)) +
       kvRow('E-mail закупок', esc(it.procEmail)) +
     '</dl></div>');
-
-    body.push('<div class="sec"><h3>Закупки</h3>' +
-      '<div class="meth">' + esc(it.method || '—') + '</div>' +
-      '<div class="chips" style="margin-top:10px">' + (etps || '<span class="chip">не указаны</span>') + '</div>' +
-    '</div>');
 
     if (it.equipment || it.repairs || it.wiki) {
       body.push('<div class="sec"><h3>Эксплуатация и оборудование</h3><dl class="kv">' +
@@ -901,6 +928,7 @@
     }));
 
     $('cards').addEventListener('click', e => {
+      if (e.target.closest('a,button')) return; // телефон/e-mail в карточке работают напрямую
       const c = e.target.closest('.card');
       if (c) openModal(c.dataset.id);
     });
@@ -916,6 +944,27 @@
     });
 
     $('modal').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeModal(); });
+
+    $('mBody').addEventListener('click', e => {
+      const copy = e.target.closest('[data-copy]');
+      if (copy) {
+        const value = copy.dataset.copy || '';
+        const done = () => {
+          const notice = createNotice('info', '✓');
+          notice.querySelector('.notice__body').textContent = 'Скопировано: ' + value;
+          setTimeout(() => notice.remove(), 2200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(value).then(done).catch(() => {});
+        else done();
+        return;
+      }
+      const search = e.target.closest('[data-tenders-for]');
+      if (search) {
+        closeModal();
+        document.querySelector('[data-tab="tenders"]')?.click();
+        if (window.EnergoTenders && window.EnergoTenders.setQuery) window.EnergoTenders.setQuery(search.dataset.tendersFor || '');
+      }
+    });
     $('copyBtn').addEventListener('click', async () => {
       if (!current) return;
       try {
