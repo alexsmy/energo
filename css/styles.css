@@ -479,7 +479,15 @@ body.is-tenders .hero{display:none}
 .t-row__title:hover{color:var(--navy-2);text-decoration:underline}
 .t-card__head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between;padding-left:30px}
 .t-card__title{font-weight:700;font-size:14px;line-height:1.32;color:var(--navy);overflow-wrap:anywhere}
-.t-price{font-weight:750;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.t-price{font-weight:750;color:rgba(13,31,43,.78);white-space:nowrap;font-variant-numeric:tabular-nums}
+.t-date{display:inline-block;padding:2px 7px;border-radius:6px;font-size:12.5px;font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums;border:1px solid transparent}
+.t-date--pub{background:linear-gradient(135deg,#f2f8fc,#e4f0f7);border-color:#d4e5f0;color:#2b5b78}
+.t-date--plan{background:linear-gradient(135deg,#f4f8f5,#e8f3ec);border-color:#d7e9dd;color:#276645}
+.t-date--soon{background:linear-gradient(135deg,#fff8ec,#ffedda);border-color:#f5d9b4;color:#9a5310}
+.t-date--expired{background:linear-gradient(135deg,#fff4f4,#fbe7e7);border-color:#f0cfcf;color:#9b3535}
+.t-org-link{border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:var(--navy);font-weight:600;text-decoration:underline dotted #9db6c4;text-underline-offset:3px}
+.t-org-link:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.t-mut .t-org-link{color:#3f5b6b;font-weight:500}
 .t-card__body{margin-top:8px;font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
 .t-card__grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
 .t-label{color:#78909c;font-size:11px;text-transform:uppercase;letter-spacing:.03em}

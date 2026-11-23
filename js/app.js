@@ -176,19 +176,25 @@
     $('favModal').hidden = true;
     document.body.style.overflow = '';
   }
-  function setReturnContext(id, name) {
-    returnContext = { id, name };
+  function setReturnContext(id, name, type) {
+    returnContext = { id, name, type: type || 'org' };
     $('returnBar')?.remove();
     const el = document.createElement('div');
     el.id = 'returnBar';
     el.className = 'return-bar';
-    el.innerHTML = '<button type="button" class="return-bar__back" aria-label="Вернуться к карточке">←</button>' +
-      '<span>Карточка: <b>' + esc(name) + '</b></span>';
+    const prefix = type === 'tender' ? 'Закупка:' : 'Карточка:';
+    el.innerHTML = '<button type="button" class="return-bar__back" aria-label="Вернуться">←</button>' +
+      '<span>' + prefix + ' <b>' + esc(name) + '</b></span>';
     el.querySelector('.return-bar__back').addEventListener('click', () => {
       const ctx = returnContext;
       clearReturnContext();
-      document.querySelector('[data-tab="all"]')?.click();
-      if (ctx) openModal(ctx.id);
+      if (ctx && ctx.type === 'tender') {
+        document.querySelector('[data-tab="tenders"]')?.click();
+        if (window.EnergoTenders && window.EnergoTenders.openDetail) window.EnergoTenders.openDetail(ctx.id);
+      } else {
+        document.querySelector('[data-tab="all"]')?.click();
+        if (ctx) openModal(ctx.id);
+      }
     });
     document.body.appendChild(el);
   }
@@ -1236,4 +1242,13 @@
     const b = document.querySelector('[data-tab="' + initialTab + '"]');
     if (b) b.click();
   } else render();
+
+  // Переход из закупки в карточку предприятия с возвратом к этой закупке.
+  window.EnergoRegistry = {
+    openFromTender(orgId, tenderId, tenderTitle) {
+      if (tenderId) setReturnContext(tenderId, String(tenderTitle || '').slice(0, 60), 'tender');
+      document.querySelector('[data-tab="all"]')?.click();
+      openModal(orgId);
+    }
+  };
 })();

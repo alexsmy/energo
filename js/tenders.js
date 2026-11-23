@@ -9,6 +9,24 @@
   const platformItems = D.platforms || (D.etps && D.etps.platforms) || [];
   const auditPlatforms = (D.etps && D.etps.platforms) || [];
   const allEntities = D.allEntities || [];
+  const regItems = ((window.REGISTRY || {}).items) || [];
+  const regById = Object.fromEntries(regItems.map(x => [x.id, x]));
+  const regByInn = {};
+  regItems.forEach(x => {
+    const inn = String(x.inn || '').slice(0, 10);
+    if (inn && x.kind !== 'plant' && !regByInn[inn]) regByInn[inn] = x;
+  });
+  function registryOrg(r) {
+    if (r.matchedOrgId && regById[r.matchedOrgId]) return regById[r.matchedOrgId];
+    for (const id of (r.enterpriseIds || [])) if (regById[id]) return regById[id];
+    const inn = String(r.customerInn || '').slice(0, 10);
+    return (inn && regByInn[inn]) || null;
+  }
+  function orgLink(r, text) {
+    const org = registryOrg(r);
+    if (!org || !window.EnergoRegistry) return esc(text || '—');
+    return '<button class="t-org-link" type="button" data-org-from-tender="' + esc(r.id) + '" title="Открыть карточку предприятия">' + esc(text || org.name) + '</button>';
+  }
   const settings = D.settings || {};
   const TF = window.EnergoFavorites || null;
   let status = D.status || {};
@@ -78,6 +96,21 @@
     return Number.isFinite(n) ? n : 0;
   }
   function priceNum(s) { return moneyValue(s); }
+  function dateChip(s, kind) {
+    const text = fmtDate(s);
+    if (text === '—') return '<span class="muted-value">—</span>';
+    let cls = 't-date';
+    if (kind === 'deadline') {
+      const end = Date.parse(String(s).slice(0, 10) + 'T23:59:59');
+      if (!isNaN(end)) {
+        const days = Math.ceil((end - Date.now()) / 86400000);
+        if (days < 0) cls += ' t-date--expired';
+        else if (days <= 2) cls += ' t-date--soon';
+        else cls += ' t-date--plan';
+      }
+    } else cls += ' t-date--pub';
+    return '<span class="' + cls + '">' + esc(text) + '</span>';
+  }
   function fmtMoney(v) {
     if (v == null || v === '') return '—';
     const n = moneyValue(v);
@@ -263,13 +296,13 @@
       kv('Цена', '<b class="t-price">' + fmtMoney(r.price) + '</b>') +
     '</dl></div>');
     body.push('<div class="sec"><h3>Заказчик</h3><dl class="kv">' +
-      kv('Наименование', esc(r.customer || '—')) +
-      kv('ИНН', esc(r.customerInn || '—')) +
-      kv('Предприятие реестра', esc(entNames(r) || '—')) +
+      kv('Наименование', orgLink(r, r.customer)) +
+      kv('ИНН', r.customerInn ? orgLink(r, r.customerInn) : '') +
+      kv('Предприятие реестра', esc(entNames(r) || (registryOrg(r) ? registryOrg(r).name : '—'))) +
     '</dl></div>');
     body.push('<div class="sec"><h3>Сроки</h3><dl class="kv">' +
-      kv('Опубликовано', esc(fmtDate(r.published) || '—')) +
-      kv('Подача заявок до', esc(fmtDate(r.deadline) || '—')) +
+      kv('Опубликовано', dateChip(r.published, 'published')) +
+      kv('Подача заявок до', dateChip(r.deadline, 'deadline')) +
       kv('Обновлено', esc(fmtDate(r.updated) || '—')) +
     '</dl></div>');
     const sources = (r.sources || []).map(s => {
@@ -349,13 +382,13 @@
       '</div>' +
       '<div class="t-card__body">' +
         matchHtml(r) +
-        '<div><span class="t-label">Заказчик:</span> ' + esc(r.customer || '—') +
-          (r.customerInn ? ' <span class="t-mut">ИНН ' + esc(r.customerInn) + '</span>' : '') + '</div>' +
+        '<div><span class="t-label">Заказчик:</span> ' + orgLink(r, r.customer) +
+          (r.customerInn ? ' <span class="t-mut">ИНН ' + orgLink(r, r.customerInn) + '</span>' : '') + '</div>' +
         (ent ? '<div><span class="t-label">Предприятие:</span> ' + esc(ent) + '</div>' : '') +
         (r.status ? '<div><span class="t-label">Статус:</span> ' + esc(r.status) + '</div>' : '') +
         '<div class="t-card__grid">' +
-          '<div><span class="t-label">Опубликовано:</span> ' + fmtDate(r.published) + '</div>' +
-          '<div><span class="t-label">Заявки до:</span> ' + fmtDate(r.deadline) + '</div>' +
+          '<div><span class="t-label">Опубликовано:</span> ' + dateChip(r.published, 'published') + '</div>' +
+          '<div><span class="t-label">Заявки до:</span> ' + dateChip(r.deadline, 'deadline') + '</div>' +
           '<div><span class="t-label">Цена:</span> <b class="t-price">' + fmtMoney(r.price) + '</b></div>' +
           '<div><span class="t-label">Номер:</span> ' + esc(r.regNumber || r.externalId || r.id) + '</div>' +
         '</div>' +
@@ -624,6 +657,13 @@
     });
 
     $('tCards').addEventListener('click', e => {
+      const orgLinkEl = e.target.closest('[data-org-from-tender]');
+      if (orgLinkEl) {
+        const rec = records.find(x => x.id === orgLinkEl.dataset.orgFromTender);
+        const org = rec && registryOrg(rec);
+        if (org && window.EnergoRegistry) window.EnergoRegistry.openFromTender(org.id, rec.id, rec.title);
+        return;
+      }
       const star = e.target.closest('[data-fav-tender]');
       if (star) {
         if (TF) {
@@ -642,6 +682,15 @@
       if (row && !e.target.closest('a')) openTenderDetail(row.dataset.id);
     });
     $('tenderModal').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeTenderDetail(); });
+    $('tDetailBody').addEventListener('click', e => {
+      const link = e.target.closest('[data-org-from-tender]');
+      if (!link || !currentTender || !window.EnergoRegistry) return;
+      const org = registryOrg(currentTender);
+      if (!org) return;
+      const r = currentTender;
+      closeTenderDetail();
+      window.EnergoRegistry.openFromTender(org.id, r.id, r.title);
+    });
     $('tDetailFav').addEventListener('click', () => {
       if (!currentTender || !TF) return;
       TF.toggle('tender', currentTender.id);
