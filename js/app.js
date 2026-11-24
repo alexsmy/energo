@@ -183,13 +183,15 @@
   function setReturnContext(id, name, type) {
     returnContext = { id, name, type: type || 'org' };
     $('returnBar')?.remove();
-    const el = document.createElement('div');
+    const el = document.createElement('button');
+    el.type = 'button';
     el.id = 'returnBar';
     el.className = 'return-bar';
+    el.setAttribute('aria-label', 'Вернуться: ' + name);
     const prefix = type === 'tender' ? 'Закупка:' : 'Карточка:';
-    el.innerHTML = '<button type="button" class="return-bar__back" aria-label="Вернуться">←</button>' +
+    el.innerHTML = '<span class="return-bar__back" aria-hidden="true">←</span>' +
       '<span>' + prefix + ' <b>' + esc(name) + '</b></span>';
-    el.querySelector('.return-bar__back').addEventListener('click', () => {
+    el.addEventListener('click', () => {
       const ctx = returnContext;
       clearReturnContext();
       if (ctx && ctx.type === 'tender') {
