@@ -48,7 +48,6 @@
   /* Ключевые слова: строка или объект { label, search, must }. В интерфейсе
    * показываем label, в сеть уходит search, проверяем группы must. */
   const keywordEntries = rawKeywords.map(k => tm.entryOf(k)).filter(e => e.label);
-  const keywords = keywordEntries.map(e => e.label);
   const entryByLabel = {};
   keywordEntries.forEach(e => { entryByLabel[tm.norm(e.label)] = e; });
   function entryOfLabel(label) {
@@ -61,7 +60,7 @@
 
   const state = {
     q: '', enterprise: '', from: '', to: '', source: '', keyword: '',
-    view: 'cards', sort: 'date', pane: 'tenders',
+    view: 'cards', sort: 'date', pane: 'tenders', kwGroup: 'base',
     mode: settings.defaultMode === 'archive' ? 'archive' : 'active'
   };
 
@@ -565,6 +564,8 @@
     const was = state.keyword;
     state.keyword = label === '' ? '' : (norm(label) === norm(was) ? '' : label);
     if (state.keyword) {
+      const e = entryByLabel[norm(state.keyword)];
+      if (e) state.kwGroup = e.kind === 'composite' ? 'composite' : 'base';
       state.q = state.keyword;
       state.enterprise = '';
       $('tQ').value = state.keyword;
@@ -578,19 +579,62 @@
     renderKeywords(); render();
   }
 
+  /* Ключевые слова разделены на две группы:
+   * base — одно понятие («Турбина»), composite — фраза внутри него
+   * («Ремонт турбины»). На десктопе группы идут одна под другой,
+   * на планшете/телефоне — переключатель и одна прокручиваемая строка. */
+  function keywordChip(e) {
+    const kind = e.kind === 'composite' ? 'composite' : 'base';
+    return '<button class="t-chip t-chip--' + kind + '" data-kw="' + esc(e.label) + '" data-kind="' + kind +
+      '" type="button">' + esc(e.label) + '</button>';
+  }
+
   function renderKeywords() {
-    const html = '<button class="t-chip is-active" data-kw="" type="button">Все</button>' +
-      keywords.map(k => '<button class="t-chip" data-kw="' + esc(k) + '" type="button">' + esc(k) + '</button>').join('');
-    ['tKeywords', 'tStickyKeywords'].forEach(id => {
-      const box = $(id);
-      if (!box) return;
-      box.innerHTML = html;
-      box.querySelectorAll('.t-chip').forEach(b => {
-        b.classList.toggle('is-active', norm(b.dataset.kw) === norm(state.keyword));
-        b.addEventListener('click', () => selectKeyword(b.dataset.kw));
+    const box = $('tKeywords');
+    if (!box) return;
+    const base = keywordEntries.filter(e => e.kind !== 'composite');
+    const composite = keywordEntries.filter(e => e.kind === 'composite');
+    const group = (kind, title, list) =>
+      '<div class="t-kw__group' + (state.kwGroup === kind ? ' is-open' : '') + '" data-group="' + kind + '">' +
+        '<span class="t-kw__label">' + title + '</span>' +
+        '<div class="t-chips">' +
+          (kind === 'base' ? '<button class="t-chip t-chip--all" data-kw="" type="button">Все</button>' : '') +
+          list.map(keywordChip).join('') +
+        '</div>' +
+      '</div>';
+    box.innerHTML =
+      '<div class="t-kw__bar" role="group" aria-label="Группы ключевых слов">' +
+        '<button class="t-kw__tab' + (state.kwGroup === 'base' ? ' is-active' : '') + '" data-kwgroup="base" type="button">Базовые <b>' + base.length + '</b></button>' +
+        '<button class="t-kw__tab' + (state.kwGroup === 'composite' ? ' is-active' : '') + '" data-kwgroup="composite" type="button">Составные <b>' + composite.length + '</b></button>' +
+        '<button class="t-chip t-chip--all" data-kw="" type="button">Все</button>' +
+      '</div>' +
+      group('base', 'Базовые слова', base) +
+      group('composite', 'Составные запросы', composite);
+
+    box.querySelectorAll('.t-chip').forEach(b => {
+      b.classList.toggle('is-active', norm(b.dataset.kw) === norm(state.keyword));
+      b.addEventListener('click', () => selectKeyword(b.dataset.kw));
+    });
+    box.querySelectorAll('[data-kwgroup]').forEach(b => {
+      b.addEventListener('click', () => {
+        state.kwGroup = b.dataset.kwgroup === 'composite' ? 'composite' : 'base';
+        renderKeywords();
+        updateStickyKeywords();
       });
     });
-    updateStickyKeywords();
+    renderStickyKeywords();
+  }
+
+  /* Липкая панель: все слова одной строкой, различаются оттенком. */
+  function renderStickyKeywords() {
+    const box = $('tStickyKeywords');
+    if (!box) return;
+    box.innerHTML = '<button class="t-chip t-chip--all" data-kw="" type="button">Все</button>' +
+      keywordEntries.map(keywordChip).join('');
+    box.querySelectorAll('.t-chip').forEach(b => {
+      b.classList.toggle('is-active', norm(b.dataset.kw) === norm(state.keyword));
+      b.addEventListener('click', () => selectKeyword(b.dataset.kw));
+    });
   }
 
   function updateStickyKeywords() {
@@ -672,6 +716,8 @@
     box.querySelectorAll('[data-ent]').forEach(b => b.addEventListener('click', () => selectEntity(b.dataset.ent)));
     box.querySelectorAll('[data-skw]').forEach(b => b.addEventListener('click', () => {
       state.keyword = b.dataset.skw;
+      const entry = entryByLabel[norm(state.keyword)];
+      if (entry) state.kwGroup = entry.kind === 'composite' ? 'composite' : 'base';
       state.q = b.dataset.skw;
       state.enterprise = '';
       $('tQ').value = b.dataset.skw;
@@ -708,7 +754,7 @@
     input('tSort', 'sort');
 
     $('tReset').addEventListener('click', () => {
-      Object.assign(state, { q: '', enterprise: '', from: '', to: '', source: '', keyword: '', view: 'cards', sort: 'date' });
+      Object.assign(state, { q: '', enterprise: '', from: '', to: '', source: '', keyword: '', view: 'cards', sort: 'date', kwGroup: 'base' });
       ['tQ', 'tDateFrom', 'tDateTo', 'tSource', 'tSort'].forEach(id => { if ($(id)) $(id).value = ''; });
       $('tSuggest').hidden = true;
       renderSelected();

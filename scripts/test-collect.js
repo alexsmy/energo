@@ -117,4 +117,34 @@ test('cookie jar запоминает куки только для своего 
   assert.equal(c._cookieHeader('https://etpgpb.ru/procedures/'), '');
 });
 
+test('новые слова: напыление, порошковые и составные фразы', () => {
+  const kws = require('../data/tender-keywords.json').keywords;
+  const labels = (t) => tm.matchEntries(t, kws).map((e) => e.label);
+  assert.ok(labels('Газотермическое напыление лопаток турбины').includes('Газотермическое напыление'));
+  assert.ok(labels('Плазменное напыление уплотнений').includes('Плазменное напыление'));
+  assert.ok(labels('Восстановление лопаток турбины').includes('Восстановление лопаток'));
+  assert.ok(labels('Поставка порошковой проволоки').includes('Порошковые'));
+  assert.ok(labels('Напыление покрытия').includes('Напыление'));
+  // «Плазменное напыление» не должно попадать в «Газотермическое напыление».
+  assert.ok(!labels('Плазменное напыление').includes('Газотермическое напыление'));
+});
+
+test('составные запросы не добавляют сетевых запросов', () => {
+  const plan = makePlan();
+  assert.equal(plan.extraTerms.length, 0, 'составные запросы добавили слова: ' + plan.extraTerms.join(', '));
+  assert.ok(plan.baseCount >= 6, 'мало базовых слов');
+  assert.ok(plan.compositeCount >= 4, 'мало составных запросов');
+  assert.ok(plan.terms.includes('напыление') && plan.terms.includes('порошковой'));
+});
+
+test('бюджеты покрывают план: ни один источник не обрежется', () => {
+  const plan = makePlan();
+  // eis-html — намеренно ограниченный резерв, его план всегда больше лимита.
+  for (const name of ['gosplan', 'gentender', 'tektorg', 'etpgpb', 'roseltorg']) {
+    const b = plan.bySource[name];
+    assert.ok(b, 'нет источника ' + name);
+    assert.ok(b.count <= b.limit, name + ': план ' + b.count + ' > бюджета ' + b.limit);
+  }
+});
+
 if (!process.exitCode) console.log('\nВсе тесты пройдены: ' + passed);

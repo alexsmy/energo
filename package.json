@@ -11,6 +11,7 @@
     "test": "node prototype/test-regressions.js",
     "test:collect": "node scripts/test-collect.js",
     "dry-run": "node scripts/collect-tenders.js --dry-run",
+    "stats:keywords": "node scripts/keyword-stats.js",
     "probe": "node scripts/probe-one.js",
     "archive:restore": "node scripts/archive.js restore",
     "archive:snapshot": "node scripts/archive.js snapshot",

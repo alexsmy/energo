@@ -1,5 +1,5 @@
 {
-  "note": "Режимы, источники и бюджеты сбора. active — действующие закупки, archive — завершённые за последние archiveDepthDays. sourcePriority: сначала ЕИС через ГосПлан (точные номера и ссылки), затем GenTender (агрегатор со всех площадок), затем прямые площадки; HTML-парсер ЕИС остаётся резервом. requestBudget ограничивает число сетевых запросов на прогон по каждому источнику.",
+  "note": "Режимы, источники и бюджеты сбора. active — действующие закупки, archive — завершённые за последние archiveDepthDays. sourcePriority: сначала ЕИС через ГосПлан (точные номера и ссылки), затем GenTender (агрегатор со всех площадок), затем прямые площадки; HTML-парсер ЕИС остаётся резервом. requestBudget ограничивает число сетевых запросов на прогон по каждому источнику; gentender 560 покрывает понедельничный обход (220 ИНН active + 220 archive + keyword-запросы) без обрезки.",
   "defaultMode": "active",
   "requireKeyword": true,
   "activeDepthDays": 0,
@@ -8,7 +8,7 @@
   "sourcePriority": ["gosplan", "gentender", "tektorg", "etpgpb", "roseltorg", "eis-html"],
   "requestBudget": {
     "gosplan": 60,
-    "gentender": 400,
+    "gentender": 560,
     "tektorg": 40,
     "etpgpb": 40,
     "roseltorg": 40,

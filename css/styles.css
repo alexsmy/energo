@@ -502,6 +502,12 @@ body.is-tenders .hero{display:none}
 .t-band .t-hint{color:rgba(255,255,255,.68)}
 .t-band .t-chip{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff}
 .t-band .t-chip.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
+/* Две группы слов различаются мягким оттенком: базовые — прохладный,
+ * составные — тёплый. Активное слово по-прежнему бирюзовое. */
+.t-band .t-chip--base{background:linear-gradient(180deg,rgba(126,206,220,.20),rgba(74,158,180,.10));border-color:rgba(126,206,220,.34);color:#eafcff}
+.t-band .t-chip--composite{background:linear-gradient(180deg,rgba(255,205,140,.18),rgba(214,150,70,.09));border-color:rgba(255,205,140,.36);color:#ffeed6}
+.t-band .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
+.t-band .t-chip--all{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
 .t-band .t-selected{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
 .t-band .t-selected__label{color:rgba(255,255,255,.7)}
 .t-band .t-toolbar{margin:14px 0 0;padding:4px 0 0}
@@ -519,6 +525,10 @@ body.is-tenders .hero{display:none}
 .t-sticky .t-chips{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0;min-width:0}
 .t-sticky .t-chips::-webkit-scrollbar{display:none}
 .t-sticky .t-chip{white-space:nowrap;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;font-size:11.5px;padding:5px 9px}
+.t-sticky .t-chip--base{background:linear-gradient(180deg,rgba(126,206,220,.18),rgba(74,158,180,.08));border-color:rgba(126,206,220,.30)}
+.t-sticky .t-chip--composite{background:linear-gradient(180deg,rgba(255,205,140,.16),rgba(214,150,70,.07));border-color:rgba(255,205,140,.32);color:#ffeed6}
+.t-sticky .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
+.t-sticky .t-chip--all{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
 .t-sticky .t-chip.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
 .tenders-view .btn--ghost{border-color:var(--line);color:var(--navy);background:#fff}
 .tenders-view .btn--ghost:hover{background:#f1f6f9}
@@ -548,6 +558,15 @@ body.is-tenders .hero{display:none}
 .t-chip--hit{background:#fff4e2;border-color:#f0d3a8;color:#7a3d00}
 .t-mut{color:var(--muted);font-weight:400;font-size:11px}
 .t-card__head{flex-wrap:wrap}
+/* Группы ключевых слов: на десктопе две подписи и две строки чипов. */
+.t-kw{display:flex;flex-direction:column;gap:6px;min-width:0}
+.t-kw__bar{display:none}
+.t-kw__group{display:flex;align-items:flex-start;gap:10px;min-width:0}
+.t-kw__label{flex:0 0 auto;min-width:132px;padding-top:5px;font-size:10.5px;line-height:1.2;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:rgba(255,255,255,.58)}
+.t-kw__group .t-chips{margin:0;flex:1;min-width:0}
+.t-kw__tab{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);border-radius:7px;padding:5px 9px;font-size:11.5px;font-weight:600;cursor:pointer;white-space:nowrap}
+.t-kw__tab b{font-weight:700;opacity:.7;margin-left:2px}
+.t-kw__tab.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
 .t-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
 .t-chip{border:1px solid var(--line);background:#f3f7f9;color:#335060;border-radius:7px;padding:4px 9px;font-size:12px;cursor:pointer;line-height:1.3}
 .t-chip:hover{border-color:#9fb9c8}
@@ -624,6 +643,18 @@ body.is-tenders .hero{display:none}
 .t-etp p{font-size:12px;color:var(--muted);margin:0 0 10px}
 .t-etp p.t-etp__note{font-size:11.5px;color:#6b7d88;margin:-4px 0 10px;padding-left:9px;border-left:2px solid var(--line)}
 @media(max-width:900px){
+  /* На планшете и телефоне — переключатель групп и одна строка слов
+   * с горизонтальной прокруткой вместо четырёх рядов чипов. */
+  .t-kw__bar{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .t-kw__bar::-webkit-scrollbar{display:none}
+  .t-kw__group{display:none}
+  .t-kw__group.is-open{display:block;width:100%}
+  .t-kw__label{display:none}
+  .t-kw__group .t-chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .t-kw__group .t-chips::-webkit-scrollbar{display:none}
+  .t-kw__group .t-chip{white-space:nowrap}
+  .t-kw__group .t-chip--all{display:none}
+  .t-kw__bar .t-chip--all{margin-left:auto}
   .t-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
   .t-filters .field--search,.t-filters .field--wide,.t-filters .field--source{grid-column:1/-1}
   .t-cards,.t-etps{grid-template-columns:1fr}

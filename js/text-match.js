@@ -127,10 +127,12 @@
       const must = Array.isArray(k.must) && k.must.length
         ? k.must.map((g) => (Array.isArray(g) ? g : [g])).map((g) => g.filter(Boolean))
         : [[search]];
-      return { label: String(k.label || search), search, must: must.filter((g) => g.length) };
+      // base — одно понятие, composite — фраза из нескольких обязательных слов.
+      const kind = k.kind === 'composite' ? 'composite' : 'base';
+      return { label: String(k.label || search), search, must: must.filter((g) => g.length), kind };
     }
     const s = String(k || '').trim();
-    return { label: s, search: s, must: s ? [[s]] : [] };
+    return { label: s, search: s, must: s ? [[s]] : [], kind: 'base' };
   }
 
   /* Все группы должны совпасть (И), внутри группы достаточно одного синонима (ИЛИ). */

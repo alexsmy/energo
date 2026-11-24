@@ -19,7 +19,13 @@ const int = (v, def, min) => Math.max(min == null ? 1 : min, parseInt(v, 10) || 
 
 function makePlan() {
   const keywords = readJson('tender-keywords.json', { keywords: [] }).keywords || [];
-  const terms = [...new Set(keywords.map(k => tm.entryOf(k).search).filter(Boolean))];
+  const entries = keywords.map(k => tm.entryOf(k)).filter(e => e.search);
+  const baseEntries = entries.filter(e => e.kind !== 'composite');
+  const compositeEntries = entries.filter(e => e.kind === 'composite');
+  const terms = [...new Set(entries.map(e => e.search).filter(Boolean))];
+  // Составные запросы должны опираться на уже существующее базовое слово:
+  // тогда они не добавляют ни одного сетевого запроса.
+  const extraTerms = terms.filter(t => !baseEntries.some(e => e.search === t));
   const enterprises = readJson('tender-enterprises.json', { items: [] }).items || [];
   const settings = readJson('tender-settings.json', {});
   const index = buildCustomerIndex(enterprises);
@@ -108,13 +114,18 @@ function makePlan() {
     b.seconds = Math.round(b.dailyEffective * b.interval / 1000);
   });
 
-  return { terms, inns, enterprises: enterprises.length, requests, bySource, settings };
+  return { terms, extraTerms, baseCount: baseEntries.length, compositeCount: compositeEntries.length, inns, enterprises: enterprises.length, requests, bySource, settings };
 }
 
 function formatPlan(plan) {
   const lines = [];
   lines.push('ПЛАН ЗАПРОСОВ НА ОДИН ПРОГОН (без сети)');
+  lines.push('Базовых слов: ' + plan.baseCount + ' · составных запросов: ' + plan.compositeCount +
+    ' · уникальных слов в API: ' + plan.terms.length);
   lines.push('Слов в API: ' + plan.terms.join(', ') + ' | ИНН организаций: ' + plan.inns.length + ' | предприятий в списке: ' + plan.enterprises);
+  if (plan.extraTerms && plan.extraTerms.length) {
+    lines.push('Составные запросы без базового слова (добавляют запросы): ' + plan.extraTerms.join(', '));
+  }
   lines.push('');
   lines.push('Источник       Всего  День  Нед.  Лимит  Время/день  Режимы');
   let total = 0, daily = 0, weekly = 0;

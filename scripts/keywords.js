@@ -29,9 +29,20 @@ const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').replace(/
 const labelOf = (k) => (k && typeof k === 'object' ? k.label || k.search : k);
 
 if (action === 'list' || !action) {
-  data.keywords.forEach((k, i) => {
-    const e = typeof k === 'object' ? k : { label: k, search: k };
-    console.log(`${i + 1}. ${e.label} [поиск: ${e.search}${e.must ? ', группы: ' + e.must.map((g) => g.join('/')).join(' + ') : ''}]`);
+  const groups = [
+    ['base', 'Базовые слова'],
+    ['composite', 'Составные запросы']
+  ];
+  let i = 0;
+  groups.forEach(([kind, title]) => {
+    const list = data.keywords.filter((k) => ((k && k.kind === 'composite') ? 'composite' : 'base') === kind);
+    if (!list.length) return;
+    console.log(title + ':');
+    list.forEach((k) => {
+      const e = typeof k === 'object' ? k : { label: k, search: k };
+      i++;
+      console.log(`  ${i}. ${e.label} [поиск: ${e.search}${e.must ? ', группы: ' + e.must.map((g) => g.join('/')).join(' + ') : ''}]`);
+    });
   });
   process.exit(0);
 }
@@ -44,12 +55,15 @@ if (!word) {
 function makeEntry(w) {
   const search = (opt('search', '') || w).trim();
   const must = (opt('must', '') || '').trim();
-  if (!must) return w;
-  return {
-    label: w,
-    search,
-    must: must.split(',').map((g) => g.split('/').map((s) => s.trim()).filter(Boolean)).filter((g) => g.length)
-  };
+  const groups = must
+    ? must.split(',').map((g) => g.split('/').map((s) => s.trim()).filter(Boolean)).filter((g) => g.length)
+    : [[search]];
+  // kind: явный --kind имеет приоритет, иначе фраза из 2+ групп считается составной.
+  const explicit = opt('kind', '').trim();
+  const kind = explicit === 'composite' || explicit === 'base'
+    ? explicit
+    : (groups.length > 1 ? 'composite' : 'base');
+  return { label: w, search, must: groups, kind };
 }
 
 const before = data.keywords.length;
@@ -62,7 +76,11 @@ if (action === 'add') {
   process.exit(1);
 }
 
-data.keywords.sort((a, b) => labelOf(a).localeCompare(labelOf(b), 'ru'));
+data.keywords.sort((a, b) => {
+  const ka = (a && a.kind === 'composite') ? 1 : 0;
+  const kb = (b && b.kind === 'composite') ? 1 : 0;
+  return ka - kb || labelOf(a).localeCompare(labelOf(b), 'ru');
+});
 data.updated = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n', 'utf8');
 console.log(`Слов: ${before} → ${data.keywords.length}. Файл: data/tender-keywords.json`);
