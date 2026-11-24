@@ -1,13 +1,175 @@
 {
-  "lastRun": "2026-11-24T04:22:15.997Z",
-  "mode": "refilter",
-  "partial": true,
-  "total": 91,
-  "active": 31,
-  "archive": 60,
-  "droppedNoKeyword": 0,
-  "titlesSuspicious": 0,
+  "lastRun": "2026-11-24T05:40:11.590Z",
+  "mode": "live",
+  "total": 107,
+  "unique": 236,
+  "matchedOrg": 107,
+  "active": 35,
+  "archive": 72,
+  "bySource": {
+    "EIS": 42,
+    "SBER": 1,
+    "TEK": 19,
+    "ROS": 14,
+    "GPB": 8,
+    "RAD": 16,
+    "B2B": 4,
+    "FAB": 1,
+    "ZAKAZ": 1,
+    "SBER_B2B": 1
+  },
   "sources": [
-    "refilter"
-  ]
+    {
+      "name": "gosplan",
+      "available": true,
+      "requests": 20,
+      "okRequests": 19,
+      "records": 37,
+      "errors": 1,
+      "errorItems": [
+        {
+          "source": "gosplan",
+          "query": "вставка (44, действующие)",
+          "error": "HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "gentender",
+      "available": true,
+      "requests": 239,
+      "okRequests": 234,
+      "records": 95,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "gentender",
+          "query": "ИНН 2607018122 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        },
+        {
+          "source": "gentender",
+          "query": "ИНН 6315376946 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        },
+        {
+          "source": "gentender",
+          "query": "ИНН 7709832989 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        },
+        {
+          "source": "gentender",
+          "query": "ИНН 1657036630 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        },
+        {
+          "source": "gentender",
+          "query": "ИНН 7706697347 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "name": "tektorg",
+      "available": true,
+      "requests": 8,
+      "okRequests": 8,
+      "records": 59,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "etpgpb",
+      "available": true,
+      "requests": 8,
+      "okRequests": 8,
+      "records": 24,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "roseltorg",
+      "available": true,
+      "requests": 16,
+      "okRequests": 16,
+      "records": 21,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "eis-html",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4,
+      "errorItems": [
+        {
+          "source": "eis-html",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "турбина",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "уплотнение",
+          "error": "fetch failed"
+        }
+      ]
+    }
+  ],
+  "errors": 10,
+  "probeErrors": 4,
+  "probeOk": 12,
+  "droppedNoKeyword": 1,
+  "titlesSuspicious": 0,
+  "localArchived": 4,
+  "newCount": 8,
+  "corroborated": 43,
+  "corroboratedPct": 40,
+  "relevantPerRequest": 0.8,
+  "deepArchive": false,
+  "incrementalFrom": "",
+  "budget": {
+    "gosplan": {
+      "limit": 60,
+      "used": 20,
+      "exhausted": false
+    },
+    "gentender": {
+      "limit": 400,
+      "used": 239,
+      "exhausted": false
+    },
+    "tektorg": {
+      "limit": 40,
+      "used": 8,
+      "exhausted": false
+    },
+    "etpgpb": {
+      "limit": 40,
+      "used": 8,
+      "exhausted": false
+    },
+    "roseltorg": {
+      "limit": 40,
+      "used": 16,
+      "exhausted": false
+    },
+    "eis-html": {
+      "limit": 40,
+      "used": 4,
+      "exhausted": false
+    }
+  },
+  "partial": true
 }
