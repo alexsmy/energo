@@ -95,7 +95,7 @@ body.is-tenders .stats-bar{display:none}
 .stat{appearance:none;position:relative;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(143,228,220,.22);border-radius:11px;padding:8px 12px 7px;min-width:88px;color:#fff;text-align:left;cursor:pointer;transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.22)}
 .stat:hover{transform:translateY(-2px);border-color:rgba(143,228,220,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 6px 14px rgba(0,0,0,.3)}
 .stat:focus-visible{outline:2px solid #6fe2d6;outline-offset:2px}
-.stat.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.45),0 6px 18px rgba(45,160,180,.45)}
+.stat.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.45),0 6px 18px rgba(45,160,180,.45)}
 .stat.is-active b{text-shadow:0 1px 6px rgba(0,0,0,.25)}
 .stat.is-active span{color:#eafcff}
 .stat b{display:block;font-size:19px;line-height:1.15;font-weight:800}
@@ -115,6 +115,11 @@ body.is-tenders .stats-bar{display:none}
 .field>span{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-bottom:4px}
 .field input,.field select{width:100%;padding:8px 9px;border:1px solid #cbd8e0;border-radius:9px;background:#fff;color:var(--ink);outline:none;transition:.18s;font-size:13.5px}
 .field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,95,18,.13);background:#fff}
+/* Список вариантов рисует браузер, а не наши правила формы: без явного цвета
+ * в тёмных зонах (`color:#fff`) получается белый текст на белом фоне. */
+select option,select optgroup{color:var(--ink);background:#fff}
+select option:disabled{color:#8aa0ad}
+select,input[type="date"]{color-scheme:light}
 .check{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted);margin:10px 0 4px;cursor:pointer}
 .check input{margin-top:2px;accent-color:var(--accent)}
 
@@ -257,13 +262,13 @@ body.is-tenders .stats-bar{display:none}
 .return-bar:active{transform:scale(.99)}
 @keyframes return-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .return-bar b{font-weight:700;color:#fff}
-.return-bar__back{flex:0 0 auto;width:27px;height:27px;border-radius:7px;background:linear-gradient(180deg,#2b93ad,#17667f);border:1px solid #6fe2d6;color:#fff;display:grid;place-items:center;font-size:15px;line-height:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 3px 10px rgba(45,160,180,.35);transition:transform .12s}
+.return-bar__back{flex:0 0 auto;width:27px;height:27px;border-radius:7px;background:linear-gradient(180deg,#22789c,#17667f);border:1px solid #6fe2d6;color:#fff;display:grid;place-items:center;font-size:15px;line-height:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 3px 10px rgba(45,160,180,.35);transition:transform .12s}
 .return-bar:hover .return-bar__back{transform:translateX(-2px)}
 .modal__head-actions{display:flex;gap:7px;flex:0 0 auto}
 .t-detail__hero{background:var(--band-bg);color:#fff;border-bottom:1px solid rgba(111,226,214,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
 .t-detail__hero .modal__kicker{color:#8fe4dc}
 .t-detail__hero h2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden;line-height:1.26}
-.t-detail__keyword{margin-top:6px;font-size:12px;color:#eafcff;background:linear-gradient(180deg,#2b93ad,#17667f);border:1px solid #6fe2d6;border-radius:6px;padding:3px 8px;display:inline-block;box-shadow:0 3px 12px rgba(45,160,180,.35)}
+.t-detail__keyword{margin-top:6px;font-size:12px;color:#eafcff;background:linear-gradient(180deg,#22789c,#17667f);border:1px solid #6fe2d6;border-radius:6px;padding:3px 8px;display:inline-block;box-shadow:0 3px 12px rgba(45,160,180,.35)}
 .t-card__title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}
 .t-detail__hero .icon-btn{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28)}
 .t-detail__hero .icon-btn:hover{background:rgba(255,255,255,.2);color:#fff}
@@ -492,7 +497,7 @@ body.is-tenders .hero{display:none}
 .t-band .t-tabs{margin:14px 0 12px;border-bottom-color:rgba(255,255,255,.14)}
 .t-band .t-tab{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
 .t-band .t-tab:hover{background:rgba(255,255,255,.16);color:#fff}
-.t-band .t-tab.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.4),0 6px 18px rgba(45,160,180,.4)}
+.t-band .t-tab.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.4),0 6px 18px rgba(45,160,180,.4)}
 .t-band .t-updated{color:rgba(255,255,255,.72)}
 .t-band .t-filters{background:rgba(255,255,255,.07);border-color:rgba(143,228,220,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);border-radius:11px}
 .t-band .field>span{color:rgba(255,255,255,.8)}
@@ -501,7 +506,7 @@ body.is-tenders .hero{display:none}
 .t-band .field input:focus,.t-band .field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,95,18,.16)}
 .t-band .t-hint{color:rgba(255,255,255,.68)}
 .t-band .t-chip{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff}
-.t-band .t-chip.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
+.t-band .t-chip.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
 /* Две группы слов различаются мягким оттенком: базовые — прохладный,
  * составные — тёплый. Активное слово по-прежнему бирюзовое. */
 .t-band .t-chip--base{background:linear-gradient(180deg,rgba(126,206,220,.20),rgba(74,158,180,.10));border-color:rgba(126,206,220,.34);color:#eafcff}
@@ -529,7 +534,7 @@ body.is-tenders .hero{display:none}
 .t-sticky .t-chip--composite{background:linear-gradient(180deg,rgba(255,205,140,.16),rgba(214,150,70,.07));border-color:rgba(255,205,140,.32);color:#ffeed6}
 .t-sticky .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
 .t-sticky .t-chip--all{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
-.t-sticky .t-chip.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
+.t-sticky .t-chip.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
 .tenders-view .btn--ghost{border-color:var(--line);color:var(--navy);background:#fff}
 .tenders-view .btn--ghost:hover{background:#f1f6f9}
 .t-head h1{font-size:26px;font-weight:750}
@@ -566,7 +571,7 @@ body.is-tenders .hero{display:none}
 .t-kw__group .t-chips{margin:0;flex:1;min-width:0}
 .t-kw__tab{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:rgba(255,255,255,.8);border-radius:7px;padding:5px 9px;font-size:11.5px;font-weight:600;cursor:pointer;white-space:nowrap}
 .t-kw__tab b{font-weight:700;opacity:.7;margin-left:2px}
-.t-kw__tab.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+.t-kw__tab.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
 .t-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
 .t-chip{border:1px solid var(--line);background:#f3f7f9;color:#335060;border-radius:7px;padding:4px 9px;font-size:12px;cursor:pointer;line-height:1.3}
 .t-chip:hover{border-color:#9fb9c8}
@@ -614,7 +619,7 @@ body.is-tenders .hero{display:none}
 .t-badge--warn{background:#fdf0e6;color:var(--accent)}
 .t-badge--bad{background:#fbe9e9;color:#a13333}
 /* Новые закупки — появились по сравнению со вчерашним снимком архива. */
-.t-badge--new{background:#1f9c60;color:#fff;border:0;font-size:10.5px;white-space:nowrap}
+.t-badge--new{background:#147a49;color:#fff;border:0;font-size:10.5px;white-space:nowrap}
 .t-badge--new::before{content:"●";font-size:7px;margin-right:5px;vertical-align:middle}
 .t-card--new{background:#f4fcf7;box-shadow:inset 4px 0 0 #1f9c60,var(--shadow)}
 .t-row--new{background:#effaf3}
@@ -632,8 +637,8 @@ body.is-tenders .hero{display:none}
 .t-deep h2{font-size:15px}
 .t-deep p{font-size:12px;color:var(--muted);margin:5px 0 10px}
 .t-deep__row{display:flex;gap:8px;flex-wrap:wrap}
-.t-deep__row select{min-width:210px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:13px}
-.t-deep__row input{flex:1;min-width:220px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fbfcfd;font-size:13px;outline:none}
+.t-deep__row select{min-width:210px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:13px}
+.t-deep__row input{flex:1;min-width:220px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fbfcfd;color:var(--ink);font-size:13px;outline:none}
 .t-etps{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
 .t-etp{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px;box-shadow:0 1px 2px rgba(9,31,44,.04)}
 .t-etp__head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}

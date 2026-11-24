@@ -9,6 +9,7 @@
     "collect:probe": "node scripts/collect-tenders.js --probe-only",
     "collect:direct": "node scripts/collect-tenders.js --source=tektorg-direct,etpgpb-direct,roseltorg-direct",
     "test:direct": "node scripts/test-direct.js",
+    "test:theme": "node scripts/test-theme.js",
     "compare:direct": "node scripts/compare-direct.js",
     "keywords": "node scripts/keywords.js",
     "test": "node prototype/test-regressions.js",

@@ -7,6 +7,8 @@ const path = require('path');
 console.log('--- проверки перед сборкой (без сети) ---');
 require('../prototype/test-regressions.js');
 require('./test-collect.js');
+require('./test-direct.js');
+require('./test-theme.js');
 
 const { validateFile } = require('./validate-entities');
 const report = validateFile(path.join(__dirname, '..', 'data', 'entities.tsv'));
