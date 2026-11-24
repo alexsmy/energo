@@ -72,11 +72,14 @@ function lawLabel(law) {
 
 function sourceRank(r) {
   const s = String((r && (r.source || r.sourceName)) || '').toLowerCase();
-  if (/gosplan|госplan|гос ?план|eis-html|еис/.test(s)) return 0;
+  // Приоритет при слиянии одного тендера из нескольких источников:
+  // собственный прямой парсер площадки > API ЕИС > старые SSR-адаптеры >
+  // агрегатор GenTender > резервный HTML-парсер. Меньше число — выше приоритет.
+  if (/-direct/.test(s)) return 0;
+  if (/gosplan|госplan|гос ?план/.test(s)) return 1;
   if (/gentender|гендер/.test(s)) return 3;
-  if (/tektorg|тэк/.test(s)) return 1;
-  if (/etpgpb|гпб/.test(s)) return 1;
-  if (/roseltorg|росэлторг/.test(s)) return 1;
+  if (/eis-html|еис/.test(s)) return 4;
+  if (/tektorg|тэк|etpgpb|гпб|roseltorg|росэлторг/.test(s)) return 2;
   return 2;
 }
 

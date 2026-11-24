@@ -34,7 +34,22 @@ function makePlan() {
   const requests = [];
   const add = (source, label, phase, cadence) => requests.push({ source, label, phase, cadence: cadence || 'daily' });
 
-  // ГосПлан: обход по ИНН по умолчанию выключен ( sluggish 10 запросов/мин).
+  // Собственные прямые парсеры идут первыми — это приоритетный контур.
+  // Старые SSR-адаптеры остаются доступны через --source=... для A/B.
+  const direct = [
+    ['tektorg-direct', 'tektorgDirectMaxPages'],
+    ['etpgpb-direct', 'gpbDirectMaxPages'],
+    ['roseltorg-direct', 'roseltorgDirectMaxPages']
+  ];
+  for (const [name, key] of direct) {
+    const pages = int(settings[key], 2, 1);
+    const modes = name === 'roseltorg-direct' ? ['active', 'archive'] : [''];
+    for (const mode of modes) for (const term of terms) for (let p = 0; p < pages; p++) {
+      add(name, term + (mode ? ' [' + mode + ']' : '') + (p ? ' стр.' + (p + 1) : ''), mode || 'active');
+    }
+  }
+
+  // ГосПлан: обход по ИНН по умолчанию выключен (медленные 10 запросов/мин).
   const gosMaxInn = int(process.env.ENERGO_MAX_INN || settings.gosplanMaxInn, 0, 0);
   const gosInns = gosMaxInn > 0 ? inns.slice(0, gosMaxInn) : [];
   const gosPages = int(settings.gosplanMaxPages, 2, 1);
@@ -68,20 +83,6 @@ function makePlan() {
     }
   }
 
-  // Прямые площадки: только ключевые слова, по страницам из настроек.
-  const direct = [
-    ['tektorg', 'tektorgMaxPages'],
-    ['etpgpb', 'gpbMaxPages'],
-    ['roseltorg', 'roseltorgMaxPages']
-  ];
-  for (const [name, key] of direct) {
-    const pages = int(settings[key], 2, 1);
-    const modes = name === 'roseltorg' ? ['active', 'archive'] : [''];
-    for (const mode of modes) for (const term of terms) for (let p = 0; p < pages; p++) {
-      add(name, term + (mode ? ' [' + mode + ']' : '') + (p ? ' стр.' + (p + 1) : ''), mode || 'active');
-    }
-  }
-
   // Резервный HTML-парсер ЕИС: слова + названия предприятий × два режима.
   const queries = [...new Set([...terms, ...enterprises.map(e => e.query)])].filter(Boolean);
   const htmlPages = int(settings.htmlMaxPages, 5, 1);
@@ -93,8 +94,11 @@ function makePlan() {
     gosplan: int(settings.gosplanInterval, 6500, 0),
     gentender: int(settings.gentenderInterval, 1150, 0),
     tektorg: int(settings.tektorgInterval, 900, 0),
+    'tektorg-direct': int(settings.tektorgDirectInterval, 900, 0),
     etpgpb: int(settings.gpbInterval, 900, 0),
+    'etpgpb-direct': int(settings.gpbDirectInterval, 900, 0),
     roseltorg: int(settings.roseltorgInterval, 900, 0),
+    'roseltorg-direct': int(settings.roseltorgDirectInterval, 900, 0),
     'eis-html': int(settings.htmlInterval, 1500, 0)
   };
   const budget = settings.requestBudget || {};

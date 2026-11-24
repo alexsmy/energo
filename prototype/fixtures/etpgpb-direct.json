@@ -1,0 +1,208 @@
+{
+ "data": [
+  {
+   "id": "1740953",
+   "type": "procedure",
+   "attributes": {
+    "with_guarantee_application": false,
+    "without_ep": true,
+    "_score": 46.675716,
+    "registry_number": "0851200000625008302",
+    "stage": "commission",
+    "title": "Оказание услуг по литью и напылению зуботехнических конструкций 0851200000625008302",
+    "platform_url": "https://gos.etpgpb.ru/front/procedure/view/229adef3-5f9c-4b4e-85ba-f87621a6f25d",
+    "kind": "fz44",
+    "procedure_type_name": "Электронный аукцион",
+    "truncated_path": null,
+    "app_guarantee_type": null,
+    "total_guarantee_application": "0,00",
+    "company_name": "ГКУ НСО \"УКСИС\"",
+    "company_url": "/customers/gosudarstvennoe-kazennoe-uchrezhdenie-novosibirskoy-oblasti-upravlenie-kontraktnoy-sistemy/",
+    "amount": "23500.0",
+    "currency_name": "RUB",
+    "date_published": "2025-11-14T07:03:37.000+03:00",
+    "lot_regions": [
+     "Новосибирская область"
+    ],
+    "date_last_update": null,
+    "lots_first_date_begin_auction": "2025-11-24T06:00:00.000+03:00",
+    "lots_count": 1,
+    "template": "common",
+    "mineral_type": null,
+    "section_category_name": "Закупки.Гос44",
+    "rebranding_truncated_path": null,
+    "custom_procedure_type_name": null,
+    "end_registration": "2025-11-24T04:00:00.000+03:00",
+    "guarantee_application_currency": "RUB",
+    "time_before_end_registration": -28231716
+   },
+   "relationships": {
+    "unique_lot_companies": {
+     "data": []
+    }
+   }
+  },
+  {
+   "id": "1291737",
+   "type": "procedure",
+   "attributes": {
+    "with_guarantee_application": false,
+    "without_ep": true,
+    "_score": 46.675716,
+    "registry_number": "0153300020524000047",
+    "stage": "commission",
+    "title": "Выполнение работ по теплоизоляции методом напыления пенополиуретаном 0153300020524000047",
+    "platform_url": "https://gos.etpgpb.ru/front/procedure/view/3bd27577-2a9d-4ba9-9b5d-d88126442690",
+    "kind": "fz44",
+    "procedure_type_name": "Запрос котировок в электронной форме (оптима)",
+    "truncated_path": null,
+    "app_guarantee_type": null,
+    "total_guarantee_application": "0,00",
+    "company_name": "АДМИНИСТРАЦИЯ ГАЙСКОГО МУНИЦИПАЛЬНОГО ОКРУГА",
+    "company_url": "/customers/administratsiya-gayskogo-gorodskogo-okruga-orenburgskoy-oblasti/",
+    "amount": "388750.0",
+    "currency_name": "RUB",
+    "date_published": "2024-07-30T10:16:50.000+03:00",
+    "lot_regions": [
+     "Оренбургская область"
+    ],
+    "date_last_update": null,
+    "lots_first_date_begin_auction": null,
+    "lots_count": 1,
+    "template": "common",
+    "mineral_type": null,
+    "section_category_name": "Закупки.Гос44",
+    "rebranding_truncated_path": null,
+    "custom_procedure_type_name": null,
+    "end_registration": "2024-08-06T06:00:00.000+03:00",
+    "guarantee_application_currency": "RUB",
+    "time_before_end_registration": -69260259
+   },
+   "relationships": {
+    "unique_lot_companies": {
+     "data": []
+    }
+   }
+  },
+  {
+   "id": "997485",
+   "type": "procedure",
+   "attributes": {
+    "with_guarantee_application": false,
+    "without_ep": true,
+    "_score": 46.675716,
+    "registry_number": "0851200000623004612",
+    "stage": "commission",
+    "title": "Оказание услуг по литью и напылению зуботехнических конструкций 0851200000623004612",
+    "platform_url": "https://gos.etpgpb.ru/front/procedure/view/39acc67a-a460-44b2-8dba-63b557996a9a",
+    "kind": "fz44",
+    "procedure_type_name": "Электронный аукцион",
+    "truncated_path": null,
+    "app_guarantee_type": null,
+    "total_guarantee_application": "0,00",
+    "company_name": "ГКУ НСО \"УКСИС\"",
+    "company_url": "/customers/gosudarstvennoe-kazennoe-uchrezhdenie-novosibirskoy-oblasti-upravlenie-kontraktnoy-sistemy/",
+    "amount": "30060.0",
+    "currency_name": "RUB",
+    "date_published": "2023-06-20T07:55:09.000+03:00",
+    "lot_regions": [
+     "Новосибирская область"
+    ],
+    "date_last_update": null,
+    "lots_first_date_begin_auction": "2023-06-28T06:00:00.000+03:00",
+    "lots_count": 1,
+    "template": "common",
+    "mineral_type": null,
+    "section_category_name": "Закупки.Гос44",
+    "rebranding_truncated_path": null,
+    "custom_procedure_type_name": null,
+    "end_registration": "2023-06-28T04:00:00.000+03:00",
+    "guarantee_application_currency": "RUB",
+    "time_before_end_registration": -104256369
+   },
+   "relationships": {
+    "unique_lot_companies": {
+     "data": []
+    }
+   }
+  }
+ ],
+ "included": [
+  {
+   "id": "22195",
+   "type": "company",
+   "attributes": {
+    "name": "СПБ ГБУ КЦСОН ВЫБОРГСКОГО РАЙОНА",
+    "slug": "sankt-peterburgskoe-gosudarstvennoe-byudzhetnoe-uchrezhdenie-kompleksnyy-tsentr-sotsialnogo-obsluzhivaniya-naseleniya-vyborgskogo-rayona"
+   }
+  },
+  {
+   "id": "8802",
+   "type": "company",
+   "attributes": {
+    "name": "«ПрофХолод»",
+    "slug": "ooo-profholod"
+   }
+  },
+  {
+   "id": "5603",
+   "type": "company",
+   "attributes": {
+    "name": "ЧПОУ ГАЗПРОМ ТЕХНИКУМ НОВЫЙ УРЕНГОЙ",
+    "slug": "chastnoe-professionalnoe-obrazovatelnoe-uchrezhdenie-gazprom-tehnikum-novyy-urengoy"
+   }
+  },
+  {
+   "id": "7548",
+   "type": "company",
+   "attributes": {
+    "name": "ГАЗПРОМНЕФТЬ - ЦЕНТР",
+    "slug": "ooo-gazpromneft-tsentr"
+   }
+  },
+  {
+   "id": "10859",
+   "type": "company",
+   "attributes": {
+    "name": "ГУП ЧУВАШСКОЙ РЕСПУБЛИКИ БОС МИНСТРОЯ ЧУВАШИИ",
+    "slug": "gosudarstvennoe-unitarnoe-predpriyatie-chuvashskoy-respubliki-biologicheskie-ochistnye-sooruzheniya-ministerstva-stroitelstva-arhitektury-i-zhilischno-kommunalnogo-hozyaystva-chuvashskoy-respubliki"
+   }
+  },
+  {
+   "id": "12049",
+   "type": "company",
+   "attributes": {
+    "name": "ГАЗПРОМ ГАЗОРАСПРЕДЕЛЕНИЕ НИЖНИЙ НОВГОРОД",
+    "slug": "ooo-gazprom-gazoraspredelenie-nizhniy-novgorod"
+   }
+  },
+  {
+   "id": "8402",
+   "type": "company",
+   "attributes": {
+    "name": "ГАУ СО ФАРМАЦИЯ",
+    "slug": "gosudarstvennoe-avtonomnoe-uchrezhdenie-sverdlovskoy-oblasti-farmatsiya"
+   }
+  },
+  {
+   "id": "11500",
+   "type": "company",
+   "attributes": {
+    "name": "БУ РЕСПУБЛИКАНСКАЯ ПСИХИАТРИЧЕСКАЯ БОЛЬНИЦА МИНЗДРАВА ЧУВАШИИ",
+    "slug": "byudzhetnoe-uchrezhdenie-chuvashskoy-respubliki-respublikanskaya-psihiatricheskaya-bolnitsa-ministerstva-zdravoohraneniya-chuvashskoy-respubliki"
+   }
+  },
+  {
+   "id": "12847",
+   "type": "company",
+   "attributes": {
+    "name": "АО СГТ",
+    "slug": "ao-soyuzgidrotrans"
+   }
+  }
+ ],
+ "meta": {
+  "total_pages": 2,
+  "total_count": 24
+ }
+}

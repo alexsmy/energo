@@ -8331,9 +8331,158 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-24T13:04:21.522Z",
-  "count": 108,
+  "updated": "2026-11-24T14:16:20.221Z",
+  "count": 124,
   "records": [
+   {
+    "id": "TEK:20392194",
+    "regNumber": "",
+    "externalId": "20392194",
+    "title": "Поставка деталей паровой турбины Р-50-130/20 для нужд филиала \"Невинномысская ГРЭС\" ПАО \"ЭЛ5-Энерго\" в 2027 г.",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЭЛ5-ЭНЕРГО\"",
+    "customerInn": "6671156423",
+    "customerCode": "",
+    "matchedOrgId": "H-EL5",
+    "matchedOrgName": "ЭЛ5-Энерго",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "0,01 ₽",
+    "priceNum": 0.01,
+    "published": "2026-11-24",
+    "deadline": "2026-12-01",
+    "updated": "2026-11-24",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "active",
+    "url": "https://www.tektorg.ru/zakupki/procedures/20392194",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-EL5"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20392194",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "TEK:20391645",
+    "regNumber": "",
+    "externalId": "20391645",
+    "title": "Ленты и уплотнения для Калининградской ТЭЦ-2",
+    "customer": "Филиал \"Калининградская ТЭЦ-2\" Акционерного общества \"Интер РАО – Электрогенерация\"",
+    "customerInn": "7704784450",
+    "customerCode": "",
+    "matchedOrgId": "C-IRAO-GEN",
+    "matchedOrgName": "Интер РАО — Электрогенерация",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "103 300 ₽",
+    "priceNum": 103300,
+    "published": "2026-11-24",
+    "deadline": "2026-11-30",
+    "updated": "2026-11-24",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "active",
+    "url": "https://www.tektorg.ru/market/procedures/20391645",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "C-IRAO-GEN",
+     "C-KALININGRAD",
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20391645",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "GPB:2124911",
+    "regNumber": "",
+    "externalId": "2124911",
+    "title": "Поставка торцевых уплотнений к насосам и запасных частей к ним для нужд ПАО \"ТГК-2\"",
+    "customer": "ПАО ТГК-2",
+    "customerInn": "7606053324",
+    "customerCode": "",
+    "matchedOrgId": "H-TGK2",
+    "matchedOrgName": "ТГК-2",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "223",
+    "price": "5 194 844,33 ₽",
+    "priceNum": 5194844.33,
+    "published": "2026-11-24",
+    "deadline": "2026-12-02",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312826",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-TGK2"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312826",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
    {
     "id": "RAD:rad-RAD260059643-120",
     "regNumber": "",
@@ -8357,7 +8506,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q43219ump4ubnd0",
     "keywords": [
      "Порошковые"
@@ -8381,7 +8530,8 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z"
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "local"
    },
    {
     "id": "TEK:tt-962878",
@@ -8406,7 +8556,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Приём заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/market/procedures/20391645",
     "keywords": [
      "Уплотнения"
@@ -8432,7 +8582,8 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z"
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616606621",
@@ -8457,7 +8608,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616606621",
     "keywords": [
      "Турбина",
@@ -8491,7 +8642,8 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z"
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616609473",
@@ -8516,7 +8668,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609473",
     "keywords": [
      "Уплотнения"
@@ -8558,7 +8710,57 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z"
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "local"
+   },
+   {
+    "id": "GPB:2122267",
+    "regNumber": "",
+    "externalId": "2122267",
+    "title": "Поставка ЗИП к превенторам плашечным (гайки, кольца, корпуса плашек, уплотнения, манжеты)",
+    "customer": "филиал «Оренбург бурение – Восточная Сибирь» ООО «Газпром бурение»",
+    "customerInn": "7736050003",
+    "customerCode": "",
+    "matchedOrgId": "H-GAZPROM",
+    "matchedOrgName": "Газпром",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "223",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-23",
+    "deadline": "2026-12-09",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312026",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-GAZPROM"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312026",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "32616605882",
@@ -8583,7 +8785,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616605882",
     "keywords": [
      "Турбина",
@@ -8609,7 +8811,8 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z"
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616602654",
@@ -8634,7 +8837,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=0e31b0dc-8354-4d9c-a0bb-92bbf067cfb0&purchaseNoticeNumber=32616602654",
     "keywords": [
      "Турбина"
@@ -8681,7 +8884,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-23T02:20:57.973Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20379727",
@@ -8718,7 +8922,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gentender",
@@ -8735,6 +8939,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/market/procedures/20379727",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379727",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
     "isNew": false
@@ -8762,7 +8974,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
     "keywords": [
      "Лопатки"
@@ -8774,7 +8986,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:52:22.538Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -8783,10 +8995,17 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
       "foundAt": "2026-11-20T15:52:22.538Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
    },
    {
     "id": "ROS:32616599981",
@@ -8811,7 +9030,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616599981",
     "keywords": [
      "Турбина",
@@ -8836,7 +9055,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:32616516992",
@@ -8861,7 +9081,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516992",
     "keywords": [
      "Турбина"
@@ -8884,7 +9104,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:32616604656",
@@ -8909,7 +9130,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616604656",
     "keywords": [
      "Уплотнения"
@@ -8932,7 +9153,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T16:40:01.377Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616594944",
@@ -8957,7 +9179,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
     "keywords": [
      "Турбина"
@@ -8996,7 +9218,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616595899",
@@ -9021,7 +9244,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
     "keywords": [
      "Турбина"
@@ -9060,7 +9283,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616595171",
@@ -9085,7 +9309,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
     "keywords": [
      "Турбина",
@@ -9134,7 +9358,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:36:45.567Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616595000",
@@ -9159,7 +9384,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595000",
     "keywords": [
      "Лопатки"
@@ -9190,7 +9415,107 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
+    "isNew": false,
+    "phaseSource": "local"
+   },
+   {
+    "id": "TEK:20376142",
+    "regNumber": "",
+    "externalId": "20376142",
+    "title": "Ремонт РВД (№1416689СБ) паровой турбины Т-130/160-12,8 ЭБ ст. №1 Тюменской ТЭЦ-1",
+    "customer": "Публичное акционерное общество \"Форвард Энерго\"",
+    "customerInn": "7203162698",
+    "customerCode": "",
+    "matchedOrgId": "H-FORWARD",
+    "matchedOrgName": "Форвард Энерго",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "3 213 000 ₽",
+    "priceNum": 3213000,
+    "published": "2026-11-19",
+    "deadline": "2026-12-07",
+    "updated": "2026-11-19",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "active",
+    "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
+    "keywords": [
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "matchedKeywords": [
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "enterpriseIds": [
+     "H-FORWARD"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ],
     "isNew": false
+   },
+   {
+    "id": "GPB:2118857",
+    "regNumber": "",
+    "externalId": "2118857",
+    "title": "УПЛОТНЕНИЕ Т-85.00.00",
+    "customer": "Филиал «Самарский» ПАО «Т Плюс»",
+    "customerInn": "6315376946",
+    "customerCode": "",
+    "matchedOrgId": "H-TPLUS",
+    "matchedOrgName": "Т Плюс",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-19",
+    "deadline": "2026-11-25",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1049738",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-TPLUS"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1049738",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "RAD:rad-RAD260059021-5",
@@ -9215,7 +9540,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
     "keywords": [
      "Уплотнения"
@@ -9238,7 +9563,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021",
@@ -9263,7 +9589,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
     "keywords": [
      "Уплотнения"
@@ -9286,7 +9612,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-2",
@@ -9311,7 +9638,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
     "keywords": [
      "Уплотнения"
@@ -9334,7 +9661,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-3",
@@ -9359,7 +9687,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
     "keywords": [
      "Уплотнения"
@@ -9382,7 +9710,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-4",
@@ -9407,7 +9736,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
     "keywords": [
      "Уплотнения"
@@ -9430,7 +9759,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "B2B:32616461107",
@@ -9455,7 +9785,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
     "keywords": [
      "Турбина"
@@ -9478,7 +9808,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616592466",
@@ -9503,7 +9834,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592466",
     "keywords": [
      "Турбина"
@@ -9542,7 +9873,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616593309",
@@ -9567,7 +9899,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "archive",
+    "phase": "active",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593309",
     "keywords": [
      "Турбина"
@@ -9606,8 +9938,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
    },
    {
     "id": "32616592885",
@@ -9632,7 +9963,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592885",
     "keywords": [
      "Турбина"
@@ -9671,7 +10002,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616593352",
@@ -9696,7 +10028,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
     "keywords": [
      "Уплотнения"
@@ -9728,7 +10060,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20375040",
@@ -9753,7 +10086,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/interrao/procedures/20375040",
     "keywords": [
      "Уплотнения"
@@ -9765,7 +10098,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -9774,11 +10107,67 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20375040",
       "foundAt": "2026-11-24T05:58:04.093Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20375040",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z",
-    "phaseSource": "local"
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "GPB:2116926",
+    "regNumber": "",
+    "externalId": "2116926",
+    "title": "59939 от 18.11.2026 - Модуль порошкового пожаротушения",
+    "customer": "ГАЗПРОМ НЕФТЕХИМ САЛАВАТ",
+    "customerInn": "7736050003",
+    "customerCode": "",
+    "matchedOrgId": "H-GAZPROM",
+    "matchedOrgName": "Газпром",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "223",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-18",
+    "deadline": "2026-11-25",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310408",
+    "keywords": [
+     "Порошковые"
+    ],
+    "matchedKeywords": [
+     "Порошковые"
+    ],
+    "enterpriseIds": [
+     "H-GAZPROM"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310408",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "RAD:32616584882",
@@ -9803,7 +10192,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616584882",
     "keywords": [
      "Турбина",
@@ -9828,7 +10217,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616583256",
@@ -9853,7 +10243,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
     "keywords": [
      "Турбина"
@@ -9885,7 +10275,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T13:04:21.643Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:fab-5597381",
@@ -9910,7 +10301,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Приём заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/v2/trades/procedure/view/MzhWYKy7C11V7_t6Z43ltw",
     "keywords": [
      "Турбина"
@@ -9933,7 +10324,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20293988",
@@ -9958,7 +10350,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-13",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/interrao/procedures/20293988",
     "keywords": [
      "Турбина"
@@ -9970,7 +10362,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -9979,11 +10371,67 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20293988",
       "foundAt": "2026-11-24T05:58:04.093Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20293988",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z",
-    "phaseSource": "local"
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "GPB:2112252",
+    "regNumber": "",
+    "externalId": "2112252",
+    "title": "Лот 39 ДТМЦ/Комплект ЗИП к подшипникам и маслогазовым уплотнениям ЦНД,ЦСД,ЦВД",
+    "customer": "ГАЗПРОМ НЕФТЕХИМ САЛАВАТ",
+    "customerInn": "7736050003",
+    "customerCode": "",
+    "matchedOrgId": "H-GAZPROM",
+    "matchedOrgName": "Газпром",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "223",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-13",
+    "deadline": "2026-12-04",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1309127",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-GAZPROM"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1309127",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "ZAKAZ:32616573382",
@@ -10008,7 +10456,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-12",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573382",
     "keywords": [
      "Турбина"
@@ -10031,7 +10479,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616564450",
@@ -10056,7 +10505,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
     "keywords": [
      "Турбина"
@@ -10087,8 +10536,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T12:15:00.462Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
    },
    {
     "id": "32616558416",
@@ -10113,7 +10561,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/32616558416/1",
     "keywords": [
      "Турбина"
@@ -10160,7 +10608,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:16:44.880Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616557260",
@@ -10185,7 +10634,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1dadc958-811e-480d-a648-c779f2337f93&purchaseNoticeNumber=32616557260",
     "keywords": [
      "Турбина",
@@ -10234,7 +10683,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20193697",
@@ -10259,7 +10709,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-04",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
     "keywords": [
      "Турбина"
@@ -10271,7 +10721,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10280,10 +10730,66 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
+   },
+   {
+    "id": "GPB:2100159",
+    "regNumber": "",
+    "externalId": "2100159",
+    "title": "Манжеты, уплотнения, шнур",
+    "customer": "Филиал «Самарский» ПАО «Т Плюс»",
+    "customerInn": "6315376946",
+    "customerCode": "",
+    "matchedOrgId": "H-TPLUS",
+    "matchedOrgName": "Т Плюс",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "78 663,98 ₽",
+    "priceNum": 78663.98,
+    "published": "2026-11-03",
+    "deadline": "2026-11-27",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1041088",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-TPLUS"
+    ],
+    "foundAt": "2026-11-24T14:16:47.134Z",
+    "lastSeen": "2026-11-24T14:16:47.134Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1041088",
+      "foundAt": "2026-11-24T14:16:47.134Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "TEK:20188037",
@@ -10308,7 +10814,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-02",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/interrao/procedures/20188037",
     "keywords": [
      "Турбина"
@@ -10320,7 +10826,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10329,11 +10835,68 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20188037",
       "foundAt": "2026-11-24T05:58:04.093Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20188037",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z",
-    "phaseSource": "local"
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "TEK:19926134",
+    "regNumber": "",
+    "externalId": "19926134",
+    "title": "Поставка торцевых уплотнений для обратного трубопровода тепловой сети для нужд энергетического комплекса филиала ПАО «ТГК-14» Читинская генерация",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ № 14\"",
+    "customerInn": "7534018889",
+    "customerCode": "",
+    "matchedOrgId": "H-TGK14",
+    "matchedOrgName": "ТГК-14",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "223",
+    "price": "440 157,38 ₽",
+    "priceNum": 440157.38,
+    "published": "2026-08-07",
+    "deadline": "",
+    "updated": "2026-08-07",
+    "status": "Подача заявок",
+    "stage": "Подача заявок",
+    "phase": "active",
+    "url": "https://www.tektorg.ru/bi_223fz/procedures/19926134",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-TGK14",
+     "C-TGK1"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/bi_223fz/procedures/19926134",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "RAD:rad-RAD260037550-11",
@@ -10358,7 +10921,7 @@ window.TENDER_DATA = {
     "updated": "2026-07-31",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000pvdn09mh4fpubho",
     "keywords": [
      "Турбина"
@@ -10381,7 +10944,57 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
+   },
+   {
+    "id": "TEK:19925683",
+    "regNumber": "",
+    "externalId": "19925683",
+    "title": "Выполнение работ по аварийному ремонту и восстановлению работоспособности газодинамических уплотнений цилиндра высокого давления DGS20/180ZT8-UA1 (201.332) зав.№19179038 (25.2952) ЦВД ОП, зав.№19215774 (25.2950) ЦВД ОУП",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАЗПРОМ МЕТАНОЛ\"",
+    "customerInn": "7017156263",
+    "customerCode": "",
+    "matchedOrgId": "H-GAZPROM",
+    "matchedOrgName": "Газпром",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "223",
+    "price": "8 800 165 ₽",
+    "priceNum": 8800165,
+    "published": "2026-07-23",
+    "deadline": "",
+    "updated": "2026-07-23",
+    "status": "Подача заявок",
+    "stage": "Подача заявок",
+    "phase": "active",
+    "url": "https://www.tektorg.ru/bi_223fz/procedures/19925683",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-GAZPROM"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/bi_223fz/procedures/19925683",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "ROS:RH17112600015",
@@ -10406,7 +11019,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/RH17112600015/1",
     "keywords": [
      "Турбина",
@@ -10431,8 +11044,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:37:06.675Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
    },
    {
     "id": "ROS:RH17112600014",
@@ -10457,7 +11069,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/RH17112600014/1",
     "keywords": [
      "Лопатки",
@@ -10482,8 +11094,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:37:06.675Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": false
    },
    {
     "id": "ROS:B1811261948307",
@@ -10508,7 +11119,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
     "keywords": [
      "Уплотнения"
@@ -10520,7 +11131,7 @@ window.TENDER_DATA = {
      "R-SEVMASH"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -10529,11 +11140,18 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
       "foundAt": "2026-11-24T05:58:20.217Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z",
-    "phaseSource": "local"
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "ROS:ATOM13112600336",
@@ -10558,7 +11176,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/ATOM13112600336/1",
     "keywords": [
      "Уплотнения"
@@ -10570,7 +11188,7 @@ window.TENDER_DATA = {
      "O-ZIO"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -10579,11 +11197,216 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/ATOM13112600336/1",
       "foundAt": "2026-11-24T05:58:20.217Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/ATOM13112600336/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ],
     "isNew": true,
-    "firstSeen": "2026-11-24T13:04:21.522Z",
-    "phaseSource": "local"
+    "firstSeen": "2026-11-24T14:16:20.221Z"
+   },
+   {
+    "id": "ROS:ATOM10112600431",
+    "regNumber": "",
+    "externalId": "ATOM10112600431",
+    "title": "мониторинг цен в электронной форме на поставка установки для автоматической плазменно- порошковой наплавки с предварительным и сопутствующим подогревом и последующей термической обработки",
+    "customer": "Волгодонский филиал акционерного общества «Инжиниринговая компания «АЭМ-технологии»",
+    "customerInn": "7817311895",
+    "customerCode": "",
+    "matchedOrgId": "O-AEMTECH",
+    "matchedOrgName": "АЭМ-технологии",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-12",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/ATOM10112600431/1",
+    "keywords": [
+     "Порошковые"
+    ],
+    "matchedKeywords": [
+     "Порошковые"
+    ],
+    "enterpriseIds": [
+     "O-AEMTECH"
+    ],
+    "foundAt": "2026-11-24T14:16:58.315Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/ATOM10112600431/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "deadline"
+   },
+   {
+    "id": "ROS:KIM000011150",
+    "regNumber": "",
+    "externalId": "KIM000011150",
+    "title": "Щит распределительный ЩМ-РУСП-32-3х16/3+1х16/5 32А IP54 сталь с порошковой покраской Российская Федерация",
+    "customer": "Акционерное общество \"Дальневосточная генерирующая компания\"",
+    "customerInn": "1434031363",
+    "customerCode": "",
+    "matchedOrgId": "C-DGK",
+    "matchedOrgName": "ДГК",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2024-07-15",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/KIM000011150/1",
+    "keywords": [
+     "Порошковые"
+    ],
+    "matchedKeywords": [
+     "Порошковые"
+    ],
+    "enterpriseIds": [
+     "C-DGK"
+    ],
+    "foundAt": "2026-11-24T14:16:58.315Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/KIM000011150/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z",
+    "phaseSource": "deadline"
+   },
+   {
+    "id": "ROS:RH17022500002",
+    "regNumber": "",
+    "externalId": "RH17022500002",
+    "title": "поставка турбинного масла ТП-22с (ж/д) цистерна)",
+    "customer": "Акционерное общество \"Дальневосточная генерирующая компания\"",
+    "customerInn": "1434031363",
+    "customerCode": "",
+    "matchedOrgId": "C-DGK",
+    "matchedOrgName": "ДГК",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2025-02-18",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH17022500002/1",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-DGK"
+    ],
+    "foundAt": "2026-11-24T14:16:58.315Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH17022500002/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ],
+    "isNew": false,
+    "phaseSource": "deadline"
+   },
+   {
+    "id": "ROS:32616609473",
+    "regNumber": "",
+    "externalId": "32616609473",
+    "title": "Запасные части к насосам (торцевые уплотнения специальных насосов)",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ\"",
+    "customerInn": "7703642903",
+    "customerCode": "",
+    "matchedOrgId": "H-IRAO",
+    "matchedOrgName": "Интер РАО",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "5 908 889,31 ₽",
+    "priceNum": 5908889.31,
+    "published": "",
+    "deadline": "2026-12-03",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "active",
+    "url": "https://www.roseltorg.ru/procedure/32616609473/1",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-24T14:16:58.315Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/32616609473/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-24T14:16:20.221Z"
    },
    {
     "id": "32616598751",
@@ -11296,7 +12119,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -11305,6 +12128,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20242984",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20242984",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11344,7 +12175,7 @@ window.TENDER_DATA = {
      "O-ZTL"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -11353,6 +12184,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20231059",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20231059",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11630,7 +12469,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gentender",
@@ -11647,6 +12486,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/market/procedures/20200493",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20200493",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11685,7 +12532,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -11694,6 +12541,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20200662",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20200662",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11828,7 +12683,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11853,6 +12708,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20197286",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20197286",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11892,7 +12755,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gentender",
@@ -11909,6 +12772,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/market/procedures/20199368",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20199368",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11947,7 +12818,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -11956,6 +12827,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20196314",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20196314",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -11994,7 +12873,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-20T16:34:03.109Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -12003,6 +12882,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20199297",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20199297",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -12088,7 +12975,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -12097,6 +12984,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20193595",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20193595",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -12199,7 +13094,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gosplan",
@@ -12224,6 +13119,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20192900",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20192900",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -12587,7 +13490,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -12596,6 +13499,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20184970",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20184970",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -12895,6 +13806,53 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "TEK:20181721",
+    "regNumber": "",
+    "externalId": "20181721",
+    "title": "Поставка запасных частей к турбине для нужд ТТЭЦ-1 ПАО «Форвард Энерго»",
+    "customer": "Публичное акционерное общество \"Форвард Энерго\"",
+    "customerInn": "7203162698",
+    "customerCode": "",
+    "matchedOrgId": "H-FORWARD",
+    "matchedOrgName": "Форвард Энерго",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "2 901 500 ₽",
+    "priceNum": 2901500,
+    "published": "2026-10-29",
+    "deadline": "2026-11-16",
+    "updated": "2026-10-29",
+    "status": "Работа комиссии",
+    "stage": "Работа комиссии",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/zakupki/procedures/20181721",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-FORWARD"
+    ],
+    "foundAt": "2026-11-24T14:16:20.323Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/zakupki/procedures/20181721",
+      "foundAt": "2026-11-24T14:16:20.323Z"
+     }
+    ]
+   },
+   {
     "id": "RAD:rad-RAD260054582",
     "regNumber": "",
     "externalId": "rad-RAD260054582",
@@ -13132,7 +14090,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T13:04:21.643Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13157,6 +14115,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20130440",
       "foundAt": "2026-11-20T15:36:45.567Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20130440",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -13600,7 +14566,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-24T14:16:20.323Z",
     "sources": [
      {
       "source": "tektorg",
@@ -13609,6 +14575,14 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/interrao/procedures/20090948",
       "foundAt": "2026-11-24T05:58:04.093Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20090948",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -14000,7 +14974,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -14009,6 +14983,14 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
       "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ]
    },
@@ -14049,7 +15031,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -14058,6 +15040,14 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
       "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ]
    },
@@ -14098,7 +15088,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -14107,6 +15097,14 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
       "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ]
    },
@@ -14145,7 +15143,7 @@ window.TENDER_DATA = {
      "R-ZVEZDOCHKA"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-24T14:16:58.315Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -14154,26 +15152,34 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/B1211261023278/1",
       "foundAt": "2026-11-24T05:58:20.217Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/B1211261023278/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ]
    }
   ]
  },
  "status": {
-  "lastRun": "2026-11-24T13:04:21.522Z",
+  "lastRun": "2026-11-24T14:16:20.221Z",
   "mode": "live",
-  "total": 108,
-  "unique": 148,
-  "matchedOrg": 108,
-  "active": 30,
-  "archive": 78,
+  "total": 124,
+  "unique": 146,
+  "matchedOrg": 124,
+  "active": 24,
+  "archive": 100,
   "bySource": {
+   "TEK": 26,
+   "GPB": 14,
    "RAD": 17,
-   "TEK": 20,
    "EIS": 42,
    "SBER": 1,
-   "ROS": 13,
-   "GPB": 8,
+   "ROS": 17,
    "B2B": 4,
    "FAB": 1,
    "ZAKAZ": 1,
@@ -14181,11 +15187,29 @@ window.TENDER_DATA = {
   },
   "sources": [
    {
-    "name": "gentender",
+    "name": "tektorg-direct",
     "available": true,
-    "requests": 467,
-    "okRequests": 467,
-    "records": 148,
+    "requests": 24,
+    "okRequests": 24,
+    "records": 73,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "etpgpb-direct",
+    "available": true,
+    "requests": 11,
+    "okRequests": 11,
+    "records": 43,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "roseltorg-direct",
+    "available": true,
+    "requests": 24,
+    "okRequests": 24,
+    "records": 30,
     "errors": 0,
     "errorItems": []
    }
@@ -14193,13 +15217,13 @@ window.TENDER_DATA = {
   "errors": 0,
   "probeErrors": 0,
   "probeOk": 0,
-  "droppedNoKeyword": 0,
+  "droppedNoKeyword": 23,
   "titlesSuspicious": 0,
-  "localArchived": 11,
-  "newCount": 10,
-  "corroborated": 44,
-  "corroboratedPct": 41,
-  "relevantPerRequest": 0.32,
+  "localArchived": 32,
+  "newCount": 23,
+  "corroborated": 63,
+  "corroboratedPct": 51,
+  "relevantPerRequest": 2.47,
   "deepArchive": true,
   "incrementalFrom": "",
   "budget": {
@@ -14210,7 +15234,7 @@ window.TENDER_DATA = {
    },
    "gentender": {
     "limit": 560,
-    "used": 467,
+    "used": 0,
     "exhausted": false
    },
    "tektorg": {
@@ -14226,6 +15250,21 @@ window.TENDER_DATA = {
    "roseltorg": {
     "limit": 40,
     "used": 0,
+    "exhausted": false
+   },
+   "tektorg-direct": {
+    "limit": 40,
+    "used": 24,
+    "exhausted": false
+   },
+   "etpgpb-direct": {
+    "limit": 40,
+    "used": 11,
+    "exhausted": false
+   },
+   "roseltorg-direct": {
+    "limit": 40,
+    "used": 24,
     "exhausted": false
    },
    "eis-html": {
@@ -14244,11 +15283,11 @@ window.TENDER_DATA = {
   "archiveDepthDays": 30,
   "archiveOverlapDays": 2,
   "sourcePriority": [
+   "tektorg-direct",
+   "etpgpb-direct",
+   "roseltorg-direct",
    "gosplan",
    "gentender",
-   "tektorg",
-   "etpgpb",
-   "roseltorg",
    "eis-html"
   ],
   "requestBudget": {
@@ -14257,6 +15296,9 @@ window.TENDER_DATA = {
    "tektorg": 40,
    "etpgpb": 40,
    "roseltorg": 40,
+   "tektorg-direct": 40,
+   "etpgpb-direct": 40,
+   "roseltorg-direct": 40,
    "eis-html": 40
   },
   "gosplanInterval": 10000,
@@ -14270,10 +15312,16 @@ window.TENDER_DATA = {
   "gentenderMaxRows": 100,
   "tektorgInterval": 900,
   "tektorgMaxPages": 2,
+  "tektorgDirectInterval": 900,
+  "tektorgDirectMaxPages": 4,
   "gpbInterval": 900,
   "gpbMaxPages": 2,
+  "gpbDirectInterval": 900,
+  "gpbDirectMaxPages": 2,
   "roseltorgInterval": 900,
   "roseltorgMaxPages": 2,
+  "roseltorgDirectInterval": 900,
+  "roseltorgDirectMaxPages": 2,
   "htmlInterval": 1500,
   "htmlMaxPages": 5,
   "recordsPerPage": 10,

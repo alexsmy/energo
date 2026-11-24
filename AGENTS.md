@@ -5,7 +5,7 @@
 
 Документация: `docs/PROJECT.md` — это пользовательская документация (README), намеренно названная иначе, чтобы не показываться на главной странице репозитория. **НЕ добавлять корневой `README.md`** — это сделано намеренно, чтобы документация не светилась на главной странице репозитория (для следующих сессий: не «исправлять» это). Опорный файл сессий — `AGENTS.md`, план закупок — `PLAN_zakupki.md`, план прямого парсинга — `PLAN_parsing.md`.
 
-## Текущее состояние (на 24.11.2026, версия данных 2.42 / UI 2.57)
+## Текущее состояние (на 24.11.2026, версия данных 2.42 / UI 2.58)
 
 - **552 записи**: 28 холдингов, 194 юрлица, 330 станций/объектов; из юрлиц — 40 ремонтных и 112 ОЕМ/инжиниринг.
 - **Достоверность**: 552 high / **0 medium** / 0 low. Фильтр, сортировка, столбец и индикатор достоверности удалены из UI.
@@ -28,8 +28,11 @@
   `node scripts/keywords.js add|remove` (фразы — с `--search=`, `--must=`, `--kind=`).
   Режимы/источники/глубина/бюджеты — `data/tender-settings.json`.
   Сбор идёт из нескольких независимых источников: **ГосПлан API** (ЕИС 44/223/615, 10 запросов/мин),
-  агрегатор **GenTender** (все площадки, обход по ИНН), прямые адаптеры **ТЭК-Торг**,
-  **ЭТП ГПБ**, **Росэлторг**; HTML-парсер ЕИС **не удалён**, работает как резерв.
+  агрегатор **GenTender** (все площадки, обход по ИНН), и **независимые прямые парсеры
+  площадок** `tektorg-direct` (POST `/api/getProcedures`, JSON), `etpgpb-direct`
+  (GET `/api/v2/procedures/`, JSON:API), `roseltorg-direct` (`search_ajax`, HTML-фрагмент).
+  Старые SSR-адаптеры остаются доступны для A/B через `--source=tektorg|etpgpb|roseltorg`;
+  HTML-парсер ЕИС **не удалён**, работает как резерв.
   Число запросов ограничено `requestBudget`. Журнал каждого
   запроса — `data/collect-log.json`, просмотр через `log.html` (ссылка внизу вкладки).
   Сбор по рабочим дням в окна **06:00 / 08:00 / 10:00 МСК** через `.github/workflows/tenders-update.yml` (первое сработавшее собирает, остальные пропускают без запросов)
@@ -91,14 +94,19 @@ app/                       # корень репозитория (GitHub Pages s
 │   └── collect-log.json   # АВТО: журнал запросов (последние 30 запусков)
 ├── scripts/
 │   ├── collect-tenders.js # оркестратор: источники → нормализация → дедуп → лог
+│   ├── test-direct.js     # офлайн-тесты прямых адаптеров на фикстурах
+│   ├── compare-direct.js  # сверка выдачи до/после прямого сбора
 │   ├── keywords.js        # add/remove/list для tender-keywords.json
 │   ├── keyword-stats.js   # статистика выдачи по словам (npm run stats:keywords)
 │   ├── sources/
 │   │   ├── gosplan.js     # ОСНОВНОЙ: бесплатный JSON API ЕИС (44/223/615)
 │   │   ├── gentender.js   # агрегатор: все площадки, обход по ИНН и словам
-│   │   ├── tektorg.js     # прямая площадка ТЭК-Торг (__NEXT_DATA__)
-│   │   ├── etpgpb.js      # прямая площадка ЭТП ГПБ (__NUXT_DATA__)
-│   │   ├── roseltorg.js   # прямая площадка Росэлторг (search_ajax)
+│   │   ├── tektorg.js     # старый SSR (__NEXT_DATA__), доступен для A/B
+│   │   ├── etpgpb.js      # старый SSR (__NUXT_DATA__), доступен для A/B
+│   │   ├── roseltorg.js   # старый search_ajax, доступен для A/B
+│   │   ├── tektorg-direct.js  # прямой POST /api/getProcedures (JSON)
+│   │   ├── etpgpb-direct.js   # прямой GET /api/v2/procedures/ (JSON:API)
+│   │   └── roseltorg-direct.js # прямой search_ajax + явный parse-failure
 │   │   └── eis-html.js    # РЕЗЕРВ: старый HTML-парсер ЕИС (НЕ удалён)
 │   └── lib/               # throttle, match-org, normalize, platforms, nuxt-data, logger
 ├── prototype/             # изолированные тесты API (не участвуют в проде)
@@ -820,7 +828,33 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     3,8 КБ мусора); зато `__NEXT_DATA__.props.pageProps.initialReduxState.listingProcedures`
     содержит 20 структурированных процедур, пагинация `page=1/2/3` работает —
     наш адаптер уже читает этот путь, ранний диагноз «пусто» был неверным.
-    Прод не менялся: всё это план, требующий отдельного этапа.
+    Реализовано в п. 56.
+
+56. Версия 2.58 (24.11.2026): независимые от внешних API прямые парсеры.
+    - `ThrottledClient.postJson()` — POST с JSON-телом, те же ретраи/лимиты/куки.
+    - `scripts/sources/tektorg-direct.js`: POST `https://www.tektorg.ru/api/getProcedures`
+      с `{params:{name,page,limit:20}}`, 7–40 КБ вместо 640 КБ SSR; `mapRow()` отдаёт
+      те же поля, что старый адаптер, поэтому ID `TEK:<id>` совпадают и дедуп склеивает.
+    - `scripts/sources/etpgpb-direct.js`: GET `https://etpgpb.ru/api/v2/procedures/?search=…&page=…`,
+      JSON:API вместо декодирования `__NUXT_DATA__`; маппинг `data[].attributes`.
+    - `scripts/sources/roseltorg-direct.js`: тот же `search_ajax`, но с явным
+      `broken = markup-changed-or-challenge` вместо тихого «0 записей».
+    - `sourcePriority` и `--dry-run`: сначала собственные прямые парсеры, затем
+      ГосПлан, GenTender и резервный HTML-парсер. В `sourceRank()` при дедупликации
+      приоритет: прямой источник (0) → ГосПлан (1) → старый SSR (2) → GenTender (3)
+      → eis-html (4): при совпадении остаётся ссылка и поля площадки. API ГосПлан
+      и GenTender остаются источниками расширения охвата/ЕИС, а не «заменой»
+      прямого парсера. Старые SSR-адаптеры доступны через
+      `--source=tektorg|etpgpb|roseltorg` для A/B. Бюджеты: 40/40/40, интервал 900 мс,
+      страницы 4/2/2. План 422/день (было 410).
+    - Тесты: `npm run test:direct` — 8/8 на сохранённых ответах (`prototype/fixtures/`),
+      включая мок POST, склейку дублей со старым источником и приоритет `sourceRank`. Живой прогон
+      `--source=tektorg-direct,etpgpb-direct,roseltorg-direct --force --no-probe`:
+      24+11+24 запроса, 73+43+30 найдено, 0 ошибок. Сверка `npm run compare:direct`:
+      **108 → 124** записи, +16 (6/6/4), 0 потерь, 0 дублей, 0 без ключевого слова.
+    - `version.json` → `2.58.20261124`, кэш-бастеры `?v=2.58`, `node build.js`
+      синхронизировал `meta.version`. Тесты 23/23, 13/13, 8/8, валидатор 0,
+      `check-release` OK (124 закупки без дублей).
 
 ## Что осталось / риски
 

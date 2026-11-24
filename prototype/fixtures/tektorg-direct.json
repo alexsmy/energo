@@ -1,0 +1,93 @@
+{
+ "total": 117,
+ "totalPages": 6,
+ "currentPage": 1,
+ "limitPage": 20,
+ "data": [
+  {
+   "id": 20065660,
+   "remoteId": 3756774,
+   "registryNumber": "3756774",
+   "title": "Ремонт вентилятора аспирационной установки «белых дымов» ванны цинкования (восстановление посадочного места под подшипник вала методом наплавки/напыления с последующей механической обработкой без демонтажа вала)",
+   "statusName": "Подача предложений",
+   "statusLots": [
+    "Подача предложений"
+   ],
+   "typeName": "Запрос ценовых предложений",
+   "organizerName": "Республиканское дочернее унитарное производственное предприятие «Конус» республиканского унитарного предприятия  «Научно-практический центр  Национальной академии наук  Беларуси по механизации сельского хозяйства»",
+   "inn": "500015616",
+   "kpp": "",
+   "dates": {
+    "datePublished": "2026-10-16T11:46:14+03:00",
+    "dateEndRegistration": "2026-11-24T23:59:59+03:00"
+   },
+   "sectionAlias": "ncm",
+   "subsectionAlias": "ncm",
+   "smallBiz": false,
+   "sumPrice": "7650 Br",
+   "securityDepositEnabled": false,
+   "okpd2": [],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:15:48:13",
+   "typeCustomName": "Запрос ценовых предложений",
+   "etp": "НЦМиКЦ"
+  },
+  {
+   "id": 20384886,
+   "remoteId": 3864484,
+   "registryNumber": "3864484",
+   "title": "Мишень для напыления пленок оксида индия-олова",
+   "statusName": "Подача предложений",
+   "statusLots": [
+    "Подача предложений"
+   ],
+   "typeName": "Закупка из одного источника (в электронном виде)",
+   "organizerName": "ГОСУДАРСТВЕННОЕ НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ «НАУЧНО-ПРАКТИЧЕСКИЙ ЦЕНТР НАЦИОНАЛЬНОЙ АКАДЕМИИ НАУК БЕЛАРУСИ ПО МАТЕРИАЛОВЕДЕНИЮ»",
+   "inn": "100029036",
+   "kpp": "",
+   "dates": {
+    "datePublished": "2026-11-23T09:38:35+03:00",
+    "dateEndRegistration": "2026-11-26T23:59:59+03:00"
+   },
+   "sectionAlias": "ncm",
+   "subsectionAlias": "ncm",
+   "smallBiz": false,
+   "sumPrice": "6439.26 Br",
+   "securityDepositEnabled": false,
+   "okpd2": [],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:1:26:21",
+   "typeCustomName": "Закупка из одного источника (в электронном виде)",
+   "etp": "НЦМиКЦ"
+  },
+  {
+   "id": 6765054,
+   "remoteId": 10271388,
+   "registryNumber": "32312052553",
+   "title": "0015-Выполнение работ по напылению многослойного металлоподобного композиционного покрытия на металлические зубные протезы",
+   "statusName": null,
+   "statusLots": [],
+   "typeName": "Неопределено",
+   "organizerName": "БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ВОРОНЕЖСКОЙ ОБЛАСТИ          \"АГЕНТСТВО ГОСУДАРСТВЕННЫХ ЗАКУПОК ВОРОНЕЖСКОЙ     ОБЛАСТИ\"",
+   "inn": "3662158965",
+   "kpp": "366601001",
+   "dates": {
+    "datePublished": "2023-01-23T00:00:00+03:00"
+   },
+   "sectionAlias": "bi_223fz",
+   "subsectionAlias": null,
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": null,
+   "okved2": null,
+   "geoPoints": [],
+   "timeToEndRegistration": "",
+   "typeCustomName": "",
+   "etp": "BI 223ФЗ"
+  }
+ ],
+ "hash": "0aa3ed0e60fbb552c4005043d89ed7d5"
+}

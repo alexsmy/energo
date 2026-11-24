@@ -54,7 +54,7 @@ class ThrottledClient {
     this.cookies.set(host, jar);
   }
 
-  async _fetchOnce(url, asJson) {
+  async _fetchOnce(url, asJson, reqOpts) {
     let current = url;
     for (let hop = 0; hop < 6; hop++) {
       const headers = {
@@ -66,8 +66,13 @@ class ThrottledClient {
       if (this.browser) headers['Accept-Language'] = 'ru-RU,ru;q=0.9,en;q=0.6';
       const cookie = this._cookieHeader(current);
       if (cookie) headers.Cookie = cookie;
-
-      const res = await fetch(current, { redirect: 'manual', headers, signal: AbortSignal.timeout(this.timeout) });
+      const init = { redirect: 'manual', headers, signal: AbortSignal.timeout(this.timeout) };
+      if (reqOpts && reqOpts.method) init.method = reqOpts.method;
+      if (reqOpts && reqOpts.body != null) {
+        headers['Content-Type'] = 'application/json;charset=UTF-8';
+        init.body = reqOpts.body;
+      }
+      const res = await fetch(current, init);
       this._storeCookies(current, res);
       const loc = res.headers.get('location');
       if (res.status >= 300 && res.status < 400 && loc) {
@@ -90,15 +95,16 @@ class ThrottledClient {
 
   async getJson(url) { return this._get(url, true); }
   async getText(url) { return this._get(url, false); }
+  async postJson(url, body) { return this._get(url, true, { method: 'POST', body: JSON.stringify(body) }); }
 
-  async _get(url, asJson) {
+  async _get(url, asJson, reqOpts) {
     let lastErr = null;
     for (let attempt = 0; attempt < this.retries; attempt++) {
       const wait = this.minInterval - (Date.now() - this.last);
       if (wait > 0) await sleep(wait);
       this.last = Date.now();
       try {
-        return await this._fetchOnce(url, asJson);
+        return await this._fetchOnce(url, asJson, reqOpts);
       } catch (e) {
         lastErr = e;
         if (e.status === 429) {

@@ -1,6 +1,10 @@
 # План следующего этапа: прямой парсинг ЭТП и «только полезные данные»
 
-Дата исследования: **24.11.2026**. Статус: исследование и локальные тесты завершены; правки в прод **не внесены** — это план следующего этапа.
+Дата исследования: **24.11.2026**. Статус: **этап 2 внедрён** (`tektorg-direct`,
+`etpgpb-direct`, `roseltorg-direct`), этап 1 частично закрыт пагинацией ТЭК-Торга
+(4 страницы вместо 2); reader-фолбэки (этап 4) остаются опциональными. Собственные
+парсеры стоят первыми в `sourcePriority` и выигрывают у API при дедупликации
+(`sourceRank`: прямой = 0, ГосПлан = 1, GenTender = 3).
 
 > **EN summary.** Keep structured APIs primary. Parse embedded JSON (`__NEXT_DATA__`, `__NUXT_DATA__`) with `cheerio` and keep only whitelisted fields; treat Markdown readers as a last-mile fallback, never as the stored result. Verified locally: Tektorg SSR already exposes 20 structured lots per query and real pagination; a plain HTML→Markdown converter returns navigation junk; Jina Reader is HTTP 451 from this network.
 
@@ -126,7 +130,10 @@ L5  Headless browser    Playwright в Actions только для 2–3 «тяж
 - Проверить на офлайн‑фикстуре, затем один живой прогон `--source=tektorg --force`, сравнить прирост.
 - Обновить `AGENTS.md`: исправить устаревшее утверждение про «пустой `listingProcedures`».
 
-### Этап 2 — перейти с SSR/деvalue на открытые JSON‑эндпоинты (главный выигрыш)
+### Этап 2 — перейти с SSR/деvalue на открытые JSON‑эндпоинты ✅ ВНЕДРЕНО (2.58)
+Реализовано в `tektorg-direct.js`, `etpgpb-direct.js`, `roseltorg-direct.js`,
+подключено в `sourcePriority` и `--dry-run`. Результаты живых тестов и сверки —
+в `AGENTS.md`, п. 56. Ниже — исходная спецификация этапа:
 - `tektorg.js`: добавить в `ThrottledClient` метод `postJson()` (аналог `_fetchOnce`, `method:'POST'`) и читать `/api/getProcedures` с `{params:{name,page,limit:20}}`. Маппинг `makeRecord()` не меняется — поля те же. Убрать регулярку по 640 КБ HTML.
 - `etpgpb.js`: заменить декод `__NUXT_DATA__` на `GET https://etpgpb.ru/api/v2/procedures/?search=<kw>&page=<N>`, маппить `data[].attributes` (адаптер уже ждёт `attributes`).
 - `roseltorg.js`: оставить `search_ajax`, но заменить регулярки на `cheerio`‑селекторы `search-results__item` / `search-results__link--description` и явно логировать «разметка изменилась» вместо тихого нуля.

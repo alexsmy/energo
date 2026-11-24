@@ -26,7 +26,7 @@ const tm = require('../js/text-match');
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 const MAX_RECORDS = 3000;
-const DEFAULT_SOURCES = ['gosplan', 'gentender', 'tektorg', 'etpgpb', 'roseltorg', 'eis-html'];
+const DEFAULT_SOURCES = ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'gosplan', 'gentender', 'eis-html'];
 
 const argv = process.argv.slice(2);
 const arg = (name, def) => { const h = argv.find(a => a.startsWith('--' + name + '=')); return h ? h.slice(name.length + 3) : def; };
@@ -176,6 +176,9 @@ function adapterFor(name) {
     case 'tektorg': return require('./sources/tektorg');
     case 'etpgpb': return require('./sources/etpgpb');
     case 'roseltorg': return require('./sources/roseltorg');
+    case 'tektorg-direct': return require('./sources/tektorg-direct');
+    case 'etpgpb-direct': return require('./sources/etpgpb-direct');
+    case 'roseltorg-direct': return require('./sources/roseltorg-direct');
     case 'eis-html': return require('./sources/eis-html');
     default: return null;
   }

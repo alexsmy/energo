@@ -1,18 +1,18 @@
 {
-  "lastRun": "2026-11-24T13:04:21.522Z",
+  "lastRun": "2026-11-24T14:16:20.221Z",
   "mode": "live",
-  "total": 108,
-  "unique": 148,
-  "matchedOrg": 108,
-  "active": 30,
-  "archive": 78,
+  "total": 124,
+  "unique": 146,
+  "matchedOrg": 124,
+  "active": 24,
+  "archive": 100,
   "bySource": {
+    "TEK": 26,
+    "GPB": 14,
     "RAD": 17,
-    "TEK": 20,
     "EIS": 42,
     "SBER": 1,
-    "ROS": 13,
-    "GPB": 8,
+    "ROS": 17,
     "B2B": 4,
     "FAB": 1,
     "ZAKAZ": 1,
@@ -20,11 +20,29 @@
   },
   "sources": [
     {
-      "name": "gentender",
+      "name": "tektorg-direct",
       "available": true,
-      "requests": 467,
-      "okRequests": 467,
-      "records": 148,
+      "requests": 24,
+      "okRequests": 24,
+      "records": 73,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "etpgpb-direct",
+      "available": true,
+      "requests": 11,
+      "okRequests": 11,
+      "records": 43,
+      "errors": 0,
+      "errorItems": []
+    },
+    {
+      "name": "roseltorg-direct",
+      "available": true,
+      "requests": 24,
+      "okRequests": 24,
+      "records": 30,
       "errors": 0,
       "errorItems": []
     }
@@ -32,13 +50,13 @@
   "errors": 0,
   "probeErrors": 0,
   "probeOk": 0,
-  "droppedNoKeyword": 0,
+  "droppedNoKeyword": 23,
   "titlesSuspicious": 0,
-  "localArchived": 11,
-  "newCount": 10,
-  "corroborated": 44,
-  "corroboratedPct": 41,
-  "relevantPerRequest": 0.32,
+  "localArchived": 32,
+  "newCount": 23,
+  "corroborated": 63,
+  "corroboratedPct": 51,
+  "relevantPerRequest": 2.47,
   "deepArchive": true,
   "incrementalFrom": "",
   "budget": {
@@ -49,7 +67,7 @@
     },
     "gentender": {
       "limit": 560,
-      "used": 467,
+      "used": 0,
       "exhausted": false
     },
     "tektorg": {
@@ -65,6 +83,21 @@
     "roseltorg": {
       "limit": 40,
       "used": 0,
+      "exhausted": false
+    },
+    "tektorg-direct": {
+      "limit": 40,
+      "used": 24,
+      "exhausted": false
+    },
+    "etpgpb-direct": {
+      "limit": 40,
+      "used": 11,
+      "exhausted": false
+    },
+    "roseltorg-direct": {
+      "limit": 40,
+      "used": 24,
       "exhausted": false
     },
     "eis-html": {
