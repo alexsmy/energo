@@ -8257,7 +8257,7 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-23T02:12:40.563Z",
+  "updated": "2026-11-24T04:22:15.997Z",
   "count": 91,
   "records": [
    {
@@ -8329,8 +8329,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616602654",
       "foundAt": "2026-11-23T02:20:57.973Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "TEK:20379727",
@@ -8385,8 +8384,7 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/market/procedures/20379727",
       "foundAt": "2026-11-20T15:36:45.567Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "TEK:20383987",
@@ -8411,7 +8409,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
     "keywords": [
      "Лопатки"
@@ -8433,9 +8431,7 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
       "foundAt": "2026-11-20T15:52:22.538Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "ROS:32616599981",
@@ -8484,8 +8480,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616599981",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "ROS:32616516992",
@@ -8532,8 +8527,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516992",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "GPB:32616604656",
@@ -8580,8 +8574,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616604656",
       "foundAt": "2026-11-20T16:40:01.377Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616594944",
@@ -8644,8 +8637,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616595899",
@@ -8708,8 +8700,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616595171",
@@ -8782,8 +8773,7 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
       "foundAt": "2026-11-20T15:36:45.567Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616595000",
@@ -8838,8 +8828,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595000",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "RAD:rad-RAD260059021-5",
@@ -8864,7 +8853,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
     "keywords": [
      "Уплотнения"
@@ -8886,9 +8875,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "RAD:rad-RAD260059021",
@@ -8913,7 +8900,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
     "keywords": [
      "Уплотнения"
@@ -8935,9 +8922,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "RAD:rad-RAD260059021-2",
@@ -8962,7 +8947,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
     "keywords": [
      "Уплотнения"
@@ -8984,9 +8969,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "RAD:rad-RAD260059021-3",
@@ -9011,7 +8994,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
     "keywords": [
      "Уплотнения"
@@ -9033,9 +9016,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "RAD:rad-RAD260059021-4",
@@ -9060,7 +9041,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
     "keywords": [
      "Уплотнения"
@@ -9082,9 +9063,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "B2B:32616461107",
@@ -9131,8 +9110,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616592466",
@@ -9195,8 +9173,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592466",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616593309",
@@ -9259,8 +9236,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593309",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616592885",
@@ -9323,8 +9299,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592885",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616593352",
@@ -9380,8 +9355,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "RAD:32616584882",
@@ -9430,8 +9404,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616584882",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616583256",
@@ -9479,8 +9452,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
       "foundAt": "2026-11-20T20:30:08.015Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "FAB:fab-5597381",
@@ -9505,7 +9477,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Приём заявок",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://fabrikant.ru/v2/trades/procedure/view/MzhWYKy7C11V7_t6Z43ltw",
     "keywords": [
      "Турбина"
@@ -9527,73 +9499,7 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/v2/trades/procedure/view/MzhWYKy7C11V7_t6Z43ltw",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "32616569716",
-    "regNumber": "32616569716",
-    "externalId": "32616569716",
-    "title": "Выполнение строительно-монтажных работ по модернизации паровой турбины (4678313)",
-    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
-    "customerInn": "6829012680",
-    "customerCode": "6829012680",
-    "matchedOrgId": "H-RIR",
-    "matchedOrgName": "РИР Энерго",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "ЕИС / ГосПлан API",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "15176975.84 ₽",
-    "priceNum": 15176975.84,
-    "published": "2026-11-12",
-    "deadline": "2026-11-23",
-    "updated": "2026-11-12",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "H-RIR"
-    ],
-    "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-23T02:20:57.973Z",
-    "sources": [
-     {
-      "source": "ЕИС / ГосПлан API",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616569716",
-      "foundAt": "2026-11-20T13:55:53.115Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
-      "foundAt": "2026-11-20T15:16:44.880Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "B2B",
-      "platformName": "B2B-Center",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
-      "foundAt": "2026-11-20T15:12:44.741Z"
-     }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "ZAKAZ:32616573382",
@@ -9640,8 +9546,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573382",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616564450",
@@ -9666,7 +9571,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
     "keywords": [
      "Турбина"
@@ -9696,9 +9601,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
       "foundAt": "2026-11-20T12:15:00.462Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "32616558416",
@@ -9769,8 +9672,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616558416",
       "foundAt": "2026-11-20T15:16:44.880Z"
      }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "32616557260",
@@ -9843,74 +9745,7 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616557260",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616549035",
-    "regNumber": "32616549035",
-    "externalId": "32616549035",
-    "title": "Выполнение работ по ремонту вакуумной системы турбинного цеха на филиале ТЭЦ -11 в г. Усолье-Сибирское",
-    "customer": "ООО «Байкальская энергетическая компания»",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "ЕИС / ГосПлан API",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "1365280 ₽",
-    "priceNum": 1365280,
-    "published": "2026-11-06",
-    "deadline": "2026-11-23",
-    "updated": "2026-11-06",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-23T02:20:57.973Z",
-    "sources": [
-     {
-      "source": "ЕИС / ГосПлан API",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616549035",
-      "foundAt": "2026-11-20T13:55:53.115Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
-      "foundAt": "2026-11-20T15:45:40.545Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
-      "foundAt": "2026-11-23T02:20:57.973Z"
-     }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "TEK:20193697",
@@ -9935,7 +9770,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-04",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
     "keywords": [
      "Турбина"
@@ -9957,132 +9792,7 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
       "foundAt": "2026-11-20T15:36:45.567Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "32616538368",
-    "regNumber": "32616538368",
-    "externalId": "32616538368",
-    "title": "226907 Замена маслопроводов системы смазки турбины ЭБ № 2 для Пермской ГРЭС",
-    "customer": "АО «Интер РАО — Электрогенерация»",
-    "customerInn": "7704784450",
-    "customerCode": "7704784450",
-    "matchedOrgId": "C-IRAO-GEN",
-    "matchedOrgName": "Интер РАО — Электрогенерация",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "11 093 521,59 ₽",
-    "priceNum": 11093521.59,
-    "published": "2026-11-02",
-    "deadline": "2026-11-23",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-IRAO-GEN",
-     "H-IRAO"
-    ],
-    "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-23T02:15:04.525Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
-      "foundAt": "2026-11-20T15:12:44.741Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
-      "foundAt": "2026-11-20T20:30:08.015Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616526502",
-    "regNumber": "32616526502",
-    "externalId": "32616526502",
-    "title": "9371955_«Капитальный ремонт турбины №2 РСД Кировской ТЭЦ-5» для нужд филиала «Кировский» ПАО «Т Плюс» в 2027 году (4661820)",
-    "customer": "ПАО «Т Плюс»",
-    "customerInn": "6315376946",
-    "customerCode": "6315376946",
-    "matchedOrgId": "H-TPLUS",
-    "matchedOrgName": "Т Плюс",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "ЕИС / ГосПлан API",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "9548374.51 ₽",
-    "priceNum": 9548374.51,
-    "published": "2026-10-29",
-    "deadline": "2026-11-23",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "H-TPLUS"
-    ],
-    "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-23T02:20:57.973Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "B2B",
-      "platformName": "B2B-Center",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
-      "foundAt": "2026-11-20T15:12:44.741Z"
-     },
-     {
-      "source": "ЕИС / ГосПлан API",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616526502",
-      "foundAt": "2026-11-20T13:55:53.115Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
-      "foundAt": "2026-11-20T15:45:40.545Z"
-     }
-    ],
-    "isNew": false
+    ]
    },
    {
     "id": "RAD:rad-RAD260037550-11",
@@ -10107,7 +9817,7 @@ window.TENDER_DATA = {
     "updated": "2026-07-31",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000pvdn09mh4fpubho",
     "keywords": [
      "Турбина"
@@ -10129,9 +9839,7 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000pvdn09mh4fpubho",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "ROS:RH17112600015",
@@ -10156,7 +9864,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/RH17112600015/1",
     "keywords": [
      "Ремонт турбины",
@@ -10180,213 +9888,7 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/RH17112600015/1",
       "foundAt": "2026-11-20T15:37:06.675Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "ROS:RH04112600009",
-    "regNumber": "",
-    "externalId": "RH04112600009",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №6 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg",
-    "sourceName": "Росэлторг",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-23",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600009/1",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-20T16:34:15.039Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600009/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "ROS:RH04112600008",
-    "regNumber": "",
-    "externalId": "RH04112600008",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg",
-    "sourceName": "Росэлторг",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-23",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-20T16:34:15.039Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "ROS:RH04112600007",
-    "regNumber": "",
-    "externalId": "RH04112600007",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №7 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg",
-    "sourceName": "Росэлторг",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-23",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-20T15:37:06.675Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "ROS:RH04112600006",
-    "regNumber": "",
-    "externalId": "RH04112600006",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg",
-    "sourceName": "Росэлторг",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-23",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
-    "keywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Ремонт турбины",
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-20T15:37:06.675Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "ROS:RH17112600014",
@@ -10411,7 +9913,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://www.roseltorg.ru/procedure/RH17112600014/1",
     "keywords": [
      "Лопатки",
@@ -10435,9 +9937,7 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/RH17112600014/1",
       "foundAt": "2026-11-20T15:37:06.675Z"
      }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    ]
    },
    {
     "id": "32616598751",
@@ -10618,6 +10118,69 @@ window.TENDER_DATA = {
       "platformCode": "RAD",
       "platformName": "РАД / Lot-online",
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q3q6bu1fs42cpkg",
+      "foundAt": "2026-11-20T15:12:44.741Z"
+     }
+    ]
+   },
+   {
+    "id": "32616569716",
+    "regNumber": "32616569716",
+    "externalId": "32616569716",
+    "title": "Выполнение строительно-монтажных работ по модернизации паровой турбины (4678313)",
+    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
+    "customerInn": "6829012680",
+    "customerCode": "6829012680",
+    "matchedOrgId": "H-RIR",
+    "matchedOrgName": "РИР Энерго",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "ЕИС / ГосПлан API",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "15176975.84 ₽",
+    "priceNum": 15176975.84,
+    "published": "2026-11-12",
+    "deadline": "2026-11-23",
+    "updated": "2026-11-12",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-RIR"
+    ],
+    "foundAt": "2026-11-20T13:55:53.115Z",
+    "lastSeen": "2026-11-23T02:20:57.973Z",
+    "sources": [
+     {
+      "source": "ЕИС / ГосПлан API",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616569716",
+      "foundAt": "2026-11-20T13:55:53.115Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
+      "foundAt": "2026-11-20T15:16:44.880Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "B2B",
+      "platformName": "B2B-Center",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616569716",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ]
@@ -11201,6 +10764,71 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1307095",
       "foundAt": "2026-11-20T15:36:57.943Z"
+     }
+    ]
+   },
+   {
+    "id": "32616549035",
+    "regNumber": "32616549035",
+    "externalId": "32616549035",
+    "title": "Выполнение работ по ремонту вакуумной системы турбинного цеха на филиале ТЭЦ -11 в г. Усолье-Сибирское",
+    "customer": "ООО «Байкальская энергетическая компания»",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "ЕИС / ГосПлан API",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "1365280 ₽",
+    "priceNum": 1365280,
+    "published": "2026-11-06",
+    "deadline": "2026-11-23",
+    "updated": "2026-11-06",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-20T13:55:53.115Z",
+    "lastSeen": "2026-11-23T02:20:57.973Z",
+    "sources": [
+     {
+      "source": "ЕИС / ГосПлан API",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616549035",
+      "foundAt": "2026-11-20T13:55:53.115Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
+      "foundAt": "2026-11-20T15:45:40.545Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616549035",
+      "foundAt": "2026-11-23T02:20:57.973Z"
      }
     ]
    },
@@ -11900,6 +11528,62 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "32616538368",
+    "regNumber": "32616538368",
+    "externalId": "32616538368",
+    "title": "226907 Замена маслопроводов системы смазки турбины ЭБ № 2 для Пермской ГРЭС",
+    "customer": "АО «Интер РАО — Электрогенерация»",
+    "customerInn": "7704784450",
+    "customerCode": "7704784450",
+    "matchedOrgId": "C-IRAO-GEN",
+    "matchedOrgName": "Интер РАО — Электрогенерация",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "gosplan",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "11 093 521,59 ₽",
+    "priceNum": 11093521.59,
+    "published": "2026-11-02",
+    "deadline": "2026-11-23",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-IRAO-GEN",
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-20T15:12:44.741Z",
+    "lastSeen": "2026-11-23T02:15:04.525Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
+      "foundAt": "2026-11-20T15:12:44.741Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538368",
+      "foundAt": "2026-11-20T20:30:08.015Z"
+     }
+    ]
+   },
+   {
     "id": "32616538513",
     "regNumber": "32616538513",
     "externalId": "32616538513",
@@ -12212,6 +11896,71 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616533194",
       "foundAt": "2026-11-20T16:53:47.655Z"
+     }
+    ]
+   },
+   {
+    "id": "32616526502",
+    "regNumber": "32616526502",
+    "externalId": "32616526502",
+    "title": "9371955_«Капитальный ремонт турбины №2 РСД Кировской ТЭЦ-5» для нужд филиала «Кировский» ПАО «Т Плюс» в 2027 году (4661820)",
+    "customer": "ПАО «Т Плюс»",
+    "customerInn": "6315376946",
+    "customerCode": "6315376946",
+    "matchedOrgId": "H-TPLUS",
+    "matchedOrgName": "Т Плюс",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "ЕИС / ГосПлан API",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "9548374.51 ₽",
+    "priceNum": 9548374.51,
+    "published": "2026-10-29",
+    "deadline": "2026-11-23",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-TPLUS"
+    ],
+    "foundAt": "2026-11-20T13:55:53.115Z",
+    "lastSeen": "2026-11-23T02:20:57.973Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "B2B",
+      "platformName": "B2B-Center",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
+      "foundAt": "2026-11-20T15:12:44.741Z"
+     },
+     {
+      "source": "ЕИС / ГосПлан API",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616526502",
+      "foundAt": "2026-11-20T13:55:53.115Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616526502",
+      "foundAt": "2026-11-20T15:45:40.545Z"
      }
     ]
    },
@@ -13209,191 +12958,217 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T15:36:20.857Z"
      }
     ]
+   },
+   {
+    "id": "ROS:RH04112600009",
+    "regNumber": "",
+    "externalId": "RH04112600009",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №6 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg",
+    "sourceName": "Росэлторг",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-23",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600009/1",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-20T16:34:15.039Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600009/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:RH04112600008",
+    "regNumber": "",
+    "externalId": "RH04112600008",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg",
+    "sourceName": "Росэлторг",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-23",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-20T16:34:15.039Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:RH04112600007",
+    "regNumber": "",
+    "externalId": "RH04112600007",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №7 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg",
+    "sourceName": "Росэлторг",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-23",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-20T15:37:06.675Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:RH04112600006",
+    "regNumber": "",
+    "externalId": "RH04112600006",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg",
+    "sourceName": "Росэлторг",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-23",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+    "keywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Ремонт турбины",
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-20T15:37:06.675Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     }
+    ]
    }
   ]
  },
  "status": {
-  "lastRun": "2026-11-23T02:12:40.563Z",
-  "mode": "live",
+  "lastRun": "2026-11-24T04:22:15.997Z",
+  "mode": "refilter",
+  "partial": true,
   "total": 91,
-  "unique": 62,
-  "matchedOrg": 91,
-  "active": 23,
-  "archive": 68,
-  "bySource": {
-   "EIS": 40,
-   "TEK": 16,
-   "ROS": 10,
-   "GPB": 5,
-   "RAD": 12,
-   "B2B": 6,
-   "FAB": 1,
-   "ZAKAZ": 1
-  },
-  "sources": [
-   {
-    "name": "gosplan",
-    "available": true,
-    "requests": 15,
-    "okRequests": 15,
-    "records": 35,
-    "errors": 0,
-    "errorItems": []
-   },
-   {
-    "name": "gentender",
-    "available": true,
-    "requests": 400,
-    "okRequests": 400,
-    "records": 27,
-    "errors": 0,
-    "errorItems": []
-   },
-   {
-    "name": "tektorg",
-    "available": true,
-    "requests": 3,
-    "okRequests": 3,
-    "records": 0,
-    "errors": 0,
-    "errorItems": []
-   },
-   {
-    "name": "etpgpb",
-    "available": false,
-    "requests": 3,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 3,
-    "errorItems": [
-     {
-      "source": "etpgpb",
-      "query": "лопатка",
-      "error": "fetch failed"
-     },
-     {
-      "source": "etpgpb",
-      "query": "турбина",
-      "error": "fetch failed"
-     },
-     {
-      "source": "etpgpb",
-      "query": "уплотнение",
-      "error": "fetch failed"
-     }
-    ]
-   },
-   {
-    "name": "roseltorg",
-    "available": false,
-    "requests": 5,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 5,
-    "errorItems": [
-     {
-      "source": "roseltorg",
-      "query": "лопатка",
-      "error": "fetch failed"
-     },
-     {
-      "source": "roseltorg",
-      "query": "турбина",
-      "error": "fetch failed"
-     },
-     {
-      "source": "roseltorg",
-      "query": "уплотнение",
-      "error": "fetch failed"
-     },
-     {
-      "source": "roseltorg",
-      "query": "лопатка",
-      "error": "fetch failed"
-     },
-     {
-      "source": "roseltorg",
-      "query": "турбина",
-      "error": "fetch failed"
-     }
-    ]
-   },
-   {
-    "name": "eis-html",
-    "available": false,
-    "requests": 4,
-    "okRequests": 0,
-    "records": 0,
-    "errors": 4,
-    "errorItems": [
-     {
-      "source": "eis-html",
-      "query": "лопатка",
-      "error": "fetch failed"
-     },
-     {
-      "source": "eis-html",
-      "query": "турбина",
-      "error": "fetch failed"
-     },
-     {
-      "source": "eis-html",
-      "query": "уплотнение",
-      "error": "fetch failed"
-     },
-     {
-      "source": "eis-html",
-      "query": "Башкирская генерирующая компания",
-      "error": "fetch failed"
-     }
-    ]
-   }
-  ],
-  "errors": 12,
-  "probeErrors": 12,
-  "probeOk": 4,
+  "active": 31,
+  "archive": 60,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 16,
-  "newCount": 0,
-  "corroborated": 41,
-  "corroboratedPct": 45,
-  "relevantPerRequest": 0.14,
-  "deepArchive": true,
-  "incrementalFrom": "2026-11-20",
-  "budget": {
-   "gosplan": {
-    "limit": 60,
-    "used": 15,
-    "exhausted": false
-   },
-   "gentender": {
-    "limit": 400,
-    "used": 400,
-    "exhausted": true
-   },
-   "tektorg": {
-    "limit": 40,
-    "used": 3,
-    "exhausted": false
-   },
-   "etpgpb": {
-    "limit": 40,
-    "used": 3,
-    "exhausted": false
-   },
-   "roseltorg": {
-    "limit": 40,
-    "used": 5,
-    "exhausted": false
-   },
-   "eis-html": {
-    "limit": 40,
-    "used": 4,
-    "exhausted": false
-   }
-  },
-  "partial": true
+  "sources": [
+   "refilter"
+  ]
  },
  "settings": {
   "note": "Режимы, источники и бюджеты сбора. active — действующие закупки, archive — завершённые за последние archiveDepthDays. sourcePriority: сначала ЕИС через ГосПлан (точные номера и ссылки), затем GenTender (агрегатор со всех площадок), затем прямые площадки; HTML-парсер ЕИС остаётся резервом. requestBudget ограничивает число сетевых запросов на прогон по каждому источнику.",

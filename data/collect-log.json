@@ -1,5 +1,29 @@
 [
   {
+    "started": "2026-11-24T04:22:15.996Z",
+    "mode": "scheduled",
+    "entries": [
+      {
+        "ts": "2026-11-24T04:22:16.153Z",
+        "source": "refilter",
+        "query": "registry match",
+        "ok": true,
+        "records": 91,
+        "kept": 91,
+        "droppedNoKeyword": 0,
+        "budget": ""
+      }
+    ],
+    "summary": {
+      "total": 91,
+      "unique": 91,
+      "matchedOrg": 91,
+      "droppedNoKeyword": 0,
+      "errors": 0
+    },
+    "finished": "2026-11-24T04:22:16.153Z"
+  },
+  {
     "started": "2026-11-23T02:12:40.563Z",
     "mode": "scheduled",
     "entries": [
@@ -32243,26 +32267,5 @@
       "partial": false
     },
     "finished": "2026-11-20T15:13:01.999Z"
-  },
-  {
-    "started": "2026-11-20T14:00:30.279Z",
-    "mode": "scheduled",
-    "entries": [
-      {
-        "ts": "2026-11-20T14:00:30.418Z",
-        "source": "refilter",
-        "query": "registry match",
-        "ok": true,
-        "records": 84,
-        "kept": 76
-      }
-    ],
-    "summary": {
-      "total": 76,
-      "unique": 76,
-      "matchedOrg": 76,
-      "errors": 0
-    },
-    "finished": "2026-11-20T14:00:30.418Z"
   }
 ]

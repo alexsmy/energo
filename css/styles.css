@@ -13,6 +13,7 @@
   --accent-soft:#fff1e2;
   --accent-ink:#8a3f00;
   --warm-border:#f0d3a8;
+  --band-bg:radial-gradient(760px 280px at 88% -14%,rgba(45,160,180,.42),transparent),linear-gradient(125deg,#0a1f2c 0%,#103a4b 48%,#0d2c3e 100%);
   --high:#147445;
   --medium:#a86e00;
   --radius:12px;
@@ -79,8 +80,8 @@ button,input,select{font:inherit;color:inherit}
 .modal .btn--ghost:hover,.toolbar .btn--ghost:hover,.map-toolbar .btn--ghost:hover{background:#f1f6f9}
 
 /* Hero / компактная липкая плашка плашек */
-.hero{background:linear-gradient(180deg,#ffffff 0%,#f4f8fa 100%);color:var(--ink);border-bottom:1px solid var(--line);padding:22px 0 24px}
-.stats-bar{position:fixed;left:0;right:0;top:var(--topbar-h);z-index:39;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,95,18,.2);color:var(--ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 8px 24px rgba(13,31,43,.07);opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s}
+.hero{background:var(--band-bg);color:#fff;border-bottom:0;padding:22px 0 18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.stats-bar{position:fixed;left:0;right:0;top:var(--topbar-h);z-index:39;background:var(--band-bg);border-bottom:1px solid rgba(111,226,214,.18);color:#fff;box-shadow:0 8px 24px rgba(7,26,38,.3);opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s}
 body.is-condensed .stats-bar{opacity:1;visibility:visible;transform:none;pointer-events:auto}
 body.is-tenders .stats-bar{display:none}
 .stats-bar__in{display:flex;align-items:center;padding-top:4px;padding-bottom:4px}
@@ -91,16 +92,17 @@ body.is-tenders .stats-bar{display:none}
 .stats-bar .stat span{font-size:8px;line-height:1.1;letter-spacing:.03em}
 .hero h1{font-size:29px;font-weight:750;max-width:900px}
 .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.stat{appearance:none;background:#fff;border:1px solid var(--line);padding:7px 11px;border-radius:10px;min-width:88px;color:var(--ink);text-align:left;cursor:pointer;transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s}
-.stat:hover{background:#f8fbfc;border-color:#a9c3d2;box-shadow:0 3px 10px rgba(13,31,43,.07);transform:translateY(-1px)}
-.stat:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.stat.is-active{background:linear-gradient(180deg,#fff,#fff7ee);border-color:var(--warm-border);color:var(--ink);box-shadow:0 2px 10px rgba(217,95,18,.12)}
-.stat.is-active span{color:#8a6a4e}
+.stat{appearance:none;position:relative;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(143,228,220,.22);border-radius:11px;padding:8px 12px 7px;min-width:88px;color:#fff;text-align:left;cursor:pointer;transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.22)}
+.stat:hover{transform:translateY(-2px);border-color:rgba(143,228,220,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 6px 14px rgba(0,0,0,.3)}
+.stat:focus-visible{outline:2px solid #6fe2d6;outline-offset:2px}
+.stat.is-active{background:linear-gradient(180deg,#2b93ad,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.45),0 6px 18px rgba(45,160,180,.45)}
+.stat.is-active b{text-shadow:0 1px 6px rgba(0,0,0,.25)}
+.stat.is-active span{color:#eafcff}
 .stat b{display:block;font-size:19px;line-height:1.15;font-weight:800}
-.stat span{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.stat span{font-size:10.5px;color:rgba(255,255,255,.82);text-transform:uppercase;letter-spacing:.04em;font-weight:700}
 
 /* Layout */
-.layout{display:grid;grid-template-columns:242px minmax(0,1fr);gap:18px;align-items:start;padding-top:18px;padding-bottom:28px;transition:grid-template-columns .3s ease,gap .3s ease}
+.layout{display:grid;grid-template-columns:242px minmax(0,1fr);gap:18px;align-items:start;padding-top:0;padding-bottom:28px;transition:grid-template-columns .3s ease,gap .3s ease}
 .filters{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:sticky;top:var(--sticky-filters-top);box-shadow:var(--shadow);min-width:0}
 .filters__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .filters__head h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -120,6 +122,17 @@ body.is-tenders .stats-bar{display:none}
 .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
 .toolbar__count{color:var(--muted);font-size:13.5px}
 .toolbar__count strong{color:var(--ink);font-size:18px}
+.content > .toolbar{background:var(--band-bg);color:#fff;padding:12px 14px;border-radius:0 0 10px 10px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.content > .toolbar .toolbar__count,.content > .toolbar .toolbar__count strong{color:#fff}
+.content > .toolbar .toolbar__count{opacity:.9}
+.content > .toolbar .btn--ghost,.content > .toolbar .btn--filters{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#fff}
+.content > .toolbar .btn--ghost:hover,.content > .toolbar .btn--filters:hover{background:rgba(255,255,255,.18);color:#fff}
+.content > .toolbar .btn--filters.is-active{background:linear-gradient(180deg,#22789c,#15587a);border-color:#2b829f;color:#fff}
+.content > .toolbar .btn__badge{background:#fff;color:#15587a}
+.content > .toolbar .seg{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)}
+.content > .toolbar .seg__btn{color:rgba(255,255,255,.78)}
+.content > .toolbar .seg__btn.is-active{background:#fff;color:var(--navy);box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.content > .toolbar .select--sm{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
 .toolbar__right{display:flex;gap:8px;align-items:center}
 .seg{display:flex;background:linear-gradient(180deg,#e9f0f4,#dae6ed);border:1px solid #cfdde5;border-radius:9px;padding:3px}
 .seg__btn{border:0;background:transparent;padding:6px 12px;border-radius:7px;font-size:12.5px;font-weight:600;color:#3d5a6a;cursor:pointer;transition:background .15s,color .15s,box-shadow .15s}
