@@ -26,7 +26,7 @@ const tm = require('../js/text-match');
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 const MAX_RECORDS = 3000;
-const DEFAULT_SOURCES = ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'gosplan', 'gentender', 'eis-html'];
+const DEFAULT_SOURCES = ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'rad-direct', 'fabrikant-direct', 'zakazrf-direct', 'gosplan', 'gentender', 'eis-html'];
 
 const argv = process.argv.slice(2);
 const arg = (name, def) => { const h = argv.find(a => a.startsWith('--' + name + '=')); return h ? h.slice(name.length + 3) : def; };
@@ -179,6 +179,9 @@ function adapterFor(name) {
     case 'tektorg-direct': return require('./sources/tektorg-direct');
     case 'etpgpb-direct': return require('./sources/etpgpb-direct');
     case 'roseltorg-direct': return require('./sources/roseltorg-direct');
+    case 'rad-direct': return require('./sources/rad-direct');
+    case 'fabrikant-direct': return require('./sources/fabrikant-direct');
+    case 'zakazrf-direct': return require('./sources/zakazrf-direct');
     case 'eis-html': return require('./sources/eis-html');
     default: return null;
   }
@@ -343,9 +346,22 @@ async function main() {
     const key = r.platformCode || r.etp || 'OTHER';
     bySource[key] = (bySource[key] || 0) + 1;
   });
+  const sourceMix = {};
+  let directFirst = 0, directCoverage = 0;
+  merged.forEach(r => {
+    const key = r.source || '—';
+    sourceMix[key] = (sourceMix[key] || 0) + 1;
+    if (/-direct$/.test(key)) directFirst++;
+    if ((r.sources || []).some(s => /-direct$/.test(String(s.source || s.name || '')))) directCoverage++;
+  });
+  const totalRequests = results.reduce((a, r) => a + (r.requests || 0), 0);
   const summary = {
     total: merged.length,
     unique: tagged.length,
+    sourceMix,
+    directFirstPct: merged.length ? +(directFirst / merged.length * 100).toFixed(1) : 0,
+    directCoveragePct: merged.length ? +(directCoverage / merged.length * 100).toFixed(1) : 0,
+    recordsPer100Requests: totalRequests ? +(tagged.length / totalRequests * 100).toFixed(1) : 0,
     matchedOrg: merged.filter(r => r.matchedOrgId).length,
     active: merged.filter(r => r.phase === 'active').length,
     archive: merged.filter(r => r.phase === 'archive').length,

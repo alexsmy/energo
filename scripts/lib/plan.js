@@ -39,7 +39,10 @@ function makePlan() {
   const direct = [
     ['tektorg-direct', 'tektorgDirectMaxPages'],
     ['etpgpb-direct', 'gpbDirectMaxPages'],
-    ['roseltorg-direct', 'roseltorgDirectMaxPages']
+    ['roseltorg-direct', 'roseltorgDirectMaxPages'],
+    ['rad-direct', 'radDirectMaxPages'],
+    ['fabrikant-direct', 'fabDirectMaxPages'],
+    ['zakazrf-direct', 'zakazrfDirectMaxPages']
   ];
   for (const [name, key] of direct) {
     const pages = int(settings[key], 2, 1);
@@ -99,6 +102,9 @@ function makePlan() {
     'etpgpb-direct': int(settings.gpbDirectInterval, 900, 0),
     roseltorg: int(settings.roseltorgInterval, 900, 0),
     'roseltorg-direct': int(settings.roseltorgDirectInterval, 900, 0),
+    'rad-direct': int(settings.radDirectInterval, 900, 0),
+    'fabrikant-direct': int(settings.fabDirectInterval, 900, 0),
+    'zakazrf-direct': int(settings.zakazrfDirectInterval, 900, 0),
     'eis-html': int(settings.htmlInterval, 1500, 0)
   };
   const budget = settings.requestBudget || {};

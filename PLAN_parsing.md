@@ -4,7 +4,9 @@
 `etpgpb-direct`, `roseltorg-direct`), этап 1 частично закрыт пагинацией ТЭК-Торга
 (4 страницы вместо 2); reader-фолбэки (этап 4) остаются опциональными. Собственные
 парсеры стоят первыми в `sourcePriority` и выигрывают у API при дедупликации
-(`sourceRank`: прямой = 0, ГосПлан = 1, GenTender = 3).
+(`sourceRank`: прямой = 0, ГосПлан = 1, GenTender = 3). P0 выполнен в версии
+2.59: добавлены `rad-direct`, `fabrikant-direct`, `zakazrf-direct` и телеметрия
+источника в `tenders-status.json` (результаты — `AGENTS.md`, п. 57).
 
 > **EN summary.** Keep structured APIs primary. Parse embedded JSON (`__NEXT_DATA__`, `__NUXT_DATA__`) with `cheerio` and keep only whitelisted fields; treat Markdown readers as a last-mile fallback, never as the stored result. Verified locally: Tektorg SSR already exposes 20 structured lots per query and real pagination; a plain HTML→Markdown converter returns navigation junk; Jina Reader is HTTP 451 from this network.
 

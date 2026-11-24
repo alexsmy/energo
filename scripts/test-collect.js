@@ -27,7 +27,7 @@ test('план ОХВАТЫВАЕТ все ИНН из списка предпр
 test('плановые запросы учитывают лимиты и помечают превышение', () => {
   const plan = makePlan();
   const text = formatPlan(plan);
-  for (const name of ['gosplan', 'gentender', 'tektorg-direct', 'etpgpb-direct', 'roseltorg-direct']) {
+  for (const name of ['gosplan', 'gentender', 'tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'rad-direct', 'fabrikant-direct', 'zakazrf-direct']) {
     const b = plan.bySource[name];
     assert.ok(b, 'нет источника ' + name);
     assert.ok(b.limit > 0, 'нет лимита для ' + name);
@@ -140,7 +140,7 @@ test('составные запросы не добавляют сетевых �
 test('бюджеты покрывают план: ни один источник не обрежется', () => {
   const plan = makePlan();
   // eis-html — намеренно ограниченный резерв, его план всегда больше лимита.
-  for (const name of ['gosplan', 'gentender', 'tektorg-direct', 'etpgpb-direct', 'roseltorg-direct']) {
+  for (const name of ['gosplan', 'gentender', 'tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'rad-direct', 'fabrikant-direct', 'zakazrf-direct']) {
     const b = plan.bySource[name];
     assert.ok(b, 'нет источника ' + name);
     assert.ok(b.count <= b.limit, name + ': план ' + b.count + ' > бюджета ' + b.limit);

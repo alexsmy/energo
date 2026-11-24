@@ -90,6 +90,30 @@ async function test(name, fn) {
     assert.ok(merged[0].sources.length >= 2, 'источники не объединены');
   });
 
+  await test('РАД: JSON indexer разбирается в записи', () => {
+    const rad = require('./sources/rad-direct');
+    const rows = rad.parse(JSON.parse(read('rad-direct.json')));
+    assert.ok(rows.length >= 3, 'строк: ' + rows.length);
+    assert.ok(rows[0].uuid && rows[0].title && rows[0].organizationTitle && rows[0].publicationDate);
+    assert.ok(['44', '223', 'commercial'].includes(rad.lawOf(rows[0])));
+  });
+
+  await test('Фабрикант: RSC flight разбирает карточки', () => {
+    const fab = require('./sources/fabrikant-direct');
+    const rows = fab.parse(read('fabrikant-direct.html'));
+    assert.ok(rows.length >= 3, 'строк: ' + rows.length);
+    assert.ok(rows[0].id && rows[0].title && rows[0].url.includes('fabrikant.ru'));
+    assert.ok(fab.isoDate(rows[0].published).startsWith('20'), 'дата: ' + rows[0].published);
+  });
+
+  await test('ЗаказРФ: серверная таблица разбирает строки', () => {
+    const zak = require('./sources/zakazrf-direct');
+    const rows = zak.parse(read('zakazrf-direct.html'));
+    assert.ok(rows.length >= 3, 'строк: ' + rows.length);
+    assert.ok(rows[0].id && rows[0].regNumber && rows[0].title && rows[0].customer);
+    assert.ok(zak.isoDate('19.11.2026') === '2026-11-19');
+  });
+
   await test('при слиянии приоритет у прямого парсера, не у API', () => {
     const { sourceRank } = require('./lib/platforms');
     const direct = sourceRank({ source: 'tektorg-direct' });
@@ -104,7 +128,7 @@ async function test(name, fn) {
   await test('план учитывает новые источники и их бюджеты', () => {
     const { makePlan } = require('./lib/plan');
     const plan = makePlan();
-    for (const name of ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct']) {
+    for (const name of ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'rad-direct', 'fabrikant-direct', 'zakazrf-direct']) {
       const b = plan.bySource[name];
       assert.ok(b, 'нет источника ' + name);
       assert.ok(b.count > 0, 'план пустой: ' + name);
