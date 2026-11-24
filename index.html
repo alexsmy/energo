@@ -8,7 +8,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Реестр предприятий России 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, станций, ремонтных и машиностроительных предприятий России: энергетика, машиностроение, авиация и судостроение. Контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.53">
+<link rel="stylesheet" href="css/styles.css?v=2.54">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -52,6 +52,13 @@
 <div class="stats-bar" id="statsBar" aria-hidden="true">
   <div class="wrap stats-bar__in">
     <div class="stats stats--compact" id="statsCompact"></div>
+  </div>
+</div>
+
+<div class="t-sticky" id="tSticky">
+  <div class="wrap t-sticky__in">
+    <span class="t-sticky__label">Ключевые слова</span>
+    <div class="t-chips" id="tStickyKeywords"></div>
   </div>
 </div>
 
@@ -182,17 +189,20 @@
 </main>
 
 <section id="tendersView" class="wrap tenders-view" hidden>
-  <div class="t-head">
-    <h1>Аудит и поиск закупок на электронных площадках</h1>
-  </div>
+  <div class="t-band">
+    <div class="t-head">
+      <h1>Аудит и поиск закупок на электронных площадках</h1>
+    </div>
 
-  <div class="t-tabs" role="group" aria-label="Разделы закупок">
-    <button class="t-tab is-active" data-tview="tenders" type="button">Найденные закупки</button>
-    <button class="t-tab" data-tview="etps" type="button">Аудит ЭТП</button>
-    <span class="t-updated" id="tUpdated"></span>
+    <div class="t-tabs" role="group" aria-label="Разделы закупок">
+      <button class="t-tab is-active" data-tview="tenders" type="button">Найденные закупки</button>
+      <button class="t-tab" data-tview="etps" type="button">Аудит ЭТП</button>
+      <span class="t-updated" id="tUpdated"></span>
+    </div>
   </div>
 
   <div id="tTendersPane">
+   <div class="t-band t-band--inner">
     <div class="t-filters">
       <label class="field field--search"><span>Ключевое слово или заказчик</span>
         <div class="t-auto">
@@ -233,6 +243,7 @@
         </select>
       </div>
     </div>
+   </div>
 
     <div id="tCards" class="t-cards"></div>
     <div id="tTableWrap" class="t-table-wrap" hidden>
@@ -328,13 +339,13 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.53"></script>
-<script src="js/tenders-data.js?v=2.53"></script>
-<script src="js/text-match.js?v=2.53"></script>
-<script src="js/tech-types.js?v=2.53"></script>
-<script src="js/sort.js?v=2.53"></script>
-<script src="js/favorites.js?v=2.53"></script>
-<script src="js/tenders.js?v=2.53"></script>
-<script src="js/app.js?v=2.53"></script>
+<script src="js/data.js?v=2.54"></script>
+<script src="js/tenders-data.js?v=2.54"></script>
+<script src="js/text-match.js?v=2.54"></script>
+<script src="js/tech-types.js?v=2.54"></script>
+<script src="js/sort.js?v=2.54"></script>
+<script src="js/favorites.js?v=2.54"></script>
+<script src="js/tenders.js?v=2.54"></script>
+<script src="js/app.js?v=2.54"></script>
 </body>
 </html>

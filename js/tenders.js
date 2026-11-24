@@ -515,6 +515,7 @@
   }
 
   function render() {
+    updateStickyKeywords();
     document.querySelectorAll('[data-tmode]').forEach(b => {
       const on = b.dataset.tmode === state.mode;
       b.classList.toggle('is-active', on);
@@ -560,28 +561,45 @@
     $('tSource').value = state.source;
   }
 
+  function selectKeyword(label) {
+    const was = state.keyword;
+    state.keyword = label === '' ? '' : (norm(label) === norm(was) ? '' : label);
+    if (state.keyword) {
+      state.q = state.keyword;
+      state.enterprise = '';
+      $('tQ').value = state.keyword;
+      renderSelected();
+    } else if (norm(state.q) === norm(was)) {
+      // Сняли чип — убираем и подставленную фразу из поля поиска.
+      state.q = '';
+      $('tQ').value = '';
+    }
+    $('tLinkQuery').value = state.keyword || state.q;
+    renderKeywords(); render();
+  }
+
   function renderKeywords() {
-    $('tKeywords').innerHTML = '<button class="t-chip is-active" data-kw="" type="button">Все</button>' +
+    const html = '<button class="t-chip is-active" data-kw="" type="button">Все</button>' +
       keywords.map(k => '<button class="t-chip" data-kw="' + esc(k) + '" type="button">' + esc(k) + '</button>').join('');
-    document.querySelectorAll('#tKeywords .t-chip').forEach(b => {
-      b.classList.toggle('is-active', norm(b.dataset.kw) === norm(state.keyword));
-      b.addEventListener('click', () => {
-        const was = state.keyword;
-        state.keyword = b.dataset.kw === was ? '' : b.dataset.kw;
-        if (state.keyword) {
-          state.q = state.keyword;
-          state.enterprise = '';
-          $('tQ').value = state.keyword;
-          renderSelected();
-        } else if (norm(state.q) === norm(was)) {
-          // Сняли чип — убираем и подставленную фразу из поля поиска.
-          state.q = '';
-          $('tQ').value = '';
-        }
-        $('tLinkQuery').value = state.keyword || state.q;
-        renderKeywords(); render();
+    ['tKeywords', 'tStickyKeywords'].forEach(id => {
+      const box = $(id);
+      if (!box) return;
+      box.innerHTML = html;
+      box.querySelectorAll('.t-chip').forEach(b => {
+        b.classList.toggle('is-active', norm(b.dataset.kw) === norm(state.keyword));
+        b.addEventListener('click', () => selectKeyword(b.dataset.kw));
       });
     });
+    updateStickyKeywords();
+  }
+
+  function updateStickyKeywords() {
+    const sticky = $('tSticky'), box = $('tKeywords'), view = $('tendersView');
+    if (!sticky || !box || !view) return;
+    const topbar = document.querySelector('.topbar');
+    const h = topbar ? topbar.getBoundingClientRect().height : 58;
+    const show = !view.hidden && state.pane === 'tenders' && box.getBoundingClientRect().bottom < h + 12;
+    sticky.classList.toggle('is-visible', show);
   }
 
   function setPane(pane) {
@@ -785,6 +803,13 @@
     const regVersion = ((window.REGISTRY || {}).meta || {}).version;
     $('tVer').textContent = regVersion ? 'v' + regVersion : 'v2.46';
     document.querySelectorAll('[data-tmode]').forEach(b => b.classList.toggle('is-active', b.dataset.tmode === state.mode));
+    let stickyQueued = false;
+    window.addEventListener('scroll', () => {
+      if (stickyQueued) return;
+      stickyQueued = true;
+      requestAnimationFrame(() => { stickyQueued = false; updateStickyKeywords(); });
+    }, { passive: true });
+    window.addEventListener('resize', updateStickyKeywords);
     renderSelected();
     renderKeywords(); bind(); render();
   }
