@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var PROD = /^https:\/\/alexsmy\.github\.io\/energo\/index\.html(?:[?#]|$)/.test(location.href);
+  var PROD = /^https:\/\/alexsmy\.github\.io\/energo\/(?:index\.html)?(?:[?#]|$)/.test(location.href);
   if (!PROD) return;
 
   var endpoint = '';
@@ -289,11 +289,13 @@
     started = true;
     tabOpen();
     setInterval(function () { if (!document.hidden) flush(); }, 30000);
+    // Сессию отправляем сразу: устройство определяется по deviceId, а не по отпечатку.
+    // Отпечаток может считаться дольше (или не вернуться на мобильном) — это не должно
+    // блокировать уведомление о новом устройстве.
+    push('session', deviceInfo());
+    scheduleFlush();
     fingerprint().then(function (hardId) {
-      var info = deviceInfo();
-      info.hardId = hardId;
-      push('session', info);
-      scheduleFlush();
+      if (hardId) { push('fingerprint', { hardId: hardId }); scheduleFlush(); }
     });
   }
 
