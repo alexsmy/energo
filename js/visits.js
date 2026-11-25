@@ -79,22 +79,34 @@
     queue.push(ev);
     if (queue.length >= 40) flush();
   }
-  function flush() {
+  function flush(unload) {
     if (!enabled || !endpoint || !queue.length) return;
     if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
+    var events = queue.splice(0);
     var payload = {
       schema: 'energo-visits-v1',
       page: location.href,
       sentAt: now(),
-      events: queue.splice(0)
+      events: events
     };
     var body = JSON.stringify(payload);
-    try {
-      if (navigator.sendBeacon) { navigator.sendBeacon(endpoint, body); return; }
-    } catch (e) {}
-    try {
-      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: body, keepalive: true, mode: 'cors' }).catch(function () {});
-    } catch (e) {}
+    // При уходе со страницы beacon — последний шанс: подтверждения нет, но лучше чем ничего.
+    if (unload) {
+      try { if (navigator.sendBeacon) { navigator.sendBeacon(endpoint, body); return; } } catch (e) {}
+    }
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+      body: body,
+      keepalive: true,
+      mode: 'cors'
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+    }).catch(function () {
+      // Не теряем события, если сервер проснулся/заответил ошибкой: отправим позже.
+      queue = events.concat(queue).slice(0, 300);
+      scheduleFlush();
+    });
   }
   function scheduleFlush() {
     if (flushTimer) return;
@@ -275,13 +287,13 @@
     if (document.hidden) {
       hiddenAt = Date.now();
       tabClose();   // время в фоне не считаем как активное
-      flush();
+      flush(true);
     } else {
       hiddenAt = 0;
       tabOpen();
     }
   });
-  window.addEventListener('pagehide', function () { tabClose(); flush(); });
+  window.addEventListener('pagehide', function () { tabClose(); flush(true); });
 
   /* ---------- запуск ---------- */
   function start() {
@@ -289,6 +301,11 @@
     started = true;
     tabOpen();
     setInterval(function () { if (!document.hidden) flush(); }, 30000);
+    setInterval(function () {
+      if (document.hidden || !activeTab) return;
+      push('heartbeat', { tab: activeTab });
+      scheduleFlush();
+    }, 60000);
     // Сессию отправляем сразу: устройство определяется по deviceId, а не по отпечатку.
     // Отпечаток может считаться дольше (или не вернуться на мобильном) — это не должно
     // блокировать уведомление о новом устройстве.
