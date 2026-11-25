@@ -1,1731 +1,2323 @@
 {
   "updated": "2026-11-21T10:24:07.112Z",
   "items": {
+    "1102016594": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 26,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
     "1102024468": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1434031363": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 112,
+      "total": 35,
       "emptyStreak": 0
     },
     "1435028701": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 105,
+      "total": 29,
       "emptyStreak": 0
     },
     "1435117944": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 56,
+      "total": 18,
       "emptyStreak": 0
     },
     "1600000036": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1639021461": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
+    },
+    "1644003838": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "1645000340": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 21,
+      "lastPublished": "",
+      "emptyStreak": 0
     },
     "1656002652": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1657005416": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1657036630": {
-      "queries": 4,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 5,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 127,
+      "total": 42,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "1657048240": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1660004878": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "1660301260": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 3
-    },
-    "1661000749": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "1841015504": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "1901067718": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "2224173758": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2308128945": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2320109650": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "2420002597": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "2457058356": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 46,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "2460040655": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2460066195": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "2462028886": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2501002394": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2536210349": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2607018122": {
-      "queries": 6,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 6
-    },
-    "2636032629": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2721111590": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2801133630": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "2902059091": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "2902060361": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3111006980": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3123209784": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 3
-    },
-    "3123315768": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3661001457": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3662149488": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3800000220": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3807002509": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3808229774": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 156,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "3808271889": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3900000111": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 72,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "3906385641": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "3913501370": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "4000000255": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "4026007424": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "4100000668": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 42,
-      "emptyStreak": 0
-    },
-    "4200000333": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "7721632827": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "6829012680": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 170,
-      "emptyStreak": 0
-    },
-    "9701087623": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 46,
-      "emptyStreak": 0
-    },
-    "4909047148": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 40,
-      "emptyStreak": 0
-    },
-    "6500000024": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 91,
-      "emptyStreak": 0
-    },
-    "8700000339": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 6,
-      "emptyStreak": 0
-    },
-    "4908000718": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 6,
-      "emptyStreak": 0
-    },
-    "7719019846": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 2,
-      "emptyStreak": 0
-    },
-    "7703323030": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "7705035012": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "7841312071": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 129,
-      "emptyStreak": 0
-    },
-    "7720518494": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 55,
-      "emptyStreak": 0
-    },
-    "5003046281": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "5190141373": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 14,
-      "emptyStreak": 0
-    },
-    "7704784450": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 564,
-      "emptyStreak": 0
-    },
-    "0277077282": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 101,
-      "emptyStreak": 0
-    },
-    "5406323202": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 90,
-      "emptyStreak": 0
-    },
-    "7017373959": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 90,
-      "emptyStreak": 0
-    },
-    "6315376946": {
-      "queries": 6,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 919,
-      "emptyStreak": 0
-    },
-    "7709832989": {
-      "queries": 6,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 6
-    },
-    "5405270340": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "8602067092": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7
-    },
-    "7203162698": {
-      "queries": 7,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 94,
-      "emptyStreak": 0
-    },
-    "6671156423": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 1,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7606053324": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 100,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7534018889": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 20,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7706697347": {
       "queries": 4,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
       "emptyStreak": 4
     },
-    "7838129301": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "1661000749": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 86,
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "1841015504": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "1901067718": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "2224173758": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2308128945": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2310040800": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "2315004404": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "2315072242": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 5,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2315143060": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 1,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2320109650": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "2420002597": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "2457058356": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 31,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2460040655": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2460066195": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "2462028886": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2464036561": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 4,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2501002394": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2508081814": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 6,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2536210349": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2607018122": {
+      "queries": 7,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 7
+    },
+    "2636032629": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2721111590": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2724132118": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 12,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "2801133630": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "2902059091": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2902060361": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "2983998001": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 8,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "3111006980": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3123209784": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
+    },
+    "3123315768": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3235002178": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 10,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "3435125709": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "3444070534": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "3661001457": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3662149488": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3665087656": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "3800000220": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3801079671": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 10,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "3807002509": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3808066311": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "3808229774": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 84,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "3808271889": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3900000111": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 4,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "3906385641": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "3913501370": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "4000000255": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "4026007424": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "4100000668": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 14,
+      "emptyStreak": 0
+    },
+    "4200000333": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "7721632827": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "6829012680": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 42,
+      "emptyStreak": 0
+    },
+    "9701087623": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 7,
+      "emptyStreak": 0
+    },
+    "4909047148": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 15,
+      "emptyStreak": 0
+    },
+    "6500000024": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 55,
+      "emptyStreak": 0
+    },
+    "8700000339": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 1,
+      "emptyStreak": 0
+    },
+    "4908000718": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 3,
+      "emptyStreak": 0
+    },
+    "7719019846": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 1
+    },
+    "7703323030": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "7705035012": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "7841312071": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 21,
+      "emptyStreak": 0
+    },
+    "7720518494": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 22,
+      "emptyStreak": 0
+    },
+    "5003046281": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "5190141373": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 5,
+      "emptyStreak": 0
+    },
+    "7704784450": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 197,
+      "emptyStreak": 0
+    },
+    "0277077282": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 56,
+      "emptyStreak": 0
+    },
+    "5406323202": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 48,
+      "emptyStreak": 0
+    },
+    "7017373959": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 33,
+      "emptyStreak": 0
+    },
+    "6315376946": {
+      "queries": 7,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 158,
+      "emptyStreak": 0
+    },
+    "7709832989": {
+      "queries": 7,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 7
+    },
+    "5405270340": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "8602067092": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8
+    },
+    "7203162698": {
+      "queries": 8,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 35,
+      "emptyStreak": 0
+    },
+    "6671156423": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7606053324": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 43,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7534018889": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 8,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7706697347": {
+      "queries": 5,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 5
+    },
+    "7838129301": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 27,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "9102070194": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 3,
+      "total": 0,
       "lastPublished": "",
-      "emptyStreak": 0
+      "emptyStreak": 1
     },
     "7704863782": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5029112443": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6345012488": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 72,
+      "total": 19,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7728549952": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7733667768": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7702721214": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 20,
+      "total": 5,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7707625521": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7705915881": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6660001308": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7730014175": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7802588950": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7801128069": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7805370007": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7724245329": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "4632014950": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6659003244": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 4,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7701299247": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 1
+    },
+    "7701299247": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
     },
     "7606118807": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 16,
+      "total": 7,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7702080289": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6673100680": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7804677772": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7725415380": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7725054856": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7825660956": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6154023009": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5036040729": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "9706047504": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5403102702": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7704312545": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7706720370": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7729769573": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7721678652": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7705825187": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 30,
+      "total": 13,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7704781586": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6316100813": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6663062122": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7804027534": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "4705036363": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7724646338": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 6,
+      "total": 2,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7811737334": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7806369727": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7806151791": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 1,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7817311895": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "5259077666": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7806394392": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7610052644": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "0273008320": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7610070114": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "6143097506": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "6674239607": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7718183890": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7804475617": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7731644035": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7838395215": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 4,
       "lastPublished": "",
       "emptyStreak": 0
     },
-    "7817311895": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "5259077666": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7806394392": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7610052644": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "0273008320": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7610070114": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "6143097506": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "6674239607": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7718183890": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7804475617": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7731644035": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7838395215": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 21,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
     "5948017501": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5045001885": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7802375335": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7733018650": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7303005071": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5040007594": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "0275074279": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5252000470": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5402112867": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7810209170": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "0278179819": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7704274402": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7731559044": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7718016666": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "0323018510": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6161021690": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "0262016287": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7843003128": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7811038760": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "4706020609": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "9810011977": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 2,
+      "total": 3,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "5022013517": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7805034277": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 259,
+      "total": 18,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "6230116089": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7708619320": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7703695246": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7719265496": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7704252960": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7704726240": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6154028021": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5904007312": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5904000620": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6319033379": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7536080716": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6449042335": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7807343496": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "6664013640": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5405071094": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7808035536": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "9715478507": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7801450808": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5013026848": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "7736050003": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
     "5003028028": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 3,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7805018099": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "0276053659": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "8622000931": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "8617002073": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "6453010110": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "5260080007": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7017005289": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7810483334": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "0560022871": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 35,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "5003028155": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7740000044": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "5003065767": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 33,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7709105630": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 26,
-      "lastPublished": "",
-      "emptyStreak": 0
-    },
-    "7813411480": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "6449108868": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7725787250": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7842155505": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7610092982": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "6671108370": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "9709113836": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7703049362": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "lastPublished": "",
-      "emptyStreak": 5
-    },
-    "7203001556": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "lastPublished": "",
       "emptyStreak": 0
     },
-    "7737106202": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7805018099": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "7731429736": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "0276053659": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "9719001539": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "8622000931": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "5907001774": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "8617002073": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "5904007337": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "6453010110": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "7718016810": {
-      "queries": 5,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "5260080007": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 5
+      "emptyStreak": 6
     },
-    "7709344220": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7017005289": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 6
     },
-    "7118022097": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7810483334": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 6
     },
-    "5259006834": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "0560022871": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 15,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "5003028155": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 6
     },
-    "7713080756": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7740000044": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 6
     },
-    "7743714777": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "5003065767": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 7,
       "lastPublished": "",
       "emptyStreak": 0
     },
-    "7814159353": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7709105630": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 6,
+      "total": 13,
       "lastPublished": "",
       "emptyStreak": 0
     },
-    "7716012049": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+    "7813411480": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 6
+    },
+    "6449108868": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7725787250": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7842155505": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7610092982": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "6671108370": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "9709113836": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7703049362": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7203001556": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7737106202": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7731429736": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "9719001539": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "5907001774": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "5904007337": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7718016810": {
+      "queries": 6,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 6
+    },
+    "7709344220": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
+    },
+    "7118022097": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
+    },
+    "5259006834": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
+    },
+    "7713080756": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
+    },
+    "7743714777": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7814159353": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7716012049": {
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 4
     },
     "9701038827": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 4,
+      "total": 3,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7202157173": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 4
     },
     "7000028520": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 84,
+      "total": 34,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7722001535": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 10,
+      "total": 3,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7804004400": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 23,
+      "total": 2,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7708697977": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 4
     },
     "7722497881": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 4
     },
     "7701024933": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 4
     },
     "5036101347": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 8,
+      "total": 3,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7728589190": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 28,
+      "total": 9,
       "lastPublished": "",
       "emptyStreak": 0
     },
     "7706760091": {
-      "queries": 3,
-      "lastOk": "2026-11-24T13:04:21.643Z",
+      "queries": 4,
+      "lastOk": "2026-11-25T16:29:04.131Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "lastPublished": "",
-      "emptyStreak": 3
+      "emptyStreak": 4
+    },
+    "7706107510": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7708004767": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5504036333": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "8602060555": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "0274051582": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 82,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7701350084": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 2,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7717133960": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7707017509": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "8608048498": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "8618006063": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "8905000428": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "8604035473": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 6,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "8913006455": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 9,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "8610010727": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 19,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "8605003932": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7017126251": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "6501163102": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5610218014": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7225003194": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 16,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "8603089934": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 14,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7838395487": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7707717910": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7706613770": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 29,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "8601066868": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7704685184": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7706061801": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "0278039018": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 10,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7201000726": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 10,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "5260900725": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 44,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "6317024749": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 7,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "5502020634": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 6,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "4704041900": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 14,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "4704045809": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 7,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "4704057515": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "4707029837": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7805058077": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "4704101901": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 2,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7736607502": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 1,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "5072703668": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 14,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "7449026737": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5250000820": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7710022410": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 5,
+      "lastPublished": "",
+      "emptyStreak": 0
+    },
+    "5702000265": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7733015025": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7460009005": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "6670263239": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5834052005": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5920014980": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "6652028306": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7713041098": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7449126763": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7449139434": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "5029149228": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7705152485": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7701985983": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "6678065969": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
+    },
+    "7728815650": {
+      "queries": 1,
+      "lastOk": "2026-11-25T16:29:04.131Z",
+      "lastArchive": "",
+      "total": 0,
+      "lastPublished": "",
+      "emptyStreak": 1
     }
   }
 }
