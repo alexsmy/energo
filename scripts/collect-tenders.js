@@ -205,7 +205,7 @@ async function main() {
   // Гейт смотрит на результат реального сбора, а не на lastRun в статусе:
   // офлайн-режимы (--refilter, --probe-only) не должны блокировать живой сбор.
   const earlyResult = readJson('last-collect-result.json', {});
-  if (!opts.force && earlyResult.ran === true && earlyResult.date === todayNow) {
+  if (!opts.force && earlyResult.ran === true && earlyResult.date === todayNow && !earlyResult.partial) {
     log(`Уже собран ${todayNow} — пропуск без единого сетевого запроса. Для повтора: --force.`);
     writeJson('last-collect-result.json', { ran: false, date: todayNow, reason: 'already-collected' });
     return;

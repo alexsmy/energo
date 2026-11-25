@@ -2,6 +2,8 @@
 /* Локальные тесты планировщика и гейта — без сети. */
 'use strict';
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
 const { makePlan, formatPlan } = require('./lib/plan');
 const { nonWorking, mskDate } = require('./lib/schedule');
 const tm = require('../js/text-match');
@@ -145,6 +147,24 @@ test('бюджеты покрывают план: ни один источник
     assert.ok(b, 'нет источника ' + name);
     assert.ok(b.count <= b.limit, name + ': план ' + b.count + ' > бюджета ' + b.limit);
   }
+});
+
+test('automatic: частые окна и гейт идемпотентности на месте', () => {
+  const root = path.join(__dirname, '..');
+  const wf = fs.readFileSync(path.join(root, '.github', 'workflows', 'tenders-update.yml'), 'utf8');
+  assert.match(wf, /\*\/15 2-12 \* \* 1-5/, 'нет частых окон 05:00–15:45 МСК');
+  assert.match(wf, /0 16 \* \* 1-5/, 'нет вечернего окна 19:00 МСК');
+  const orch = fs.readFileSync(path.join(root, 'scripts', 'collect-tenders.js'), 'utf8');
+  assert.match(orch, /earlyResult\.ran === true && earlyResult\.date === todayNow && !earlyResult\.partial/, 'гейт не различает полный и частичный сбор');
+  const watchdog = fs.readFileSync(path.join(root, '.github', 'workflows', 'ensure-daily.yml'), 'utf8');
+  assert.match(watchdog, /tenders-update\.yml\/dispatches/, 'нет принудительного запуска сбора');
+  assert.match(watchdog, /!r\.partial/, 'watchdog не различает частичный сбор');
+  const build = fs.readFileSync(path.join(root, 'build.js'), 'utf8');
+  const check = fs.readFileSync(path.join(root, 'scripts', 'check-release.js'), 'utf8');
+  const flagAt = build.indexOf('ENERGO_BUILD_IN_PROGRESS');
+  const checksAt = build.indexOf("require('./scripts/ci-checks.js')");
+  assert.ok(flagAt > 0 && flagAt < checksAt, 'build не помечает проверку версии как сборку');
+  assert.match(check, /!process\.env\.ENERGO_BUILD_IN_PROGRESS/, 'check-release блокирует инкремент версии в CI');
 });
 
 if (!process.exitCode) console.log('\nВсе тесты пройдены: ' + passed);

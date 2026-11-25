@@ -1,0 +1,48 @@
+name: Гарантия ежедневного сбора
+
+# Независимый контроль: если к моменту проверки за сегодня не было ПОЛНОГО
+# сбора, принудительно dispatched tenders-update.yml. Сам по себе cron GitHub
+# может задержаться на часы — поэтому несколько собственных точек проверки.
+# Повторных запросов к площадкам не бывает: гейт идемпотентности в
+# collect-tenders.js пропускает уже собранный день без сети.
+on:
+  schedule:
+    - cron: '30 6 * * 1-5'    # 09:30 МСК
+    - cron: '30 10 * * 1-5'   # 13:30 МСК
+    - cron: '30 14 * * 1-5'   # 17:30 МСК
+    - cron: '30 18 * * 1-5'   # 21:30 МСК — последний контроль дня
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Проверить, был ли сегодня полный сбор
+        id: check
+        run: |
+          node -e "
+            const fs = require('fs');
+            const r = JSON.parse(fs.readFileSync('data/last-collect-result.json', 'utf8'));
+            // МСК = UTC+3: сдвигаем время, чтобы получить календарный день шапки.
+            const today = new Date(Date.now() + 3 * 3600 * 1000).toISOString().slice(0, 10);
+            const ok = r.ran === true && r.date === today && !r.partial;
+            const need = ok ? 'no' : 'yes';
+            console.log('MSK date: ' + today + ' | сбор: ' + (ok ? 'есть' : 'нужен'));
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'need=' + need + '\n');
+          "
+
+      - name: Запустить сбор, если его не было
+        if: steps.check.outputs.need == 'yes'
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/tenders-update.yml/dispatches \
+            -d '{"ref":"main"}'

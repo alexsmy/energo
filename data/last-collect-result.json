@@ -1,6 +1,5 @@
 {
-  "ran": true,
-  "date": "2026-11-24",
-  "foundAt": "2026-11-24T17:04:03.064Z",
-  "partial": false
+  "ran": false,
+  "date": "2026-11-25",
+  "mode": "refilter"
 }

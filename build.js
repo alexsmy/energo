@@ -3,10 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Проверки идут до сборки: CI запускает build.js по push, отдельный шаг в workflow
-// не нужен (и не требует прав workflow у токена). ENERGO_SKIP_CHECKS=1 — только для экстренного обхода.
-if (!process.env.ENERGO_SKIP_CHECKS) require('./scripts/ci-checks.js');
-
 const ROOT = __dirname;
 const DATA = path.join(ROOT, 'data');
 const META = {
@@ -18,13 +14,24 @@ const META = {
 };
 
 // Версия данных едина для data.js и version.json: берём её из манифеста,
-// который обновляет workflow, иначе build.js и живая страница разъезжаются
-// и автообновление уходит в бесконечную перезагрузку.
+// который обновляет workflow. Делаем это ДО проверок: workflow-incremented
+// version.json всегда новее закоммиченного js/data.js, и check-release
+// сравнивал бы новую версию со старой и/blockirвал сбор.
 const VERSION_FILE = path.join(ROOT, 'version.json');
 let manifest = null;
 try { manifest = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf8')); } catch (e) { /* первый запуск */ }
 if (manifest && manifest.version) META.version = String(manifest.version);
 if (manifest && manifest.date) META.date = String(manifest.date);
+
+// Вженные проверки идут до записи файлов: CI запускает build.js по push,
+// отдельный шаг в workflow не нужен (и не требует прав workflow у токена).
+// ENERGO_SKIP_CHECKS=1 — только для экстренного обхода.
+if (!process.env.ENERGO_SKIP_CHECKS) {
+  // check-release строго сравнивает version.json с уже записанным data.js;
+  // во время сборки data.js ещё старый, а версия уже инкрементирована workflow.
+  process.env.ENERGO_BUILD_IN_PROGRESS = '1';
+  require('./scripts/ci-checks.js');
+}
 
 const ETPS = [
   { code: 'GPB', name: 'ЭТП ГПБ', url: 'https://etpgpb.ru', operator: 'Газпромбанк', note: 'Основная площадка Газпром энергохолдинга и ряда частных компаний' },

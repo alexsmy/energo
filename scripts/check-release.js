@@ -46,7 +46,7 @@ const dataJs = fs.readFileSync(path.join(ROOT, 'js', 'data.js'), 'utf8');
 const bundledVersion = dataJs.match(/"version"\s*:\s*"([^"]+)"/);
 checks++;
 if (!bundledVersion) fail('js/data.js: не найден meta.version');
-else if (version && bundledVersion[1] !== String(version.version)) {
+else if (!process.env.ENERGO_BUILD_IN_PROGRESS && version && bundledVersion[1] !== String(version.version)) {
   fail('версии разъехались: version.json=' + version.version + ', js/data.js=' + bundledVersion[1]);
 }
 const tenderJs = fs.readFileSync(path.join(ROOT, 'js', 'tenders-data.js'), 'utf8');
