@@ -1,12 +1,12 @@
 {
-  "lastRun": "2026-11-25T15:57:36.378Z",
+  "lastRun": "2026-11-25T20:03:53.373Z",
   "mode": "live",
   "total": 409,
-  "unique": 511,
+  "unique": 512,
   "sourceMix": {
-    "gosplan": 24,
+    "gosplan": 29,
     "etpgpb-direct": 22,
-    "gentender": 237,
+    "gentender": 232,
     "tektorg-direct": 63,
     "fabrikant-direct": 10,
     "roseltorg-direct": 21,
@@ -21,20 +21,20 @@
   },
   "directFirstPct": 29.6,
   "directCoveragePct": 29.6,
-  "recordsPer100Requests": 126.2,
+  "recordsPer100Requests": 126.4,
   "matchedOrg": 409,
-  "active": 233,
-  "archive": 176,
+  "active": 322,
+  "archive": 87,
   "bySource": {
-    "EIS": 48,
+    "EIS": 53,
     "GPB": 48,
-    "ZAKAZ": 22,
+    "ZAKAZ": 21,
     "PORTAL_POST": 1,
     "RAD": 46,
     "ROS": 53,
     "SBER_B2B": 15,
-    "SBER": 39,
-    "TEK": 115,
+    "SBER": 37,
+    "TEK": 113,
     "FAB": 10,
     "RTS": 1,
     "B2B": 10,
@@ -229,23 +229,13 @@
       "name": "gosplan",
       "available": true,
       "requests": 35,
-      "okRequests": 32,
-      "records": 48,
-      "errors": 3,
+      "okRequests": 34,
+      "records": 49,
+      "errors": 1,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "вставка (44, завершённые 30д)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "лопатка (223, завершённые 30д)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "напыление (223, завершённые 30д)",
+          "query": "вставка (223, завершённые 30д)",
           "error": "HTTP 429"
         }
       ]
@@ -296,15 +286,15 @@
       ]
     }
   ],
-  "errors": 33,
+  "errors": 31,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 89,
-  "newCount": 197,
-  "corroborated": 82,
-  "corroboratedPct": 20,
+  "localArchived": 0,
+  "newCount": 89,
+  "corroborated": 87,
+  "corroboratedPct": 21,
   "relevantPerRequest": 1.26,
   "deepArchive": false,
   "incrementalFrom": "",
