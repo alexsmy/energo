@@ -1,69 +1,150 @@
 {
-  "lastRun": "2026-11-25T07:16:01.026Z",
+  "lastRun": "2026-11-25T15:57:36.378Z",
   "mode": "live",
-  "total": 201,
-  "unique": 383,
+  "total": 409,
+  "unique": 511,
   "sourceMix": {
+    "gosplan": 24,
     "etpgpb-direct": 22,
+    "gentender": 237,
     "tektorg-direct": 63,
     "fabrikant-direct": 10,
-    "gentender": 36,
-    "gosplan": 11,
-    "ЕИС / HTML": 4,
-    "ЕИС / ГосПлан API": 21,
+    "roseltorg-direct": 21,
+    "ЕИС / ГосПлан API": 19,
     "rad-direct": 3,
-    "roseltorg-direct": 23,
+    "ЕИС / HTML": 2,
     "ЕИС zakupki.gov.ru": 1,
     "zakazrf-direct": 2,
     "etpgpb": 1,
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 61.2,
-  "directCoveragePct": 61.2,
-  "recordsPer100Requests": 394.8,
-  "matchedOrg": 201,
-  "active": 128,
-  "archive": 73,
+  "directFirstPct": 29.6,
+  "directCoveragePct": 29.6,
+  "recordsPer100Requests": 126.2,
+  "matchedOrg": 409,
+  "active": 233,
+  "archive": 176,
   "bySource": {
-    "GPB": 30,
-    "TEK": 67,
+    "EIS": 48,
+    "GPB": 48,
+    "ZAKAZ": 22,
+    "PORTAL_POST": 1,
+    "RAD": 46,
+    "ROS": 53,
+    "SBER_B2B": 15,
+    "SBER": 39,
+    "TEK": 115,
     "FAB": 10,
-    "RAD": 18,
-    "EIS": 37,
-    "SBER": 1,
-    "ROS": 30,
-    "B2B": 4,
-    "ZAKAZ": 3,
-    "SBER_B2B": 1
+    "RTS": 1,
+    "B2B": 10,
+    "BIDZAAR": 1
   },
   "sources": [
     {
       "name": "tektorg-direct",
-      "available": true,
-      "requests": 28,
-      "okRequests": 28,
-      "records": 111,
-      "errors": 0,
-      "errorItems": []
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "tektorg-direct",
+          "query": "вставка",
+          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+        },
+        {
+          "source": "tektorg-direct",
+          "query": "лопатка",
+          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+        },
+        {
+          "source": "tektorg-direct",
+          "query": "напыление",
+          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+        },
+        {
+          "source": "tektorg-direct",
+          "query": "порошковой",
+          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+        },
+        {
+          "source": "tektorg-direct",
+          "query": "ремонт",
+          "error": "HTTP 403"
+        }
+      ]
     },
     {
       "name": "etpgpb-direct",
-      "available": true,
-      "requests": 13,
-      "okRequests": 13,
-      "records": 76,
-      "errors": 0,
-      "errorItems": []
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "etpgpb-direct",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb-direct",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb-direct",
+          "query": "напыление",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb-direct",
+          "query": "порошковой",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb-direct",
+          "query": "ремонт",
+          "error": "fetch failed"
+        }
+      ]
     },
     {
       "name": "roseltorg-direct",
-      "available": true,
-      "requests": 28,
-      "okRequests": 28,
-      "records": 56,
-      "errors": 0,
-      "errorItems": []
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "roseltorg-direct",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg-direct",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg-direct",
+          "query": "напыление",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg-direct",
+          "query": "порошковой",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg-direct",
+          "query": "ремонт",
+          "error": "fetch failed"
+        }
+      ]
     },
     {
       "name": "rad-direct",
@@ -76,12 +157,38 @@
     },
     {
       "name": "fabrikant-direct",
-      "available": true,
-      "requests": 10,
-      "okRequests": 10,
-      "records": 31,
-      "errors": 0,
-      "errorItems": []
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "fabrikant-direct",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "fabrikant-direct",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "fabrikant-direct",
+          "query": "напыление",
+          "error": "fetch failed"
+        },
+        {
+          "source": "fabrikant-direct",
+          "query": "порошковой",
+          "error": "fetch failed"
+        },
+        {
+          "source": "fabrikant-direct",
+          "query": "ремонт",
+          "error": "fetch failed"
+        }
+      ]
     },
     {
       "name": "zakazrf-direct",
@@ -117,29 +224,99 @@
           "error": "fetch failed"
         }
       ]
+    },
+    {
+      "name": "gosplan",
+      "available": true,
+      "requests": 35,
+      "okRequests": 32,
+      "records": 48,
+      "errors": 3,
+      "errorItems": [
+        {
+          "source": "gosplan",
+          "query": "вставка (44, завершённые 30д)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "лопатка (223, завершённые 30д)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "напыление (223, завершённые 30д)",
+          "error": "HTTP 429"
+        }
+      ]
+    },
+    {
+      "name": "gentender",
+      "available": true,
+      "requests": 328,
+      "okRequests": 327,
+      "records": 354,
+      "errors": 1,
+      "errorItems": [
+        {
+          "source": "gentender",
+          "query": "ремонт (архив)",
+          "error": "The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "name": "eis-html",
+      "available": false,
+      "requests": 4,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 4,
+      "errorItems": [
+        {
+          "source": "eis-html",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "напыление",
+          "error": "fetch failed"
+        },
+        {
+          "source": "eis-html",
+          "query": "порошковой",
+          "error": "fetch failed"
+        }
+      ]
     }
   ],
-  "errors": 5,
-  "probeErrors": 0,
-  "probeOk": 0,
-  "droppedNoKeyword": 42,
+  "errors": 33,
+  "probeErrors": 12,
+  "probeOk": 4,
+  "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 2,
-  "newCount": 97,
-  "corroborated": 67,
-  "corroboratedPct": 33,
-  "relevantPerRequest": 3.95,
-  "deepArchive": true,
+  "localArchived": 89,
+  "newCount": 197,
+  "corroborated": 82,
+  "corroboratedPct": 20,
+  "relevantPerRequest": 1.26,
+  "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
     "gosplan": {
       "limit": 60,
-      "used": 0,
+      "used": 35,
       "exhausted": false
     },
     "gentender": {
       "limit": 720,
-      "used": 0,
+      "used": 328,
       "exhausted": false
     },
     "tektorg": {
@@ -159,17 +336,17 @@
     },
     "tektorg-direct": {
       "limit": 40,
-      "used": 28,
+      "used": 5,
       "exhausted": false
     },
     "etpgpb-direct": {
       "limit": 40,
-      "used": 13,
+      "used": 5,
       "exhausted": false
     },
     "roseltorg-direct": {
       "limit": 40,
-      "used": 28,
+      "used": 5,
       "exhausted": false
     },
     "rad-direct": {
@@ -179,7 +356,7 @@
     },
     "fabrikant-direct": {
       "limit": 40,
-      "used": 10,
+      "used": 5,
       "exhausted": false
     },
     "zakazrf-direct": {
@@ -189,7 +366,7 @@
     },
     "eis-html": {
       "limit": 40,
-      "used": 0,
+      "used": 4,
       "exhausted": false
     }
   },
