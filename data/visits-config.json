@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "endpoint": "https://bot-29-nx0w.onrender.com/api/energo/visits",
+  "note": "URL серверной прослойки для приёма событий посещений. Пустой endpoint = сбор выключен. Секреты Telegram и токен GitHub хранятся только на сервере, в репозиторий не попадают."
+}
