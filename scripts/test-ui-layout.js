@@ -97,6 +97,37 @@ test('между шапкой и фильтрами нет белого зазо
   assert.match(rule('.t-band .t-toolbar') || '', /margin:0;padding:14px 0 0/, 'toolbar добавляет отступ');
 });
 
+test('полоса инструментов реестра идёт на всю ширину без боковых зазоров', () => {
+  const bar = rule('.content > .toolbar');
+  assert.ok(bar, 'нет правила .content > .toolbar');
+  assert.match(bar, /border-radius:\s*0/, 'у полосы реестра скруглённые края');
+  assert.match(bar, /margin:\s*0 calc\(-1 \* var\(--wrap-pad\)\) 12px/, 'есть боковые отступы полосы');
+  assert.match(bar, /padding:\s*12px var\(--wrap-pad\)/, 'внутренние отступы не следуют за --wrap-pad');
+});
+
+test('реестр рисует карточки порциями, а не все сразу', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'js', 'app.js'), 'utf8');
+  assert.match(app, /limit:\s*80/, 'нет размера порции');
+  assert.match(app, /state\.limit = 80/, 'порция не сбрасывается при смене фильтров');
+  assert.match(app, /#moreCards/, 'нет кнопки «Показать ещё»');
+  assert.match(css, /\.card\{content-visibility:auto/, 'нет content-visibility для карточек');
+});
+
+test('закупки тоже рисуют карточки порциями', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const app = fs.readFileSync(path.join(ROOT, 'js', 'tenders.js'), 'utf8');
+  assert.match(html, /id="tMore"/, 'нет кнопки «Показать ещё» в закупках');
+  assert.match(app, /limit:\s*40/, 'нет размера порции закупок');
+  assert.match(app, /state\.limit \+= 40/, 'кнопка не увеличивает порцию');
+  assert.match(app, /state\.limit = 40/, 'порция не сбрасывается при смене фильтров');
+});
+
+test('компактные плашки не накладываются на крупные', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'js', 'app.js'), 'utf8');
+  assert.match(app, /heroStats\.getBoundingClientRect\(\)\.bottom/, 'нет проверки ухода крупных плашек');
+  assert.match(app, /const compact = heroBottom < h \+ 8/, 'порог появления компактной копии старый');
+});
+
 test('горизонтальные отступы заданы одной переменной', () => {
   assert.match(rule('.wrap') || '', /padding:\s*0 var\(--wrap-pad\)/, '.wrap не использует --wrap-pad');
   assert.match(css, /:root\{[^}]*--wrap-pad:22px/, 'нет базового значения --wrap-pad');

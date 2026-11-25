@@ -21,7 +21,11 @@
     etp: '',
     onlyOrg: false,
     view: 'cards',
-    sort: 'path'
+    sort: 'path',
+    /* Порционная отрисовка: полный список фильтруется всегда, в DOM попадает
+     * только первая порция — иначе 600+ карточек блокируют главный поток. */
+    limit: 80,
+    filterKey: ''
   };
 
   /* ---------- utils ---------- */
@@ -640,7 +644,11 @@
       groups.get(key).push(it);
     });
 
+    let remaining = state.limit;
     wrap.innerHTML = [...groups.entries()].map(([key, arr]) => {
+      if (remaining <= 0) return '';
+      const visible = arr.slice(0, remaining);
+      remaining -= visible.length;
       let meta;
       if (state.sort === 'path') {
         const holdings = arr.filter(x => x.kind === 'holding');
@@ -657,9 +665,17 @@
           '<span class="group__count">' + arr.length + '</span>' +
           (meta ? '<div class="group__meta">' + esc(meta) + '</div>' : '') +
         '</div>' +
-        '<div class="grid">' + arr.map(card).join('') + '</div>' +
+        '<div class="grid">' + visible.map(card).join('') + '</div>' +
       '</section>';
-    }).join('');
+    }).filter(Boolean).join('');
+    if (list.length > state.limit) {
+      const more = document.createElement('button');
+      more.type = 'button';
+      more.id = 'moreCards';
+      more.className = 'btn btn--ghost more-cards';
+      more.textContent = 'Показать ещё ' + Math.min(state.limit, list.length - state.limit) + ' из ' + list.length;
+      wrap.appendChild(more);
+    }
   }
 
   function renderTable(list) {
@@ -723,6 +739,9 @@
       if (window.EnergoTenders) window.EnergoTenders.onTab('tenders');
       return [];
     }
+    const fk = JSON.stringify([state.q, state.kind, state.holding, state.region, state.type,
+      state.method, state.etp, state.onlyOrg, state.sort]);
+    if (fk !== state.filterKey) { state.filterKey = fk; state.limit = 80; }
     const list = sortItems(items.filter(matches));
     const isMap = state.tab === 'map';
     $('count').textContent = list.length;
@@ -996,7 +1015,11 @@
       const root = document.documentElement.style;
       root.setProperty('--topbar-h', h + 'px');
       root.setProperty('--sticky-filters-top', (h + 54) + 'px');
-      const compact = window.scrollY > h + 12;
+      // Компактная копия плашек появляется только когда крупные плашки
+      // действительно ушли из виду, иначе на мобильном видны оба набора сразу.
+      const heroStats = document.querySelector('.hero .stats') || document.querySelector('.hero');
+      const heroBottom = heroStats ? heroStats.getBoundingClientRect().bottom : 0;
+      const compact = heroBottom < h + 8;
       document.body.classList.toggle('is-condensed', compact);
       $('statsBar').setAttribute('aria-hidden', String(!compact));
     };
@@ -1203,6 +1226,13 @@
       const open = panel.classList.toggle('is-open');
       document.body.classList.toggle('filters-open', open);
       updateFilterButton();
+    });
+
+    $('cards').addEventListener('click', (e) => {
+      if (e.target.closest('#moreCards')) {
+        state.limit += 80;
+        render();
+      }
     });
 
     $('filtersClose').addEventListener('click', closeFilters);

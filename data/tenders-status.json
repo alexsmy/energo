@@ -1,38 +1,38 @@
 {
-  "lastRun": "2026-11-25T05:55:02.529Z",
+  "lastRun": "2026-11-25T07:16:01.026Z",
   "mode": "live",
-  "total": 133,
-  "unique": 305,
+  "total": 201,
+  "unique": 383,
   "sourceMix": {
-    "etpgpb-direct": 7,
-    "tektorg-direct": 25,
+    "etpgpb-direct": 22,
+    "tektorg-direct": 63,
+    "fabrikant-direct": 10,
     "gentender": 36,
     "gosplan": 11,
     "ЕИС / HTML": 4,
-    "fabrikant-direct": 8,
     "ЕИС / ГосПлан API": 21,
     "rad-direct": 3,
-    "roseltorg-direct": 10,
+    "roseltorg-direct": 23,
     "ЕИС zakupki.gov.ru": 1,
     "zakazrf-direct": 2,
     "etpgpb": 1,
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 41.4,
-  "directCoveragePct": 41.4,
-  "recordsPer100Requests": 358.8,
-  "matchedOrg": 133,
-  "active": 33,
-  "archive": 100,
+  "directFirstPct": 61.2,
+  "directCoveragePct": 61.2,
+  "recordsPer100Requests": 394.8,
+  "matchedOrg": 201,
+  "active": 128,
+  "archive": 73,
   "bySource": {
-    "GPB": 15,
-    "TEK": 29,
+    "GPB": 30,
+    "TEK": 67,
+    "FAB": 10,
     "RAD": 18,
     "EIS": 37,
     "SBER": 1,
-    "FAB": 8,
-    "ROS": 17,
+    "ROS": 30,
     "B2B": 4,
     "ZAKAZ": 3,
     "SBER_B2B": 1
@@ -41,68 +41,94 @@
     {
       "name": "tektorg-direct",
       "available": true,
-      "requests": 24,
-      "okRequests": 24,
-      "records": 71,
+      "requests": 28,
+      "okRequests": 28,
+      "records": 111,
       "errors": 0,
       "errorItems": []
     },
     {
       "name": "etpgpb-direct",
       "available": true,
-      "requests": 11,
-      "okRequests": 11,
-      "records": 44,
+      "requests": 13,
+      "okRequests": 13,
+      "records": 76,
       "errors": 0,
       "errorItems": []
     },
     {
       "name": "roseltorg-direct",
       "available": true,
-      "requests": 24,
-      "okRequests": 24,
-      "records": 32,
+      "requests": 28,
+      "okRequests": 28,
+      "records": 56,
       "errors": 0,
       "errorItems": []
     },
     {
       "name": "rad-direct",
       "available": true,
-      "requests": 11,
-      "okRequests": 11,
-      "records": 97,
+      "requests": 13,
+      "okRequests": 13,
+      "records": 109,
       "errors": 0,
       "errorItems": []
     },
     {
       "name": "fabrikant-direct",
       "available": true,
-      "requests": 9,
-      "okRequests": 9,
-      "records": 30,
+      "requests": 10,
+      "okRequests": 10,
+      "records": 31,
       "errors": 0,
       "errorItems": []
     },
     {
       "name": "zakazrf-direct",
-      "available": true,
-      "requests": 6,
-      "okRequests": 6,
-      "records": 31,
-      "errors": 0,
-      "errorItems": []
+      "available": false,
+      "requests": 5,
+      "okRequests": 0,
+      "records": 0,
+      "errors": 5,
+      "errorItems": [
+        {
+          "source": "zakazrf-direct",
+          "query": "вставка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "zakazrf-direct",
+          "query": "лопатка",
+          "error": "fetch failed"
+        },
+        {
+          "source": "zakazrf-direct",
+          "query": "напыление",
+          "error": "fetch failed"
+        },
+        {
+          "source": "zakazrf-direct",
+          "query": "порошковой",
+          "error": "fetch failed"
+        },
+        {
+          "source": "zakazrf-direct",
+          "query": "ремонт",
+          "error": "fetch failed"
+        }
+      ]
     }
   ],
-  "errors": 0,
+  "errors": 5,
   "probeErrors": 0,
   "probeOk": 0,
   "droppedNoKeyword": 42,
   "titlesSuspicious": 0,
-  "localArchived": 29,
-  "newCount": 30,
-  "corroborated": 66,
-  "corroboratedPct": 50,
-  "relevantPerRequest": 3.59,
+  "localArchived": 2,
+  "newCount": 97,
+  "corroborated": 67,
+  "corroboratedPct": 33,
+  "relevantPerRequest": 3.95,
   "deepArchive": true,
   "incrementalFrom": "",
   "budget": {
@@ -112,7 +138,7 @@
       "exhausted": false
     },
     "gentender": {
-      "limit": 560,
+      "limit": 720,
       "used": 0,
       "exhausted": false
     },
@@ -133,32 +159,32 @@
     },
     "tektorg-direct": {
       "limit": 40,
-      "used": 24,
+      "used": 28,
       "exhausted": false
     },
     "etpgpb-direct": {
       "limit": 40,
-      "used": 11,
+      "used": 13,
       "exhausted": false
     },
     "roseltorg-direct": {
       "limit": 40,
-      "used": 24,
+      "used": 28,
       "exhausted": false
     },
     "rad-direct": {
       "limit": 40,
-      "used": 11,
+      "used": 13,
       "exhausted": false
     },
     "fabrikant-direct": {
       "limit": 40,
-      "used": 9,
+      "used": 10,
       "exhausted": false
     },
     "zakazrf-direct": {
       "limit": 40,
-      "used": 6,
+      "used": 5,
       "exhausted": false
     },
     "eis-html": {
@@ -167,5 +193,5 @@
       "exhausted": false
     }
   },
-  "partial": false
+  "partial": true
 }

@@ -1,6 +1,14 @@
 {
-  "updated": "2026-11-25T05:55:02.529Z",
+  "updated": "2026-11-25T07:16:01.026Z",
   "inns": {
+    "1102016594": {
+      "name": "Транснефть - Север",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "1102024468": {
       "name": "Газпром трансгаз Ухта",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -48,6 +56,22 @@
       "total": 0,
       "emptyStreak": 5,
       "covered": true
+    },
+    "1644003838": {
+      "name": "Татнефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "1645000340": {
+      "name": "Транснефть - Прикамье",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
     },
     "1656002652": {
       "name": "Казанский вертолётный завод",
@@ -137,6 +161,38 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "2310040800": {
+      "name": "КТК-Р",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "2315004404": {
+      "name": "НМТП",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "2315072242": {
+      "name": "Черномортранснефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "2315143060": {
+      "name": "Транснефть-Терминал (ТНТ)",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "2320109650": {
       "name": "Интер РАО",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -185,6 +241,14 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "2464036561": {
+      "name": "Славнефть-Красноярскнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "2501002394": {
       "name": "ААК «Прогресс» им. Н.И. Сазыкина",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -192,6 +256,14 @@
       "total": 0,
       "emptyStreak": 5,
       "covered": true
+    },
+    "2508081814": {
+      "name": "Транснефть - Порт Козьмино",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
     },
     "2536210349": {
       "name": "ЦСД (Дальзавод)",
@@ -225,6 +297,14 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "2724132118": {
+      "name": "Транснефть - Дальний Восток",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "2801133630": {
       "name": "РАО ЭС Востока",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -248,6 +328,14 @@
       "total": 0,
       "emptyStreak": 5,
       "covered": true
+    },
+    "2983998001": {
+      "name": "Башнефть-Полюс",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
     },
     "3111006980": {
       "name": "Транспорт будущего",
@@ -273,6 +361,30 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "3235002178": {
+      "name": "Транснефть - Дружба",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "3435125709": {
+      "name": "ОЭП АК Инжиниринг",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "3444070534": {
+      "name": "ЛУКОЙЛ-Нижневолжскнефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "3661001457": {
       "name": "ГСП Инжиниринг (бывш. Газпроектинжиниринг)",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -289,6 +401,14 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "3665087656": {
+      "name": "НИИ лопастных машин",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "3800000220": {
       "name": "Иркутскэнерго",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -297,6 +417,14 @@
       "emptyStreak": 5,
       "covered": true
     },
+    "3801079671": {
+      "name": "Транснефть - Восток",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
     "3807002509": {
       "name": "Яковлев",
       "lastOk": "2026-11-24T13:04:21.643Z",
@@ -304,6 +432,14 @@
       "total": 0,
       "emptyStreak": 5,
       "covered": true
+    },
+    "3808066311": {
+      "name": "Иркутская нефтяная компания (ИНК)",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
     },
     "3808229774": {
       "name": "Байкальская энергетическая компания",
@@ -1760,6 +1896,462 @@
       "total": 0,
       "emptyStreak": 3,
       "covered": true
+    },
+    "7706107510": {
+      "name": "Роснефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7708004767": {
+      "name": "ЛУКОЙЛ",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5504036333": {
+      "name": "Газпром нефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8602060555": {
+      "name": "Сургутнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "0274051582": {
+      "name": "Башнефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7701350084": {
+      "name": "Зарубежнефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7717133960": {
+      "name": "РуссНефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7707017509": {
+      "name": "Славнефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8608048498": {
+      "name": "ЛУКОЙЛ-Западная Сибирь",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8618006063": {
+      "name": "Газпромнефть-Хантос",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8905000428": {
+      "name": "Газпромнефть-Ноябрьскнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8604035473": {
+      "name": "РН-Юганскнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8913006455": {
+      "name": "РН-Пурнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8610010727": {
+      "name": "РН-Няганьнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8605003932": {
+      "name": "Славнефть-Мегионнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7017126251": {
+      "name": "Газпромнефть-Восток",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6501163102": {
+      "name": "ННК-Сахалинморнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5610218014": {
+      "name": "Газпромнефть-Оренбург",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7225003194": {
+      "name": "РН-Уватнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8603089934": {
+      "name": "Самотлорнефтегаз",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7838395487": {
+      "name": "Газпромнефть НТЦ",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7707717910": {
+      "name": "ЛУКОЙЛ-Инжиниринг",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7706613770": {
+      "name": "РН-Бурение",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "8601066868": {
+      "name": "Газпромнефть-Технологические Партнерства",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7704685184": {
+      "name": "Нефтиса",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7706061801": {
+      "name": "Транснефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "0278039018": {
+      "name": "Транснефть - Урал",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7201000726": {
+      "name": "Транснефть-Сибирь",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5260900725": {
+      "name": "Транснефть - Верхняя Волга",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6317024749": {
+      "name": "Транснефть-Приволга",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5502020634": {
+      "name": "Транснефть-Западная Сибирь",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4704041900": {
+      "name": "Транснефть - Балтика",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4704045809": {
+      "name": "Транснефть-Порт Приморск",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4704057515": {
+      "name": "Приморский торговый порт",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4707029837": {
+      "name": "Невская трубопроводная компания",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7805058077": {
+      "name": "Петербургский нефтяной терминал",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "4704101901": {
+      "name": "РПК-Высоцк ЛУКОЙЛ-II",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7736607502": {
+      "name": "НИИ Транснефть",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5072703668": {
+      "name": "Транснефть - Диаскан",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7449026737": {
+      "name": "Транснефть - Нефтяные насосы",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5250000820": {
+      "name": "Транснефть-Подводсервис",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7710022410": {
+      "name": "Гипротрубопровод",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5702000265": {
+      "name": "ГМС Ливгидромаш",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7733015025": {
+      "name": "Гидромашсервис",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7460009005": {
+      "name": "Корвет",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6670263239": {
+      "name": "ПО Свердмаш",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5834052005": {
+      "name": "Виллина",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5920014980": {
+      "name": "НПП Адонис",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6652028306": {
+      "name": "Уралгидромаш",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7713041098": {
+      "name": "НПФ ЭИТЭК",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7449126763": {
+      "name": "Русские Электрические Двигатели",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7449139434": {
+      "name": "Уральские динамические машины",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "5029149228": {
+      "name": "Силмекс",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7705152485": {
+      "name": "НПК Герметика",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7701985983": {
+      "name": "ПГМ Маш",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "6678065969": {
+      "name": "Завод Нефтехиммаш",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
+    },
+    "7728815650": {
+      "name": "Транснефть-Технологии",
+      "lastOk": "",
+      "lastArchive": "",
+      "total": null,
+      "emptyStreak": 0,
+      "covered": false
     }
   }
 }

@@ -128,7 +128,7 @@ select,input[type="date"]{color-scheme:light}
 .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
 .toolbar__count{color:var(--muted);font-size:13.5px}
 .toolbar__count strong{color:var(--ink);font-size:18px}
-.content > .toolbar{background:var(--band-bg);color:#fff;padding:12px 14px;border-radius:0 0 10px 10px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.content > .toolbar{background:var(--band-bg);color:#fff;padding:12px var(--wrap-pad);border-radius:0;margin:0 calc(-1 * var(--wrap-pad)) 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
 .content > .toolbar .toolbar__count,.content > .toolbar .toolbar__count strong{color:#fff}
 .content > .toolbar .toolbar__count{opacity:.9}
 .content > .toolbar .btn--ghost,.content > .toolbar .btn--filters{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#fff}
@@ -148,6 +148,10 @@ select,input[type="date"]{color-scheme:light}
 
 /* Cards */
 .cards{display:flex;flex-direction:column;gap:16px;min-width:0}
+/* Офскрин-карточки не раскладываются и не рисуются до появления в viewport. */
+.card{content-visibility:auto;contain-intrinsic-size:auto 190px}
+.more-cards{align-self:center;margin:6px 0 18px}
+.tenders-view .more-cards{display:block;margin:10px auto 18px}
 .group{background:transparent;min-width:0}
 .group__head{display:flex;align-items:center;gap:10px;padding:3px 2px 8px;border-bottom:2px solid var(--line);margin-bottom:10px}
 .group__title{font-size:16.5px;font-weight:750}
@@ -365,7 +369,8 @@ body.is-map .btn--filters{display:inline-flex}
  * Закрытая панель не занимает колонку — контент идёт на всю ширину .wrap. */
 .layout{grid-template-columns:0 minmax(0,1fr);gap:0}
 body.filters-open .layout{grid-template-columns:242px minmax(0,1fr);gap:18px}
-body:not(.filters-open) .filters{display:block;min-width:0;max-height:calc(100vh - 84px);overflow:hidden;padding:0;border:0;opacity:0;transform:translateX(-10px);pointer-events:none;box-shadow:none;transition:opacity .22s ease,transform .22s ease,padding .22s ease}
+body:not(.filters-open) .filters{display:block;min-width:0;height:0;max-height:0;overflow:hidden;padding:0;border:0;opacity:0;transform:translateX(-10px);pointer-events:none;box-shadow:none;transition:opacity .22s ease,transform .22s ease,padding .22s ease,max-height .22s ease}
+body.filters-open .filters{height:auto;max-height:calc(100vh - 84px)}
 body.filters-open .filters__close{display:grid}
 .btn--sm{padding:6px 10px;font-size:12px}
 body.is-map .seg,body.is-map #sort{display:none}
@@ -420,6 +425,8 @@ body.is-tenders .hero{display:none}
   .group__title{font-size:15px}
   .layout,body.is-map .layout,body.filters-open .layout,body.is-map.filters-open .layout{grid-template-columns:minmax(0,1fr);gap:0}
   .filters,body.is-map .filters{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 8px;padding:12px}
+  body:not(.filters-open) .filters{display:none}
+  body.filters-open .filters{display:block}
   .filters .field:first-of-type{grid-column:1/-1}
   body.filters-open .filters,body.is-map.filters-open .filters{display:grid;max-height:none;overflow:visible;padding:12px;border:1px solid var(--line);opacity:1;transform:none;pointer-events:auto;animation:panel-in .24s ease}
 

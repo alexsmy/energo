@@ -64,6 +64,8 @@
     q: '', enterprise: '', from: '', to: '', source: '', keyword: '',
     view: 'cards', sort: 'date', pane: 'tenders', kwGroup: 'base',
     filtersOpen: false,
+    limit: 40,
+    filterKey: '',
     mode: settings.defaultMode === 'archive' ? 'archive' : 'active'
   };
 
@@ -532,13 +534,22 @@
     modeHint();
     if (state.pane === 'etps') { renderEtps(); return; }
     const list = filtered();
+    const fk = JSON.stringify([state.q, state.enterprise, state.from, state.to, state.source,
+      state.keyword, state.mode, state.view, state.sort]);
+    if (fk !== state.filterKey) { state.filterKey = fk; state.limit = 40; }
+    const shown = list.slice(0, state.limit);
     $('tCount').textContent = list.length;
     $('tCountWord').textContent = plural(list.length);
     $('tEmpty').hidden = list.length > 0;
+    const more = $('tMore');
+    if (more) {
+      more.hidden = list.length <= state.limit;
+      more.textContent = 'Показать ещё ' + Math.min(state.limit, list.length - state.limit) + ' из ' + list.length;
+    }
     $('tCards').hidden = state.view !== 'cards';
     $('tTableWrap').hidden = state.view !== 'table';
-    if (state.view === 'cards') $('tCards').innerHTML = list.map(cardHtml).join('');
-    else $('tTbody').innerHTML = list.map(rowHtml).join('');
+    if (state.view === 'cards') $('tCards').innerHTML = shown.map(cardHtml).join('');
+    else $('tTbody').innerHTML = shown.map(rowHtml).join('');
   }
 
   /* ---------- инициализация ---------- */
@@ -808,6 +819,7 @@
     }));
 
     if ($('tFilterToggle')) $('tFilterToggle').addEventListener('click', () => setFiltersOpen(!state.filtersOpen));
+    if ($('tMore')) $('tMore').addEventListener('click', () => { state.limit += 40; render(); });
 
     document.querySelectorAll('.t-tab').forEach(b => b.addEventListener('click', () => setPane(b.dataset.tview)));
     document.querySelectorAll('[data-tmode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.tmode)));
