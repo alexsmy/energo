@@ -36,12 +36,14 @@ test('в клиентском коде нет токенов Telegram и GitHub'
 });
 
 test('собираются все нужные группы событий', () => {
-  for (const type of ['session', 'tab', 'card', 'search']) {
+  for (const type of ['session', 'tab', 'click', 'search', 'link']) {
     assert.ok(js.includes("push('" + type + "'"), 'нет события ' + type);
   }
   assert.match(js, /browserOf|osOf|deviceOf/);
   assert.match(js, /navigator\.connection/);
-  assert.match(js, /IntersectionObserver/);
+  assert.ok(!js.includes('IntersectionObserver'), 'просмотр мини-карточек не должен быть событием');
+  assert.match(js, /kind: 'org_card'/, 'нет клика по карточке организации');
+  assert.match(js, /kind: 'tender_card'/, 'нет клика по карточке закупки');
   assert.match(js, /data-kw/);
   assert.match(js, /sendBeacon/);
   assert.match(js, /seenPct/);

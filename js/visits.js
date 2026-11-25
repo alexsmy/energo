@@ -20,11 +20,8 @@
   var tabStart = 0;
   var maxScroll = {};
   var maxSeen = {};
-  var viewed = Object.create(null);
   var searches = Object.create(null);
   var searchTimer = null;
-  var observed = [];
-  var observer = null;
   var hiddenAt = 0;
   var hasInteracted = false;
   var isHeadless = !!(navigator.webdriver || document.documentElement.getAttribute('webdriver'));
@@ -182,8 +179,7 @@
     if (!activeTab || !tabStart) return;
     var dur = Math.max(0, Math.round((Date.now() - tabStart) / 100) / 10);
     push('tab', { tab: activeTab, action: 'close', seconds: dur, maxScroll: maxScroll[activeTab] || 0,
-      seenPct: maxSeen[activeTab] || 0,
-      viewedCards: Object.keys(viewed).filter(function (k) { return viewed[k] === activeTab; }).length });
+      seenPct: maxSeen[activeTab] || 0 });
     activeTab = null; tabStart = 0;
   }
   function tabOpen() {
@@ -214,36 +210,17 @@
     });
   }, { passive: true });
 
-  function observeCards() {
-    if (!('IntersectionObserver' in window)) return;
-    if (!observer) {
-      observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (!en.isIntersecting) return;
-          var el = en.target;
-          var id = el.dataset.id || el.dataset.favOrg || el.dataset.favTender || '';
-          if (!id || viewed[id]) return;
-          viewed[id] = activeTab || currentTab();
-          push('card', { id: id, area: el.classList.contains('t-card') ? 'tenders' : (el.classList.contains('card') ? 'registry' : 'map'), tab: activeTab });
-          scheduleFlush();
-          try { observer.unobserve(el); } catch (e) {}
-        });
-      }, { threshold: 0.5 });
-    }
-    var nodes = document.querySelectorAll('.card[data-id], .t-card[data-id], .t-etp[data-code]');
-    for (var i = 0; i < nodes.length; i++) {
-      if (observed.indexOf(nodes[i]) === -1) { observed.push(nodes[i]); try { observer.observe(nodes[i]); } catch (e) {} }
-    }
-  }
-  if ('MutationObserver' in window) {
-    new MutationObserver(function () { observeCards(); }).observe(document.body, { childList: true, subtree: true });
-  }
-
   document.addEventListener('click', function (e) {
     var tabBtn = e.target.closest('[data-tab]');
-    if (tabBtn) { tabOpen(); return; }
-    var pane = e.target.closest('[data-tview], [data-tcards], [data-view]');
-    if (pane) { tabOpen(); return; }
+    if (tabBtn) {
+      push('click', { kind: 'tab', label: tabBtn.dataset.tab || '', tab: activeTab });
+      tabOpen(); return;
+    }
+    var pane = e.target.closest('[data-tview], [data-tcards], [data-view], [data-tmode]');
+    if (pane) {
+      push('click', { kind: 'button', label: pane.dataset.tview || pane.dataset.tcards || pane.dataset.view || pane.dataset.tmode || '', tab: activeTab });
+      tabOpen(); return;
+    }
     var kw = e.target.closest('[data-kw]');
     if (kw) {
       var label = (kw.textContent || '').trim();
@@ -251,16 +228,31 @@
       if (label) { push('search', { source: 'chip', query: label, kind: kind, tab: activeTab }); scheduleFlush(); }
       return;
     }
+    var btn = e.target.closest('#filterToggle, #tFilterToggle, #tReset, #exportBtn, #resetBtn, #tOpenSearch, #tSort, #sort');
+    if (btn) {
+      push('click', { kind: 'button', label: btn.id, tab: activeTab });
+      scheduleFlush(); return;
+    }
+    var org = e.target.closest('[data-open-id]');
+    if (org) {
+      push('click', { kind: 'org_card', id: org.dataset.openId || '', tab: activeTab });
+      scheduleFlush(); return;
+    }
+    var tender = e.target.closest('#tCards .t-card[data-id], #tTbody tr[data-id]');
+    if (tender) {
+      push('click', { kind: 'tender_card', id: tender.dataset.id || '', tab: activeTab });
+      scheduleFlush(); return;
+    }
     var link = e.target.closest('a[href]');
     if (link) {
       var href = link.getAttribute('href') || '';
-      var kind = /^tel:/i.test(href) ? 'tel' : /^mailto:/i.test(href) ? 'mailto'
+      var linkKind = /^tel:/i.test(href) ? 'tel' : /^mailto:/i.test(href) ? 'mailto'
         : /(registry\.csv|registry\.json|\.pdf|print\.html)/i.test(href) ? 'download'
         : /^https?:\/\//i.test(href) && link.hostname !== location.hostname ? 'external' : '';
-      if (kind) { push('link', { kind: kind, href: href.slice(0, 200), tab: activeTab }); scheduleFlush(); }
+      if (linkKind) { push('link', { kind: linkKind, href: href.slice(0, 200), tab: activeTab }); scheduleFlush(); }
     }
     var marker = e.target.closest('.leaflet-marker-icon');
-    if (marker) { push('card', { id: marker.dataset.id || 'map-marker', area: 'map', tab: activeTab }); scheduleFlush(); }
+    if (marker) { push('click', { kind: 'map_marker', id: marker.dataset.id || '', tab: activeTab }); scheduleFlush(); }
   }, true);
 
   function trackInput(e) {
@@ -296,8 +288,7 @@
     if (started || !enabled || !endpoint) return;
     started = true;
     tabOpen();
-    observeCards();
-    setInterval(function () { observeCards(); if (!document.hidden) flush(); }, 30000);
+    setInterval(function () { if (!document.hidden) flush(); }, 30000);
     fingerprint().then(function (hardId) {
       var info = deviceInfo();
       info.hardId = hardId;
