@@ -8331,9 +8331,58 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-25T05:18:50.163Z",
+  "updated": "2026-11-25T05:55:02.529Z",
   "count": 133,
   "records": [
+   {
+    "id": "GPB:2125863",
+    "regNumber": "",
+    "externalId": "2125863",
+    "title": "Поставка уплотнений комбинированных для нужд ОАО \"Газпром трансгаз Беларусь\"",
+    "customer": "Газпром транcгаз Беларусь",
+    "customerInn": "7736050003",
+    "customerCode": "",
+    "matchedOrgId": "H-GAZPROM",
+    "matchedOrgName": "Газпром",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-25",
+    "deadline": "2026-12-03",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "active",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1052579",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-GAZPROM"
+    ],
+    "foundAt": "2026-11-25T05:55:30.797Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1052579",
+      "foundAt": "2026-11-25T05:55:30.797Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
+   },
    {
     "id": "TEK:20392194",
     "regNumber": "",
@@ -8369,7 +8418,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -8379,7 +8428,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20392194",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "TEK:20391645",
@@ -8418,7 +8469,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -8428,7 +8479,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/market/procedures/20391645",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "GPB:2124911",
@@ -8465,7 +8518,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-24T14:16:47.134Z",
-    "lastSeen": "2026-11-24T17:04:27.957Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -8475,7 +8528,9 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312826",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "RAD:rad-RAD260059643-120",
@@ -8500,7 +8555,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q43219ump4ubnd0",
     "keywords": [
      "Порошковые"
@@ -8522,7 +8577,10 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q43219ump4ubnd0",
       "foundAt": "2026-11-24T13:04:21.643Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "TEK:tt-962878",
@@ -8547,7 +8605,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Приём заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/market/procedures/20391645",
     "keywords": [
      "Уплотнения"
@@ -8571,7 +8629,10 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/market/procedures/20391645",
       "foundAt": "2026-11-24T13:04:21.643Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616606621",
@@ -8596,7 +8657,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616606621",
     "keywords": [
      "Турбина",
@@ -8628,7 +8689,10 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616606621",
       "foundAt": "2026-11-24T05:50:18.939Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616609473",
@@ -8653,7 +8717,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609473",
     "keywords": [
      "Уплотнения"
@@ -8693,7 +8757,10 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/32616609473/1",
       "foundAt": "2026-11-24T05:58:20.217Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2122267",
@@ -8730,7 +8797,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-24T14:16:47.134Z",
-    "lastSeen": "2026-11-24T17:04:27.957Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -8740,7 +8807,9 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312026",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "32616605882",
@@ -8765,7 +8834,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616605882",
     "keywords": [
      "Турбина",
@@ -8789,7 +8858,10 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616605882",
       "foundAt": "2026-11-24T05:50:18.939Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "32616602654",
@@ -8814,7 +8886,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=0e31b0dc-8354-4d9c-a0bb-92bbf067cfb0&purchaseNoticeNumber=32616602654",
     "keywords": [
      "Турбина"
@@ -8860,7 +8932,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616602654",
       "foundAt": "2026-11-23T02:20:57.973Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20379727",
@@ -8897,7 +8971,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "gentender",
@@ -8923,7 +8997,8 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/market/procedures/20379727",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "TEK:20383987",
@@ -8960,7 +9035,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:52:22.538Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -8978,7 +9053,8 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "FAB:680125568",
@@ -9015,7 +9091,7 @@ window.TENDER_DATA = {
      "H-ROSATOM"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -9025,7 +9101,9 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1038686",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "ROS:32616599981",
@@ -9050,7 +9128,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616599981",
     "keywords": [
      "Турбина",
@@ -9074,7 +9152,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616599981",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:32616516992",
@@ -9099,7 +9179,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516992",
     "keywords": [
      "Турбина"
@@ -9121,7 +9201,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516992",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:32616604656",
@@ -9146,7 +9228,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616604656",
     "keywords": [
      "Уплотнения"
@@ -9168,7 +9250,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616604656",
       "foundAt": "2026-11-20T16:40:01.377Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616594944",
@@ -9193,7 +9277,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
     "keywords": [
      "Турбина"
@@ -9231,7 +9315,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616595899",
@@ -9256,7 +9342,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
     "keywords": [
      "Турбина"
@@ -9294,7 +9380,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616595171",
@@ -9319,7 +9407,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
     "keywords": [
      "Турбина",
@@ -9367,7 +9455,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
       "foundAt": "2026-11-20T15:36:45.567Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:gpmslt19718u80000q3sjf5sr0eddt20",
@@ -9405,7 +9495,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-24T17:04:59.116Z",
+    "lastSeen": "2026-11-25T05:56:03.524Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -9431,11 +9521,12 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/search?search=%D0%9E%D0%9A%D0%9F%D0%942%2028.11.33.000%20%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%20%D0%BB%D0%BE%D0%BF%D0%B0%D1%82%D0%BE%D0%BA%20%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D1%85%201%20%D1%81%D1%82%D1%83%D0%BF%D0%B5%D0%BD%D0%B8%20%D0%93%D0%A2%D0%AD-45-3%20(%D0%B2%20%D1%82%D0%BE%D0%BC%20%D1%87%D0%B8%D1%81%D0%BB%D0%B5%20%D0%90%D0%B2%D0%B0%D1%80%D0%B8%D0%B9%D0%BD%D1%8B%D0%B9%20%D0%B7%D0%B0%D0%BF%D0%B0%D1%81)%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D1%83%D0%B6%D0%B4%20%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%B9%20%D0%93%D0%A0%D0%AD%D0%A1%20%D0%B2%20%D1%80%D0%B0%D0%BC%D0%BA%D0%B0%D1%85%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2",
       "foundAt": "2026-11-24T17:04:59.116Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "RAD:gpmsps19718u80000q3t3l0hj4a6jijo",
-    "regNumber": "",
+    "regNumber": "197188000033046",
     "externalId": "gpmsps19718u80000q3t3l0hj4a6jijo",
     "title": "ОКПД2 22.19.73.114 Поставка изделий «Грушевидная резина уплотнения, тип II Ф-60мм», «Резина уплотнения 1-ХII» для нужд Дагестанского филиала АО “Гидроремонт-ВКК” в г. Махачкала",
     "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГИДРОРЕМОНТ-ВКК\"",
@@ -9468,7 +9559,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-24T17:04:59.116Z",
-    "lastSeen": "2026-11-24T17:04:59.116Z",
+    "lastSeen": "2026-11-25T05:56:03.524Z",
     "sources": [
      {
       "source": "rad-direct",
@@ -9478,7 +9569,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/search?search=%D0%A0%D0%B5%D0%B7%D0%B8%D0%BD%D0%B0%20%D0%A3%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%201-%D0%A5II%D0%B0-1%20(%D0%A8%D0%B8%D1%80%D0%B8%D0%BD%D0%B0%2060%D0%BC%D0%BC%2C%20%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0%20h-10%D0%BC%D0%BC)%20%D0%BE%D1%82%D1%80%D0%B5%D0%B7%D0%BA%D0%B8%2020%20000%20%D0%BC%D0%BC",
       "foundAt": "2026-11-24T17:04:59.116Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "TEK:20376142",
@@ -9517,7 +9610,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -9527,7 +9620,8 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20376142",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "GPB:2118857",
@@ -9552,7 +9646,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1049738",
     "keywords": [
      "Уплотнения"
@@ -9574,7 +9668,10 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1049738",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z",
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-5",
@@ -9599,7 +9696,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
     "keywords": [
      "Уплотнения"
@@ -9621,7 +9718,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hj4a6jijo",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021",
@@ -9646,7 +9745,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
     "keywords": [
      "Уплотнения"
@@ -9668,7 +9767,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hfso1d9t8",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-2",
@@ -9693,7 +9794,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
     "keywords": [
      "Уплотнения"
@@ -9715,7 +9816,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hglfrar40",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-3",
@@ -9740,7 +9843,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
     "keywords": [
      "Уплотнения"
@@ -9762,7 +9865,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hh8qucqu0",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260059021-4",
@@ -9787,7 +9892,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
     "keywords": [
      "Уплотнения"
@@ -9809,7 +9914,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3t3l0hi2fjaams",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "B2B:32616461107",
@@ -9834,7 +9941,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-19",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
     "keywords": [
      "Турбина"
@@ -9856,7 +9963,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616592466",
@@ -9881,7 +9990,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592466",
     "keywords": [
      "Турбина"
@@ -9919,7 +10028,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592466",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616593309",
@@ -9944,7 +10055,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593309",
     "keywords": [
      "Турбина"
@@ -9982,7 +10093,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593309",
       "foundAt": "2026-11-20T15:50:44.443Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616592885",
@@ -10007,7 +10120,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592885",
     "keywords": [
      "Турбина"
@@ -10045,7 +10158,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592885",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616593352",
@@ -10070,7 +10185,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
     "keywords": [
      "Уплотнения"
@@ -10101,7 +10216,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20375040",
@@ -10138,7 +10255,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10156,7 +10273,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/interrao/procedures/20375040",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "GPB:2116926",
@@ -10193,7 +10312,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-24T14:16:47.134Z",
-    "lastSeen": "2026-11-24T17:04:27.957Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -10203,7 +10322,9 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310408",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "RAD:32616584882",
@@ -10228,7 +10349,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-18",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616584882",
     "keywords": [
      "Турбина",
@@ -10252,7 +10373,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616584882",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616583256",
@@ -10277,7 +10400,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
     "keywords": [
      "Турбина"
@@ -10308,7 +10431,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
       "foundAt": "2026-11-24T13:04:21.643Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:680071996",
@@ -10345,7 +10470,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "gentender",
@@ -10363,7 +10488,8 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/v2/trades/procedure/view/MzhWYKy7C11V7_t6Z43ltw",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "TEK:20293988",
@@ -10400,7 +10526,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10418,7 +10544,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/interrao/procedures/20293988",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "GPB:2112252",
@@ -10455,7 +10583,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-24T14:16:47.134Z",
-    "lastSeen": "2026-11-24T17:04:27.957Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -10465,7 +10593,9 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1309127",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "ZAKAZ:32616573382",
@@ -10490,7 +10620,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-12",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573382",
     "keywords": [
      "Турбина"
@@ -10512,7 +10642,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573382",
       "foundAt": "2026-11-20T16:53:47.655Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616564450",
@@ -10537,7 +10669,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
     "keywords": [
      "Турбина"
@@ -10567,7 +10699,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
       "foundAt": "2026-11-20T12:15:00.462Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20231059",
@@ -10605,7 +10739,7 @@ window.TENDER_DATA = {
      "O-ZTL"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10623,7 +10757,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20231059",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "32616557260",
@@ -10648,7 +10784,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": 1,
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1dadc958-811e-480d-a648-c779f2337f93&purchaseNoticeNumber=32616557260",
     "keywords": [
      "Турбина",
@@ -10696,7 +10832,9 @@ window.TENDER_DATA = {
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616557260",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:679991236",
@@ -10733,7 +10871,7 @@ window.TENDER_DATA = {
      "H-ROSATOM-VIE"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -10743,7 +10881,9 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1033913",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "TEK:20193697",
@@ -10780,7 +10920,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10798,7 +10938,8 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "FAB:679969604",
@@ -10835,7 +10976,7 @@ window.TENDER_DATA = {
      "O-AEMTECH"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -10845,7 +10986,9 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1033186",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "GPB:2100159",
@@ -10882,7 +11025,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-24T14:16:47.134Z",
-    "lastSeen": "2026-11-24T17:04:27.957Z",
+    "lastSeen": "2026-11-25T05:55:30.797Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -10892,7 +11035,9 @@ window.TENDER_DATA = {
       "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1041088",
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "TEK:20188037",
@@ -10929,7 +11074,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -10947,7 +11092,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/interrao/procedures/20188037",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "FAB:679958081",
@@ -10984,7 +11131,7 @@ window.TENDER_DATA = {
      "O-AEMTECH"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -10994,7 +11141,9 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1032726",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "FAB:679955709",
@@ -11031,7 +11180,7 @@ window.TENDER_DATA = {
      "O-AEMTECH"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -11041,7 +11190,9 @@ window.TENDER_DATA = {
       "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1032566",
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "TEK:19926134",
@@ -11079,7 +11230,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -11089,7 +11240,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/bi_223fz/procedures/19926134",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "RAD:rad-RAD260037550-11",
@@ -11114,7 +11267,7 @@ window.TENDER_DATA = {
     "updated": "2026-07-31",
     "status": "Идет прием коммерческих предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000pvdn09mh4fpubho",
     "keywords": [
      "Турбина"
@@ -11136,7 +11289,9 @@ window.TENDER_DATA = {
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000pvdn09mh4fpubho",
       "foundAt": "2026-11-20T15:12:44.741Z"
      }
-    ]
+    ],
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:19925683",
@@ -11173,7 +11328,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -11183,7 +11338,9 @@ window.TENDER_DATA = {
       "url": "https://www.tektorg.ru/bi_223fz/procedures/19925683",
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "ROS:B1811261948307",
@@ -11220,7 +11377,7 @@ window.TENDER_DATA = {
      "R-SEVMASH"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -11238,7 +11395,9 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "ROS:32616609473",
@@ -11275,7 +11434,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T14:16:58.315Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg-direct",
@@ -11285,7 +11444,9 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/32616609473/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "ROS:RH04112600008",
@@ -11324,7 +11485,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -11342,7 +11503,8 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "ROS:RH04112600007",
@@ -11381,7 +11543,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -11399,7 +11561,8 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "ROS:RH04112600006",
@@ -11438,7 +11601,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -11456,7 +11619,8 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
      }
-    ]
+    ],
+    "isNew": false
    },
    {
     "id": "ROS:B2411261803057",
@@ -11493,7 +11657,7 @@ window.TENDER_DATA = {
      "R-SEVMASH"
     ],
     "foundAt": "2026-11-24T16:26:26.978Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg-direct",
@@ -11503,7 +11667,58 @@ window.TENDER_DATA = {
       "url": "https://www.roseltorg.ru/procedure/B2411261803057/1",
       "foundAt": "2026-11-24T16:26:26.978Z"
      }
-    ]
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
+   },
+   {
+    "id": "ROS:RH25112600030",
+    "regNumber": "",
+    "externalId": "RH25112600030",
+    "title": "Услуги по определению причин образования дефектов проточной части паровой турбины.",
+    "customer": "Акционерное общество \"Дальневосточная генерирующая компания\"",
+    "customerInn": "1434031363",
+    "customerCode": "",
+    "matchedOrgId": "C-DGK",
+    "matchedOrgName": "ДГК",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-12-02",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "active",
+    "url": "https://www.roseltorg.ru/procedure/RH25112600030/1",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-DGK"
+    ],
+    "foundAt": "2026-11-25T05:55:42.137Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH25112600030/1",
+      "foundAt": "2026-11-25T05:55:42.137Z"
+     }
+    ],
+    "isNew": true,
+    "firstSeen": "2026-11-25T05:55:02.529Z"
    },
    {
     "id": "32616598751",
@@ -11770,7 +11985,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -11817,7 +12032,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-24T17:05:08.678Z",
-    "lastSeen": "2026-11-24T17:05:08.678Z",
+    "lastSeen": "2026-11-25T05:56:13.031Z",
     "sources": [
      {
       "source": "fabrikant-direct",
@@ -11991,7 +12206,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-24T17:05:16.823Z",
+    "lastSeen": "2026-11-25T05:56:21.116Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -12398,7 +12613,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -12692,7 +12907,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "gentender",
@@ -12755,7 +12970,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -12906,7 +13121,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13041,7 +13256,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -13096,7 +13311,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -13198,7 +13413,7 @@ window.TENDER_DATA = {
      "H-UNIPRO"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -13317,7 +13532,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13494,7 +13709,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-24T17:05:16.823Z",
+    "lastSeen": "2026-11-25T05:56:21.116Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13722,7 +13937,7 @@ window.TENDER_DATA = {
      "H-EL5"
     ],
     "foundAt": "2026-11-20T15:36:45.567Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -14076,7 +14291,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-24T17:04:59.116Z",
+    "lastSeen": "2026-11-25T05:56:03.524Z",
     "sources": [
      {
       "source": "gentender",
@@ -14131,7 +14346,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-24T14:16:20.323Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -14394,7 +14609,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "gosplan",
@@ -14806,7 +15021,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-24T17:04:03.184Z",
+    "lastSeen": "2026-11-25T05:55:02.644Z",
     "sources": [
      {
       "source": "tektorg",
@@ -15163,7 +15378,7 @@ window.TENDER_DATA = {
      "O-ZIO"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -15180,100 +15395,6 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://www.roseltorg.ru/procedure/ATOM13112600336/1",
       "foundAt": "2026-11-24T14:16:58.315Z"
-     }
-    ]
-   },
-   {
-    "id": "ROS:KIM000011150",
-    "regNumber": "",
-    "externalId": "KIM000011150",
-    "title": "Щит распределительный ЩМ-РУСП-32-3х16/3+1х16/5 32А IP54 сталь с порошковой покраской Российская Федерация",
-    "customer": "Акционерное общество \"Дальневосточная генерирующая компания\"",
-    "customerInn": "1434031363",
-    "customerCode": "",
-    "matchedOrgId": "C-DGK",
-    "matchedOrgName": "ДГК",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2024-07-15",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/KIM000011150/1",
-    "keywords": [
-     "Порошковые"
-    ],
-    "matchedKeywords": [
-     "Порошковые"
-    ],
-    "enterpriseIds": [
-     "C-DGK"
-    ],
-    "foundAt": "2026-11-24T17:04:37.803Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
-    "sources": [
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/KIM000011150/1",
-      "foundAt": "2026-11-24T17:04:37.803Z"
-     }
-    ]
-   },
-   {
-    "id": "ROS:RH17022500002",
-    "regNumber": "",
-    "externalId": "RH17022500002",
-    "title": "поставка турбинного масла ТП-22с (ж/д) цистерна)",
-    "customer": "Акционерное общество \"Дальневосточная генерирующая компания\"",
-    "customerInn": "1434031363",
-    "customerCode": "",
-    "matchedOrgId": "C-DGK",
-    "matchedOrgName": "ДГК",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2025-02-18",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "archive",
-    "url": "https://www.roseltorg.ru/procedure/RH17022500002/1",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-DGK"
-    ],
-    "foundAt": "2026-11-24T17:04:37.803Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
-    "sources": [
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH17022500002/1",
-      "foundAt": "2026-11-24T17:04:37.803Z"
      }
     ]
    },
@@ -15312,7 +15433,7 @@ window.TENDER_DATA = {
      "O-AEMTECH"
     ],
     "foundAt": "2026-11-24T14:16:58.315Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg-direct",
@@ -15359,7 +15480,7 @@ window.TENDER_DATA = {
      "R-ZVEZDOCHKA"
     ],
     "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-24T17:04:37.803Z",
+    "lastSeen": "2026-11-25T05:55:42.137Z",
     "sources": [
      {
       "source": "roseltorg",
@@ -15529,17 +15650,175 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-25T05:18:50.163Z",
-  "mode": "refilter",
-  "partial": true,
+  "lastRun": "2026-11-25T05:55:02.529Z",
+  "mode": "live",
   "total": 133,
-  "active": 60,
-  "archive": 73,
-  "droppedNoKeyword": 0,
-  "titlesSuspicious": 0,
+  "unique": 305,
+  "sourceMix": {
+   "etpgpb-direct": 7,
+   "tektorg-direct": 25,
+   "gentender": 36,
+   "gosplan": 11,
+   "ЕИС / HTML": 4,
+   "fabrikant-direct": 8,
+   "ЕИС / ГосПлан API": 21,
+   "rad-direct": 3,
+   "roseltorg-direct": 10,
+   "ЕИС zakupki.gov.ru": 1,
+   "zakazrf-direct": 2,
+   "etpgpb": 1,
+   "tektorg": 1,
+   "roseltorg": 3
+  },
+  "directFirstPct": 41.4,
+  "directCoveragePct": 41.4,
+  "recordsPer100Requests": 358.8,
+  "matchedOrg": 133,
+  "active": 33,
+  "archive": 100,
+  "bySource": {
+   "GPB": 15,
+   "TEK": 29,
+   "RAD": 18,
+   "EIS": 37,
+   "SBER": 1,
+   "FAB": 8,
+   "ROS": 17,
+   "B2B": 4,
+   "ZAKAZ": 3,
+   "SBER_B2B": 1
+  },
   "sources": [
-   "refilter"
-  ]
+   {
+    "name": "tektorg-direct",
+    "available": true,
+    "requests": 24,
+    "okRequests": 24,
+    "records": 71,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "etpgpb-direct",
+    "available": true,
+    "requests": 11,
+    "okRequests": 11,
+    "records": 44,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "roseltorg-direct",
+    "available": true,
+    "requests": 24,
+    "okRequests": 24,
+    "records": 32,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "rad-direct",
+    "available": true,
+    "requests": 11,
+    "okRequests": 11,
+    "records": 97,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "fabrikant-direct",
+    "available": true,
+    "requests": 9,
+    "okRequests": 9,
+    "records": 30,
+    "errors": 0,
+    "errorItems": []
+   },
+   {
+    "name": "zakazrf-direct",
+    "available": true,
+    "requests": 6,
+    "okRequests": 6,
+    "records": 31,
+    "errors": 0,
+    "errorItems": []
+   }
+  ],
+  "errors": 0,
+  "probeErrors": 0,
+  "probeOk": 0,
+  "droppedNoKeyword": 42,
+  "titlesSuspicious": 0,
+  "localArchived": 29,
+  "newCount": 30,
+  "corroborated": 66,
+  "corroboratedPct": 50,
+  "relevantPerRequest": 3.59,
+  "deepArchive": true,
+  "incrementalFrom": "",
+  "budget": {
+   "gosplan": {
+    "limit": 60,
+    "used": 0,
+    "exhausted": false
+   },
+   "gentender": {
+    "limit": 560,
+    "used": 0,
+    "exhausted": false
+   },
+   "tektorg": {
+    "limit": 40,
+    "used": 0,
+    "exhausted": false
+   },
+   "etpgpb": {
+    "limit": 40,
+    "used": 0,
+    "exhausted": false
+   },
+   "roseltorg": {
+    "limit": 40,
+    "used": 0,
+    "exhausted": false
+   },
+   "tektorg-direct": {
+    "limit": 40,
+    "used": 24,
+    "exhausted": false
+   },
+   "etpgpb-direct": {
+    "limit": 40,
+    "used": 11,
+    "exhausted": false
+   },
+   "roseltorg-direct": {
+    "limit": 40,
+    "used": 24,
+    "exhausted": false
+   },
+   "rad-direct": {
+    "limit": 40,
+    "used": 11,
+    "exhausted": false
+   },
+   "fabrikant-direct": {
+    "limit": 40,
+    "used": 9,
+    "exhausted": false
+   },
+   "zakazrf-direct": {
+    "limit": 40,
+    "used": 6,
+    "exhausted": false
+   },
+   "eis-html": {
+    "limit": 40,
+    "used": 0,
+    "exhausted": false
+   }
+  },
+  "partial": false
  },
  "settings": {
   "note": "Режимы, источники и бюджеты сбора. active — действующие закупки, archive — завершённые за последние archiveDepthDays. sourcePriority: сначала ЕИС через ГосПлан (точные номера и ссылки), затем GenTender (агрегатор со всех площадок), затем прямые площадки; HTML-парсер ЕИС остаётся резервом. requestBudget ограничивает число сетевых запросов на прогон по каждому источнику; gentender 560 покрывает понедельничный обход (220 ИНН active + 220 archive + keyword-запросы) без обрезки.",

@@ -939,6 +939,14 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     кэш-бастеры `?v=2.61`, фазы пересчитаны офлайн (`--refilter --force`),
     сборка и все тесты проходят.
 
+61. Принудительный сбор 25.11 (в 05:55 UTC = 08:55 МСК) после двух сбоев
+    полного контура из‑за задержек ГосПлана. Выполнен только надёжный прямой
+    контур: `--source=tektorg-direct,etpgpb-direct,roseltorg-direct,rad-direct,
+    fabrikant-direct,zakazrf-direct --force --no-probe`: 305 найдено, 133 в файле,
+    0 ошибок, `partial:false`. `last-collect-result.json` — `ran:true`,
+    `date:2026-11-25`, поэтому завтрашнее окно 26.11 свободно соберёт заново.
+    `version.json` → `2.62.20261125`, кэш-бастеры `?v=2.62`, сборка OK.
+
 ## Что осталось / риски
 
 - Часть официальных сайтов отвечает 403/000 из-за локального TLS-прокси и Anti-DDoS
