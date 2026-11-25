@@ -8,7 +8,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Реестр предприятий России 2026</title>
 <meta name="description" content="Проверенный реестр холдингов, станций, ремонтных и машиностроительных предприятий России: энергетика, машиностроение, авиация и судостроение. Контакты, реквизиты, закупки, ЭТП.">
-<link rel="stylesheet" href="css/styles.css?v=2.62">
+<link rel="stylesheet" href="css/styles.css?v=2.63">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous">
@@ -203,27 +203,10 @@
 
   <div id="tTendersPane">
    <div class="t-band t-band--inner">
-    <div class="t-filters">
-      <label class="field field--search"><span>Ключевое слово или заказчик</span>
-        <div class="t-auto">
-          <input type="search" id="tQ" placeholder="Например: турбина или Затонская ТЭЦ" autocomplete="off">
-          <div class="t-suggest" id="tSuggest" hidden></div>
-        </div>
-        <div class="t-selected" id="tSelected" hidden></div>
-      </label>
-      <label class="field"><span>Дата с</span><input type="date" id="tDateFrom"></label>
-      <label class="field"><span>Дата по</span><input type="date" id="tDateTo"></label>
-      <label class="field field--source"><span>Площадка публикации</span><select id="tSource"><option value="">Все площадки</option></select></label>
-      <div class="field field--wide">
-        <span>Ключевые слова</span>
-        <div class="t-kw" id="tKeywords"></div>
-        <p class="t-hint">Базовые слова ищут по одному понятию, составные запросы — по фразе внутри базового слова.</p>
-      </div>
-    </div>
-
     <div class="t-toolbar">
       <div class="toolbar__count"><strong id="tCount">0</strong> <span id="tCountWord">записей</span> <span class="t-mode-hint" id="tModeHint"></span></div>
       <div class="t-toolbar__right">
+        <button class="btn btn--ghost btn--sm btn--filters" id="tFilterToggle" type="button" aria-expanded="false" aria-controls="tFiltersPanel">Фильтры</button>
         <div class="seg" role="group" aria-label="Статус закупок">
           <button class="seg__btn is-active" data-tmode="active" type="button">Действующие</button>
           <button class="seg__btn" data-tmode="archive" type="button">Завершённые</button>
@@ -243,6 +226,25 @@
         </select>
       </div>
     </div>
+
+    <div class="t-filters" id="tFiltersPanel" hidden>
+      <label class="field field--search"><span>Ключевое слово или заказчик</span>
+        <div class="t-auto">
+          <input type="search" id="tQ" placeholder="Например: турбина или Затонская ТЭЦ" autocomplete="off">
+          <div class="t-suggest" id="tSuggest" hidden></div>
+        </div>
+        <div class="t-selected" id="tSelected" hidden></div>
+      </label>
+      <label class="field"><span>Дата с</span><input type="date" id="tDateFrom"></label>
+      <label class="field"><span>Дата по</span><input type="date" id="tDateTo"></label>
+      <label class="field field--source"><span>Площадка публикации</span><select id="tSource"><option value="">Все площадки</option></select></label>
+      <div class="field field--wide">
+        <span>Ключевые слова</span>
+        <div class="t-kw" id="tKeywords"></div>
+        <p class="t-hint">Базовые слова ищут по одному понятию, составные запросы — по фразе внутри базового слова.</p>
+      </div>
+    </div>
+
    </div>
 
     <div id="tCards" class="t-cards"></div>
@@ -339,13 +341,13 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
-<script src="js/data.js?v=2.62"></script>
-<script src="js/tenders-data.js?v=2.62"></script>
-<script src="js/text-match.js?v=2.62"></script>
-<script src="js/tech-types.js?v=2.62"></script>
-<script src="js/sort.js?v=2.62"></script>
-<script src="js/favorites.js?v=2.62"></script>
-<script src="js/tenders.js?v=2.62"></script>
-<script src="js/app.js?v=2.62"></script>
+<script src="js/data.js?v=2.63"></script>
+<script src="js/tenders-data.js?v=2.63"></script>
+<script src="js/text-match.js?v=2.63"></script>
+<script src="js/tech-types.js?v=2.63"></script>
+<script src="js/sort.js?v=2.63"></script>
+<script src="js/favorites.js?v=2.63"></script>
+<script src="js/tenders.js?v=2.63"></script>
+<script src="js/app.js?v=2.63"></script>
 </body>
 </html>

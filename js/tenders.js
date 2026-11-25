@@ -58,9 +58,12 @@
     return (labels && labels.length ? labels : (r.matchedKeywords || r.keywords || [])).map(entryOfLabel);
   }
 
+  /* Панель фильтров по умолчанию свёрнута; состояние живёт в рамках сессии. */
+  const FILTER_KEY = 'energo-tenders-filters-open';
   const state = {
     q: '', enterprise: '', from: '', to: '', source: '', keyword: '',
     view: 'cards', sort: 'date', pane: 'tenders', kwGroup: 'base',
+    filtersOpen: false,
     mode: settings.defaultMode === 'archive' ? 'archive' : 'active'
   };
 
@@ -514,6 +517,7 @@
   }
 
   function render() {
+    updateFilterButton();
     updateStickyKeywords();
     document.querySelectorAll('[data-tmode]').forEach(b => {
       const on = b.dataset.tmode === state.mode;
@@ -642,7 +646,14 @@
     if (!sticky || !box || !view) return;
     const topbar = document.querySelector('.topbar');
     const h = topbar ? topbar.getBoundingClientRect().height : 58;
-    const show = !view.hidden && state.pane === 'tenders' && box.getBoundingClientRect().bottom < h + 12;
+    const panel = $('tFiltersPanel');
+    const collapsed = !panel || panel.hidden;
+    /* Свёрнутые фильтры: панель слов появляется только после того, как уйдёт
+     * вся тёмная полоса, и не перекрывает заголовок у верха страницы. */
+    const band = document.querySelector('#tendersView .t-band');
+    const anchor = collapsed && band ? band : box;
+    const show = !view.hidden && state.pane === 'tenders' &&
+      anchor.getBoundingClientRect().bottom < h + 12;
     sticky.classList.toggle('is-visible', show);
   }
 
@@ -652,6 +663,31 @@
     $('tTendersPane').hidden = pane !== 'tenders';
     $('tEtpsPane').hidden = pane !== 'etps';
     render();
+  }
+
+  /* Сворачиваемые фильтры: кнопка «Фильтры», как в реестре и на карте.
+   * По умолчанию панель закрыта; счётчик показывает применённые условия. */
+  function activeFilterCount() {
+    let n = 0;
+    ['q', 'enterprise', 'from', 'to', 'source', 'keyword'].forEach(k => { if (state[k]) n++; });
+    return n;
+  }
+  function updateFilterButton() {
+    const btn = $('tFilterToggle');
+    if (!btn) return;
+    const n = activeFilterCount();
+    btn.classList.toggle('is-active', state.filtersOpen || n > 0);
+    btn.setAttribute('aria-pressed', String(n > 0));
+    btn.setAttribute('aria-expanded', String(!!state.filtersOpen));
+    btn.innerHTML = 'Фильтры' + (n ? ' <span class="btn__badge">' + n + '</span>' : '');
+  }
+  function setFiltersOpen(open) {
+    state.filtersOpen = !!open;
+    const panel = $('tFiltersPanel');
+    if (panel) panel.hidden = !state.filtersOpen;
+    try { sessionStorage.setItem(FILTER_KEY, state.filtersOpen ? '1' : '0'); } catch (e) { /* приватный режим */ }
+    updateFilterButton();
+    updateStickyKeywords();
   }
 
   function renderSelected() {
@@ -771,6 +807,8 @@
       render();
     }));
 
+    if ($('tFilterToggle')) $('tFilterToggle').addEventListener('click', () => setFiltersOpen(!state.filtersOpen));
+
     document.querySelectorAll('.t-tab').forEach(b => b.addEventListener('click', () => setPane(b.dataset.tview)));
     document.querySelectorAll('[data-tmode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.tmode)));
 
@@ -849,6 +887,9 @@
     const regVersion = ((window.REGISTRY || {}).meta || {}).version;
     $('tVer').textContent = regVersion ? 'v' + regVersion : 'v2.46';
     document.querySelectorAll('[data-tmode]').forEach(b => b.classList.toggle('is-active', b.dataset.tmode === state.mode));
+    let savedFiltersOpen = false;
+    try { savedFiltersOpen = sessionStorage.getItem(FILTER_KEY) === '1'; } catch (e) { /* приватный режим */ }
+    setFiltersOpen(savedFiltersOpen);
     let stickyQueued = false;
     window.addEventListener('scroll', () => {
       if (stickyQueued) return;

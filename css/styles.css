@@ -21,6 +21,7 @@
   --font:system-ui,-apple-system,"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --topbar-h:58px;
   --sticky-filters-top:112px;
+  --wrap-pad:22px;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -30,7 +31,7 @@ a{color:var(--navy-2);text-decoration:none}
 a:hover{text-decoration:underline}
 h1,h2,h3{margin:0;line-height:1.22;letter-spacing:-.015em}
 button,input,select{font:inherit;color:inherit}
-.wrap{max-width:1360px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--wrap-pad)}
 @media(min-width:1500px){.wrap{max-width:min(100%,2200px)}}
 .skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 14px;z-index:100}
 .skip:focus{left:8px;top:8px}
@@ -353,13 +354,19 @@ select,input[type="date"]{color-scheme:light}
 .cluster--lg span{font-size:13px}
 
 /* responsive */
-.btn--filters{display:none;border-color:#cbd8e0;background:#fff;color:var(--ink-2);font-weight:700}
+.btn--filters{display:inline-flex;border-color:#cbd8e0;background:#fff;color:var(--ink-2);font-weight:700}
 .btn--filters:hover{background:#eef4f7;border-color:#9fb9c8;color:var(--navy)}
 body.is-map .btn--filters{display:inline-flex}
 .btn--filters.is-active{background:linear-gradient(180deg,#22789c,#15587a);border-color:#15587a;color:#fff;box-shadow:0 1px 3px rgba(9,31,44,.22)}
 .btn--filters.is-active:hover{background:linear-gradient(180deg,#1f6c8d,#124b69);color:#fff}
 .btn__badge{display:inline-grid;place-items:center;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#fff;color:#15587a;font-size:10px;font-weight:800;line-height:1}
 .btn--filters:not(.is-active) .btn__badge{background:var(--accent);color:#fff}
+/* Реестр: фильтры сворачиваются в кнопку на любой ширине, включая десктоп.
+ * Закрытая панель не занимает колонку — контент идёт на всю ширину .wrap. */
+.layout{grid-template-columns:0 minmax(0,1fr);gap:0}
+body.filters-open .layout{grid-template-columns:242px minmax(0,1fr);gap:18px}
+body:not(.filters-open) .filters{display:block;min-width:0;max-height:calc(100vh - 84px);overflow:hidden;padding:0;border:0;opacity:0;transform:translateX(-10px);pointer-events:none;box-shadow:none;transition:opacity .22s ease,transform .22s ease,padding .22s ease}
+body.filters-open .filters__close{display:grid}
 .btn--sm{padding:6px 10px;font-size:12px}
 body.is-map .seg,body.is-map #sort{display:none}
 body.is-map .toolbar{flex-wrap:nowrap;gap:8px}
@@ -393,7 +400,7 @@ body.is-tenders .hero{display:none}
   .brand__mark{width:30px;height:30px}
 }
 @media(max-width:720px){
-  .wrap{padding:0 13px}
+  :root{--wrap-pad:13px}
   .topbar__in{flex-wrap:nowrap;padding:9px 12px;gap:7px}
   .tabs-wrap{order:0;width:auto;flex:1 1 auto;margin-left:1px;min-width:0}
   .topbar__actions{margin-left:auto;gap:5px}
@@ -490,32 +497,28 @@ body.is-tenders .hero{display:none}
 }
 
 /* Вкладка «Закупки» */
-.tenders-view{padding-top:18px;padding-bottom:32px;min-width:0}
-.t-band{background:var(--band-bg);color:#fff;border-radius:12px 12px 0 0;padding:18px 20px 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
-.t-band--inner{border-radius:0 0 12px 12px;padding-top:0;padding-bottom:14px}
+.tenders-view{padding-top:0;padding-bottom:32px;min-width:0}
+/* Полоса закупок, как и hero реестра, идёт на всю ширину экрана:
+ * выбираем горизонтальные отступы .wrap и не скругляем края. */
+.t-band{background:var(--band-bg);color:#fff;border-radius:0;padding:18px var(--wrap-pad) 12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.tenders-view .t-band{margin-left:calc(-1 * var(--wrap-pad));margin-right:calc(-1 * var(--wrap-pad))}
+.t-band--inner{border-radius:0;padding-top:0;padding-bottom:14px}
 .t-band .t-head h1{color:#fff}
-.t-band .t-tabs{margin:14px 0 12px;border-bottom-color:rgba(255,255,255,.14)}
+.t-band .t-tabs{margin:14px 0 0;border-bottom-color:rgba(255,255,255,.14)}
 .t-band .t-tab{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
 .t-band .t-tab:hover{background:rgba(255,255,255,.16);color:#fff}
 .t-band .t-tab.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(111,226,214,.4),0 6px 18px rgba(45,160,180,.4)}
 .t-band .t-updated{color:rgba(255,255,255,.72)}
-.t-band .t-filters{background:rgba(255,255,255,.07);border-color:rgba(143,228,220,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);border-radius:11px}
-.t-band .field>span{color:rgba(255,255,255,.8)}
-.t-band .field input,.t-band .field select{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
-.t-band .field input::placeholder{color:rgba(255,255,255,.55)}
-.t-band .field input:focus,.t-band .field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,95,18,.16)}
-.t-band .t-hint{color:rgba(255,255,255,.68)}
-.t-band .t-chip{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff}
-.t-band .t-chip.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
-/* Две группы слов различаются мягким оттенком: базовые — прохладный,
- * составные — тёплый. Активное слово по-прежнему бирюзовое. */
-.t-band .t-chip--base{background:linear-gradient(180deg,rgba(126,206,220,.20),rgba(74,158,180,.10));border-color:rgba(126,206,220,.34);color:#eafcff}
-.t-band .t-chip--composite{background:linear-gradient(180deg,rgba(255,205,140,.18),rgba(214,150,70,.09));border-color:rgba(255,205,140,.36);color:#ffeed6}
-.t-band .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
-.t-band .t-chip--all{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
-.t-band .t-selected{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
-.t-band .t-selected__label{color:rgba(255,255,255,.7)}
-.t-band .t-toolbar{margin:14px 0 0;padding:4px 0 0}
+/* Фильтры закупок — та же светлая карточка, что и в реестре: тёмные
+ * переопределения полей, подсказок и чипов удалены. */
+.t-filters .t-kw__label{color:var(--muted)}
+.t-filters .t-kw__tab{border-color:var(--line);background:#fff;color:var(--muted)}
+.t-filters .t-hint{color:var(--muted)}
+.t-filters .t-chip--base,.t-sticky .t-chip--base{background:linear-gradient(180deg,#eef7f9,#e4f1f5);border-color:#c9e2e9;color:#1b5b7b}
+.t-filters .t-chip--composite,.t-sticky .t-chip--composite{background:linear-gradient(180deg,#fff6e8,#ffeddb);border-color:var(--warm-border);color:#7a3d00}
+.t-filters .t-chip--composite::before,.t-sticky .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
+.t-band .t-toolbar{margin:0;padding:14px 0 0}
+.t-band .t-filters{margin-top:12px}
 .t-band .toolbar__count,.t-band .toolbar__count strong{color:#fff}
 .t-band .btn--ghost{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);color:#fff}
 .t-band .seg{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)}
@@ -523,18 +526,16 @@ body.is-tenders .hero{display:none}
 .t-band .seg__btn.is-active{background:#fff;color:var(--navy)}
 .t-band .select--sm{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
 
-.t-sticky{position:fixed;left:0;right:0;top:var(--topbar-h);z-index:38;background:var(--band-bg);border-bottom:1px solid rgba(111,226,214,.22);box-shadow:0 8px 22px rgba(7,26,38,.3);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
+/* Липкая панель ключевых слов — светлая, как и сами фильтры. */
+.t-sticky{position:fixed;left:0;right:0;top:var(--topbar-h);z-index:38;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(13,31,43,.1);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
 .t-sticky.is-visible{opacity:1;visibility:visible;transform:none}
 .t-sticky__in{display:flex;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;min-width:0}
-.t-sticky__label{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.78);font-weight:800;white-space:nowrap}
+.t-sticky__label{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:800;white-space:nowrap}
 .t-sticky .t-chips{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0;min-width:0}
 .t-sticky .t-chips::-webkit-scrollbar{display:none}
-.t-sticky .t-chip{white-space:nowrap;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;font-size:11.5px;padding:5px 9px}
-.t-sticky .t-chip--base{background:linear-gradient(180deg,rgba(126,206,220,.18),rgba(74,158,180,.08));border-color:rgba(126,206,220,.30)}
-.t-sticky .t-chip--composite{background:linear-gradient(180deg,rgba(255,205,140,.16),rgba(214,150,70,.07));border-color:rgba(255,205,140,.32);color:#ffeed6}
-.t-sticky .t-chip--composite::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.55;margin-right:5px;vertical-align:middle}
-.t-sticky .t-chip--all{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.82)}
-.t-sticky .t-chip.is-active{background:linear-gradient(180deg,#22789c,#17667f);border-color:#6fe2d6;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 4px 14px rgba(45,160,180,.4)}
+.t-sticky .t-chip{white-space:nowrap;background:#f3f7f9;border-color:var(--line);color:#335060;font-size:11.5px;padding:5px 9px}
+.t-sticky .t-chip--all{background:#fff;border-color:var(--line);color:var(--ink-2)}
+.t-sticky .t-chip.is-active{background:linear-gradient(180deg,#22789c,#15587a);border-color:#15587a;color:#fff;box-shadow:0 1px 3px rgba(9,31,44,.2)}
 .tenders-view .btn--ghost{border-color:var(--line);color:var(--navy);background:#fff}
 .tenders-view .btn--ghost:hover{background:#f1f6f9}
 .t-head h1{font-size:26px;font-weight:750}
@@ -592,6 +593,8 @@ body.is-tenders .hero{display:none}
 .t-hint code{background:#eef4f7;padding:1px 5px;border-radius:5px;font-size:11px;color:var(--navy)}
 .t-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 10px;flex-wrap:wrap}
 .t-toolbar__right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+/* Кнопка сворачиваемых фильтров закупок видна на всех ширинах. */
+.t-toolbar .btn--filters{display:inline-flex}
 .t-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;min-width:0}
 .t-card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 13px;box-shadow:0 1px 2px rgba(9,31,44,.04);min-width:0;position:relative;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .12s}
 .t-card:hover{border-color:#7fa8bf;box-shadow:0 5px 18px rgba(9,31,44,.13);transform:translateY(-1px)}
