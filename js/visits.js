@@ -233,9 +233,9 @@
       push('click', { kind: 'button', label: btn.id, tab: activeTab });
       scheduleFlush(); return;
     }
-    var org = e.target.closest('[data-open-id]');
+    var org = e.target.closest('[data-open-id], #cards .card[data-id]');
     if (org) {
-      push('click', { kind: 'org_card', id: org.dataset.openId || '', tab: activeTab });
+      push('click', { kind: 'org_card', id: org.dataset.openId || org.dataset.id || '', tab: activeTab });
       scheduleFlush(); return;
     }
     var tender = e.target.closest('#tCards .t-card[data-id], #tTbody tr[data-id]');
