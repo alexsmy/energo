@@ -1,12 +1,12 @@
 {
-  "lastRun": "2026-11-25T20:03:53.373Z",
+  "lastRun": "2026-11-25T23:11:37.944Z",
   "mode": "live",
-  "total": 409,
+  "total": 410,
   "unique": 512,
   "sourceMix": {
     "gosplan": 29,
     "etpgpb-direct": 22,
-    "gentender": 232,
+    "gentender": 233,
     "tektorg-direct": 63,
     "fabrikant-direct": 10,
     "roseltorg-direct": 21,
@@ -19,12 +19,12 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 29.6,
-  "directCoveragePct": 29.6,
+  "directFirstPct": 29.5,
+  "directCoveragePct": 29.5,
   "recordsPer100Requests": 126.4,
-  "matchedOrg": 409,
-  "active": 322,
-  "archive": 87,
+  "matchedOrg": 410,
+  "active": 226,
+  "archive": 184,
   "bySource": {
     "EIS": 53,
     "GPB": 48,
@@ -37,7 +37,7 @@
     "TEK": 113,
     "FAB": 10,
     "RTS": 1,
-    "B2B": 10,
+    "B2B": 11,
     "BIDZAAR": 1
   },
   "sources": [
@@ -229,13 +229,38 @@
       "name": "gosplan",
       "available": true,
       "requests": 35,
-      "okRequests": 34,
-      "records": 49,
-      "errors": 1,
+      "okRequests": 29,
+      "records": 47,
+      "errors": 6,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "вставка (223, завершённые 30д)",
+          "query": "напыление (223, архив стр.2)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "порошковой (44, действующие)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "порошковой (223, архив стр.2)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "ремонт (44, действующие)",
+          "error": "HTTP 504"
+        },
+        {
+          "source": "gosplan",
+          "query": "ремонт (44, завершённые 30д)",
+          "error": "HTTP 504"
+        },
+        {
+          "source": "gosplan",
+          "query": "турбина (44, действующие)",
           "error": "HTTP 429"
         }
       ]
@@ -245,7 +270,7 @@
       "available": true,
       "requests": 328,
       "okRequests": 327,
-      "records": 354,
+      "records": 356,
       "errors": 1,
       "errorItems": [
         {
@@ -286,13 +311,13 @@
       ]
     }
   ],
-  "errors": 31,
+  "errors": 36,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 0,
-  "newCount": 89,
+  "localArchived": 97,
+  "newCount": 1,
   "corroborated": 87,
   "corroboratedPct": 21,
   "relevantPerRequest": 1.26,

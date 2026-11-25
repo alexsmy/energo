@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-25T20:03:53.373Z",
+  "updated": "2026-11-25T23:11:37.944Z",
   "inns": {
     "1102016594": {
       "name": "Транснефть - Север",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 27,
       "emptyStreak": 0,
@@ -11,15 +11,15 @@
     },
     "1102024468": {
       "name": "Газпром трансгаз Ухта",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1434031363": {
       "name": "ДГК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 35,
       "emptyStreak": 0,
@@ -27,7 +27,7 @@
     },
     "1435028701": {
       "name": "Якутскэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 29,
       "emptyStreak": 0,
@@ -35,7 +35,7 @@
     },
     "1435117944": {
       "name": "Сахаэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 18,
       "emptyStreak": 0,
@@ -43,31 +43,31 @@
     },
     "1600000036": {
       "name": "Газпром трансгаз Казань",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1639021461": {
       "name": "КамЭнергоРемонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1644003838": {
       "name": "Татнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "1645000340": {
       "name": "Транснефть - Прикамье",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 22,
       "emptyStreak": 0,
@@ -75,23 +75,23 @@
     },
     "1656002652": {
       "name": "Казанский вертолётный завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1657005416": {
       "name": "КМПО",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1657036630": {
       "name": "Татэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 42,
       "emptyStreak": 0,
@@ -99,87 +99,87 @@
     },
     "1657048240": {
       "name": "КЭР-Холдинг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1660004878": {
       "name": "Казанькомпрессормаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1660301260": {
       "name": "ТРЭМ-Казань",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "1661000749": {
       "name": "Фирма «МВЕН»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1841015504": {
       "name": "ЦСТ (ZALA Aero Group)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "1901067718": {
       "name": "Енисейская ТГК (ТГК-13)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "2224173758": {
       "name": "Сибэнергомаш – БКЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "2308128945": {
       "name": "Газпром трансгаз Краснодар",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "2310040800": {
       "name": "КТК-Р",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "2315004404": {
       "name": "НМТП",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "2315072242": {
       "name": "Черномортранснефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 6,
       "emptyStreak": 0,
@@ -187,7 +187,7 @@
     },
     "2315143060": {
       "name": "Транснефть-Терминал (ТНТ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 1,
       "emptyStreak": 0,
@@ -195,23 +195,23 @@
     },
     "2320109650": {
       "name": "Интер РАО",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "2420002597": {
       "name": "Богучанская ГЭС",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "2457058356": {
       "name": "НТЭК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 31,
       "emptyStreak": 0,
@@ -219,31 +219,31 @@
     },
     "2460040655": {
       "name": "Газпром закупки",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "2460066195": {
       "name": "РусГидро",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "2462028886": {
       "name": "СибЭР",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "2464036561": {
       "name": "Славнефть-Красноярскнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 1,
       "emptyStreak": 0,
@@ -251,87 +251,87 @@
     },
     "2501002394": {
       "name": "ААК «Прогресс» им. Н.И. Сазыкина",
-      "lastOk": "2026-11-25T20:32:01.494Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7,
-      "covered": true
-    },
-    "2508081814": {
-      "name": "Транснефть - Порт Козьмино",
-      "lastOk": "2026-11-25T20:32:01.494Z",
-      "lastArchive": "",
-      "total": 6,
-      "emptyStreak": 0,
-      "covered": true
-    },
-    "2536210349": {
-      "name": "ЦСД (Дальзавод)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7,
-      "covered": true
-    },
-    "2607018122": {
-      "name": "ОГК-2",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "emptyStreak": 8,
       "covered": true
     },
-    "2636032629": {
-      "name": "Газпром трансгаз Ставрополь",
-      "lastOk": "2026-11-25T20:32:01.494Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7,
-      "covered": true
-    },
-    "2721111590": {
-      "name": "Дальэнергомаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
-      "lastArchive": "2026-11-24T13:04:21.643Z",
-      "total": 0,
-      "emptyStreak": 7,
-      "covered": true
-    },
-    "2724132118": {
-      "name": "Транснефть - Дальний Восток",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+    "2508081814": {
+      "name": "Транснефть - Порт Козьмино",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
-      "total": 12,
+      "total": 5,
       "emptyStreak": 0,
       "covered": true
     },
-    "2801133630": {
-      "name": "РАО ЭС Востока",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+    "2536210349": {
+      "name": "ЦСД (Дальзавод)",
+      "lastOk": "2026-11-25T23:48:50.087Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8,
+      "covered": true
+    },
+    "2607018122": {
+      "name": "ОГК-2",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
       "emptyStreak": 9,
       "covered": true
     },
-    "2902059091": {
-      "name": "Севмаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+    "2636032629": {
+      "name": "Газпром трансгаз Ставрополь",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
+      "covered": true
+    },
+    "2721111590": {
+      "name": "Дальэнергомаш",
+      "lastOk": "2026-11-25T23:48:50.087Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8,
+      "covered": true
+    },
+    "2724132118": {
+      "name": "Транснефть - Дальний Восток",
+      "lastOk": "2026-11-25T23:48:50.087Z",
+      "lastArchive": "",
+      "total": 11,
+      "emptyStreak": 0,
+      "covered": true
+    },
+    "2801133630": {
+      "name": "РАО ЭС Востока",
+      "lastOk": "2026-11-25T23:48:50.087Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 10,
+      "covered": true
+    },
+    "2902059091": {
+      "name": "Севмаш",
+      "lastOk": "2026-11-25T23:48:50.087Z",
+      "lastArchive": "2026-11-24T13:04:21.643Z",
+      "total": 0,
+      "emptyStreak": 8,
       "covered": true
     },
     "2902060361": {
       "name": "ЦС «Звездочка»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "2983998001": {
       "name": "Башнефть-Полюс",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 8,
       "emptyStreak": 0,
@@ -339,31 +339,31 @@
     },
     "3111006980": {
       "name": "Транспорт будущего",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3123209784": {
       "name": "РТГ (РОСТУРБО)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "3123315768": {
       "name": "Белэнергомаш – БЗЭМ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3235002178": {
       "name": "Транснефть - Дружба",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 10,
       "emptyStreak": 0,
@@ -371,55 +371,55 @@
     },
     "3435125709": {
       "name": "ОЭП АК Инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "3444070534": {
       "name": "ЛУКОЙЛ-Нижневолжскнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "3661001457": {
       "name": "ГСП Инжиниринг (бывш. Газпроектинжиниринг)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3662149488": {
       "name": "Воронежский трансформатор",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3665087656": {
       "name": "НИИ лопастных машин",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "3800000220": {
       "name": "Иркутскэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3801079671": {
       "name": "Транснефть - Восток",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 10,
       "emptyStreak": 0,
@@ -427,23 +427,23 @@
     },
     "3807002509": {
       "name": "Яковлев",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3808066311": {
       "name": "Иркутская нефтяная компания (ИНК)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "3808229774": {
       "name": "Байкальская энергетическая компания",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 84,
       "emptyStreak": 0,
@@ -451,15 +451,15 @@
     },
     "3808271889": {
       "name": "БЭК-Ремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3900000111": {
       "name": "ПСЗ «Янтарь»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 5,
       "emptyStreak": 0,
@@ -467,39 +467,39 @@
     },
     "3906385641": {
       "name": "Эн+ Груп",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "3913501370": {
       "name": "150 АРЗ (Светлый)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4000000255": {
       "name": "Калужский двигатель (КАДВИ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4026007424": {
       "name": "Калужский турбинный завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4100000668": {
       "name": "Камчатскэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 14,
       "emptyStreak": 0,
@@ -507,23 +507,23 @@
     },
     "4200000333": {
       "name": "Кузбассэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "7721632827": {
       "name": "Концерн «Росэнергоатом»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "6829012680": {
       "name": "РИР Энерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 42,
       "emptyStreak": 0,
@@ -531,7 +531,7 @@
     },
     "9701087623": {
       "name": "Росатом Возобновляемая энергия",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 7,
       "emptyStreak": 0,
@@ -539,7 +539,7 @@
     },
     "4909047148": {
       "name": "Магаданэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 15,
       "emptyStreak": 0,
@@ -547,7 +547,7 @@
     },
     "6500000024": {
       "name": "Сахалинэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 55,
       "emptyStreak": 0,
@@ -555,7 +555,7 @@
     },
     "8700000339": {
       "name": "Чукотэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "emptyStreak": 0,
@@ -563,7 +563,7 @@
     },
     "4908000718": {
       "name": "Колымаэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 3,
       "emptyStreak": 0,
@@ -571,31 +571,31 @@
     },
     "7719019846": {
       "name": "Передвижная энергетика",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7703323030": {
       "name": "Газпром энергохолдинг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "7705035012": {
       "name": "Мосэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "7841312071": {
       "name": "ТГК-1",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 21,
       "emptyStreak": 0,
@@ -603,7 +603,7 @@
     },
     "7720518494": {
       "name": "МОЭК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 22,
       "emptyStreak": 0,
@@ -611,15 +611,15 @@
     },
     "5003046281": {
       "name": "Газпром теплоэнерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "5190141373": {
       "name": "Мурманская ТЭЦ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 5,
       "emptyStreak": 0,
@@ -627,7 +627,7 @@
     },
     "7704784450": {
       "name": "Интер РАО — Электрогенерация",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 197,
       "emptyStreak": 0,
@@ -635,7 +635,7 @@
     },
     "0277077282": {
       "name": "Башкирская генерирующая компания",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 56,
       "emptyStreak": 0,
@@ -643,7 +643,7 @@
     },
     "5406323202": {
       "name": "ТГК-11",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 48,
       "emptyStreak": 0,
@@ -651,7 +651,7 @@
     },
     "7017373959": {
       "name": "Томская генерация",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 33,
       "emptyStreak": 0,
@@ -659,7 +659,7 @@
     },
     "6315376946": {
       "name": "Т Плюс",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 158,
       "emptyStreak": 0,
@@ -667,31 +667,31 @@
     },
     "7709832989": {
       "name": "Алтайский филиал СГК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 8,
+      "emptyStreak": 9,
       "covered": true
     },
     "5405270340": {
       "name": "СГК-Новосибирск",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "8602067092": {
       "name": "Юнипро",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 9,
+      "emptyStreak": 10,
       "covered": true
     },
     "7203162698": {
       "name": "Форвард Энерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 35,
       "emptyStreak": 0,
@@ -699,15 +699,15 @@
     },
     "6671156423": {
       "name": "ЭЛ5-Энерго",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7606053324": {
       "name": "ТГК-2",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 43,
       "emptyStreak": 0,
@@ -715,7 +715,7 @@
     },
     "7534018889": {
       "name": "ТГК-14",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 8,
       "emptyStreak": 0,
@@ -723,15 +723,15 @@
     },
     "7706697347": {
       "name": "Красноярская ГЭС",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 6,
+      "emptyStreak": 7,
       "covered": true
     },
     "7838129301": {
       "name": "ТЭК СПб",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 27,
       "emptyStreak": 0,
@@ -739,31 +739,31 @@
     },
     "9102070194": {
       "name": "КрымТЭЦ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7704863782": {
       "name": "Технопромэкспорт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5029112443": {
       "name": "Атомэнергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6345012488": {
       "name": "Гидроремонт-ВКК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 19,
       "emptyStreak": 0,
@@ -771,23 +771,23 @@
     },
     "7728549952": {
       "name": "Кварц Групп",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7733667768": {
       "name": "ГЭХ ТЭР",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7702721214": {
       "name": "ЭнергоремонТ Плюс",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 5,
       "emptyStreak": 0,
@@ -795,7 +795,7 @@
     },
     "7707625521": {
       "name": "Газпром энергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "emptyStreak": 0,
@@ -803,87 +803,87 @@
     },
     "7705915881": {
       "name": "РОТЕК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6660001308": {
       "name": "Уралэнергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7730014175": {
       "name": "Электроцентромонтаж",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7802588950": {
       "name": "Русь-Турбо",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7801128069": {
       "name": "ЛЭР-Турбо",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7805370007": {
       "name": "Турбоэнергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7724245329": {
       "name": "Теплоэнергомонтаж",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4632014950": {
       "name": "Промэнергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6659003244": {
       "name": "Уралтурбо",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7701299247": {
       "name": "ЕвроСибЭнерго-инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7606118807": {
       "name": "ТГК-2 Энергоремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 7,
       "emptyStreak": 0,
@@ -891,119 +891,119 @@
     },
     "7702080289": {
       "name": "Завод турбинных лопаток",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6673100680": {
       "name": "Уральский турбинный завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7804677772": {
       "name": "Ленинградский металлический завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7725415380": {
       "name": "Фирма ОРГРЭС",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7725054856": {
       "name": "ВТИ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7825660956": {
       "name": "НПО ЦКТИ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6154023009": {
       "name": "ТКЗ «Красный котельщик»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5036040729": {
       "name": "ЗиО-Подольск",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "9706047504": {
       "name": "Росатом Машиностроение",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5403102702": {
       "name": "Элсиб",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7704312545": {
       "name": "Калининградская генерация",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7706720370": {
       "name": "Интер РАО Сервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7729769573": {
       "name": "ГЭХ Сервис газовых турбин",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7721678652": {
       "name": "ЦРМЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7705825187": {
       "name": "Россети Электросетьсервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 13,
       "emptyStreak": 0,
@@ -1011,47 +1011,47 @@
     },
     "7704781586": {
       "name": "Турбосервис Рус",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6316100813": {
       "name": "ПНПК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6663062122": {
       "name": "УЭТМ-Монтаж",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7804027534": {
       "name": "СТГТ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4705036363": {
       "name": "ОДК-Сервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7724646338": {
       "name": "Завод РЭТО",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "emptyStreak": 0,
@@ -1059,7 +1059,7 @@
     },
     "7811737334": {
       "name": "ГЭХ ИА",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "emptyStreak": 0,
@@ -1067,15 +1067,15 @@
     },
     "7806369727": {
       "name": "Невский завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7806151791": {
       "name": "РЭП Холдинг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "emptyStreak": 0,
@@ -1083,95 +1083,95 @@
     },
     "7817311895": {
       "name": "АЭМ-технологии",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5259077666": {
       "name": "ОКБМ Африкантов",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7806394392": {
       "name": "ЦКБМ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7610052644": {
       "name": "ОДК-Сатурн",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0273008320": {
       "name": "ОДК-УМПО",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7610070114": {
       "name": "ОДК-Газовые турбины",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6143097506": {
       "name": "ЭСД-БиКЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6674239607": {
       "name": "СВЭЛ-Силовые трансформаторы",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7718183890": {
       "name": "Электрозавод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7804475617": {
       "name": "Невский трансформатор",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7731644035": {
       "name": "ОДК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7838395215": {
       "name": "ОСК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 4,
       "emptyStreak": 0,
@@ -1179,167 +1179,167 @@
     },
     "5948017501": {
       "name": "Редуктор-ПМ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5045001885": {
       "name": "СМПП",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7802375335": {
       "name": "ОДК-Климов",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7733018650": {
       "name": "ММП им. В.В. Чернышёва",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7303005071": {
       "name": "УКБП",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5040007594": {
       "name": "РПКБ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0275074279": {
       "name": "УАПО",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5252000470": {
       "name": "Гидроагрегат",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5402112867": {
       "name": "НАРЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7810209170": {
       "name": "СПАРК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0278179819": {
       "name": "УАП «Гидравлика» (уточнение по локации)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7704274402": {
       "name": "Госкорпорация «Ростех»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7731559044": {
       "name": "АО «Вертолёты России»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7718016666": {
       "name": "НЦВ им. М.Л. Миля и Н.И. Камова",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0323018510": {
       "name": "Улан-Удэнский авиационный завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6161021690": {
       "name": "АО «Роствертол»",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0262016287": {
       "name": "КумАПП",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7843003128": {
       "name": "Кронштадтский морской завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7811038760": {
       "name": "Звезда (Санкт-Петербург)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "4706020609": {
       "name": "Невский ССЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "9810011977": {
       "name": "НИЦ имени академика А.Н. Крылова",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 3,
       "emptyStreak": 0,
@@ -1347,15 +1347,15 @@
     },
     "5022013517": {
       "name": "Коломенский завод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7805034277": {
       "name": "Северная верфь",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 22,
       "emptyStreak": 0,
@@ -1363,79 +1363,79 @@
     },
     "6230116089": {
       "name": "НАСК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7708619320": {
       "name": "ОАК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7703695246": {
       "name": "КРЭТ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7719265496": {
       "name": "Технодинамика",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7704252960": {
       "name": "ВСК (Вертолётная сервисная компания)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7704726240": {
       "name": "Авиаремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6154028021": {
       "name": "ТАНТК им. Г.М. Бериева",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5904007312": {
       "name": "ОДК-Пермские моторы (ОДК-ПМ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5904000620": {
       "name": "ОДК-Авиадвигатель",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6319033379": {
       "name": "ОДК-Кузнецов",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 1,
       "emptyStreak": 0,
@@ -1443,87 +1443,87 @@
     },
     "7536080716": {
       "name": "810 АРЗ (Чита)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6449042335": {
       "name": "356 АРЗ (Энгельс)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7807343496": {
       "name": "419 АРЗ (Санкт-Петербург)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6664013640": {
       "name": "УЗГА",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5405071094": {
       "name": "СибНИА им. С.А. Чаплыгина",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7808035536": {
       "name": "Кронштадт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "9715478507": {
       "name": "Зала Аэро",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7801450808": {
       "name": "Геоскан",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5013026848": {
       "name": "Аэрокон",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7736050003": {
       "name": "Газпром",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5003028028": {
       "name": "Газпром трансгаз Москва",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "emptyStreak": 0,
@@ -1531,71 +1531,71 @@
     },
     "7805018099": {
       "name": "Газпром трансгаз Санкт-Петербург",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0276053659": {
       "name": "Газпром трансгаз Уфа",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "8622000931": {
       "name": "Газпром трансгаз Югорск",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "8617002073": {
       "name": "Газпром трансгаз Сургут",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6453010110": {
       "name": "Газпром трансгаз Саратов",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5260080007": {
       "name": "Газпром трансгаз Нижний Новгород",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7017005289": {
       "name": "Газпром трансгаз Томск",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7810483334": {
       "name": "Газпром инвест",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "0560022871": {
       "name": "Газпром проектирование",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 15,
       "emptyStreak": 0,
@@ -1603,23 +1603,23 @@
     },
     "5003028155": {
       "name": "Газпром ВНИИГАЗ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7740000044": {
       "name": "Газпром комплектация",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5003065767": {
       "name": "Газпром ПХГ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 7,
       "emptyStreak": 0,
@@ -1627,7 +1627,7 @@
     },
     "7709105630": {
       "name": "Газэнергосервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 13,
       "emptyStreak": 0,
@@ -1635,183 +1635,183 @@
     },
     "7813411480": {
       "name": "НИИПГАЗА",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6449108868": {
       "name": "НПО «Газотурбинные технологии» (НПО «ГТТ»)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7725787250": {
       "name": "ИЦ «Газотурбинные технологии» (7725787250)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7842155505": {
       "name": "Газстройпром",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7610092982": {
       "name": "Русские газовые турбины (РГТ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "6671108370": {
       "name": "Пумори-Энергия",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "9709113836": {
       "name": "Ротек Компоненты и Материалы (Ротек КМ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7703049362": {
       "name": "НПП АРМС",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7203001556": {
       "name": "Тюменские моторостроители",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7737106202": {
       "name": "ГСП Ремонт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7731429736": {
       "name": "ОДК Инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "9719001539": {
       "name": "ОДК-Турбины большой мощности (ОДК-ТБМ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5907001774": {
       "name": "НПО Искра",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "5904007337": {
       "name": "Искра-Р",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7718016810": {
       "name": "Турбохолод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 7,
+      "emptyStreak": 8,
       "covered": true
     },
     "7709344220": {
       "name": "ТРЭМ Инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7118022097": {
       "name": "ГЭХ Литейные технологии",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "5259006834": {
       "name": "НПЦ АНОД",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7713080756": {
       "name": "ВНИИнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7743714777": {
       "name": "Институт Гидропроект",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7814159353": {
       "name": "Ленгидропроект",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7716012049": {
       "name": "Теплопроект",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "9701038827": {
       "name": "Мосэнергопроект (МЭП)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 3,
       "emptyStreak": 0,
@@ -1819,15 +1819,15 @@
     },
     "7202157173": {
       "name": "РН-ГИР",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7000028520": {
       "name": "РН-Проектирование Добыча",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 34,
       "emptyStreak": 0,
@@ -1835,7 +1835,7 @@
     },
     "7722001535": {
       "name": "ВНИИ НП",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 3,
       "emptyStreak": 0,
@@ -1843,7 +1843,7 @@
     },
     "7804004400": {
       "name": "ВНИИГ им. Б.Е. Веденеева",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 2,
       "emptyStreak": 0,
@@ -1851,31 +1851,31 @@
     },
     "7708697977": {
       "name": "ГСПИ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7722497881": {
       "name": "ЦИАМ им. П.И. Баранова",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7701024933": {
       "name": "ВИАМ (НИЦ «Курчатовский институт» — ВИАМ)",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "5036101347": {
       "name": "Интер РАО — Инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 3,
       "emptyStreak": 0,
@@ -1883,7 +1883,7 @@
     },
     "7728589190": {
       "name": "Россети НТЦ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 9,
       "emptyStreak": 0,
@@ -1891,47 +1891,47 @@
     },
     "7706760091": {
       "name": "Росатом Наука",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "2026-11-24T13:04:21.643Z",
       "total": 0,
-      "emptyStreak": 5,
+      "emptyStreak": 6,
       "covered": true
     },
     "7706107510": {
       "name": "Роснефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7708004767": {
       "name": "ЛУКОЙЛ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5504036333": {
       "name": "Газпром нефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "8602060555": {
       "name": "Сургутнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "0274051582": {
       "name": "Башнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 82,
       "emptyStreak": 0,
@@ -1939,7 +1939,7 @@
     },
     "7701350084": {
       "name": "Зарубежнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 2,
       "emptyStreak": 0,
@@ -1947,47 +1947,47 @@
     },
     "7717133960": {
       "name": "РуссНефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7707017509": {
       "name": "Славнефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "8608048498": {
       "name": "ЛУКОЙЛ-Западная Сибирь",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "8618006063": {
       "name": "Газпромнефть-Хантос",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "8905000428": {
       "name": "Газпромнефть-Ноябрьскнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "8604035473": {
       "name": "РН-Юганскнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 6,
       "emptyStreak": 0,
@@ -1995,7 +1995,7 @@
     },
     "8913006455": {
       "name": "РН-Пурнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 9,
       "emptyStreak": 0,
@@ -2003,7 +2003,7 @@
     },
     "8610010727": {
       "name": "РН-Няганьнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 19,
       "emptyStreak": 0,
@@ -2011,39 +2011,39 @@
     },
     "8605003932": {
       "name": "Славнефть-Мегионнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7017126251": {
       "name": "Газпромнефть-Восток",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "6501163102": {
       "name": "ННК-Сахалинморнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5610218014": {
       "name": "Газпромнефть-Оренбург",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7225003194": {
       "name": "РН-Уватнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 16,
       "emptyStreak": 0,
@@ -2051,7 +2051,7 @@
     },
     "8603089934": {
       "name": "Самотлорнефтегаз",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 14,
       "emptyStreak": 0,
@@ -2059,23 +2059,23 @@
     },
     "7838395487": {
       "name": "Газпромнефть НТЦ",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7707717910": {
       "name": "ЛУКОЙЛ-Инжиниринг",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7706613770": {
       "name": "РН-Бурение",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 29,
       "emptyStreak": 0,
@@ -2083,31 +2083,31 @@
     },
     "8601066868": {
       "name": "Газпромнефть-Технологические Партнерства",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7704685184": {
       "name": "Нефтиса",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7706061801": {
       "name": "Транснефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "0278039018": {
       "name": "Транснефть - Урал",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 12,
       "emptyStreak": 0,
@@ -2115,7 +2115,7 @@
     },
     "7201000726": {
       "name": "Транснефть-Сибирь",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 10,
       "emptyStreak": 0,
@@ -2123,7 +2123,7 @@
     },
     "5260900725": {
       "name": "Транснефть - Верхняя Волга",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 49,
       "emptyStreak": 0,
@@ -2131,7 +2131,7 @@
     },
     "6317024749": {
       "name": "Транснефть-Приволга",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 6,
       "emptyStreak": 0,
@@ -2139,7 +2139,7 @@
     },
     "5502020634": {
       "name": "Транснефть-Западная Сибирь",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 6,
       "emptyStreak": 0,
@@ -2147,7 +2147,7 @@
     },
     "4704041900": {
       "name": "Транснефть - Балтика",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 15,
       "emptyStreak": 0,
@@ -2155,7 +2155,7 @@
     },
     "4704045809": {
       "name": "Транснефть-Порт Приморск",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 7,
       "emptyStreak": 0,
@@ -2163,31 +2163,31 @@
     },
     "4704057515": {
       "name": "Приморский торговый порт",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "4707029837": {
       "name": "Невская трубопроводная компания",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7805058077": {
       "name": "Петербургский нефтяной терминал",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "4704101901": {
       "name": "РПК-Высоцк ЛУКОЙЛ-II",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 2,
       "emptyStreak": 0,
@@ -2195,7 +2195,7 @@
     },
     "7736607502": {
       "name": "НИИ Транснефть",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 1,
       "emptyStreak": 0,
@@ -2203,7 +2203,7 @@
     },
     "5072703668": {
       "name": "Транснефть - Диаскан",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 14,
       "emptyStreak": 0,
@@ -2211,23 +2211,23 @@
     },
     "7449026737": {
       "name": "Транснефть - Нефтяные насосы",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5250000820": {
       "name": "Транснефть-Подводсервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7710022410": {
       "name": "Гипротрубопровод",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 6,
       "emptyStreak": 0,
@@ -2235,122 +2235,122 @@
     },
     "5702000265": {
       "name": "ГМС Ливгидромаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7733015025": {
       "name": "Гидромашсервис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7460009005": {
       "name": "Корвет",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "6670263239": {
       "name": "ПО Свердмаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5834052005": {
       "name": "Виллина",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5920014980": {
       "name": "НПП Адонис",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "6652028306": {
       "name": "Уралгидромаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7713041098": {
       "name": "НПФ ЭИТЭК",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7449126763": {
       "name": "Русские Электрические Двигатели",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7449139434": {
       "name": "Уральские динамические машины",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "5029149228": {
       "name": "Силмекс",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7705152485": {
       "name": "НПК Герметика",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7701985983": {
       "name": "ПГМ Маш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "6678065969": {
       "name": "Завод Нефтехиммаш",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     },
     "7728815650": {
       "name": "Транснефть-Технологии",
-      "lastOk": "2026-11-25T20:32:01.494Z",
+      "lastOk": "2026-11-25T23:48:50.087Z",
       "lastArchive": "",
       "total": 0,
-      "emptyStreak": 2,
+      "emptyStreak": 3,
       "covered": true
     }
   }
