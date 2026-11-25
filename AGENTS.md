@@ -999,6 +999,26 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     перезагружает страницу через **5 с** вместо 10. Версия → `2.65.20261125`,
     кэш-бастеры `?v=2.65`, сборка и все тесты проходят.
 
+65. Фоновое логирование посещений (25.11.2026). Полная документация —
+    `docs/VISITOR_ANALYTICS.md` (в `PROJECT.md` есть короткая ссылка).
+    Клиент `js/visits.js` работает ТОЛЬКО на `https://alexsmy.github.io/energo/index.html`
+    (локальные/IP-заходы игнорируются); endpoint берётся из `data/visits-config.json`,
+    секретов в репозитории нет. События: `session` (устройство, ОС, браузер, экран,
+    сеть, UTM, `hardId`, `isHeadless`, `hasInteracted`), `tab` (время без фона,
+    maxScroll/seenPct), `click` (вкладки, кнопки, карточка организации, карточка
+    закупки, маркер), `search` (чипы и свой ввод), `link`. Просмотр мини-карточек
+    и скролл НЕ являются событиями — это важно при доработках.
+    Серверная часть живёт в отдельном репозитории `alexsmy/bot_29`, ветка
+    `stat_energo` (FastAPI на Render): `POST /api/energo/visits`,
+    `GET /api/energo/visits/summary`, страница
+    `https://bot-29-nx0w.onrender.com/energo-visits` и плашка в дашборде.
+    Гео/IP считает сервер (`ipwho.is`), сам IP приходят в уведомлении и на странице.
+    Синхронизация: каждый заход ставит `energo-visit` в очередь sync и уходит
+    сразу; полный набор (events/known_devices/summary плоскими файлами) идёт
+    через раздел `sync_energo` по общему расписанию bot_29, отдельных таймеров нет.
+    Тесты: `scripts/test-visits.js` в `ci-checks.js`; в bot_29 — `tests/test_energo_visits.py`.
+    При изменении логики менять оба репозитория и обе документации.
+
 ## Что осталось / риски
 
 - Часть официальных сайтов отвечает 403/000 из-за локального TLS-прокси и Anti-DDoS

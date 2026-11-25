@@ -1,47 +1,53 @@
 # Логирование посещений (отдельный документ)
 
-Этот функционал **не описан в основной документации** проекта — здесь собрано всё, что
-касается сбора статистики посещений, страницы отчёта и уведомлений в Telegram.
+Этот функционал описан отдельно от основной документации: в `PROJECT.md` есть только
+короткая ссылка на этот файл. Новым сессиям читать **этот** документ и `AGENTS.md`
+пункт 65 перед любыми изменениями трекера.
 
-## Архитектура
-
-Два репозитория на разных серверах:
+## Архитектура: два репозитория
 
 ```
-GitHub Pages (alexsmy/energo/index.html)
-  │  js/visits.js — события
+GitHub Pages: https://alexsmy.github.io/energo/index.html
+  │  js/visits.js — фоновый сбор (только продакшн-домен)
   │  POST https://bot-29-nx0w.onrender.com/api/energo/visits
   ▼
-bot_29 (FastAPI, Render)
-  ├─ Origin/страница-вайтлист → только alexsmy.github.io/energo/index.html
-  ├─ GeoIP по IP запроса (страна, город, провайдер)
-  ├─ JSON: data/energo-visits/events-YYYY-MM.json
-  ├─ Агрегат: GET /api/energo/visits/summary
-  ├─ Страница: https://bot-29-nx0w.onrender.com/energo-visits (плашка есть и в дашборде bot_29)
-  ├─ Backup: через уже существующий sync-воркер bot_29 (2 раза в сутки) в GitHub
-  └─ Telegram: новое устройство (разово) + сводка по утрам через тот же sync
+bot_29 / ветка stat_energo (FastAPI на Render)
+  ├─ проверка Origin + поля page (только страница energo)
+  ├─ GeoIP по IP запроса через ipwho.is → страна/город/провайдер/IP
+  ├─ data/energo-visits/events-YYYY-MM.json + known_devices.json
+  ├─ GET /api/energo/visits/summary (агрегаты + deviceCards)
+  ├─ страница /energo-visits + плашка в дашборде bot_29
+  ├─ Telegram: новое устройство (сразу) + сводка (после утреннего sync)
+  └─ sync: событие energo-visit — сразу; полный набор — по общему расписанию
 ```
 
-Отдельных таймеров в боте нет: события и сводка едут на уже настроенном расписании
-синхронизации; после рестарта Render данные восстанавливаются штатным restore.
+**Отдельных таймеров в боте нет.** Полный backup едет по уже существующему расписанию
+синхронизации bot_29; принятый заход дополнительно ставит событие `energo-visit` в
+очередь sync и обрабатывается сразу даже при выключенной опции «Синхронизация по
+событию». После рестарта Render данные восстанавливаются штатным `restore`.
+Файлы backup плоские: `energo-visits-events-YYYY-MM.json`,
+`energo-visits-known_devices.json`, `energo-visits-summary.json`.
 
-Локальные заходы (`127.0.0.1`, `localhost`, file://, любые другие домены) **не
-отправляются**: трекер проверяет `location.href` и выходит сразу, если это не
-`https://alexsmy.github.io/energo/index.html`. Сервер дополнительно проверяет
-`Origin` и поле `page`.
+Локальные/IP-заходы (`127.0.0.1`, `localhost`, `file://`, любые другие домены) **не
+отправляются**: трекер проверяет `location.href`. Сервер дополнительно проверяет
+`Origin` и `page`.
 
 ## Что собирается
 
 | Группа | Поля |
 |---|---|
-| Сессия | дата/время, UA, браузер (в т.ч. Яндекс), ОС, тип устройства, экран (ширина/высота, DPR, ориентация), сеть (effectiveType/downlink/rtt/saveData), язык, часовой пояс, referrer |
-| Вкладки | какие открывались (`registry`, `tenders`, `map`, вложенные pane/view), время в каждой, максимальный процент скролла |
-| Карточки | ID просмотренных карточек реестра, закупок, ЭТП и маркеров карты (через IntersectionObserver и клики) |
-| Поиск | нажатия на чипы базовых/составных слов и введённые вручную запросы (с дебаунсом 900 мс) |
-| Сервер | IP → страна/город/провайдер (бесплатный GeoIP), время получения, дедуп событий |
+| `session` | дата/время, UA, браузер (в т.ч. Яндекс), ОС, тип устройства, экран (ширина/высота, DPR, ориентация), сеть (effectiveType/downlink/rtt/saveData), язык, часовой пояс, referrer, UTM, `hardId`, `isHeadless`, `hasInteracted` |
+| `tab` | какие вкладки открывались (`registry`/`tenders`/`map` и вложенные), время в каждой **без учёта фона**, `maxScroll`, `seenPct` |
+| `click` | вкладки, кнопки/фильтры, **карточка организации** (открытие подробной), **карточка закупки**, маркер карты, ссылки/скачивания |
+| `search` | чипы базовых/составных слов и введённые вручную запросы (дебаунс 900 мс) |
+| `link` | tel:, mailto:, скачивания CSV/JSON/PDF, внешние ссылки |
+| Сервер | IP → страна/город/провайдер, время получения, дедуп по `sessionId+ts+type`, флаг `isBot` только по `navigator.webdriver` |
 
-IP-адрес в JSON **не сохраняется** — только геолокация, определённая сервером.
-Постоянный `deviceId` хранится в `localStorage` браузера, `sessionId` — в `sessionStorage`.
+**Важно:** просмотр мини-карточек, таблицы и сам скролл **не являются событиями**.
+Скролл — только метрика вкладки. Это сознательное решение пользователя.
+
+IP **присутствует** в уведомлении и в полях устройства на странице; в JSON он пишется
+внутри `geo.ip`. `deviceId` хранится в `localStorage`, `sessionId` — в `sessionStorage`.
 
 ## Формат события
 
@@ -51,50 +57,54 @@ IP-адрес в JSON **не сохраняется** — только геол�
   "page": "https://alexsmy.github.io/energo/index.html",
   "sentAt": "...",
   "events": [
-    {"type": "session", "ts": "...", "sessionId": "...", "deviceId": "...",
-     "device": "десктоп", "os": "Windows 10/11", "browser": "Chrome",
-     "screen": {...}, "network": {...}},
-    {"type": "tab", "action": "close", "tab": "registry", "seconds": 39.0, "maxScroll": 72},
-    {"type": "card", "id": "O-1234", "area": "registry"},
-    {"type": "search", "source": "chip|typed", "query": "лопатки", "kind": "base|composite"}
+    {"type":"session","ts":"...","sessionId":"...","deviceId":"...",
+     "device":"десктоп","os":"Windows 10/11","browser":"Chrome",
+     "screen":{...},"network":{...},"utm":{...},
+     "hardId":"...","isHeadless":false,"hasInteracted":true},
+    {"type":"tab","action":"close","tab":"registry","seconds":39.0,"maxScroll":72,"seenPct":88},
+    {"type":"click","kind":"org_card","id":"O-1234","tab":"registry"},
+    {"type":"click","kind":"tender_card","id":"...","tab":"tenders"},
+    {"type":"search","source":"chip","query":"лопатки","kind":"base"}
   ]
 }
 ```
 
 ## Настройка
 
-В `data/visits-config.json` рабочей копии:
+`data/visits-config.json` в рабочей копии:
 
 ```json
 { "enabled": true, "endpoint": "https://bot-29-nx0w.onrender.com/api/energo/visits" }
 ```
 
-Endpoint хранится в конфиге, **не в коде**. Секреты Telegram и GitHub остаются
-только в переменных окружения Render:
-
-- `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` — уже используются bot_29;
-- `SYNC_GITHUB_TOKEN` — для публикации агрегата в GitHub;
-- `ENERGO_VISITS_GITHUB_REPO` / `ENERGO_VISITS_GITHUB_BRANCH` — куда писать сводку
-  (по умолчанию `alexsmy/bot_29`, ветка `stat_energo`).
+Endpoint в конфиге, не в коде. Секреты только в окружении Render:
+`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `SYNC_GITHUB_TOKEN`. Отдельных env для
+репозитория статистики нет — backup идёт в репозиторий/ветку из
+`config/sync_settings.json` бота (как и остальные данные).
 
 ## Страница со статистикой
 
-**https://bot-29-nx0w.onrender.com/energo-visits**
+**https://bot-29-nx0w.onrender.com/energo-visits** (есть плашка и в дашборде bot_29).
+Весь интерфейс на русском, адаптивный. Приоритет — карточки устройств: клик открывает
+детализацию с IP/гео/экраном/сетью/языком/часовым поясом/ referrer/UTM, таблицей
+времени по вкладкам «Реестр/Закупки/Карты» со скроллом, кликами и поисковыми словами.
+«Последние события» показываются русскими подписями, а не сырыми `tab`/`click`.
+Доступ — по API-ключу bot_29 (после `/auth/login` прямая ссылка работает).
 
-Показывает KPI (сессии, устройства, события, средний скролл), время по вкладкам,
-географию, устройства/браузеры, поисковые слова, события по дням и последние события.
-Страница защищена тем же API-ключом bot_29 (после входа в `/auth/login` доступна по
-прямой ссылке).
+## Telegram и sync
 
-## Уведомления
+- **Новое устройство** — разовое форматированное HTML-уведомление с IP/гео/устройством/экраном/сетью и кнопкой на страницу.
+- **Сводка** — после утреннего scheduled push, один раз в сутки.
+- `/api/sync/status` → `last_push_reason`, `last_push_manifest`, `last_push_errors`, `sync_scope.sections.sync_energo`.
 
-- **Разовое** — при первом заходе нового `deviceId`: форматированное HTML-сообщение
-  с гео, устройством, экраном, сетью и кнопкой «Открыть статистику».
-- **Ежедневное** — в 09:00 МСК: сводка по сессиям, вкладкам, географии, поиску,
-  скроллу и просмотренным карточкам, плюс кнопка на страницу отчёта.
+## Как тестировать и дорабатывать
 
-## Проверки
-
-`scripts/test-visits.js` входит в общий прогон `ci-checks.js` и проверяет:
-только продакшн-домен, пустой endpoint в репозитории, отсутствие секретов в коде,
-наличие всех типов событий и отправку через `sendBeacon`.
+1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`.
+2. `python -m pytest tests/test_energo_visits.py -q` в `bot_29` (ветка `stat_energo`).
+3. Для локального E2E: поднять копию роутера, временно разрешить в `js/visits.js`
+   `http://127.0.0.1:8765/index.html` и направить `visits-config.json` на локальный
+   endpoint; **обязательно вернуть продакшн-проверку и endpoint обратно**.
+4. Запросы к Render делать через `C:\Users\alexs\Downloads\Telegram Desktop\open_render`
+   (`render-api.ps1`, `curl --resolve`) — прямой доступ из этой сети заблокирован.
+5. Изменения логики править в обоих репозиториях и обновлять оба документа
+   (`VISITOR_ANALYTICS.md` здесь и `docs/energo_visits.md` в bot_29).
