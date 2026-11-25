@@ -97,6 +97,14 @@ Endpoint в конфиге, не в коде. Секреты только в о�
 - **Сводка** — после утреннего scheduled push, один раз в сутки.
 - `/api/sync/status` → `last_push_reason`, `last_push_manifest`, `last_push_errors`, `sync_scope.sections.sync_energo`.
 
+## Очистка данных
+
+Управление на странице `/energo-visits` (раздел «Обслуживание данных») или API bot_29
+с ключом: `DELETE /api/energo/visits/events?all=true`, `...?before=YYYY-MM-DD`,
+`DELETE /api/energo/visits/device/<deviceId>`. Любая очистка ставит `energo-cleanup`
+в очередь sync, чтобы изменения не откатились при рестарте Render. Подробности —
+в `docs/energo_visits.md` репозитория bot_29.
+
 ## Как тестировать и дорабатывать
 
 1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`.
