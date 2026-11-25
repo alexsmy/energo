@@ -109,7 +109,8 @@ test('реестр рисует карточки порциями, а не вс�
   const app = fs.readFileSync(path.join(ROOT, 'js', 'app.js'), 'utf8');
   assert.match(app, /limit:\s*80/, 'нет размера порции');
   assert.match(app, /state\.limit = 80/, 'порция не сбрасывается при смене фильтров');
-  assert.match(app, /#moreCards/, 'нет кнопки «Показать ещё»');
+  assert.match(app, /more\.id = 'moreCards'/, 'нет кнопки «Показать ещё»');
+  assert.match(app, /list\.slice\(0, state\.limit\)\.forEach/, 'таблица реестра рисует все строки');
   assert.match(css, /\.card\{content-visibility:auto/, 'нет content-visibility для карточек');
 });
 
@@ -120,6 +121,21 @@ test('закупки тоже рисуют карточки порциями', (
   assert.match(app, /limit:\s*40/, 'нет размера порции закупок');
   assert.match(app, /state\.limit \+= 40/, 'кнопка не увеличивает порцию');
   assert.match(app, /state\.limit = 40/, 'порция не сбрасывается при смене фильтров');
+});
+
+test('на 360 px кнопка «Фильтры» закупок стоит в первом ряду', () => {
+  const narrow = css.match(/@media\(max-width:560px\)\{([\s\S]*?)\n\}/);
+  assert.ok(narrow, 'нет медиазапроса ≤560px');
+  assert.match(narrow[1], /#tFilterToggle\{grid-row:1;grid-column:1\}/, 'кнопка фильтров не первая');
+  assert.match(narrow[1], /#tReset\{grid-row:1;grid-column:2/, 'сброс не рядом с фильтрами');
+});
+
+test('на узких экранах кнопки компактные, но остаются касаемыми', () => {
+  const narrow = css.match(/@media\(max-width:480px\)\{([\s\S]*?)\n\}/);
+  assert.ok(narrow, 'нет медиазапроса для узких экранов');
+  assert.match(narrow[1], /\.icon-btn\{width:30px;height:30px/, 'иконки шапки не уменьшены');
+  assert.match(narrow[1], /\.seg__btn\{padding:5px 9px;font-size:11\.5px\}/, 'сегменты не уменьшены');
+  assert.match(narrow[1], /\.btn,\.btn--sm,\.select--sm\{padding:6px 9px;font-size:12px\}/, 'кнопки и поля не уменьшены');
 });
 
 test('компактные плашки не накладываются на крупные', () => {

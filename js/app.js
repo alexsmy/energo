@@ -668,14 +668,6 @@
         '<div class="grid">' + visible.map(card).join('') + '</div>' +
       '</section>';
     }).filter(Boolean).join('');
-    if (list.length > state.limit) {
-      const more = document.createElement('button');
-      more.type = 'button';
-      more.id = 'moreCards';
-      more.className = 'btn btn--ghost more-cards';
-      more.textContent = 'Показать ещё ' + Math.min(state.limit, list.length - state.limit) + ' из ' + list.length;
-      wrap.appendChild(more);
-    }
   }
 
   function renderTable(list) {
@@ -686,7 +678,7 @@
     list.forEach(it => { const k = keyOf(it); counts[k] = (counts[k] || 0) + 1; });
     let last = null;
     let html = '';
-    list.forEach(it => {
+    list.slice(0, state.limit).forEach(it => {
       const key = keyOf(it);
       if (key !== last) {
         last = key;
@@ -763,6 +755,21 @@
       renderCards(list);
     } else {
       renderTable(list);
+    }
+    let more = $('moreCards');
+    if (list.length > state.limit) {
+      if (!more) {
+        more = document.createElement('button');
+        more.id = 'moreCards';
+        more.type = 'button';
+        more.className = 'btn btn--ghost more-cards';
+        more.addEventListener('click', () => { state.limit += 80; render(); });
+      }
+      more.hidden = false;
+      more.textContent = 'Показать ещё ' + Math.min(state.limit, list.length - state.limit) + ' из ' + list.length;
+      (state.view === 'cards' ? $('cards') : $('tableWrap')).after(more);
+    } else if (more) {
+      more.hidden = true;
     }
     return list;
   }
@@ -1226,13 +1233,6 @@
       const open = panel.classList.toggle('is-open');
       document.body.classList.toggle('filters-open', open);
       updateFilterButton();
-    });
-
-    $('cards').addEventListener('click', (e) => {
-      if (e.target.closest('#moreCards')) {
-        state.limit += 80;
-        render();
-      }
     });
 
     $('filtersClose').addEventListener('click', closeFilters);

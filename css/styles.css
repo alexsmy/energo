@@ -705,10 +705,29 @@ body.is-tenders .hero{display:none}
   .t-toolbar__right .seg:first-of-type{grid-row:1}
   .t-toolbar__right .seg:nth-of-type(2){grid-row:3}
   .t-toolbar__right .seg__btn{flex:1;padding:6px 8px;font-size:11.5px}
-  #tReset{grid-row:2;grid-column:1;justify-content:center}
-  #tSort{grid-row:2;grid-column:2;width:100%}
+  /* Кнопка фильтров должна быть первой и видимой, а не последним рядом. */
+  .t-toolbar__right{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #tFilterToggle{grid-row:1;grid-column:1}
+  #tReset{grid-row:1;grid-column:2;justify-content:center}
+  .t-toolbar__right .seg:first-of-type{grid-row:2;grid-column:1/-1}
+  .t-toolbar__right .seg:nth-of-type(2){grid-row:3;grid-column:1/-1}
+  #tSort{grid-row:4;grid-column:1/-1;width:100%}
   .t-cards{gap:10px}
   .t-card{padding:11px 12px}
+}
+
+/* Узкие экраны: компактные, но остаются удобными для касания (~30 px). */
+@media(max-width:480px){
+  .topbar__in{min-height:52px;padding:7px 10px}
+  .tab{padding:5px 8px;font-size:11.5px}
+  .icon-btn{width:30px;height:30px;border-radius:8px}
+  .icon-btn svg{width:16px;height:16px}
+  .btn,.btn--sm,.select--sm{padding:6px 9px;font-size:12px}
+  .seg{padding:2px}
+  .seg__btn{padding:5px 9px;font-size:11.5px}
+  .toolbar__right{gap:6px}
+  .content > .toolbar{padding:10px var(--wrap-pad)}
+  .toolbar__count span{display:none}
 }
 
 @media print{
