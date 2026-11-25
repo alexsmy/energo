@@ -123,6 +123,13 @@ test('закупки тоже рисуют карточки порциями', (
   assert.match(app, /state\.limit = 40/, 'порция не сбрасывается при смене фильтров');
 });
 
+test('автообновление даёт 5 секунд, а не 10', () => {
+  const app = fs.readFileSync(path.join(ROOT, 'js', 'app.js'), 'utf8');
+  assert.match(app, /<b>5<\/b> с/, 'в уведомлении не 5 секунд');
+  assert.match(app, /let seconds = 5/, 'счётчик не 5 секунд');
+  assert.ok(!app.includes('let seconds = 10'), 'остался старый счётчик на 10 секунд');
+});
+
 test('на 360 px кнопка «Фильтры» закупок стоит в первом ряду', () => {
   const narrow = css.match(/@media\(max-width:560px\)\{([\s\S]*?)\n\}/);
   assert.ok(narrow, 'нет медиазапроса ≤560px');

@@ -1288,8 +1288,8 @@
       if (seen === version) return;
       notice = createNotice('update', 'i');
       const body = notice.querySelector('.notice__body');
-      body.innerHTML = 'Обновление данных, страница будет перезагружена · <b>10</b> с';
-      let seconds = 10;
+      body.innerHTML = 'Обновление данных, страница будет перезагружена · <b>5</b> с';
+      let seconds = 5;
       const counter = body.querySelector('b');
       const timer = setInterval(() => {
         seconds -= 1;
