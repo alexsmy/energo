@@ -1,11 +1,11 @@
 {
-  "lastRun": "2026-11-26T01:53:41.358Z",
+  "lastRun": "2026-11-26T10:41:35.467Z",
   "mode": "live",
-  "total": 424,
-  "unique": 538,
+  "total": 527,
+  "unique": 696,
   "sourceMix": {
-    "gentender": 259,
-    "gosplan": 27,
+    "gosplan": 60,
+    "gentender": 329,
     "etpgpb-direct": 22,
     "tektorg-direct": 54,
     "fabrikant-direct": 10,
@@ -19,25 +19,25 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 26.4,
-  "directCoveragePct": 26.4,
-  "recordsPer100Requests": 131.2,
-  "matchedOrg": 424,
-  "active": 226,
+  "directFirstPct": 21.3,
+  "directCoveragePct": 21.3,
+  "recordsPer100Requests": 164.9,
+  "matchedOrg": 527,
+  "active": 329,
   "archive": 198,
   "bySource": {
+    "EIS": 83,
     "SBER_B2B": 18,
-    "EIS": 50,
-    "GPB": 49,
+    "SBER": 63,
+    "TEK": 116,
+    "GPB": 58,
+    "B2B": 26,
     "ZAKAZ": 26,
     "PORTAL_POST": 1,
-    "RAD": 54,
-    "ROS": 56,
-    "SBER": 40,
-    "TEK": 107,
-    "FAB": 10,
+    "RAD": 60,
+    "ROS": 63,
+    "FAB": 11,
     "RTS": 1,
-    "B2B": 11,
     "BIDZAAR": 1
   },
   "sources": [
@@ -61,17 +61,17 @@
         },
         {
           "source": "tektorg-direct",
+          "query": "модернизация",
+          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+        },
+        {
+          "source": "tektorg-direct",
           "query": "напыление",
           "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
         },
         {
           "source": "tektorg-direct",
           "query": "порошковой",
-          "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
-        },
-        {
-          "source": "tektorg-direct",
-          "query": "ремонт",
           "error": "HTTP 403"
         }
       ]
@@ -96,17 +96,17 @@
         },
         {
           "source": "etpgpb-direct",
+          "query": "модернизация",
+          "error": "fetch failed"
+        },
+        {
+          "source": "etpgpb-direct",
           "query": "напыление",
           "error": "fetch failed"
         },
         {
           "source": "etpgpb-direct",
           "query": "порошковой",
-          "error": "fetch failed"
-        },
-        {
-          "source": "etpgpb-direct",
-          "query": "ремонт",
           "error": "fetch failed"
         }
       ]
@@ -131,6 +131,11 @@
         },
         {
           "source": "roseltorg-direct",
+          "query": "модернизация",
+          "error": "fetch failed"
+        },
+        {
+          "source": "roseltorg-direct",
           "query": "напыление",
           "error": "fetch failed"
         },
@@ -138,20 +143,15 @@
           "source": "roseltorg-direct",
           "query": "порошковой",
           "error": "fetch failed"
-        },
-        {
-          "source": "roseltorg-direct",
-          "query": "ремонт",
-          "error": "fetch failed"
         }
       ]
     },
     {
       "name": "rad-direct",
       "available": true,
-      "requests": 13,
-      "okRequests": 13,
-      "records": 109,
+      "requests": 15,
+      "okRequests": 15,
+      "records": 111,
       "errors": 0,
       "errorItems": []
     },
@@ -175,17 +175,17 @@
         },
         {
           "source": "fabrikant-direct",
+          "query": "модернизация",
+          "error": "fetch failed"
+        },
+        {
+          "source": "fabrikant-direct",
           "query": "напыление",
           "error": "fetch failed"
         },
         {
           "source": "fabrikant-direct",
           "query": "порошковой",
-          "error": "fetch failed"
-        },
-        {
-          "source": "fabrikant-direct",
-          "query": "ремонт",
           "error": "fetch failed"
         }
       ]
@@ -210,6 +210,11 @@
         },
         {
           "source": "zakazrf-direct",
+          "query": "модернизация",
+          "error": "fetch failed"
+        },
+        {
+          "source": "zakazrf-direct",
           "query": "напыление",
           "error": "fetch failed"
         },
@@ -217,40 +222,20 @@
           "source": "zakazrf-direct",
           "query": "порошковой",
           "error": "fetch failed"
-        },
-        {
-          "source": "zakazrf-direct",
-          "query": "ремонт",
-          "error": "fetch failed"
         }
       ]
     },
     {
       "name": "gosplan",
       "available": true,
-      "requests": 35,
-      "okRequests": 31,
-      "records": 34,
-      "errors": 4,
+      "requests": 40,
+      "okRequests": 39,
+      "records": 77,
+      "errors": 1,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "вставка (44, действующие)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "лопатка (223, действующие)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "порошковой (223, завершённые 30д)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "турбина (223, завершённые 30д)",
+          "query": "уплотнение (44, завершённые 30д)",
           "error": "HTTP 429"
         }
       ]
@@ -258,11 +243,17 @@
     {
       "name": "gentender",
       "available": true,
-      "requests": 333,
-      "okRequests": 333,
-      "records": 395,
-      "errors": 0,
-      "errorItems": []
+      "requests": 338,
+      "okRequests": 337,
+      "records": 508,
+      "errors": 1,
+      "errorItems": [
+        {
+          "source": "gentender",
+          "query": "ремонт (архив)",
+          "error": "The operation was aborted due to timeout"
+        }
+      ]
     },
     {
       "name": "eis-html",
@@ -284,38 +275,38 @@
         },
         {
           "source": "eis-html",
-          "query": "напыление",
+          "query": "модернизация",
           "error": "fetch failed"
         },
         {
           "source": "eis-html",
-          "query": "порошковой",
+          "query": "напыление",
           "error": "fetch failed"
         }
       ]
     }
   ],
-  "errors": 33,
+  "errors": 31,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 58,
-  "newCount": 2,
-  "corroborated": 86,
-  "corroboratedPct": 20,
-  "relevantPerRequest": 1.31,
+  "localArchived": 17,
+  "newCount": 64,
+  "corroborated": 115,
+  "corroboratedPct": 22,
+  "relevantPerRequest": 1.65,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
     "gosplan": {
       "limit": 60,
-      "used": 35,
+      "used": 40,
       "exhausted": false
     },
     "gentender": {
       "limit": 720,
-      "used": 333,
+      "used": 338,
       "exhausted": false
     },
     "tektorg": {
@@ -350,7 +341,7 @@
     },
     "rad-direct": {
       "limit": 40,
-      "used": 13,
+      "used": 15,
       "exhausted": false
     },
     "fabrikant-direct": {
