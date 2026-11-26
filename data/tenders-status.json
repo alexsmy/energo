@@ -1,11 +1,11 @@
 {
-  "lastRun": "2026-11-26T17:11:48.772Z",
+  "lastRun": "2026-11-26T19:45:28.560Z",
   "mode": "live",
-  "total": 549,
-  "unique": 654,
+  "total": 553,
+  "unique": 692,
   "sourceMix": {
-    "gosplan": 67,
-    "gentender": 344,
+    "gosplan": 72,
+    "gentender": 343,
     "etpgpb-direct": 22,
     "tektorg-direct": 54,
     "fabrikant-direct": 10,
@@ -19,18 +19,18 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 20.4,
-  "directCoveragePct": 20.4,
-  "recordsPer100Requests": 155,
-  "matchedOrg": 549,
-  "active": 284,
-  "archive": 265,
+  "directFirstPct": 20.3,
+  "directCoveragePct": 20.3,
+  "recordsPer100Requests": 164,
+  "matchedOrg": 553,
+  "active": 355,
+  "archive": 198,
   "bySource": {
-    "EIS": 90,
+    "EIS": 95,
     "RAD": 61,
-    "ROS": 68,
+    "ROS": 66,
     "RTS": 3,
-    "SBER_B2B": 23,
+    "SBER_B2B": 24,
     "SBER": 62,
     "TEK": 116,
     "GPB": 60,
@@ -229,10 +229,15 @@
       "name": "gosplan",
       "available": true,
       "requests": 40,
-      "okRequests": 38,
-      "records": 50,
-      "errors": 2,
+      "okRequests": 37,
+      "records": 73,
+      "errors": 3,
       "errorItems": [
+        {
+          "source": "gosplan",
+          "query": "порошковой (44, завершённые 30д)",
+          "error": "fetch failed"
+        },
         {
           "source": "gosplan",
           "query": "ремонт (223, архив стр.2)",
@@ -240,8 +245,8 @@
         },
         {
           "source": "gosplan",
-          "query": "турбина (223, действующие)",
-          "error": "HTTP 429"
+          "query": "турбина (223, архив стр.2)",
+          "error": "fetch failed"
         }
       ]
     },
@@ -249,15 +254,10 @@
       "name": "gentender",
       "available": true,
       "requests": 338,
-      "okRequests": 336,
-      "records": 493,
-      "errors": 2,
+      "okRequests": 337,
+      "records": 508,
+      "errors": 1,
       "errorItems": [
-        {
-          "source": "gentender",
-          "query": "ИНН 6829012680 (действующие)",
-          "error": "The operation was aborted due to timeout"
-        },
         {
           "source": "gentender",
           "query": "ремонт (архив)",
@@ -301,11 +301,11 @@
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 83,
-  "newCount": 85,
-  "corroborated": 121,
+  "localArchived": 16,
+  "newCount": 89,
+  "corroborated": 123,
   "corroboratedPct": 22,
-  "relevantPerRequest": 1.55,
+  "relevantPerRequest": 1.64,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
