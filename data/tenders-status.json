@@ -1,12 +1,12 @@
 {
-  "lastRun": "2026-11-26T00:04:07.264Z",
+  "lastRun": "2026-11-26T01:53:41.358Z",
   "mode": "live",
-  "total": 423,
-  "unique": 545,
+  "total": 424,
+  "unique": 538,
   "sourceMix": {
+    "gentender": 259,
     "gosplan": 27,
     "etpgpb-direct": 22,
-    "gentender": 258,
     "tektorg-direct": 54,
     "fabrikant-direct": 10,
     "roseltorg-direct": 21,
@@ -19,20 +19,20 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 26.5,
-  "directCoveragePct": 26.5,
-  "recordsPer100Requests": 132.9,
-  "matchedOrg": 423,
-  "active": 283,
-  "archive": 140,
+  "directFirstPct": 26.4,
+  "directCoveragePct": 26.4,
+  "recordsPer100Requests": 131.2,
+  "matchedOrg": 424,
+  "active": 226,
+  "archive": 198,
   "bySource": {
+    "SBER_B2B": 18,
     "EIS": 50,
     "GPB": 49,
     "ZAKAZ": 26,
     "PORTAL_POST": 1,
     "RAD": 54,
     "ROS": 56,
-    "SBER_B2B": 17,
     "SBER": 40,
     "TEK": 107,
     "FAB": 10,
@@ -229,10 +229,15 @@
       "name": "gosplan",
       "available": true,
       "requests": 35,
-      "okRequests": 27,
-      "records": 40,
-      "errors": 8,
+      "okRequests": 31,
+      "records": 34,
+      "errors": 4,
       "errorItems": [
+        {
+          "source": "gosplan",
+          "query": "вставка (44, действующие)",
+          "error": "HTTP 429"
+        },
         {
           "source": "gosplan",
           "query": "лопатка (223, действующие)",
@@ -240,37 +245,12 @@
         },
         {
           "source": "gosplan",
-          "query": "порошковой (223, действующие)",
+          "query": "порошковой (223, завершённые 30д)",
           "error": "HTTP 429"
         },
         {
           "source": "gosplan",
-          "query": "порошковой (44, действующие)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "ремонт (223, действующие)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "ремонт (44, действующие)",
-          "error": "HTTP 504"
-        },
-        {
-          "source": "gosplan",
-          "query": "ремонт (44, завершённые 30д)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "ремонт (223, архив стр.2)",
-          "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "уплотнение (44, завершённые 30д)",
+          "query": "турбина (223, завершённые 30д)",
           "error": "HTTP 429"
         }
       ]
@@ -280,7 +260,7 @@
       "available": true,
       "requests": 333,
       "okRequests": 333,
-      "records": 396,
+      "records": 395,
       "errors": 0,
       "errorItems": []
     },
@@ -315,16 +295,16 @@
       ]
     }
   ],
-  "errors": 37,
+  "errors": 33,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 0,
-  "newCount": 1,
+  "localArchived": 58,
+  "newCount": 2,
   "corroborated": 86,
   "corroboratedPct": 20,
-  "relevantPerRequest": 1.33,
+  "relevantPerRequest": 1.31,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
