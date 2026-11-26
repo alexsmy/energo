@@ -19,6 +19,7 @@
     "dry-run": "node scripts/collect-tenders.js --dry-run",
     "stats:keywords": "node scripts/keyword-stats.js",
     "probe": "node scripts/probe-one.js",
+    "probe:keyword": "node scripts/probe-keyword.js",
     "archive:restore": "node scripts/archive.js restore",
     "archive:snapshot": "node scripts/archive.js snapshot",
     "archive:prune": "node scripts/archive.js prune",
