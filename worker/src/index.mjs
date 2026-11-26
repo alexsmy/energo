@@ -95,6 +95,16 @@ export default {
     const upstream = env.UPSTREAM_URL || DEFAULT_UPSTREAM;
     const clientIp = (request.headers.get('CF-Connecting-IP') || '').trim();
     const proxyToken = String(env.PROXY_TOKEN || '');
+    // Cloudflare уже знает страну/город/провайдера по IP запроса — гео не зависит
+    // от внешнего GeoIP-сервиса, который на Render может быть недоступен.
+    const cf = request.cf || {};
+    const geoHint = {
+      country: String(cf.country || ''),
+      city: String(cf.city || ''),
+      provider: String(cf.asOrganization || ''),
+      ip: clientIp,
+    };
+    const forwarded = JSON.stringify({ ...payload, geoHint });
 
     let upstreamResponse;
     try {
@@ -108,7 +118,7 @@ export default {
           'X-Energo-Proxy': proxyToken,
           'X-Energo-Client-IP': clientIp,
         },
-        body,
+        body: forwarded,
       });
     } catch (e) {
       return reject('upstream unavailable', 502);

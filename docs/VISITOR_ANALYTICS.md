@@ -36,7 +36,8 @@ GitHub Pages → POST https://energo-visits.<subdomain>.workers.dev/api/energo/v
 Worker передаёт исходный IP посетителя в заголовке `X-Energo-Client-IP`
 вместе с общим секретом `X-Energo-Proxy`. Сервер bot_29 доверяет этому IP
 только при совпадении секрета с env `ENERGO_VISITS_PROXY_TOKEN`, поэтому
-гео остаётся реальным, а подделать его снаружи нельзя.
+гео остаётся реальным, а подделать его снаружи нельзя. Страна/город/провайдер
+приходят от Cloudflare в поле `geoHint` — внешний GeoIP на Render не нужен.
 
 Настройка и деплой — `worker/README.md`. Адрес Worker пишется в
 `data/visits-config.json` (поле `endpoint` и первый элемент `endpoints`);
