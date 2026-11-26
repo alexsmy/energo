@@ -1,5 +1,10 @@
 {
   "enabled": true,
-  "endpoint": "https://bot-29-nx0w.onrender.com/api/energo/visits",
-  "note": "URL серверной прослойки для приёма событий посещений. Пустой endpoint = сбор выключен. Секреты Telegram и токен GitHub хранятся только на сервере, в репозиторий не попадают."
+  "endpoint": "https://energo-visits.alexsmyslov-russia.workers.dev/api/energo/visits",
+  "endpoints": [
+    "https://energo-visits.alexsmyslov-russia.workers.dev/api/energo/visits",
+    "https://bot-29-nx0w.onrender.com/api/energo/visits"
+  ],
+  "timeoutMs": 9000,
+  "note": "Первый endpoint — Cloudflare Worker (основной канал для пользователей без VPN), второй — запасной прямой Render. Адрес Worker заменяется на выведенный wrangler deploy. Секреты Telegram/GitHub хранятся только на сервере, в репозитории их нет."
 }

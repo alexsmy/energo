@@ -1,19 +1,27 @@
 /* Реестр РФ — клиентский сбор событий посещений.
  * Работает ТОЛЬКО на https://alexsmy.github.io/energo/index.html.
  * IP, страну, город и провайдера определяет серверная прослойка: браузер их не знает.
- * Никаких токенов в коде нет — endpoint берётся из data/visits-config.json. */
+ * Никаких токенов в коде нет — endpoint берётся из data/visits-config.json.
+ *
+ * Устойчивость (2.68): таймаут на fetch, несколько endpoint-ов с переключением,
+ * backoff и outbox в localStorage. Если основной канал (Worker) недоступен,
+ * события уходят запасным каналом и не теряются при перезагрузке. */
 (function () {
   'use strict';
 
   var PROD = /^https:\/\/alexsmy\.github\.io\/energo\/(?:index\.html)?(?:[?#]|$)/.test(location.href);
   if (!PROD) return;
 
-  var endpoint = '';
+  var endpoints = [];
+  var endpointIndex = 0;
+  var timeoutMs = 9000;
   var enabled = false;
   var queue = [];
   var flushTimer = null;
+  var retryDelay = 2000;
   var started = false;
-  var sessionId = sessionId || readStore(sessionStorage, 'energo-visit-session') || uuid();
+  var outboxKey = 'energo-visit-outbox';
+  var sessionId = readStore(sessionStorage, 'energo-visit-session') || uuid();
   var deviceId = readStore(localStorage, 'energo-visit-device') || uuid();
   try { sessionStorage.setItem('energo-visit-session', sessionId); localStorage.setItem('energo-visit-device', deviceId); } catch (e) {}
   var activeTab = null;
@@ -69,6 +77,21 @@
     });
   }
   function now() { return new Date().toISOString(); }
+
+  /* Outbox переживает перезагрузку страницы: сервер дедуплицирует по sessionId+ts+type. */
+  function loadOutbox() {
+    try {
+      var raw = localStorage.getItem(outboxKey);
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      if (saved && saved.length) queue = saved.concat(queue).slice(-300);
+      localStorage.removeItem(outboxKey);
+    } catch (e) { try { localStorage.removeItem(outboxKey); } catch (e2) {} }
+  }
+  function saveOutbox() {
+    try { localStorage.setItem(outboxKey, JSON.stringify(queue.slice(-300))); } catch (e) {}
+  }
+
   function push(type, data) {
     if (!enabled) return;
     var ev = data || {};
@@ -79,8 +102,38 @@
     queue.push(ev);
     if (queue.length >= 40) flush();
   }
+
+  function sendOnce(url, body) {
+    return new Promise(function (resolve, reject) {
+      var controller = window.AbortController ? new AbortController() : null;
+      var timer = null;
+      var done = false;
+      function finish(err) {
+        if (done) return;
+        done = true;
+        if (timer) clearTimeout(timer);
+        if (err) reject(err); else resolve();
+      }
+      if (controller) {
+        timer = setTimeout(function () { controller.abort(); finish(new Error('timeout')); }, timeoutMs);
+      }
+      var opts = {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: body,
+        keepalive: true,
+        mode: 'cors'
+      };
+      if (controller) opts.signal = controller.signal;
+      fetch(url, opts).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        finish();
+      }).catch(function (e) { finish(e); });
+    });
+  }
+
   function flush(unload) {
-    if (!enabled || !endpoint || !queue.length) return;
+    if (!enabled || !endpoints.length || !queue.length) return;
     if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
     var events = queue.splice(0);
     var payload = {
@@ -90,27 +143,32 @@
       events: events
     };
     var body = JSON.stringify(payload);
-    // При уходе со страницы beacon — последний шанс: подтверждения нет, но лучше чем ничего.
+    // При уходе со страницы beacon — последний шанс: подтверждения нет,
+    // поэтому дополнительно страхуем события через outbox.
     if (unload) {
-      try { if (navigator.sendBeacon) { navigator.sendBeacon(endpoint, body); return; } } catch (e) {}
+      saveOutbox();
+      try { if (navigator.sendBeacon) { navigator.sendBeacon(endpoints[endpointIndex], body); return; } } catch (e) {}
     }
-    fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-      body: body,
-      keepalive: true,
-      mode: 'cors'
-    }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-    }).catch(function () {
-      // Не теряем события, если сервер проснулся/заответил ошибкой: отправим позже.
-      queue = events.concat(queue).slice(0, 300);
-      scheduleFlush();
-    });
+    var attempt = function (i) {
+      if (i >= endpoints.length) {
+        queue = events.concat(queue).slice(0, 300);
+        saveOutbox();
+        retryDelay = Math.min(60000, retryDelay * 2);
+        scheduleFlush();
+        return;
+      }
+      sendOnce(endpoints[i], body).then(function () {
+        endpointIndex = i;
+        retryDelay = 2000;
+        saveOutbox();
+      }).catch(function () { attempt(i + 1); });
+    };
+    attempt(endpointIndex);
   }
+
   function scheduleFlush() {
     if (flushTimer) return;
-    flushTimer = setTimeout(flush, 2000);
+    flushTimer = setTimeout(flush, retryDelay);
   }
 
   /* ---------- устройство / браузер / сеть ---------- */
@@ -297,8 +355,9 @@
 
   /* ---------- запуск ---------- */
   function start() {
-    if (started || !enabled || !endpoint) return;
+    if (started || !enabled || !endpoints.length) return;
     started = true;
+    loadOutbox();
     tabOpen();
     setInterval(function () { if (!document.hidden) flush(); }, 30000);
     setInterval(function () {
@@ -319,8 +378,14 @@
   fetch('data/visits-config.json?ts=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (c) {
-      if (!c || c.enabled === false || !c.endpoint) return;
-      endpoint = String(c.endpoint).trim();
+      if (!c || c.enabled === false) return;
+      var list = Array.isArray(c.endpoints) ? c.endpoints.slice() : (c.endpoint ? [c.endpoint] : []);
+      // Оверрайд для тестов и локального relay: ?visitsEndpoint=http://127.0.0.1:8787/api/energo/visits
+      var override = new URLSearchParams(location.search).get('visitsEndpoint');
+      if (override) list.unshift(override);
+      endpoints = list.map(String).map(function (s) { return s.trim(); }).filter(Boolean);
+      timeoutMs = Number(c.timeoutMs) || 9000;
+      if (!endpoints.length) return;
       enabled = true;
       start();
     })

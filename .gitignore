@@ -5,3 +5,8 @@ data/archive/
 # Локальные временные файлы
 tmp/
 *.tmp
+
+# Секреты и локальные артефакты деплоя Worker
+worker/.proxy-token.txt
+.env
+node_modules/

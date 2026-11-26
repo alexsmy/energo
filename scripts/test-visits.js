@@ -25,9 +25,20 @@ test('локальные и тестовые заходы не отправля�
 });
 
 test('endpoint берётся из конфига, а не захардкожен', () => {
-  assert.equal(cfg.endpoint, 'https://bot-29-nx0w.onrender.com/api/energo/visits', 'должен быть публичный endpoint bot_29');
+  const list = Array.isArray(cfg.endpoints) ? cfg.endpoints : [cfg.endpoint];
+  assert.ok(list.some((u) => /bot-29-nx0w\.onrender\.com\/api\/energo\/visits/.test(u)), 'должен быть запасной endpoint bot_29');
+  assert.ok(list.some((u) => /workers\.dev\/api\/energo\/visits/.test(u)), 'должен быть endpoint Worker');
   assert.match(js, /data\/visits-config\.json/);
   assert.match(js, /c\.endpoint/);
+  assert.match(js, /c\.endpoints/);
+});
+
+test('если канал висит, есть таймаут, backoff и outbox', () => {
+  assert.match(js, /AbortController/);
+  assert.match(js, /timeoutMs/);
+  assert.match(js, /retryDelay = Math\.min\(60000, retryDelay \* 2\)/);
+  assert.match(js, /energo-visit-outbox/);
+  assert.match(js, /visitsEndpoint/);
 });
 
 test('в клиентском коде нет токенов Telegram и GitHub', () => {

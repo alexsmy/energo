@@ -1018,6 +1018,13 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     через раздел `sync_energo` по общему расписанию bot_29, отдельных таймеров нет.
     Тесты: `scripts/test-visits.js` в `ci-checks.js`; в bot_29 — `tests/test_energo_visits.py`.
     При изменении логики менять оба репозитория и обе документации.
+    С 2.68 основной канал — Cloudflare Worker `worker/src/index.mjs` на
+    `*.workers.dev` (пользователи без VPN не могут достучаться до Render
+    напрямую: DNS отдаёт заблокированные 216.24.57.16/.18). Worker шлёт
+    `X-Energo-Client-IP` + `X-Energo-Proxy`; bot_29 принимает IP только при
+    совпадении секрета с `ENERGO_VISITS_PROXY_TOKEN`. В конфиге — список
+    `endpoints` (Worker, затем Render), таймаут `AbortController`, backoff
+    и outbox в `localStorage`. Тест Worker: `node worker/test-worker.mjs`.
 
 ## Что осталось / риски
 

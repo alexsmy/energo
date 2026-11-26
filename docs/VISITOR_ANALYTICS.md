@@ -21,6 +21,32 @@ bot_29 / ветка stat_energo (FastAPI на Render)
   └─ sync: событие energo-visit — сразу; полный набор — по общему расписанию
 ```
 
+## Основной канал: Cloudflare Worker (с 2.68)
+
+Прямой POST в Render у пользователей без VPN не проходит: DNS
+`bot-29-nx0w.onrender.com` отдаёт заблокированные провайдером IP
+`216.24.57.16/.18`, запрос висит без ответа. Поэтому основной endpoint —
+Cloudflare Worker на `*.workers.dev`:
+
+```text
+GitHub Pages → POST https://energo-visits.<subdomain>.workers.dev/api/energo/visits
+             → Worker (проверка Origin/page, лимиты) → https://bot-29-nx0w.onrender.com/api/energo/visits
+```
+
+Worker передаёт исходный IP посетителя в заголовке `X-Energo-Client-IP`
+вместе с общим секретом `X-Energo-Proxy`. Сервер bot_29 доверяет этому IP
+только при совпадении секрета с env `ENERGO_VISITS_PROXY_TOKEN`, поэтому
+гео остаётся реальным, а подделать его снаружи нельзя.
+
+Настройка и деплой — `worker/README.md`. Адрес Worker пишется в
+`data/visits-config.json` (поле `endpoint` и первый элемент `endpoints`);
+второй элемент — прямой Render как запасной канал. Поддерживается также
+оверрайд `?visitsEndpoint=...` для тестов и локального relay.
+
+Клиент 2.68 добавил: таймаут `fetch` (9 с), переключение между endpoint-ами,
+backoff до 60 с и outbox в `localStorage`. Сервер дедуплицирует события по
+`sessionId+ts+type`, поэтому повторы не создают дублей.
+
 **Отдельных таймеров в боте нет.** Полный backup едет по уже существующему расписанию
 синхронизации bot_29; принятый заход дополнительно ставит событие `energo-visit` в
 очередь sync и обрабатывается сразу даже при выключенной опции «Синхронизация по
@@ -117,7 +143,8 @@ Endpoint в конфиге, не в коде. Секреты только в о�
 
 ## Как тестировать и дорабатывать
 
-1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`.
+1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`;
+   отдельно `node worker/test-worker.mjs` проверяет прокси без Cloudflare-аккаунта.
 2. `python -m pytest tests/test_energo_visits.py -q` в `bot_29` (ветка `stat_energo`).
 3. Для локального E2E: поднять копию роутера, временно разрешить в `js/visits.js`
    `http://127.0.0.1:8765/index.html` и направить `visits-config.json` на локальный

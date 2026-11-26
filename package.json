@@ -14,6 +14,8 @@
     "keywords": "node scripts/keywords.js",
     "test": "node prototype/test-regressions.js",
     "test:collect": "node scripts/test-collect.js",
+    "test:worker": "node worker/test-worker.mjs",
+    "deploy:worker": "powershell -ExecutionPolicy Bypass -File scripts/deploy-worker.ps1",
     "dry-run": "node scripts/collect-tenders.js --dry-run",
     "stats:keywords": "node scripts/keyword-stats.js",
     "probe": "node scripts/probe-one.js",
@@ -25,5 +27,8 @@
     "verify:inn": "node scripts/verify-contacts.js",
     "serve": "python -m http.server 8765 --bind 127.0.0.1",
     "start": "node build.js && python -m http.server 8765 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.168.0"
   }
 }
