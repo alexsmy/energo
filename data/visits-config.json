@@ -6,6 +6,6 @@
     "https://bot-29-nx0w.onrender.com/api/energo/visits"
   ],
   "githubDispatch": "https://api.github.com/repos/alexsmy/energo/dispatches",
-  "timeoutMs": 9000,
+  "timeoutMs": 15000,
   "note": "Основной канал — Cloudflare Worker; запасной для сетей без VPN — GitHub repository_dispatch (токен хранится в localStorage устройства, задаётся через ?visitsToken=...); прямой Render — последний резерв."
 }

@@ -26,7 +26,7 @@
 
   var endpoints = [];
   var endpointIndex = 0;
-  var timeoutMs = 9000;
+  var timeoutMs = 15000;
   var enabled = false;
   var queue = [];
   var flushTimer = null;
@@ -188,6 +188,9 @@
     }
     var attempt = function (i) {
       if (i >= endpoints.length) {
+        // Все каналы не ответили — в следующий раз начинаем снова с первого
+        // (иначе после одного сбоя Worker мы навсегда застреваем на Render).
+        endpointIndex = 0;
         queue = events.concat(queue).slice(0, 300);
         saveOutbox();
         retryDelay = Math.min(60000, retryDelay * 2);

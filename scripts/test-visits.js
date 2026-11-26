@@ -42,6 +42,7 @@ test('если канал висит, есть таймаут, backoff и outbox
   assert.match(js, /retryDelay = Math\.min\(60000, retryDelay \* 2\)/);
   assert.match(js, /energo-visit-outbox/);
   assert.match(js, /visitsEndpoint/);
+  assert.match(js, /endpointIndex = 0;/);
 });
 
 test('в клиентском коде нет токенов Telegram и GitHub', () => {
