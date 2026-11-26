@@ -29,7 +29,12 @@ jobs:
     outputs:
       ran: ${{ steps.collected.outputs.ran }}
     steps:
+      # ВАЖНО: брать свежий main, а не SHA, который вызвал workflow.
+      # Иначе запуск из очереди concurrency начнётся с устаревшего коммита,
+      # снова соберёт данные и не сможет сделать push (non-fast-forward).
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -83,13 +88,32 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Сначала коммитим, затем подтягиваем свежий main и ребейзимся на него.
+          # Если другой запуск уже закоммитил данные — берём его состояние и
+          # продолжаем публикацию без повторного сбора.
           git add -A
           if git diff --cached --quiet; then
             echo "Изменений нет — пропускаем коммит"
           else
             git commit -m "tenders: automate collection $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push origin HEAD:main
           fi
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort || true
+            echo "Конкурирующий запуск уже обновил данные — используем его состояние"
+            git reset --hard origin/main
+            exit 0
+          fi
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then break; fi
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              git reset --hard origin/main
+              break
+            fi
+            sleep $((attempt * 5))
+          done
 
       - name: Готовим сайт к публикации
         if: steps.collected.outputs.ran == 'true'
@@ -110,6 +134,11 @@ jobs:
     if: needs.build.outputs.ran == 'true'
     runs-on: ubuntu-latest
     environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
