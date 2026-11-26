@@ -1,11 +1,11 @@
 {
-  "lastRun": "2026-11-26T10:41:35.467Z",
+  "lastRun": "2026-11-26T17:11:48.772Z",
   "mode": "live",
-  "total": 527,
-  "unique": 696,
+  "total": 549,
+  "unique": 654,
   "sourceMix": {
-    "gosplan": 60,
-    "gentender": 329,
+    "gosplan": 67,
+    "gentender": 344,
     "etpgpb-direct": 22,
     "tektorg-direct": 54,
     "fabrikant-direct": 10,
@@ -19,25 +19,25 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 21.3,
-  "directCoveragePct": 21.3,
-  "recordsPer100Requests": 164.9,
-  "matchedOrg": 527,
-  "active": 329,
-  "archive": 198,
+  "directFirstPct": 20.4,
+  "directCoveragePct": 20.4,
+  "recordsPer100Requests": 155,
+  "matchedOrg": 549,
+  "active": 284,
+  "archive": 265,
   "bySource": {
-    "EIS": 83,
-    "SBER_B2B": 18,
-    "SBER": 63,
+    "EIS": 90,
+    "RAD": 61,
+    "ROS": 68,
+    "RTS": 3,
+    "SBER_B2B": 23,
+    "SBER": 62,
     "TEK": 116,
-    "GPB": 58,
-    "B2B": 26,
+    "GPB": 60,
+    "B2B": 27,
     "ZAKAZ": 26,
     "PORTAL_POST": 1,
-    "RAD": 60,
-    "ROS": 63,
     "FAB": 11,
-    "RTS": 1,
     "BIDZAAR": 1
   },
   "sources": [
@@ -229,13 +229,18 @@
       "name": "gosplan",
       "available": true,
       "requests": 40,
-      "okRequests": 39,
-      "records": 77,
-      "errors": 1,
+      "okRequests": 38,
+      "records": 50,
+      "errors": 2,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "уплотнение (44, завершённые 30д)",
+          "query": "ремонт (223, архив стр.2)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "турбина (223, действующие)",
           "error": "HTTP 429"
         }
       ]
@@ -244,10 +249,15 @@
       "name": "gentender",
       "available": true,
       "requests": 338,
-      "okRequests": 337,
-      "records": 508,
-      "errors": 1,
+      "okRequests": 336,
+      "records": 493,
+      "errors": 2,
       "errorItems": [
+        {
+          "source": "gentender",
+          "query": "ИНН 6829012680 (действующие)",
+          "error": "The operation was aborted due to timeout"
+        },
         {
           "source": "gentender",
           "query": "ремонт (архив)",
@@ -286,16 +296,16 @@
       ]
     }
   ],
-  "errors": 31,
+  "errors": 33,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 17,
-  "newCount": 64,
-  "corroborated": 115,
+  "localArchived": 83,
+  "newCount": 85,
+  "corroborated": 121,
   "corroboratedPct": 22,
-  "relevantPerRequest": 1.65,
+  "relevantPerRequest": 1.55,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
