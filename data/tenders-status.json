@@ -1,16 +1,16 @@
 {
-  "lastRun": "2026-11-25T23:11:37.944Z",
+  "lastRun": "2026-11-26T00:04:07.264Z",
   "mode": "live",
-  "total": 410,
-  "unique": 512,
+  "total": 423,
+  "unique": 545,
   "sourceMix": {
-    "gosplan": 29,
+    "gosplan": 27,
     "etpgpb-direct": 22,
-    "gentender": 233,
-    "tektorg-direct": 63,
+    "gentender": 258,
+    "tektorg-direct": 54,
     "fabrikant-direct": 10,
     "roseltorg-direct": 21,
-    "ЕИС / ГосПлан API": 19,
+    "ЕИС / ГосПлан API": 18,
     "rad-direct": 3,
     "ЕИС / HTML": 2,
     "ЕИС zakupki.gov.ru": 1,
@@ -19,22 +19,22 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 29.5,
-  "directCoveragePct": 29.5,
-  "recordsPer100Requests": 126.4,
-  "matchedOrg": 410,
-  "active": 226,
-  "archive": 184,
+  "directFirstPct": 26.5,
+  "directCoveragePct": 26.5,
+  "recordsPer100Requests": 132.9,
+  "matchedOrg": 423,
+  "active": 283,
+  "archive": 140,
   "bySource": {
-    "EIS": 53,
-    "GPB": 48,
-    "ZAKAZ": 21,
+    "EIS": 50,
+    "GPB": 49,
+    "ZAKAZ": 26,
     "PORTAL_POST": 1,
-    "RAD": 46,
-    "ROS": 53,
-    "SBER_B2B": 15,
-    "SBER": 37,
-    "TEK": 113,
+    "RAD": 54,
+    "ROS": 56,
+    "SBER_B2B": 17,
+    "SBER": 40,
+    "TEK": 107,
     "FAB": 10,
     "RTS": 1,
     "B2B": 11,
@@ -229,13 +229,18 @@
       "name": "gosplan",
       "available": true,
       "requests": 35,
-      "okRequests": 29,
-      "records": 47,
-      "errors": 6,
+      "okRequests": 27,
+      "records": 40,
+      "errors": 8,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "напыление (223, архив стр.2)",
+          "query": "лопатка (223, действующие)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "порошковой (223, действующие)",
           "error": "HTTP 429"
         },
         {
@@ -245,7 +250,7 @@
         },
         {
           "source": "gosplan",
-          "query": "порошковой (223, архив стр.2)",
+          "query": "ремонт (223, действующие)",
           "error": "HTTP 429"
         },
         {
@@ -256,11 +261,16 @@
         {
           "source": "gosplan",
           "query": "ремонт (44, завершённые 30д)",
-          "error": "HTTP 504"
+          "error": "HTTP 429"
         },
         {
           "source": "gosplan",
-          "query": "турбина (44, действующие)",
+          "query": "ремонт (223, архив стр.2)",
+          "error": "HTTP 429"
+        },
+        {
+          "source": "gosplan",
+          "query": "уплотнение (44, завершённые 30д)",
           "error": "HTTP 429"
         }
       ]
@@ -268,17 +278,11 @@
     {
       "name": "gentender",
       "available": true,
-      "requests": 328,
-      "okRequests": 327,
-      "records": 356,
-      "errors": 1,
-      "errorItems": [
-        {
-          "source": "gentender",
-          "query": "ремонт (архив)",
-          "error": "The operation was aborted due to timeout"
-        }
-      ]
+      "requests": 333,
+      "okRequests": 333,
+      "records": 396,
+      "errors": 0,
+      "errorItems": []
     },
     {
       "name": "eis-html",
@@ -311,16 +315,16 @@
       ]
     }
   ],
-  "errors": 36,
+  "errors": 37,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 97,
+  "localArchived": 0,
   "newCount": 1,
-  "corroborated": 87,
-  "corroboratedPct": 21,
-  "relevantPerRequest": 1.26,
+  "corroborated": 86,
+  "corroboratedPct": 20,
+  "relevantPerRequest": 1.33,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
@@ -331,7 +335,7 @@
     },
     "gentender": {
       "limit": 720,
-      "used": 328,
+      "used": 333,
       "exhausted": false
     },
     "tektorg": {
