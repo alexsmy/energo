@@ -31,6 +31,9 @@ test('endpoint берётся из конфига, а не захардкоже�
   assert.match(js, /data\/visits-config\.json/);
   assert.match(js, /c\.endpoint/);
   assert.match(js, /c\.endpoints/);
+  assert.equal(cfg.githubDispatch, 'https://api.github.com/repos/alexsmy/energo/dispatches');
+  assert.match(js, /visitsToken/);
+  assert.match(js, /repository_dispatch|dispatches|client_payload/);
 });
 
 test('если канал висит, есть таймаут, backoff и outbox', () => {

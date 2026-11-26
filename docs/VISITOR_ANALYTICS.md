@@ -48,6 +48,23 @@ Worker передаёт исходный IP посетителя в заголо
 backoff до 60 с и outbox в `localStorage`. Сервер дедуплицирует события по
 `sessionId+ts+type`, поэтому повторы не создают дублей.
 
+### Резервный канал через GitHub (для 4G без VPN)
+
+Некоторые мобильные операторы блокируют и Render, и `*.workers.dev`, но
+пропускают `api.github.com`. Тогда события идут через GitHub Actions:
+
+1. Создайте **fine-grained Personal Access Token** для репозитория `alexsmy/energo`
+   с правом **Contents: Read and Write**.
+2. Один раз откройте на устройстве:
+   `https://alexsmy.github.io/energo/?visitsToken=ВАШ_ТОКЕН`
+   Токен сохранится в `localStorage`, а из адреса будет удалён.
+3. Workflow `.github/workflows/visits-forward.yml` ловит `repository_dispatch`
+   с типом `energo-visit` и пересылает payload в bot_29 с секретом
+   `RENDER_PROXY_TOKEN` (лежит в Secrets репозитория `energo`).
+
+У этого канала нет гео от Cloudflare — в уведомлении будет IP GitHub Actions.
+Основной Worker-канал по-прежнему даёт точное гео там, где доступен.
+
 **Отдельных таймеров в боте нет.** Полный backup едет по уже существующему расписанию
 синхронизации bot_29; принятый заход дополнительно ставит событие `energo-visit` в
 очередь sync и обрабатывается сразу даже при выключенной опции «Синхронизация по

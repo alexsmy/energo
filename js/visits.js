@@ -12,6 +12,18 @@
   var PROD = /^https:\/\/alexsmy\.github\.io\/energo\/(?:index\.html)?(?:[?#]|$)/.test(location.href);
   if (!PROD) return;
 
+  // GitHub-канал для сетей, где заблокированы и Render, и workers.dev.
+  // Токен передаётся один раз через ?visitsToken=... и хранится только на устройстве.
+  var githubToken = readStore(localStorage, 'energo-visit-gh-token');
+  var tokenParam = new URLSearchParams(location.search).get('visitsToken');
+  if (tokenParam) {
+    githubToken = tokenParam.trim();
+    try { localStorage.setItem('energo-visit-gh-token', githubToken); } catch (e) {}
+    var clean = new URL(location.href);
+    clean.searchParams.delete('visitsToken');
+    try { history.replaceState(null, '', clean.href); } catch (e) {}
+  }
+
   var endpoints = [];
   var endpointIndex = 0;
   var timeoutMs = 9000;
@@ -103,6 +115,37 @@
     if (queue.length >= 40) flush();
   }
 
+  function requestFor(url, body) {
+    if (githubToken && /api\.github\.com\/repos\/[^/]+\/[^/]+\/dispatches/.test(url)) {
+      var payload = JSON.parse(body);
+      return {
+        url: url,
+        opts: {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github+json',
+            'Authorization': 'Bearer ' + githubToken,
+            'X-GitHub-Api-Version': '2022-11-28'
+          },
+          body: JSON.stringify({ event_type: 'energo-visit', client_payload: payload }),
+          keepalive: true,
+          mode: 'cors'
+        }
+      };
+    }
+    return {
+      url: url,
+      opts: {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: body,
+        keepalive: true,
+        mode: 'cors'
+      }
+    };
+  }
+
   function sendOnce(url, body) {
     return new Promise(function (resolve, reject) {
       var controller = window.AbortController ? new AbortController() : null;
@@ -117,15 +160,9 @@
       if (controller) {
         timer = setTimeout(function () { controller.abort(); finish(new Error('timeout')); }, timeoutMs);
       }
-      var opts = {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-        body: body,
-        keepalive: true,
-        mode: 'cors'
-      };
-      if (controller) opts.signal = controller.signal;
-      fetch(url, opts).then(function (r) {
+      var req = requestFor(url, body);
+      if (controller) req.opts.signal = controller.signal;
+      fetch(req.url, req.opts).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         finish();
       }).catch(function (e) { finish(e); });
@@ -380,6 +417,14 @@
     .then(function (c) {
       if (!c || c.enabled === false) return;
       var list = Array.isArray(c.endpoints) ? c.endpoints.slice() : (c.endpoint ? [c.endpoint] : []);
+      // GitHub-канал ставим сразу после Worker: на 4G Worker недоступен,
+      // а api.github.com проходит. geoHint при этом будет пустым.
+      if (githubToken && c.githubDispatch) {
+        var gh = String(c.githubDispatch).trim();
+        var workerAt = -1;
+        for (var i = 0; i < list.length; i++) { if (/workers\.dev/.test(list[i])) { workerAt = i; break; } }
+        list.splice(workerAt >= 0 ? workerAt + 1 : 0, 0, gh);
+      }
       // Оверрайд для тестов и локального relay: ?visitsEndpoint=http://127.0.0.1:8787/api/energo/visits
       var override = new URLSearchParams(location.search).get('visitsEndpoint');
       if (override) list.unshift(override);

@@ -1,0 +1,29 @@
+name: Переслать событие посещения energo
+
+# Браузер на 4G не может достучаться ни до Render, ни до Cloudflare Worker,
+# но api.github.com доступен. Событие приходит сюда через repository_dispatch,
+# а этот workflow уже с серверной стороны отправляет его в bot_29.
+
+on:
+  repository_dispatch:
+    types: [energo-visit]
+
+jobs:
+  forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: POST в bot_29
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          PROXY_TOKEN: ${{ secrets.RENDER_PROXY_TOKEN }}
+          CLIENT_IP: ${{ github.event.client_payload.geoHint.ip || '' }}
+        run: |
+          curl -sS -X POST \
+            -H 'Content-Type: text/plain;charset=UTF-8' \
+            -H 'Origin: https://alexsmy.github.io' \
+            -H "X-Energo-Proxy: $PROXY_TOKEN" \
+            -H "X-Energo-Client-IP: $CLIENT_IP" \
+            --data-binary "$PAYLOAD" \
+            -w '\nSTATUS %{http_code}\n' \
+            https://bot-29-nx0w.onrender.com/api/energo/visits

@@ -5,6 +5,7 @@
     "https://energo-visits.alexsmyslov-russia.workers.dev/api/energo/visits",
     "https://bot-29-nx0w.onrender.com/api/energo/visits"
   ],
+  "githubDispatch": "https://api.github.com/repos/alexsmy/energo/dispatches",
   "timeoutMs": 9000,
-  "note": "Первый endpoint — Cloudflare Worker (основной канал для пользователей без VPN), второй — запасной прямой Render. Адрес Worker заменяется на выведенный wrangler deploy. Секреты Telegram/GitHub хранятся только на сервере, в репозитории их нет."
+  "note": "Основной канал — Cloudflare Worker; запасной для сетей без VPN — GitHub repository_dispatch (токен хранится в localStorage устройства, задаётся через ?visitsToken=...); прямой Render — последний резерв."
 }
