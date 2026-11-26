@@ -1,38 +1,27 @@
 /* Реестр РФ — клиентский сбор событий посещений.
  * Работает ТОЛЬКО на https://alexsmy.github.io/energo/index.html.
- * IP, страну, город и провайдера определяет серверная прослойка: браузер их не знает.
- * Никаких токенов в коде нет — endpoint берётся из data/visits-config.json.
+ * IP, страну, город и провайдера определяет сервер: браузер их не знает.
  *
- * Устойчивость (2.68): таймаут на fetch, несколько endpoint-ов с переключением,
- * backoff и outbox в localStorage. Если основной канал (Worker) недоступен,
- * события уходят запасным каналом и не теряются при перезагрузке. */
+ * Канал один: WordPress на nppuast.com (admin-ajax.php?action=energo_visit).
+ * Никаких токенов в коде и в localStorage._endpoint берётся из data/visits-config.json.
+ * Устойчивость: таймаут, чанкование ≤32 КБ, backoff и outbox в localStorage. */
 (function () {
   'use strict';
 
   var PROD = /^https:\/\/alexsmy\.github\.io\/energo\/(?:index\.html)?(?:[?#]|$)/.test(location.href);
   if (!PROD) return;
 
-  // GitHub-канал для сетей, где заблокированы и Render, и workers.dev.
-  // Токен передаётся один раз через ?visitsToken=... и хранится только на устройстве.
-  var githubToken = readStore(localStorage, 'energo-visit-gh-token');
-  var tokenParam = new URLSearchParams(location.search).get('visitsToken');
-  if (tokenParam) {
-    githubToken = tokenParam.trim();
-    try { localStorage.setItem('energo-visit-gh-token', githubToken); } catch (e) {}
-    var clean = new URL(location.href);
-    clean.searchParams.delete('visitsToken');
-    try { history.replaceState(null, '', clean.href); } catch (e) {}
-  }
-
-  var endpoints = [];
-  var endpointIndex = 0;
-  var timeoutMs = 15000;
+  var endpoint = '';
+  var timeoutMs = 5000;
   var enabled = false;
   var queue = [];
   var flushTimer = null;
   var retryDelay = 2000;
   var started = false;
+  var flushing = false;
+  var flushAgain = false;
   var outboxKey = 'energo-visit-outbox';
+  var MAX_CHUNK_BYTES = 32 * 1024;
   var sessionId = readStore(sessionStorage, 'energo-visit-session') || uuid();
   var deviceId = readStore(localStorage, 'energo-visit-device') || uuid();
   try { sessionStorage.setItem('energo-visit-session', sessionId); localStorage.setItem('energo-visit-device', deviceId); } catch (e) {}
@@ -42,7 +31,6 @@
   var maxSeen = {};
   var searches = Object.create(null);
   var searchTimer = null;
-  var hiddenAt = 0;
   var hasInteracted = false;
   var isHeadless = !!(navigator.webdriver || document.documentElement.getAttribute('webdriver'));
   ['mousemove', 'touchstart', 'keydown', 'scroll', 'click'].forEach(function (evt) {
@@ -89,8 +77,12 @@
     });
   }
   function now() { return new Date().toISOString(); }
+  function bytes(str) {
+    if (window.Blob) return new Blob([str]).size;
+    return unescape(encodeURIComponent(str)).length;
+  }
 
-  /* Outbox переживает перезагрузку страницы: сервер дедуплицирует по sessionId+ts+type. */
+  /* Outbox переживает перезагрузку: сервер дедуплицирует по event_id (eid). */
   function loadOutbox() {
     try {
       var raw = localStorage.getItem(outboxKey);
@@ -100,8 +92,8 @@
       localStorage.removeItem(outboxKey);
     } catch (e) { try { localStorage.removeItem(outboxKey); } catch (e2) {} }
   }
-  function saveOutbox() {
-    try { localStorage.setItem(outboxKey, JSON.stringify(queue.slice(-300))); } catch (e) {}
+  function saveOutbox(events) {
+    try { localStorage.setItem(outboxKey, JSON.stringify((events || queue).slice(-300))); } catch (e) {}
   }
 
   function push(type, data) {
@@ -109,41 +101,28 @@
     var ev = data || {};
     ev.type = type;
     ev.ts = now();
+    ev.eid = uuid();
     ev.sessionId = sessionId;
     ev.deviceId = deviceId;
     queue.push(ev);
     if (queue.length >= 40) flush();
   }
 
-  function requestFor(url, body) {
-    if (githubToken && /api\.github\.com\/repos\/[^/]+\/[^/]+\/dispatches/.test(url)) {
-      var payload = JSON.parse(body);
-      return {
-        url: url,
-        opts: {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github+json',
-            'Authorization': 'Bearer ' + githubToken,
-            'X-GitHub-Api-Version': '2022-11-28'
-          },
-          body: JSON.stringify({ event_type: 'energo-visit', client_payload: payload }),
-          keepalive: true,
-          mode: 'cors'
-        }
-      };
-    }
-    return {
-      url: url,
-      opts: {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-        body: body,
-        keepalive: true,
-        mode: 'cors'
+  /* Разбиваем пачку так, чтобы каждое тело было <32 КБ (keepalive и лимит PHP). */
+  function chunk(events) {
+    var out = [];
+    var cur = [];
+    var size = 2;
+    for (var i = 0; i < events.length; i++) {
+      var s = bytes(JSON.stringify(events[i])) + 1;
+      if (cur.length && size + s > MAX_CHUNK_BYTES) {
+        out.push(cur); cur = []; size = 2;
       }
-    };
+      cur.push(events[i]);
+      size += s;
+    }
+    if (cur.length) out.push(cur);
+    return out;
   }
 
   function sendOnce(url, body) {
@@ -157,12 +136,21 @@
         if (timer) clearTimeout(timer);
         if (err) reject(err); else resolve();
       }
+      // FormData (multipart/form-data) is always CORS-safelisted: no preflight.
+      // Preflight OPTIONS on nppuast.com is blocked by nginx, so we must never trigger it.
+      var form = new FormData();
+      form.append('payload', body);
+      var opts = {
+        method: 'POST',
+        body: form,
+        keepalive: bytes(body) <= MAX_CHUNK_BYTES,
+        mode: 'cors'
+      };
       if (controller) {
+        opts.signal = controller.signal;
         timer = setTimeout(function () { controller.abort(); finish(new Error('timeout')); }, timeoutMs);
       }
-      var req = requestFor(url, body);
-      if (controller) req.opts.signal = controller.signal;
-      fetch(req.url, req.opts).then(function (r) {
+      fetch(url, opts).then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         finish();
       }).catch(function (e) { finish(e); });
@@ -170,45 +158,62 @@
   }
 
   function flush(unload) {
-    if (!enabled || !endpoints.length || !queue.length) return;
+    if (!enabled || !endpoint || !queue.length) return;
+    if (flushing) { flushAgain = true; return; }
     if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
-    var events = queue.splice(0);
-    var payload = {
-      schema: 'energo-visits-v1',
-      page: location.href,
-      sentAt: now(),
-      events: events
-    };
-    var body = JSON.stringify(payload);
-    // При уходе со страницы beacon — последний шанс: подтверждения нет,
-    // поэтому дополнительно страхуем события через outbox.
+
+    var all = queue.splice(0);
+    var chunks = chunk(all);
+    var remaining = all.slice();
+
     if (unload) {
-      saveOutbox();
-      try { if (navigator.sendBeacon) { navigator.sendBeacon(endpoints[endpointIndex], body); return; } } catch (e) {}
+      // confirmation нет — events остаются в outbox и уйдут при следующем заходе
+      saveOutbox(remaining.concat(queue));
+      for (var b = 0; b < chunks.length; b++) {
+        try {
+          var fd = new FormData();
+          fd.append('payload', JSON.stringify({
+            schema: 'energo-visits-v1', page: location.href, sentAt: now(), events: chunks[b]
+          }));
+          navigator.sendBeacon(endpoint, fd);
+        } catch (e) {}
+      }
+      return;
     }
+
+    flushing = true;
+    saveOutbox(remaining.concat(queue));
     var attempt = function (i) {
-      if (i >= endpoints.length) {
-        // Все каналы не ответили — в следующий раз начинаем снова с первого
-        // (иначе после одного сбоя Worker мы навсегда застреваем на Render).
-        endpointIndex = 0;
-        queue = events.concat(queue).slice(0, 300);
-        saveOutbox();
-        retryDelay = Math.min(60000, retryDelay * 2);
-        scheduleFlush();
+      if (i >= chunks.length) {
+        flushing = false;
+        if (remaining.length) {
+          queue = remaining.concat(queue).slice(0, 300);
+          saveOutbox();
+          retryDelay = Math.min(60000, retryDelay * 2);
+          scheduleFlush();
+        } else {
+          retryDelay = 2000;
+          saveOutbox();
+          if (flushAgain) { flushAgain = false; flush(); }
+        }
         return;
       }
-      sendOnce(endpoints[i], body).then(function () {
-        endpointIndex = i;
-        retryDelay = 2000;
-        saveOutbox();
+      var part = chunks[i];
+      var body = JSON.stringify({ schema: 'energo-visits-v1', page: location.href, sentAt: now(), events: part });
+      sendOnce(endpoint, body).then(function () {
+        var ids = {};
+        for (var k = 0; k < part.length; k++) ids[part[k].eid] = 1;
+        remaining = remaining.filter(function (ev) { return !ids[ev.eid]; });
+        saveOutbox(remaining.concat(queue));
+        attempt(i + 1);
       }).catch(function () { attempt(i + 1); });
     };
-    attempt(endpointIndex);
+    attempt(0);
   }
 
   function scheduleFlush() {
     if (flushTimer) return;
-    flushTimer = setTimeout(flush, retryDelay);
+    flushTimer = setTimeout(function () { flushTimer = null; flush(); }, retryDelay);
   }
 
   /* ---------- устройство / браузер / сеть ---------- */
@@ -383,11 +388,9 @@
 
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
-      hiddenAt = Date.now();
       tabClose();   // время в фоне не считаем как активное
       flush(true);
     } else {
-      hiddenAt = 0;
       tabOpen();
     }
   });
@@ -395,7 +398,7 @@
 
   /* ---------- запуск ---------- */
   function start() {
-    if (started || !enabled || !endpoints.length) return;
+    if (started || !enabled || !endpoint) return;
     started = true;
     loadOutbox();
     tabOpen();
@@ -405,9 +408,7 @@
       push('heartbeat', { tab: activeTab });
       scheduleFlush();
     }, 60000);
-    // Сессию отправляем сразу: устройство определяется по deviceId, а не по отпечатку.
-    // Отпечаток может считаться дольше (или не вернуться на мобильном) — это не должно
-    // блокировать уведомление о новом устройстве.
+    // Сессию отправляем сразу, не дожидаясь отпечатка.
     push('session', deviceInfo());
     scheduleFlush();
     fingerprint().then(function (hardId) {
@@ -420,20 +421,12 @@
     .then(function (c) {
       if (!c || c.enabled === false) return;
       var list = Array.isArray(c.endpoints) ? c.endpoints.slice() : (c.endpoint ? [c.endpoint] : []);
-      // GitHub-канал ставим сразу после Worker: на 4G Worker недоступен,
-      // а api.github.com проходит. geoHint при этом будет пустым.
-      if (githubToken && c.githubDispatch) {
-        var gh = String(c.githubDispatch).trim();
-        var workerAt = -1;
-        for (var i = 0; i < list.length; i++) { if (/workers\.dev/.test(list[i])) { workerAt = i; break; } }
-        list.splice(workerAt >= 0 ? workerAt + 1 : 0, 0, gh);
-      }
-      // Оверрайд для тестов и локального relay: ?visitsEndpoint=http://127.0.0.1:8787/api/energo/visits
+      // Оверрайд для тестов: ?visitsEndpoint=http://127.0.0.1:8765/relay.php
       var override = new URLSearchParams(location.search).get('visitsEndpoint');
       if (override) list.unshift(override);
-      endpoints = list.map(String).map(function (s) { return s.trim(); }).filter(Boolean);
-      timeoutMs = Number(c.timeoutMs) || 9000;
-      if (!endpoints.length) return;
+      endpoint = String(list[0] || '').trim();
+      timeoutMs = Number(c.timeoutMs) || 5000;
+      if (!/^https?:\/\//i.test(endpoint)) return;
       enabled = true;
       start();
     })

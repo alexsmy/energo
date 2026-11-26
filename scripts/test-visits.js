@@ -24,25 +24,34 @@ test('локальные и тестовые заходы не отправля�
   assert.match(js, /^  var PROD =/m);
 });
 
-test('endpoint берётся из конфига, а не захардкожен', () => {
-  const list = Array.isArray(cfg.endpoints) ? cfg.endpoints : [cfg.endpoint];
-  assert.ok(list.some((u) => /bot-29-nx0w\.onrender\.com\/api\/energo\/visits/.test(u)), 'должен быть запасной endpoint bot_29');
-  assert.ok(list.some((u) => /workers\.dev\/api\/energo\/visits/.test(u)), 'должен быть endpoint Worker');
+test('endpoint один — WordPress на nppuast.com, из конфига', () => {
+  assert.equal(cfg.endpoint, 'https://nppuast.com/wp-admin/admin-ajax.php?action=energo_visit');
+  assert.equal(cfg.githubDispatch, undefined, 'GitHub-канал должен быть удалён');
+  const all = JSON.stringify(cfg);
+  assert.ok(!/workers\.dev|bot-29-nx0w|api\.github\.com/.test(all), 'в конфиге остались старые каналы');
   assert.match(js, /data\/visits-config\.json/);
   assert.match(js, /c\.endpoint/);
-  assert.match(js, /c\.endpoints/);
-  assert.equal(cfg.githubDispatch, 'https://api.github.com/repos/alexsmy/energo/dispatches');
-  assert.match(js, /visitsToken/);
-  assert.match(js, /repository_dispatch|dispatches|client_payload/);
+  assert.ok(!js.includes('visitsToken'), 'токен в localStorage удалён');
+  assert.ok(!/repository_dispatch|client_payload/.test(js), 'GitHub dispatch удалён');
+  assert.equal(cfg.timeoutMs, 5000);
 });
 
-test('если канал висит, есть таймаут, backoff и outbox', () => {
+test('если канал висит, есть таймаут, чанкование, backoff и outbox', () => {
   assert.match(js, /AbortController/);
   assert.match(js, /timeoutMs/);
+  assert.match(js, /MAX_CHUNK_BYTES = 32 \* 1024/);
+  assert.match(js, /function chunk\(/);
   assert.match(js, /retryDelay = Math\.min\(60000, retryDelay \* 2\)/);
   assert.match(js, /energo-visit-outbox/);
   assert.match(js, /visitsEndpoint/);
-  assert.match(js, /endpointIndex = 0;/);
+  assert.match(js, /flushing = true/);
+  assert.match(js, /flushAgain/);
+  assert.ok(!js.includes('endpointIndex'), 'переключение каналов удалено');
+});
+
+test('каждое событие имеет стабильный event_id для дедупликации на сервере', () => {
+  assert.match(js, /ev\.eid = uuid\(\)/);
+  assert.match(js, /ev\.eid/);
 });
 
 test('в клиентском коде нет токенов Telegram и GitHub', () => {

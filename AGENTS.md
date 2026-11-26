@@ -1018,13 +1018,27 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     через раздел `sync_energo` по общему расписанию bot_29, отдельных таймеров нет.
     Тесты: `scripts/test-visits.js` в `ci-checks.js`; в bot_29 — `tests/test_energo_visits.py`.
     При изменении логики менять оба репозитория и обе документации.
-    С 2.68 основной канал — Cloudflare Worker `worker/src/index.mjs` на
-    `*.workers.dev` (пользователи без VPN не могут достучаться до Render
-    напрямую: DNS отдаёт заблокированные 216.24.57.16/.18). Worker шлёт
-    `X-Energo-Client-IP` + `X-Energo-Proxy`; bot_29 принимает IP только при
-    совпадении секрета с `ENERGO_VISITS_PROXY_TOKEN`. В конфиге — список
-    `endpoints` (Worker, затем Render), таймаут `AbortController`, backoff
-    и outbox в `localStorage`. Тест Worker: `node worker/test-worker.mjs`.
+    С 26.11.2026 канал один: WordPress `Energo Visits` на `https://nppuast.com`
+    (код плагина — `C:\Users\alexs\Downloads\wp_energo_visits\`). Клиент шлёт
+    `POST https://nppuast.com/wp-admin/admin-ajax.php?action=energo_visit`
+    с телом `energo-visits-v1`; на сервере — таблицы `wp_energo_ev_*`, дедуп по
+    `eid`, гео по `REMOTE_ADDR`, страница «Энерго · статистика» только для
+    `manage_options`. Причина: Worker/Render из РФ доступны нестабильно.
+    Старые `worker/`, `visits-forward.yml` и токен в `localStorage` удалены из
+    активного контура и оставлены только для отката (п. 66).
+
+66. Перенос сбора статистики с Render на WordPress reg.ru (26.11.2026). Решение
+    пользователя: сайт остаётся на GitHub Pages; приём событий и страница статистики —
+    на `https://nppuast.com` в плагине `Energo Visits` (папка
+    `C:\Users\alexs\Downloads\wp_energo_visits\`). Доступ к отчёту только через
+    wp-admin (`manage_options`), без публичной ссылки и без PAT. Начали с чистого листа,
+    историю из bot_29 не импортировали. Изменены `data/visits-config.json`,
+    `js/visits.js`, `scripts/test-visits.js`, `docs/VISITOR_ANALYTICS.md`.
+    Клиент: один endpoint, `FormData` без preflight (OPTIONS блокируется nginx),
+    таймаут 5 с, чанки ≤32 КБ, `eid`, outbox, один in-flight flush. Сервер: `wp_energo_ev_events/_devices/_daily`, CORS с точным Origin,
+    rate-limit, дедуп, гео по `REMOTE_ADDR`, WP-Cron `ev_daily`, Telegram по желанию.
+    Тесты: `node scripts/test-visits.js` (7), `node build.js` (все зелёные),
+    `php -l` по плагину (локально проверено парсером `php-parser`). Push НЕ выполнялся.
 
 ## Что осталось / риски
 

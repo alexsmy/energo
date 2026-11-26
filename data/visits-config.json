@@ -1,11 +1,6 @@
 {
   "enabled": true,
-  "endpoint": "https://energo-visits.alexsmyslov-russia.workers.dev/api/energo/visits",
-  "endpoints": [
-    "https://energo-visits.alexsmyslov-russia.workers.dev/api/energo/visits",
-    "https://bot-29-nx0w.onrender.com/api/energo/visits"
-  ],
-  "githubDispatch": "https://api.github.com/repos/alexsmy/energo/dispatches",
-  "timeoutMs": 15000,
-  "note": "Основной канал — Cloudflare Worker; запасной для сетей без VPN — GitHub repository_dispatch (токен хранится в localStorage устройства, задаётся через ?visitsToken=...); прямой Render — последний резерв."
+  "endpoint": "https://nppuast.com/wp-admin/admin-ajax.php?action=energo_visit",
+  "timeoutMs": 5000,
+  "note": "Основной и единственный канал — WordPress на nppuast.com (тот же сервер, что и сайт). Секретов в репозитории нет: Origin проверяется на сервере. Старые каналы (Worker/Render/GitHub dispatch) оставлены в git для отката."
 }
