@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const tm = require('../js/text-match');
+const { identityKeys } = require('../lib/normalize');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
@@ -37,14 +38,15 @@ const take = (name) => {
 const logger = { entry() {}, info() {}, warn() {}, error() {} };
 
 async function run() {
-  console.log(`Поиск: "${word}" (в API уходит: "${term}")`);
+  // Ограничиваем обход по ИНН, иначе разовый поиск уходит на 300+ запросов.
+  // Ключевые слова при этом ищутся по всем площадкам, как в бою.
+  if (!process.env.ENERGO_MAX_INN) process.env.ENERGO_MAX_INN = '5';
+  console.log(`Поиск: "${word}" (в API уходит: "${term}"), ИНН-запросов: ${process.env.ENERGO_MAX_INN}`);
+  const all = [];
+  let totalRequests = 0;
   for (const name of ['gosplan', 'gentender']) {
     const adapter = require('./sources/' + name);
-    const logItems = [];
-    const localLogger = {
-      entry(source, label, data) { logItems.push({ source, label, ok: data && data.ok, error: data && data.error, found: data && data.found, taken: data && data.taken }); },
-      info() {}, warn() {}, error() {}
-    };
+    const localLogger = { entry() {}, info() {}, warn() {}, error() {} };
     const t0 = Date.now();
     let result;
     try {
@@ -58,14 +60,27 @@ async function run() {
     }
     const records = result.records || [];
     const matched = records.filter((r) => tm.matchEntries(r.title || '', [entry]).length > 0);
+    all.push(...matched);
+    totalRequests += result.requests || 0;
     console.log(`  ${name}: сырых=${records.length}, по названию "${word}"=${matched.length}, `
       + `запросов=${result.requests || 0}, ошибок=${result.errors ? result.errors.length : 0}, `
       + `время=${Math.round((Date.now() - t0) / 1000)}с`);
-    matched.slice(0, 8).forEach((r) => console.log(`    • ${String(r.title || '').slice(0, 110)}`));
-    if (logItems.length) {
-      const bad = logItems.filter((x) => x.ok === false).slice(0, 5);
-      if (bad.length) console.log('    неуспешные запросы: ' + JSON.stringify(bad));
-    }
+    matched.slice(0, 5).forEach((r) => console.log(`    • ${String(r.title || '').slice(0, 100)}`));
   }
+
+  const prev = (read('tenders.json', { items: [] }).items || []);
+  const prevKeys = new Set();
+  prev.forEach((r) => identityKeys(r).forEach((k) => prevKeys.add(k)));
+  const seen = new Set();
+  let duplicates = 0, oldRecords = 0, fresh = 0;
+  all.forEach((r) => {
+    const keys = identityKeys(r);
+    if (keys.some((k) => seen.has(k))) { duplicates++; return; }
+    keys.forEach((k) => seen.add(k));
+    if (keys.some((k) => prevKeys.has(k))) oldRecords++;
+    else fresh++;
+  });
+  console.log(`ИТОГО: найдено=${all.length}, дублей между источниками=${duplicates}, `
+    + `уже в базе=${oldRecords}, НОВЫХ=${fresh}, запросов=${totalRequests}`);
 }
 run().catch((e) => { console.error(e); process.exitCode = 1; });
