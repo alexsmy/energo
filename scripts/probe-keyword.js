@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const tm = require('../js/text-match');
-const { identityKeys } = require('../lib/normalize');
+const { identityKeys } = require('./lib/normalize');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
