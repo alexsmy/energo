@@ -1025,7 +1025,7 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     `eid`, гео по `REMOTE_ADDR`, страница «Энерго · статистика» только для
     `manage_options`. Причина: Worker/Render из РФ доступны нестабильно.
     Старые `worker/`, `visits-forward.yml` и токен в `localStorage` удалены из
-    активного контура и оставлены только для отката (п. 66).
+    активного контура и оставлены только для отката (п. 66–67).
 
 66. Перенос сбора статистики с Render на WordPress reg.ru (26.11.2026). Решение
     пользователя: сайт остаётся на GitHub Pages; приём событий и страница статистики —
@@ -1038,7 +1038,27 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     таймаут 5 с, чанки ≤32 КБ, `eid`, outbox, один in-flight flush. Сервер: `wp_energo_ev_events/_devices/_daily`, CORS с точным Origin,
     rate-limit, дедуп, гео по `REMOTE_ADDR`, WP-Cron `ev_daily`, Telegram по желанию.
     Тесты: `node scripts/test-visits.js` (7), `node build.js` (все зелёные),
-    `php -l` по плагину (локально проверено парсером `php-parser`). Push НЕ выполнялся.
+    `php -l` по плагину (локально проверено парсером `php-parser`). Push выполнен в п. 67.
+
+67. Финализация плагина `Energo Visits` 2.2.2 и передача в репозиторий (26.11.2026).
+    Код плагина лежит в `wp-plugin/energo-visits/` этого репозитория; полная
+    спецификация — `docs/ENERGO_VISITS_PLUGIN.md`, краткая — `docs/VISITOR_ANALYTICS.md`.
+    Архив для wp-admin: `energo-visits-plugin.zip` (в Downloads), активна одна копия 2.2.2.
+    Архитектура: клиент шлёт FormData в `admin-ajax.php?action=energo_visit`; сервер —
+    `EV_Range` (МСК→UTC), `EV_Inbox`, `EV_Store` (таблицы events/devices/sessions/daily/refs
+    и производные колонки tab/act/seconds/max_scroll/seen_pct/is_headless), `EV_Dashboard`
+    (SQL-агрегаты, экспорт), `EV_Telegram`, `EV_Cron`, `EV_Admin`.
+    По прямому указанию пользователя главная страница содержит только KPI, карточки
+    устройств и сессии; удалены график, общие блоки «что смотрели»/«последние события»,
+    кнопки сравнения/копирования/экспорта в шапке. Вся детализация — внутри карточки
+    устройства (вкладки, поиски, клики, открытые карточки, история событий).
+    Живое обновление — AJAX `ev_live_poll` каждые 15 с без перезагрузки страницы.
+    Безопасность: токен Telegram не выводится в HTML, IP в админке маскируется,
+    XFF не доверяется без настройки, раздельные nonce, JSON ответа Telegram очищается.
+    Тесты: `php -l` 11 файлов (php-parser), `node scripts/test-visits.js`,
+    `node build.js`, curl-тест дедупа, E2E на сайте без Warning/Fatal.
+    Сознательно НЕ реализовано (премиум P3): SSE, heatmap, сохранённые представления,
+    command palette, AI-сводка, воронки/retention — только после отдельного согласования.
 
 ## Что осталось / риски
 
