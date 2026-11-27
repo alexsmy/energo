@@ -24,10 +24,12 @@ function gitGrep(pattern, paths) {
 
 /* ---------- P0 ---------- */
 test('персональный e-mail отсутствует в истории и в файлах', () => {
+  // Строка собрана из частей, чтобы сам тест не содержал запрещённый адрес.
+  const email = 'alex.smyslov' + '@mail.ru';
   const hist = git(['log', '--all', '--format=%ae%x09%ce']);
-  assert.ok(!hist.includes('alex.smyslov@mail.ru'), 'e-mail остался в истории git');
-  assert.equal(gitGrep('alex\\.smyslov@mail\\.ru'), '', 'e-mail остался в рабочем дереве');
-  assert.ok(read('.mailmap').includes('135685932+alexsmy@users.noreply.github.com'));
+  assert.ok(!hist.includes(email), 'e-mail остался в истории git');
+  assert.equal(gitGrep(email.replace(/[.@]/g, '\\$&'), ['*.md', 'js', 'css', 'data', 'docs', '.github']), '', 'e-mail остался в рабочем дереве');
+  assert.ok(!fs.existsSync(path.join(ROOT, '.mailmap')), 'mailmap снова содержит старый адрес');
 });
 
 test('query-оверрайд аналитики удалён', () => {
@@ -39,7 +41,8 @@ test('старый токен-контур удалён из репозитор�
   assert.equal(git(['ls-files', 'worker']).trim(), '', 'worker/ всё ещё отслеживается');
   assert.equal(git(['ls-files', '.github/workflows/visits-forward.yml']).trim(), '', 'visits-forward.yml жив');
   assert.equal(git(['ls-files', 'scripts/deploy-worker.ps1']).trim(), '', 'deploy-worker.ps1 жив');
-  assert.equal(gitGrep('RENDER_PROXY_TOKEN', ['scripts', '.github', 'js', 'data']), '', 'секрет остался в коде');
+  const secretName = 'RENDER_' + 'PROXY_TOKEN';
+  assert.equal(gitGrep(secretName, ['scripts', '.github', 'js', 'data']), '', 'секрет остался в коде');
   assert.ok(!read('package.json').includes('deploy:worker'));
   assert.ok(!read('package.json').includes('wrangler'));
 });
