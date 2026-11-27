@@ -49,9 +49,13 @@ jobs:
 
       - name: Готовим сайт к публикации
         run: |
-          mkdir -p _site
+          mkdir -p _site/data/archive
           cp index.html log.html archive.html demo-new.html print.html robots.txt version.json _site/
-          cp -r css js data _site/
+          cp -r css js _site/
+          # Только данные, которые читает браузер. research-логи и entities.tsv
+          # не публикуются: там могут быть личные телефоны сотрудников.
+          cp data/visits-config.json data/collect-log.json _site/data/
+          cp -r data/archive/. _site/data/archive/ 2>/dev/null || true
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

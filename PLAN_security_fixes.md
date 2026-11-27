@@ -1,0 +1,28 @@
+# План исправлений по аудиту безопасности (27.11.2026)
+
+## Приоритет P0 — критические / значимые
+1. **1.1 `?visitsEndpoint=`** — убрать прод-оверрайд, добавить тест-запрет в `test-visits.js`, поднять кэш-бастер.
+2. **1.2 SSRF-редиректы** — `throttle.js`: whitelist схемы/хоста, запрет приватных/link-local IP, явный `redirect:'error'`; тест.
+3. **1.3 личные мобильные** — маскировать последние 4 цифры `**-**` в research-логах и `entities.tsv` (только мобильные `+7 (9xx)`), исключить research из `_site`, пересобрать.
+4. **1.4 персональный e-mail** — полностью убрать/замаскировать в истории git (`filter-repo` + mailmap), починить `AGENTS.md`, `.mailmap`, `git config`.
+5. **1.5 старый токен-контур** — перевыпустить токен, удалить `visits-forward.yml`, `worker/`, печать секрета, убрать секрет из настроек (инструкция).
+6. **2.2 `partial`-гейт** — убрать `!partial` из гейтов, добавить лимит повторов в день, тест.
+
+## Приоритет P1 — 2.1–2.4, 2.6, 2.7 (без потери качества сбора)
+7. **2.1 дедуп/매칭** — не перезаписывать непустые поля сети; убрать подстрочный fallback; не трогать LEQA/успешный дедуп; тесты.
+8. **2.3 URL-схемы** — `safeHttpUrl()` в normalize + check-release + UI; не отсекать валидные http(s).
+9. **2.4 analytical ingestion** — подпись, лимит новых устройств, atomic rate-limit, whitelist полей, CSV-префикс, TLS/geo, пересборка сессий.
+10. **2.6 лимиты/ReDoS** — ограничить размер тела/массива/title, безопасный `decode()`, не уменьшать `maxRecords`.
+11. **2.7 CI/CD** — зафиксировать actions по SHA, токены в env, разделить permissions, comments.
+
+## Приоритет P2 — п.3
+12. CSP + антифрейминг, CSV-формулы в экспорте, archive path, favorites limits, innerHTML атрибуции, noindex lab, локальные пути в docs, .gitignore.
+
+## Не трогаем (по решению пользователя)
+- **2.5 аналитика посещений** — оставить как есть.
+
+## Тестирование и публикация
+- Тесты: `test:visits`, `test:direct`, `test:collect`, `test:theme`, `test:ui-layout`, `test:security`, `validate`, `check:release`, `build`.
+- Проверка absence: `javascript:`, `visitsEndpoint`, `alex.smyslov@mail.ru`, мобильных `+7 (9xx)` (полных), `RENDER_PROXY_TOKEN`, `worker/`.
+- Live-проверка Pages и Actions.
+- Один `git push` по явной просьбе пользователя (дана в этом сообщении).

@@ -118,9 +118,13 @@ jobs:
       - name: Готовим сайт к публикации
         if: steps.collected.outputs.ran == 'true'
         run: |
-          mkdir -p _site
+          mkdir -p _site/data/archive
           cp index.html log.html archive.html demo-new.html print.html robots.txt version.json _site/
-          cp -r css js data _site/
+          cp -r css js _site/
+          # Публикуем только нужные браузеру данные. Исследования и исходники
+          # реестра (с телефонами сотрудников) на Pages не попадают.
+          cp data/visits-config.json data/collect-log.json _site/data/
+          cp -r data/archive/. _site/data/archive/ 2>/dev/null || true
 
       - uses: actions/configure-pages@v5
         if: steps.collected.outputs.ran == 'true'

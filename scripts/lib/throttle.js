@@ -9,6 +9,36 @@
 
 const UA = 'EnergoRegistry/1.9 (+https://github.com/alexsmy/energo)';
 const BROWSER_UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const net = require('net');
+
+// Публичные зоны, где последние две метки — не домен второго уровня.
+const PUBLIC_SUFFIXES = new Set(['gov.ru', 'com.ru', 'org.ru', 'net.ru', 'edu.ru', 'ac.ru', 'co.ru', 'pp.ru']);
+
+function cleanHost(value) {
+  return String(value || '').toLowerCase().replace(/^\[|\]$/g, '').replace(/\.$/, '');
+}
+
+function baseDomain(host) {
+  const h = cleanHost(host).replace(/^www\./, '');
+  const parts = h.split('.').filter(Boolean);
+  if (parts.length <= 2) return h;
+  const last2 = parts.slice(-2).join('.');
+  return PUBLIC_SUFFIXES.has(last2) ? parts.slice(-3).join('.') : last2;
+}
+
+function isBlockedHost(host) {
+  const h = cleanHost(host);
+  if (!h || net.isIP(h)) return true; // любые IP-литералы: loopback/private/link-local/IMDS
+  if (h === 'localhost' || h.endsWith('.localhost') || h.endsWith('.local') ||
+      h.endsWith('.internal') || h.endsWith('.home.arpa')) return true;
+  if (h === 'metadata.google.internal' || h === 'metadata.goog') return true;
+  return false;
+}
+
+function sameSite(host, base) {
+  const h = cleanHost(host).replace(/^www\./, '');
+  return h === base || h.endsWith('.' + base);
+}
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -22,6 +52,33 @@ class ThrottledClient {
     this.browser = !!opts.browser;
     this.cookies = new Map(); // hostname -> Map(name -> value)
     this.last = 0;
+    // SSRF-защита: top-level URL'ы задаёт наш код (или конфиг площадок),
+    // редиректы разрешаем только в рамках того же сайта либо на уже
+    // использованный хост. Заданный извне redirect на внутренний или посторонний
+    // хост должен быть отклонён.
+    this.multiHost = !!opts.multiHost;
+    this.explicitHosts = new Set();
+    this.allowedBase = opts.allowedBase ? cleanHost(opts.allowedBase) : '';
+  }
+
+  _safeUrl(raw, isTop) {
+    let u;
+    try { u = new URL(String(raw)); }
+    catch (e) { throw new Error('invalid URL: ' + String(raw)); }
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') throw new Error('blocked protocol: ' + u.protocol);
+    const host = cleanHost(u.hostname);
+    if (isBlockedHost(host)) throw new Error('blocked host: ' + host);
+    if (isTop) {
+      this.explicitHosts.add(host);
+      if (!this.multiHost && !this.allowedBase) this.allowedBase = baseDomain(host);
+    } else if (this.multiHost) {
+      if (!this.explicitHosts.has(host)) throw new Error('redirect host not in allowlist: ' + host);
+    } else if (this.allowedBase && !sameSite(host, this.allowedBase)) {
+      throw new Error('redirect outside allowed site: ' + host);
+    } else if (!this.allowedBase) {
+      this.allowedBase = baseDomain(host);
+    }
+    return u.toString();
   }
 
   _host(url) { try { return new URL(url).hostname; } catch (e) { return ''; } }
@@ -55,7 +112,7 @@ class ThrottledClient {
   }
 
   async _fetchOnce(url, asJson, reqOpts) {
-    let current = url;
+    let current = this._safeUrl(url, true);
     for (let hop = 0; hop < 6; hop++) {
       const headers = {
         'User-Agent': this.browser ? BROWSER_UA : this.ua,
@@ -77,7 +134,7 @@ class ThrottledClient {
       const loc = res.headers.get('location');
       if (res.status >= 300 && res.status < 400 && loc) {
         await res.arrayBuffer(); // освобождаем сокет перед следующим hop
-        current = new URL(loc, current).toString();
+        current = this._safeUrl(String(new URL(loc, current)), false);
         continue;
       }
       if (!res.ok) {

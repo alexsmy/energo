@@ -43,7 +43,7 @@ test('если канал висит, есть таймаут, чанкован�
   assert.match(js, /function chunk\(/);
   assert.match(js, /retryDelay = Math\.min\(60000, retryDelay \* 2\)/);
   assert.match(js, /energo-visit-outbox/);
-  assert.match(js, /visitsEndpoint/);
+  assert.ok(!js.includes('visitsEndpoint'), 'query-оверрайд удалён: телеметрия не должна уходить на чужой хост');
   assert.match(js, /flushing = true/);
   assert.match(js, /flushAgain/);
   assert.ok(!js.includes('endpointIndex'), 'переключение каналов удалено');

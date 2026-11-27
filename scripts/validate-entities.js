@@ -54,7 +54,8 @@ function validateRows(rows) {
     if (/https?:\/\/|www\./i.test(contact)) add(r, 'contact', 'contact-has-url', 'warning', 'URL в поле контакта');
     if (!contact) add(r, 'contact', 'contact-empty', 'info', 'Контакт не заполнен');
 
-    if (r.phone && !isUnconfirmed(r.phone) && !/^\+?[\d\s()\-]{6,}(,\s*(доб|доп)\.?\s*\d+)?$/i.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
+    // Звёздочки допускаются: личные мобильные маскируются как +7 (999) 123-**-**.
+    if (r.phone && !isUnconfirmed(r.phone) && !/^\+?[\d\s()\-\*]{6,}(,\s*(доб|доп)\.?\s*\d+)?$/i.test(r.phone)) add(r, 'phone', 'phone-format', 'error', 'Некорректный формат телефона');
     if (r.email && !isUnconfirmed(r.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.email)) add(r, 'email', 'email-format', 'error', 'Некорректный формат e-mail');
 
     for (const field of ['site', 'procUrl']) {

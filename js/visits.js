@@ -421,9 +421,9 @@
     .then(function (c) {
       if (!c || c.enabled === false) return;
       var list = Array.isArray(c.endpoints) ? c.endpoints.slice() : (c.endpoint ? [c.endpoint] : []);
-      // Оверрайд для тестов: ?visitsEndpoint=http://127.0.0.1:8765/relay.php
-      var override = new URLSearchParams(location.search).get('visitsEndpoint');
-      if (override) list.unshift(override);
+      // Адрес приёма событий берётся ТОЛЬКО из конфига на нашем домене.
+      // Оверрайд через query-параметр удалён: он позволял перенаправить
+      // телеметрию посетителей на произвольный сервер по ссылке извне.
       endpoint = String(list[0] || '').trim();
       timeoutMs = Number(c.timeoutMs) || 5000;
       if (!/^https?:\/\//i.test(endpoint)) return;
