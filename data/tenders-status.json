@@ -1,17 +1,17 @@
 {
-  "lastRun": "2026-11-26T19:45:28.560Z",
+  "lastRun": "2026-11-27T01:51:15.787Z",
   "mode": "live",
-  "total": 553,
-  "unique": 692,
+  "total": 546,
+  "unique": 735,
   "sourceMix": {
-    "gosplan": 72,
-    "gentender": 343,
+    "gosplan": 70,
+    "gentender": 341,
     "etpgpb-direct": 22,
-    "tektorg-direct": 54,
+    "tektorg-direct": 51,
     "fabrikant-direct": 10,
     "roseltorg-direct": 21,
-    "ЕИС / ГосПлан API": 18,
     "rad-direct": 3,
+    "ЕИС / ГосПлан API": 18,
     "ЕИС / HTML": 2,
     "ЕИС zakupki.gov.ru": 1,
     "zakazrf-direct": 2,
@@ -19,25 +19,25 @@
     "tektorg": 1,
     "roseltorg": 3
   },
-  "directFirstPct": 20.3,
-  "directCoveragePct": 20.3,
-  "recordsPer100Requests": 164,
-  "matchedOrg": 553,
-  "active": 355,
-  "archive": 198,
+  "directFirstPct": 20,
+  "directCoveragePct": 20,
+  "recordsPer100Requests": 172.1,
+  "matchedOrg": 546,
+  "active": 268,
+  "archive": 278,
   "bySource": {
-    "EIS": 95,
-    "RAD": 61,
-    "ROS": 66,
+    "EIS": 93,
+    "RAD": 60,
+    "ROS": 65,
     "RTS": 3,
-    "SBER_B2B": 24,
+    "SBER_B2B": 25,
     "SBER": 62,
-    "TEK": 116,
-    "GPB": 60,
+    "TEK": 113,
+    "GPB": 59,
     "B2B": 27,
     "ZAKAZ": 26,
-    "PORTAL_POST": 1,
     "FAB": 11,
+    "PORTAL_POST": 1,
     "BIDZAAR": 1
   },
   "sources": [
@@ -229,41 +229,25 @@
       "name": "gosplan",
       "available": true,
       "requests": 40,
-      "okRequests": 37,
-      "records": 73,
-      "errors": 3,
+      "okRequests": 39,
+      "records": 76,
+      "errors": 1,
       "errorItems": [
         {
           "source": "gosplan",
-          "query": "порошковой (44, завершённые 30д)",
-          "error": "fetch failed"
-        },
-        {
-          "source": "gosplan",
-          "query": "ремонт (223, архив стр.2)",
+          "query": "модернизация (44, действующие)",
           "error": "HTTP 429"
-        },
-        {
-          "source": "gosplan",
-          "query": "турбина (223, архив стр.2)",
-          "error": "fetch failed"
         }
       ]
     },
     {
       "name": "gentender",
       "available": true,
-      "requests": 338,
-      "okRequests": 337,
-      "records": 508,
-      "errors": 1,
-      "errorItems": [
-        {
-          "source": "gentender",
-          "query": "ремонт (архив)",
-          "error": "The operation was aborted due to timeout"
-        }
-      ]
+      "requests": 343,
+      "okRequests": 343,
+      "records": 548,
+      "errors": 0,
+      "errorItems": []
     },
     {
       "name": "eis-html",
@@ -296,16 +280,16 @@
       ]
     }
   ],
-  "errors": 33,
+  "errors": 30,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 16,
-  "newCount": 89,
-  "corroborated": 123,
+  "localArchived": 53,
+  "newCount": 2,
+  "corroborated": 121,
   "corroboratedPct": 22,
-  "relevantPerRequest": 1.64,
+  "relevantPerRequest": 1.72,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
@@ -316,7 +300,7 @@
     },
     "gentender": {
       "limit": 720,
-      "used": 338,
+      "used": 343,
       "exhausted": false
     },
     "tektorg": {

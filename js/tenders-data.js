@@ -8470,7 +8470,7 @@ window.TENDER_DATA = {
   ]
  },
  "etps": {
-  "checked": "2026-11-26T19:47:38.652Z",
+  "checked": "2026-11-27T01:53:28.598Z",
   "note": "Результат аудита публичного доступа к ЭТП. Поля http/ms/ok обновляются скриптом scripts/collect-tenders.js ПОСЛЕ проверки доступности; приоритетный статус для UI — объект browser (проверка в браузере).",
   "platforms": [
    {
@@ -8485,9 +8485,9 @@ window.TENDER_DATA = {
     "reliability": "high",
     "notes": "Официальный реестр 44-ФЗ/223-ФЗ. Расширенный поиск доступен без регистрации, параметр searchString; карточка процедуры и документы — тоже публично. Основной источник для сбора.",
     "http": 0,
-    "ms": 10554,
+    "ms": 10529,
     "ok": false,
-    "checked": "2026-11-26T19:45:39.115Z",
+    "checked": "2026-11-27T01:51:26.317Z",
     "browser": {
      "status": "open",
      "http": null,
@@ -8508,9 +8508,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Главная и реестр процедур открыты без входа. Поиск по названию/.KEYWORD и фильтр по заказчикам (procedure[customers][id]) работают на странице /procedures/. Часть документов требует аккредитации.",
     "http": 0,
-    "ms": 10496,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:45:49.611Z",
+    "checked": "2026-11-27T01:51:36.808Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8530,9 +8530,9 @@ window.TENDER_DATA = {
     "reliability": "high",
     "notes": "Публичный реестр процедур /procedures с полями name, datePublished, dateEndRegistration, sumPrice_start/end. Есть отдельные секции Rosneft, Inter RAO, 223-FZ, 44-FZ — удобно для закупок энергетики.",
     "http": 200,
-    "ms": 2570,
+    "ms": 2536,
     "ok": true,
-    "checked": "2026-11-26T19:45:52.181Z",
+    "checked": "2026-11-27T01:51:39.344Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8553,9 +8553,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Форма поиска /procedures/search отправляет GET с query_field на /procedures/search_ajax; есть фильтры source[], status[], даты. Секции РусГидро, Росатома, СГК, Т Плюс.",
     "http": 0,
-    "ms": 10492,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:46:02.673Z",
+    "checked": "2026-11-27T01:51:49.835Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8577,7 +8577,7 @@ window.TENDER_DATA = {
     "http": 0,
     "ms": 12000,
     "ok": false,
-    "checked": "2026-11-26T19:46:14.673Z",
+    "checked": "2026-11-27T01:52:01.835Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8597,9 +8597,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Форма /NotificationEx? с полем FastFilter (ключевое слово, номер или ИНН) и фильтрами Filter.Customer/Filter.Placer. Основная площадка Татарстана.",
     "http": 0,
-    "ms": 10486,
+    "ms": 10482,
     "ok": false,
-    "checked": "2026-11-26T19:46:25.159Z",
+    "checked": "2026-11-27T01:52:12.317Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8619,9 +8619,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Публичный поиск на tender.lot-online.ru; реестр процедур gz.lot-online.ru/etp_front/procedure/list с параметрами status/direction. Параметр поиска требует уточнения в браузере.",
     "http": 0,
-    "ms": 10496,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:46:35.655Z",
+    "checked": "2026-11-27T01:52:22.808Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8641,9 +8641,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Главная и каталог закупок открываются в браузере; простой HTTP-запрос получает 403 (Antibot/TLS). Детальные карточки и участие — после регистрации. Прямой публичный поиск как источник сбора ненадёжен.",
     "http": 200,
-    "ms": 1593,
+    "ms": 1213,
     "ok": true,
-    "checked": "2026-11-26T19:46:37.248Z",
+    "checked": "2026-11-27T01:52:24.021Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8664,9 +8664,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Информационный сайт доступен, но раздел закрытых процедур КИИ/ГОЗ требует авторизации и допусков. Для публичного аудита пригоден только факт наличия секции.",
     "http": 0,
-    "ms": 10491,
+    "ms": 10278,
     "ok": false,
-    "checked": "2026-11-26T19:46:47.739Z",
+    "checked": "2026-11-27T01:52:34.299Z",
     "browser": {
      "status": "partial",
      "http": null,
@@ -8687,9 +8687,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Большинство закупок по 223-ФЗ дублируются в ЕИС, поэтому надёжнее искать их через ЕИС. Прямой публичный поиск на площадке требует уточнения.",
     "http": 0,
-    "ms": 10494,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:46:58.233Z",
+    "checked": "2026-11-27T01:52:44.790Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8710,9 +8710,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Встроенный браузер получает Anti-DDoS/503. Закупки по 223-ФЗ дублируются в ЕИС — использовать ЕИС как основной канал. Ссылка «Открыть поиск» ведёт на главную площадку.",
     "http": 0,
-    "ms": 6754,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:47:04.987Z",
+    "checked": "2026-11-27T01:52:55.281Z",
     "browser": {
      "status": "blocked",
      "http": 503,
@@ -8733,9 +8733,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "КИМ Росатома (малые закупки) переехал в раздел Roseltorg: https://www.roseltorg.ru/kim/atom. Старый домен kim.rosatom.ru не работает. Регистрация в системе требуется для участия, обзор разделов публичен.",
     "http": 0,
-    "ms": 10237,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:47:15.224Z",
+    "checked": "2026-11-27T01:53:05.772Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8756,9 +8756,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Отраслевой JS-портал открывается в обычном браузере; интегрирован с ЕИС и ЭТП. Для поиска закупок Росатома использовать ЕИС и секцию Росэлторга.",
     "http": 200,
-    "ms": 1648,
+    "ms": 1211,
     "ok": true,
-    "checked": "2026-11-26T19:47:16.872Z",
+    "checked": "2026-11-27T01:53:06.983Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8779,9 +8779,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Публичный реестр закупок Интер РАО: https://interrao-zakupki.ru/purchases/. ЭТП: https://etp.interrao-zakupki.ru. Старый домен etp.interrao.ru не работает; дубли procedures есть на ТЭК-Торг (/inter_rao/procedures).",
     "http": 0,
-    "ms": 10491,
+    "ms": 10282,
     "ok": false,
-    "checked": "2026-11-26T19:47:27.363Z",
+    "checked": "2026-11-27T01:53:17.265Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8802,9 +8802,9 @@ window.TENDER_DATA = {
     "reliability": "low",
     "notes": "Доступ зависит от клиента: curl получил 403, fetch — 200. Закупки дублируются на ЕИС и Росэлторге — искать там.",
     "http": 0,
-    "ms": 10495,
+    "ms": 10491,
     "ok": false,
-    "checked": "2026-11-26T19:47:37.858Z",
+    "checked": "2026-11-27T01:53:27.756Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -8824,9 +8824,9 @@ window.TENDER_DATA = {
     "reliability": "medium",
     "notes": "Сайт открывается, публичный каталог процедур доступен частично; коммерческие закупки Эн+ и других групп часто требуют входа. Уточнить параметры поиска в браузере.",
     "http": 200,
-    "ms": 794,
+    "ms": 841,
     "ok": true,
-    "checked": "2026-11-26T19:47:38.652Z",
+    "checked": "2026-11-27T01:53:28.598Z",
     "browser": {
      "status": "open",
      "http": 200,
@@ -9094,8 +9094,8 @@ window.TENDER_DATA = {
   }
  ],
  "tenders": {
-  "updated": "2026-11-26T19:45:28.560Z",
-  "count": 553,
+  "updated": "2026-11-27T01:51:15.787Z",
+  "count": 546,
   "records": [
    {
     "id": "32616626336",
@@ -9133,7 +9133,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9152,8 +9152,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616624608",
@@ -9190,7 +9189,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9209,57 +9208,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616626207",
-    "regNumber": "32616626207",
-    "externalId": "32616626207",
-    "title": "Оказание услуг по техническому обслуживанию и ремонту легкового транспорта",
-    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
-    "customerInn": "6829012680",
-    "customerCode": "6829012680",
-    "matchedOrgId": "H-RIR",
-    "matchedOrgName": "РИР Энерго",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "583 303 ₽",
-    "priceNum": 583303,
-    "published": "2026-11-26",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-26",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616626207",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-RIR"
-    ],
-    "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T10:50:15.121Z",
-    "sources": [
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616626207",
-      "foundAt": "2026-11-26T10:50:15.121Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616625882",
@@ -9296,7 +9245,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9315,8 +9264,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616625513",
@@ -9353,7 +9301,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9372,8 +9320,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616625373",
@@ -9410,7 +9357,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9429,8 +9376,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616625729",
@@ -9467,7 +9413,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -9486,8 +9432,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:20:19.269Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616626961",
@@ -9524,7 +9469,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -9543,8 +9488,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:20:19.269Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616627117",
@@ -9581,7 +9525,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -9600,8 +9544,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:20:19.269Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616629250",
@@ -9639,7 +9582,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-26T17:20:19.269Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9658,8 +9601,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628752",
@@ -9696,7 +9638,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:20:19.269Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9715,57 +9657,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616630453",
-    "regNumber": "32616630453",
-    "externalId": "32616630453",
-    "title": "Выполнение работ по ремонту водопроводной линии",
-    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
-    "customerInn": "6829012680",
-    "customerCode": "6829012680",
-    "matchedOrgId": "H-RIR",
-    "matchedOrgName": "РИР Энерго",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "557 352,62 ₽",
-    "priceNum": 557352.62,
-    "published": "2026-11-26",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-26",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616630453",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-RIR"
-    ],
-    "foundAt": "2026-11-26T17:20:19.269Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
-    "sources": [
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616630453",
-      "foundAt": "2026-11-26T17:20:19.269Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616630399",
@@ -9802,7 +9694,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:20:19.269Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9821,8 +9713,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616630069",
@@ -9859,7 +9750,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -9878,8 +9769,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T19:55:50.882Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616629513",
@@ -9916,7 +9806,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -9935,8 +9825,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T19:55:50.882Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616631516",
@@ -9977,7 +9866,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T19:55:50.882Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -9988,8 +9877,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T19:55:50.882Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616631451",
@@ -10026,7 +9914,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T19:55:50.882Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10037,8 +9925,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T19:55:50.882Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616631375",
@@ -10075,7 +9962,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T19:55:50.882Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -10086,8 +9973,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T19:55:50.882Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628951",
@@ -10124,7 +10010,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10135,8 +10021,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628582",
@@ -10173,7 +10058,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10184,8 +10069,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628839",
@@ -10222,7 +10106,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10233,8 +10117,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628984",
@@ -10271,7 +10154,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10282,8 +10165,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628786",
@@ -10320,7 +10202,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10331,8 +10213,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628804",
@@ -10369,7 +10250,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10380,8 +10261,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-102008821",
@@ -10418,7 +10298,7 @@ window.TENDER_DATA = {
      "C-OILVOSTOK"
     ],
     "foundAt": "2026-11-26T02:35:37.695Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10429,8 +10309,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T02:35:37.695Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-83258210",
@@ -10467,7 +10346,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10478,8 +10357,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-27323190",
@@ -10516,7 +10394,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10527,8 +10405,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-42691354",
@@ -10565,7 +10442,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10576,8 +10453,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-81799928",
@@ -10614,7 +10490,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10625,8 +10501,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-52456114",
@@ -10663,7 +10538,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10674,8 +10549,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-68751087",
@@ -10712,7 +10586,7 @@ window.TENDER_DATA = {
      "C-OILURAL"
     ],
     "foundAt": "2026-11-26T20:13:20.977Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10723,8 +10597,56 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T20:13:20.977Z"
      }
     ],
+    "isNew": false
+   },
+   {
+    "id": "SBER_B2B:sb-92359657",
+    "regNumber": "",
+    "externalId": "sb-92359657",
+    "title": "Срочно! Дефектация и ремонт пультов управления шиберами накопителей, Optimar: Control cabinet hatch control system SB trim.line , PS trim.line (189))",
+    "customer": "ПАО СЗ \"СЕВЕРНАЯ ВЕРФЬ\"",
+    "customerInn": "7805034277",
+    "customerCode": "7805034277",
+    "matchedOrgId": "R-SEVERNAYA-VERF",
+    "matchedOrgName": "Северная верфь",
+    "platformCode": "SBER_B2B",
+    "platformName": "Сбер Б2Б",
+    "platformUrl": "https://sberb2b.ru/request/public-requests",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-26",
+    "deadline": "2026-11-29",
+    "updated": "2026-11-26",
+    "status": "Приём предложений",
+    "stage": "submission",
+    "phase": "active",
+    "url": "https://sberb2b.ru/needs/92359657",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-SEVERNAYA-VERF"
+    ],
+    "foundAt": "2026-11-27T02:16:16.918Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER_B2B",
+      "platformName": "Сбер Б2Б",
+      "url": "https://sberb2b.ru/needs/92359657",
+      "foundAt": "2026-11-27T02:16:16.918Z"
+     }
+    ],
     "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "firstSeen": "2026-11-27T01:51:15.787Z"
    },
    {
     "id": "32616626255",
@@ -10761,7 +10683,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10772,8 +10694,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616509787",
@@ -10810,7 +10731,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10821,8 +10742,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616554065",
@@ -10859,7 +10779,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10870,8 +10790,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616555185",
@@ -10908,7 +10827,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10919,8 +10838,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616452072",
@@ -10958,7 +10876,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -10969,8 +10887,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616625717",
@@ -11007,7 +10924,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11018,8 +10935,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:tt-964059",
@@ -11056,7 +10972,7 @@ window.TENDER_DATA = {
      "R-OIL-RNBUR"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11067,8 +10983,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616581564",
@@ -11105,7 +11020,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11116,8 +11031,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628469",
@@ -11155,7 +11069,7 @@ window.TENDER_DATA = {
      "H-OSK"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11166,8 +11080,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616566901",
@@ -11204,7 +11117,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11215,8 +11128,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616628883",
@@ -11253,7 +11165,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11264,8 +11176,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T17:37:06.693Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616623233",
@@ -11302,7 +11213,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11358,7 +11269,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11414,7 +11325,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11470,7 +11381,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11526,7 +11437,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11582,7 +11493,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11638,7 +11549,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11694,7 +11605,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11750,7 +11661,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11806,7 +11717,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11862,7 +11773,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11920,7 +11831,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -11976,7 +11887,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -11995,8 +11906,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616618835",
@@ -12033,7 +11943,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -12052,8 +11962,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616619466",
@@ -12090,7 +11999,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -12109,8 +12018,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "GPB:2125863",
@@ -12135,7 +12043,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1052579",
     "keywords": [
      "Уплотнения"
@@ -12158,7 +12066,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T05:55:30.797Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2122081",
@@ -12183,7 +12092,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050940",
     "keywords": [
      "Турбина"
@@ -12206,7 +12115,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616621653",
@@ -12243,7 +12153,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12255,55 +12165,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "PORTAL_POST:pp-need-6318542",
-    "regNumber": "",
-    "externalId": "pp-need-6318542",
-    "title": "Оказание услуг по ремонту офисной техники",
-    "customer": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СПОРТИВНАЯ ШКОЛА КРОНШТАДТСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА",
-    "customerInn": "pp-1302226",
-    "customerCode": "pp-1302226",
-    "matchedOrgId": "O-KRONSTADT",
-    "matchedOrgName": "Кронштадт",
-    "platformCode": "PORTAL_POST",
-    "platformName": "Портал поставщиков",
-    "platformUrl": "https://zakupki.mos.ru/need/6318542",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "7 120,14 ₽",
-    "priceNum": 7120.14,
-    "published": "2026-11-25",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-25",
-    "status": "Прием предложений",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.mos.ru/need/6318542",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "O-KRONSTADT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "PORTAL_POST",
-      "platformName": "Портал поставщиков",
-      "url": "https://zakupki.mos.ru/need/6318542",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "32616568701",
@@ -12340,7 +12201,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12388,7 +12249,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12436,7 +12297,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12447,8 +12308,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616546432",
@@ -12485,7 +12345,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12534,7 +12394,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12583,7 +12443,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12631,7 +12491,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12642,8 +12502,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-18638195",
@@ -12680,7 +12539,7 @@ window.TENDER_DATA = {
      "C-OILPRIVOLGA"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12728,7 +12587,7 @@ window.TENDER_DATA = {
      "R-OILDIASKAN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12776,7 +12635,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12824,7 +12683,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12872,7 +12731,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12883,8 +12742,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616538109",
@@ -12922,7 +12780,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -12970,7 +12828,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13020,7 +12878,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13031,8 +12889,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616466853",
@@ -13069,7 +12926,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13080,8 +12937,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616617089",
@@ -13118,7 +12974,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13174,7 +13030,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13230,7 +13086,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13286,7 +13142,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -13305,8 +13161,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:20392194",
@@ -13331,7 +13186,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20392194",
     "keywords": [
      "Турбина"
@@ -13354,7 +13209,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20391645",
@@ -13393,7 +13249,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T13:04:21.643Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -13437,7 +13293,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1039569",
     "keywords": [
      "Ремонт"
@@ -13460,7 +13316,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:42.688Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2124911",
@@ -13485,7 +13342,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312826",
     "keywords": [
      "Уплотнения"
@@ -13508,7 +13365,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2125102",
@@ -13533,7 +13391,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1052337",
     "keywords": [
      "Ремонт"
@@ -13556,7 +13414,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2125319",
@@ -13581,7 +13440,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312967",
     "keywords": [
      "Ремонт"
@@ -13604,7 +13463,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2125039",
@@ -13641,7 +13501,7 @@ window.TENDER_DATA = {
      "C-OILSEVER"
     ],
     "foundAt": "2026-11-25T07:16:51.416Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "etpgpb-direct",
@@ -13697,7 +13557,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13745,7 +13605,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13793,7 +13653,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13841,7 +13701,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-24T13:04:21.643Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13889,7 +13749,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13937,7 +13797,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -13985,7 +13845,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14033,7 +13893,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14082,7 +13942,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14131,7 +13991,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14180,7 +14040,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14228,7 +14088,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14276,7 +14136,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14324,7 +14184,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14335,8 +14195,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616573302",
@@ -14373,7 +14232,7 @@ window.TENDER_DATA = {
      "R-ESK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14409,7 +14268,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-24",
     "status": "Приём предложений",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://sberb2b.ru/needs/36506441",
     "keywords": [
      "Ремонт"
@@ -14432,7 +14291,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "SBER_B2B:sb-111573443",
@@ -14469,7 +14329,7 @@ window.TENDER_DATA = {
      "C-OILUPPERVOLGA"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14517,7 +14377,7 @@ window.TENDER_DATA = {
      "C-OILUPPERVOLGA"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14565,7 +14425,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14613,7 +14473,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14661,7 +14521,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14709,7 +14569,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14757,7 +14617,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14805,7 +14665,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14853,7 +14713,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14901,7 +14761,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14949,7 +14809,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -14997,7 +14857,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15045,7 +14905,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15093,7 +14953,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15104,8 +14964,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616419582",
@@ -15143,7 +15002,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15192,7 +15051,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15240,7 +15099,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15288,7 +15147,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15336,7 +15195,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15384,7 +15243,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15432,7 +15291,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15480,7 +15339,7 @@ window.TENDER_DATA = {
      "R-OIL-RNBUR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15528,7 +15387,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15539,8 +15398,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616617356",
@@ -15577,7 +15435,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15625,7 +15483,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15673,7 +15531,7 @@ window.TENDER_DATA = {
      "C-GES"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15721,7 +15579,7 @@ window.TENDER_DATA = {
      "C-GES"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15771,7 +15629,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15782,8 +15640,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616616406",
@@ -15822,7 +15679,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15833,8 +15690,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616612191",
@@ -15871,7 +15727,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -15923,7 +15779,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-24T05:40:17.341Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -15979,7 +15835,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16029,7 +15885,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16085,7 +15941,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -16104,8 +15960,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616607680",
@@ -16142,7 +15997,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -16161,8 +16016,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "ROS:32616609473",
@@ -16201,7 +16055,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-24T05:40:17.341Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -16261,7 +16115,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/irkutskoil/procedures/20390425",
     "keywords": [
      "Уплотнения"
@@ -16284,7 +16138,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2122267",
@@ -16309,7 +16164,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312026",
     "keywords": [
      "Уплотнения"
@@ -16332,7 +16187,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2122705",
@@ -16357,7 +16213,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1051250",
     "keywords": [
      "Ремонт"
@@ -16380,7 +16236,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2123117",
@@ -16405,7 +16262,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1312188",
     "keywords": [
      "Ремонт"
@@ -16428,7 +16285,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616584994",
@@ -16465,7 +16323,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16513,7 +16371,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16561,7 +16419,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16609,7 +16467,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16657,7 +16515,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16705,7 +16563,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16753,7 +16611,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16801,7 +16659,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16812,8 +16670,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616512271",
@@ -16850,7 +16707,7 @@ window.TENDER_DATA = {
      "C-MAGADAN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16898,7 +16755,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16946,7 +16803,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -16994,7 +16851,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17030,7 +16887,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616605888",
     "keywords": [
      "Ремонт"
@@ -17053,7 +16910,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616605890",
@@ -17078,7 +16936,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616605890",
     "keywords": [
      "Ремонт"
@@ -17101,7 +16959,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616606940",
@@ -17126,7 +16985,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616606940",
     "keywords": [
      "Ремонт"
@@ -17146,55 +17005,6 @@ window.TENDER_DATA = {
       "platformCode": "ROS",
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616606940",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616609709",
-    "regNumber": "32616609709",
-    "externalId": "32616609709",
-    "title": "выполнение аварийных ремонтных работ по устранению дефектов на тепловых сетях СГТС ПАО «ТГК-2»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТГК-2 ЭНЕРГОРЕМОНТ\"",
-    "customerInn": "7606118807",
-    "customerCode": "7606118807",
-    "matchedOrgId": "R-TGK2ER",
-    "matchedOrgName": "ТГК-2 Энергоремонт",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://corp.roseltorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "675 790,92 ₽",
-    "priceNum": 675790.92,
-    "published": "2026-11-23",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-23",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609709",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "R-TGK2ER",
-     "H-TGK2"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609709",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -17236,7 +17046,7 @@ window.TENDER_DATA = {
      "C-KAMCHAT"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17247,8 +17057,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616550640",
@@ -17285,7 +17094,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17296,8 +17105,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616605882",
@@ -17338,7 +17146,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17386,7 +17194,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17434,7 +17242,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17482,7 +17290,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17530,7 +17338,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17578,7 +17386,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17626,7 +17434,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17674,7 +17482,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17685,8 +17493,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616551034",
@@ -17723,7 +17530,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17734,8 +17541,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "0372200275826000045",
@@ -17772,7 +17578,7 @@ window.TENDER_DATA = {
      "O-KRONSTADT"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17783,8 +17589,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616563086",
@@ -17822,7 +17627,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -17858,7 +17663,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616610325",
     "keywords": [
      "Ремонт"
@@ -17882,7 +17687,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616608530",
@@ -17907,7 +17713,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616608530",
     "keywords": [
      "Ремонт"
@@ -17931,7 +17737,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616610492",
@@ -17956,7 +17763,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-23",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616610492",
     "keywords": [
      "Ремонт"
@@ -17980,7 +17787,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616605807",
@@ -18017,7 +17825,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18065,7 +17873,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18113,7 +17921,7 @@ window.TENDER_DATA = {
      "C-OIL-RNNYAG"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18161,7 +17969,7 @@ window.TENDER_DATA = {
      "C-OIL-RNNYAG"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18209,7 +18017,7 @@ window.TENDER_DATA = {
      "R-OIL-RNBUR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18257,7 +18065,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18305,7 +18113,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18353,7 +18161,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18401,7 +18209,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18449,7 +18257,7 @@ window.TENDER_DATA = {
      "C-GES"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18499,7 +18307,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18510,8 +18318,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616608754",
@@ -18548,7 +18355,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18596,7 +18403,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18644,7 +18451,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18692,7 +18499,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / HTML",
@@ -18764,7 +18571,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -18783,8 +18590,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616599349",
@@ -18821,7 +18627,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -18840,8 +18646,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:20379727",
@@ -18878,7 +18683,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -18930,7 +18735,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20383987",
     "keywords": [
      "Лопатки"
@@ -18961,237 +18766,6 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "TEK:20380037",
-    "regNumber": "",
-    "externalId": "20380037",
-    "title": "Ремонт и техническое обслуживание грузовой и специального техники для нужд АО \"ТГК-11\"",
-    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
-    "customerInn": "5406323202",
-    "customerCode": "5406323202",
-    "matchedOrgId": "C-TGK11",
-    "matchedOrgName": "ТГК-11",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "500 000 ₽",
-    "priceNum": 500000,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20380037",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-TGK11",
-     "C-TGK1"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20380037",
-      "foundAt": "2026-11-25T07:16:01.108Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20380037",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "TEK:20380006",
-    "regNumber": "",
-    "externalId": "20380006",
-    "title": "Ремонт и ТО ГАЗ, УАЗ для нужд АО \"ТГК-11\"»",
-    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
-    "customerInn": "5406323202",
-    "customerCode": "5406323202",
-    "matchedOrgId": "C-TGK11",
-    "matchedOrgName": "ТГК-11",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "500 000 ₽",
-    "priceNum": 500000,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20380006",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-TGK11",
-     "C-TGK1"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20380006",
-      "foundAt": "2026-11-25T07:16:01.108Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20380006",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "TEK:20379963",
-    "regNumber": "",
-    "externalId": "20379963",
-    "title": "Ремонт и техническое обслуживание автобусов для нужд АО \"ТГК-11\"",
-    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
-    "customerInn": "5406323202",
-    "customerCode": "5406323202",
-    "matchedOrgId": "C-TGK11",
-    "matchedOrgName": "ТГК-11",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "500 000 ₽",
-    "priceNum": 500000,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20379963",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-TGK11",
-     "C-TGK1"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20379963",
-      "foundAt": "2026-11-25T07:16:01.108Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20379963",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "TEK:20379924",
-    "regNumber": "",
-    "externalId": "20379924",
-    "title": "Ремонт и техническое обслуживание тахографов для нужд АО \"ТГК-11\"",
-    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
-    "customerInn": "5406323202",
-    "customerCode": "5406323202",
-    "matchedOrgId": "C-TGK11",
-    "matchedOrgName": "ТГК-11",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "494 000 ₽",
-    "priceNum": 494000,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20379924",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-TGK11",
-     "C-TGK1"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20379924",
-      "foundAt": "2026-11-25T07:16:01.108Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20379924",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
     "isNew": false,
     "phaseSource": "local"
    },
@@ -19218,7 +18792,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1038686",
     "keywords": [
      "Турбина"
@@ -19241,63 +18815,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "GPB:2121030",
-    "regNumber": "",
-    "externalId": "2121030",
-    "title": "Поставка ГСМ для автотранспорта СУ в г. Оренбург ООО \"ГСП Ремонт\"",
-    "customer": "ГСП Ремонт",
-    "customerInn": "7737106202",
-    "customerCode": "",
-    "matchedOrgId": "R-GSPREM",
-    "matchedOrgName": "ГСП Ремонт",
-    "platformCode": "GPB",
-    "platformName": "ЭТП ГПБ",
-    "platformUrl": "https://etpgpb.ru",
-    "source": "etpgpb-direct",
-    "sourceName": "ЭТП ГПБ (прямой JSON)",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "accepting",
-    "stage": "accepting",
-    "phase": "active",
-    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050605",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "R-GSPREM"
-    ],
-    "foundAt": "2026-11-25T07:16:51.416Z",
-    "lastSeen": "2026-11-25T07:16:51.416Z",
-    "sources": [
-     {
-      "source": "etpgpb-direct",
-      "sourceName": "ЭТП ГПБ (прямой JSON)",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050605",
-      "foundAt": "2026-11-25T07:16:51.416Z"
-     },
-     {
-      "source": "etpgpb-direct",
-      "sourceName": "ЭТП ГПБ (прямой JSON)",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050607",
-      "foundAt": "2026-11-25T07:16:51.416Z"
-     }
-    ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616600878",
@@ -19334,7 +18853,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19382,7 +18901,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19430,7 +18949,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19478,7 +18997,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19526,7 +19045,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19574,7 +19093,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19622,7 +19141,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19670,7 +19189,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19718,7 +19237,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19766,7 +19285,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19814,7 +19333,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19862,7 +19381,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19910,7 +19429,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -19958,7 +19477,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20010,7 +19529,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20058,7 +19577,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20106,7 +19625,7 @@ window.TENDER_DATA = {
      "H-ROSATOM-VIE"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20154,7 +19673,7 @@ window.TENDER_DATA = {
      "C-MAGADAN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20202,7 +19721,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20250,7 +19769,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20298,7 +19817,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20346,7 +19865,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20394,7 +19913,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20405,8 +19924,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616538635",
@@ -20431,7 +19949,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538635",
     "keywords": [
      "Ремонт"
@@ -20455,7 +19973,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616601339",
@@ -20480,7 +19999,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "archive",
+    "phase": "active",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616601339",
     "keywords": [
      "Ремонт"
@@ -20504,57 +20023,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "32616562548",
-    "regNumber": "32616562548",
-    "externalId": "32616562548",
-    "title": "227063 Ремонт башенных градирен №1, 2, 3, 4, для Салаватской ТЭЦ филиала ООО «БГК»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
-    "customerInn": "0277077282",
-    "customerCode": "0277077282",
-    "matchedOrgId": "C-BGK",
-    "matchedOrgName": "Башкирская генерирующая компания",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "http://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "14 469 667 ₽",
-    "priceNum": 14469667,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562548",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BGK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562548",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
+    "isNew": true,
+    "firstSeen": "2026-11-27T01:51:15.787Z"
    },
    {
     "id": "32616567032",
@@ -20591,7 +20061,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20639,7 +20109,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20687,7 +20157,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20735,7 +20205,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20783,7 +20253,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20831,7 +20301,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20879,7 +20349,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20891,55 +20361,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "TEK:tt-962043",
-    "regNumber": "",
-    "externalId": "tt-962043",
-    "title": "Поставка Лопат для Уфимского филиала ООО \"РН-Бурение\"",
-    "customer": "Общество с Ограниченной Ответственностью \"РН-Бурение\"",
-    "customerInn": "7706613770",
-    "customerCode": "7706613770",
-    "matchedOrgId": "R-OIL-RNBUR",
-    "matchedOrgName": "РН-Бурение",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20379890",
-    "keywords": [
-     "Лопатки"
-    ],
-    "matchedKeywords": [
-     "Лопатки"
-    ],
-    "enterpriseIds": [
-     "R-OIL-RNBUR"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20379890",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "TEK:tt-962025",
@@ -20976,7 +20397,7 @@ window.TENDER_DATA = {
      "R-OIL-RNBUR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -20984,54 +20405,6 @@ window.TENDER_DATA = {
       "platformCode": "TEK",
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/market/procedures/20379839",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "TEK:tt-962278",
-    "regNumber": "",
-    "externalId": "tt-962278",
-    "title": "Поставка запасных частей для ремонта грунтореза на базе МТЗ-82. ( Верные наименования материалов смотреть в тех .задании).",
-    "customer": "Общество с ограниченной ответственностью \"Башнефть-Строй\"",
-    "customerInn": "0271006454",
-    "customerCode": "0271006454",
-    "matchedOrgId": "H-OIL-BN",
-    "matchedOrgName": "Башнефть",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-20",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-20",
-    "status": "Приём заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://www.tektorg.ru/market/procedures/20382174",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-OIL-BN"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20382174",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -21073,7 +20446,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21084,8 +20457,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:tt-962073",
@@ -21123,7 +20495,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21134,8 +20506,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:tt-962065",
@@ -21173,7 +20544,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21184,8 +20555,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "TEK:tt-962061",
@@ -21223,7 +20593,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21234,8 +20604,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "GPB:32616604656",
@@ -21272,7 +20641,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T16:40:01.377Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21320,7 +20689,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21368,7 +20737,7 @@ window.TENDER_DATA = {
      "C-GES"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21418,7 +20787,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21429,8 +20798,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616604933",
@@ -21469,7 +20837,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21480,8 +20848,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616600722",
@@ -21506,7 +20873,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "submission",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616600722",
     "keywords": [
      "Ремонт"
@@ -21529,8 +20896,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T23:48:50.087Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616567423",
@@ -21567,7 +20934,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -21576,135 +20943,6 @@ window.TENDER_DATA = {
       "platformName": "B2B-Center",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616567423",
       "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616594944",
-    "regNumber": "32616594944",
-    "externalId": "32616594944",
-    "title": "Выполнение строительно-монтажных работ по объекту: «Турбина паровая N7 с ген. 3-х фаз.мощ.110000 кВт. инв. № ИЭ9141318. Замена системы возбуждения турбогенератора ТГ-7 (тип ТВФ-110-2Е)» Система вентиляции ПВ-1",
-    "customer": "ООО «Байкальская энергетическая компания»",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "ЕИС / ГосПлан API",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "965464 ₽",
-    "priceNum": 965464,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "ЕИС / ГосПлан API",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616594944",
-      "foundAt": "2026-11-20T13:55:53.115Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
-      "foundAt": "2026-11-20T15:45:40.545Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
-      "foundAt": "2026-11-20T15:12:44.741Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616595899",
-    "regNumber": "32616595899",
-    "externalId": "32616595899",
-    "title": "Поставка масла турбинного ТП-22С марки 1 по ТУ 38.101821-2013 для нужд филиала АО \"Татэнерго\" - Заинская ГРЭС",
-    "customer": "АО «Татэнерго»",
-    "customerInn": "1657036630",
-    "customerCode": "1657036630",
-    "matchedOrgId": "H-TAT",
-    "matchedOrgName": "Татэнерго",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "ЕИС / ГосПлан API",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "9891699 ₽",
-    "priceNum": 9891699,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "H-TAT"
-    ],
-    "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
-    "sources": [
-     {
-      "source": "ЕИС / ГосПлан API",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616595899",
-      "foundAt": "2026-11-20T13:55:53.115Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
-      "foundAt": "2026-11-20T15:45:40.545Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "ZAKAZ",
-      "platformName": "ЗаказРФ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
-      "foundAt": "2026-11-20T15:50:44.443Z"
      }
     ],
     "isNew": false
@@ -21744,7 +20982,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -21763,8 +21001,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616595904",
@@ -21801,7 +21038,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -21820,8 +21057,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "RAD:gpmslt19718u80000q3sjf5sr0eddt20",
@@ -21861,7 +21097,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -21929,7 +21165,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -21997,7 +21233,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310918",
     "keywords": [
      "Ремонт"
@@ -22020,103 +21256,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "GPB:2119861",
-    "regNumber": "",
-    "externalId": "2119861",
-    "title": "Торцовые уплотнения",
-    "customer": "АО ЧЕРНОМОРТРАНСНЕФТЬ",
-    "customerInn": "2315072242",
-    "customerCode": "",
-    "matchedOrgId": "C-OILCHERN",
-    "matchedOrgName": "Черномортранснефть",
-    "platformCode": "GPB",
-    "platformName": "ЭТП ГПБ",
-    "platformUrl": "https://etpgpb.ru",
-    "source": "etpgpb-direct",
-    "sourceName": "ЭТП ГПБ (прямой JSON)",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "accepting",
-    "stage": "accepting",
-    "phase": "active",
-    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050178",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "C-OILCHERN"
-    ],
-    "foundAt": "2026-11-25T07:16:51.416Z",
-    "lastSeen": "2026-11-25T07:16:51.416Z",
-    "sources": [
-     {
-      "source": "etpgpb-direct",
-      "sourceName": "ЭТП ГПБ (прямой JSON)",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050178",
-      "foundAt": "2026-11-25T07:16:51.416Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "GPB:2119880",
-    "regNumber": "",
-    "externalId": "2119880",
-    "title": "Подшипники и торцевые уплотнения",
-    "customer": "АО ЧЕРНОМОРТРАНСНЕФТЬ",
-    "customerInn": "2315072242",
-    "customerCode": "",
-    "matchedOrgId": "C-OILCHERN",
-    "matchedOrgName": "Черномортранснефть",
-    "platformCode": "GPB",
-    "platformName": "ЭТП ГПБ",
-    "platformUrl": "https://etpgpb.ru",
-    "source": "etpgpb-direct",
-    "sourceName": "ЭТП ГПБ (прямой JSON)",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "accepting",
-    "stage": "accepting",
-    "phase": "active",
-    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050190",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "C-OILCHERN"
-    ],
-    "foundAt": "2026-11-25T07:16:51.416Z",
-    "lastSeen": "2026-11-25T07:16:51.416Z",
-    "sources": [
-     {
-      "source": "etpgpb-direct",
-      "sourceName": "ЭТП ГПБ (прямой JSON)",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050190",
-      "foundAt": "2026-11-25T07:16:51.416Z"
-     }
-    ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616485843",
@@ -22153,7 +21294,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22201,7 +21342,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22249,7 +21390,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22298,7 +21439,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22306,102 +21447,6 @@ window.TENDER_DATA = {
       "platformCode": "ROS",
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616543486",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616560721",
-    "regNumber": "32616560721",
-    "externalId": "32616560721",
-    "title": "Выполнение работ по приведению кабельных туннелей в соответствии НТД (Ремонт трубопроводов, люков, лестниц. Монтаж ограждений) на филиале ТЭЦ-9 в г. Ангарске",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://utp.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "733 250 ₽",
-    "priceNum": 733250,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616560721",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616560721",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616594330",
-    "regNumber": "32616594330",
-    "externalId": "32616594330",
-    "title": "Выполнение работ по ремонту фрамуг аэрационного фонаря в здании главного корпуса на филиале ТЭЦ-9 в г.Ангарске",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://www.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "734 200 ₽",
-    "priceNum": 734200,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594330",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594330",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -22442,7 +21487,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22450,103 +21495,6 @@ window.TENDER_DATA = {
       "platformCode": "SBER",
       "platformName": "Сбербанк-АСТ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616596659",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616510687",
-    "regNumber": "32616510687",
-    "externalId": "32616510687",
-    "title": "Лот № 1: Выполнение строительно-монтажных и прочих работ по объекту: \"КОТЛОАГРЕГАТ 3 (инв. № ИЭ1714270014). Модернизация. Замена фронтовой стены топки от отм. 14.3м до выходных коллекторов (формуляр №3)\" (Н-И ТЭЦ); Лот № 2: Выполнение строительно-монтажных работ по объекту: «КОТЛОАГРЕГАТ 3 (инв. № ИЭ1740000014). Модернизация. Замена правой стены горизонтального газохода (укороченные панели) формуляр №8».(Н-И ТЭЦ)",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://utp.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "52 902 898 ₽",
-    "priceNum": 52902898,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510687",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510687",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616561434",
-    "regNumber": "32616561434",
-    "externalId": "32616561434",
-    "title": "226817 Ремонт асфальтового покрытия для Кармановской ГРЭС филиала ООО «БГК»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
-    "customerInn": "0277077282",
-    "customerCode": "0277077282",
-    "matchedOrgId": "C-BGK",
-    "matchedOrgName": "Башкирская генерирующая компания",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "http://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "13 660 027,27 ₽",
-    "priceNum": 13660027.27,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616561434",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BGK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616561434",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -22587,7 +21535,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22635,7 +21583,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22647,55 +21595,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "TEK:tt-961630",
-    "regNumber": "",
-    "externalId": "tt-961630",
-    "title": "Мелкий ремонт спецодежды",
-    "customer": "Общество с Ограниченной Ответственностью \"РН-Бурение\"",
-    "customerInn": "7706613770",
-    "customerCode": "7706613770",
-    "matchedOrgId": "R-OIL-RNBUR",
-    "matchedOrgName": "РН-Бурение",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Приём заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20375774",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "R-OIL-RNBUR"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20375774",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "32616598494",
@@ -22732,7 +21631,7 @@ window.TENDER_DATA = {
      "C-TOMGEN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22780,7 +21679,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -22789,54 +21688,6 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595039",
       "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "B2B:32616461107",
-    "regNumber": "32616461107",
-    "externalId": "32616461107",
-    "title": "Открытый запрос предложений в электронной форме на право заключения договора на поставку продукции «Датчики скорости турбины ПГУ» для нужд Филиала «Удмуртский» ПАО «Т Плюс» (4636677)",
-    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\"",
-    "customerInn": "6315376946",
-    "customerCode": "6315376946",
-    "matchedOrgId": "H-TPLUS",
-    "matchedOrgName": "Т Плюс",
-    "platformCode": "B2B",
-    "platformName": "B2B-Center",
-    "platformUrl": "https://www.b2b-center.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "1 323 567 ₽",
-    "priceNum": 1323567,
-    "published": "2026-11-19",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-19",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "H-TPLUS"
-    ],
-    "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "B2B",
-      "platformName": "B2B-Center",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
-      "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ],
     "isNew": false
@@ -22876,7 +21727,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -22906,119 +21757,6 @@ window.TENDER_DATA = {
     "isNew": false
    },
    {
-    "id": "32616593352",
-    "regNumber": "32616593352",
-    "externalId": "32616593352",
-    "title": "227216/ОК Сухое газодинамическое уплотнение газодожимных компрессоров для Талаховской ТЭС",
-    "customer": "АО «Интер РАО — Электрогенерация»",
-    "customerInn": "7704784450",
-    "customerCode": "7704784450",
-    "matchedOrgId": "C-IRAO-GEN",
-    "matchedOrgName": "Интер РАО — Электрогенерация",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "5 226 371,58 ₽",
-    "priceNum": 5226371.58,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "C-IRAO-GEN",
-     "H-IRAO"
-    ],
-    "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
-      "foundAt": "2026-11-20T20:30:08.015Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
-      "foundAt": "2026-11-20T15:12:44.741Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "TEK:20375040",
-    "regNumber": "",
-    "externalId": "20375040",
-    "title": "227216/ОК Сухое газодинамическое уплотнение газодожимных компрессоров для Талаховской ТЭС",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ\"",
-    "customerInn": "7703642903",
-    "customerCode": "",
-    "matchedOrgId": "H-IRAO",
-    "matchedOrgName": "Интер РАО",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "5 226 371,58 ₽",
-    "priceNum": 5226371.58,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "active",
-    "url": "https://www.tektorg.ru/interrao/procedures/20375040",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "H-IRAO"
-    ],
-    "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-25T07:16:01.108Z",
-    "sources": [
-     {
-      "source": "tektorg",
-      "sourceName": "ТЭК-Торг",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/interrao/procedures/20375040",
-      "foundAt": "2026-11-24T05:58:04.093Z"
-     },
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/interrao/procedures/20375040",
-      "foundAt": "2026-11-24T14:16:20.323Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
     "id": "GPB:2117086",
     "regNumber": "",
     "externalId": "2117086",
@@ -23041,7 +21779,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310456",
     "keywords": [
      "Ремонт"
@@ -23064,7 +21802,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616572912",
@@ -23101,7 +21840,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23149,7 +21888,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23201,7 +21940,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23213,152 +21952,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "32616592178",
-    "regNumber": "32616592178",
-    "externalId": "32616592178",
-    "title": "ОКПД2 28.13.31.110 Поставка запасных частей циркуляционного насоса для нужд Саяно-Шушенского филиала АО \"Гидроремонт-ВКК\" (Лот № 0005-РЕМ ДОХ-2027-ГРВКК-СШФ-Стор)",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГИДРОРЕМОНТ-ВКК\"",
-    "customerInn": "6345012488",
-    "customerCode": "6345012488",
-    "matchedOrgId": "R-GIDROREMONT",
-    "matchedOrgName": "Гидроремонт-ВКК",
-    "platformCode": "RAD",
-    "platformName": "РАД / Lot-online",
-    "platformUrl": "https://lot-online.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "4 380 000 ₽",
-    "priceNum": 4380000,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592178",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "R-GIDROREMONT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "RAD",
-      "platformName": "РАД / Lot-online",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592178",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "RAD:rad-RAD260058502",
-    "regNumber": "",
-    "externalId": "rad-RAD260058502",
-    "title": "ОКПД 2 28.29.84.000 Поставка запасных частей для ремонта оборудования для нужд ПУ Новобурейский",
-    "customer": "Зейский филиал АО \"Гидроремонт-ВКК\" в г.Зея",
-    "customerInn": "6345012488",
-    "customerCode": "",
-    "matchedOrgId": "R-GIDROREMONT",
-    "matchedOrgName": "Гидроремонт-ВКК",
-    "platformCode": "RAD",
-    "platformName": "РАД / Lot-online",
-    "platformUrl": "https://tender.lot-online.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Идет прием коммерческих предложений",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3rccubcmhmvp2c",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "R-GIDROREMONT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "RAD",
-      "platformName": "РАД / Lot-online",
-      "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3rccubcmhmvp2c",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "32616541687",
-    "regNumber": "32616541687",
-    "externalId": "32616541687",
-    "title": "226561_Выполнение работ по разработке проектно-сметной (рабочей) документации и капитальному ремонту защитного сооружения гражданской обороны производственной площадки ТЭЦ-1 Уфимской ТЭЦ-4 ООО «БГК»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
-    "customerInn": "0277077282",
-    "customerCode": "0277077282",
-    "matchedOrgId": "C-BGK",
-    "matchedOrgName": "Башкирская генерирующая компания",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://interrao.roseltorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "14 022 501,02 ₽",
-    "priceNum": 14022501.02,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616541687",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BGK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616541687",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "32616537478",
@@ -23395,7 +21988,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23403,102 +21996,6 @@ window.TENDER_DATA = {
       "platformCode": "SBER",
       "platformName": "Сбербанк-АСТ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616537478",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616590353",
-    "regNumber": "32616590353",
-    "externalId": "32616590353",
-    "title": "Выполнение работ по ремонту помещения ГЩУ в ГК ряд Б-В, отм. 9,6 м, ось 5 на филиале НИТЭЦ в г. Иркутск",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://www.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "3 447 978 ₽",
-    "priceNum": 3447978,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590353",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590353",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616590810",
-    "regNumber": "32616590810",
-    "externalId": "32616590810",
-    "title": "Выполнение работ по ремонту помещения № 128 в объединенном вспомогательном корпусе химического цеха под производственные нужды, связанные с охраной труда на У-ИТЭЦ в г. Усть-Илимске",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://www.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "1 379 614 ₽",
-    "priceNum": 1379614,
-    "published": "2026-11-18",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-18",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590810",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590810",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -23539,7 +22036,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23587,7 +22084,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23635,7 +22132,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23646,8 +22143,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616590308",
@@ -23684,7 +22180,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23695,8 +22191,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616589992",
@@ -23733,7 +22228,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23781,7 +22276,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23817,7 +22312,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310185",
     "keywords": [
      "Ремонт"
@@ -23838,54 +22333,6 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1310185",
       "foundAt": "2026-11-25T07:16:51.416Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616582317",
-    "regNumber": "32616582317",
-    "externalId": "32616582317",
-    "title": "Поставка запасных частей тягодутьевых механизмов для паровых котлов (для ремонта подрядным способом)для нужд филиала АО \"Татэнерго\" Набережночелнинская ТЭЦ",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТАТЭНЕРГО\"",
-    "customerInn": "1657036630",
-    "customerCode": "1657036630",
-    "matchedOrgId": "H-TAT",
-    "matchedOrgName": "Татэнерго",
-    "platformCode": "ZAKAZ",
-    "platformName": "ЗаказРФ",
-    "platformUrl": "http://etp.zakazrf.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "2 982 000 ₽",
-    "priceNum": 2982000,
-    "published": "2026-11-17",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-17",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582317",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-TAT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "ZAKAZ",
-      "platformName": "ЗаказРФ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582317",
-      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
     "isNew": false,
@@ -23926,7 +22373,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -23938,104 +22385,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "32616500701",
-    "regNumber": "32616500701",
-    "externalId": "32616500701",
-    "title": "Лот №1: Выполнение строительно-монтажных работ по объекту: «КОТЛОАГРЕГАТ 6. (инв. № ИЭ1740000017). Модернизация. Замена всасывающего тракта ДРГ с компенсаторами» (Н-И ТЭЦ) Лот №2: Выполнение строительно-монтажных и прочих работ по объекту: \"КОТЛОАГРЕГАТ 4 (инв. № ИЭ1714270015). Модернизация. Замена фронтовой стены топки от отм. 14.3м до выходных коллекторов (формуляр №3)\" (Н-И ТЭЦ)",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://utp.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "48 949 188 ₽",
-    "priceNum": 48949188,
-    "published": "2026-11-17",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-17",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616500701",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616500701",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616511208",
-    "regNumber": "32616511208",
-    "externalId": "32616511208",
-    "title": "Выполнение строительно-монтажных и прочих работ по объекту: \"Котельный агрегат N 3 (котельное отделение). (инв. № ИЭ551400163). Модернизация. Замена пароперегревателя 2 ступени\" (ШУ Н-И ТЭЦ)",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://utp.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "12 085 775 ₽",
-    "priceNum": 12085775,
-    "published": "2026-11-17",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-17",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511208",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511208",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
    },
    {
     "id": "TEK:tt-960802",
@@ -24072,7 +22421,7 @@ window.TENDER_DATA = {
      "O-RNPD"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24120,7 +22469,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24168,7 +22517,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24179,8 +22528,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "32616586988",
@@ -24217,7 +22565,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24265,7 +22613,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24274,64 +22622,6 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616585273",
       "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616583256",
-    "regNumber": "32616583256",
-    "externalId": "32616583256",
-    "title": "227191_Масло турбинное для Ивановских ПГУ",
-    "customer": "АО «Интер РАО — Электрогенерация»",
-    "customerInn": "7704784450",
-    "customerCode": "7704784450",
-    "matchedOrgId": "C-IRAO-GEN",
-    "matchedOrgName": "Интер РАО — Электрогенерация",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "33 058 382,72 ₽",
-    "priceNum": 33058382.72,
-    "published": "2026-11-16",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": 1,
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "C-IRAO-GEN",
-     "H-IRAO"
-    ],
-    "foundAt": "2026-11-20T20:30:08.015Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
-      "foundAt": "2026-11-20T20:30:08.015Z"
-     },
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
-      "foundAt": "2026-11-24T13:04:21.643Z"
      }
     ],
     "isNew": false
@@ -24359,7 +22649,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/rosnefttkp/procedures/20364922",
     "keywords": [
      "Порошковые",
@@ -24384,7 +22674,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20363052",
@@ -24409,7 +22700,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-16",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/rosnefttkp/procedures/20363052",
     "keywords": [
      "Уплотнения"
@@ -24432,7 +22723,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:680071996",
@@ -24469,7 +22761,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24486,54 +22778,6 @@ window.TENDER_DATA = {
       "platformName": "Фабрикант",
       "url": "https://fabrikant.ru/v2/trades/procedure/view/MzhWYKy7C11V7_t6Z43ltw",
       "foundAt": "2026-11-24T17:05:08.678Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616580841",
-    "regNumber": "32616580841",
-    "externalId": "32616580841",
-    "title": "Лот № 18101-РЕМ ПРОД-2027-ЯЭ \"ОКДП2 42.22.22.140. Выполнение работ по чистке просеки воздушной линии 110 киловольт ПП-8 — Мурья Западных электрических сетей в рамках ремонтной программы\"",
-    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЯКУТСКЭНЕРГО\"",
-    "customerInn": "1435028701",
-    "customerCode": "1435028701",
-    "matchedOrgId": "C-YAKUT",
-    "matchedOrgName": "Якутскэнерго",
-    "platformCode": "RAD",
-    "platformName": "РАД / Lot-online",
-    "platformUrl": "https://lot-online.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "16 871 732,49 ₽",
-    "priceNum": 16871732.49,
-    "published": "2026-11-16",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580841",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-YAKUT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "RAD",
-      "platformName": "РАД / Lot-online",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580841",
-      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
     "isNew": false
@@ -24573,7 +22817,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24621,7 +22865,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24669,7 +22913,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24681,104 +22925,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "32616580418",
-    "regNumber": "32616580418",
-    "externalId": "32616580418",
-    "title": "Выполнение работ по капитальному ремонту электродвигателей (4682182)",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РИР ЭНЕРГО\"",
-    "customerInn": "6829012680",
-    "customerCode": "6829012680",
-    "matchedOrgId": "H-RIR",
-    "matchedOrgName": "РИР Энерго",
-    "platformCode": "B2B",
-    "platformName": "B2B-Center",
-    "platformUrl": "https://www.b2b-center.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "3 512 728,01 ₽",
-    "priceNum": 3512728.01,
-    "published": "2026-11-16",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580418",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-RIR"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "B2B",
-      "platformName": "B2B-Center",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580418",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
-   },
-   {
-    "id": "32616582176",
-    "regNumber": "32616582176",
-    "externalId": "32616582176",
-    "title": "Выполнение строительно-монтажных работ по мероприятию: «Модернизация КА-3 с заменой КПП (входная и промежуточная ступени)» для филиала «Оренбургский» ПАО «Т Плюс» (Сакмарская ТЭЦ) (4683042)",
-    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\"",
-    "customerInn": "6315376946",
-    "customerCode": "6315376946",
-    "matchedOrgId": "H-TPLUS",
-    "matchedOrgName": "Т Плюс",
-    "platformCode": "B2B",
-    "platformName": "B2B-Center",
-    "platformUrl": "https://www.b2b-center.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "17 460 315 ₽",
-    "priceNum": 17460315,
-    "published": "2026-11-16",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-16",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582176",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "H-TPLUS"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "B2B",
-      "platformName": "B2B-Center",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582176",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
    },
    {
     "id": "TEK:20293988",
@@ -24803,7 +22949,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-13",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/interrao/procedures/20293988",
     "keywords": [
      "Турбина"
@@ -24834,7 +22980,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2112252",
@@ -24859,7 +23006,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#com/procedure/view/procedure/1309127",
     "keywords": [
      "Уплотнения"
@@ -24882,7 +23029,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616574489",
@@ -24919,7 +23067,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -24967,7 +23115,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25015,7 +23163,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25027,55 +23175,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "TEK:tt-960086",
-    "regNumber": "",
-    "externalId": "tt-960086",
-    "title": "Оказания услуг по ремонту систем автоматических пожарных сигнализаций в мобильных зданиях на кустовых площадках УНПА Каюм",
-    "customer": "Акционерное общество \"РН-Няганьнефтегаз\"",
-    "customerInn": "8610010727",
-    "customerCode": "8610010727",
-    "matchedOrgId": "C-OIL-RNNYAG",
-    "matchedOrgName": "РН-Няганьнефтегаз",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-11-13",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-13",
-    "status": "Приём заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/market/procedures/20294038",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-OIL-RNNYAG"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/market/procedures/20294038",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "TEK:tt-959821",
@@ -25112,7 +23211,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25148,7 +23247,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-12",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/rosnefttkp/procedures/20290934",
     "keywords": [
      "Ремонт",
@@ -25173,7 +23272,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ZAKAZ:32616573382",
@@ -25212,7 +23312,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T16:53:47.655Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25260,7 +23360,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25309,7 +23409,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25317,54 +23417,6 @@ window.TENDER_DATA = {
       "platformCode": "ROS",
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616571008",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "32616568780",
-    "regNumber": "32616568780",
-    "externalId": "32616568780",
-    "title": "Выполнение работ по ремонту сетей освещения и кабельных линий на ШУ Н-И ТЭЦ в г. Шелехове",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://www.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "3 881 550 ₽",
-    "priceNum": 3881550,
-    "published": "2026-11-12",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-12",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616568780",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616568780",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ],
@@ -25405,7 +23457,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25453,7 +23505,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25501,7 +23553,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25537,7 +23589,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-20",
     "status": "Подача заявок",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://zakupki.gov.ru/epz/order/notice/notice223/signview/listModal.html?purchaseNoticeGuid=1a372e2d-f128-4478-8dbf-e753b904430e&purchaseNoticeNumber=32616564450",
     "keywords": [
      "Турбина"
@@ -25568,7 +23620,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-20T12:15:00.462Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616567105",
@@ -25605,7 +23658,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25617,153 +23670,6 @@ window.TENDER_DATA = {
      }
     ],
     "isNew": false
-   },
-   {
-    "id": "32616563867",
-    "regNumber": "32616563867",
-    "externalId": "32616563867",
-    "title": "Выполнение строительно-монтажных работ по объекту: \"Распредустройство комплект 3 кВ. для собств.расходов. Инв. № ИЭ551400228. Модернизация Замена электродвигателя дутьевого вентилятора ДВ-2.\" «Распредустройство комплект 3 кВ. для собств.расходов. Инв. № ИЭ551400228. Модернизация Замена эл. двигателя молотковой мельницы ММТ-2А»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
-    "customerInn": "3808229774",
-    "customerCode": "3808229774",
-    "matchedOrgId": "C-BEK",
-    "matchedOrgName": "Байкальская энергетическая компания",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://www.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "522 810 ₽",
-    "priceNum": 522810,
-    "published": "2026-11-11",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-11",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563867",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "C-BEK"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563867",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616562890",
-    "regNumber": "32616562890",
-    "externalId": "32616562890",
-    "title": "Поставка комплектов модернизации систем хранения данных",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТОПЛИВНО-ЭНЕРГЕТИЧЕСКИЙ КОМПЛЕКС САНКТ-ПЕТЕРБУРГА\"",
-    "customerInn": "7838129301",
-    "customerCode": "7838129301",
-    "matchedOrgId": "H-TEKSPB",
-    "matchedOrgName": "ТЭК СПб",
-    "platformCode": "SBER",
-    "platformName": "Сбербанк-АСТ",
-    "platformUrl": "http://utp.sberbank-ast.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "378 334 198,78 ₽",
-    "priceNum": 378334198.78,
-    "published": "2026-11-11",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-11",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562890",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "H-TEKSPB"
-    ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "SBER",
-      "platformName": "Сбербанк-АСТ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562890",
-      "foundAt": "2026-11-26T11:14:23.771Z"
-     }
-    ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
-   },
-   {
-    "id": "32616563376",
-    "regNumber": "32616563376",
-    "externalId": "32616563376",
-    "title": "Право заключения договоров на выполнение работ по ремонтам",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТАТЭНЕРГОСБЫТ\"",
-    "customerInn": "1657082308",
-    "customerCode": "1657082308",
-    "matchedOrgId": "H-TAT",
-    "matchedOrgName": "Татэнерго",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "1 039 642,65 ₽",
-    "priceNum": 1039642.65,
-    "published": "2026-11-10",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-10",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563376",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "H-TAT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563376",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false,
-    "phaseSource": "local"
    },
    {
     "id": "TEK:20231059",
@@ -25788,7 +23694,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-10",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20231059",
     "keywords": [
      "Турбина"
@@ -25820,7 +23726,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:tt-958249",
@@ -25857,7 +23764,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -25909,7 +23816,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -25969,7 +23876,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-09",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1034622",
     "keywords": [
      "Ремонт"
@@ -25992,55 +23899,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:42.688Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "32616553598",
-    "regNumber": "32616553598",
-    "externalId": "32616553598",
-    "title": "Лот № 16901-РЕМ ПРОД-2027-ЯЭ: «ОКПД2 42.22.22.140. Выполнение работ (включая поставку материалов) по капитальному ремонту воздушной линии 220 киловольт Вилюйская ГЭС — Айхал цепь 2 Западных электрических сетей в рамках ремонтной программы»",
-    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЯКУТСКЭНЕРГО\"",
-    "customerInn": "1435028701",
-    "customerCode": "1435028701",
-    "matchedOrgId": "C-YAKUT",
-    "matchedOrgName": "Якутскэнерго",
-    "platformCode": "RAD",
-    "platformName": "РАД / Lot-online",
-    "platformUrl": "https://lot-online.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "32 656 268,63 ₽",
-    "priceNum": 32656268.63,
-    "published": "2026-11-09",
-    "deadline": "2026-11-26",
-    "updated": "2026-11-09",
-    "status": "Подача заявок",
-    "stage": "submission",
-    "phase": "active",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616553598",
-    "keywords": [
-     "Ремонт"
-    ],
-    "matchedKeywords": [
-     "Ремонт"
-    ],
-    "enterpriseIds": [
-     "C-YAKUT"
-    ],
-    "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T11:14:23.771Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "RAD",
-      "platformName": "РАД / Lot-online",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616553598",
-      "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:679991236",
@@ -26065,7 +23925,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-06",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1033913",
     "keywords": [
      "Вставки"
@@ -26088,7 +23948,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "32616414312",
@@ -26125,7 +23986,7 @@ window.TENDER_DATA = {
      "H-NTEK"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26161,7 +24022,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-04",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/zakupki/procedures/20193697",
     "keywords": [
      "Модернизация",
@@ -26194,7 +24055,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:679969604",
@@ -26219,7 +24081,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-03",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1033186",
     "keywords": [
      "Порошковые"
@@ -26242,7 +24104,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "GPB:2100159",
@@ -26267,7 +24130,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "accepting",
     "stage": "accepting",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1041088",
     "keywords": [
      "Уплотнения"
@@ -26290,7 +24153,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:47.134Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:20188037",
@@ -26315,7 +24179,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-02",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/interrao/procedures/20188037",
     "keywords": [
      "Турбина"
@@ -26346,7 +24210,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:679958081",
@@ -26371,7 +24236,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-02",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1032726",
     "keywords": [
      "Вставки"
@@ -26394,7 +24259,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "FAB:679955709",
@@ -26419,7 +24285,7 @@ window.TENDER_DATA = {
     "updated": "2026-11-02",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://fabrikant.ru/trades/atom/PriceMonitoring/?action=viewu0026id=1032566",
     "keywords": [
      "Порошковые"
@@ -26442,7 +24308,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T17:05:08.678Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "197180000330247754",
@@ -26481,7 +24348,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26492,8 +24359,7 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ],
-    "isNew": true,
-    "firstSeen": "2026-11-26T19:45:28.560Z"
+    "isNew": false
    },
    {
     "id": "SBER_B2B:sb-31351800",
@@ -26530,7 +24396,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26539,102 +24405,6 @@ window.TENDER_DATA = {
       "platformName": "Сбер Б2Б",
       "url": "https://sberb2b.ru/needs/31351800",
       "foundAt": "2026-11-25T16:29:04.131Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "TEK:20091599",
-    "regNumber": "",
-    "externalId": "20091599",
-    "title": "Закупка редуктора турбины и блока декантера для нужд ПАО «Славнефть-ЯНОС».",
-    "customer": "Публичное акционерное общество \"\"СЛАВНЕФТЬ-ЯРОСЛАВНЕФТЕОРГСИНТЕЗ\"\"",
-    "customerInn": "7601001107",
-    "customerCode": "",
-    "matchedOrgId": "H-OIL-SLV",
-    "matchedOrgName": "Славнефть",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-10-27",
-    "deadline": "2026-11-26",
-    "updated": "2026-10-27",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "active",
-    "url": "https://www.tektorg.ru/zakupki/procedures/20091599",
-    "keywords": [
-     "Турбина"
-    ],
-    "matchedKeywords": [
-     "Турбина"
-    ],
-    "enterpriseIds": [
-     "H-OIL-SLV"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-25T07:16:01.108Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/zakupki/procedures/20091599",
-      "foundAt": "2026-11-25T07:16:01.108Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "TEK:20036900",
-    "regNumber": "",
-    "externalId": "20036900",
-    "title": "Устройства защиты, вставки плавкие, предохранители, патроны (продажа)",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИРКУТСКАЯ НЕФТЯНАЯ КОМПАНИЯ\"",
-    "customerInn": "3808066311",
-    "customerCode": "",
-    "matchedOrgId": "C-OIL-INK",
-    "matchedOrgName": "Иркутская нефтяная компания (ИНК)",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "7 689 376,96 ₽",
-    "priceNum": 7689376.96,
-    "published": "2026-10-21",
-    "deadline": "2026-11-26",
-    "updated": "2026-10-21",
-    "status": "Приём заявок",
-    "stage": "Приём заявок",
-    "phase": "active",
-    "url": "https://www.tektorg.ru/sale/procedures/20036900",
-    "keywords": [
-     "Вставки"
-    ],
-    "matchedKeywords": [
-     "Вставки"
-    ],
-    "enterpriseIds": [
-     "C-OIL-INK"
-    ],
-    "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-25T07:16:01.108Z",
-    "sources": [
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/sale/procedures/20036900",
-      "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
     "isNew": false
@@ -26674,7 +24444,7 @@ window.TENDER_DATA = {
      "C-OIL-RNUVAT"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26722,7 +24492,7 @@ window.TENDER_DATA = {
      "H-OIL-BN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26758,7 +24528,7 @@ window.TENDER_DATA = {
     "updated": "2026-08-07",
     "status": "Подача заявок",
     "stage": "Подача заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/bi_223fz/procedures/19926134",
     "keywords": [
      "Уплотнения"
@@ -26782,7 +24552,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "RAD:rad-RAD260037550-11",
@@ -26819,7 +24590,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -26855,7 +24626,7 @@ window.TENDER_DATA = {
     "updated": "2026-07-23",
     "status": "Подача заявок",
     "stage": "Подача заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/bi_223fz/procedures/19925683",
     "keywords": [
      "Ремонт",
@@ -26880,7 +24651,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "TEK:18678211",
@@ -26905,7 +24677,7 @@ window.TENDER_DATA = {
     "updated": "2026-03-30",
     "status": "Приём заявок",
     "stage": "Приём заявок",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.tektorg.ru/sale/procedures/18678211",
     "keywords": [
      "Уплотнения"
@@ -26928,243 +24700,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:16:01.108Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:B1811261948307",
-    "regNumber": "",
-    "externalId": "B1811261948307",
-    "title": "Уплотнение торцевое 7А70А (7АР70А) в составе с кольцами, ТУ 26-06-808-73",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"СЕВЕРНОЕ МАШИНОСТРОИТЕЛЬНОЕ ПРЕДПРИЯТИЕ\"",
-    "customerInn": "2902059091",
-    "customerCode": "",
-    "matchedOrgId": "R-SEVMASH",
-    "matchedOrgName": "Севмаш",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "R-SEVMASH"
-    ],
-    "foundAt": "2026-11-24T05:58:20.217Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
-      "foundAt": "2026-11-24T05:58:20.217Z"
-     },
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
-      "foundAt": "2026-11-24T14:16:58.315Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:RH04112600008",
-    "regNumber": "",
-    "externalId": "RH04112600008",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     },
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
-      "foundAt": "2026-11-24T14:16:58.315Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:RH04112600007",
-    "regNumber": "",
-    "externalId": "RH04112600007",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №7 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     },
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
-      "foundAt": "2026-11-24T14:16:58.315Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:RH04112600006",
-    "regNumber": "",
-    "externalId": "RH04112600006",
-    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
-    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
-    "customerInn": "4100000668",
-    "customerCode": "",
-    "matchedOrgId": "C-KAMCHAT",
-    "matchedOrgName": "Камчатскэнерго",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "C-KAMCHAT"
-    ],
-    "foundAt": "2026-11-20T15:37:06.675Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg",
-      "sourceName": "Росэлторг",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
-      "foundAt": "2026-11-20T15:37:06.675Z"
-     },
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
-      "foundAt": "2026-11-24T14:16:58.315Z"
-     }
-    ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:B2411261803057",
@@ -27189,7 +24726,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/B2411261803057/1",
     "keywords": [
      "Уплотнения"
@@ -27212,7 +24749,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-24T16:26:26.978Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:RH25112600030",
@@ -27237,7 +24775,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/RH25112600030/1",
     "keywords": [
      "Турбина"
@@ -27260,7 +24798,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T05:55:42.137Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:RH25112600035",
@@ -27285,7 +24824,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/RH25112600035/1",
     "keywords": [
      "Ремонт"
@@ -27308,7 +24847,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM10112600161",
@@ -27333,7 +24873,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM10112600161/1",
     "keywords": [
      "Уплотнения"
@@ -27356,7 +24896,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM16112600091",
@@ -27381,7 +24922,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM16112600091/1",
     "keywords": [
      "Уплотнения"
@@ -27404,7 +24945,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM11112600115",
@@ -27429,7 +24971,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM11112600115/1",
     "keywords": [
      "Уплотнения"
@@ -27452,7 +24994,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM11112600056",
@@ -27477,7 +25020,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM11112600056/1",
     "keywords": [
      "Уплотнения"
@@ -27500,103 +25043,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:COM03112600047",
-    "regNumber": "",
-    "externalId": "COM03112600047",
-    "title": "Поставка уплотнений к насосно-компрессорному оборудованию для ТПП \"Когалымнефтегаз\" в 2026",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-ЗАПАДНАЯ СИБИРЬ\"",
-    "customerInn": "8608048498",
-    "customerCode": "",
-    "matchedOrgId": "C-OIL-LZS",
-    "matchedOrgName": "ЛУКОЙЛ-Западная Сибирь",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/COM03112600047/1",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "C-OIL-LZS"
-    ],
-    "foundAt": "2026-11-25T07:17:05.127Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/COM03112600047/1",
-      "foundAt": "2026-11-25T07:17:05.127Z"
-     }
-    ],
-    "isNew": false
-   },
-   {
-    "id": "ROS:COM30102600135",
-    "regNumber": "",
-    "externalId": "COM30102600135",
-    "title": "Поставка уплотнения Burgmann в 1 кв 2027 г",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПОДДЕРЖКИ БИЗНЕСА\"",
-    "customerInn": "7709840210",
-    "customerCode": "",
-    "matchedOrgId": "H-OIL-LK",
-    "matchedOrgName": "ЛУКОЙЛ",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
-    "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/COM30102600135/1",
-    "keywords": [
-     "Уплотнения"
-    ],
-    "matchedKeywords": [
-     "Уплотнения"
-    ],
-    "enterpriseIds": [
-     "H-OIL-LK"
-    ],
-    "foundAt": "2026-11-25T07:17:05.127Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
-    "sources": [
-     {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/COM30102600135/1",
-      "foundAt": "2026-11-25T07:17:05.127Z"
-     }
-    ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM17112600007",
@@ -27621,7 +25069,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM17112600007/1",
     "keywords": [
      "Уплотнения"
@@ -27644,7 +25092,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM18112600192",
@@ -27669,7 +25118,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM18112600192/1",
     "keywords": [
      "Ремонт",
@@ -27694,7 +25143,8 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
     "id": "ROS:COM24112600036",
@@ -27719,7 +25169,7 @@ window.TENDER_DATA = {
     "updated": "",
     "status": "",
     "stage": "",
-    "phase": "active",
+    "phase": "archive",
     "url": "https://www.roseltorg.ru/procedure/COM24112600036/1",
     "keywords": [
      "Уплотнения"
@@ -27742,55 +25192,102 @@ window.TENDER_DATA = {
       "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ],
-    "isNew": false
+    "isNew": false,
+    "phaseSource": "local"
    },
    {
-    "id": "ROS:COM06112600225",
-    "regNumber": "",
-    "externalId": "COM06112600225",
-    "title": "Поставка уплотнения торцового для насоса Shaft seal GQQE GG в 4 кв 2026г",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПОДДЕРЖКИ БИЗНЕСА\"",
-    "customerInn": "7709840210",
-    "customerCode": "",
-    "matchedOrgId": "H-OIL-LK",
-    "matchedOrgName": "ЛУКОЙЛ",
-    "platformCode": "ROS",
-    "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "https://www.roseltorg.ru",
-    "source": "roseltorg-direct",
-    "sourceName": "Росэлторг (прямой HTML)",
-    "law": "",
-    "price": "",
-    "priceNum": 0,
-    "published": "",
+    "id": "32616626207",
+    "regNumber": "32616626207",
+    "externalId": "32616626207",
+    "title": "Оказание услуг по техническому обслуживанию и ремонту легкового транспорта",
+    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
+    "customerInn": "6829012680",
+    "customerCode": "6829012680",
+    "matchedOrgId": "H-RIR",
+    "matchedOrgName": "РИР Энерго",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "gosplan",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "583 303 ₽",
+    "priceNum": 583303,
+    "published": "2026-11-26",
     "deadline": "2026-11-26",
-    "updated": "",
-    "status": "",
-    "stage": "",
-    "phase": "active",
-    "url": "https://www.roseltorg.ru/procedure/COM06112600225/1",
+    "updated": "2026-11-26",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616626207",
     "keywords": [
-     "Уплотнения"
+     "Ремонт"
     ],
     "matchedKeywords": [
-     "Уплотнения"
+     "Ремонт"
     ],
     "enterpriseIds": [
-     "H-OIL-LK"
+     "H-RIR"
     ],
-    "foundAt": "2026-11-25T07:17:05.127Z",
-    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "foundAt": "2026-11-26T10:50:15.121Z",
+    "lastSeen": "2026-11-26T10:50:15.121Z",
     "sources": [
      {
-      "source": "roseltorg-direct",
-      "sourceName": "Росэлторг (прямой HTML)",
-      "platformCode": "ROS",
-      "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://www.roseltorg.ru/procedure/COM06112600225/1",
-      "foundAt": "2026-11-25T07:17:05.127Z"
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616626207",
+      "foundAt": "2026-11-26T10:50:15.121Z"
      }
+    ]
+   },
+   {
+    "id": "32616630453",
+    "regNumber": "32616630453",
+    "externalId": "32616630453",
+    "title": "Выполнение работ по ремонту водопроводной линии",
+    "customer": "АО «РИР Энерго» (ранее ПАО «Квадра»)",
+    "customerInn": "6829012680",
+    "customerCode": "6829012680",
+    "matchedOrgId": "H-RIR",
+    "matchedOrgName": "РИР Энерго",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "gosplan",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "557 352,62 ₽",
+    "priceNum": 557352.62,
+    "published": "2026-11-26",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-26",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616630453",
+    "keywords": [
+     "Ремонт"
     ],
-    "isNew": false
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "H-RIR"
+    ],
+    "foundAt": "2026-11-26T17:20:19.269Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
+    "sources": [
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616630453",
+      "foundAt": "2026-11-26T17:20:19.269Z"
+     }
+    ]
    },
    {
     "id": "32616407792",
@@ -27831,7 +25328,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T17:37:06.693Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -27840,6 +25337,53 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616407792",
       "foundAt": "2026-11-26T17:37:06.693Z"
+     }
+    ]
+   },
+   {
+    "id": "PORTAL_POST:pp-need-6318542",
+    "regNumber": "",
+    "externalId": "pp-need-6318542",
+    "title": "Оказание услуг по ремонту офисной техники",
+    "customer": "ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СПОРТИВНАЯ ШКОЛА КРОНШТАДТСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА",
+    "customerInn": "pp-1302226",
+    "customerCode": "pp-1302226",
+    "matchedOrgId": "O-KRONSTADT",
+    "matchedOrgName": "Кронштадт",
+    "platformCode": "PORTAL_POST",
+    "platformName": "Портал поставщиков",
+    "platformUrl": "https://zakupki.mos.ru/need/6318542",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "7 120,14 ₽",
+    "priceNum": 7120.14,
+    "published": "2026-11-25",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-25",
+    "status": "Прием предложений",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.mos.ru/need/6318542",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "O-KRONSTADT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "PORTAL_POST",
+      "platformName": "Портал поставщиков",
+      "url": "https://zakupki.mos.ru/need/6318542",
+      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
    },
@@ -27878,7 +25422,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -27925,7 +25469,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -27981,6 +25525,278 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/market/procedures/20386285",
       "foundAt": "2026-11-25T07:16:01.108Z"
+     }
+    ]
+   },
+   {
+    "id": "32616609709",
+    "regNumber": "32616609709",
+    "externalId": "32616609709",
+    "title": "выполнение аварийных ремонтных работ по устранению дефектов на тепловых сетях СГТС ПАО «ТГК-2»",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ТГК-2 ЭНЕРГОРЕМОНТ\"",
+    "customerInn": "7606118807",
+    "customerCode": "7606118807",
+    "matchedOrgId": "R-TGK2ER",
+    "matchedOrgName": "ТГК-2 Энергоремонт",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://corp.roseltorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "675 790,92 ₽",
+    "priceNum": 675790.92,
+    "published": "2026-11-23",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-23",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609709",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-TGK2ER",
+     "H-TGK2"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616609709",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:20380037",
+    "regNumber": "",
+    "externalId": "20380037",
+    "title": "Ремонт и техническое обслуживание грузовой и специального техники для нужд АО \"ТГК-11\"",
+    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
+    "customerInn": "5406323202",
+    "customerCode": "5406323202",
+    "matchedOrgId": "C-TGK11",
+    "matchedOrgName": "ТГК-11",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "500 000 ₽",
+    "priceNum": 500000,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20380037",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-TGK11",
+     "C-TGK1"
+    ],
+    "foundAt": "2026-11-25T07:16:01.108Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20380037",
+      "foundAt": "2026-11-25T07:16:01.108Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20380037",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:20380006",
+    "regNumber": "",
+    "externalId": "20380006",
+    "title": "Ремонт и ТО ГАЗ, УАЗ для нужд АО \"ТГК-11\"»",
+    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
+    "customerInn": "5406323202",
+    "customerCode": "5406323202",
+    "matchedOrgId": "C-TGK11",
+    "matchedOrgName": "ТГК-11",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "500 000 ₽",
+    "priceNum": 500000,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20380006",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-TGK11",
+     "C-TGK1"
+    ],
+    "foundAt": "2026-11-25T07:16:01.108Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20380006",
+      "foundAt": "2026-11-25T07:16:01.108Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20380006",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:20379963",
+    "regNumber": "",
+    "externalId": "20379963",
+    "title": "Ремонт и техническое обслуживание автобусов для нужд АО \"ТГК-11\"",
+    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
+    "customerInn": "5406323202",
+    "customerCode": "5406323202",
+    "matchedOrgId": "C-TGK11",
+    "matchedOrgName": "ТГК-11",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "500 000 ₽",
+    "priceNum": 500000,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20379963",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-TGK11",
+     "C-TGK1"
+    ],
+    "foundAt": "2026-11-25T07:16:01.108Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379963",
+      "foundAt": "2026-11-25T07:16:01.108Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379963",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:20379924",
+    "regNumber": "",
+    "externalId": "20379924",
+    "title": "Ремонт и техническое обслуживание тахографов для нужд АО \"ТГК-11\"",
+    "customer": "Акционерное общество \"Территориальная генерирующая компания №11\"",
+    "customerInn": "5406323202",
+    "customerCode": "5406323202",
+    "matchedOrgId": "C-TGK11",
+    "matchedOrgName": "ТГК-11",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "494 000 ₽",
+    "priceNum": 494000,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20379924",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-TGK11",
+     "C-TGK1"
+    ],
+    "foundAt": "2026-11-25T07:16:01.108Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379924",
+      "foundAt": "2026-11-25T07:16:01.108Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379924",
+      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
    },
@@ -28079,6 +25895,61 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "GPB:2121030",
+    "regNumber": "",
+    "externalId": "2121030",
+    "title": "Поставка ГСМ для автотранспорта СУ в г. Оренбург ООО \"ГСП Ремонт\"",
+    "customer": "ГСП Ремонт",
+    "customerInn": "7737106202",
+    "customerCode": "",
+    "matchedOrgId": "R-GSPREM",
+    "matchedOrgName": "ГСП Ремонт",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "archive",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050605",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-GSPREM"
+    ],
+    "foundAt": "2026-11-25T07:16:51.416Z",
+    "lastSeen": "2026-11-25T07:16:51.416Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050605",
+      "foundAt": "2026-11-25T07:16:51.416Z"
+     },
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050607",
+      "foundAt": "2026-11-25T07:16:51.416Z"
+     }
+    ]
+   },
+   {
     "id": "SBER_B2B:sb-71702498",
     "regNumber": "",
     "externalId": "sb-71702498",
@@ -28113,7 +25984,7 @@ window.TENDER_DATA = {
      "R-OILDIASKAN"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28122,6 +25993,273 @@ window.TENDER_DATA = {
       "platformName": "Сбер Б2Б",
       "url": "https://sberb2b.ru/needs/71702498",
       "foundAt": "2026-11-26T00:54:55.957Z"
+     }
+    ]
+   },
+   {
+    "id": "32616562548",
+    "regNumber": "32616562548",
+    "externalId": "32616562548",
+    "title": "227063 Ремонт башенных градирен №1, 2, 3, 4, для Салаватской ТЭЦ филиала ООО «БГК»",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
+    "customerInn": "0277077282",
+    "customerCode": "0277077282",
+    "matchedOrgId": "C-BGK",
+    "matchedOrgName": "Башкирская генерирующая компания",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "http://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "14 469 667 ₽",
+    "priceNum": 14469667,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562548",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BGK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562548",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:tt-962043",
+    "regNumber": "",
+    "externalId": "tt-962043",
+    "title": "Поставка Лопат для Уфимского филиала ООО \"РН-Бурение\"",
+    "customer": "Общество с Ограниченной Ответственностью \"РН-Бурение\"",
+    "customerInn": "7706613770",
+    "customerCode": "7706613770",
+    "matchedOrgId": "R-OIL-RNBUR",
+    "matchedOrgName": "РН-Бурение",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20379890",
+    "keywords": [
+     "Лопатки"
+    ],
+    "matchedKeywords": [
+     "Лопатки"
+    ],
+    "enterpriseIds": [
+     "R-OIL-RNBUR"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20379890",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:tt-962278",
+    "regNumber": "",
+    "externalId": "tt-962278",
+    "title": "Поставка запасных частей для ремонта грунтореза на базе МТЗ-82. ( Верные наименования материалов смотреть в тех .задании).",
+    "customer": "Общество с ограниченной ответственностью \"Башнефть-Строй\"",
+    "customerInn": "0271006454",
+    "customerCode": "0271006454",
+    "matchedOrgId": "H-OIL-BN",
+    "matchedOrgName": "Башнефть",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-20",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-20",
+    "status": "Приём заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20382174",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "H-OIL-BN"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20382174",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616594944",
+    "regNumber": "32616594944",
+    "externalId": "32616594944",
+    "title": "Выполнение строительно-монтажных работ по объекту: «Турбина паровая N7 с ген. 3-х фаз.мощ.110000 кВт. инв. № ИЭ9141318. Замена системы возбуждения турбогенератора ТГ-7 (тип ТВФ-110-2Е)» Система вентиляции ПВ-1",
+    "customer": "ООО «Байкальская энергетическая компания»",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "ЕИС / ГосПлан API",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "965464 ₽",
+    "priceNum": 965464,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-20T13:55:53.115Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "ЕИС / ГосПлан API",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616594944",
+      "foundAt": "2026-11-20T13:55:53.115Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
+      "foundAt": "2026-11-20T15:45:40.545Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594944",
+      "foundAt": "2026-11-20T15:12:44.741Z"
+     }
+    ]
+   },
+   {
+    "id": "32616595899",
+    "regNumber": "32616595899",
+    "externalId": "32616595899",
+    "title": "Поставка масла турбинного ТП-22С марки 1 по ТУ 38.101821-2013 для нужд филиала АО \"Татэнерго\" - Заинская ГРЭС",
+    "customer": "АО «Татэнерго»",
+    "customerInn": "1657036630",
+    "customerCode": "1657036630",
+    "matchedOrgId": "H-TAT",
+    "matchedOrgName": "Татэнерго",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "ЕИС / ГосПлан API",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "9891699 ₽",
+    "priceNum": 9891699,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-TAT"
+    ],
+    "foundAt": "2026-11-20T13:55:53.115Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
+    "sources": [
+     {
+      "source": "ЕИС / ГосПлан API",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616595899",
+      "foundAt": "2026-11-20T13:55:53.115Z"
+     },
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
+      "foundAt": "2026-11-20T15:45:40.545Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "ZAKAZ",
+      "platformName": "ЗаказРФ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616595899",
+      "foundAt": "2026-11-20T15:50:44.443Z"
      }
     ]
    },
@@ -28164,7 +26302,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -28235,7 +26373,7 @@ window.TENDER_DATA = {
      "H-ROSATOM-VIE"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T10:50:15.121Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -28282,7 +26420,7 @@ window.TENDER_DATA = {
      "H-ROSATOM-VIE"
     ],
     "foundAt": "2026-11-25T16:07:56.698Z",
-    "lastSeen": "2026-11-26T10:50:15.121Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -28378,7 +26516,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-24T17:04:59.116Z",
-    "lastSeen": "2026-11-26T19:51:47.697Z",
+    "lastSeen": "2026-11-27T01:57:35.901Z",
     "sources": [
      {
       "source": "rad-direct",
@@ -28435,6 +26573,100 @@ window.TENDER_DATA = {
       "platformName": "ТЭК-Торг",
       "url": "https://www.tektorg.ru/zakupki/procedures/20378736",
       "foundAt": "2026-11-25T07:16:01.108Z"
+     }
+    ]
+   },
+   {
+    "id": "GPB:2119861",
+    "regNumber": "",
+    "externalId": "2119861",
+    "title": "Торцовые уплотнения",
+    "customer": "АО ЧЕРНОМОРТРАНСНЕФТЬ",
+    "customerInn": "2315072242",
+    "customerCode": "",
+    "matchedOrgId": "C-OILCHERN",
+    "matchedOrgName": "Черномортранснефть",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "archive",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050178",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "C-OILCHERN"
+    ],
+    "foundAt": "2026-11-25T07:16:51.416Z",
+    "lastSeen": "2026-11-25T07:16:51.416Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050178",
+      "foundAt": "2026-11-25T07:16:51.416Z"
+     }
+    ]
+   },
+   {
+    "id": "GPB:2119880",
+    "regNumber": "",
+    "externalId": "2119880",
+    "title": "Подшипники и торцевые уплотнения",
+    "customer": "АО ЧЕРНОМОРТРАНСНЕФТЬ",
+    "customerInn": "2315072242",
+    "customerCode": "",
+    "matchedOrgId": "C-OILCHERN",
+    "matchedOrgName": "Черномортранснефть",
+    "platformCode": "GPB",
+    "platformName": "ЭТП ГПБ",
+    "platformUrl": "https://etpgpb.ru",
+    "source": "etpgpb-direct",
+    "sourceName": "ЭТП ГПБ (прямой JSON)",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "accepting",
+    "stage": "accepting",
+    "phase": "archive",
+    "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050190",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "C-OILCHERN"
+    ],
+    "foundAt": "2026-11-25T07:16:51.416Z",
+    "lastSeen": "2026-11-25T07:16:51.416Z",
+    "sources": [
+     {
+      "source": "etpgpb-direct",
+      "sourceName": "ЭТП ГПБ (прямой JSON)",
+      "platformCode": "GPB",
+      "platformName": "ЭТП ГПБ",
+      "url": "https://etp.gpb.ru/#nsi/priceorder/directCustomer/orderId/1050190",
+      "foundAt": "2026-11-25T07:16:51.416Z"
      }
     ]
    },
@@ -28567,7 +26799,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28614,7 +26846,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28661,7 +26893,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28708,7 +26940,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28755,7 +26987,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28802,7 +27034,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -28811,6 +27043,344 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616564898",
       "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616560721",
+    "regNumber": "32616560721",
+    "externalId": "32616560721",
+    "title": "Выполнение работ по приведению кабельных туннелей в соответствии НТД (Ремонт трубопроводов, люков, лестниц. Монтаж ограждений) на филиале ТЭЦ-9 в г. Ангарске",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://utp.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "733 250 ₽",
+    "priceNum": 733250,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616560721",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616560721",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616594330",
+    "regNumber": "32616594330",
+    "externalId": "32616594330",
+    "title": "Выполнение работ по ремонту фрамуг аэрационного фонаря в здании главного корпуса на филиале ТЭЦ-9 в г.Ангарске",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://www.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "734 200 ₽",
+    "priceNum": 734200,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594330",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616594330",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616510687",
+    "regNumber": "32616510687",
+    "externalId": "32616510687",
+    "title": "Лот № 1: Выполнение строительно-монтажных и прочих работ по объекту: \"КОТЛОАГРЕГАТ 3 (инв. № ИЭ1714270014). Модернизация. Замена фронтовой стены топки от отм. 14.3м до выходных коллекторов (формуляр №3)\" (Н-И ТЭЦ); Лот № 2: Выполнение строительно-монтажных работ по объекту: «КОТЛОАГРЕГАТ 3 (инв. № ИЭ1740000014). Модернизация. Замена правой стены горизонтального газохода (укороченные панели) формуляр №8».(Н-И ТЭЦ)",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://utp.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "52 902 898 ₽",
+    "priceNum": 52902898,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510687",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510687",
+      "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616561434",
+    "regNumber": "32616561434",
+    "externalId": "32616561434",
+    "title": "226817 Ремонт асфальтового покрытия для Кармановской ГРЭС филиала ООО «БГК»",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
+    "customerInn": "0277077282",
+    "customerCode": "0277077282",
+    "matchedOrgId": "C-BGK",
+    "matchedOrgName": "Башкирская генерирующая компания",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "http://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "13 660 027,27 ₽",
+    "priceNum": 13660027.27,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616561434",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BGK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616561434",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:tt-961630",
+    "regNumber": "",
+    "externalId": "tt-961630",
+    "title": "Мелкий ремонт спецодежды",
+    "customer": "Общество с Ограниченной Ответственностью \"РН-Бурение\"",
+    "customerInn": "7706613770",
+    "customerCode": "7706613770",
+    "matchedOrgId": "R-OIL-RNBUR",
+    "matchedOrgName": "РН-Бурение",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Приём заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20375774",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-OIL-RNBUR"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20375774",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "B2B:32616461107",
+    "regNumber": "32616461107",
+    "externalId": "32616461107",
+    "title": "Открытый запрос предложений в электронной форме на право заключения договора на поставку продукции «Датчики скорости турбины ПГУ» для нужд Филиала «Удмуртский» ПАО «Т Плюс» (4636677)",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\"",
+    "customerInn": "6315376946",
+    "customerCode": "6315376946",
+    "matchedOrgId": "H-TPLUS",
+    "matchedOrgName": "Т Плюс",
+    "platformCode": "B2B",
+    "platformName": "B2B-Center",
+    "platformUrl": "https://www.b2b-center.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "1 323 567 ₽",
+    "priceNum": 1323567,
+    "published": "2026-11-19",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-19",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "H-TPLUS"
+    ],
+    "foundAt": "2026-11-20T15:12:44.741Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "B2B",
+      "platformName": "B2B-Center",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616461107",
+      "foundAt": "2026-11-20T15:12:44.741Z"
+     }
+    ]
+   },
+   {
+    "id": "32616593352",
+    "regNumber": "32616593352",
+    "externalId": "32616593352",
+    "title": "227216/ОК Сухое газодинамическое уплотнение газодожимных компрессоров для Талаховской ТЭС",
+    "customer": "АО «Интер РАО — Электрогенерация»",
+    "customerInn": "7704784450",
+    "customerCode": "7704784450",
+    "matchedOrgId": "C-IRAO-GEN",
+    "matchedOrgName": "Интер РАО — Электрогенерация",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "gosplan",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "5 226 371,58 ₽",
+    "priceNum": 5226371.58,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "C-IRAO-GEN",
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-20T15:12:44.741Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
+      "foundAt": "2026-11-20T20:30:08.015Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616593352",
+      "foundAt": "2026-11-20T15:12:44.741Z"
      }
     ]
    },
@@ -28849,7 +27419,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -28912,7 +27482,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -28975,7 +27545,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -29000,6 +27570,61 @@ window.TENDER_DATA = {
       "platformName": "ЕИС",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616589056",
       "foundAt": "2026-11-20T15:16:44.880Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:20375040",
+    "regNumber": "",
+    "externalId": "20375040",
+    "title": "227216/ОК Сухое газодинамическое уплотнение газодожимных компрессоров для Талаховской ТЭС",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ\"",
+    "customerInn": "7703642903",
+    "customerCode": "",
+    "matchedOrgId": "H-IRAO",
+    "matchedOrgName": "Интер РАО",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "tektorg-direct",
+    "sourceName": "ТЭК-Торг (прямой JSON)",
+    "law": "commercial",
+    "price": "5 226 371,58 ₽",
+    "priceNum": 5226371.58,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Приём заявок",
+    "stage": "Приём заявок",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/interrao/procedures/20375040",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-24T05:58:04.093Z",
+    "lastSeen": "2026-11-25T07:16:01.108Z",
+    "sources": [
+     {
+      "source": "tektorg",
+      "sourceName": "ТЭК-Торг",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20375040",
+      "foundAt": "2026-11-24T05:58:04.093Z"
+     },
+     {
+      "source": "tektorg-direct",
+      "sourceName": "ТЭК-Торг (прямой JSON)",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/interrao/procedures/20375040",
+      "foundAt": "2026-11-24T14:16:20.323Z"
      }
     ]
    },
@@ -29051,6 +27676,147 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "32616592178",
+    "regNumber": "32616592178",
+    "externalId": "32616592178",
+    "title": "ОКПД2 28.13.31.110 Поставка запасных частей циркуляционного насоса для нужд Саяно-Шушенского филиала АО \"Гидроремонт-ВКК\" (Лот № 0005-РЕМ ДОХ-2027-ГРВКК-СШФ-Стор)",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГИДРОРЕМОНТ-ВКК\"",
+    "customerInn": "6345012488",
+    "customerCode": "6345012488",
+    "matchedOrgId": "R-GIDROREMONT",
+    "matchedOrgName": "Гидроремонт-ВКК",
+    "platformCode": "RAD",
+    "platformName": "РАД / Lot-online",
+    "platformUrl": "https://lot-online.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "4 380 000 ₽",
+    "priceNum": 4380000,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592178",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-GIDROREMONT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "RAD",
+      "platformName": "РАД / Lot-online",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616592178",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "RAD:rad-RAD260058502",
+    "regNumber": "",
+    "externalId": "rad-RAD260058502",
+    "title": "ОКПД 2 28.29.84.000 Поставка запасных частей для ремонта оборудования для нужд ПУ Новобурейский",
+    "customer": "Зейский филиал АО \"Гидроремонт-ВКК\" в г.Зея",
+    "customerInn": "6345012488",
+    "customerCode": "",
+    "matchedOrgId": "R-GIDROREMONT",
+    "matchedOrgName": "Гидроремонт-ВКК",
+    "platformCode": "RAD",
+    "platformName": "РАД / Lot-online",
+    "platformUrl": "https://tender.lot-online.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Идет прием коммерческих предложений",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3rccubcmhmvp2c",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "R-GIDROREMONT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "RAD",
+      "platformName": "РАД / Lot-online",
+      "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3rccubcmhmvp2c",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616541687",
+    "regNumber": "32616541687",
+    "externalId": "32616541687",
+    "title": "226561_Выполнение работ по разработке проектно-сметной (рабочей) документации и капитальному ремонту защитного сооружения гражданской обороны производственной площадки ТЭЦ-1 Уфимской ТЭЦ-4 ООО «БГК»",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАШКИРСКАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ\"",
+    "customerInn": "0277077282",
+    "customerCode": "0277077282",
+    "matchedOrgId": "C-BGK",
+    "matchedOrgName": "Башкирская генерирующая компания",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://interrao.roseltorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "14 022 501,02 ₽",
+    "priceNum": 14022501.02,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616541687",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BGK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616541687",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
     "id": "32616538708",
     "regNumber": "32616538708",
     "externalId": "32616538708",
@@ -29086,7 +27852,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29095,6 +27861,100 @@ window.TENDER_DATA = {
       "platformName": "Росэлторг (ЕЭТП)",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616538708",
       "foundAt": "2026-11-26T00:54:55.957Z"
+     }
+    ]
+   },
+   {
+    "id": "32616590353",
+    "regNumber": "32616590353",
+    "externalId": "32616590353",
+    "title": "Выполнение работ по ремонту помещения ГЩУ в ГК ряд Б-В, отм. 9,6 м, ось 5 на филиале НИТЭЦ в г. Иркутск",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://www.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "3 447 978 ₽",
+    "priceNum": 3447978,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590353",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590353",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616590810",
+    "regNumber": "32616590810",
+    "externalId": "32616590810",
+    "title": "Выполнение работ по ремонту помещения № 128 в объединенном вспомогательном корпусе химического цеха под производственные нужды, связанные с охраной труда на У-ИТЭЦ в г. Усть-Илимске",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://www.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "1 379 614 ₽",
+    "priceNum": 1379614,
+    "published": "2026-11-18",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-18",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590810",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616590810",
+      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
    },
@@ -29229,7 +28089,7 @@ window.TENDER_DATA = {
      "C-OIL-RNNYAG"
     ],
     "foundAt": "2026-11-25T07:16:01.108Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "tektorg-direct",
@@ -29393,6 +28253,53 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "32616582317",
+    "regNumber": "32616582317",
+    "externalId": "32616582317",
+    "title": "Поставка запасных частей тягодутьевых механизмов для паровых котлов (для ремонта подрядным способом)для нужд филиала АО \"Татэнерго\" Набережночелнинская ТЭЦ",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТАТЭНЕРГО\"",
+    "customerInn": "1657036630",
+    "customerCode": "1657036630",
+    "matchedOrgId": "H-TAT",
+    "matchedOrgName": "Татэнерго",
+    "platformCode": "ZAKAZ",
+    "platformName": "ЗаказРФ",
+    "platformUrl": "http://etp.zakazrf.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "2 982 000 ₽",
+    "priceNum": 2982000,
+    "published": "2026-11-17",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-17",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582317",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "H-TAT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "ZAKAZ",
+      "platformName": "ЗаказРФ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582317",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
     "id": "RAD:rad-RAD260058234",
     "regNumber": "",
     "externalId": "rad-RAD260058234",
@@ -29427,7 +28334,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29474,7 +28381,7 @@ window.TENDER_DATA = {
      "C-CHUKOT"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29482,6 +28389,100 @@ window.TENDER_DATA = {
       "platformCode": "RAD",
       "platformName": "РАД / Lot-online",
       "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718u80000q3pukjoim5gqgq0",
+      "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616500701",
+    "regNumber": "32616500701",
+    "externalId": "32616500701",
+    "title": "Лот №1: Выполнение строительно-монтажных работ по объекту: «КОТЛОАГРЕГАТ 6. (инв. № ИЭ1740000017). Модернизация. Замена всасывающего тракта ДРГ с компенсаторами» (Н-И ТЭЦ) Лот №2: Выполнение строительно-монтажных и прочих работ по объекту: \"КОТЛОАГРЕГАТ 4 (инв. № ИЭ1714270015). Модернизация. Замена фронтовой стены топки от отм. 14.3м до выходных коллекторов (формуляр №3)\" (Н-И ТЭЦ)",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://utp.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "48 949 188 ₽",
+    "priceNum": 48949188,
+    "published": "2026-11-17",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-17",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616500701",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616500701",
+      "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616511208",
+    "regNumber": "32616511208",
+    "externalId": "32616511208",
+    "title": "Выполнение строительно-монтажных и прочих работ по объекту: \"Котельный агрегат N 3 (котельное отделение). (инв. № ИЭ551400163). Модернизация. Замена пароперегревателя 2 ступени\" (ШУ Н-И ТЭЦ)",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://utp.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "12 085 775 ₽",
+    "priceNum": 12085775,
+    "published": "2026-11-17",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-17",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511208",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511208",
       "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ]
@@ -29521,7 +28522,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29568,7 +28569,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29577,6 +28578,109 @@ window.TENDER_DATA = {
       "platformName": "ЭТП ГПБ",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616497258",
       "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616583256",
+    "regNumber": "32616583256",
+    "externalId": "32616583256",
+    "title": "227191_Масло турбинное для Ивановских ПГУ",
+    "customer": "АО «Интер РАО — Электрогенерация»",
+    "customerInn": "7704784450",
+    "customerCode": "7704784450",
+    "matchedOrgId": "C-IRAO-GEN",
+    "matchedOrgName": "Интер РАО — Электрогенерация",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "https://zakupki.gov.ru",
+    "source": "gosplan",
+    "sourceName": "ГосПлан API",
+    "law": "223",
+    "price": "33 058 382,72 ₽",
+    "priceNum": 33058382.72,
+    "published": "2026-11-16",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": 1,
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
+    "keywords": [
+     "Турбина"
+    ],
+    "matchedKeywords": [
+     "Турбина"
+    ],
+    "enterpriseIds": [
+     "C-IRAO-GEN",
+     "H-IRAO"
+    ],
+    "foundAt": "2026-11-20T20:30:08.015Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gosplan",
+      "sourceName": "ГосПлан API",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
+      "foundAt": "2026-11-20T20:30:08.015Z"
+     },
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616583256",
+      "foundAt": "2026-11-24T13:04:21.643Z"
+     }
+    ]
+   },
+   {
+    "id": "32616580841",
+    "regNumber": "32616580841",
+    "externalId": "32616580841",
+    "title": "Лот № 18101-РЕМ ПРОД-2027-ЯЭ \"ОКДП2 42.22.22.140. Выполнение работ по чистке просеки воздушной линии 110 киловольт ПП-8 — Мурья Западных электрических сетей в рамках ремонтной программы\"",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЯКУТСКЭНЕРГО\"",
+    "customerInn": "1435028701",
+    "customerCode": "1435028701",
+    "matchedOrgId": "C-YAKUT",
+    "matchedOrgName": "Якутскэнерго",
+    "platformCode": "RAD",
+    "platformName": "РАД / Lot-online",
+    "platformUrl": "https://lot-online.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "16 871 732,49 ₽",
+    "priceNum": 16871732.49,
+    "published": "2026-11-16",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580841",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-YAKUT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "RAD",
+      "platformName": "РАД / Lot-online",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580841",
+      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
    },
@@ -29615,7 +28719,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29662,7 +28766,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29709,7 +28813,7 @@ window.TENDER_DATA = {
      "R-SEVERNAYA-VERF"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29756,7 +28860,7 @@ window.TENDER_DATA = {
      "C-OILSEVER"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29765,6 +28869,100 @@ window.TENDER_DATA = {
       "platformName": "Сбер Б2Б",
       "url": "https://sberb2b.ru/needs/121333921",
       "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616580418",
+    "regNumber": "32616580418",
+    "externalId": "32616580418",
+    "title": "Выполнение работ по капитальному ремонту электродвигателей (4682182)",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"РИР ЭНЕРГО\"",
+    "customerInn": "6829012680",
+    "customerCode": "6829012680",
+    "matchedOrgId": "H-RIR",
+    "matchedOrgName": "РИР Энерго",
+    "platformCode": "B2B",
+    "platformName": "B2B-Center",
+    "platformUrl": "https://www.b2b-center.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "3 512 728,01 ₽",
+    "priceNum": 3512728.01,
+    "published": "2026-11-16",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580418",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "H-RIR"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "B2B",
+      "platformName": "B2B-Center",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616580418",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616582176",
+    "regNumber": "32616582176",
+    "externalId": "32616582176",
+    "title": "Выполнение строительно-монтажных работ по мероприятию: «Модернизация КА-3 с заменой КПП (входная и промежуточная ступени)» для филиала «Оренбургский» ПАО «Т Плюс» (Сакмарская ТЭЦ) (4683042)",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\"",
+    "customerInn": "6315376946",
+    "customerCode": "6315376946",
+    "matchedOrgId": "H-TPLUS",
+    "matchedOrgName": "Т Плюс",
+    "platformCode": "B2B",
+    "platformName": "B2B-Center",
+    "platformUrl": "https://www.b2b-center.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "17 460 315 ₽",
+    "priceNum": 17460315,
+    "published": "2026-11-16",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-16",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582176",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "H-TPLUS"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "B2B",
+      "platformName": "B2B-Center",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616582176",
+      "foundAt": "2026-11-26T11:14:23.771Z"
      }
     ]
    },
@@ -29905,7 +29103,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29952,7 +29150,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -29960,6 +29158,53 @@ window.TENDER_DATA = {
       "platformCode": "SBER_B2B",
       "platformName": "Сбер Б2Б",
       "url": "https://sberb2b.ru/needs/87996035",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "TEK:tt-960086",
+    "regNumber": "",
+    "externalId": "tt-960086",
+    "title": "Оказания услуг по ремонту систем автоматических пожарных сигнализаций в мобильных зданиях на кустовых площадках УНПА Каюм",
+    "customer": "Акционерное общество \"РН-Няганьнефтегаз\"",
+    "customerInn": "8610010727",
+    "customerCode": "8610010727",
+    "matchedOrgId": "C-OIL-RNNYAG",
+    "matchedOrgName": "РН-Няганьнефтегаз",
+    "platformCode": "TEK",
+    "platformName": "ТЭК-Торг",
+    "platformUrl": "https://www.tektorg.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "commercial",
+    "price": "",
+    "priceNum": 0,
+    "published": "2026-11-13",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-13",
+    "status": "Приём заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://www.tektorg.ru/market/procedures/20294038",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-OIL-RNNYAG"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "TEK",
+      "platformName": "ТЭК-Торг",
+      "url": "https://www.tektorg.ru/market/procedures/20294038",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
@@ -30000,7 +29245,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30049,7 +29294,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -30167,7 +29412,7 @@ window.TENDER_DATA = {
      "O-VNIIG"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -30225,7 +29470,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -30296,7 +29541,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30343,7 +29588,7 @@ window.TENDER_DATA = {
      "R-ZRETO"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30352,6 +29597,53 @@ window.TENDER_DATA = {
       "platformName": "РАД / Lot-online",
       "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616573403",
       "foundAt": "2026-11-26T00:54:55.957Z"
+     }
+    ]
+   },
+   {
+    "id": "32616568780",
+    "regNumber": "32616568780",
+    "externalId": "32616568780",
+    "title": "Выполнение работ по ремонту сетей освещения и кабельных линий на ШУ Н-И ТЭЦ в г. Шелехове",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://www.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "3 881 550 ₽",
+    "priceNum": 3881550,
+    "published": "2026-11-12",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-12",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616568780",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616568780",
+      "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
    },
@@ -30390,7 +29682,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30437,7 +29729,7 @@ window.TENDER_DATA = {
      "H-GAZPROM"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30595,6 +29887,100 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "32616563867",
+    "regNumber": "32616563867",
+    "externalId": "32616563867",
+    "title": "Выполнение строительно-монтажных работ по объекту: \"Распредустройство комплект 3 кВ. для собств.расходов. Инв. № ИЭ551400228. Модернизация Замена электродвигателя дутьевого вентилятора ДВ-2.\" «Распредустройство комплект 3 кВ. для собств.расходов. Инв. № ИЭ551400228. Модернизация Замена эл. двигателя молотковой мельницы ММТ-2А»",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+    "customerInn": "3808229774",
+    "customerCode": "3808229774",
+    "matchedOrgId": "C-BEK",
+    "matchedOrgName": "Байкальская энергетическая компания",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://www.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "522 810 ₽",
+    "priceNum": 522810,
+    "published": "2026-11-11",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-11",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563867",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "C-BEK"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563867",
+      "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
+    "id": "32616562890",
+    "regNumber": "32616562890",
+    "externalId": "32616562890",
+    "title": "Поставка комплектов модернизации систем хранения данных",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТОПЛИВНО-ЭНЕРГЕТИЧЕСКИЙ КОМПЛЕКС САНКТ-ПЕТЕРБУРГА\"",
+    "customerInn": "7838129301",
+    "customerCode": "7838129301",
+    "matchedOrgId": "H-TEKSPB",
+    "matchedOrgName": "ТЭК СПб",
+    "platformCode": "SBER",
+    "platformName": "Сбербанк-АСТ",
+    "platformUrl": "http://utp.sberbank-ast.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "378 334 198,78 ₽",
+    "priceNum": 378334198.78,
+    "published": "2026-11-11",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-11",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562890",
+    "keywords": [
+     "Модернизация"
+    ],
+    "matchedKeywords": [
+     "Модернизация"
+    ],
+    "enterpriseIds": [
+     "H-TEKSPB"
+    ],
+    "foundAt": "2026-11-26T11:14:23.771Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "SBER",
+      "platformName": "Сбербанк-АСТ",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616562890",
+      "foundAt": "2026-11-26T11:14:23.771Z"
+     }
+    ]
+   },
+   {
     "id": "32616567496",
     "regNumber": "32616567496",
     "externalId": "32616567496",
@@ -30629,7 +30015,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30676,7 +30062,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30723,7 +30109,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30770,7 +30156,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30817,7 +30203,7 @@ window.TENDER_DATA = {
      "C-MOSENERGO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30864,7 +30250,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30915,7 +30301,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30962,7 +30348,7 @@ window.TENDER_DATA = {
      "O-OIL-KORVET"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -30970,6 +30356,53 @@ window.TENDER_DATA = {
       "platformCode": "BIDZAAR",
       "platformName": "Bidzaar",
       "url": "https://bidzaar.com/app/process/01a1c898-b48d-7f78-937e-b13f4634d775",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
+    "id": "32616563376",
+    "regNumber": "32616563376",
+    "externalId": "32616563376",
+    "title": "Право заключения договоров на выполнение работ по ремонтам",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ТАТЭНЕРГОСБЫТ\"",
+    "customerInn": "1657082308",
+    "customerCode": "1657082308",
+    "matchedOrgId": "H-TAT",
+    "matchedOrgName": "Татэнерго",
+    "platformCode": "EIS",
+    "platformName": "ЕИС",
+    "platformUrl": "",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "1 039 642,65 ₽",
+    "priceNum": 1039642.65,
+    "published": "2026-11-10",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-10",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563376",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "H-TAT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "EIS",
+      "platformName": "ЕИС",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616563376",
       "foundAt": "2026-11-25T16:29:04.131Z"
      }
     ]
@@ -31009,7 +30442,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31084,7 +30517,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -31155,7 +30588,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -31359,7 +30792,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31406,7 +30839,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31453,7 +30886,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -31623,6 +31056,53 @@ window.TENDER_DATA = {
     ]
    },
    {
+    "id": "32616553598",
+    "regNumber": "32616553598",
+    "externalId": "32616553598",
+    "title": "Лот № 16901-РЕМ ПРОД-2027-ЯЭ: «ОКПД2 42.22.22.140. Выполнение работ (включая поставку материалов) по капитальному ремонту воздушной линии 220 киловольт Вилюйская ГЭС — Айхал цепь 2 Западных электрических сетей в рамках ремонтной программы»",
+    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"ЯКУТСКЭНЕРГО\"",
+    "customerInn": "1435028701",
+    "customerCode": "1435028701",
+    "matchedOrgId": "C-YAKUT",
+    "matchedOrgName": "Якутскэнерго",
+    "platformCode": "RAD",
+    "platformName": "РАД / Lot-online",
+    "platformUrl": "https://lot-online.ru",
+    "source": "gentender",
+    "sourceName": "GenTender",
+    "law": "223",
+    "price": "32 656 268,63 ₽",
+    "priceNum": 32656268.63,
+    "published": "2026-11-09",
+    "deadline": "2026-11-26",
+    "updated": "2026-11-09",
+    "status": "Подача заявок",
+    "stage": "submission",
+    "phase": "archive",
+    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616553598",
+    "keywords": [
+     "Ремонт"
+    ],
+    "matchedKeywords": [
+     "Ремонт"
+    ],
+    "enterpriseIds": [
+     "C-YAKUT"
+    ],
+    "foundAt": "2026-11-25T16:29:04.131Z",
+    "lastSeen": "2026-11-26T11:14:23.771Z",
+    "sources": [
+     {
+      "source": "gentender",
+      "sourceName": "GenTender",
+      "platformCode": "RAD",
+      "platformName": "РАД / Lot-online",
+      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616553598",
+      "foundAt": "2026-11-25T16:29:04.131Z"
+     }
+    ]
+   },
+   {
     "id": "32616557525",
     "regNumber": "32616557525",
     "externalId": "32616557525",
@@ -31657,7 +31137,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31704,7 +31184,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31751,7 +31231,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31798,7 +31278,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31845,7 +31325,7 @@ window.TENDER_DATA = {
      "C-OILUPPERVOLGA"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31892,7 +31372,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -31943,7 +31423,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -32006,7 +31486,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -32069,7 +31549,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -32124,7 +31604,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -32179,7 +31659,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -32282,7 +31762,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32402,7 +31882,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32449,7 +31929,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32496,7 +31976,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32543,7 +32023,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32590,7 +32070,7 @@ window.TENDER_DATA = {
      "C-OILDRUZHBA"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32637,7 +32117,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32685,7 +32165,7 @@ window.TENDER_DATA = {
      "H-OSK"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32732,7 +32212,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -32780,7 +32260,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -32852,7 +32332,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33074,7 +32554,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33121,7 +32601,7 @@ window.TENDER_DATA = {
      "R-GIDROREMONT"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33215,7 +32695,7 @@ window.TENDER_DATA = {
      "C-DGK"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33262,7 +32742,7 @@ window.TENDER_DATA = {
      "H-TEKSPB"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33309,7 +32789,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33356,7 +32836,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33460,7 +32940,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -33523,7 +33003,7 @@ window.TENDER_DATA = {
      "O-VNIIG"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -33626,7 +33106,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -33697,7 +33177,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33744,7 +33224,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33838,7 +33318,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33886,7 +33366,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33934,7 +33414,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -33989,7 +33469,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -34049,7 +33529,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -34206,7 +33686,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34253,7 +33733,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34300,7 +33780,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34347,7 +33827,7 @@ window.TENDER_DATA = {
      "C-YAKUT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34395,7 +33875,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34442,7 +33922,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34489,7 +33969,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34536,7 +34016,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34583,7 +34063,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -34646,7 +34126,7 @@ window.TENDER_DATA = {
      "H-TGK2"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34701,7 +34181,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -34757,7 +34237,7 @@ window.TENDER_DATA = {
      "H-OSK"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -34867,7 +34347,7 @@ window.TENDER_DATA = {
      "C-OILCHERN"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -34914,7 +34394,7 @@ window.TENDER_DATA = {
      "C-BEK"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35008,7 +34488,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35059,7 +34539,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35122,7 +34602,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35181,7 +34661,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -35236,7 +34716,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -35295,7 +34775,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35350,7 +34830,7 @@ window.TENDER_DATA = {
      "H-FORWARD"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -35429,7 +34909,7 @@ window.TENDER_DATA = {
      "H-TAT"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35476,7 +34956,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35527,7 +35007,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35621,7 +35101,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35668,7 +35148,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -35715,7 +35195,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-20T13:55:53.115Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "ЕИС / ГосПлан API",
@@ -35771,7 +35251,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "ЕИС / HTML",
@@ -35836,7 +35316,7 @@ window.TENDER_DATA = {
      "O-GIDROPROEKT"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T19:55:50.882Z",
+    "lastSeen": "2026-11-27T02:01:38.818Z",
     "sources": [
      {
       "source": "gosplan",
@@ -35883,7 +35363,7 @@ window.TENDER_DATA = {
      "C-MAGADAN"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -35938,7 +35418,7 @@ window.TENDER_DATA = {
      "H-TPLUS"
     ],
     "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -35994,7 +35474,7 @@ window.TENDER_DATA = {
      "H-IRAO"
     ],
     "foundAt": "2026-11-20T15:12:44.741Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gosplan",
@@ -36065,7 +35545,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36112,7 +35592,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36159,7 +35639,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36206,7 +35686,7 @@ window.TENDER_DATA = {
      "H-RUSHYDRO"
     ],
     "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36253,7 +35733,7 @@ window.TENDER_DATA = {
      "C-SAKHAENERGO"
     ],
     "foundAt": "2026-11-25T16:29:04.131Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36300,7 +35780,7 @@ window.TENDER_DATA = {
      "C-SAKHALIN"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36347,7 +35827,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36394,7 +35874,7 @@ window.TENDER_DATA = {
      "C-BGK"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36441,7 +35921,7 @@ window.TENDER_DATA = {
      "H-RIR"
     ],
     "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36489,7 +35969,7 @@ window.TENDER_DATA = {
      "C-TGK1"
     ],
     "foundAt": "2026-11-26T00:54:55.957Z",
-    "lastSeen": "2026-11-26T02:35:37.695Z",
+    "lastSeen": "2026-11-27T02:16:16.918Z",
     "sources": [
      {
       "source": "gentender",
@@ -36502,314 +35982,375 @@ window.TENDER_DATA = {
     ]
    },
    {
-    "id": "32616511308",
-    "regNumber": "32616511308",
-    "externalId": "32616511308",
-    "title": "226823 Текущие ремонты паровых турбин Т-60/73-7,8/0,04 Затонской ТЭЦ филиала ООО «БГК»",
-    "customer": "ООО «Башкирская генерирующая компания»",
-    "customerInn": "0277077282",
-    "customerCode": "0277077282",
-    "matchedOrgId": "C-BGK",
-    "matchedOrgName": "Башкирская генерирующая компания",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "4 420 440,7 ₽",
-    "priceNum": 4420440.7,
-    "published": "2026-10-27",
-    "deadline": "2026-11-11",
-    "updated": "2026-11-13",
-    "status": "Завершена",
-    "stage": 3,
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511308",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "C-BGK"
-    ],
-    "foundAt": "2026-11-20T15:16:44.880Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511308",
-      "foundAt": "2026-11-20T15:36:20.857Z"
-     },
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616511308",
-      "foundAt": "2026-11-20T15:16:44.880Z"
-     }
-    ]
-   },
-   {
-    "id": "32616516125",
-    "regNumber": "32616516125",
-    "externalId": "32616516125",
-    "title": "КО №3786/КО - Модернизация локальных устройств противоаварийной автоматики ГЭС-3, ГЭС-11 КНГЭС (D26NP01200)",
-    "customer": "ПАО «ТГК-1»",
-    "customerInn": "7841312071",
-    "customerCode": "7841312071",
-    "matchedOrgId": "C-TGK1",
-    "matchedOrgName": "ТГК-1",
-    "platformCode": "EIS",
-    "platformName": "ЕИС",
-    "platformUrl": "https://zakupki.gov.ru",
-    "source": "gosplan",
-    "sourceName": "ГосПлан API",
-    "law": "223",
-    "price": "46 175 682,4 ₽",
-    "priceNum": 46175682.4,
-    "published": "2026-10-27",
-    "deadline": "2026-11-05",
-    "updated": "2026-11-20",
-    "status": "Завершена",
-    "stage": 3,
-    "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516125",
-    "keywords": [
-     "Модернизация"
-    ],
-    "matchedKeywords": [
-     "Модернизация"
-    ],
-    "enterpriseIds": [
-     "C-TGK1"
-    ],
-    "foundAt": "2026-11-26T10:50:15.121Z",
-    "lastSeen": "2026-11-26T17:20:19.269Z",
-    "sources": [
-     {
-      "source": "gosplan",
-      "sourceName": "ГосПлан API",
-      "platformCode": "EIS",
-      "platformName": "ЕИС",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616516125",
-      "foundAt": "2026-11-26T10:50:15.121Z"
-     }
-    ]
-   },
-   {
-    "id": "TEK:20090948",
+    "id": "ROS:B1811261948307",
     "regNumber": "",
-    "externalId": "20090948",
-    "title": "226823 Текущие ремонты паровых турбин Т-60/73-7,8/0,04 Затонской ТЭЦ филиала ООО «БГК»",
-    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ\"",
-    "customerInn": "7703642903",
+    "externalId": "B1811261948307",
+    "title": "Уплотнение торцевое 7А70А (7АР70А) в составе с кольцами, ТУ 26-06-808-73",
+    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ \"СЕВЕРНОЕ МАШИНОСТРОИТЕЛЬНОЕ ПРЕДПРИЯТИЕ\"",
+    "customerInn": "2902059091",
     "customerCode": "",
-    "matchedOrgId": "H-IRAO",
-    "matchedOrgName": "Интер РАО",
-    "platformCode": "TEK",
-    "platformName": "ТЭК-Торг",
-    "platformUrl": "https://www.tektorg.ru",
-    "source": "tektorg-direct",
-    "sourceName": "ТЭК-Торг (прямой JSON)",
-    "law": "commercial",
-    "price": "4 420 440,7 ₽",
-    "priceNum": 4420440.7,
-    "published": "2026-10-27",
-    "deadline": "2026-11-11",
-    "updated": "2026-10-27",
-    "status": "Работа комиссии",
-    "stage": "Работа комиссии",
-    "phase": "archive",
-    "url": "https://www.tektorg.ru/interrao/procedures/20090948",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "H-IRAO"
-    ],
-    "foundAt": "2026-11-24T05:58:04.093Z",
-    "lastSeen": "2026-11-25T07:16:01.108Z",
-    "sources": [
-     {
-      "source": "tektorg",
-      "sourceName": "ТЭК-Торг",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/interrao/procedures/20090948",
-      "foundAt": "2026-11-24T05:58:04.093Z"
-     },
-     {
-      "source": "tektorg-direct",
-      "sourceName": "ТЭК-Торг (прямой JSON)",
-      "platformCode": "TEK",
-      "platformName": "ТЭК-Торг",
-      "url": "https://www.tektorg.ru/interrao/procedures/20090948",
-      "foundAt": "2026-11-24T14:16:20.323Z"
-     }
-    ]
-   },
-   {
-    "id": "RAD:rad-RAD260054156",
-    "regNumber": "",
-    "externalId": "rad-RAD260054156",
-    "title": "Текущий ремонт сегментов подпятника генератора синхронного к гидравлической турбине вертикальной ГЭС-2, Свистухинской ГЭС, Егорлыкской ГЭС филиала ПАО “РусГидро”- “Каскад Кубанских ГЭС”»",
-    "customer": "Филиал Публичного акционерного общества \"Федеральная гидрогенерирующая компания - РусГидро\" - \"Каскад Кубанских ГЭС\"",
-    "customerInn": "2460066195",
-    "customerCode": "",
-    "matchedOrgId": "H-RUSHYDRO",
-    "matchedOrgName": "РусГидро",
-    "platformCode": "RAD",
-    "platformName": "РАД / Lot-online",
-    "platformUrl": "https://tender.lot-online.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "commercial",
-    "price": "",
-    "priceNum": 0,
-    "published": "2026-10-27",
-    "deadline": "2026-10-30",
-    "updated": "2026-10-27",
-    "status": "Приём заявок завершён",
-    "stage": "evaluation",
-    "phase": "archive",
-    "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q2va8pavofpk5ts",
-    "keywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "matchedKeywords": [
-     "Ремонт",
-     "Турбина",
-     "Ремонт турбины"
-    ],
-    "enterpriseIds": [
-     "H-RUSHYDRO"
-    ],
-    "foundAt": "2026-11-20T15:36:20.857Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
-    "sources": [
-     {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "RAD",
-      "platformName": "РАД / Lot-online",
-      "url": "https://tender.lot-online.ru/etp/app/lot/gpmsps19718ug0000q2va8pavofpk5ts",
-      "foundAt": "2026-11-20T15:36:20.857Z"
-     }
-    ]
-   },
-   {
-    "id": "32616510650",
-    "regNumber": "32616510650",
-    "externalId": "32616510650",
-    "title": "Выполнение комплекса работ \"под ключ\" по объекту: «Модернизация Гурзуфской котельной с организацией мастерской по испытанию подшипников качения насосного оборудования» (№607/26)",
-    "customer": "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО \"Т ПЛЮС\"",
-    "customerInn": "6315376946",
-    "customerCode": "6315376946",
-    "matchedOrgId": "H-TPLUS",
-    "matchedOrgName": "Т Плюс",
+    "matchedOrgId": "R-SEVMASH",
+    "matchedOrgName": "Севмаш",
     "platformCode": "ROS",
     "platformName": "Росэлторг (ЕЭТП)",
-    "platformUrl": "http://com.roseltorg.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "14 871 800 ₽",
-    "priceNum": 14871800,
-    "published": "2026-10-27",
-    "deadline": "2026-11-05",
-    "updated": "2026-10-27",
-    "status": "Работа комиссии",
-    "stage": "evaluation",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
     "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510650",
+    "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
     "keywords": [
-     "Модернизация"
+     "Уплотнения"
     ],
     "matchedKeywords": [
-     "Модернизация"
+     "Уплотнения"
     ],
     "enterpriseIds": [
-     "H-TPLUS"
+     "R-SEVMASH"
     ],
-    "foundAt": "2026-11-26T11:14:23.771Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "foundAt": "2026-11-24T05:58:20.217Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
     "sources": [
      {
-      "source": "gentender",
-      "sourceName": "GenTender",
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
       "platformCode": "ROS",
       "platformName": "Росэлторг (ЕЭТП)",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616510650",
-      "foundAt": "2026-11-26T11:14:23.771Z"
+      "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
+      "foundAt": "2026-11-24T05:58:20.217Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/B1811261948307/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
      }
     ]
    },
    {
-    "id": "32616515449",
-    "regNumber": "32616515449",
-    "externalId": "32616515449",
-    "title": "КО №1225/КО (27-ГЭС-0182) - Проведение горячего изостатического прессования отливок газотурбинных лопаток для нужд филиала АО «Газэнергосервис» - завода «Турбодеталь» имени И.И. Соколовского",
-    "customer": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГАЗЭНЕРГОСЕРВИС\"",
-    "customerInn": "7709105630",
-    "customerCode": "7709105630",
-    "matchedOrgId": "C-GES",
-    "matchedOrgName": "Газэнергосервис",
-    "platformCode": "GPB",
-    "platformName": "ЭТП ГПБ",
-    "platformUrl": "http://etp.gpb.ru",
-    "source": "gentender",
-    "sourceName": "GenTender",
-    "law": "223",
-    "price": "7 416 624 ₽",
-    "priceNum": 7416624,
-    "published": "2026-10-27",
-    "deadline": "2026-11-05",
-    "updated": "2026-10-27",
-    "status": "Работа комиссии",
-    "stage": "evaluation",
+    "id": "ROS:RH04112600008",
+    "regNumber": "",
+    "externalId": "RH04112600008",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта пароперепускных труб турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
     "phase": "archive",
-    "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616515449",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
     "keywords": [
-     "Лопатки",
-     "Турбина"
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
     ],
     "matchedKeywords": [
-     "Лопатки",
-     "Турбина"
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
     ],
     "enterpriseIds": [
-     "C-GES"
+     "C-KAMCHAT"
     ],
-    "foundAt": "2026-11-24T05:50:18.939Z",
-    "lastSeen": "2026-11-26T20:13:20.977Z",
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
     "sources": [
      {
-      "source": "gentender",
-      "sourceName": "GenTender",
-      "platformCode": "GPB",
-      "platformName": "ЭТП ГПБ",
-      "url": "https://zakupki.gov.ru/223/purchase/public/purchase/info/common-info.html?regNumber=32616515449",
-      "foundAt": "2026-11-24T05:50:18.939Z"
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600008/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:RH04112600007",
+    "regNumber": "",
+    "externalId": "RH04112600007",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №7 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+    "keywords": [
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "matchedKeywords": [
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600007/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:RH04112600006",
+    "regNumber": "",
+    "externalId": "RH04112600006",
+    "title": "Запрос технико-коммерческих предложений в рамках мониторинга рынка на поставку материалов для ремонта главного паропровода турбины ст. №5 станции ТЭЦ-1 для нужд филиала ПАО \"Камчатскэнерго\" Камчатские ТЭЦ",
+    "customer": "Публичное акционерное общество энергетики и электрификации \"Камчатскэнерго\"",
+    "customerInn": "4100000668",
+    "customerCode": "",
+    "matchedOrgId": "C-KAMCHAT",
+    "matchedOrgName": "Камчатскэнерго",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+    "keywords": [
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "matchedKeywords": [
+     "Ремонт",
+     "Турбина",
+     "Ремонт турбины"
+    ],
+    "enterpriseIds": [
+     "C-KAMCHAT"
+    ],
+    "foundAt": "2026-11-20T15:37:06.675Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "sources": [
+     {
+      "source": "roseltorg",
+      "sourceName": "Росэлторг",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+      "foundAt": "2026-11-20T15:37:06.675Z"
+     },
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/RH04112600006/1",
+      "foundAt": "2026-11-24T14:16:58.315Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:COM03112600047",
+    "regNumber": "",
+    "externalId": "COM03112600047",
+    "title": "Поставка уплотнений к насосно-компрессорному оборудованию для ТПП \"Когалымнефтегаз\" в 2026",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-ЗАПАДНАЯ СИБИРЬ\"",
+    "customerInn": "8608048498",
+    "customerCode": "",
+    "matchedOrgId": "C-OIL-LZS",
+    "matchedOrgName": "ЛУКОЙЛ-Западная Сибирь",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/COM03112600047/1",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "C-OIL-LZS"
+    ],
+    "foundAt": "2026-11-25T07:17:05.127Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/COM03112600047/1",
+      "foundAt": "2026-11-25T07:17:05.127Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:COM30102600135",
+    "regNumber": "",
+    "externalId": "COM30102600135",
+    "title": "Поставка уплотнения Burgmann в 1 кв 2027 г",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПОДДЕРЖКИ БИЗНЕСА\"",
+    "customerInn": "7709840210",
+    "customerCode": "",
+    "matchedOrgId": "H-OIL-LK",
+    "matchedOrgName": "ЛУКОЙЛ",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/COM30102600135/1",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-OIL-LK"
+    ],
+    "foundAt": "2026-11-25T07:17:05.127Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/COM30102600135/1",
+      "foundAt": "2026-11-25T07:17:05.127Z"
+     }
+    ]
+   },
+   {
+    "id": "ROS:COM06112600225",
+    "regNumber": "",
+    "externalId": "COM06112600225",
+    "title": "Поставка уплотнения торцового для насоса Shaft seal GQQE GG в 4 кв 2026г",
+    "customer": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЛУКОЙЛ-МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПОДДЕРЖКИ БИЗНЕСА\"",
+    "customerInn": "7709840210",
+    "customerCode": "",
+    "matchedOrgId": "H-OIL-LK",
+    "matchedOrgName": "ЛУКОЙЛ",
+    "platformCode": "ROS",
+    "platformName": "Росэлторг (ЕЭТП)",
+    "platformUrl": "https://www.roseltorg.ru",
+    "source": "roseltorg-direct",
+    "sourceName": "Росэлторг (прямой HTML)",
+    "law": "",
+    "price": "",
+    "priceNum": 0,
+    "published": "",
+    "deadline": "2026-11-26",
+    "updated": "",
+    "status": "",
+    "stage": "",
+    "phase": "archive",
+    "url": "https://www.roseltorg.ru/procedure/COM06112600225/1",
+    "keywords": [
+     "Уплотнения"
+    ],
+    "matchedKeywords": [
+     "Уплотнения"
+    ],
+    "enterpriseIds": [
+     "H-OIL-LK"
+    ],
+    "foundAt": "2026-11-25T07:17:05.127Z",
+    "lastSeen": "2026-11-25T07:17:05.127Z",
+    "sources": [
+     {
+      "source": "roseltorg-direct",
+      "sourceName": "Росэлторг (прямой HTML)",
+      "platformCode": "ROS",
+      "platformName": "Росэлторг (ЕЭТП)",
+      "url": "https://www.roseltorg.ru/procedure/COM06112600225/1",
+      "foundAt": "2026-11-25T07:17:05.127Z"
      }
     ]
    },
@@ -37124,19 +36665,19 @@ window.TENDER_DATA = {
   ]
  },
  "status": {
-  "lastRun": "2026-11-26T19:45:28.560Z",
+  "lastRun": "2026-11-27T01:51:15.787Z",
   "mode": "live",
-  "total": 553,
-  "unique": 692,
+  "total": 546,
+  "unique": 735,
   "sourceMix": {
-   "gosplan": 72,
-   "gentender": 343,
+   "gosplan": 70,
+   "gentender": 341,
    "etpgpb-direct": 22,
-   "tektorg-direct": 54,
+   "tektorg-direct": 51,
    "fabrikant-direct": 10,
    "roseltorg-direct": 21,
-   "ЕИС / ГосПлан API": 18,
    "rad-direct": 3,
+   "ЕИС / ГосПлан API": 18,
    "ЕИС / HTML": 2,
    "ЕИС zakupki.gov.ru": 1,
    "zakazrf-direct": 2,
@@ -37144,25 +36685,25 @@ window.TENDER_DATA = {
    "tektorg": 1,
    "roseltorg": 3
   },
-  "directFirstPct": 20.3,
-  "directCoveragePct": 20.3,
-  "recordsPer100Requests": 164,
-  "matchedOrg": 553,
-  "active": 355,
-  "archive": 198,
+  "directFirstPct": 20,
+  "directCoveragePct": 20,
+  "recordsPer100Requests": 172.1,
+  "matchedOrg": 546,
+  "active": 268,
+  "archive": 278,
   "bySource": {
-   "EIS": 95,
-   "RAD": 61,
-   "ROS": 66,
+   "EIS": 93,
+   "RAD": 60,
+   "ROS": 65,
    "RTS": 3,
-   "SBER_B2B": 24,
+   "SBER_B2B": 25,
    "SBER": 62,
-   "TEK": 116,
-   "GPB": 60,
+   "TEK": 113,
+   "GPB": 59,
    "B2B": 27,
    "ZAKAZ": 26,
-   "PORTAL_POST": 1,
    "FAB": 11,
+   "PORTAL_POST": 1,
    "BIDZAAR": 1
   },
   "sources": [
@@ -37354,41 +36895,25 @@ window.TENDER_DATA = {
     "name": "gosplan",
     "available": true,
     "requests": 40,
-    "okRequests": 37,
-    "records": 73,
-    "errors": 3,
+    "okRequests": 39,
+    "records": 76,
+    "errors": 1,
     "errorItems": [
      {
       "source": "gosplan",
-      "query": "порошковой (44, завершённые 30д)",
-      "error": "fetch failed"
-     },
-     {
-      "source": "gosplan",
-      "query": "ремонт (223, архив стр.2)",
+      "query": "модернизация (44, действующие)",
       "error": "HTTP 429"
-     },
-     {
-      "source": "gosplan",
-      "query": "турбина (223, архив стр.2)",
-      "error": "fetch failed"
      }
     ]
    },
    {
     "name": "gentender",
     "available": true,
-    "requests": 338,
-    "okRequests": 337,
-    "records": 508,
-    "errors": 1,
-    "errorItems": [
-     {
-      "source": "gentender",
-      "query": "ремонт (архив)",
-      "error": "The operation was aborted due to timeout"
-     }
-    ]
+    "requests": 343,
+    "okRequests": 343,
+    "records": 548,
+    "errors": 0,
+    "errorItems": []
    },
    {
     "name": "eis-html",
@@ -37421,16 +36946,16 @@ window.TENDER_DATA = {
     ]
    }
   ],
-  "errors": 33,
+  "errors": 30,
   "probeErrors": 12,
   "probeOk": 4,
   "droppedNoKeyword": 0,
   "titlesSuspicious": 0,
-  "localArchived": 16,
-  "newCount": 89,
-  "corroborated": 123,
+  "localArchived": 53,
+  "newCount": 2,
+  "corroborated": 121,
   "corroboratedPct": 22,
-  "relevantPerRequest": 1.64,
+  "relevantPerRequest": 1.72,
   "deepArchive": false,
   "incrementalFrom": "",
   "budget": {
@@ -37441,7 +36966,7 @@ window.TENDER_DATA = {
    },
    "gentender": {
     "limit": 720,
-    "used": 338,
+    "used": 343,
     "exhausted": false
    },
    "tektorg": {
