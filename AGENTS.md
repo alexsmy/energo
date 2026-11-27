@@ -183,7 +183,7 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
    Общий механизм — `createNotice(kind, icon)` в `app.js`, стили `.notice` — для будущих типов
    уведомлений. Перед перезагрузкой состояние фильтров/вида/вкладки сохраняется и восстанавливается.
 10. Безопасность: CDN Leaflet зафиксированы по версиям и защищены SRI; Google Fonts удалены;
-   форм и запросов к GitHub из браузера нет; аналитика посещений (`js/visits.js`) работает через WordPress на `nppuast.com` и по решению пользователя остаётся без cookie-плашки (п. 65–67). Author/committer всех коммитов — `135685932+alexsmy@users.noreply.github.com`; персональный e-mail полностью удалён из истории 27.11.2026 (`git filter-branch` + `git gc --prune=now`, 0 вхождений в `git log --all` и в рабочем дереве). В GitHub вручную включить «Block command line pushes that expose my email».
+   форм и запросов к GitHub из браузера нет; аналитика посещений (`js/visits.js`) работает через WordPress на `nppuast.com` и по решению пользователя остаётся без cookie-плашки (п. 65–67). Author/committer всех коммитов — `135685932+alexsmy@users.noreply.github.com`; персональный e-mail полностью удалён из истории 27.11.2026 (`git filter-branch` + `git gc --prune=now`, 0 вхождений в `git log --all` и в рабочем дереве). В GitHub вручную включить «Block command line pushes that expose my email». Мобильные телефоны из любых источников маскируются автоматически (`scripts/lib/mask-phones.js`): в коллекторе перед записью JSON, в логе сбора и в `build.js` перед публикацией.
 
 11. Индексирование запрещено: `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet,
    noimageindex">` в `index.html` и `print.html`; в `index.html` — `referrer=strict-origin-when-cross-origin`

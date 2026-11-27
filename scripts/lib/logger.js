@@ -3,6 +3,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const { maskPhone } = require('./mask-phones');
 
 const FILE = path.join(__dirname, '..', '..', 'data', 'collect-log.json');
 const KEEP_RUNS = 30;
@@ -27,7 +28,7 @@ class CollectLogger {
     let all = [];
     try { all = JSON.parse(fs.readFileSync(FILE, 'utf8')); if (!Array.isArray(all)) all = []; } catch (e) { /* noop */ }
     all.unshift(this.run);
-    fs.writeFileSync(FILE, JSON.stringify(all.slice(0, KEEP_RUNS), null, 2) + '\n', 'utf8');
+    fs.writeFileSync(FILE, maskPhone(JSON.stringify(all.slice(0, KEEP_RUNS), null, 2)) + '\n', 'utf8');
     return this.run;
   }
 }

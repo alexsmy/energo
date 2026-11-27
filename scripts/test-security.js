@@ -53,6 +53,25 @@ test('личные мобильные замаскированы (последн
   assert.ok(!/\+7[\s(]*9\d{2}[\s)\-]+\d{3}[\s\-]+\d{2}[\s\-]+\d{2}/.test(read('data/entities.tsv')));
 });
 
+test('маскировка автоматическая: парсер, лог и сборка', () => {
+  const build = read('build.js');
+  assert.match(build, /maskDataTree\(DATA\)/, 'сборка не маскирует data/');
+  assert.match(build, /maskPhone\(JSON\.stringify\(out/, 'бандл реестра не маскируется');
+  assert.match(read('scripts/collect-tenders.js'), /maskValue\(obj\)/, 'собранные JSON не маскируются');
+  assert.match(read('scripts/lib/logger.js'), /maskPhone\(JSON\.stringify/, 'журнал сбора не маскируется');
+});
+
+test('маскировка рекурсивная и повтор не ломает данные', () => {
+  const { maskValue, maskPhone } = require('./lib/mask-phones');
+  const src = { title: 'Тест', phone: '+7 (906) 572-83-19', nested: [{ contact: '8 (919) 491-40-35' }], inn: '7702080289', num: 42 };
+  const out = maskValue(src);
+  assert.equal(out.phone, '+7 (906) 572-**-**');
+  assert.equal(out.nested[0].contact, '8 (919) 491-**-**');
+  assert.equal(out.inn, '7702080289');
+  assert.equal(out.num, 42);
+  assert.equal(maskPhone(out.phone), out.phone, 'маскировка должна быть идемпотентной');
+});
+
 test('research-логи и entities.tsv не публикуются на Pages', () => {
   for (const wf of ['.github/workflows/site-deploy.yml', '.github/workflows/tenders-update.yml']) {
     const t = read(wf);

@@ -21,6 +21,7 @@ const { platformName, canonicalPlatform } = require('./lib/platforms');
 const { CollectLogger } = require('./lib/logger');
 const { nonWorking, mskDate } = require('./lib/schedule');
 const innStateLib = require('./lib/inn-state');
+const { maskValue } = require('./lib/mask-phones');
 const tm = require('../js/text-match');
 
 const ROOT = path.join(__dirname, '..');
@@ -48,7 +49,10 @@ const log = (...a) => { if (opts.verbose || !opts.fixture) console.log(...a); };
 function readJson(name, fallback) {
   try { return JSON.parse(fs.readFileSync(path.join(DATA, name), 'utf8')); } catch (e) { return fallback; }
 }
-function writeJson(name, obj) { fs.writeFileSync(path.join(DATA, name), JSON.stringify(obj, null, 2) + '\n', 'utf8'); }
+function writeJson(name, obj) {
+  // Любые данные из сети маскируются ещё до записи на диск.
+  fs.writeFileSync(path.join(DATA, name), JSON.stringify(maskValue(obj), null, 2) + '\n', 'utf8');
+}
 
 // Офлайн-режимы не должны затирать отметку успешного сбора за сегодня —
 // иначе каждое следующее окно снова начинает полный обход.

@@ -13,6 +13,7 @@
 8. **2.3 URL-схемы** — `safeHttpUrl()` в normalize + check-release + UI; не отсекать валидные http(s).
 9. **2.4 analytical ingestion** — подпись, лимит новых устройств, atomic rate-limit, whitelist полей, CSV-префикс, TLS/geo, пересборка сессий.
 10. **2.6 лимиты/ReDoS** — ограничить размер тела/массива/title, безопасный `decode()`, не уменьшать `maxRecords`.
+11. **Автоматическая маскировка телефонов** — `scripts/lib/mask-phones.js` применяется в коллекторе перед записью JSON, в логере, в `build.js` перед проверками и к готовым бандлам; `--check` в ci-checks.
 11. **2.7 CI/CD** — зафиксировать actions по SHA, токены в env, разделить permissions, comments.
 
 ## Приоритет P2 — п.3

@@ -1,55 +1,33 @@
 #!/usr/bin/env node
-/* Маскировка личных мобильных телефонов: последние 4 цифры заменяются на **-**.
- * Покрывает data/research-2026/** и data/entities.tsv. ИДEMPOTENT: повторный
- * запуск ничего не меняет. Режим --check используется тестами и CI. */
+/* Маскировка мобильных телефонов в данных проекта: последние 4 цифры → **-**.
+ *   node scripts/mask-phones.js          замаскировать всё в data/
+ *   node scripts/mask-phones.js --check  только проверить (выход 1, если есть полные номера)
+ * Вызывается вручную и автоматически из build.js. */
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const { MOBILE_RE, maskDataTree, checkTargets } = require('./lib/mask-phones');
+
 const ROOT = path.join(__dirname, '..');
-
-// +7 (906) 572-83-19 / +7 916 992-39-88 / 8 (919) 491-40-35
-// Не трогаем городские (+7 495/812/351…), toll-free 8 800 и ИНН вида 8905000428
-// (после «8» обязателен пробел или скобка).
-const MOBILE = /(?<!\d)(?<prefix>(?:\+7[\s(]*|8[\s(]+)9\d{2}[)\s-]*\d{3}[\s-]*)(?<a>\d{2})(?<sep>[\s-]?)(?<b>\d{2})(?!\d)/g;
-
-function targets() {
-  const out = [path.join(ROOT, 'data', 'entities.tsv')];
-  const dir = path.join(ROOT, 'data', 'research-2026');
-  if (!fs.existsSync(dir)) return out;
-  for (const name of fs.readdirSync(dir)) {
-    if (/\.(json|md|tsv|txt)$/i.test(name)) out.push(path.join(dir, name));
-  }
-  return out;
-}
-
-function mask(text) {
-  return text.replace(MOBILE, '$<prefix>**-**');
-}
-
-function hasUnmasked(text) {
-  MOBILE.lastIndex = 0;
-  return MOBILE.test(text);
-}
-
-let changed = 0;
-let found = 0;
 const checkOnly = process.argv.includes('--check');
-for (const file of targets()) {
-  const before = fs.readFileSync(file, 'utf8');
-  const hits = (before.match(MOBILE) || []).length;
-  if (hits) found += hits;
-  if (!hits) continue;
-  if (checkOnly) {
-    console.log('НЕ ЗАМАСКИРОВАНО: ' + path.relative(ROOT, file) + ' (' + hits + ')');
-    process.exitCode = 1;
-    continue;
+
+if (checkOnly) {
+  let found = 0;
+  for (const file of checkTargets(ROOT)) {
+    const text = fs.readFileSync(file, 'utf8');
+    const hits = text.match(MOBILE_RE) || [];
+    MOBILE_RE.lastIndex = 0;
+    if (hits.length) {
+      found += hits.length;
+      console.log('НЕ ЗАМАСКИРОВАНО: ' + path.relative(ROOT, file) + ' (' + hits.length + ')');
+    }
   }
-  const after = mask(before);
-  if (after !== before) {
-    fs.writeFileSync(file, after);
-    changed++;
-    console.log('Замаскировано ' + hits + ': ' + path.relative(ROOT, file));
+  if (found) {
+    console.error('Найдено полных мобильных номеров: ' + found + ' — запустите node scripts/mask-phones.js');
+    process.exit(1);
   }
+  console.log('Проверка маскировки телефонов: OK');
+} else {
+  const changed = maskDataTree(path.join(ROOT, 'data'));
+  console.log('Маскировка телефонов: обработано файлов ' + changed);
 }
-if (!checkOnly) console.log('Обработано файлов: ' + changed + ', номеров: ' + found);
-if (checkOnly && !process.exitCode) console.log('Проверка маскировки телефонов: OK');
