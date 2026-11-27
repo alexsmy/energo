@@ -31,8 +31,8 @@ function mskDay(now) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Moscow', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
 }
 
-function run(cmd, args, env) {
-  return execFileSync(cmd, args, { encoding: 'utf8', env: { ...process.env, ...(env || {}) } });
+function run(cmd, args, env, input) {
+  return execFileSync(cmd, args, { encoding: 'utf8', env: { ...process.env, ...(env || {}) }, ...(input != null ? { input } : {}) });
 }
 
 function restore() {
@@ -47,10 +47,11 @@ function restore() {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'energo-pages-'));
   try {
     const zip = tmp + '.zip';
-    run('curl', ['-sSL', '--fail', '--retry', '3',
-      '-H', 'Authorization: Bearer ' + token,
-      '-H', 'Accept: application/vnd.github+json',
-      `https://api.github.com/repos/${repo}/actions/artifacts/${id}/zip`, '-o', zip]);
+    // Заголовки через --config - (stdin): токен не светится в argv/ps.
+    run('curl', ['-sSL', '--fail', '--retry', '3', '--config', '-',
+      `https://api.github.com/repos/${repo}/actions/artifacts/${id}/zip`, '-o', zip],
+    null,
+    'header = "Authorization: Bearer ' + token + '"\nheader = "Accept: application/vnd.github+json"\n');
     fs.mkdirSync(tmp, { recursive: true });
     run('unzip', ['-q', zip, '-d', tmp]);
     // upload-pages-artifact может класть сайт в artifact.tar

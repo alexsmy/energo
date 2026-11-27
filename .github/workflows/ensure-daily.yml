@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Проверить, был ли сегодня полный сбор
         id: check
@@ -32,17 +32,24 @@ jobs:
             const r = JSON.parse(fs.readFileSync('data/last-collect-result.json', 'utf8'));
             // МСК = UTC+3: сдвигаем время, чтобы получить календарный день шапки.
             const today = new Date(Date.now() + 3 * 3600 * 1000).toISOString().slice(0, 10);
-            const ok = r.ran === true && r.date === today && !r.partial;
+            // Полный сбор закрывает день. Если он был partial, разрешаем
+            // не более двух попыток; дальше гейт в collect-tenders.js
+            // пропускает окна без запросов.
+            const attempts = r.date === today ? (Number(r.attempts) || 1) : 0;
+            const ok = r.ran === true && r.date === today && (!r.partial || attempts >= 2);
             const need = ok ? 'no' : 'yes';
-            console.log('MSK date: ' + today + ' | сбор: ' + (ok ? 'есть' : 'нужен'));
+            console.log('MSK date: ' + today + ' | попыток: ' + attempts + ' | сбор: ' + (ok ? 'есть' : 'нужен'));
             fs.appendFileSync(process.env.GITHUB_OUTPUT, 'need=' + need + '\n');
           "
 
       - name: Запустить сбор, если его не было
         if: steps.check.outputs.need == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
           curl -sS -X POST \
-            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/tenders-update.yml/dispatches \
+            "https://api.github.com/repos/$REPO/actions/workflows/tenders-update.yml/dispatches" \
             -d '{"ref":"main"}'

@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="referrer" content="no-referrer">
 <title>Архив закупок — Реестр предприятий РФ</title>
-<link rel="stylesheet" href="css/styles.css?v=2.67">
+<link rel="stylesheet" href="css/styles.css?v=2.72">
 </head>
 <body>
 <header class="topbar">
@@ -41,6 +41,7 @@
   'use strict';
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeFile = (s) => /^\d{4}-\d{2}-\d{2}\.json$/i.test(String(s || '')) ? String(s) : '';
   async function load() {
     const res = await fetch('data/archive/index.json?ts=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -53,7 +54,7 @@
       '<tr><td>' + esc(s.date) + (s.partial ? ' <span class="t-badge t-badge--bad">partial</span>' : '') + '</td>' +
       '<td>' + esc(s.count) + '</td><td>' + esc(s.active) + '</td><td>' + esc(s.archive) + '</td>' +
       '<td>' + esc(s.corroboratedPct != null ? s.corroboratedPct + '%' : '—') + '</td>' +
-      '<td><a href="data/archive/' + esc(s.file) + '" target="_blank" rel="noopener">открыть</a></td></tr>'
+      '<td>' + (safeFile(s.file) ? '<a href="data/archive/' + encodeURIComponent(safeFile(s.file)) + '" target="_blank" rel="noopener">открыть</a>' : '—') + '</td></tr>'
     ).join('') || '<tr><td colspan="6" style="color:var(--muted)">Снимков пока нет.</td></tr>';
   }
   async function init() {

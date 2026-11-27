@@ -103,7 +103,7 @@ async function collect(opts) {
       }
       consecutiveFails = 0;
       okRequests++;
-      const rows = parse(res.body);
+      const rows = parse(res.body).slice(0, maxRecords);
       let kept = 0;
       rows.forEach(row => {
         const org = matchCustomer({ customer: row.customer }, index);

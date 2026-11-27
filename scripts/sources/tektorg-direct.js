@@ -94,7 +94,7 @@ async function collect(opts) {
       }
       consecutiveFails = 0;
       okRequests++;
-      const rows = parse(res.body);
+      const rows = parse(res.body).slice(0, maxRecords);
       let kept = 0;
       rows.forEach(rec => {
         const org = matchCustomer({ customer: rec.organizerName, customerInn: rec.inn }, index);

@@ -9,6 +9,24 @@ const norm = tm.norm;
 const day = (s) => (s ? String(s).slice(0, 10) : '');
 const today = () => new Date().toISOString().slice(0, 10);
 
+// Единая проверка URL из ответов площадок: только http(s). Возвращаем
+// fallback, чтобы запись не терялась и оставалась кликабельной.
+function safeHttpUrl(value, fallback) {
+  const s = String(value == null ? '' : value).trim();
+  if (/^https?:\/\//i.test(s)) {
+    try {
+      const u = new URL(s);
+      if (u.protocol === 'http:' || u.protocol === 'https:') return u.toString();
+    } catch (e) { /* при некорректном URL берём fallback */ }
+  }
+  const f = String(fallback == null ? '' : fallback).trim();
+  if (/^https?:\/\//i.test(f)) {
+    try { const u = new URL(f); if (u.protocol === 'http:' || u.protocol === 'https:') return u.toString(); }
+    catch (e) { /* noop */ }
+  }
+  return '';
+}
+
 function priceNum(v) {
   if (v == null || v === '') return 0;
   if (typeof v === 'number') return v;
@@ -99,7 +117,9 @@ const PREFIX_WORDS = [
 ];
 const PREFIX_ALT = PREFIX_WORDS.map((p) => p[0].toUpperCase() + p.slice(1) + '|' + p).join('|');
 const PREFIX_RE = new RegExp('(^|[^а-яёА-ЯЁ])(' + PREFIX_ALT + ')\\s+(?=[а-яё])', 'g');
-const ENDING_RE = /([а-яё]{4,}) (ия|ие|ого|его|ому|ему|ный|ных|ному|нему|ый|ий|ая|яя|ое|ее|ые|ым|им|ых|их|ой|ей|ую|юю|ной|ное|ного)(?=[\s.,;:)"']|$)/gi;
+// Ограничиваем длину «левой части»: неограниченный [а-яё]{4,} давал
+// квадратичный backtracking на длинном слове без пробелов из ответа площадки.
+const ENDING_RE = /([а-яё]{4,20}) (ия|ие|ого|его|ому|ему|ный|ных|ному|нему|ый|ий|ая|яя|ое|ее|ые|ым|им|ых|их|ой|ей|ую|юю|ной|ное|ного)(?=[\s.,;:)"']|$)/gi;
 
 /* Признак разбитого слова: используется и для починки, и для выбора
  * более чистого заголовка при слиянии одного тендера из разных источников. */
@@ -132,7 +152,7 @@ function sourceEntry(r) {
     sourceName: r.sourceName || '',
     platformCode: r.platformCode || r.etp || '',
     platformName: r.platformName || platformName(r.platformCode || r.etp),
-    url: r.url || '',
+    url: safeHttpUrl(r.url),
     foundAt: r.foundAt || ''
   };
 }
@@ -152,7 +172,7 @@ function makeRecord(f) {
     matchedOrgName: f.matchedOrgName || '',
     platformCode,
     platformName: f.platformName || platformName(platformCode),
-    platformUrl: f.platformUrl || '',
+    platformUrl: safeHttpUrl(f.platformUrl),
     source: f.source || '',
     sourceName: f.sourceName || '',
     law: f.law || '',
@@ -164,7 +184,7 @@ function makeRecord(f) {
     status: f.status || '',
     stage: f.stage != null ? f.stage : '',
     phase: phaseOf({ status: f.status, stage: f.stage, deadline: f.deadline }, f.phase),
-    url: f.url || f.platformUrl || '',
+    url: safeHttpUrl(f.url, f.platformUrl),
     keywords: [...new Set(f.keywords || [])],
     matchedKeywords: [...new Set(f.matchedKeywords || [])],
     enterpriseIds: [...new Set(f.enterpriseIds || [])],
@@ -237,7 +257,7 @@ function mapGentender(row, org, foundAt, query, phase) {
     org,
     platformCode: platform.code,
     platformName: platform.name,
-    platformUrl: row.etp_url || '',
+    platformUrl: safeHttpUrl(row.etp_url),
     source: 'gentender',
     sourceName: 'GenTender',
     law,
@@ -247,7 +267,7 @@ function mapGentender(row, org, foundAt, query, phase) {
     updated: row.publish_date,
     status: row.status_label || '',
     stage: row.status || '',
-    url: row.detail_url || row.etp_url || '',
+    url: safeHttpUrl(row.detail_url, row.etp_url),
     foundQuery: query || '',
     foundAt,
     lastSeen: foundAt
@@ -297,11 +317,14 @@ function mergeSources(a, b) {
   return out;
 }
 
-function mergeTwo(a, b) {
+function mergeTwo(a, b, opts) {
   const ra = sourceRank(a), rb = sourceRank(b);
-  // При равном приоритете источника берём заголовок без признаков разбиения
-  // слов — иначе старый кривой вариант ЕИС перекрывает новый исправленный.
-  const first = ra < rb || (ra === rb && splitWordScore(a.title) <= splitWordScore(b.title)) ? a : b;
+  // При слиянии с уже собранной записью (prev) её непустые поля имеют
+  // приоритет: сетевой ответ не должен подменять title/price/url/сроки.
+  // Для новых записей одного прогона сохраняем прежний приоритет источника.
+  const keepFirst = !!(opts && opts.keepFirst);
+  const first = keepFirst ? a
+    : (ra < rb || (ra === rb && splitWordScore(a.title) <= splitWordScore(b.title)) ? a : b);
   const second = first === a ? b : a;
   const out = { ...first };
   // Заполняем пустые поля из второго источника.
@@ -330,7 +353,8 @@ function mergeTwo(a, b) {
 }
 
 function dedup(prev, next, limit) {
-  const all = [...(prev || []), ...(next || [])].filter((r) => r && r.id);
+  const prevList = prev || [];
+  const all = [...prevList, ...(next || [])].filter((r) => r && r.id);
   const parent = all.map((_, i) => i);
   const find = (i) => { while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; } return i; };
   const union = (a, b) => { const ra = find(a), rb = find(b); if (ra !== rb) parent[rb] = ra; };
@@ -347,7 +371,12 @@ function dedup(prev, next, limit) {
     if (!groups.has(root)) groups.set(root, []);
     groups.get(root).push(r);
   });
-  const merged = [...groups.values()].map((group) => group.reduce((acc, r) => mergeTwo(acc, r)));
+  const merged = [...groups.values()].map((group) => {
+    // Если в группе есть уже собранная запись, её поля не перезаписываются
+    // данными из сети. Новые записи сливаются по прежнему приоритету sourceRank.
+    const hasPrev = group.some(r => prevList.includes(r));
+    return group.reduce((acc, r) => mergeTwo(acc, r, { keepFirst: hasPrev }), group[0]);
+  });
   return merged
     .sort((a, b) => {
       if (a.phase !== b.phase) return a.phase === 'active' ? -1 : 1;
@@ -363,5 +392,5 @@ function dedup(prev, next, limit) {
 module.exports = {
   day, norm, priceNum, fmtPrice, normTitle, hash, isActive, phaseOf, repairTitle, splitWordScore,
   makeRecord, applyOrg, mapGosplan, mapGentender, dedup, identityKeys,
-  mergeTwo, sourceEntry, lawLabel, digitsOnly, isEisReg, normCustomer, eisUrl
+  mergeTwo, sourceEntry, lawLabel, digitsOnly, isEisReg, normCustomer, eisUrl, safeHttpUrl
 };

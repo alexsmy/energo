@@ -31,7 +31,7 @@ async function test(name, fn) {
       return {
         ok: true, status: 200,
         headers: { get: () => null, getSetCookie: () => [] },
-        json: async () => ({ ok: 1 }), text: async () => ''
+        json: async () => ({ ok: 1 }), text: async () => '{"ok":1}'
       };
     };
     try {

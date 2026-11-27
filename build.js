@@ -244,7 +244,9 @@ fs.writeFileSync(path.join(ROOT, 'js', 'data.js'),
 // CSV для Excel (;, BOM)
 const cols = ['id', 'kind', 'holdingName', 'path', 'name', 'full', 'type', 'tech', 'activity', 'region', 'city', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'year', 'turbines', 'units', 'equipment', 'repairs', 'lat', 'lon', 'status', 'conf', 'sources', 'notes', 'wiki'];
 const esc = v => {
-  const s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
+  let s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
+  // Защита от CSV/formula injection при открытии в Excel.
+  if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
   return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 };
 const csv = '\uFEFF' + [cols.join(';'), ...items.map(i => cols.map(c => esc(i[c])).join(';'))].join('\n');

@@ -105,7 +105,9 @@ function matchCustomer(r, index) {
   for (const x of index) {
     for (const k of x.keys) {
       if (k.startsWith('inn:') || k.length < 5) continue;
-      if (!hasKey(text, k) && !(text.length >= 8 && k.length >= 8 && text.includes(k))) continue;
+      // Только границы слова: подстрочное совпадение ("МосэнергоФейк")
+      // позволяло подсудить запись с чужим названием под реестровое юрлицо.
+      if (!hasKey(text, k)) continue;
       const score = k.length + (x.kind === 'plant' ? -2 : 0);
       if (!best || score > best.score) best = { org: x, score };
     }

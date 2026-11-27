@@ -6,7 +6,9 @@ data/archive/
 tmp/
 *.tmp
 
-# Секреты и локальные артефакты деплоя Worker
-worker/.proxy-token.txt
+# Секреты и локальные артефакты (старый контур Worker/Render удалён)
 .env
+.wrangler/
+*.log
+wp-plugin/**/*.zip
 node_modules/

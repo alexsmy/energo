@@ -2,6 +2,10 @@
 (function () {
   'use strict';
 
+  // GitHub Pages не отдаёт X-Frame-Options/CSP-заголовки: защищаемся от
+  // встраивания в чужой iframe (clickjacking) на стороне клиента.
+  try { if (window.top !== window.self) { window.top.location.href = location.href; return; } } catch (e) { /* noop */ }
+
   const R = window.REGISTRY || { items: [], etps: [], sources: [], meta: {}, stats: {} };
   const items = R.items;
   const etpMap = Object.fromEntries((R.etps || []).map(e => [e.code, e]));
@@ -32,6 +36,10 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
+  const safeUrl = (u) => {
+    const s = String(u == null ? '' : u).trim();
+    return /^(https?:|mailto:|tel:)/i.test(s) ? s : '';
+  };
   const norm = (s) => String(s || '').toLowerCase().replace(/ё/g, 'е').trim();
   const digitsOnly = (s) => String(s == null ? '' : s).replace(/\D/g, '');
 
@@ -462,11 +470,18 @@
     if (zout) zout.title = 'Отдалить';
     const attr = document.querySelector('.leaflet-control-attribution');
     if (attr) {
-      attr.innerHTML = attr.innerHTML
-        .replace(/Tiles (?:&copy;|©) Esri/g, 'Картографические данные © Esri')
-        .replace(/Imagery (?:&copy;|©) Esri/g, 'Спутниковые снимки © Esri')
-        .replace(/Labels (?:&copy;|©) Esri/g, 'Подписи © Esri')
-        .replace(/OpenStreetMap contributors/g, 'Участники OpenStreetMap');
+      // Меняем только текстовые узлы: innerHTML read-modify-write терял бы
+      // ссылки и мог удвоить экранирование (&copy;).
+      const walker = document.createTreeWalker(attr, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        const t = node.nodeValue
+          .replace(/Tiles (?:&copy;|©) Esri/g, 'Картографические данные © Esri')
+          .replace(/Imagery (?:&copy;|©) Esri/g, 'Спутниковые снимки © Esri')
+          .replace(/Labels (?:&copy;|©) Esri/g, 'Подписи © Esri')
+          .replace(/OpenStreetMap contributors/g, 'Участники OpenStreetMap');
+        if (t !== node.nodeValue) node.nodeValue = t;
+      }
     }
   }
 
@@ -801,7 +816,9 @@
       } catch (e) { label = url; }
     }
     if (label.length > 90) label = label.slice(0, 87) + '…';
-    return '<a href="' + safe + '" target="_blank" rel="noopener" title="' + safe + '">' + esc(label) + '</a>';
+    const href = safeUrl(safe);
+    if (!href) return esc(label);
+    return '<a href="' + href + '" target="_blank" rel="noopener" title="' + href + '">' + esc(label) + '</a>';
   }
 
   function openModal(id) {
@@ -889,7 +906,7 @@
 
     $('mBody').innerHTML = body.join('');
     $('mBody').scrollTop = 0;
-    const site = it.site || '';
+    const site = safeUrl(it.site);
     const btn = $('mSite');
     btn.href = site || '#';
     btn.style.display = site ? '' : 'none';
@@ -935,7 +952,10 @@
     const cols = ['name', 'full', 'type', 'holdingName', 'path', 'region', 'address', 'phone', 'email', 'site', 'procUrl', 'inn', 'kpp', 'ogrn', 'ceo', 'contact', 'method', 'etp', 'capacity', 'year', 'turbines', 'units', 'equipment', 'repairs', 'status', 'sources', 'notes', 'chiefEngineer', 'chiefDesigner', 'procContact', 'procPhone', 'procEmail', 'wiki'];
     const head = ['Название', 'Полное наименование', 'Тип', 'Холдинг', 'Структура', 'Регион', 'Адрес', 'Телефон', 'E-mail', 'Сайт', 'Закупки', 'ИНН', 'КПП', 'ОГРН', 'Руководитель', 'Контакт по закупкам', 'Способ закупки', 'ЭТП', 'Мощность, МВт', 'Год ввода', 'Типы турбин', 'Состав мощности', 'Оборудование', 'Ремонты', 'Статус', 'Источники', 'Примечание', 'Главный инженер', 'Главный конструктор', 'Ответственный по закупкам', 'Телефон закупок', 'E-mail закупок', 'Википедия'];
     const escCSV = (v) => {
-      const s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
+      let s = Array.isArray(v) ? v.join('; ') : String(v == null ? '' : v);
+      // Ячейки, начинающиеся с формульных символов, открываются в Excel
+      // как формулы: нейтрализуем leading apostrophe.
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
       return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
     };
     const rows = [head.join(';')].concat(list.map(it => cols.map(c => escCSV(it[c])).join(';')));

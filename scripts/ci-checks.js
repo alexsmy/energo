@@ -11,6 +11,7 @@ require('./test-direct.js');
 require('./test-theme.js');
 require('./test-ui-layout.js');
 require('./test-visits.js');
+require('./test-security.js');
 
 const { validateFile } = require('./validate-entities');
 const report = validateFile(path.join(__dirname, '..', 'data', 'entities.tsv'));

@@ -394,6 +394,7 @@ class EV_Admin {
 		self::field( 'Показывать полный IP', '<label><input type="checkbox" name="show_full_ip" value="1" ' . checked( (int) $o['show_full_ip'], 1, false ) . '> да (по умолчанию маска)</label>' );
 		self::field( 'Доверять X-Forwarded-For', '<label><input type="checkbox" name="trust_proxy" value="1" ' . checked( (int) $o['trust_proxy'], 1, false ) . '> только если перед PHP reverse proxy</label>' );
 		self::field( 'Запросов в минуту с IP', '<input type="number" min="1" max="1000" name="rate_per_minute" value="' . (int) $o['rate_per_minute'] . '">' );
+		self::field( 'Новых устройств в минуту (Telegram)', '<input type="number" min="0" max="100" name="new_devices_per_minute" value="' . (int) $o['new_devices_per_minute'] . '"><span class="ev-help">Ограничение уведомлений при массовых поддельных событиях.</span>' );
 		self::field( 'Хранить событий, дней', '<input type="number" min="1" max="3650" name="retention_days" value="' . (int) $o['retention_days'] . '">' );
 		$err = EV_Telegram::last_error(); if ( '' !== $err ) { self::field( 'Ошибка Telegram', '<span style="color:var(--ev-danger)">' . esc_html( mb_substr( $err, 0, 200 ) ) . '</span>' ); }
 		echo '</tbody></table><button class="ev-btn" type="submit">Сохранить</button></form>';
@@ -519,6 +520,7 @@ class EV_Admin {
 		$o['allowed_origins'] = isset( $_POST['allowed_origins'] ) ? sanitize_textarea_field( wp_unslash( $_POST['allowed_origins'] ) ) : $o['allowed_origins'];
 		$o['allowed_page'] = isset( $_POST['allowed_page'] ) ? esc_url_raw( wp_unslash( $_POST['allowed_page'] ) ) : $o['allowed_page'];
 		$o['rate_per_minute'] = isset( $_POST['rate_per_minute'] ) ? max( 1, min( 1000, (int) $_POST['rate_per_minute'] ) ) : $o['rate_per_minute'];
+		$o['new_devices_per_minute'] = isset( $_POST['new_devices_per_minute'] ) ? max( 0, min( 100, (int) $_POST['new_devices_per_minute'] ) ) : $o['new_devices_per_minute'];
 		$o['retention_days'] = isset( $_POST['retention_days'] ) ? max( 1, min( 3650, (int) $_POST['retention_days'] ) ) : $o['retention_days'];
 		foreach ( array( 'geo_enabled','tg_notify_new','tg_digest','tg_sslverify','show_full_ip','trust_proxy' ) as $k ) { $o[ $k ] = isset( $_POST[ $k ] ) ? 1 : 0; }
 		$o['tg_chat'] = isset( $_POST['tg_chat'] ) ? sanitize_text_field( wp_unslash( $_POST['tg_chat'] ) ) : $o['tg_chat'];
@@ -564,6 +566,12 @@ class EV_Admin {
 		self::redirect( $ok ? 'Тестовое сообщение отправлено' : 'Ошибка Telegram: ' . EV_Telegram::last_error() );
 	}
 
+	/* Excel и Google Sheets читают ячейки, начинающиеся с = + - @, как формулы. */
+	private static function csv_cell( $value ) {
+		$s = (string) $value;
+		return preg_match( '/^[=+\-@\t\r]/', $s ) ? "'" . $s : $s;
+	}
+
 	public static function export() {
 		self::ensure_cap(); check_admin_referer( 'ev_admin_export' );
 		$range = EV_Range::from_request();
@@ -583,7 +591,8 @@ class EV_Admin {
 			fputcsv( $out, array( 'event_ts_utc', 'event_ts_msk', 'type', 'event', 'session_id', 'device_id', 'ip', 'country', 'city' ), ';' );
 			foreach ( $rows as $row ) {
 				$data = json_decode( (string) $row->payload, true ); if ( ! is_array( $data ) ) { $data = array(); }
-				fputcsv( $out, array( $row->event_ts, self::msk( $row->event_ts, 'Y-m-d H:i:s' ), $row->type, self::event_detail( $row->type, $data ), $row->session_id, $row->device_id, self::ip_view( $row->ip ), $row->country, $row->city ), ';' );
+				$cells = array( $row->event_ts, self::msk( $row->event_ts, 'Y-m-d H:i:s' ), $row->type, self::event_detail( $row->type, $data ), $row->session_id, $row->device_id, self::ip_view( $row->ip ), $row->country, $row->city );
+			fputcsv( $out, array_map( array( __CLASS__, 'csv_cell' ), $cells ), ';' );
 			}
 			fclose( $out );
 		}

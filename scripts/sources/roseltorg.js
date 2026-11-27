@@ -10,10 +10,14 @@ const { makeRecord } = require('../lib/normalize');
 
 const BASE = 'https://www.roseltorg.ru';
 
+function cp(n) {
+  const v = Number(n);
+  return Number.isFinite(v) && v >= 0 && v <= 0x10FFFF ? String.fromCodePoint(v) : '';
+}
 function decode(s) {
   return String(s || '')
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => cp(parseInt(n, 16)))
+    .replace(/&#(\d+);/g, (_, n) => cp(+n))
     .replace(/&nbsp;/gi, ' ').replace(/&quot;/gi, '"').replace(/&amp;/gi, '&')
     .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&apos;/gi, "'");
 }
@@ -93,7 +97,7 @@ async function collect(opts) {
         }
         consecutiveFails = 0;
         okRequests++;
-        const rows = parse(res.body);
+        const rows = parse(res.body).slice(0, maxRecords);
         let kept = 0;
         rows.forEach(rec => {
           const org = matchCustomer({ customer: rec.customer, customerInn: rec.inn }, index);

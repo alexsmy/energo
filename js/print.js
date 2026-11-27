@@ -6,11 +6,18 @@
   const etpMap = Object.fromEntries((R.etps || []).map(e => [e.code, e]));
   const srcMap = Object.fromEntries((R.sources || []).map(s => [s.id, s]));
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeUrl = (u) => {
+    const s = String(u == null ? '' : u).trim();
+    return /^(https?:|mailto:|tel:)/i.test(s) ? s : '';
+  };
   const isRepair = i => i.type === 'ремонт';
   const isOem = i => i.type === 'ОЕМ' || i.type === 'инжиниринг';
 
   const kv = (label, value) => value ? '<dt>' + esc(label) + '</dt><dd>' + value + '</dd>' : '';
-  const link = (u) => u ? '<a href="' + esc(u) + '">' + esc(u.replace(/^https?:\/\//, '')) + '</a>' : '';
+  const link = (u) => {
+    const safe = safeUrl(u);
+    return safe ? '<a href="' + esc(safe) + '">' + esc(safe.replace(/^https?:\/\//, '')) + '</a>' : '';
+  };
   const tags = (it) => (it.etp || []).map(c => '<span class="tag">' + esc(etpMap[c] ? etpMap[c].name : c) + '</span>').join('');
 
   function orgBlock(it) {

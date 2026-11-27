@@ -26,6 +26,9 @@ const tm = require('../js/text-match');
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 const MAX_RECORDS = 3000;
+// Полный сбор закрывает день. Одна повторная попытка разрешена только если
+// первый прогон был partial; после двух попыток окна выходят без запросов.
+const MAX_DAILY_ATTEMPTS = 2;
 const DEFAULT_SOURCES = ['tektorg-direct', 'etpgpb-direct', 'roseltorg-direct', 'rad-direct', 'fabrikant-direct', 'zakazrf-direct', 'gosplan', 'gentender', 'eis-html'];
 
 const argv = process.argv.slice(2);
@@ -46,6 +49,14 @@ function readJson(name, fallback) {
   try { return JSON.parse(fs.readFileSync(path.join(DATA, name), 'utf8')); } catch (e) { return fallback; }
 }
 function writeJson(name, obj) { fs.writeFileSync(path.join(DATA, name), JSON.stringify(obj, null, 2) + '\n', 'utf8'); }
+
+// Офлайн-режимы не должны затирать отметку успешного сбора за сегодня —
+// иначе каждое следующее окно снова начинает полный обход.
+function writePartialResult(mode, day) {
+  const cur = readJson('last-collect-result.json', {});
+  if (cur.ran === true && cur.date === day) return;
+  writeJson('last-collect-result.json', { ran: false, date: day, mode });
+}
 
 /* Ключевые слова ищем только в названии закупки. Заказчик подсвечиваться
  * не должен: он нужен для поиска, но не является совпадением по слову.
@@ -205,9 +216,14 @@ async function main() {
   // Гейт смотрит на результат реального сбора, а не на lastRun в статусе:
   // офлайн-режимы (--refilter, --probe-only) не должны блокировать живой сбор.
   const earlyResult = readJson('last-collect-result.json', {});
-  if (!opts.force && earlyResult.ran === true && earlyResult.date === todayNow && !earlyResult.partial) {
-    log(`Уже собран ${todayNow} — пропуск без единого сетевого запроса. Для повтора: --force.`);
-    writeJson('last-collect-result.json', { ran: false, date: todayNow, reason: 'already-collected' });
+  const attempts = (earlyResult.ran === true && earlyResult.date === todayNow)
+    ? (Number(earlyResult.attempts) || 1) : 0;
+  const finishedForToday = earlyResult.ran === true && earlyResult.date === todayNow &&
+    (earlyResult.partial !== true || attempts >= MAX_DAILY_ATTEMPTS);
+  if (!opts.force && finishedForToday) {
+    log(`Уже собран ${todayNow} (попыток: ${attempts}) — пропуск без единого сетевого запроса. Для повтора: --force.`);
+    // ВАЖНО: не перезаписываем успешный результат — иначе гейт не сработает
+    // в следующем окне и начнётся новый полный обход.
     return;
   }
   const keywordsData = readJson('tender-keywords.json', { keywords: [] });
@@ -255,7 +271,7 @@ async function main() {
       titlesSuspicious: splitAfter,
       sources: ['refilter']
     });
-    writeJson('last-collect-result.json', { ran: false, date: todayNow, mode: 'refilter' });
+    writePartialResult('refilter', todayNow);
     logger.entry('refilter', 'registry match', { ok: true, records: prev.length, kept: records.length, droppedNoKeyword: filtered.dropped });
     logger.finish({ total: records.length, unique: records.length, matchedOrg: records.filter(r => r.matchedOrgId).length, droppedNoKeyword: filtered.dropped, errors: 0 });
     log(`Пересопоставлено: ${prev.length} → ${records.length}`);
@@ -266,7 +282,7 @@ async function main() {
   if (!opts.noProbe && !opts.fixture) probeOk = await probeEtps(audit, logger);
   if (opts.probeOnly) {
     writeJson('tenders-status.json', { lastRun: foundAt, mode: 'probe', partial: true, probeOk });
-    writeJson('last-collect-result.json', { ran: false, date: todayNow, mode: 'probe' });
+    writePartialResult('probe', todayNow);
     logger.finish({ probeOk, sources: ['etp-probe'] });
     return;
   }
@@ -400,7 +416,11 @@ async function main() {
   });
   writeJson('tender-coverage.json', coverage);
   innStateLib.save(innState);
-  writeJson('last-collect-result.json', { ran: true, date: today, foundAt, partial: !!summary.partial });
+  const nextAttempts = (earlyResult.ran === true && earlyResult.date === todayNow)
+    ? Math.min(MAX_DAILY_ATTEMPTS, attempts + 1) : 1;
+  writeJson('last-collect-result.json', {
+    ran: true, date: today, foundAt, partial: !!summary.partial, attempts: nextAttempts
+  });
   logger.finish(summary);
   log(`ИТОГО: ${tagged.length} найдено, ${merged.length} в файле (отброшено без ключевых слов: ${filtered.dropped}), площадок ${Object.keys(bySource).length}, ошибок ${errors.length}`);
   if (!records.length) log('ВНИМАНИЕ: новые совпадения не найдены (источники недоступны или выдача пуста) — сохранены предыдущие данные.');

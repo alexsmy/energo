@@ -95,6 +95,6 @@ curl.exe -sS -X POST "https://nppuast.com/wp-admin/admin-ajax.php?action=energo_
 
 ## Откат
 
-Плагин можно деактивировать. В репозитории `energo` старые `data/visits-config.json`
-и `js/visits.js` остаются в git: возврат к предыдущему коммиту снова включает
-Worker/Render-канал.
+Плагин можно деактивировать. Старый Worker/Render-канал удалён из репозитория
+27.11.2026; возврат к нему возможен только из архивной ветки с перевыпуском
+секретов. Текущий конфиг и клиент используют один канал — WordPress `Energo Visits`.

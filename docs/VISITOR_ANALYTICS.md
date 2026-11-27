@@ -27,8 +27,9 @@ WordPress на nppuast.com — плагин Energo Visits (PHP + MySQL)
 один same-origin-подобный канал, без прокси, токенов и внешних задержек.
 
 Старые каналы (`worker/`, `.github/workflows/visits-forward.yml`, прямой Render,
-GitHub dispatch с PAT в `localStorage`) остаются в git **только для отката**.
-Они больше не используются и не должны включаться без явного решения.
+GitHub dispatch с PAT в `localStorage`) **полностью удалены из репозитория 27.11.2026**
+вместе с npm-скриптами и зависимостью `wrangler`. Секрет `RENDER_PROXY_TOKEN`
+подлежит удалению в настройках GitHub и перевыпуску на внешних сервисах.
 
 Локальные/IP-заходы (`127.0.0.1`, `localhost`, `file://`, любые другие домены) **не
 отправляются**: трекер проверяет `location.href`. Разрешены обе формы адреса —
@@ -123,12 +124,12 @@ IP в админке по умолчанию маскируется (`EV_Geo::ma
 
 ## Как тестировать и дорабатывать
 
-1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`;
-   `node worker/test-worker.mjs` — только для старого откатного контура.
+1. `node build.js` в `energo` — `scripts/test-visits.js` входит в `ci-checks.js`.
 2. PHP-плагин: `node lint-php.js` (парсер `php-parser`) локально; на сервере —
-   `php -l` по всем файлам. Затем curl-тест из `wp_energo_visits/README.md`.
+   `php -l` по всем файлам. Затем curl-тест из `wp-plugin/energo-visits/README.md`.
 3. Для локального E2E: поднять копию трекера, временно разрешить в `js/visits.js`
-   `http://127.0.0.1:8765/index.html` и направить конфиг на локальный relay;
-   **обязательно вернуть продакшн-проверку и endpoint обратно**.
+   `http://127.0.0.1:8765/index.html` и направить **локальную копию**
+   `data/visits-config.json` на локальный relay. Query-оверрайд `?visitsEndpoint=`
+   удалён и тестами запрещён; **обязательно вернуть продакшн-проверку и endpoint**.
 4. Изменения логики править в двух местах: `js/visits.js` (клиент) и
    `EV_Inbox`/`EV_Store` (плагин), плюс оба документа.

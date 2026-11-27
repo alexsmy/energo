@@ -49,7 +49,11 @@
     if (!raw || raw.format !== 'energo-favorites') throw new Error('Не тот формат файла');
     const data = { orgs: [], tenders: [] };
     for (const kind of ['orgs', 'tenders']) {
-      if (Array.isArray(raw[kind])) data[kind] = [...new Set(raw[kind].filter(x => typeof x === 'string' && x))];
+      if (Array.isArray(raw[kind])) {
+        data[kind] = [...new Set(raw[kind]
+          .filter(x => typeof x === 'string' && x.length > 0 && x.length <= 64)
+          .slice(0, 500))];
+      }
     }
     return save(data);
   }

@@ -10,6 +10,9 @@
 const UA = 'EnergoRegistry/1.9 (+https://github.com/alexsmy/energo)';
 const BROWSER_UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 const net = require('net');
+// Поток с площадки может быть огромным: ограничиваем тело до 16 МБ.
+// Реальные ответы адаптеров — 7–640 КБ, поэтому выдача не уменьшается.
+const MAX_BODY_CHARS = 16 * 1024 * 1024;
 
 // Публичные зоны, где последние две метки — не домен второго уровня.
 const PUBLIC_SUFFIXES = new Set(['gov.ru', 'com.ru', 'org.ru', 'net.ru', 'edu.ru', 'ac.ru', 'co.ru', 'pp.ru']);
@@ -142,7 +145,9 @@ class ThrottledClient {
         err.status = res.status;
         throw err;
       }
-      const body = asJson ? await res.json() : await res.text();
+      const raw = await res.text();
+      if (raw.length > MAX_BODY_CHARS) throw new Error('response too large: ' + raw.length + ' chars');
+      const body = asJson ? JSON.parse(raw) : raw;
       return { ok: true, status: res.status, body, hop };
     }
     const err = new Error('too many redirects');

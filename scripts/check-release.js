@@ -31,6 +31,14 @@ else {
   const today = new Date().toISOString().slice(0, 10);
   for (const r of tenders.records) {
     if (!r.id || !r.title || !r.url) fail('tenders.json: запись без id/title/url: ' + (r.id || '?'));
+    if (r.url && !/^https?:\/\//i.test(String(r.url))) {
+      fail('tenders.json: недопустимая схема URL у ' + (r.id || '?') + ': ' + String(r.url).slice(0, 80));
+    }
+    for (const s of (r.sources || [])) {
+      if (s && s.url && !/^https?:\/\//i.test(String(s.url))) {
+        fail('tenders.json: недопустимая схема URL источника у ' + (r.id || '?'));
+      }
+    }
     if (r.phase === 'active' && r.deadline && String(r.deadline).slice(0, 10) < today) {
       fail('tenders.json: активная запись с прошедшим сроком ' + r.deadline + ': ' + (r.id || '?'));
     }

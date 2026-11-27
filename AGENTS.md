@@ -183,8 +183,8 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
    Общий механизм — `createNotice(kind, icon)` в `app.js`, стили `.notice` — для будущих типов
    уведомлений. Перед перезагрузкой состояние фильтров/вида/вкладки сохраняется и восстанавливается.
 10. Безопасность: CDN Leaflet зафиксированы по версиям и защищены SRI; Google Fonts удалены;
-   нет трекинга, форм и запросов к GitHub из браузера. Автор коммита — `noreply@users.noreply.github.com`,
-   персональный e-mail убран из истории (`git commit --amend --reset-author` + force-push).
+   форм и запросов к GitHub из браузера нет; аналитика посещений (`js/visits.js`) работает через WordPress на `nppuast.com` и по решению пользователя остаётся без cookie-плашки (п. 65–67). Author/committer всех коммитов — `135685932+alexsmy@users.noreply.github.com`; персональный e-mail полностью удалён из истории 27.11.2026 (`git filter-branch` + `git gc --prune=now`, 0 вхождений в `git log --all`), добавлен `.mailmap`. В GitHub вручную включить «Block command line pushes that expose my email».
+
 11. Индексирование запрещено: `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet,
    noimageindex">` в `index.html` и `print.html`; в `index.html` — `referrer=strict-origin-when-cross-origin`
    (отправляется только origin — требуется тайл-серверам; в print/log/archive оставлено `no-referrer`),
@@ -1017,7 +1017,8 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     maxScroll/seenPct), `click` (вкладки, кнопки, карточка организации, карточка
     закупки, маркер), `search` (чипы и свой ввод), `link`. Просмотр мини-карточек
     и скролл НЕ являются событиями — это важно при доработках.
-    Серверная часть живёт в отдельном репозитории `alexsmy/bot_29`, ветка
+    Исторический контур (выведен из эксплуатации 26.11.2026, описание оставлено для контекста):
+    серверная часть жила в репозитории `alexsmy/bot_29`, ветка
     `stat_energo` (FastAPI на Render): `POST /api/energo/visits`,
     `GET /api/energo/visits/summary`, страница
     `https://bot-29-nx0w.onrender.com/energo-visits` и плашка в дашборде.
@@ -1028,18 +1029,20 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
     Тесты: `scripts/test-visits.js` в `ci-checks.js`; в bot_29 — `tests/test_energo_visits.py`.
     При изменении логики менять оба репозитория и обе документации.
     С 26.11.2026 канал один: WordPress `Energo Visits` на `https://nppuast.com`
-    (код плагина — `C:\Users\alexs\Downloads\wp_energo_visits\`). Клиент шлёт
+    (код плагина — `wp-plugin/energo-visits/`). Клиент шлёт
     `POST https://nppuast.com/wp-admin/admin-ajax.php?action=energo_visit`
     с телом `energo-visits-v1`; на сервере — таблицы `wp_energo_ev_*`, дедуп по
     `eid`, гео по `REMOTE_ADDR`, страница «Энерго · статистика» только для
     `manage_options`. Причина: Worker/Render из РФ доступны нестабильно.
-    Старые `worker/`, `visits-forward.yml` и токен в `localStorage` удалены из
-    активного контура и оставлены только для отката (п. 66–67).
+    **27.11.2026 старый контур полностью удалён из репозитория:** `worker/`,
+    `scripts/deploy-worker.ps1`, `.github/workflows/visits-forward.yml`, npm-скрипты
+    `test:worker`/`deploy:worker`, зависимость `wrangler`. Секрет `RENDER_PROXY_TOKEN`
+    нужно удалить в настройках GitHub и перевыпустить на Render/Wrangler вручную.
 
 66. Перенос сбора статистики с Render на WordPress reg.ru (26.11.2026). Решение
     пользователя: сайт остаётся на GitHub Pages; приём событий и страница статистики —
     на `https://nppuast.com` в плагине `Energo Visits` (папка
-    `C:\Users\alexs\Downloads\wp_energo_visits\`). Доступ к отчёту только через
+    `wp-plugin/energo-visits/`). Доступ к отчёту только через
     wp-admin (`manage_options`), без публичной ссылки и без PAT. Начали с чистого листа,
     историю из bot_29 не импортировали. Изменены `data/visits-config.json`,
     `js/visits.js`, `scripts/test-visits.js`, `docs/VISITOR_ANALYTICS.md`.
@@ -1052,7 +1055,8 @@ chrome --headless=new --no-pdf-header-footer --virtual-time-budget=9000 \
 67. Финализация плагина `Energo Visits` 2.2.2 и передача в репозиторий (26.11.2026).
     Код плагина лежит в `wp-plugin/energo-visits/` этого репозитория; полная
     спецификация — `docs/ENERGO_VISITS_PLUGIN.md`, краткая — `docs/VISITOR_ANALYTICS.md`.
-    Архив для wp-admin: `energo-visits-plugin.zip` (в Downloads), активна одна копия 2.2.2.
+    Архив для wp-admin собирается из `wp-plugin/energo-visits/` как
+    `energo-visits-plugin.zip` (не хранится в git); активна одна копия 2.2.2.
     Архитектура: клиент шлёт FormData в `admin-ajax.php?action=energo_visit`; сервер —
     `EV_Range` (МСК→UTC), `EV_Inbox`, `EV_Store` (таблицы events/devices/sessions/daily/refs
     и производные колонки tab/act/seconds/max_scroll/seen_pct/is_headless), `EV_Dashboard`

@@ -9,7 +9,7 @@
 6. **2.2 `partial`-гейт** — убрать `!partial` из гейтов, добавить лимит повторов в день, тест.
 
 ## Приоритет P1 — 2.1–2.4, 2.6, 2.7 (без потери качества сбора)
-7. **2.1 дедуп/매칭** — не перезаписывать непустые поля сети; убрать подстрочный fallback; не трогать LEQA/успешный дедуп; тесты.
+7. **2.1 дедуп/сопоставление** — не перезаписывать непустые поля сети; убрать подстрочный fallback; не трогать LEQA/успешный дедуп; тесты.
 8. **2.3 URL-схемы** — `safeHttpUrl()` в normalize + check-release + UI; не отсекать валидные http(s).
 9. **2.4 analytical ingestion** — подпись, лимит новых устройств, atomic rate-limit, whitelist полей, CSV-префикс, TLS/geo, пересборка сессий.
 10. **2.6 лимиты/ReDoS** — ограничить размер тела/массива/title, безопасный `decode()`, не уменьшать `maxRecords`.
@@ -23,6 +23,6 @@
 
 ## Тестирование и публикация
 - Тесты: `test:visits`, `test:direct`, `test:collect`, `test:theme`, `test:ui-layout`, `test:security`, `validate`, `check:release`, `build`.
-- Проверка absence: `javascript:`, `visitsEndpoint`, `alex.smyslov@mail.ru`, мобильных `+7 (9xx)` (полных), `RENDER_PROXY_TOKEN`, `worker/`.
+- Проверка absence: `javascript:`, `visitsEndpoint`, персонального e-mail автора, полных мобильных номеров, legacy-токенов и `worker/`.
 - Live-проверка Pages и Actions.
 - Один `git push` по явной просьбе пользователя (дана в этом сообщении).

@@ -27,15 +27,24 @@ class EV_Geo {
 		$result = $empty;
 		$data = self::fetch( 'https://ip-api.com/json/' . rawurlencode( $ip ) . '?fields=status,country,city,isp,org,as&lang=ru' );
 		if ( ! is_array( $data ) ) {
-			// Free ip-api.com is HTTP-only on some plans — try plain HTTP as fallback.
-			$data = self::fetch( 'http://ip-api.com/json/' . rawurlencode( $ip ) . '?fields=status,country,city,isp,org,as&lang=ru' );
+			// Второй провайдер только по HTTPS: ip-адрес не должен уходить
+			// в открытом виде, даже если основной сервис недоступен.
+			$alt = self::fetch( 'https://ipwho.is/' . rawurlencode( $ip ) . '?lang=ru' );
+			if ( is_array( $alt ) && ! empty( $alt['success'] ) ) {
+				$data = array(
+					'status'  => 'success',
+					'country' => self::text( $alt['country'] ?? '' ),
+					'city'    => self::text( $alt['city'] ?? '' ),
+					'isp'     => self::text( $alt['connection']['isp'] ?? ( $alt['connection']['org'] ?? '' ) ),
+				);
+			}
 		}
 		if ( is_array( $data ) && isset( $data['status'] ) && 'success' === $data['status'] ) {
-			$isp = trim( (string) ( $data['isp'] ?? '' ) );
-			if ( '' === $isp ) { $isp = trim( (string) ( $data['org'] ?? '' ) . ' ' . (string) ( $data['as'] ?? '' ) ); }
+			$isp = self::text( $data['isp'] ?? '' );
+			if ( '' === $isp ) { $isp = self::text( (string) ( $data['org'] ?? '' ) . ' ' . (string) ( $data['as'] ?? '' ) ); }
 			$result = array(
-				'country' => (string) ( $data['country'] ?? '' ),
-				'city'    => (string) ( $data['city'] ?? '' ),
+				'country' => self::text( $data['country'] ?? '' ),
+				'city'    => self::text( $data['city'] ?? '' ),
 				'isp'     => $isp,
 				'ip'      => $ip,
 				'is_vpn'  => self::is_vpn( $isp ),
@@ -49,6 +58,12 @@ class EV_Geo {
 
 		set_transient( $key, $result, WEEK_IN_SECONDS );
 		return $result;
+	}
+
+	/* Ответ внешнего geo-сервиса недоверен: ограничиваем длины строк. */
+	private static function text( $value, $max = 128 ) {
+		$s = trim( (string) $value );
+		return function_exists( 'mb_substr' ) ? mb_substr( $s, 0, $max ) : substr( $s, 0, $max );
 	}
 
 	private static function fetch( $url ) {

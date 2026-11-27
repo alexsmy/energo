@@ -72,6 +72,12 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
+  // В href/href-подобные атрибуты пускаем только http(s): данные закупок
+  // приходят с внешних площадок и могут содержать javascript:/data:.
+  const safeUrl = (u) => {
+    const s = String(u == null ? '' : u).trim();
+    return /^https?:\/\//i.test(s) ? s : '';
+  };
   const norm = tm.norm;
   const plural = (n) => (n % 10 === 1 && n % 100 !== 11) ? 'запись' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 'записи' : 'записей';
 
@@ -359,8 +365,9 @@
     '</dl></div>');
     const sources = (r.sources || []).map(s => {
       const name = s.sourceName || s.source || s.platformCode || 'Источник';
-      return s.url
-        ? '<a class="tag tag--link" href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(name) + '</a>'
+      const url = safeUrl(s.url);
+      return url
+        ? '<a class="tag tag--link" href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(name) + '</a>'
         : '<span class="tag">' + esc(name) + '</span>';
     }).join('');
     body.push('<div class="sec"><h3>Площадка и источники</h3>' +
@@ -373,7 +380,7 @@
 
     $('tDetailBody').innerHTML = body.join('');
     $('tDetailBody').scrollTop = 0;
-    $('tDetailOpen').href = r.url || '#';
+    $('tDetailOpen').href = safeUrl(r.url) || '#';
     $('tDetailCopy').dataset.copy = r.regNumber || r.externalId || r.id;
     const fav = $('tDetailFav');
     if (TF && fav) {
@@ -484,7 +491,7 @@
           (b.source && b.source !== 'browser' ? ' · ' + esc(b.source) : '') + '</b>'
         : 'проверка: <b>' + esc(p.ms != null ? p.ms + ' мс / HTTP ' + p.http : 'нет данных') + '</b>';
       return '<article class="t-etp">' +
-        '<div class="t-etp__head"><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' + badge(view[0], view[1]) + '</div>' +
+        '<div class="t-etp__head"><a href="' + esc(safeUrl(p.url)) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' + badge(view[0], view[1]) + '</div>' +
         '<div class="t-etp__meta">' +
           '<span>поиск без входа: <b>' + (p.publicSearch === true ? 'да' : (p.publicSearch === 'partial' ? 'частично' : 'нет/неизвестно')) + '</b></span>' +
           '<span>ключевое слово: <b>' + esc(p.keywordParam || (p.publicSearch === true ? 'да' : '—')) + '</b></span>' +
@@ -493,7 +500,7 @@
         '</div>' +
         '<p>' + esc(p.notes || '') + '</p>' +
         (b.note ? '<p class="t-etp__note">' + esc(b.note) + '</p>' : '') +
-        '<a class="btn btn--ghost btn--sm" href="' + esc(link) + '" target="_blank" rel="noopener">Открыть поиск</a>' +
+        '<a class="btn btn--ghost btn--sm" href="' + esc(safeUrl(link)) + '" target="_blank" rel="noopener">Открыть поиск</a>' +
       '</article>';
     }).join('');
     $('tEtps').innerHTML = rows;
@@ -830,8 +837,8 @@
       const q = $('tLinkQuery').value.trim() || state.keyword || state.q;
       if (!p) return;
       const tpl = p.urlTemplate && p.urlTemplate.includes('{') ? p.urlTemplate : p.url;
-      const url = tpl.replace('{q}', encodeURIComponent(q)).replace('{company}', encodeURIComponent(q));
-      window.open(url, '_blank', 'noopener,noreferrer');
+      const url = safeUrl(tpl.replace('{q}', encodeURIComponent(q)).replace('{company}', encodeURIComponent(q)));
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
     });
 
     $('tCards').addEventListener('click', e => {

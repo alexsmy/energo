@@ -155,10 +155,13 @@ test('automatic: частые окна и гейт идемпотентност�
   assert.match(wf, /\*\/15 2-12 \* \* 1-5/, 'нет частых окон 05:00–15:45 МСК');
   assert.match(wf, /0 16 \* \* 1-5/, 'нет вечернего окна 19:00 МСК');
   const orch = fs.readFileSync(path.join(root, 'scripts', 'collect-tenders.js'), 'utf8');
-  assert.match(orch, /earlyResult\.ran === true && earlyResult\.date === todayNow && !earlyResult\.partial/, 'гейт не различает полный и частичный сбор');
+  assert.match(orch, /finishedForToday/, 'гейт идемпотентности вынесен в отдельное условие');
+  assert.match(orch, /earlyResult\.partial !== true \|\| attempts >= MAX_DAILY_ATTEMPTS/, 'повтор partial-сбора не ограничен');
+  assert.ok(!orch.includes("reason: 'already-collected'"), 'пропуск окна затирает успешный результат');
+  assert.match(orch, /writePartialResult\(/, 'офлайн-режимы могут стереть отметку успешного сбора');
   const watchdog = fs.readFileSync(path.join(root, '.github', 'workflows', 'ensure-daily.yml'), 'utf8');
   assert.match(watchdog, /tenders-update\.yml\/dispatches/, 'нет принудительного запуска сбора');
-  assert.match(watchdog, /!r\.partial/, 'watchdog не различает частичный сбор');
+  assert.match(watchdog, /attempts >= 2/, 'watchdog не ограничивает число повторов');
   const build = fs.readFileSync(path.join(root, 'build.js'), 'utf8');
   const check = fs.readFileSync(path.join(root, 'scripts', 'check-release.js'), 'utf8');
   const flagAt = build.indexOf('ENERGO_BUILD_IN_PROGRESS');
